@@ -1,0 +1,215 @@
+.about-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  height: 50vh;
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.about-story {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 300;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background-color: #eee;
+  background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.about-mission {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.about-mission h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 300;
+}
+
+.about-mission p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  font-style: italic;
+}
+
+.about-values {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-values h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 300;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.value-item {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #d4af37;
+}
+
+.value-item p {
+  color: #666;
+}
+
+.about-team {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 300;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.member-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin: 0 auto 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.team-member:nth-child(1) .member-image {
+  background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+}
+
+.team-member:nth-child(2) .member-image {
+  background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+}
+
+.team-member:nth-child(3) .member-image {
+  background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.team-member p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-story {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  
+  .about-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+  
+  .about-image {
+    width: 100%;
+  }
+}

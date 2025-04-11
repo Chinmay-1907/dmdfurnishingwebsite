@@ -1,0 +1,226 @@
+.projects-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.projects-hero {
+  height: 50vh;
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+
+.projects-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.projects-hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.project-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-item:nth-child(1) .project-image {
+  background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.project-item:nth-child(2) .project-image {
+  background-image: url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.project-item:nth-child(3) .project-image {
+  background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.project-item:nth-child(4) .project-image {
+  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.project-info {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 400;
+}
+
+.project-location {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.view-project {
+  background-color: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  padding: 12px 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.view-project:hover {
+  background-color: #d4af37;
+  color: white;
+}
+
+.project-categories {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.project-categories h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 300;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.category-button {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.category-button.active,
+.category-button:hover {
+  background-color: #d4af37;
+  color: white;
+  border-color: #d4af37;
+}
+
+.project-cta {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.project-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.project-cta p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.cta-button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #c4a030;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .projects-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .project-item {
+    flex-direction: column;
+  }
+  
+  .project-image {
+    height: 250px;
+    width: 100%;
+  }
+  
+  .project-cta h2 {
+    font-size: 1.8rem;
+  }
+  
+  .project-cta p {
+    font-size: 1rem;
+  }
+}

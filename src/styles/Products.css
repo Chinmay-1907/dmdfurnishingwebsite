@@ -1,0 +1,276 @@
+.products-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.products-hero {
+  height: 50vh;
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+
+.products-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.products-hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.product-categories {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-categories h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 300;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.category-item {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+  height: 200px;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-item:nth-child(1) .category-image {
+  background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.category-item:nth-child(2) .category-image {
+  background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.category-item:nth-child(3) .category-image {
+  background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.category-item:nth-child(4) .category-image {
+  background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.category-item:nth-child(5) .category-image {
+  background-image: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.category-item:nth-child(6) .category-image {
+  background-image: url('https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.category-item h3 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+  padding: 0 20px;
+  color: #333;
+}
+
+.category-item p {
+  padding: 0 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.view-button {
+  background-color: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  padding: 10px 20px;
+  margin: 0 20px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: auto;
+}
+
+.view-button:hover {
+  background-color: #d4af37;
+  color: white;
+}
+
+.featured-products {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.featured-products h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 300;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-item {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 250px;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-item:nth-child(1) .product-image {
+  background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.product-item:nth-child(2) .product-image {
+  background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.product-item:nth-child(3) .product-image {
+  background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.product-item:nth-child(4) .product-image {
+  background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.product-item h3 {
+  font-size: 1.3rem;
+  margin: 20px 0 10px;
+  padding: 0 20px;
+  color: #333;
+}
+
+.product-item p {
+  padding: 0 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.details-button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 20px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: auto;
+}
+
+.details-button:hover {
+  background-color: #c4a030;
+  transform: translateY(-2px);
+}
+
+.custom-solutions {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.custom-solutions h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.custom-solutions p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.cta-button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #c4a030;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .products-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .category-grid,
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .custom-solutions h2 {
+    font-size: 1.8rem;
+  }
+  
+  .custom-solutions p {
+    font-size: 1rem;
+  }
+}
