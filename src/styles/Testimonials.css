@@ -3,6 +3,7 @@
   overflow-x: hidden;
 }
 
+
 .testimonials-hero {
   height: 50vh;
   background-color: #1a1a1a;
@@ -12,10 +13,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   background-position: center;
   padding: 0 20px;
+  border-bottom: 3px solid #d4af37;
 }
 
 .testimonials-hero h1 {
@@ -48,6 +50,7 @@
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  border-bottom: 2px solid #d4af37;
 }
 
 .testimonial-card:hover {
@@ -72,7 +75,7 @@
 .testimonial-content p::before,
 .testimonial-content p::after {
   content: '"';
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #d4af37;
   position: absolute;
 }
@@ -135,6 +138,8 @@
   padding: 80px 20px;
   background-color: #f9f9f9;
   text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .video-testimonials h2 {
@@ -161,12 +166,14 @@
 
 .video-placeholder {
   height: 300px;
-  background-color: #eee;
+  background-color: #f5f5f5;
   border-radius: 4px;
   margin-bottom: 15px;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .video-placeholder:hover {
@@ -208,6 +215,10 @@
   text-align: center;
   background-color: #1a1a1a;
   color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  border-top: 3px solid #d4af37;
 }
 
 .testimonial-cta h2 {

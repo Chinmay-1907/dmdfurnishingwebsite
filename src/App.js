@@ -12,6 +12,8 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Inspirations from './components/Inspirations';
+import InspirationDetail from './components/InspirationDetail';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/inspirations" element={<Inspirations />} />
+            <Route path="/inspirations/:id" element={<InspirationDetail />} />
           </Routes>
         </main>
         <Footer />

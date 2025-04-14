@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <div className="about-container">
       <section className="about-hero">
-        <h1>About DMD Furnishing</h1>
+        <h1>Your Vision | Our Craft</h1>
         <p>Crafting luxury furniture solutions since 1995</p>
       </section>
 
@@ -18,8 +18,9 @@ function AboutUs() {
             crafting premium furniture solutions for hotels, resorts, and high-end businesses.
           </p>
           <p>
-            Our commitment to quality and attention to detail has made us a trusted partner for
-            clients seeking to create impressive and comfortable spaces that leave lasting impressions.
+            We don't just sell furniture - we create custom solutions tailored to your specific needs.
+            Our unique approach combines expert design, superior craftsmanship, and convenient delivery
+            to provide a seamless experience from concept to installation.
           </p>
         </div>
         <div className="about-image">
@@ -33,6 +34,24 @@ function AboutUs() {
           To transform spaces into extraordinary environments through innovative design,
           exceptional craftsmanship, and personalized service that exceeds our clients' expectations.
         </p>
+      </section>
+
+      <section className="about-approach">
+        <h2>The DMD Approach</h2>
+        <div className="approach-grid">
+          <div className="approach-item">
+            <h3>Design</h3>
+            <p>Our expert designers work closely with you to understand your vision and requirements, creating custom solutions that perfectly match your aesthetic and functional needs.</p>
+          </div>
+          <div className="approach-item">
+            <h3>Craftsmanship</h3>
+            <p>Every piece is meticulously crafted by skilled artisans using premium materials, ensuring exceptional quality and durability that stands the test of time.</p>
+          </div>
+          <div className="approach-item">
+            <h3>Convenience</h3>
+            <p>We handle everything from design to delivery and installation, providing a seamless, stress-free experience that saves you time and resources.</p>
+          </div>
+        </div>
       </section>
 
       <section className="about-values">

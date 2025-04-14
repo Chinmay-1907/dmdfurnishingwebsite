@@ -13,11 +13,11 @@ function Projects() {
         <div className="project-item">
           <div className="project-image"></div>
           <div className="project-info">
-            <h3>Grand Luxury Hotel</h3>
-            <p className="project-location">Dubai, UAE</p>
+            <h3>Quality Inn - Gainesville, FL</h3>
+            <p className="project-location">Hospitality</p>
             <p className="project-description">
-              Complete furnishing solution for a 5-star luxury hotel, including 200 guest rooms, 
-              lobby, restaurants, and conference facilities.
+              Complete furnishing solution for a hotel renovation, including guest rooms, 
+              lobby, and dining areas with custom-designed furniture pieces.
             </p>
             <button className="view-project">View Project Details</button>
           </div>
@@ -26,11 +26,11 @@ function Projects() {
         <div className="project-item">
           <div className="project-image"></div>
           <div className="project-info">
-            <h3>Oceanview Resort & Spa</h3>
-            <p className="project-location">Bali, Indonesia</p>
+            <h3>Towne Lyne Motel - Ogunquit, ME</h3>
+            <p className="project-location">Hospitality</p>
             <p className="project-description">
-              Custom-designed furniture for beachfront villas and spa facilities, 
-              blending luxury with natural elements.
+              Custom-designed furniture for a boutique motel, featuring coastal-inspired 
+              pieces that blend comfort with local aesthetic elements.
             </p>
             <button className="view-project">View Project Details</button>
           </div>
@@ -39,11 +39,11 @@ function Projects() {
         <div className="project-item">
           <div className="project-image"></div>
           <div className="project-info">
-            <h3>Executive Tower Offices</h3>
-            <p className="project-location">London, UK</p>
+            <h3>Marriott Courtyard - Boston, MA</h3>
+            <p className="project-location">Hospitality</p>
             <p className="project-description">
-              Modern office furniture solutions for a corporate headquarters, 
-              including executive suites, open workspaces, and meeting rooms.
+              Complete furnishing package for guest rooms and common areas, 
+              featuring custom-designed pieces that reflect the brand's identity and local culture.
             </p>
             <button className="view-project">View Project Details</button>
           </div>
@@ -52,11 +52,11 @@ function Projects() {
         <div className="project-item">
           <div className="project-image"></div>
           <div className="project-info">
-            <h3>Skyline Restaurant</h3>
-            <p className="project-location">New York, USA</p>
+            <h3>Hampton Inn - Portland, OR</h3>
+            <p className="project-location">Hospitality</p>
             <p className="project-description">
-              Elegant dining furniture for a high-end restaurant, featuring custom tables, 
-              chairs, and bar furnishings.
+              Comprehensive furniture solution for a hotel renovation, including custom beds, 
+              seating, and case goods designed for durability and style.
             </p>
             <button className="view-project">View Project Details</button>
           </div>

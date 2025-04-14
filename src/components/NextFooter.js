@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/Footer.css';
 
-function Footer() {
+function NextFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-container">
@@ -15,19 +15,19 @@ function Footer() {
             <div className="footer-column">
               <h3>Quick Links</h3>
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/products">Our Products</Link></li>
-                <li><Link to="/projects">Recent Projects</Link></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about">About Us</Link></li>
+                <li><Link href="/products">Our Products</Link></li>
+                <li><Link href="/projects">Recent Projects</Link></li>
               </ul>
             </div>
             <div className="footer-column">
               <h3>Services</h3>
               <ul>
-                <li><Link to="/services">Design Consultation</Link></li>
-                <li><Link to="/services">Custom Manufacturing</Link></li>
-                <li><Link to="/services">Project Management</Link></li>
-                <li><Link to="/services">Installation Services</Link></li>
+                <li><Link href="/services">Design Consultation</Link></li>
+                <li><Link href="/services">Custom Manufacturing</Link></li>
+                <li><Link href="/services">Project Management</Link></li>
+                <li><Link href="/services">Installation Services</Link></li>
               </ul>
             </div>
             <div className="footer-column">
@@ -57,4 +57,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default NextFooter;

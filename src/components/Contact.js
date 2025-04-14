@@ -1,7 +1,26 @@
 import React from 'react';
 import '../styles/Contact.css';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import GoogleMapReact from 'google-map-react';
+
+// Map marker component
+const MapMarker = ({ text }) => (
+  <div className="map-marker">
+    <FaMapMarkerAlt className="marker-icon" />
+    <div className="marker-text">{text}</div>
+  </div>
+);
 
 function Contact() {
+  // Google Maps properties
+  const defaultProps = {
+    center: {
+      lat: 42.0654, // Foxborough, MA coordinates
+      lng: -71.2478
+    },
+    zoom: 15
+  };
+
   return (
     <div className="contact-container">
       <section className="contact-hero">
@@ -13,29 +32,37 @@ function Contact() {
         <div className="contact-info">
           <h2>Reach Out to Us</h2>
           <div className="info-item">
-            <div className="info-icon"></div>
+            <div className="info-icon">
+              <FaMapMarkerAlt />
+            </div>
             <div className="info-text">
               <h3>Address</h3>
-              <p>123 Luxury Avenue, Suite 500</p>
-              <p>New York, NY 10001</p>
+              <p>5 Leonard Street</p>
+              <p>Foxborough, MA, USA</p>
             </div>
           </div>
           <div className="info-item">
-            <div className="info-icon"></div>
+            <div className="info-icon">
+              <FaPhone />
+            </div>
             <div className="info-text">
               <h3>Phone</h3>
-              <p>+1 (555) 123-4567</p>
+              <p>+1 (617) 223-7781</p>
             </div>
           </div>
           <div className="info-item">
-            <div className="info-icon"></div>
+            <div className="info-icon">
+              <FaEnvelope />
+            </div>
             <div className="info-text">
               <h3>Email</h3>
-              <p>info@dmdfurnishing.com</p>
+              <p>Sales@DMDFurnishing.com</p>
             </div>
           </div>
           <div className="info-item">
-            <div className="info-icon"></div>
+            <div className="info-icon">
+              <FaClock />
+            </div>
             <div className="info-text">
               <h3>Hours</h3>
               <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
@@ -86,15 +113,29 @@ function Contact() {
       <section className="map-section">
         <h2>Visit Our Showroom</h2>
         <div className="map-container">
-          {/* Map placeholder */}
-          <div className="map-placeholder"></div>
+          <div style={{ height: '400px', width: '100%' }}>
+            {/* You'll need to add your Google Maps API key in the bootstrapURLKeys prop */}
+            <GoogleMapReact
+              bootstrapURLKeys={{ key: '' }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+            >
+              <MapMarker
+                lat={defaultProps.center.lat}
+                lng={defaultProps.center.lng}
+                text="DMD Furnishing Showroom"
+              />
+            </GoogleMapReact>
+          </div>
         </div>
       </section>
 
       <section className="consultation-cta">
         <h2>Prefer a Phone Consultation?</h2>
         <p>Schedule a call with one of our furniture specialists at your convenience.</p>
-        <button className="cta-button">Schedule a Call</button>
+        <button className="cta-button" onClick={() => window.location.href = 'tel:+16172237781'}>
+          Schedule a Call
+        </button>
       </section>
     </div>
   );

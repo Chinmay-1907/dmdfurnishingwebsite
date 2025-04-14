@@ -90,10 +90,52 @@
   transform: translateY(-2px);
 }
 
+.contact-number {
+  margin-right: 20px;
+}
+
+.contact-number a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.contact-number a:hover {
+  color: #d4af37;
+}
+
+.contact-number a::before {
+  content: '\260E';
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
 /* Mobile menu styles */
 @media (max-width: 992px) {
   .nav-links {
     display: none; /* Will be replaced with mobile menu toggle */
+  }
+  
+  .header-container {
+    flex-wrap: wrap;
+  }
+  
+  .contact-number {
+    order: 2;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .nav-cta {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
   
   /* Mobile menu button would be added here */
