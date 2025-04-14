@@ -14,7 +14,8 @@ function Home() {
   // Scroll functions for inspiration slider navigation
   const scrollLeft = () => {
     if (sliderRef.current) {
-      const scrollAmount = sliderRef.current.offsetWidth;
+      // Calculate width of a single item (1/3 of the visible area)
+      const scrollAmount = sliderRef.current.offsetWidth / 3;
       sliderRef.current.scrollBy({
         left: -scrollAmount,
         behavior: 'smooth'
@@ -24,7 +25,8 @@ function Home() {
   
   const scrollRight = () => {
     if (sliderRef.current) {
-      const scrollAmount = sliderRef.current.offsetWidth;
+      // Calculate width of a single item (1/3 of the visible area)
+      const scrollAmount = sliderRef.current.offsetWidth / 3;
       sliderRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
@@ -278,14 +280,32 @@ function Home() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="contact-section" style={{padding: '80px 20px', backgroundColor: '#1a1a1a', color: 'white', textAlign: 'center'}} data-aos="fade-up">
-        <h2 style={{fontSize: '2.2rem', marginBottom: '20px', fontWeight: '300'}}>Ready to Transform Your Space?</h2>
-        <p style={{fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto 30px', lineHeight: '1.8'}}>
-          For over 30 years, DMD Furnishing has set the bar for high-end hospitality furniture. We work with select owners, brands and designers to create unforgettable hotel interiors.
-        </p>
-        <Link to="/contact">
-          <button className="cta-button">Contact Us</button>
-        </Link>
+      <section className="contact-section" data-aos="fade-up">
+        <div className="contact-overlay"></div>
+        <div className="contact-content">
+          <h2 data-aos="fade-up">Ready to Transform Your Space?</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            For over 30 years, DMD Furnishing has set the bar for high-end hospitality furniture. We work with select owners, brands and designers to create unforgettable hotel interiors.
+          </p>
+          
+          <div className="contact-info-container" data-aos="fade-up" data-aos-delay="200">
+            <div className="contact-info-item">
+              <i className="contact-icon">📞</i>
+              <span>+1 (800) 555-1234</span>
+            </div>
+            <div className="contact-info-item">
+              <i className="contact-icon">✉️</i>
+              <span>info@dmdfurnishing.com</span>
+            </div>
+            <div className="contact-info-item">
+              <i className="contact-icon">📅</i>
+              <Link to="/contact">
+                <button className="cta-button">Schedule a Free Consultation</button>
+              </Link>
+            </div>
+          </div>
+          
+        </div>
       </section>
     </div>
   );

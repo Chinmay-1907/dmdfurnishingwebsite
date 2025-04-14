@@ -6,7 +6,7 @@ function AboutUs() {
     <div className="about-container">
       <section className="about-hero">
         <h1>Your Vision | Our Craft</h1>
-        <p>Crafting luxury furniture solutions since 1995</p>
+        <p>Crafting luxury furniture solutions</p>
       </section>
 
       <section className="about-story">
@@ -14,7 +14,7 @@ function AboutUs() {
           <h2>Our Story</h2>
           <p>
             DMD Furnishing was founded with a vision to create exceptional furniture that combines
-            aesthetics, functionality, and durability. For over 25 years, we have been dedicated to
+            aesthetics, functionality, and durability. We have been dedicated to
             crafting premium furniture solutions for hotels, resorts, and high-end businesses.
           </p>
           <p>

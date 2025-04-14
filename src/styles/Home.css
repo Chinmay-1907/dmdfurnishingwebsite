@@ -1,22 +1,26 @@
 /* Global scrolling fixes */
 html, body {
-  overflow-x: hidden;
+  overflow-x: auto;
   width: 100%;
   position: relative;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .home-container {
   max-width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden; /* Changed from auto to hidden to prevent vertical scrollbar */
   position: relative;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  box-sizing: border-box;
 }
 
 .hero-section {
-  height: 97vh;
+  height: 100vh; /* Changed from 97vh to 100vh to fit the viewport exactly */
   background-color: transparent;
   text-align: center;
   position: relative;
@@ -28,7 +32,7 @@ html, body {
 }
 
 .hero-slide {
-  height: 95vh;
+  height: 100vh; /* Changed from 95vh to 100vh to match hero-section */
   display: flex !important;
   align-items: center;
   justify-content: center;
@@ -66,7 +70,7 @@ html, body {
 
 /* Slick slider custom styles */
 .hero-section .slick-dots {
-  bottom: 100px;
+  bottom: 20px; /* Changed from 100px to 20px to move dots back to original position */
   z-index: 10;
 }
 
@@ -173,13 +177,15 @@ html, body {
 .inspirations-slider {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
+  overflow-x: hidden; /* Changed from auto to hidden to prevent horizontal scrollbar */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   padding: 20px 0;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .inspirations-slider::-webkit-scrollbar {
@@ -580,6 +586,103 @@ html, body {
   width: 100%;
 }
 
+/* Contact Section Styles */
+.contact-section {
+  position: relative;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.8));
+  z-index: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-left: 3px solid #d4af37;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  background-color: rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #d4af37;
+}
+
+.contact-section .cta-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section .cta-button:hover {
+  background-color: #c4a030;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.5rem;
@@ -618,5 +721,18 @@ html, body {
   
   .testimonial-section {
     flex-direction: column;
+  }
+  
+  .contact-info-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
   }
 }
