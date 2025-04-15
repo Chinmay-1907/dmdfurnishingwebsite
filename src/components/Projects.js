@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
 
 function Projects() {
+  const navigate = useNavigate();
   return (
     <div className="projects-container">
       <section className="projects-hero">
@@ -19,7 +21,7 @@ function Projects() {
               Complete furnishing solution for a hotel renovation, including guest rooms, 
               lobby, and dining areas with custom-designed furniture pieces.
             </p>
-            <button className="view-project">View Project Details</button>
+            <button className="view-project" onClick={() => navigate('/projects/quality-inn-gainesville')}>View Project Details</button>
           </div>
         </div>
 
@@ -32,7 +34,7 @@ function Projects() {
               Custom-designed furniture for a boutique motel, featuring coastal-inspired 
               pieces that blend comfort with local aesthetic elements.
             </p>
-            <button className="view-project">View Project Details</button>
+            <button className="view-project" onClick={() => navigate('/projects/towne-lyne-motel-ogunquit')}>View Project Details</button>
           </div>
         </div>
 
@@ -45,7 +47,7 @@ function Projects() {
               Complete furnishing package for guest rooms and common areas, 
               featuring custom-designed pieces that reflect the brand's identity and local culture.
             </p>
-            <button className="view-project">View Project Details</button>
+            <button className="view-project" onClick={() => navigate('/projects/marriott-courtyard-boston')}>View Project Details</button>
           </div>
         </div>
 
@@ -58,7 +60,7 @@ function Projects() {
               Comprehensive furniture solution for a hotel renovation, including custom beds, 
               seating, and case goods designed for durability and style.
             </p>
-            <button className="view-project">View Project Details</button>
+            <button className="view-project" onClick={() => navigate('/projects/hampton-inn-portland')}>View Project Details</button>
           </div>
         </div>
       </section>

@@ -300,7 +300,7 @@ function Home() {
             <div className="contact-info-item">
               <i className="contact-icon">📅</i>
               <Link to="/contact">
-                <button className="cta-button">Schedule a Free Consultation</button>
+                <button className="cta-button">Schedule a Free Call</button>
               </Link>
             </div>
           </div>

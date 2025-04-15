@@ -17,8 +17,63 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  flex-wrap: nowrap;
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 992px) {
+  .header-container {
+    flex-wrap: nowrap;
+  }
+  
+  .main-nav {
+    order: unset;
+    width: auto;
+    margin-top: 0;
+  }
+  
+  .nav-links {
+    flex-wrap: nowrap;
+    margin: 0 10px;
+  }
+  
+  .nav-links li {
+    margin: 0 8px;
+  }
+  
+  .contact-number {
+    order: unset;
+    white-space: nowrap;
+  }
+  
+  .nav-cta {
+    order: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo a {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  
+  .contact-number a {
+    font-size: 0.85rem;
+  }
+  
+  .consultation-button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
 .logo a {
   font-size: 1.8rem;
   font-weight: 700;
@@ -116,29 +171,53 @@
 
 /* Mobile menu styles */
 @media (max-width: 992px) {
-  .nav-links {
-    display: none; /* Will be replaced with mobile menu toggle */
+  .site-header {
+    padding: 10px 0;
   }
   
   .header-container {
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .main-nav {
+    order: 4;
+    width: 100%;
+    margin-top: 15px;
+    overflow-x: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .nav-links::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+    flex-shrink: 0;
   }
   
   .contact-number {
     order: 2;
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin-right: 10px;
   }
   
   .nav-cta {
     order: 3;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
   }
-  
-  /* Mobile menu button would be added here */
 }
 
 @media (max-width: 768px) {
@@ -153,5 +232,36 @@
   .consultation-button {
     padding: 8px 15px;
     font-size: 0.8rem;
+  }
+  
+  .contact-number {
+    font-size: 0.9rem;
+  }
+  
+  .nav-links li {
+    margin: 0 8px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 10px;
+  }
+  
+  .logo a {
+    font-size: 1.3rem;
+  }
+  
+  .contact-number {
+    font-size: 0.8rem;
+  }
+  
+  .consultation-button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
   }
 }
