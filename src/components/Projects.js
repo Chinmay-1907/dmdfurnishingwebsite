@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
 
 function Projects() {
   const navigate = useNavigate();
+  
+  // Add scroll animation effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectGrid = document.querySelector('.project-grid');
+      if (projectGrid) {
+        const scrollPosition = window.scrollY;
+        const heroHeight = document.querySelector('.projects-hero').offsetHeight;
+        
+        if (scrollPosition > heroHeight * 0.5) {
+          projectGrid.style.opacity = '1';
+          projectGrid.style.transform = 'translateY(0)';
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className="projects-container">
       <section className="projects-hero">
@@ -11,10 +30,10 @@ function Projects() {
         <p>Explore our latest furniture installations and designs</p>
       </section>
 
-      <section className="project-gallery">
-        <div className="project-item">
-          <div className="project-image"></div>
-          <div className="project-info">
+      <div className="project-grid">
+        <div className="project-card">
+          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
+          <div className="card-content">
             <h3>Quality Inn - Gainesville, FL</h3>
             <p className="project-location">Hospitality</p>
             <p className="project-description">
@@ -25,9 +44,9 @@ function Projects() {
           </div>
         </div>
 
-        <div className="project-item">
-          <div className="project-image"></div>
-          <div className="project-info">
+        <div className="project-card">
+          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
+          <div className="card-content">
             <h3>Towne Lyne Motel - Ogunquit, ME</h3>
             <p className="project-location">Hospitality</p>
             <p className="project-description">
@@ -38,9 +57,9 @@ function Projects() {
           </div>
         </div>
 
-        <div className="project-item">
-          <div className="project-image"></div>
-          <div className="project-info">
+        <div className="project-card">
+          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
+          <div className="card-content">
             <h3>Marriott Courtyard - Boston, MA</h3>
             <p className="project-location">Hospitality</p>
             <p className="project-description">
@@ -51,9 +70,9 @@ function Projects() {
           </div>
         </div>
 
-        <div className="project-item">
-          <div className="project-image"></div>
-          <div className="project-info">
+        <div className="project-card">
+          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
+          <div className="card-content">
             <h3>Hampton Inn - Portland, OR</h3>
             <p className="project-location">Hospitality</p>
             <p className="project-description">
@@ -63,7 +82,33 @@ function Projects() {
             <button className="view-project" onClick={() => navigate('/projects/hampton-inn-portland')}>View Project Details</button>
           </div>
         </div>
-      </section>
+
+        <div className="project-card">
+          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
+          <div className="card-content">
+            <h3>Hilton Garden Inn - Miami, FL</h3>
+            <p className="project-location">Hospitality</p>
+            <p className="project-description">
+              Modern furnishing package for a newly constructed hotel, featuring contemporary designs 
+              that complement the vibrant Miami atmosphere.
+            </p>
+            <button className="view-project" onClick={() => navigate('/projects/hilton-garden-inn-miami')}>View Project Details</button>
+          </div>
+        </div>
+
+        <div className="project-card">
+          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1540304453527-62f979142a17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
+          <div className="card-content">
+            <h3>Ocean View Resort - San Diego, CA</h3>
+            <p className="project-location">Hospitality</p>
+            <p className="project-description">
+              Luxury furnishing solution for a beachfront resort, featuring custom pieces 
+              designed to withstand coastal conditions while providing exceptional comfort.
+            </p>
+            <button className="view-project" onClick={() => navigate('/projects/ocean-view-resort-san-diego')}>View Project Details</button>
+          </div>
+        </div>
+      </div>
 
       <section className="project-categories">
         <h2>Browse Projects by Category</h2>

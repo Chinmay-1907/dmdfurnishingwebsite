@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProjectDetail.css';
 import projectData from '../data/projects';
@@ -11,6 +11,8 @@ function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
+  const heroTitleRef = useRef(null);
+  const projectContentRef = useRef(null);
   
   useEffect(() => {
     // Find the project based on the URL parameter
@@ -19,6 +21,31 @@ function ProjectDetail() {
     if (foundProject) {
       setProject(foundProject);
     }
+    
+    // Add scroll animation effect
+    const handleScroll = () => {
+      if (heroTitleRef.current && projectContentRef.current) {
+        const scrollPosition = window.scrollY;
+        const heroHeight = document.querySelector('.project-hero').offsetHeight;
+        
+        // Animate hero title on scroll
+        if (scrollPosition < heroHeight) {
+          const translateY = scrollPosition * 0.5;
+          const opacity = 1 - (scrollPosition / heroHeight) * 1.5;
+          heroTitleRef.current.style.transform = `translateY(${translateY}px)`;
+          heroTitleRef.current.style.opacity = Math.max(opacity, 0);
+        }
+        
+        // Fade in content on scroll
+        if (scrollPosition > heroHeight * 0.3) {
+          projectContentRef.current.style.opacity = '1';
+          projectContentRef.current.style.transform = 'translateY(0)';
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [projectId]);
 
   // Navigate back function
@@ -36,24 +63,20 @@ function ProjectDetail() {
 
   return (
     <div className="project-detail-container">
+      {/* Full-width hero section with background image */}
+      <div className="project-hero" style={{backgroundImage: `url(${project.mainImage})`}}>
+        <div className="hero-overlay">
+          <h1 className="hero-title" ref={heroTitleRef}>{project.name}</h1>
+        </div>
+      </div>
+      
       <div className="breadcrumb">
         <button onClick={() => navigate('/projects')}>All Projects</button>
         <span> &gt; </span>
         <span>{project.name}</span>
       </div>
 
-      <div className="project-detail-content">
-        <div className="project-gallery">
-          <h2 className="gallery-title">Project Gallery</h2>
-          <div className="images-scroll-container">
-            {project.images.map((image) => (
-              <div key={image.id} className="gallery-image-container">
-                <img src={image.url} alt={image.alt} className="gallery-image" />
-                <p className="image-caption">{image.alt}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="project-detail-content" ref={projectContentRef}>
 
         <div className="project-info">
           <h1>{project.name}</h1>
@@ -96,6 +119,19 @@ function ProjectDetail() {
                 <cite>— {project.clientName}, {project.clientPosition}</cite>
               </footer>
             </blockquote>
+          </div>
+          
+          {/* Horizontal image gallery without scrollbar */}
+          <div className="project-gallery">
+            <h2 className="gallery-title">Project Gallery</h2>
+            <div className="gallery-container">
+              {project.images.map((image) => (
+                <div key={image.id} className="gallery-item">
+                  <img src={image.url} alt={image.alt} className="gallery-image" />
+                  <p className="image-caption">{image.alt}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="project-actions">
