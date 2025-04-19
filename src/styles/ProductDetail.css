@@ -188,28 +188,50 @@
 }
 
 .contact-button {
-  background-color: #d4af37;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 4px;
+  all: unset;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  width: 100%;
-  max-width: 300px;
+  padding: 18px 40px;
+  min-width: 240px;
   font-size: 1.1rem;
-  display: block;
+  font-weight: 500;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 0.8px;
+  border: 2px solid #d4af37;
+  background-color: white;
+  color: #d4af37;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 30px;
+}
+
+.contact-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #d4af37;
+  z-index: -1;
+  transition: width 0.4s ease;
 }
 
 .contact-button:hover {
-  background-color: #c4a030;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.25);
+}
+
+.contact-button:hover::after {
+  width: 100%;
 }
 
 .loading {

@@ -134,9 +134,11 @@ function ProjectDetail() {
             </div>
           </div>
 
-          <div className="project-actions">
-            <button className="back-button" onClick={handleBack}>Back to Projects</button>
-            <button className="contact-button" onClick={() => navigate('/contact')}>Discuss Your Project</button>
+          {/* Back to Projects button */}
+          <div className="back-to-projects-container">
+            <button className="back-to-projects-button" onClick={() => navigate('/projects')}>
+              Back to Projects
+            </button>
           </div>
         </div>
       </div>
