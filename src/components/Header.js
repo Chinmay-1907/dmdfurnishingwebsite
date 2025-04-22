@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenuToggle = () => setMenuOpen((open) => !open);
   return (
     <header className="site-header">
       <div className="header-container">
-        <div className="logo">
-          <Link to="/">DMD Furnishing</Link>
+        <div className={`hamburger-menu${menuOpen ? ' open' : ''}`} onClick={handleMenuToggle} aria-label="Toggle navigation" tabIndex={0} role="button" onKeyPress={e => { if (e.key === 'Enter' || e.key === ' ') handleMenuToggle(); }}>
+          <span className="hamburger-icon"></span>
+          <span className="hamburger-icon"></span>
+          <span className="hamburger-icon"></span>
         </div>
-        <nav className="main-nav">
+        <div className="logo">
+          <Link to="/">
+            <img src="/DMD_Furnishing_Logo_Embedded.svg" alt="DMD Furnishing Logo" className="logo-image" />
+          </Link>
+        </div>
+        <nav className={`main-nav${menuOpen ? ' open' : ''}`}> 
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>

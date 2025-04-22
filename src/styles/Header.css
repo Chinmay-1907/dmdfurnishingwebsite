@@ -74,12 +74,21 @@
     font-size: 0.8rem;
   }
 }
+.logo-image {
+  height: 120px;
+  margin-right: 0px;
+  width: auto;
+  object-fit: cover;
+}
+
 .logo a {
   font-size: 1.8rem;
   font-weight: 700;
   color: #333;
   text-decoration: none;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
 }
 
 .main-nav {
@@ -182,6 +191,7 @@
   
   .logo {
     flex: 1;
+    order: 0; /* Ensure logo comes after hamburger */
   }
   
   .main-nav {
@@ -211,12 +221,12 @@
   }
   
   .contact-number {
-    order: 2;
+    order: 1; /* Adjust order relative to new hamburger position */
     margin-right: 10px;
   }
   
   .nav-cta {
-    order: 3;
+    order: 2; /* Adjust order relative to new hamburger position */
   }
 }
 
@@ -260,6 +270,125 @@
     font-size: 0.8rem;
   }
   
+  .consultation-button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1100;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.hamburger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger-menu.open .hamburger-icon:nth-child(1) {
+  transform: translateY(11px) rotate(55deg);
+}
+.hamburger-menu.open .hamburger-icon:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.open .hamburger-icon:nth-child(3) {
+  transform: translateY(-11px) rotate(-55deg);
+  
+}
+@media (max-width: 992px) {
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    z-index: 1000;
+  }
+  .main-nav.open {
+    max-height: 500px;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    overflow-y: auto;
+    white-space: normal;
+    align-items: flex-start;
+  }
+  .nav-links li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    width: 100%;
+    display: block;
+  }
+  .hamburger-menu {
+    display: flex;
+    order: -1; /* Move hamburger to the far left */
+    margin-right: 15px; /* Add space between hamburger and logo */
+    margin-left: 0;
+  }
+  .header-container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-nav {
+    order: 4;
+  }
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .consultation-button {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+  .contact-number {
+    font-size: 0.9rem;
+  }
+  .nav-links li {
+    margin: 0 8px;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 10px;
+  }
+  .logo a {
+    font-size: 1.3rem;
+  }
+  .contact-number {
+    font-size: 0.8rem;
+  }
   .consultation-button {
     padding: 6px 12px;
     font-size: 0.75rem;
