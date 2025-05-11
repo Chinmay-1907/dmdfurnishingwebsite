@@ -1,6 +1,6 @@
 /* Global scrolling fixes */
 html, body {
-  overflow-x: hidden;
+  overflow-x: auto;
   width: 100%;
   position: relative;
   scroll-behavior: smooth;
@@ -8,8 +8,6 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 100%;
-  overflow-y: auto;
 }
 
 .home-container {
@@ -19,9 +17,6 @@ html, body {
   position: relative;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   box-sizing: border-box;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .hero-section {
