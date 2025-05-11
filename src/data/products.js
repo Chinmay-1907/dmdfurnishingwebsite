@@ -20,7 +20,6 @@ const productData = {
               id: 'executive-desk-1',
               name: 'Executive L-Shaped Desk',
               description: 'Premium L-shaped desk with built-in storage and cable management',
-              price: '$1,299',
               image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['executive', 'l-shaped', 'storage', 'premium']
             },
@@ -28,7 +27,6 @@ const productData = {
               id: 'standing-desk-1',
               name: 'Adjustable Standing Desk',
               description: 'Height-adjustable desk for ergonomic working positions',
-              price: '$899',
               image: 'https://images.unsplash.com/photo-1544140708-514b7837c325?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['standing', 'adjustable', 'ergonomic']
             }
@@ -43,7 +41,6 @@ const productData = {
               id: 'luxe-executive-chair',
               name: 'Luxe Executive Chair',
               description: 'Premium ergonomic office chair with full adjustability and lumbar support',
-              price: '$799',
               image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['executive', 'ergonomic', 'premium', 'adjustable']
             },
@@ -51,7 +48,6 @@ const productData = {
               id: 'task-chair-1',
               name: 'Mesh Task Chair',
               description: 'Breathable mesh chair with essential adjustment features',
-              price: '$349',
               image: 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['task', 'mesh', 'breathable']
             }
@@ -66,7 +62,6 @@ const productData = {
               id: 'file-cabinet-1',
               name: 'Modern File Cabinet',
               description: 'Contemporary file cabinet with locking drawers',
-              price: '$399',
               image: 'https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['storage', 'filing', 'locking']
             }
@@ -89,7 +84,6 @@ const productData = {
               id: 'royal-suite-bed',
               name: 'Royal Suite Bed',
               description: 'Luxury hotel bed with premium headboard and frame',
-              price: '$1,899',
               image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['luxury', 'suite', 'premium']
             },
@@ -97,7 +91,6 @@ const productData = {
               id: 'standard-queen-bed',
               name: 'Standard Queen Bed',
               description: 'Reliable and comfortable queen bed for standard rooms',
-              price: '$1,199',
               image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['standard', 'queen', 'comfortable']
             }
@@ -112,7 +105,6 @@ const productData = {
               id: 'guest-lounge-chair',
               name: 'Guest Lounge Chair',
               description: 'Comfortable accent chair for hotel room seating',
-              price: '$499',
               image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['lounge', 'accent', 'comfortable']
             }
@@ -127,7 +119,6 @@ const productData = {
               id: 'bedside-table-1',
               name: 'Modern Bedside Table',
               description: 'Sleek nightstand with drawer and shelf',
-              price: '$299',
               image: 'https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['nightstand', 'bedside', 'modern']
             }
@@ -150,7 +141,6 @@ const productData = {
               id: 'patio-sofa-set',
               name: 'Luxury Patio Sofa Set',
               description: 'Weather-resistant outdoor sofa set with coffee table',
-              price: '$2,499',
               image: 'https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
               tags: ['patio', 'set', 'weather-resistant', 'luxury']
             },

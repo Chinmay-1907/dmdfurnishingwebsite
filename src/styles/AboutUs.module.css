@@ -133,13 +133,13 @@
 }
 
 .primaryButton {
-  background-color: #000;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   border: 2px solid #000;
 }
 
 .primaryButton:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -151,7 +151,7 @@
 }
 
 .secondaryButton:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
 }
 

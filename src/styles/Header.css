@@ -6,7 +6,7 @@
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 15px 0;
+  padding: 1px 0; /* Reduced padding */
   transition: all 0.3s ease;
 }
 
@@ -16,7 +16,7 @@
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
   flex-wrap: nowrap;
 }
 
@@ -181,7 +181,7 @@
 /* Mobile menu styles */
 @media (max-width: 992px) {
   .site-header {
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding */
   }
   
   .header-container {
@@ -232,7 +232,7 @@
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 0 15px;
+    padding: 0 10px; /* Reduced padding */
   }
   
   .logo a {
@@ -240,26 +240,26 @@
   }
   
   .consultation-button {
-    padding: 8px 15px;
-    font-size: 0.8rem;
+    padding: 6px 12px; /* Adjusted padding */
+    font-size: 0.75rem; /* Adjusted font size */
   }
   
   .contact-number {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Adjusted font size */
   }
   
   .nav-links li {
-    margin: 0 8px;
+    margin: 0 6px; /* Adjusted margin */
   }
   
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Adjusted font size */
   }
 }
 
 @media (max-width: 480px) {
   .header-container {
-    padding: 0 10px;
+    padding: 0 5px; /* Reduced padding */
   }
   
   .logo a {
@@ -267,12 +267,12 @@
   }
   
   .contact-number {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Adjusted font size */
   }
   
   .consultation-button {
-    padding: 6px 12px;
-    font-size: 0.75rem;
+    padding: 5px 10px; /* Adjusted padding */
+    font-size: 0.7rem; /* Adjusted font size */
   }
 }
 

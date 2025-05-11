@@ -2,6 +2,7 @@
   background-color: #1a1a1a;
   color: #fff;
   padding: 60px 0 20px;
+  margin-bottom: 0;
 }
 
 .footer-container {
@@ -80,7 +81,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #ffffff;
   flex-wrap: wrap;
 }
 

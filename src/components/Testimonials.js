@@ -18,7 +18,7 @@ function Testimonials() {
             </p>
           </div>
           <div className="testimonial-author">
-            <div className="author-image"></div>
+            {/* <div className="author-image"></div> */}
             <div className="author-info">
               <h3>James Wilson</h3>
               <p>General Manager, Grand Luxury Hotel</p>
@@ -34,7 +34,7 @@ function Testimonials() {
             </p>
           </div>
           <div className="testimonial-author">
-            <div className="author-image"></div>
+           {/* <div className="author-image"></div>*/}
             <div className="author-info">
               <h3>Sarah Chen</h3>
               <p>Interior Designer, Oceanview Resort & Spa</p>
@@ -50,7 +50,7 @@ function Testimonials() {
             </p>
           </div>
           <div className="testimonial-author">
-            <div className="author-image"></div>
+           {/* <div className="author-image"></div> */}
             <div className="author-info">
               <h3>Robert Johnson</h3>
               <p>CEO, Executive Tower Offices</p>
@@ -66,7 +66,7 @@ function Testimonials() {
             </p>
           </div>
           <div className="testimonial-author">
-            <div className="author-image"></div>
+           {/* <div className="author-image"></div> */}
             <div className="author-info">
               <h3>Maria Rodriguez</h3>
               <p>Owner, Skyline Restaurant</p>

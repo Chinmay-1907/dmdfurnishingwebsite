@@ -17,68 +17,6 @@ function Services() {
         </p>
       </section>
 
-      <section className="services-grid">
-        <div className="service-card">
-          <div className="service-icon"></div>
-          <h3>Design Consultation</h3>
-          <p>
-            Our expert designers work closely with you to understand your vision, requirements, and budget.
-            We provide personalized recommendations and create detailed design concepts for your space.
-          </p>
-          <button className="learn-more">Learn More</button>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon"></div>
-          <h3>Custom Manufacturing</h3>
-          <p>
-            We specialize in creating bespoke furniture pieces tailored to your specific needs.
-            Our skilled craftsmen use premium materials to bring your vision to life with exceptional quality.
-          </p>
-          <button className="learn-more">Learn More</button>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon"></div>
-          <h3>Project Management</h3>
-          <p>
-            Our dedicated project managers oversee every detail from concept to completion,
-            ensuring your project stays on schedule and within budget while meeting all requirements.
-          </p>
-          <button className="learn-more">Learn More</button>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon"></div>
-          <h3>Delivery & Installation</h3>
-          <p>
-            We handle the logistics of delivering and installing your furniture with care and precision,
-            minimizing disruption to your business operations.
-          </p>
-          <button className="learn-more">Learn More</button>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon"></div>
-          <h3>After-Sales Support</h3>
-          <p>
-            Our commitment to your satisfaction extends beyond installation. We provide comprehensive
-            after-sales support, including maintenance advice and prompt assistance when needed.
-          </p>
-          <button className="learn-more">Learn More</button>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon"></div>
-          <h3>Refurbishment Services</h3>
-          <p>
-            Breathe new life into your existing furniture with our refurbishment services.
-            We can restore, reupholster, and modernize your pieces to extend their lifespan.
-          </p>
-          <button className="learn-more">Learn More</button>
-        </div>
-      </section>
-
       <section className="process-section">
         <h2>Our Process</h2>
         <div className="process-steps">
