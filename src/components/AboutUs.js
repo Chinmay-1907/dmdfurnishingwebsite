@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/AboutUs.css';
+import '../styles/aboutus.css';
 import { FaLinkedin, FaEnvelope, FaAward, FaLeaf, FaHandshake, FaStar } from 'react-icons/fa';
 
 function AboutUs() {
