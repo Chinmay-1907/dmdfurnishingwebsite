@@ -36,14 +36,15 @@ function Home() {
 
   
   // Initialize AOS animation library
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      mirror: false,
-      disableMutationObserver: false
-    });
-  }, []);
+  AOS.init({
+    offset:   2,     // fire when the element is only 50px in view
+    duration: 600,    // faster (0.6s) animation
+    delay:    0,      // no extra delay
+    easing:  'ease', // a snappier easing curve
+    once:     true,
+    mirror:   false
+  }); 
+  
 
   // Slideshow settings
   const sliderSettings = {
@@ -173,7 +174,7 @@ function Home() {
       </section>
 
       {/* Our Premium Collections / Inspirations Gallery Section */}
-      <section className="inspirations-section" data-aos="fade-up">
+      <section className="inspirations-section">
         <h2>Our Premium Collections</h2>
         <p className="section-subtitle">Browse our curated collection of design inspirations</p>
         
@@ -280,15 +281,15 @@ function Home() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="contact-section" data-aos="fade-up">
+      <section className="contact-section">
         <div className="contact-overlay"></div>
         <div className="contact-content">
-          <h2 data-aos="fade-up">Ready to Transform Your Space?</h2>
-          <p data-aos="fade-up" data-aos-delay="100">
-            For over 30 years, DMD Furnishing has set the bar for high-end hospitality furniture. We work with select owners, brands and designers to create unforgettable hotel interiors.
+          <h2>Ready to Transform Your Space?</h2>
+          <p>
+            DMD Furnishing has set the bar for high-end hospitality furniture. We work with select owners, brands and designers to create unforgettable hotel interiors.
           </p>
           
-          <div className="contact-info-container" data-aos="fade-up" data-aos-delay="200">
+          <div className="contact-info-container">
             <div className="contact-info-item">
               <i className="contact-icon">📞</i>
               <span>+1 (800) 555-1234</span>
@@ -310,5 +311,7 @@ function Home() {
     </div>
   );
 }
+
+
 
 export default Home;

@@ -10,14 +10,14 @@ function InspirationDetail() {
   // Initialize AOS animation library
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: true,
-      mirror: false
+      offset:   50,    // start the animation 50px before the element hits the viewport (default is 120)
+      duration: 600,   // animation runs in 600ms instead of 1000ms
+      once:     true,  // keep your existing settings
+      mirror:   false,
+      disableMutationObserver: false
     });
-    
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
   }, []);
+  
 
   // Sample inspiration data - in a real app, you would fetch this based on the ID
   const inspirationData = {

@@ -14,10 +14,8 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  transform: scale(0.85);
-  transform-origin: top left;
-  width: 118%; /* Compensate for the scale to avoid extra whitespace */
+  min-height: 100vh;    /* keep full-height flex */
+  zoom: 85%;            /* scale the whole app down to 85% */
 }
 
 .main-content {
