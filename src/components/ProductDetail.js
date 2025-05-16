@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProductDetail.css';
 import productData from '../data/products';
+import ProductGallery from './ProductGallery';
 
 // This component displays detailed information about a specific product
 // It shows multiple images from different angles in a scrollable container,
@@ -83,17 +84,7 @@ function ProductDetail() {
       </div>
 
       <div className="product-detail-content">
-        <div className="product-gallery">
-          <h2 className="gallery-title">Product Gallery</h2>
-          <div className="images-scroll-container">
-            {productImages.map((image) => (
-              <div key={image.id} className="gallery-image-container">
-                <img src={image.url} alt={image.alt} className="gallery-image" />
-                <p className="image-caption">{image.alt}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProductGallery images={productImages} />
 
         <div className="product-info">
           <h1>{product.name}</h1>

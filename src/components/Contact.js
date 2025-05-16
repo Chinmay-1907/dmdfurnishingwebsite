@@ -1,26 +1,9 @@
 import React from 'react';
 import '../styles/Contact.css';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
-import GoogleMapReact from 'google-map-react';
 import styles from '../styles/AboutUs.module.css';
 
-// Map marker component
-const MapMarker = ({ text }) => (
-  <div className="map-marker">
-    <FaMapMarkerAlt className="marker-icon" />
-    <div className="marker-text">{text}</div>
-  </div>
-);
-
 function Contact() {
-  // Google Maps properties
-  const defaultProps = {
-    center: {
-      lat: 42.0654, // Foxborough, MA coordinates
-      lng: -71.2478
-    },
-    zoom: 15
-  };
 
   return (
     <div className="contact-container">
@@ -121,19 +104,12 @@ function Contact() {
       <section className="map-section">
         <h2>Visit Our Showroom</h2>
         <div className="map-container">
-          <div style={{ height: '400px', width: '100%' }}>
-            {/* You'll need to add your Google Maps API key in the bootstrapURLKeys prop */}
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: '' }}
-              defaultCenter={defaultProps.center}
-              defaultZoom={defaultProps.zoom}
-            >
-              <MapMarker
-                lat={defaultProps.center.lat}
-                lng={defaultProps.center.lng}
-                text="DMD Furnishing Showroom"
-              />
-            </GoogleMapReact>
+          <div className="map-placeholder">
+            <div className="placeholder-content">
+              <FaMapMarkerAlt className="placeholder-icon" />
+              <p>5 Leonard Street, Foxborough, MA, USA</p>
+              <p className="placeholder-note">Visit us during business hours to explore our showroom</p>
+            </div>
           </div>
         </div>
       </section>
