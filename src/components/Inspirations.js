@@ -3,6 +3,7 @@ import '../styles/Inspirations.css';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import styles from '../styles/AboutUs.module.css';
 
 function Inspirations() {
   // Initialize AOS animation library
@@ -62,10 +63,15 @@ function Inspirations() {
 
   return (
     <div className="inspirations-container">
-      <section className="inspirations-hero">
-        <div className="inspirations-hero-content" data-aos="fade-up">
-          <h1>Design Inspirations</h1>
-          <p>Explore our curated collection of hospitality design inspirations</p>
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Design Inspirations</h1>
+          <p className={styles.heroSubtitle}>Explore our curated collection of hospitality design inspirations</p>
         </div>
       </section>
 

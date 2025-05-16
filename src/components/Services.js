@@ -1,12 +1,20 @@
 import React from 'react';
 import '../styles/Services.css';
+import styles from '../styles/AboutUs.module.css';
 
 function Services() {
   return (
     <div className="services-container">
-      <section className="services-hero">
-        <h1>Our Services</h1>
-        <p>Comprehensive furniture solutions for your business</p>
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1577140917170-285929fb55b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Our Services</h1>
+          <p className={styles.heroSubtitle}>Comprehensive furniture solutions for your business</p>
+        </div>
       </section>
 
       <section className="services-overview">

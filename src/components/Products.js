@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Products.css';
 import productData from '../data/products';
+import styles from '../styles/AboutUs.module.css';
+
 
 function Products() {
   // State for tracking selected institution and furniture type
@@ -179,9 +181,16 @@ function Products() {
 
   return (
     <div className="products-container">
-      <section className="products-hero">
-        <h1>Our Products</h1>
-        <p>Discover our premium furniture collections</p>
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Our Products</h1>
+          <p className={styles.heroSubtitle}>Discover our premium furniture collections</p>
+        </div>
       </section>
 
       {renderContent()}

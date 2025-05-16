@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import '../styles/Inspirations.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import styles from '../styles/AboutUs.module.css';
 
 function InspirationDetail() {
   const { id } = useParams();
@@ -120,15 +121,17 @@ function InspirationDetail() {
 
   return (
     <div className="inspiration-detail-container">
-      <div className="inspiration-detail-hero" style={{ backgroundImage: `url(${inspiration.image})` }}>
-        <div className="inspiration-detail-overlay">
-          <div className="inspiration-detail-content" data-aos="fade-up">
-            <span className="inspiration-category">{inspiration.category}</span>
-            <h1>{inspiration.title}</h1>
-            <p>{inspiration.description}</p>
-          </div>
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>{inspiration.title}</h1>
+          <p className={styles.heroSubtitle}>{inspiration.description}</p>
         </div>
-      </div>
+      </section>
 
       <div className="inspiration-detail-body">
         <div className="inspiration-detail-section" data-aos="fade-up">

@@ -1,12 +1,20 @@
 import React from 'react';
 import '../styles/Testimonials.css';
+import styles from '../styles/AboutUs.module.css';
 
 function Testimonials() {
   return (
     <div className="testimonials-container">
-      <section className="testimonials-hero">
-        <h1>Customer Testimonials</h1>
-        <p>What our clients say about our furniture and services</p>
+      <section className={styles.heroSection} style={{
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Customer Testimonials</h1>
+          <p className={styles.heroSubtitle}>What our clients say about our furniture and services</p>
+        </div>
       </section>
 
       <section className="testimonials-grid">

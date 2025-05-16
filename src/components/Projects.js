@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
+import styles from '../styles/AboutUs.module.css';
 
 function Projects() {
   const navigate = useNavigate();
-  
+  const heroRef = useRef(null);
+
   // Add scroll animation effect
   useEffect(() => {
     const handleScroll = () => {
       const projectGrid = document.querySelector('.project-grid');
-      if (projectGrid) {
+      if (projectGrid && heroRef.current) {
         const scrollPosition = window.scrollY;
-        const heroHeight = document.querySelector('.projects-hero').offsetHeight;
+        const heroHeight = heroRef.current.offsetHeight;
         
         if (scrollPosition > heroHeight * 0.5) {
           projectGrid.style.opacity = '1';
@@ -25,9 +27,17 @@ function Projects() {
   }, []);
   return (
     <div className="projects-container">
-      <section className="projects-hero">
-        <h1>Recent Projects</h1>
-        <p>Explore our latest furniture installations and designs</p>
+       <section ref={heroRef} className={styles.heroSection} style={{
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Recent Projects</h1>
+          <p className={styles.heroSubtitle}>Explore our latest furniture installations and designs</p>
+        </div>
       </section>
 
       <div className="project-grid">
