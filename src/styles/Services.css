@@ -229,6 +229,9 @@
   text-align: center;
   background-color: #1a1a1a;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-cta h2 {

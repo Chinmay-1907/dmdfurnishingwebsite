@@ -61,7 +61,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="services-cta">
+      <section className="service-cta">
         <h2>Ready to Transform Your Space?</h2>
         <p>Contact us today to discuss your furniture needs and schedule a consultation.</p>
         <button className="cta-button">Get in Touch</button>
