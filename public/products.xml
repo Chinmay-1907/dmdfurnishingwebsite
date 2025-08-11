@@ -1,58 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <places>
   <place id="office" name="Office" description="Professional furniture for corporate and workspace environments" image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-    <furnitureType id="office-desks" name="Desks" description="Professional work surfaces for productivity">
-      <product id="executive-desk-1" name="Executive L-Shaped Desk" description="Premium L-shaped desk with built-in storage and cable management" image="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="executive,l-shaped,storage,premium" />
-      <product id="standing-desk-1" name="Adjustable Standing Desk" description="Height-adjustable desk for ergonomic working positions" image="https://images.unsplash.com/photo-1544140708-514b7837c325?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="standing,adjustable,ergonomic" />
+    <furnitureType id="office-desks" name="Desks" description="Professional work surfaces for productivity" image="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="executive-desk-1" name="Executive L-Shaped Desk" description="Premium L-shaped desk with built-in storage and cable management" image="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="executive,l-shaped,storage,premium">
+        <images>
+          <image src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive L-Shaped Desk - Front view"/>
+          <image src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive L-Shaped Desk - Side view"/>
+          <image src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive L-Shaped Desk - Storage detail"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive L-Shaped Desk - Material detail"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive L-Shaped Desk - Cable management"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="72&quot;"/>
+          <spec name="Depth" value="60&quot;"/>
+          <spec name="Height" value="30&quot;"/>
+          <spec name="Material" value="Solid Oak with Steel Frame"/>
+          <spec name="Finish" value="Natural Wood with Matte Black Accents"/>
+          <spec name="Avalible colors" value="Red Blue WHiiitte"/>
+        </specifications>
+      </product>
+      <product id="standing-desk-1" name="Adjustable Standing Desk" description="Height-adjustable desk for ergonomic working positions" image="https://images.unsplash.com/photo-1544140708-514b7837c325?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="standing,adjustable,ergonomic">
+        <images>
+          <image src="https://images.unsplash.com/photo-1544140708-514b7837c325?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Adjustable Standing Desk - Standing position"/>
+          <image src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Adjustable Standing Desk - Sitting position"/>
+          <image src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Adjustable Standing Desk - Control mechanism"/>
+          <image src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Adjustable Standing Desk - Cable management"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="48&quot;"/>
+          <spec name="Depth" value="30&quot;"/>
+          <spec name="Height Range" value="28&quot; - 48&quot;"/>
+          <spec name="Material" value="Bamboo Top with Steel Frame"/>
+          <spec name="Finish" value="Natural Bamboo with Black Steel"/>
+          <spec name="Weight Capacity" value="150 lbs"/>
+          <spec name="Motor" value="Dual Motor Electric Lift"/>
+        </specifications>
+      </product>
+      <product id="writing-desk-1" name="Minimalist Writing Desk" description="Clean and simple desk for focused work" image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="minimalist,writing,simple">
+        <images>
+          <image src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Minimalist Writing Desk - Front view"/>
+          <image src="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Minimalist Writing Desk - Side view"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Minimalist Writing Desk - Wood grain detail"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Minimalist Writing Desk - Leg detail"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="42&quot;"/>
+          <spec name="Depth" value="24&quot;"/>
+          <spec name="Height" value="30&quot;"/>
+          <spec name="Material" value="Solid Walnut"/>
+          <spec name="Finish" value="Natural Oil Finish"/>
+          <spec name="Weight Capacity" value="100 lbs"/>
+          <spec name="Design" value="Mid-Century Modern"/>
+        </specifications>
+      </product>
     </furnitureType>
-    <furnitureType id="office-chairs" name="Chairs" description="Ergonomic seating solutions for all-day comfort">
-      <product id="luxe-executive-chair" name="Luxe Executive Chair" description="Premium ergonomic office chair with full adjustability and lumbar support" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="executive,ergonomic,premium,adjustable" />
-      <product id="task-chair-1" name="Mesh Task Chair" description="Breathable mesh chair with essential adjustment features" image="https://images.unsplash.com/photo-1580480055273-228ff5388ef8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="task,mesh,breathable" />
+    <furnitureType id="office-chairs" name="Chairs" description="Ergonomic seating solutions for the workplace" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="executive-chair-1" name="Executive Leather Chair" description="Premium leather office chair with adjustable features" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="executive,leather,adjustable">
+        <images>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive Leather Chair - Front view"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive Leather Chair - Side view"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive Leather Chair - Back view"/>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive Leather Chair - Leather detail"/>
+          <image src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Executive Leather Chair - Control mechanism"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="26&quot;"/>
+          <spec name="Depth" value="28&quot;"/>
+          <spec name="Height" value="42&quot; - 46&quot;"/>
+          <spec name="Seat Height" value="17&quot; - 21&quot;"/>
+          <spec name="Material" value="Top-Grain Leather"/>
+          <spec name="Frame" value="Aluminum Base with Casters"/>
+          <spec name="Weight Capacity" value="300 lbs"/>
+          <spec name="Features" value="Lumbar Support, Armrest Adjustment"/>
+        </specifications>
+      </product>
+      <product id="ergonomic-chair-1" name="Ergonomic Mesh Chair" description="Breathable mesh chair with full ergonomic support" image="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="ergonomic,mesh,breathable">
+        <images>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Ergonomic Mesh Chair - Front view"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Ergonomic Mesh Chair - Side view"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Ergonomic Mesh Chair - Back support detail"/>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Ergonomic Mesh Chair - Mesh detail"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="25&quot;"/>
+          <spec name="Depth" value="25&quot;"/>
+          <spec name="Height" value="40&quot; - 44&quot;"/>
+          <spec name="Seat Height" value="16&quot; - 20&quot;"/>
+          <spec name="Material" value="High-Grade Mesh with Memory Foam"/>
+          <spec name="Frame" value="Nylon Base with Casters"/>
+          <spec name="Weight Capacity" value="275 lbs"/>
+          <spec name="Features" value="4D Armrests, Tilt Tension Control"/>
+        </specifications>
+      </product>
     </furnitureType>
-    <furnitureType id="office-storage" name="Storage" description="Organizational solutions for documents and office supplies">
-      <product id="file-cabinet-1" name="Modern File Cabinet" description="Contemporary file cabinet with locking drawers" image="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="storage,filing,locking" />
+    <furnitureType id="office-storage" name="Storage" description="Organizational solutions for office spaces" image="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="filing-cabinet-1" name="Locking Filing Cabinet" description="Secure storage for important documents and files" image="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="storage,filing,locking">
+        <images>
+          <image src="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Locking Filing Cabinet - Closed view"/>
+          <image src="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Locking Filing Cabinet - Open drawer"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Locking Filing Cabinet - Lock mechanism"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Locking Filing Cabinet - Interior organization"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="15&quot;"/>
+          <spec name="Depth" value="20&quot;"/>
+          <spec name="Height" value="28&quot;"/>
+          <spec name="Material" value="Steel Construction"/>
+          <spec name="Finish" value="Powder-Coated Black"/>
+          <spec name="Drawers" value="2 Full-Extension Drawers"/>
+          <spec name="Security" value="Central Locking System"/>
+          <spec name="File Size" value="Letter and Legal Size"/>
+        </specifications>
+      </product>
     </furnitureType>
   </place>
   <place id="hotel" name="Hotel Room" description="Luxury furniture for hospitality and guest accommodations" image="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-    <furnitureType id="hotel-beds" name="Beds" description="Comfortable and stylish beds for guest rooms">
-      <product id="royal-suite-bed" name="Royal Suite Bed" description="Luxury hotel bed with premium headboard and frame" image="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="luxury,suite,premium" />
-      <product id="standard-queen-bed" name="Standard Queen Bed" description="Reliable and comfortable queen bed for standard rooms" image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="standard,queen,comfortable" />
+    <furnitureType id="hotel-beds" name="Beds" description="Comfortable and stylish beds for guest rooms" image="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="royal-suite-bed" name="Royal Suite Bed" description="Luxury hotel bed with premium headboard and frame" image="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="luxury,suite,premium">
+        <images>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Royal Suite Bed - Full bedroom view"/>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Royal Suite Bed - Headboard detail"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Royal Suite Bed - Side view"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Royal Suite Bed - Fabric detail"/>
+          <image src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Royal Suite Bed - Frame construction"/>
+        </images>
+        <specifications>
+          <spec name="Size" value="King (76&quot; x 80&quot;)"/>
+          <spec name="Headboard Height" value="54&quot;"/>
+          <spec name="Frame Height" value="14&quot;"/>
+          <spec name="Material" value="Solid Hardwood Frame"/>
+          <spec name="Upholstery" value="Premium Velvet"/>
+          <spec name="Finish" value="Espresso Wood with Brass Accents"/>
+          <spec name="Weight Capacity" value="1000 lbs"/>
+          <spec name="Features" value="Tufted Headboard, Under-bed Storage"/>
+        </specifications>
+      </product>
+      <product id="standard-queen-bed" name="Standard Queen Bed" description="Reliable and comfortable queen bed for standard rooms" image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="standard,queen,comfortable">
+        <images>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Standard Queen Bed - Full view"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Standard Queen Bed - Headboard"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Standard Queen Bed - Side profile"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Standard Queen Bed - Material detail"/>
+        </images>
+        <specifications>
+          <spec name="Size" value="Queen (60&quot; x 80&quot;)"/>
+          <spec name="Headboard Height" value="48&quot;"/>
+          <spec name="Frame Height" value="12&quot;"/>
+          <spec name="Material" value="Engineered Wood Frame"/>
+          <spec name="Upholstery" value="Durable Fabric"/>
+          <spec name="Finish" value="Natural Wood Finish"/>
+          <spec name="Weight Capacity" value="800 lbs"/>
+          <spec name="Features" value="Platform Design, Easy Assembly"/>
+        </specifications>
+      </product>
     </furnitureType>
-    <furnitureType id="hotel-seating" name="Seating" description="Accent chairs and sofas for guest rooms">
-      <product id="guest-lounge-chair" name="Guest Lounge Chair" description="Comfortable accent chair for hotel room seating" image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="lounge,accent,comfortable" />
+    <furnitureType id="hotel-seating" name="Seating" description="Accent chairs and sofas for guest rooms" image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="guest-lounge-chair" name="Guest Lounge Chair" description="Comfortable accent chair for hotel room seating" image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="lounge,accent,comfortable">
+        <images>
+          <image src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Guest Lounge Chair - Front view"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Guest Lounge Chair - Side view"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Guest Lounge Chair - Back view"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Guest Lounge Chair - Upholstery detail"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="30&quot;"/>
+          <spec name="Depth" value="32&quot;"/>
+          <spec name="Height" value="36&quot;"/>
+          <spec name="Seat Height" value="18&quot;"/>
+          <spec name="Material" value="Solid Oak Frame"/>
+          <spec name="Upholstery" value="Performance Fabric"/>
+          <spec name="Finish" value="Walnut Stain"/>
+          <spec name="Weight Capacity" value="250 lbs"/>
+        </specifications>
+      </product>
     </furnitureType>
-    <furnitureType id="hotel-tables" name="Tables" description="Functional tables for guest rooms">
-      <product id="bedside-table-1" name="Modern Bedside Table" description="Sleek nightstand with drawer and shelf" image="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="nightstand,bedside,modern" />
+    <furnitureType id="hotel-tables" name="Tables" description="Functional tables for guest rooms" image="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="bedside-table-1" name="Modern Bedside Table" description="Sleek nightstand with drawer and shelf" image="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="nightstand,bedside,modern">
+        <images>
+          <image src="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Modern Bedside Table - Front view"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Modern Bedside Table - Open drawer"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Modern Bedside Table - Side view"/>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Modern Bedside Table - Wood grain detail"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="18&quot;"/>
+          <spec name="Depth" value="16&quot;"/>
+          <spec name="Height" value="24&quot;"/>
+          <spec name="Material" value="Solid Walnut"/>
+          <spec name="Finish" value="Natural Oil Finish"/>
+          <spec name="Storage" value="1 Drawer + Open Shelf"/>
+          <spec name="Hardware" value="Soft-Close Drawer Slides"/>
+          <spec name="Style" value="Mid-Century Modern"/>
+        </specifications>
+      </product>
     </furnitureType>
   </place>
   <place id="outdoor" name="Outdoor" description="Weather-resistant furniture for patios, gardens, and outdoor spaces" image="https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-    <furnitureType id="outdoor-seating" name="Seating" description="Comfortable outdoor chairs and sofas">
-      <product id="patio-sofa-set" name="Luxury Patio Sofa Set" description="Weather-resistant outdoor sofa set with coffee table" image="https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="patio,set,weather-resistant,luxury" />
-      <product id="adirondack-chair" name="Premium Adirondack Chair" description="Classic outdoor chair made from weather-resistant materials" price="$349" image="https://images.unsplash.com/photo-1559999076-f8346e86f3b5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="adirondack,classic,weather-resistant" />
+    <furnitureType id="outdoor-seating" name="Seating" description="Comfortable outdoor chairs and sofas" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="teak-lounge-chair" name="Teak Lounge Chair" description="Premium teak outdoor chair with weather-resistant cushions" image="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="teak,lounge,weather-resistant">
+        <images>
+          <image src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Lounge Chair - Outdoor setting"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Lounge Chair - Side view"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Lounge Chair - Teak wood detail"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Lounge Chair - Cushion detail"/>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Lounge Chair - Construction detail"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="32&quot;"/>
+          <spec name="Depth" value="36&quot;"/>
+          <spec name="Height" value="34&quot;"/>
+          <spec name="Seat Height" value="16&quot;"/>
+          <spec name="Material" value="Grade A Teak Wood"/>
+          <spec name="Finish" value="Natural Teak Oil"/>
+          <spec name="Cushions" value="Sunbrella Fabric"/>
+          <spec name="Weight Capacity" value="300 lbs"/>
+          <spec name="Weather Rating" value="All-Weather Resistant"/>
+        </specifications>
+      </product>
+      <product id="wicker-sofa-set" name="Outdoor Wicker Sofa Set" description="Modular wicker seating perfect for patios" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="wicker,modular,patio">
+        <images>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Outdoor Wicker Sofa Set - Full set"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Outdoor Wicker Sofa Set - Individual pieces"/>
+          <image src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Outdoor Wicker Sofa Set - Wicker detail"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Outdoor Wicker Sofa Set - Cushion quality"/>
+        </images>
+        <specifications>
+          <spec name="Configuration" value="Modular 6-Piece Set"/>
+          <spec name="Sofa Width" value="78&quot;"/>
+          <spec name="Chair Width" value="32&quot;"/>
+          <spec name="Depth" value="32&quot;"/>
+          <spec name="Height" value="30&quot;"/>
+          <spec name="Material" value="PE Rattan Wicker"/>
+          <spec name="Frame" value="Powder-Coated Aluminum"/>
+          <spec name="Cushions" value="Water-Resistant Fabric"/>
+          <spec name="Weight Capacity" value="400 lbs per seat"/>
+        </specifications>
+      </product>
     </furnitureType>
-    <furnitureType id="outdoor-dining" name="Dining" description="Outdoor dining tables and sets">
-      <product id="outdoor-dining-set" name="Teak Dining Set" description="6-person outdoor dining table and chairs made from premium teak" price="$3,299" image="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="dining,teak,premium,set" />
+    <furnitureType id="outdoor-dining" name="Dining" description="Outdoor dining tables and chairs" image="https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="teak-dining-set" name="Teak Dining Set" description="6-person teak dining table with matching chairs" price="$2,899" image="https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="teak,dining,6-person">
+        <images>
+          <image src="https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Dining Set - Full dining setup"/>
+          <image src="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Dining Set - Table detail"/>
+          <image src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Dining Set - Chair detail"/>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Dining Set - Wood grain"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Teak Dining Set - Construction joints"/>
+        </images>
+        <specifications>
+          <spec name="Table Size" value="72&quot; x 40&quot;"/>
+          <spec name="Table Height" value="30&quot;"/>
+          <spec name="Chair Width" value="22&quot;"/>
+          <spec name="Chair Depth" value="24&quot;"/>
+          <spec name="Chair Height" value="33&quot;"/>
+          <spec name="Material" value="Grade A Teak"/>
+          <spec name="Finish" value="Natural Teak Oil"/>
+          <spec name="Seating" value="6 Matching Chairs"/>
+          <spec name="Assembly" value="Minimal Assembly Required"/>
+        </specifications>
+      </product>
     </furnitureType>
   </place>
-  <place id="restaurant" name="Restaurant &amp; Dining" description="Elegant furniture solutions for dining establishments" image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-    <furnitureType id="dining-tables" name="Dining Tables" description="Stylish and durable tables for restaurant use">
-      <product id="elegance-dining-set" name="Elegance Dining Set" description="Sophisticated dining table and chairs for upscale restaurants" price="$2,899" image="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="dining,elegant,upscale,set" />
-    </furnitureType>
-    <furnitureType id="dining-chairs" name="Dining Chairs" description="Comfortable and stylish seating for diners">
-      <product id="upholstered-dining-chair" name="Upholstered Dining Chair" description="Comfortable dining chair with premium upholstery" price="$299" image="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="dining,upholstered,comfortable" />
-    </furnitureType>
-  </place>
-  <place id="lobby" name="Lobby &amp; Reception" description="Create stunning first impressions with our reception furniture" image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-    <furnitureType id="reception-desks" name="Reception Desks" description="Professional front desk solutions">
-      <product id="modern-reception-desk" name="Modern Reception Desk" description="Contemporary front desk solution with integrated lighting" price="$3,499" image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="reception,modern,integrated,lighting" />
-    </furnitureType>
-    <furnitureType id="lobby-seating" name="Lobby Seating" description="Comfortable seating for waiting areas">
-      <product id="lobby-sofa" name="Contemporary Lobby Sofa" description="Stylish and durable sofa for high-traffic areas" price="$1,899" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="lobby,sofa,durable,contemporary" />
-    </furnitureType>
-  </place>
-  <place id="bedroom" name="Bedroom" description="Comfortable and stylish furniture for bedrooms">
-    <furnitureType id="bedroom-bed" name="Beds" description="Comfortable and stylish bed for bedrooms">
-      <product id="standard-queen-bed" name="Standard Queen Bed" description="Reliable and comfortable queen bed for standard rooms" price="$2,499" image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="standard,queen,comfortable" />
+  <place id="commercial" name="Commercial" description="Durable furniture solutions for high-traffic commercial environments" image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+    <furnitureType id="commercial-seating" name="Seating" description="Heavy-duty seating for lobbies and waiting areas" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
+      <product id="lobby-sofa-1" name="Commercial Lobby Sofa" description="Stylish and durable sofa for high-traffic areas" price="$1,899" image="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="lobby,sofa,durable,contemporary">
+        <images>
+          <image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Commercial Lobby Sofa - Front view"/>
+          <image src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Commercial Lobby Sofa - Side profile"/>
+          <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Commercial Lobby Sofa - Back view"/>
+          <image src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Commercial Lobby Sofa - Upholstery detail"/>
+          <image src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Commercial Lobby Sofa - Frame construction"/>
+        </images>
+        <specifications>
+          <spec name="Width" value="84&quot;"/>
+          <spec name="Depth" value="36&quot;"/>
+          <spec name="Height" value="32&quot;"/>
+          <spec name="Seat Height" value="18&quot;"/>
+          <spec name="Material" value="Commercial-Grade Steel Frame"/>
+          <spec name="Upholstery" value="Heavy-Duty Vinyl"/>
+          <spec name="Finish" value="Black Powder Coating"/>
+          <spec name="Weight Capacity" value="500 lbs"/>
+          <spec name="Durability" value="High-Traffic Rated"/>
+        </specifications>
+      </product>
     </furnitureType>
   </place>
 </places>

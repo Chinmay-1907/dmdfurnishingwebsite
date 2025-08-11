@@ -1,118 +1,281 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProductDetail.css';
-import productData from '../data/products';
-import ProductGallery from './ProductGallery';
-
-// This component displays detailed information about a specific product
-// It shows multiple images from different angles in a scrollable container,
-// specifications with dimensions, product description, and a contact button
 
 function ProductDetail() {
   const { institutionId, furnitureTypeId, productId } = useParams();
   const navigate = useNavigate();
-  const [product, setProduct] = useState(null);
-  const [institution, setInstitution] = useState(null);
-  const [furnitureType, setFurnitureType] = useState(null);
   
-  // Sample multiple images for the product (in a real app, these would come from the database)
-  const productImages = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', alt: 'Front view' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', alt: 'Side view' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', alt: 'Back view' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', alt: 'Detail view' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', alt: 'Material detail' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', alt: 'Texture detail' }
-  ];
-
-  // Sample specifications for the product (in a real app, these would come from the database)
-  const specifications = [
-    { name: 'Width', value: '21"' },
-    { name: 'Depth', value: '21.5"' },
-    { name: 'Height', value: '38.5"' },
-    { name: 'Seat Depth', value: '16.5"' },
-    { name: 'Seat Height', value: '18"' },
-    { name: 'Material', value: 'Solid Oak, Premium Leather' },
-    { name: 'Finish', value: 'Natural Wood with Matte Black Metal Accents' },
-    { name: 'Weight Capacity', value: '300 lbs' }
-  ];
-
+  // State management
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [detail, setDetail] = useState(null);
+  
   useEffect(() => {
-    // Find the product based on the URL parameters
-    const foundInstitution = productData.institutions.find(inst => inst.id === institutionId);
-    
-    if (foundInstitution) {
-      setInstitution(foundInstitution);
-      
-      const foundFurnitureType = foundInstitution.furnitureTypes.find(type => type.id === furnitureTypeId);
-      
-      if (foundFurnitureType) {
-        setFurnitureType(foundFurnitureType);
+    const fetchProductDetail = async () => {
+      try {
+        console.log(`[ProductDetail] Fetching details for: ${institutionId}/${furnitureTypeId}/${productId}`);
         
-        const foundProduct = foundFurnitureType.products.find(prod => prod.id === productId);
+        // Fetch XML catalog
+        const response = await fetch('/products.xml');
+        console.log('[ProductDetail] Fetch URL:', response.url, 'Status:', response.status);
         
-        if (foundProduct) {
-          setProduct(foundProduct);
+        if (!response.ok) {
+          throw new Error(`Failed to load /products.xml (${response.status} ${response.statusText})`);
         }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        
+        // Validate root element
+        const root = xmlDoc.querySelector('places');
+        if (!root) {
+          throw new Error('Invalid XML: Missing <places> root element');
+        }
+        
+        // Validate at least one place
+        const places = root.querySelectorAll('place');
+        if (places.length === 0) {
+          throw new Error('Invalid XML: No <place> elements found');
+        }
+        
+        console.log('[ProductDetail] XML loaded successfully, places found:', places.length);
+        
+        // Find place (institution)
+        let foundPlace = null;
+        for (const place of places) {
+          if (place.getAttribute('id') === institutionId) {
+            foundPlace = place;
+            break;
+          }
+        }
+        
+        if (!foundPlace) {
+          throw new Error(`Institution not found: ${institutionId}`);
+        }
+        
+        console.log('[ProductDetail] Found institution:', foundPlace.getAttribute('name'));
+        
+        // Find furniture type
+        const furnitureTypes = foundPlace.querySelectorAll('furnitureType');
+        let foundFurnitureType = null;
+        for (const furnitureType of furnitureTypes) {
+          if (furnitureType.getAttribute('id') === furnitureTypeId) {
+            foundFurnitureType = furnitureType;
+            break;
+          }
+        }
+        
+        if (!foundFurnitureType) {
+          throw new Error(`Furniture type not found: ${furnitureTypeId}`);
+        }
+        
+        console.log('[ProductDetail] Found furniture type:', foundFurnitureType.getAttribute('name'));
+        
+        // Find product
+        const products = foundFurnitureType.querySelectorAll('product');
+        let foundProduct = null;
+        for (const product of products) {
+          if (product.getAttribute('id') === productId) {
+            foundProduct = product;
+            break;
+          }
+        }
+        
+        if (!foundProduct) {
+          throw new Error(`Product not found: ${productId}`);
+        }
+        
+        console.log('[ProductDetail] Found product:', foundProduct.getAttribute('name'));
+        
+        // Build detail object
+        const institutionObj = {
+          id: foundPlace.getAttribute('id'),
+          name: foundPlace.getAttribute('name') || 'Unnamed',
+          description: foundPlace.getAttribute('description') || '',
+          image: foundPlace.getAttribute('image') || '/placeholder.png'
+        };
+        
+        const furnitureTypeObj = {
+          id: foundFurnitureType.getAttribute('id'),
+          name: foundFurnitureType.getAttribute('name') || 'Unnamed',
+          description: foundFurnitureType.getAttribute('description') || '',
+          image: foundFurnitureType.getAttribute('image') || '/placeholder.png'
+        };
+        
+        // Parse product images
+        const imagesNode = foundProduct.querySelector('images');
+        const images = [];
+        if (imagesNode) {
+          const imageElements = imagesNode.querySelectorAll('image');
+          imageElements.forEach(img => {
+            images.push({
+              src: img.getAttribute('src') || '/placeholder.png',
+              alt: img.getAttribute('alt') || 'Product image'
+            });
+          });
+        }
+        
+        // Parse specifications
+        const specificationsNode = foundProduct.querySelector('specifications');
+        const specifications = [];
+        if (specificationsNode) {
+          const specElements = specificationsNode.querySelectorAll('spec');
+          specElements.forEach(spec => {
+            specifications.push({
+              name: spec.getAttribute('name') || 'Unknown',
+              value: spec.getAttribute('value') || 'Unknown'
+            });
+          });
+        }
+        
+        // Parse tags
+        const tagsAttr = foundProduct.getAttribute('tags');
+        const tags = tagsAttr ? tagsAttr.split(',').map(tag => tag.trim()) : [];
+        
+        const productObj = {
+          id: foundProduct.getAttribute('id'),
+          name: foundProduct.getAttribute('name') || 'Unnamed',
+          description: foundProduct.getAttribute('description') || '',
+          image: foundProduct.getAttribute('image') || '/placeholder.png',
+          price: foundProduct.getAttribute('price') || null,
+          tags: tags,
+          images: images,
+          specifications: specifications
+        };
+        
+        const detailObj = {
+          institution: institutionObj,
+          furnitureType: furnitureTypeObj,
+          product: productObj
+        };
+        
+        console.log('[ProductDetail] Loaded', detailObj);
+        
+        setDetail(detailObj);
+        setLoading(false);
+        
+      } catch (e) {
+        console.error('[ProductDetail] Error', e);
+        setError(e.message || 'Unknown error');
+        setLoading(false);
       }
-    }
+    };
+    
+    fetchProductDetail();
   }, [institutionId, furnitureTypeId, productId]);
-
-  // Navigate back function
-  const handleBack = () => {
-    navigate(-1);
-  };
-
-  if (!product || !institution || !furnitureType) {
+  
+  // Render loading state
+  if (loading) {
     return (
       <div className="product-detail-container">
         <div className="loading">Loading product details...</div>
       </div>
     );
   }
-
+  
+  // Render error state
+  if (error) {
+    return (
+      <div className="product-detail-container">
+        <div>Error: {error}</div>
+      </div>
+    );
+  }
+  
+  // Render not found state
+  if (!detail) {
+    return (
+      <div className="product-detail-container">
+        <div>Product not found.</div>
+      </div>
+    );
+  }
+  
   return (
     <div className="product-detail-container">
+      {/* Breadcrumb */}
       <div className="breadcrumb">
         <button onClick={() => navigate('/products')}>All Spaces</button>
         <span> &gt; </span>
-        <button onClick={() => navigate(`/products/${institutionId}`)}>{institution.name}</button>
+        <button onClick={() => navigate(`/products/${detail.institution.id}`)}>{detail.institution.name}</button>
         <span> &gt; </span>
-        <button onClick={() => navigate(`/products/${institutionId}/${furnitureTypeId}`)}>{furnitureType.name}</button>
+        <button onClick={() => navigate(`/products/${detail.institution.id}/${detail.furnitureType.id}`)}>{detail.furnitureType.name}</button>
         <span> &gt; </span>
-        <span>{product.name}</span>
+        <span>{detail.product.name}</span>
       </div>
 
       <div className="product-detail-content">
-        <ProductGallery images={productImages} />
-
-        <div className="product-info">
-          <h1>{product.name}</h1>
-          <div className="product-tags">
-            {product.tags.map(tag => (
-              <span key={tag} className="product-tag">{tag}</span>
-            ))}
-          </div>
-
-          <div className="product-specifications">
-            <h2>Specifications</h2>
-            <div className="specifications-grid">
-              {specifications.map((spec, index) => (
-                <div key={index} className="specification-item">
-                  <span className="specification-name">{spec.name}:</span>
-                  <span className="specification-value">{spec.value}</span>
-                </div>
-              ))}
+        {/* Gallery */}
+        {detail.product.images.length > 0 ? (
+          <div className="product-gallery-container">
+            <div className="product-gallery">
+              <div className="images-scroll-container">
+                {detail.product.images.map((image, index) => (
+                  <div key={index} className="gallery-image">
+                    <img src={image.src} alt={image.alt} loading="lazy" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+        ) : (
+          <div className="product-gallery-container">
+            <div className="product-gallery">
+              <div className="images-scroll-container">
+                <div className="gallery-image">
+                  <img src={detail.product.image} alt={detail.product.name} loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
+        <div className="product-info">
+          <h1>{detail.product.name}</h1>
+          
+          {/* Tags */}
+          {detail.product.tags.length > 0 && (
+            <div className="product-tags">
+              {detail.product.tags.map((tag, index) => (
+                <span key={index} className="product-tag">{tag}</span>
+              ))}
+            </div>
+          )}
+
+          {/* Specifications */}
+          {detail.product.specifications.length > 0 && (
+            <div className="product-specifications">
+              <h2>Specifications</h2>
+              <div className="specifications-grid">
+                {detail.product.specifications.map((spec, index) => (
+                  <div key={index} className="specification-item">
+                    <span className="specification-name">{spec.name}:</span>
+                    <span className="specification-value">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Description */}
           <div className="product-description">
             <h2>Description</h2>
-            <p>{product.description}</p>
-            <p>This premium furniture piece exemplifies our commitment to quality craftsmanship and timeless design. Each piece is meticulously crafted using the finest materials to ensure durability and aesthetic appeal that will enhance any space.</p>
+            <p>{detail.product.description}</p>
+            {detail.product.description && (
+              <p>This premium furniture piece exemplifies our commitment to quality craftsmanship and timeless design. Each piece is meticulously crafted using the finest materials to ensure durability and aesthetic appeal that will enhance any space.</p>
+            )}
           </div>
 
-          <button className="contact-button" onClick={() => window.location.href = '/contact'}>Contact Us About This Product</button>
+          {/* Price */}
+          {detail.product.price && (
+            <div className="product-price-section">
+              <span className="product-price">{detail.product.price}</span>
+            </div>
+          )}
+
+          <button className="contact-button" onClick={() => navigate('/contact')}>Contact Us About This Product</button>
         </div>
       </div>
     </div>
