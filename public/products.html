@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Catalog</title>
+  <style>
+    .filters button { margin-right: 8px; }
+    .place-section { margin-top: 20px; }
+    .product-item { margin-left: 20px; }
+  </style>
+</head>
+<body>
+  <div class="filters" id="filters"></div>
+  <div id="catalog"></div>
+  <script>
+    // Fetch the XML file and build catalog
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('products.xml')
+        .then(res => res.text())
+        .then(str => new window.DOMParser().parseFromString(str, 'text/xml'))
+        .then(data => {
+          const filters = document.getElementById('filters');
+          const catalog = document.getElementById('catalog');
+          const places = Array.from(data.getElementsByTagName('place'));
+
+          // Create filter buttons
+          const allBtn = document.createElement('button');
+          allBtn.textContent = 'All';
+          allBtn.addEventListener('click', () => {
+            document.querySelectorAll('.place-section').forEach(sec => (sec.style.display = ''));
+          });
+          filters.appendChild(allBtn);
+
+          places.forEach(place => {
+            const placeName = place.getAttribute('name');
+            const btn = document.createElement('button');
+            btn.textContent = placeName;
+            btn.addEventListener('click', () => {
+              // Show only the selected place section
+              document.querySelectorAll('.place-section').forEach(sec => {
+                sec.style.display = sec.dataset.place === placeName ? '' : 'none';
+              });
+            });
+            filters.appendChild(btn);
+
+            // Build catalog sections
+            const placeSection = document.createElement('section');
+            placeSection.className = 'place-section';
+            placeSection.dataset.place = placeName;
+            const h2 = document.createElement('h2');
+            h2.textContent = placeName;
+            placeSection.appendChild(h2);
+
+            Array.from(place.getElementsByTagName('furnitureType')).forEach(ft => {
+              const typeSection = document.createElement('div');
+              const h3 = document.createElement('h3');
+              h3.textContent = ft.getAttribute('name');
+              typeSection.appendChild(h3);
+
+              Array.from(ft.getElementsByTagName('product')).forEach(prod => {
+                const item = document.createElement('div');
+                item.className = 'product-item';
+                const name = prod.getElementsByTagName('name')[0].textContent;
+                const price = prod.getElementsByTagName('price')[0].textContent;
+                const descEl = prod.getElementsByTagName('description')[0];
+                const desc = descEl ? descEl.textContent : '';
+                item.innerHTML = `<h4>${name}</h4><p>Price: ${price}</p><p>${desc}</p>`;
+                typeSection.appendChild(item);
+              });
+
+              placeSection.appendChild(typeSection);
+            });
+
+            catalog.appendChild(placeSection);
+          });
+        });
+    });
+  </script>
+</body>
+</html>

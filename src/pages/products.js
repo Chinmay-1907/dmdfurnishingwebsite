@@ -1,16 +1,90 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-
-// Import components
 import NextHeader from '../components/NextHeader';
 import NextFooter from '../components/NextFooter';
 
-// Import styles
-import '../styles/Products.css';
-
 export default function Products() {
+  const [catalog, setCatalog] = useState([]);
+  const [selectedPlace, setSelectedPlace] = useState(null);
+  const [selectedType, setSelectedType] = useState(null);
+
+  // Fetch and parse XML on first render
+  useEffect(() => {
+    fetch('/products.xml')
+      .then(res => res.text())
+      .then(str => new window.DOMParser().parseFromString(str, 'text/xml'))
+      .then(data => {
+        const places = Array.from(data.getElementsByTagName('place')).map(place => ({
+          name: place.getAttribute('name'),
+          furnitureTypes: Array.from(place.getElementsByTagName('furnitureType')).map(ft => ({
+            name: ft.getAttribute('name'),
+            products: Array.from(ft.getElementsByTagName('product')).map(prod => ({
+              id: prod.getElementsByTagName('id')[0].textContent,
+              name: prod.getElementsByTagName('name')[0].textContent,
+              price: prod.getElementsByTagName('price')[0].textContent,
+              description: prod.getElementsByTagName('description')[0]?.textContent || '',
+              image: prod.getElementsByTagName('image')[0]?.textContent || ''
+            }))
+          }))
+        }));
+        setCatalog(places);
+      });
+  }, []);
+
+  const resetToPlaces = () => {
+    setSelectedPlace(null);
+    setSelectedType(null);
+  };
+
+  let content;
+
+  if (!selectedPlace) {
+    // Top level: show places
+    content = (
+      <div className="place-list">
+        {catalog.map(place => (
+          <button key={place.name} onClick={() => setSelectedPlace(place.name)}>
+            {place.name}
+          </button>
+        ))}
+      </div>
+    );
+  } else if (selectedPlace && !selectedType) {
+    // Second level: furniture types inside selected place
+    const place = catalog.find(p => p.name === selectedPlace);
+    content = (
+      <div className="type-list">
+        <button onClick={resetToPlaces}>Back</button>
+        <h2>{selectedPlace}</h2>
+        {place.furnitureTypes.map(ft => (
+          <button key={ft.name} onClick={() => setSelectedType(ft.name)}>
+            {ft.name}
+          </button>
+        ))}
+      </div>
+    );
+  } else {
+    // Third level: products inside selected place and type
+    const place = catalog.find(p => p.name === selectedPlace);
+    const type = place.furnitureTypes.find(ft => ft.name === selectedType);
+    content = (
+      <div className="product-list">
+        <button onClick={() => setSelectedType(null)}>Back</button>
+        <h2>
+          {selectedPlace} &raquo; {selectedType}
+        </h2>
+        {type.products.map(prod => (
+          <div key={prod.id} className="product-item">
+            {prod.image && <img src={prod.image} alt={prod.name} />}
+            <h3>{prod.name}</h3>
+            <p>{prod.description}</p>
+            <p>Price: {prod.price}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <>
       <Head>
@@ -18,94 +92,11 @@ export default function Products() {
         <meta name="description" content="Discover our premium furniture collections for hospitality and commercial spaces" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
       <NextHeader />
-      
       <div className="products-container">
-        <section className="products-hero">
-          <h1>Our Products</h1>
-          <p>Discover our premium furniture collections</p>
-        </section>
-
-        <section className="product-categories">
-          <h2>Product Categories</h2>
-          <div className="category-grid">
-            <div className="category-item">
-              <div className="category-image"></div>
-              <h3>Hotel Suites</h3>
-              <p>Luxury furniture for premium hotel rooms</p>
-              <button className="view-button">View Collection</button>
-            </div>
-            <div className="category-item">
-              <div className="category-image"></div>
-              <h3>Lobby & Reception</h3>
-              <p>Create stunning first impressions</p>
-              <button className="view-button">View Collection</button>
-            </div>
-            <div className="category-item">
-              <div className="category-image"></div>
-              <h3>Restaurant & Dining</h3>
-              <p>Elegant dining furniture solutions</p>
-              <button className="view-button">View Collection</button>
-            </div>
-            <div className="category-item">
-              <div className="category-image"></div>
-              <h3>Executive Offices</h3>
-              <p>Professional workspace furniture</p>
-              <button className="view-button">View Collection</button>
-            </div>
-            <div className="category-item">
-              <div className="category-image"></div>
-              <h3>Conference Rooms</h3>
-              <p>Sophisticated meeting spaces</p>
-              <button className="view-button">View Collection</button>
-            </div>
-            <div className="category-item">
-              <div className="category-image"></div>
-              <h3>Outdoor & Patio</h3>
-              <p>Weather-resistant luxury furniture</p>
-              <button className="view-button">View Collection</button>
-            </div>
-          </div>
-        </section>
-
-        <section className="featured-products">
-          <h2>Featured Products</h2>
-          <div className="products-grid">
-            <div className="product-item">
-              <div className="product-image"></div>
-              <h3>Luxe Executive Chair</h3>
-              <p>Premium ergonomic office chair</p>
-              <button className="details-button">View Details</button>
-            </div>
-            <div className="product-item">
-              <div className="product-image"></div>
-              <h3>Elegance Dining Set</h3>
-              <p>Sophisticated dining table and chairs</p>
-              <button className="details-button">View Details</button>
-            </div>
-            <div className="product-item">
-              <div className="product-image"></div>
-              <h3>Royal Suite Bed</h3>
-              <p>Luxury hotel bed with headboard</p>
-              <button className="details-button">View Details</button>
-            </div>
-            <div className="product-item">
-              <div className="product-image"></div>
-              <h3>Modern Reception Desk</h3>
-              <p>Contemporary front desk solution</p>
-              <button className="details-button">View Details</button>
-            </div>
-          </div>
-        </section>
-
-        <section className="custom-solutions">
-          <h2>Custom Furniture Solutions</h2>
-          <p>We offer bespoke furniture design and manufacturing services tailored to your specific requirements.</p>
-          <button className="cta-button">Request Custom Quote</button>
-        </section>
+        <h1>Product Catalog</h1>
+        {content}
       </div>
-      
       <NextFooter />
     </>
   );

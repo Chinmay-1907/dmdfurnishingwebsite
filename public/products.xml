@@ -1,98 +1,69 @@
-<catalog>
-  <product>
-    <name>Executive L-Shaped Desk</name>
-    <price>$1,200</price>
-    <description>Premium L-shaped desk with built-in storage and cable management.</description>
-    <image>https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Adjustable Standing Desk</name>
-    <price>$800</price>
-    <description>Height-adjustable desk for ergonomic working positions.</description>
-    <image>https://images.unsplash.com/photo-1544140708-514b7837c325?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Luxe Executive Chair</name>
-    <price>$600</price>
-    <description>Premium ergonomic office chair with full adjustability and lumbar support.</description>
-    <image>https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Mesh Task Chair</name>
-    <price>$350</price>
-    <description>Breathable mesh chair with essential adjustment features.</description>
-    <image>https://images.unsplash.com/photo-1580480055273-228ff5388ef8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Modern File Cabinet</name>
-    <price>$450</price>
-    <description>Contemporary file cabinet with locking drawers.</description>
-    <image>https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Royal Suite Bed</name>
-    <price>$2,500</price>
-    <description>Luxury hotel bed with premium headboard and frame.</description>
-    <image>https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Standard Queen Bed</name>
-    <price>$1,500</price>
-    <description>Reliable and comfortable queen bed for standard rooms.</description>
-    <image>https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Guest Lounge Chair</name>
-    <price>$700</price>
-    <description>Comfortable accent chair for hotel room seating.</description>
-    <image>https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Modern Bedside Table</name>
-    <price>$300</price>
-    <description>Sleek nightstand with drawer and shelf.</description>
-    <image>https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Luxury Patio Sofa Set</name>
-    <price>$3,000</price>
-    <description>Weather-resistant outdoor sofa set with coffee table.</description>
-    <image>https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Premium Adirondack Chair</name>
-    <price>$349</price>
-    <description>Classic outdoor chair made from weather-resistant materials.</description>
-    <image>https://images.unsplash.com/photo-1559999076-f8346e86f3b5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Teak Dining Set</name>
-    <price>$3,299</price>
-    <description>6-person outdoor dining table and chairs made from premium teak.</description>
-    <image>https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Elegance Dining Set</name>
-    <price>$2,899</price>
-    <description>Sophisticated dining table and chairs for upscale restaurants.</description>
-    <image>https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Upholstered Dining Chair</name>
-    <price>$299</price>
-    <description>Comfortable dining chair with premium upholstery.</description>
-    <image>https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Modern Reception Desk</name>
-    <price>$3,499</price>
-    <description>Contemporary front desk solution with integrated lighting.</description>
-    <image>https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-  <product>
-    <name>Contemporary Lobby Sofa</name>
-    <price>$1,899</price>
-    <description>Stylish and durable sofa for high-traffic areas.</description>
-    <image>https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80</image>
-  </product>
-</catalog>
+<places>
+  <place name="Office">
+    <furnitureType name="Desks">
+      <product>
+        <id>101</id>
+        <name>Executive Standing Desk</name>
+        <price>399.99</price>
+        <description>Height-adjustable desk for modern offices</description>
+        <image>/images/office/desk1.jpg</image>
+      </product>
+      <product>
+        <id>102</id>
+        <name>Compact Corner Desk</name>
+        <price>199.99</price>
+        <description>Space-saving solution for tight workspaces</description>
+        <image>/images/office/desk2.jpg</image>
+      </product>
+    </furnitureType>
+    <furnitureType name="Chairs">
+      <product>
+        <id>201</id>
+        <name>Ergonomic Task Chair</name>
+        <price>249.99</price>
+        <description>Breathable mesh back with lumbar support</description>
+        <image>/images/office/chair1.jpg</image>
+      </product>
+    </furnitureType>
+  </place>
+  <place name="Hotel Room">
+    <furnitureType name="Beds">
+      <product>
+        <id>301</id>
+        <name>King Size Bed</name>
+        <price>799.99</price>
+        <description>Luxury bed with upholstered headboard</description>
+        <image>/images/hotel/bed1.jpg</image>
+      </product>
+    </furnitureType>
+    <furnitureType name="Closets">
+      <product>
+        <id>401</id>
+        <name>Sliding Door Wardrobe</name>
+        <price>499.99</price>
+        <description>Spacious wardrobe with mirrored doors</description>
+        <image>/images/hotel/closet1.jpg</image>
+      </product>
+    </furnitureType>
+  </place>
+  <place name="School">
+    <furnitureType name="Desks">
+      <product>
+        <id>501</id>
+        <name>Student Desk</name>
+        <price>89.99</price>
+        <description>Durable laminated study desk</description>
+        <image>/images/school/desk1.jpg</image>
+      </product>
+    </furnitureType>
+    <furnitureType name="Chairs">
+      <product>
+        <id>601</id>
+        <name>Classroom Chair</name>
+        <price>49.99</price>
+        <description>Stackable polypropylene chair</description>
+        <image>/images/school/chair1.jpg</image>
+      </product>
+    </furnitureType>
+  </place>
+</places>
