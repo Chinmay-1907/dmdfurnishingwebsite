@@ -73,6 +73,7 @@ function Products() {
                 id: subcategoryEl.getAttribute('id') || `subcategory-${k}`,
                 name: subcategoryEl.getAttribute('name') || 'Unnamed',
                 description: subcategoryEl.getAttribute('description') || '',
+                image: subcategoryEl.getAttribute('image') || '/placeholder.png',
                 products: []
               };
               
@@ -200,8 +201,8 @@ function Products() {
                 onClick={() => handlePlaceSelect(index)}
               >
                 <div 
-                  className="category-image" 
-                  style={{ backgroundImage: `url(${place.image})` }}
+                  className="category-image"
+                  style={{ backgroundImage: `url(${place.image || '/placeholder.png'})` }}
                 ></div>
                 <h3>{place.name}</h3>
                 <p>{place.description}</p>
@@ -235,7 +236,7 @@ function Products() {
               >
                 <div 
                   className="category-image"
-                  style={{ backgroundImage: `url(${furnitureType.image})` }}
+                  style={{ backgroundImage: `url(${furnitureType.image || '/placeholder.png'})` }}
                 ></div>
                 <h3>{furnitureType.name}</h3>
                 <p>{furnitureType.description}</p>

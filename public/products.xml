@@ -101,9 +101,9 @@
         </product>
       </subcategory>
     </furnitureType>
-    <furnitureType id="office-storage" name="Storage" description="Organizational solutions for office spaces" image="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-      <subcategory id="file-cabinets" name="File Cabinets" description="Secure document storage solutions" image="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-        <product id="filing-cabinet-1" name="Locking Filing Cabinet" description="Secure storage for important documents and files" image="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="storage,filing,locking">
+    <furnitureType id="office-storage" name="Storage" description="Organizational solutions for office spaces" image="/Images/39598.jpg">
+      <subcategory id="file-cabinets" name="File Cabinets" description="Secure document storage solutions" image="/Images/39598.jpg">
+        <product id="filing-cabinet-1" name="Locking Filing Cabinet" description="Secure storage for important documents and files" image="/Images/39598.jpg" tags="storage,filing,locking">
         <images>
           <image src="https://images.unsplash.com/photo-1551645120-d70bce4c2637?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Locking Filing Cabinet - Closed view"/>
           <image src="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Locking Filing Cabinet - Open drawer"/>
@@ -190,9 +190,9 @@
         </product>
       </subcategory>
     </furnitureType>
-    <furnitureType id="hotel-tables" name="Tables" description="Functional tables for guest rooms" image="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-      <subcategory id="bedside-tables" name="Bedside Tables" description="Nightstands and bedside storage" image="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80">
-        <product id="bedside-table-1" name="Modern Bedside Table" description="Sleek nightstand with drawer and shelf" image="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" tags="nightstand,bedside,modern">
+    <furnitureType id="hotel-tables" name="Tables" description="Functional tables for guest rooms" image="/Images/39598.jpg">
+      <subcategory id="bedside-tables" name="Bedside Tables" description="Nightstands and bedside storage" image="/Images/unnamed.png">
+        <product id="bedside-table-1" name="Modern Bedside Table" description="Sleek nightstand with drawer and shelf" image="/Images/39598.jpg" tags="nightstand,bedside,modern">
         <images>
           <image src="https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Modern Bedside Table - Front view"/>
           <image src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Modern Bedside Table - Open drawer"/>

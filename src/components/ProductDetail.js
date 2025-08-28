@@ -123,7 +123,8 @@ function ProductDetail() {
         const subcategoryObj = {
           id: foundSubcategory.getAttribute('id'),
           name: foundSubcategory.getAttribute('name') || 'Unnamed',
-          description: foundSubcategory.getAttribute('description') || ''
+          description: foundSubcategory.getAttribute('description') || '',
+          image: foundSubcategory.getAttribute('image') || '/placeholder.png'
         };
         
         // Parse product images
