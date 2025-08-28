@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProductDetail.css';
 
 function ProductDetail() {
-  const { institutionId, furnitureTypeId, productId } = useParams();
+  const { institutionId, furnitureTypeId, subcategoryId, productId } = useParams();
   const navigate = useNavigate();
   
   // State management
@@ -14,7 +14,7 @@ function ProductDetail() {
   useEffect(() => {
     const fetchProductDetail = async () => {
       try {
-        console.log(`[ProductDetail] Fetching details for: ${institutionId}/${furnitureTypeId}/${productId}`);
+        console.log(`[ProductDetail] Fetching details for: ${institutionId}/${furnitureTypeId}/${subcategoryId}/${productId}`);
         
         // Fetch XML catalog
         const response = await fetch('/products.xml');
@@ -73,8 +73,24 @@ function ProductDetail() {
         
         console.log('[ProductDetail] Found furniture type:', foundFurnitureType.getAttribute('name'));
         
-        // Find product
-        const products = foundFurnitureType.querySelectorAll('product');
+        // Find subcategory
+        const subcategories = foundFurnitureType.querySelectorAll('subcategory');
+        let foundSubcategory = null;
+        for (const subcategory of subcategories) {
+          if (subcategory.getAttribute('id') === subcategoryId) {
+            foundSubcategory = subcategory;
+            break;
+          }
+        }
+        
+        if (!foundSubcategory) {
+          throw new Error(`Subcategory not found: ${subcategoryId}`);
+        }
+        
+        console.log('[ProductDetail] Found subcategory:', foundSubcategory.getAttribute('name'));
+        
+        // Find product within subcategory
+        const products = foundSubcategory.querySelectorAll('product');
         let foundProduct = null;
         for (const product of products) {
           if (product.getAttribute('id') === productId) {
@@ -102,6 +118,12 @@ function ProductDetail() {
           name: foundFurnitureType.getAttribute('name') || 'Unnamed',
           description: foundFurnitureType.getAttribute('description') || '',
           image: foundFurnitureType.getAttribute('image') || '/placeholder.png'
+        };
+        
+        const subcategoryObj = {
+          id: foundSubcategory.getAttribute('id'),
+          name: foundSubcategory.getAttribute('name') || 'Unnamed',
+          description: foundSubcategory.getAttribute('description') || ''
         };
         
         // Parse product images
@@ -148,6 +170,7 @@ function ProductDetail() {
         const detailObj = {
           institution: institutionObj,
           furnitureType: furnitureTypeObj,
+          subcategory: subcategoryObj,
           product: productObj
         };
         
@@ -164,7 +187,7 @@ function ProductDetail() {
     };
     
     fetchProductDetail();
-  }, [institutionId, furnitureTypeId, productId]);
+  }, [institutionId, furnitureTypeId, subcategoryId, productId]);
   
   // Render loading state
   if (loading) {
@@ -202,6 +225,8 @@ function ProductDetail() {
         <button onClick={() => navigate(`/products/${detail.institution.id}`)}>{detail.institution.name}</button>
         <span> &gt; </span>
         <button onClick={() => navigate(`/products/${detail.institution.id}/${detail.furnitureType.id}`)}>{detail.furnitureType.name}</button>
+        <span> &gt; </span>
+        <button onClick={() => navigate(`/products/${detail.institution.id}/${detail.furnitureType.id}/${detail.subcategory.id}`)}>{detail.subcategory.name}</button>
         <span> &gt; </span>
         <span>{detail.product.name}</span>
       </div>

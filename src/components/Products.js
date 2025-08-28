@@ -10,6 +10,7 @@ function Products() {
   const [error, setError] = useState(null);
   const [selectedPlaceIndex, setSelectedPlaceIndex] = useState(null);
   const [selectedFurnitureTypeIndex, setSelectedFurnitureTypeIndex] = useState(null);
+  const [selectedSubcategoryIndex, setSelectedSubcategoryIndex] = useState(null);
 
   useEffect(() => {
     const loadCatalog = async () => {
@@ -61,32 +62,46 @@ function Products() {
               name: furnitureTypeEl.getAttribute('name') || 'Unnamed',
               image: furnitureTypeEl.getAttribute('image') || '/placeholder.png',
               description: furnitureTypeEl.getAttribute('description') || '',
-              products: []
+              subcategories: []
             };
             
-            const productElements = furnitureTypeEl.getElementsByTagName('product');
+            const subcategoryElements = furnitureTypeEl.getElementsByTagName('subcategory');
             
-            for (let k = 0; k < productElements.length; k++) {
-              const productEl = productElements[k];
-              const product = {
-                id: productEl.getAttribute('id') || `product-${k}`,
-                name: productEl.getAttribute('name') || 'Unnamed',
-                description: productEl.getAttribute('description') || '',
-                image: productEl.getAttribute('image') || '/placeholder.png'
+            for (let k = 0; k < subcategoryElements.length; k++) {
+              const subcategoryEl = subcategoryElements[k];
+              const subcategory = {
+                id: subcategoryEl.getAttribute('id') || `subcategory-${k}`,
+                name: subcategoryEl.getAttribute('name') || 'Unnamed',
+                description: subcategoryEl.getAttribute('description') || '',
+                products: []
               };
               
-              // Optional fields
-              const price = productEl.getAttribute('price');
-              if (price) {
-                product.price = price;
+              const productElements = subcategoryEl.getElementsByTagName('product');
+              
+              for (let l = 0; l < productElements.length; l++) {
+                const productEl = productElements[l];
+                const product = {
+                  id: productEl.getAttribute('id') || `product-${l}`,
+                  name: productEl.getAttribute('name') || 'Unnamed',
+                  description: productEl.getAttribute('description') || '',
+                  image: productEl.getAttribute('image') || '/placeholder.png'
+                };
+                
+                // Optional fields
+                const price = productEl.getAttribute('price');
+                if (price) {
+                  product.price = price;
+                }
+                
+                const tagsAttr = productEl.getAttribute('tags');
+                if (tagsAttr) {
+                  product.tags = tagsAttr.split(',').map(tag => tag.trim());
+                }
+                
+                subcategory.products.push(product);
               }
               
-              const tagsAttr = productEl.getAttribute('tags');
-              if (tagsAttr) {
-                product.tags = tagsAttr.split(',').map(tag => tag.trim());
-              }
-              
-              furnitureType.products.push(product);
+              furnitureType.subcategories.push(subcategory);
             }
             
             place.furnitureTypes.push(furnitureType);
@@ -114,35 +129,60 @@ function Products() {
     if (selectedPlaceIndex !== null && selectedPlaceIndex >= catalog.length) {
       setSelectedPlaceIndex(null);
       setSelectedFurnitureTypeIndex(null);
+      setSelectedSubcategoryIndex(null);
     }
     if (selectedFurnitureTypeIndex !== null && selectedPlaceIndex !== null) {
       const place = catalog[selectedPlaceIndex];
       if (place && selectedFurnitureTypeIndex >= place.furnitureTypes.length) {
         setSelectedFurnitureTypeIndex(null);
+        setSelectedSubcategoryIndex(null);
       }
     }
-  }, [catalog, selectedPlaceIndex, selectedFurnitureTypeIndex]);
+    if (selectedSubcategoryIndex !== null && selectedFurnitureTypeIndex !== null && selectedPlaceIndex !== null) {
+      const place = catalog[selectedPlaceIndex];
+      if (place && place.furnitureTypes[selectedFurnitureTypeIndex]) {
+        const furnitureType = place.furnitureTypes[selectedFurnitureTypeIndex];
+        if (selectedSubcategoryIndex >= furnitureType.subcategories.length) {
+          setSelectedSubcategoryIndex(null);
+        }
+      }
+    }
+  }, [catalog, selectedPlaceIndex, selectedFurnitureTypeIndex, selectedSubcategoryIndex]);
 
   // Handle place selection
   const handlePlaceSelect = (index) => {
     setSelectedPlaceIndex(index);
     setSelectedFurnitureTypeIndex(null);
+    setSelectedSubcategoryIndex(null);
   };
 
   // Handle furniture type selection
   const handleFurnitureTypeSelect = (index) => {
     setSelectedFurnitureTypeIndex(index);
+    setSelectedSubcategoryIndex(null);
+  };
+
+  // Handle subcategory selection
+  const handleSubcategorySelect = (index) => {
+    setSelectedSubcategoryIndex(index);
   };
 
   // Go back to places
   const handleBackToPlaces = () => {
     setSelectedPlaceIndex(null);
     setSelectedFurnitureTypeIndex(null);
+    setSelectedSubcategoryIndex(null);
   };
 
   // Go back to furniture types
   const handleBackToFurnitureTypes = () => {
     setSelectedFurnitureTypeIndex(null);
+    setSelectedSubcategoryIndex(null);
+  };
+
+  // Go back to subcategories
+  const handleBackToSubcategories = () => {
+    setSelectedSubcategoryIndex(null);
   };
 
   // Render content based on state
@@ -210,7 +250,43 @@ function Products() {
     const selectedFurnitureType = selectedPlace.furnitureTypes[selectedFurnitureTypeIndex];
     if (!selectedFurnitureType) return null;
 
-    // Show products for selected furniture type
+    // Show subcategories for selected furniture type
+    if (selectedSubcategoryIndex === null) {
+      return (
+        <section className="product-subcategories">
+          <div className="breadcrumb">
+            <button onClick={handleBackToPlaces}>All Spaces</button>
+            <span> &gt; </span>
+            <button onClick={handleBackToFurnitureTypes}>{selectedPlace.name}</button>
+            <span> &gt; </span>
+            <span>{selectedFurnitureType.name}</span>
+          </div>
+          <h2>Browse {selectedFurnitureType.name} Categories</h2>
+          <div className="category-grid">
+            {selectedFurnitureType.subcategories.map((subcategory, index) => (
+              <div 
+                key={subcategory.id || index} 
+                className="category-item"
+                onClick={() => handleSubcategorySelect(index)}
+              >
+                <div 
+                  className="category-image"
+                  style={{ backgroundImage: `url(${subcategory.image || '/placeholder.png'})` }}
+                ></div>
+                <h3>{subcategory.name}</h3>
+                <p>{subcategory.description}</p>
+                <button className="view-button">View Products</button>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    const selectedSubcategory = selectedFurnitureType.subcategories[selectedSubcategoryIndex];
+    if (!selectedSubcategory) return null;
+
+    // Show products for selected subcategory
     return (
       <section className="product-listing">
         <div className="breadcrumb">
@@ -218,13 +294,15 @@ function Products() {
           <span> &gt; </span>
           <button onClick={handleBackToFurnitureTypes}>{selectedPlace.name}</button>
           <span> &gt; </span>
-          <span>{selectedFurnitureType.name}</span>
+          <button onClick={handleBackToSubcategories}>{selectedFurnitureType.name}</button>
+          <span> &gt; </span>
+          <span>{selectedSubcategory.name}</span>
         </div>
         
-        <h2>{selectedFurnitureType.name} for {selectedPlace.name}</h2>
+        <h2>{selectedSubcategory.name}</h2>
         
         <div className="products-grid">
-          {selectedFurnitureType.products.map((product, index) => (
+          {selectedSubcategory.products.map((product, index) => (
             <div key={product.id || index} className="product-item">
               <div 
                 className="product-image" 
@@ -240,7 +318,7 @@ function Products() {
                   ))}
                 </div>
               )}
-              <Link to={`/products/${selectedPlace.id}/${selectedFurnitureType.id}/${product.id}`} className="details-button">View Details</Link>
+              <Link to={`/products/${selectedPlace.id}/${selectedFurnitureType.id}/${selectedSubcategory.id}/${product.id}`} className="details-button">View Details</Link>
             </div>
           ))}
         </div>

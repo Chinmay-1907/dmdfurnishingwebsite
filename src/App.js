@@ -31,7 +31,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:institutionId" element={<Products />} />
             <Route path="/products/:institutionId/:furnitureTypeId" element={<Products />} />
-            <Route path="/products/:institutionId/:furnitureTypeId/:productId" element={<ProductDetail />} />
+            <Route path="/products/:institutionId/:furnitureTypeId/:subcategoryId" element={<Products />} />
+            <Route path="/products/:institutionId/:furnitureTypeId/:subcategoryId/:productId" element={<ProductDetail />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/testimonials" element={<Testimonials />} />
