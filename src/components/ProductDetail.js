@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProductDetail.css';
 
@@ -10,6 +10,9 @@ function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [detail, setDetail] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const thumbRailRef = useRef(null);
+  const thumbRefs = useRef([]);
   
   useEffect(() => {
     const fetchProductDetail = async () => {
@@ -110,21 +113,21 @@ function ProductDetail() {
           id: foundPlace.getAttribute('id'),
           name: foundPlace.getAttribute('name') || 'Unnamed',
           description: foundPlace.getAttribute('description') || '',
-          image: foundPlace.getAttribute('image') ? `/Images-Drive${foundPlace.getAttribute('image')}` : '/placeholder.png'
+          image: foundPlace.getAttribute('image') ? `/Images-Drive${foundPlace.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png'
         };
         
         const furnitureTypeObj = {
           id: foundFurnitureType.getAttribute('id'),
           name: foundFurnitureType.getAttribute('name') || 'Unnamed',
           description: foundFurnitureType.getAttribute('description') || '',
-          image: foundFurnitureType.getAttribute('image') ? `/Images-Drive${foundFurnitureType.getAttribute('image')}` : '/placeholder.png'
+          image: foundFurnitureType.getAttribute('image') ? `/Images-Drive${foundFurnitureType.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png'
         };
         
         const subcategoryObj = {
           id: foundSubcategory.getAttribute('id'),
           name: foundSubcategory.getAttribute('name') || 'Unnamed',
           description: foundSubcategory.getAttribute('description') || '',
-          image: foundSubcategory.getAttribute('image') ? `/Images-Drive${foundSubcategory.getAttribute('image')}` : '/placeholder.png'
+          image: foundSubcategory.getAttribute('image') ? `/Images-Drive${foundSubcategory.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png'
         };
         
         // Parse product images
@@ -134,7 +137,7 @@ function ProductDetail() {
           const imageElements = imagesNode.querySelectorAll('image');
           imageElements.forEach(img => {
             images.push({
-              src: img.getAttribute('src') ? `/Images-Drive${img.getAttribute('src')}` : '/placeholder.png',
+              src: img.getAttribute('src') ? `/Images-Drive${img.getAttribute('src').replace(/\\/g, '/')}` : '/placeholder.png',
               alt: img.getAttribute('alt') || 'Product image'
             });
           });
@@ -161,7 +164,7 @@ function ProductDetail() {
           id: foundProduct.getAttribute('id'),
           name: foundProduct.getAttribute('name') || 'Unnamed',
           description: foundProduct.getAttribute('description') || '',
-          image: foundProduct.getAttribute('image') ? `/Images-Drive${foundProduct.getAttribute('image')}` : '/placeholder.png',
+          image: foundProduct.getAttribute('image') ? `/Images-Drive${foundProduct.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
           price: foundProduct.getAttribute('price') || null,
           tags: tags,
           images: images,
@@ -189,6 +192,44 @@ function ProductDetail() {
     
     fetchProductDetail();
   }, [institutionId, furnitureTypeId, subcategoryId, productId]);
+
+  // Reset active image when navigating to a new product
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [detail?.product?.id]);
+
+  // Ensure active thumbnail stays in view
+  useEffect(() => {
+    const el = thumbRefs.current[activeIndex];
+    if (el && typeof el.scrollIntoView === 'function') {
+      el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  }, [activeIndex]);
+
+  const imagesArr = useMemo(() => {
+    if (!detail) return [];
+    return (detail.product.images && detail.product.images.length > 0)
+      ? detail.product.images
+      : [{ src: detail.product.image, alt: detail.product.name }];
+  }, [detail]);
+
+  const handleKeyDown = (e) => {
+    if (imagesArr.length <= 1) return;
+    if (e.key === 'ArrowLeft') {
+      setActiveIndex((prev) => (prev - 1 + imagesArr.length) % imagesArr.length);
+    } else if (e.key === 'ArrowRight') {
+      setActiveIndex((prev) => (prev + 1) % imagesArr.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (imagesArr.length <= 1) return;
+    setActiveIndex((prev) => (prev - 1 + imagesArr.length) % imagesArr.length);
+  };
+  const nextImage = () => {
+    if (imagesArr.length <= 1) return;
+    setActiveIndex((prev) => (prev + 1) % imagesArr.length);
+  };
   
   // Render loading state
   if (loading) {
@@ -234,29 +275,49 @@ function ProductDetail() {
 
       <div className="product-detail-content">
         {/* Gallery */}
-        {detail.product.images.length > 0 ? (
-          <div className="product-gallery-container">
-            <div className="product-gallery">
-              <div className="images-scroll-container">
-                {detail.product.images.map((image, index) => (
-                  <div key={index} className="gallery-image">
-                    <img src={image.src} alt={image.alt} loading="lazy" />
-                  </div>
-                ))}
+        <div className="product-gallery-container" role="region" aria-label="Product image gallery">
+          <div
+            className="mainImageFrame"
+            tabIndex={0}
+            onKeyDown={(e) => handleKeyDown(e)}
+            aria-live="polite"
+          >
+            <img
+              src={imagesArr[activeIndex]?.src}
+              alt={imagesArr[activeIndex]?.alt || detail.product.name}
+              loading="lazy"
+            />
+            {imagesArr.length > 1 && (
+              <div className="gallery-nav" aria-hidden="false">
+                <button className="gallery-arrow prev" onClick={prevImage} aria-label="Previous image">‹</button>
+                <button className="gallery-arrow next" onClick={nextImage} aria-label="Next image">›</button>
               </div>
-            </div>
+            )}
           </div>
-        ) : (
-          <div className="product-gallery-container">
-            <div className="product-gallery">
-              <div className="images-scroll-container">
-                <div className="gallery-image">
-                  <img src={detail.product.image} alt={detail.product.name} loading="lazy" />
-                </div>
-              </div>
+
+          {imagesArr.length > 1 && (
+            <div
+              className="thumbnailRail"
+              ref={thumbRailRef}
+              role="tablist"
+              aria-label="Product image thumbnails"
+            >
+              {imagesArr.map((img, idx) => (
+                <button
+                  key={idx}
+                  ref={(el) => (thumbRefs.current[idx] = el)}
+                  className={`thumb ${activeIndex === idx ? 'isActive' : ''}`}
+                  onClick={() => setActiveIndex(idx)}
+                  aria-selected={activeIndex === idx}
+                  aria-label={`View image ${idx + 1} of ${imagesArr.length}`}
+                  tabIndex={0}
+                >
+                  <img src={img.src} alt={img.alt || detail.product.name} loading="lazy" />
+                </button>
+              ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
         <div className="product-info">
           <h1>{detail.product.name}</h1>

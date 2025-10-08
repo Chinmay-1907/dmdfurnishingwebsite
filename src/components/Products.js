@@ -49,7 +49,7 @@ function Products() {
             id: placeEl.getAttribute('id') || undefined,
             name: placeEl.getAttribute('name') || 'Unnamed',
             description: placeEl.getAttribute('description') || '',
-            image: placeEl.getAttribute('image') ? `/Images-Drive${placeEl.getAttribute('image')}` : '/placeholder.png',
+            image: placeEl.getAttribute('image') ? `/Images-Drive${placeEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
             furnitureTypes: []
           };
           
@@ -60,7 +60,7 @@ function Products() {
             const furnitureType = {
               id: furnitureTypeEl.getAttribute('id') || undefined,
               name: furnitureTypeEl.getAttribute('name') || 'Unnamed',
-              image: furnitureTypeEl.getAttribute('image') ? `/Images-Drive${furnitureTypeEl.getAttribute('image')}` : '/placeholder.png',
+              image: furnitureTypeEl.getAttribute('image') ? `/Images-Drive${furnitureTypeEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
               description: furnitureTypeEl.getAttribute('description') || '',
               subcategories: []
             };
@@ -73,7 +73,7 @@ function Products() {
                   id: subcategoryEl.getAttribute('id') || '',
                   name: subcategoryEl.getAttribute('name') || 'Unnamed',
                   description: subcategoryEl.getAttribute('description') || '',
-                  image: subcategoryEl.getAttribute('image') ? `/Images-Drive${subcategoryEl.getAttribute('image')}` : '/placeholder.png',
+                  image: subcategoryEl.getAttribute('image') ? `/Images-Drive${subcategoryEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
                   products: []
                 };
               
@@ -85,7 +85,7 @@ function Products() {
                   id: productEl.getAttribute('id') || `product-${l}`,
                   name: productEl.getAttribute('name') || 'Unnamed',
                   description: productEl.getAttribute('description') || '',
-                  image: productEl.getAttribute('image') ? `/Images-Drive${productEl.getAttribute('image')}` : '/placeholder.png',
+                  image: productEl.getAttribute('image') ? `/Images-Drive${productEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
                   images: []
                 };
                 
@@ -94,7 +94,7 @@ function Products() {
                 for (let m = 0; m < imageElements.length; m++) {
                   const imageEl = imageElements[m];
                   product.images.push({
-                    src: imageEl.getAttribute('src') ? `/Images-Drive${imageEl.getAttribute('src')}` : '/placeholder.png',
+                    src: imageEl.getAttribute('src') ? `/Images-Drive${imageEl.getAttribute('src').replace(/\\/g, '/')}` : '/placeholder.png',
                     alt: imageEl.getAttribute('alt') || ''
                   });
                 }

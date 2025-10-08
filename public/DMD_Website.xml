@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <places>
-	<place id="hospital" name="Hospital" description="Hospital furniture collection" image="\Images\Hospital\hospital.jpg">
+	<place id="hospital" name="Hospital" description="Hospital furniture collection" image="\Images\Hospital\Waiting Area\Waiting Area.jpg">
 		<furnitureType id="Patient Room" name="Patient Room" description="Patient Room for Hospital" image="\Images\Hospital\Patient Room\Patient Room.jpg">
 			<subcategory id="Bedside Cabinet" name="Bedside Cabinet" description="Bedside Cabinet in Patient Room" image="\Images\Hospital\Patient Room\Bedside Cabinet\Bedside Cabinet.jpg">
 				<product id="Double Drawer Cabinet" name="Double Drawer Cabinet" description="Double Drawer Cabinet product for Bedside Cabinet" image="\Images\Hospital\Patient Room\Bedside Cabinet\Double Drawer Cabinet\Double Drawer Cabinet.jpg" tags="double,drawer,cabinet">
@@ -234,7 +234,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="hotel" name="Hotel" description="Hotel furniture collection" image="\Images\Hotel\hotel.jpg">
+	<place id="hotel" name="Hotel" description="Hotel furniture collection" image="\Images\Hotel\Hotel furniture collection.jpg">
 		<furnitureType id="Breakfast Area" name="Breakfast Area" description="Breakfast Area for Hotel" image="\Images\Hotel\Breakfast Area\Breakfast Area.jpg">
 			<subcategory id="Buffet Counter" name="Buffet Counter" description="Buffet Counter in Breakfast Area" image="\Images\Hotel\Breakfast Area\Buffet Counter\Buffet Counter.jpg">
 				<product id="Cold Buffet Counter" name="Cold Buffet Counter" description="Cold Buffet Counter product for Buffet Counter" image="\Images\Hotel\Breakfast Area\Buffet Counter\Cold Buffet Counter\Cold Buffet Counter.jpg" tags="cold,buffet,counter">
@@ -821,7 +821,7 @@
 		</furnitureType>
 	</place>
 	<place id="office" name="Office" description="Office furniture collection" image="\Images\Office\office.jpg">
-		<furnitureType id="Seating" name="Seating" description="Seating for Office" image="\Images\Office\Seating\Seating.jpg">
+		<furnitureType id="Seating" name="Seating" description="Seating for Office" image="\Images\Office\Seating\Office Seating.jpg">
 			<subcategory id="Ergonomic Chair" name="Ergonomic Chair" description="Ergonomic Chair in Seating" image="\Images\Office\Seating\Ergonomic Chair\Ergonomic Chair.jpg">
 				<product id="Adjustable Ergonomic Chair" name="Adjustable Ergonomic Chair" description="Adjustable Ergonomic Chair product for Ergonomic Chair" image="\Images\Office\Seating\Ergonomic Chair\Adjustable Ergonomic Chair\Adjustable Ergonomic Chair.jpg" tags="adjustable,ergonomic,chair">
 					<images>
@@ -937,7 +937,7 @@
 				</product>
 			</subcategory>
 		</furnitureType>
-		<furnitureType id="Workstations" name="Workstations" description="Workstations for Office" image="\Images\Office\Workstations\Workstations.jpg">
+		<furnitureType id="Workstations" name="Workstations" description="Workstations for Office" image="\Images\Office\Workstations\Office Workstations.jpg">
 			<subcategory id="Cubicle Systems" name="Cubicle Systems" description="Cubicle Systems in Workstations" image="\Images\Office\Workstations\Cubicle Systems\Cubicle Systems.jpg">
 				<product id="2-Panel Cubicle" name="2-Panel Cubicle" description="2-Panel Cubicle product for Cubicle Systems" image="\Images\Office\Workstations\Cubicle Systems\2-Panel Cubicle\2-Panel Cubicle.jpg" tags="2-panel,cubicle">
 					<images>
@@ -1037,7 +1037,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="restaurant" name="Restaurant" description="Restaurant furniture collection" image="\Images\Restaurant\restaurant.jpg">
+	<place id="restaurant" name="Restaurant" description="Restaurant furniture collection" image="\Images\Restaurant\Restaurant.jpg">
 		<furnitureType id="Dining Area" name="Dining Area" description="Dining Area for Restaurant" image="\Images\Restaurant\Dining Area\Dining Area.jpg">
 			<subcategory id="Bar Stools" name="Bar Stools" description="Bar Stools in Dining Area" image="\Images\Restaurant\Dining Area\Bar Stools\Bar Stools.jpg">
 				<product id="High Bar Stool" name="High Bar Stool" description="High Bar Stool product for Bar Stools" image="\Images\Restaurant\Dining Area\Bar Stools\High Bar Stool\High Bar Stool.jpg" tags="high,bar,stool">
@@ -1289,7 +1289,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="school" name="School" description="School furniture collection" image="\Images\School\school.jpg">
+	<place id="school" name="School" description="School furniture collection" image="\Images\School\School Furnituer.jpg">
 		<furnitureType id="Classroom" name="Classroom" description="Classroom for School" image="\Images\School\Classroom\Classroom.jpg">
 			<subcategory id="Chairs" name="Chairs" description="Chairs in Classroom" image="\Images\School\Classroom\Chairs\Chairs.jpg">
 				<product id="Ergonomic Student Chair" name="Ergonomic Student Chair" description="Ergonomic Student Chair product for Chairs" image="\Images\School\Classroom\Chairs\Ergonomic Student Chair\Ergonomic Student Chair.jpg" tags="ergonomic,student,chair">
@@ -1527,7 +1527,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="university" name="University" description="University furniture collection" image="\Images\University\university.jpg">
+	<place id="university" name="University" description="University furniture collection" image="\Images\University\University.jpg">
 		<furnitureType id="Dormitory" name="Dormitory" description="Dormitory for University" image="\Images\University\Dormitory\Dormitory.jpg">
 			<subcategory id="Bunk Beds" name="Bunk Beds" description="Bunk Beds in Dormitory" image="\Images\University\Dormitory\Bunk Beds\Bunk Beds.jpg">
 				<product id="Full Bunk Bed" name="Full Bunk Bed" description="Full Bunk Bed product for Bunk Beds" image="\Images\University\Dormitory\Bunk Beds\Full Bunk Bed\Full Bunk Bed.jpg" tags="full,bunk,bed">
