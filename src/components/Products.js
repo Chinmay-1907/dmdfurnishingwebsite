@@ -15,14 +15,14 @@ function Products() {
   useEffect(() => {
     const loadCatalog = async () => {
       try {
-        const url = '/products.xml';
+        const url = '/DMD_Website.xml';
         console.log('[Products] Fetch', url);
         
         const response = await fetch(url);
         console.log('[Products] Fetch', url, response.status);
         
         if (!response.ok) {
-          throw new Error(`Failed to load /products.xml (${response.status} ${response.statusText})`);
+          throw new Error(`Failed to load /DMD_Website.xml (${response.status} ${response.statusText})`);
         }
         
         const text = await response.text();
@@ -49,7 +49,7 @@ function Products() {
             id: placeEl.getAttribute('id') || undefined,
             name: placeEl.getAttribute('name') || 'Unnamed',
             description: placeEl.getAttribute('description') || '',
-            image: placeEl.getAttribute('image') || '/placeholder.png',
+            image: placeEl.getAttribute('image') ? `/Images-Drive${placeEl.getAttribute('image')}` : '/placeholder.png',
             furnitureTypes: []
           };
           
@@ -60,7 +60,7 @@ function Products() {
             const furnitureType = {
               id: furnitureTypeEl.getAttribute('id') || undefined,
               name: furnitureTypeEl.getAttribute('name') || 'Unnamed',
-              image: furnitureTypeEl.getAttribute('image') || '/placeholder.png',
+              image: furnitureTypeEl.getAttribute('image') ? `/Images-Drive${furnitureTypeEl.getAttribute('image')}` : '/placeholder.png',
               description: furnitureTypeEl.getAttribute('description') || '',
               subcategories: []
             };
@@ -69,13 +69,13 @@ function Products() {
             
             for (let k = 0; k < subcategoryElements.length; k++) {
               const subcategoryEl = subcategoryElements[k];
-              const subcategory = {
-                id: subcategoryEl.getAttribute('id') || `subcategory-${k}`,
-                name: subcategoryEl.getAttribute('name') || 'Unnamed',
-                description: subcategoryEl.getAttribute('description') || '',
-                image: subcategoryEl.getAttribute('image') || '/placeholder.png',
-                products: []
-              };
+              const subcategoryObj = {
+                  id: subcategoryEl.getAttribute('id') || '',
+                  name: subcategoryEl.getAttribute('name') || 'Unnamed',
+                  description: subcategoryEl.getAttribute('description') || '',
+                  image: subcategoryEl.getAttribute('image') ? `/Images-Drive${subcategoryEl.getAttribute('image')}` : '/placeholder.png',
+                  products: []
+                };
               
               const productElements = subcategoryEl.getElementsByTagName('product');
               
@@ -85,8 +85,19 @@ function Products() {
                   id: productEl.getAttribute('id') || `product-${l}`,
                   name: productEl.getAttribute('name') || 'Unnamed',
                   description: productEl.getAttribute('description') || '',
-                  image: productEl.getAttribute('image') || '/placeholder.png'
+                  image: productEl.getAttribute('image') ? `/Images-Drive${productEl.getAttribute('image')}` : '/placeholder.png',
+                  images: []
                 };
+                
+                // Process images
+                const imageElements = productEl.getElementsByTagName('image');
+                for (let m = 0; m < imageElements.length; m++) {
+                  const imageEl = imageElements[m];
+                  product.images.push({
+                    src: imageEl.getAttribute('src') ? `/Images-Drive${imageEl.getAttribute('src')}` : '/placeholder.png',
+                    alt: imageEl.getAttribute('alt') || ''
+                  });
+                }
                 
                 // Optional fields
                 const price = productEl.getAttribute('price');
@@ -99,10 +110,10 @@ function Products() {
                   product.tags = tagsAttr.split(',').map(tag => tag.trim());
                 }
                 
-                subcategory.products.push(product);
+                subcategoryObj.products.push(product);
               }
               
-              furnitureType.subcategories.push(subcategory);
+              furnitureType.subcategories.push(subcategoryObj);
             }
             
             place.furnitureTypes.push(furnitureType);

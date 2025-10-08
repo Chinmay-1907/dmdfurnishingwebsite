@@ -17,11 +17,11 @@ function ProductDetail() {
         console.log(`[ProductDetail] Fetching details for: ${institutionId}/${furnitureTypeId}/${subcategoryId}/${productId}`);
         
         // Fetch XML catalog
-        const response = await fetch('/products.xml');
+        const response = await fetch('/DMD_Website.xml');
         console.log('[ProductDetail] Fetch URL:', response.url, 'Status:', response.status);
         
         if (!response.ok) {
-          throw new Error(`Failed to load /products.xml (${response.status} ${response.statusText})`);
+          throw new Error(`Failed to load /DMD_Website.xml (${response.status} ${response.statusText})`);
         }
         
         const xmlText = await response.text();
@@ -110,21 +110,21 @@ function ProductDetail() {
           id: foundPlace.getAttribute('id'),
           name: foundPlace.getAttribute('name') || 'Unnamed',
           description: foundPlace.getAttribute('description') || '',
-          image: foundPlace.getAttribute('image') || '/placeholder.png'
+          image: foundPlace.getAttribute('image') ? `/Images-Drive${foundPlace.getAttribute('image')}` : '/placeholder.png'
         };
         
         const furnitureTypeObj = {
           id: foundFurnitureType.getAttribute('id'),
           name: foundFurnitureType.getAttribute('name') || 'Unnamed',
           description: foundFurnitureType.getAttribute('description') || '',
-          image: foundFurnitureType.getAttribute('image') || '/placeholder.png'
+          image: foundFurnitureType.getAttribute('image') ? `/Images-Drive${foundFurnitureType.getAttribute('image')}` : '/placeholder.png'
         };
         
         const subcategoryObj = {
           id: foundSubcategory.getAttribute('id'),
           name: foundSubcategory.getAttribute('name') || 'Unnamed',
           description: foundSubcategory.getAttribute('description') || '',
-          image: foundSubcategory.getAttribute('image') || '/placeholder.png'
+          image: foundSubcategory.getAttribute('image') ? `/Images-Drive${foundSubcategory.getAttribute('image')}` : '/placeholder.png'
         };
         
         // Parse product images
@@ -134,7 +134,7 @@ function ProductDetail() {
           const imageElements = imagesNode.querySelectorAll('image');
           imageElements.forEach(img => {
             images.push({
-              src: img.getAttribute('src') || '/placeholder.png',
+              src: img.getAttribute('src') ? `/Images-Drive${img.getAttribute('src')}` : '/placeholder.png',
               alt: img.getAttribute('alt') || 'Product image'
             });
           });
@@ -161,7 +161,7 @@ function ProductDetail() {
           id: foundProduct.getAttribute('id'),
           name: foundProduct.getAttribute('name') || 'Unnamed',
           description: foundProduct.getAttribute('description') || '',
-          image: foundProduct.getAttribute('image') || '/placeholder.png',
+          image: foundProduct.getAttribute('image') ? `/Images-Drive${foundProduct.getAttribute('image')}` : '/placeholder.png',
           price: foundProduct.getAttribute('price') || null,
           tags: tags,
           images: images,
