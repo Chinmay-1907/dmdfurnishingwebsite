@@ -1,4 +1,4 @@
-/* Inspirations Page Styles */
+﻿/* Inspirations Page Styles */
 
 .inspirations-container {
   max-width: 100%;
@@ -66,7 +66,7 @@
 .inspiration-detail-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   position: relative;
   padding-bottom: 10px;
@@ -85,7 +85,7 @@
 .inspiration-detail-section p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--color-text-secondary);
 }
 
 .inspiration-detail-columns {
@@ -101,7 +101,7 @@
 .inspiration-detail-column h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 400;
 }
 
@@ -114,13 +114,13 @@
 .inspiration-list li {
   padding: 10px 0;
   border-bottom: 1px solid #eee;
-  color: #555;
+  color: var(--color-text-secondary);
   position: relative;
   padding-left: 25px;
 }
 
 .inspiration-list li::before {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   left: 0;
   color: #d4af37;
@@ -154,7 +154,7 @@
 
 .back-button {
   display: inline-block;
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -255,7 +255,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #333;
+  color: var(--color-text);
   border-bottom: 2px solid transparent;
 }
 
@@ -272,15 +272,15 @@
 }
 
 .inspiration-item {
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-elevated);
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .inspiration-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .inspiration-image {
@@ -318,12 +318,12 @@
 .inspiration-content h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 500;
 }
 
 .inspiration-content p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -345,21 +345,21 @@
 .inspiration-cta {
   padding: 80px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
   margin-top: 50px;
 }
 
 .inspiration-cta h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
 .inspiration-cta p {
   max-width: 600px;
   margin: 0 auto 30px;
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 1.2rem;
   line-height: 1.6;
 }

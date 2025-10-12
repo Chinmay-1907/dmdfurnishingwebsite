@@ -1,5 +1,5 @@
-.site-footer {
-  background-color: #1a1a1a;
+﻿.site-footer {
+  background-color: var(--color-surface-inverse);
   color: #fff;
   padding: 60px 0 20px;
 }
@@ -32,7 +32,7 @@
 }
 
 .footer-logo p {
-  color: #aaa;
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .footer-column a {
-  color: #aaa;
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -85,7 +85,7 @@
 }
 
 .copyright {
-  color: #777;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
@@ -111,6 +111,16 @@
 .social-icon:hover {
   background-color: #d4af37;
   transform: translateY(-3px);
+}
+
+body.dark-mode .social-icon {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+}
+
+body.dark-mode .social-icon:hover {
+  background-color: #d4af37;
+  color: #1a1a1a;
 }
 
 @media (max-width: 768px) {

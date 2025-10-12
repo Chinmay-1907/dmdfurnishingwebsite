@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import '../styles/Header.css';
 
-function Header() {
+function Header({ theme = 'light', onToggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const isDarkMode = theme === 'dark';
+
   const handleMenuToggle = () => setMenuOpen((open) => !open);
+  const handleThemeToggle = () => {
+    if (onToggleTheme) {
+      onToggleTheme();
+    }
+  };
+
   return (
     <header className="site-header">
       <div className="header-container">
@@ -36,6 +45,17 @@ function Header() {
         <div className="nav-cta">
           <button className="consultation-button">Book Consultation</button>
         </div>
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={handleThemeToggle}
+          aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+          aria-pressed={isDarkMode}
+          title={`${isDarkMode ? 'Light' : 'Dark'} mode`}
+        >
+          <span className="visually-hidden">{`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}</span>
+          {isDarkMode ? <FiSun aria-hidden="true" focusable="false" /> : <FiMoon aria-hidden="true" focusable="false" />}
+        </button>
       </div>
     </header>
   );

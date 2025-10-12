@@ -1,3 +1,42 @@
+:root {
+  --color-background: #f9f9fb;
+  --color-surface: #f1f2f6;
+  --color-surface-elevated: #ffffff;
+  --color-surface-muted: #e6e8ef;
+  --color-text: #1f2933;
+  --color-text-secondary: #4d5d6c;
+  --color-text-muted: #7b8794;
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-header-bg: rgba(255, 255, 255, 0.95);
+  --color-header-border: rgba(15, 23, 42, 0.1);
+  --color-card-overlay: rgba(15, 23, 42, 0.35);
+  --color-surface-inverse: #1a1f2b;
+  --shadow-elevated: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark light;
+  }
+}
+
+body.dark-mode {
+  --color-background: #121821;
+  --color-surface: #19212d;
+  --color-surface-elevated: #202a38;
+  --color-surface-muted: #273345;
+  --color-text: #f7f9fc;
+  --color-text-secondary: #d7dce5;
+  --color-text-muted: #9ea8bb;
+  --color-border: rgba(138, 158, 191, 0.35);
+  --color-header-bg: rgba(14, 19, 27, 0.92);
+  --color-header-border: rgba(138, 158, 191, 0.35);
+  --color-card-overlay: rgba(14, 19, 27, 0.55);
+  --color-surface-inverse: #0f141d;
+  --shadow-elevated: 0 20px 55px rgba(7, 11, 18, 0.35);
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +44,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {

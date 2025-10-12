@@ -1,11 +1,11 @@
-.services-container {
+﻿.services-container {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .services-hero {
   height: 50vh;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
   display: flex;
   flex-direction: column;
@@ -41,14 +41,14 @@
 .services-overview h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
 .services-overview p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .services-grid {
@@ -61,8 +61,8 @@
 }
 
 .service-card {
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-elevated);
   padding: 40px 30px;
   border-radius: 4px;
   transition: all 0.3s ease;
@@ -72,7 +72,7 @@
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .service-icon {
@@ -86,11 +86,11 @@
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .service-card p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 25px;
 }
@@ -116,14 +116,14 @@
 
 .process-section {
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
   text-align: center;
 }
 
 .process-section h2 {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
@@ -161,11 +161,11 @@
 .process-step h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .process-step p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -176,7 +176,7 @@
 .industries-section h2 {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   text-align: center;
 }
@@ -191,7 +191,7 @@
 
 .industry-card {
   height: 250px;
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -227,7 +227,7 @@
 .service-cta {
   padding: 80px 20px;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
   display: flex;
   flex-direction: column;

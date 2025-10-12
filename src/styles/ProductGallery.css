@@ -1,4 +1,4 @@
-/* ProductGallery.css - Styles for the premium interactive product gallery */
+﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
 
 /* Main container */
 .product-gallery-container {
@@ -170,7 +170,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: var(--color-surface-muted);
   border-radius: 8px;
 }
 

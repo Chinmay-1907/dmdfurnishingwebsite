@@ -1,11 +1,11 @@
-.projects-container {
+﻿.projects-container {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .projects-hero {
   height: 50vh;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
   display: flex;
   flex-direction: column;
@@ -45,8 +45,8 @@
 }
 
 .project-card {
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-elevated);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
@@ -56,12 +56,12 @@
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .card-image {
   height: 250px;
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   background-size: cover;
   background-position: center;
 }
@@ -76,7 +76,7 @@
 .card-content h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 400;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .project-description {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 0.95rem;
@@ -115,14 +115,14 @@
 
 .project-categories {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
   text-align: center;
 }
 
 .project-categories h2 {
   font-size: 2.2rem;
   margin-bottom: 40px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
@@ -137,8 +137,8 @@
 
 .category-button {
   background-color: transparent;
-  color: #333;
-  border: 1px solid #ddd;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   padding: 12px 25px;
   font-size: 0.9rem;
   cursor: pointer;
@@ -156,7 +156,7 @@
 .project-cta {
   padding: 80px 20px;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
 }
 

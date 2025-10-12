@@ -1,4 +1,4 @@
-/* AboutUs.module.css */
+﻿/* AboutUs.module.css */
 
 /* Hero section styling */
 .heroSection {
@@ -53,11 +53,11 @@
 }
 
 .sectionLight {
-  background-color: #fff;
+  background-color: var(--color-surface-elevated);
 }
 
 .sectionDark {
-  background-color: #f8f8f8;
+  background-color: var(--color-surface);
 }
 
 .sectionTitle {
@@ -65,7 +65,7 @@
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
-  color: #333;
+  color: var(--color-text);
   display: inline-block;
 }
 
@@ -87,7 +87,7 @@
 .paragraph {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -104,7 +104,7 @@
   margin-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--color-text-secondary);
 }
 
 .listItem::before {
@@ -133,7 +133,7 @@
 }
 
 .primaryButton {
-  background-color: #ffffff;
+  background-color: var(--color-surface-elevated);
   color: rgb(0, 0, 0);
   border: 2px solid #000;
 }

@@ -1,11 +1,11 @@
-.products-container {
+﻿.products-container {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .products-hero {
   height: 50vh;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
 .product-categories h2 {
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   text-align: center;
 }
@@ -52,8 +52,8 @@
 }
 
 .category-item {
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-elevated);
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
@@ -62,12 +62,12 @@
 
 .category-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .category-image {
   height: 200px;
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,12 +112,12 @@
   font-size: 1.5rem;
   margin: 20px 0 10px;
   padding: 0 20px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .category-item p {
   padding: 0 20px;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 20px;
 }
 
@@ -142,13 +142,13 @@
 
 .featured-products {
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
 }
 
 .featured-products h2 {
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   text-align: center;
 }
@@ -162,8 +162,8 @@
 }
 
 .product-item {
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-elevated);
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
@@ -172,12 +172,12 @@
 
 .product-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .product-image {
   height: 250px;
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   background-size: cover;
   background-position: center;
 }
@@ -202,12 +202,12 @@
   font-size: 1.3rem;
   margin: 20px 0 10px;
   padding: 0 20px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .product-item p {
   padding: 0 20px;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 20px;
 }
 
@@ -215,7 +215,7 @@
 .breadcrumb {
   margin-bottom: 30px;
   font-size: 1rem;
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .breadcrumb button {
@@ -246,7 +246,7 @@
 .product-subcategories h2 {
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   text-align: center;
 }
@@ -261,14 +261,14 @@
 .product-listing h2 {
   font-size: 2.2rem;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
 /* Filter Section */
 .filter-section {
   margin-bottom: 40px;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
   padding: 20px;
   border-radius: 5px;
 }
@@ -276,7 +276,7 @@
 .filter-section h3 {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .filter-tags {
@@ -286,7 +286,7 @@
 }
 
 .filter-tag {
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   border: none;
   padding: 8px 15px;
   border-radius: 20px;
@@ -314,11 +314,11 @@
 }
 
 .product-tag {
-  background-color: #f0f0f0;
+  background-color: var(--color-surface-muted);
   padding: 4px 10px;
   border-radius: 15px;
   font-size: 0.8rem;
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 /* Product Price */
@@ -332,7 +332,7 @@
 .no-products {
   text-align: center;
   padding: 40px;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
   border-radius: 5px;
   grid-column: 1 / -1;
 }
@@ -359,7 +359,7 @@
 .custom-solutions {
   padding: 80px 20px;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
 }
 

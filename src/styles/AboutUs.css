@@ -1,11 +1,11 @@
-.about-container {
+﻿.about-container {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .about-hero {
   height: 70vh;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
   position: relative;
   background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -108,7 +108,7 @@
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   line-height: 1.2;
 }
@@ -116,7 +116,7 @@
 .about-content p {
   margin-bottom: 20px;
   line-height: 1.8;
-  color: #555;
+  color: var(--color-text-secondary);
   font-size: 1.1rem;
 }
 
@@ -153,7 +153,7 @@
 .stat-label {
   display: block;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -162,12 +162,12 @@
   flex: 1;
   min-width: 300px;
   height: 450px;
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   background-position: center;
   border-radius: 5px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
@@ -181,7 +181,7 @@
 .about-mission {
   padding: 100px 20px;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: var(--color-surface-inverse);
   color: white;
   position: relative;
   background-image: url('https://images.unsplash.com/photo-1600494603989-9650cf6dad51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -228,13 +228,13 @@
 .about-timeline {
   padding: 100px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
 }
 
 .about-timeline h2 {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
@@ -279,7 +279,7 @@
 }
 
 .timeline-item:hover .timeline-dot {
-  background-color: #fff;
+  background-color: var(--color-surface-elevated);
   border: 2px solid #d4af37;
   box-shadow: 0 0 0 8px rgba(212, 175, 55, 0.3);
 }
@@ -287,9 +287,9 @@
 .timeline-content {
   width: 45%;
   padding: 20px 30px;
-  background-color: white;
+  background-color: var(--color-surface-elevated);
   border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-elevated);
   text-align: left;
   position: relative;
   transition: all 0.3s ease;
@@ -309,7 +309,7 @@
   top: 15px;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: var(--color-surface-elevated);
   transform: rotate(45deg);
 }
 
@@ -323,7 +323,7 @@
 
 .timeline-item:hover .timeline-content {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .timeline-content h3 {
@@ -335,20 +335,20 @@
 
 .timeline-content h4 {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 10px;
   font-weight: 500;
 }
 
 .timeline-content p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
 .about-approach {
   padding: 100px 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--color-surface-elevated);
   border-top: 1px solid rgba(212, 175, 55, 0.3);
   border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
@@ -356,7 +356,7 @@
 .about-approach h2 {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
@@ -369,9 +369,9 @@
 }
 
 .approach-item {
-  background-color: white;
+  background-color: var(--color-surface-elevated);
   padding: 40px 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-elevated);
   border-bottom: 2px solid #d4af37;
   transition: all 0.3s ease;
   position: relative;
@@ -400,18 +400,18 @@
 
 .approach-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .approach-item h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 400;
 }
 
 .approach-item p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.8;
 }
 
@@ -424,7 +424,7 @@
 .about-values h2 {
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
   text-align: center;
 }
@@ -436,16 +436,16 @@
 }
 
 .value-item {
-  background-color: white;
+  background-color: var(--color-surface-elevated);
   padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-elevated);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .value-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-elevated);
 }
 
 .value-item h3 {
@@ -455,19 +455,19 @@
 }
 
 .value-item p {
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .about-team {
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--color-surface);
   text-align: center;
 }
 
 .about-team h2 {
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--color-text);
   font-weight: 300;
 }
 
@@ -490,7 +490,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: #eee;
+  background-color: var(--color-surface-muted);
   margin: 0 auto 20px;
   background-size: cover;
   background-position: center;
@@ -511,11 +511,11 @@
 .team-member h3 {
   font-size: 1.5rem;
   margin-bottom: 5px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .team-member p {
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 @media (max-width: 768px) {

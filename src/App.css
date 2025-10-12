@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,8 +7,9 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App {
@@ -16,6 +17,8 @@ body {
   flex-direction: column;
   min-height: 100vh;    /* keep full-height flex */
   zoom: 85%;            /* scale the whole app down to 85% */
+  background-color: transparent;
+  color: inherit;
 }
 
 .main-content {
@@ -36,6 +39,18 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Common utility classes */
@@ -63,3 +78,4 @@ img {
     padding: 60px 0;
   }
 }
+
