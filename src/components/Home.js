@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Home.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -8,43 +8,16 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Home() {
-  // Create ref for the inspirations slider
-  const sliderRef = useRef(null);
-  
-  // Scroll functions for inspiration slider navigation
-  const scrollLeft = () => {
-    if (sliderRef.current) {
-      // Calculate width of a single item (1/3 of the visible area)
-      const scrollAmount = sliderRef.current.offsetWidth / 3;
-      sliderRef.current.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
-  
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      // Calculate width of a single item (1/3 of the visible area)
-      const scrollAmount = sliderRef.current.offsetWidth / 3;
-      sliderRef.current.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  
-  // Initialize AOS animation library
-  AOS.init({
-    offset:   2,     // fire when the element is only 50px in view
-    duration: 600,    // faster (0.6s) animation
-    delay:    0,      // no extra delay
-    easing:  'ease', // a snappier easing curve
-    once:     true,
-    mirror:   false
-  }); 
-  
+  useEffect(() => {
+    AOS.init({
+      offset: 2,
+      duration: 600,
+      delay: 0,
+      easing: 'ease',
+      once: true,
+      mirror: false
+    });
+  }, []);
 
   // Slideshow settings
   const sliderSettings = {
@@ -78,11 +51,9 @@ function Home() {
               <img src={image} alt={`Furniture slide ${index + 1}`} className="slide-image" />
               <div className="hero-overlay">
                 <div className="hero-content">
+                  <span className="hero-eyebrow">Luxury Hospitality Furniture</span>
                   <h1>Luxury Hospitality Furniture</h1>
                   <p>Elevate your space with our premium collections</p>
-                  <Link to="/products">
-                    <button className="cta-button">Explore Our Products</button>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -170,112 +141,20 @@ function Home() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Our Premium Collections / Inspirations Gallery Section */}
-      <section className="inspirations-section">
-        <h2>Our Premium Collections</h2>
-        <p className="section-subtitle">Browse our curated collection of design inspirations</p>
-        
-        <div className="inspirations-slider-container">
-          <div className="inspirations-slider" ref={sliderRef}>
-            {/* Horizontal row of 3 inspirations */}
-            <div className="inspiration-slide">
-              <div className="inspiration-item">
-                <div className="inspiration-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
-                  <div className="inspiration-overlay">
-                    <span className="inspiration-category">Hotel</span>
-                  </div>
-                </div>
-                <div className="inspiration-content">
-                  <h3>Modern Minimalist Hotel Lobby</h3>
-                  <p>Clean lines and neutral tones create a welcoming atmosphere in this contemporary hotel lobby design.</p>
-                  <Link to="/inspirations/1" className="inspiration-link">View Details</Link>
-                </div>
+          {/* Premium Collections */}
+          <div className="nav-item" data-aos="fade-up" data-aos-delay="400">
+            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+              <div className="nav-overlay">
+                <h3>Premium Collections</h3>
               </div>
             </div>
-            
-            <div className="inspiration-slide">
-              <div className="inspiration-item">
-                <div className="inspiration-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
-                  <div className="inspiration-overlay">
-                    <span className="inspiration-category">Restaurant</span>
-                  </div>
-                </div>
-                <div className="inspiration-content">
-                  <h3>Luxury Restaurant Seating</h3>
-                  <p>Plush velvet seating and rich wood tones elevate this fine dining experience with sophistication and comfort.</p>
-                  <Link to="/inspirations/2" className="inspiration-link">View Details</Link>
-                </div>
-              </div>
+            <div className="nav-content">
+              <p>Discover curated suites from our signature line featuring handcrafted hospitality statements.</p>
+              <Link to="/inspirations">
+                <button className="nav-button">Explore Collection</button>
+              </Link>
             </div>
-            
-            <div className="inspiration-slide">
-              <div className="inspiration-item">
-                <div className="inspiration-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
-                  <div className="inspiration-overlay">
-                    <span className="inspiration-category">Hotel</span>
-                  </div>
-                </div>
-                <div className="inspiration-content">
-                  <h3>Boutique Hotel Suite</h3>
-                  <p>A perfect blend of luxury and comfort in this boutique hotel suite featuring custom-designed furniture.</p>
-                  <Link to="/inspirations/3" className="inspiration-link">View Details</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="inspiration-slide">
-              <div className="inspiration-item">
-                <div className="inspiration-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
-                  <div className="inspiration-overlay">
-                    <span className="inspiration-category">Corporate</span>
-                  </div>
-                </div>
-                <div className="inspiration-content">
-                  <h3>Executive Lounge Design</h3>
-                  <p>Sophisticated and functional furniture creates an ideal environment for business travelers.</p>
-                  <Link to="/inspirations/4" className="inspiration-link">View Details</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="inspiration-slide">
-              <div className="inspiration-item">
-                <div className="inspiration-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
-                  <div className="inspiration-overlay">
-                    <span className="inspiration-category">Resort</span>
-                  </div>
-                </div>
-                <div className="inspiration-content">
-                  <h3>Coastal Resort Aesthetic</h3>
-                  <p>Light, airy furniture with natural materials perfectly complement this beachfront property.</p>
-                  <Link to="/inspirations/5" className="inspiration-link">View Details</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="inspiration-slide">
-              <div className="inspiration-item">
-                <div className="inspiration-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
-                  <div className="inspiration-overlay">
-                    <span className="inspiration-category">Cafe</span>
-                  </div>
-                </div>
-                <div className="inspiration-content">
-                  <h3>Urban Cafe Concept</h3>
-                  <p>Industrial-inspired furniture with warm accents creates a welcoming space for this city cafe.</p>
-                  <Link to="/inspirations/6" className="inspiration-link">View Details</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="inspiration-nav">
-            <button className="inspiration-nav-btn prev" onClick={scrollLeft} aria-label="Previous inspirations">←</button>
-            <Link to="/inspirations" className="view-all-btn">View All Inspirations</Link>
-            <button className="inspiration-nav-btn next" onClick={scrollRight} aria-label="Next inspirations">→</button>
           </div>
         </div>
       </section>
@@ -315,3 +194,4 @@ function Home() {
 
 
 export default Home;
+
