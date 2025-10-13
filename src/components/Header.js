@@ -77,11 +77,11 @@ function Header({ theme = 'light', onToggleTheme }) {
             type="button"
             className="theme-toggle"
             onClick={handleThemeToggle}
-            aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+            aria-label={`${isDarkMode ? 'light' : 'dark'} mode`}
             aria-pressed={isDarkMode}
             title={`${isDarkMode ? 'Light' : 'Dark'} mode`}
           >
-            <span className="visually-hidden">{`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}</span>
+            <span className="visually-hidden">{`${isDarkMode ? 'light' : 'dark'} mode`}</span>
             {isDarkMode ? <FiSun aria-hidden="true" focusable="false" /> : <FiMoon aria-hidden="true" focusable="false" />}
           </button>
         </div>

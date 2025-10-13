@@ -6,8 +6,35 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FiPhone, FiMail, FiCalendar } from 'react-icons/fi';
 
 function Home() {
+  const heroSlides = [
+    {
+      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      eyebrow: 'Bespoke Hospitality Suites',
+      title: 'Tailored Guestroom Collections',
+      copy: 'Layer plush upholstery, bespoke case goods, and refined decor accents for signature guest experiences.'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      eyebrow: 'Curated Dining Concepts',
+      title: 'Elevated Restaurant Seating',
+      copy: 'Craft dining environments that balance durability with sculptural silhouettes and luxe textures.'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      eyebrow: 'Signature Lobby Moments',
+      title: 'Modern Social Lounges',
+      copy: 'Shape welcoming arrival experiences with statement lounges, accent lighting, and bespoke detailing.'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      eyebrow: 'Resort Serenity',
+      title: 'Outdoor Retreat Vignettes',
+      copy: 'Introduce weather-ready silhouettes and artisanal finishes that invite guests to linger outdoors.'
+    }
+  ];
   useEffect(() => {
     AOS.init({
       offset: 2,
@@ -33,27 +60,19 @@ function Home() {
     pauseOnHover: false
   };
 
-  // Slideshow images with furniture-specific photos
-  const slideImages = [
-    'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', // Modern sofa
-    'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', // Luxury bedroom
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', // Hotel lobby furniture
-    'https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' // Dining set
-  ];
-
   return (
     <div className="home-container">
       {/* Hero Section with Slider */}
       <section className="hero-section">
         <Slider {...sliderSettings} className="hero-slider">
-          {slideImages.map((image, index) => (
+          {heroSlides.map((slide, index) => (
             <div key={index} className="hero-slide">
-              <img src={image} alt={`Furniture slide ${index + 1}`} className="slide-image" />
+              <img src={slide.image} alt={`Furniture slide ${index + 1}`} className="slide-image" />
               <div className="hero-overlay">
                 <div className="hero-content">
-                  <span className="hero-eyebrow">Luxury Hospitality Furniture</span>
-                  <h1>Luxury Hospitality Furniture</h1>
-                  <p>Elevate your space with our premium collections</p>
+                  <span className="hero-eyebrow">{slide.eyebrow}</span>
+                  <h1>{slide.title}</h1>
+                  <p>{slide.copy}</p>
                 </div>
               </div>
             </div>
@@ -163,28 +182,26 @@ function Home() {
       <section className="contact-section">
         <div className="contact-overlay"></div>
         <div className="contact-content">
-          <h2>Ready to Transform Your Space?</h2>
-          <p>
-            DMD Furnishing has set the bar for high-end hospitality furniture. We work with select owners, brands and designers to create unforgettable hotel interiors.
-          </p>
-          
-          <div className="contact-info-container">
-            <div className="contact-info-item">
-              <i className="contact-icon">📞</i>
-              <span>+1 (800) 555-1234</span>
-            </div>
-            <div className="contact-info-item">
-              <i className="contact-icon">✉️</i>
-              <span>info@dmdfurnishing.com</span>
-            </div>
-            <div className="contact-info-item">
-              <i className="contact-icon">📅</i>
-              <Link to="/contact">
-                <button className="cta-button">Schedule a Free Call</button>
-              </Link>
-            </div>
+          <div className="contact-copy">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>
+              DMD Furnishing sets the bar for high-end hospitality furniture. We partner with owners, brands, and designers to shape unforgettable interiors.
+            </p>
           </div>
-          
+          <div className="contact-actions">
+            <a className="contact-chip" href="tel:+18005551234">
+              <FiPhone aria-hidden="true" focusable="false" />
+              <span>+1 (800) 555-1234</span>
+            </a>
+            <a className="contact-chip" href="mailto:info@dmdfurnishing.com">
+              <FiMail aria-hidden="true" focusable="false" />
+              <span>info@dmdfurnishing.com</span>
+            </a>
+            <Link to="/contact" className="contact-chip contact-chip--cta">
+              <FiCalendar aria-hidden="true" focusable="false" />
+              <span>Schedule a Free Call</span>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
