@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Products.css';
 import styles from '../styles/AboutUs.module.css';
+import { normalizeCatalogImagePath } from '../utils/catalogPaths';
 
 function Products() {
   // State for tracking catalog and UI
@@ -49,7 +50,7 @@ function Products() {
             id: placeEl.getAttribute('id') || undefined,
             name: placeEl.getAttribute('name') || 'Unnamed',
             description: placeEl.getAttribute('description') || '',
-            image: placeEl.getAttribute('image') ? `/Images-Drive${placeEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
+            image: normalizeCatalogImagePath(placeEl.getAttribute('image')),
             furnitureTypes: []
           };
           
@@ -60,7 +61,7 @@ function Products() {
             const furnitureType = {
               id: furnitureTypeEl.getAttribute('id') || undefined,
               name: furnitureTypeEl.getAttribute('name') || 'Unnamed',
-              image: furnitureTypeEl.getAttribute('image') ? `/Images-Drive${furnitureTypeEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
+              image: normalizeCatalogImagePath(furnitureTypeEl.getAttribute('image')),
               description: furnitureTypeEl.getAttribute('description') || '',
               subcategories: []
             };
@@ -73,7 +74,7 @@ function Products() {
                   id: subcategoryEl.getAttribute('id') || '',
                   name: subcategoryEl.getAttribute('name') || 'Unnamed',
                   description: subcategoryEl.getAttribute('description') || '',
-                  image: subcategoryEl.getAttribute('image') ? `/Images-Drive${subcategoryEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
+                  image: normalizeCatalogImagePath(subcategoryEl.getAttribute('image')),
                   products: []
                 };
               
@@ -85,7 +86,7 @@ function Products() {
                   id: productEl.getAttribute('id') || `product-${l}`,
                   name: productEl.getAttribute('name') || 'Unnamed',
                   description: productEl.getAttribute('description') || '',
-                  image: productEl.getAttribute('image') ? `/Images-Drive${productEl.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
+                  image: normalizeCatalogImagePath(productEl.getAttribute('image')),
                   images: []
                 };
                 
@@ -94,7 +95,7 @@ function Products() {
                 for (let m = 0; m < imageElements.length; m++) {
                   const imageEl = imageElements[m];
                   product.images.push({
-                    src: imageEl.getAttribute('src') ? `/Images-Drive${imageEl.getAttribute('src').replace(/\\/g, '/')}` : '/placeholder.png',
+                    src: normalizeCatalogImagePath(imageEl.getAttribute('src')),
                     alt: imageEl.getAttribute('alt') || ''
                   });
                 }
@@ -213,7 +214,7 @@ function Products() {
               >
                 <div 
                   className="category-image"
-                  style={{ backgroundImage: `url(${place.image || '/placeholder.png'})` }}
+                  style={{ backgroundImage: `url("${encodeURI(place.image || '/placeholder.png')}")` }}
                 ></div>
                 <h3>{place.name}</h3>
                 <p>{place.description}</p>
@@ -247,7 +248,7 @@ function Products() {
               >
                 <div 
                   className="category-image"
-                  style={{ backgroundImage: `url(${furnitureType.image || '/placeholder.png'})` }}
+                  style={{ backgroundImage: `url("${encodeURI(furnitureType.image || '/placeholder.png')}")` }}
                 ></div>
                 <h3>{furnitureType.name}</h3>
                 <p>{furnitureType.description}</p>
@@ -283,7 +284,7 @@ function Products() {
               >
                 <div 
                   className="category-image"
-                  style={{ backgroundImage: `url(${subcategory.image || '/placeholder.png'})` }}
+                  style={{ backgroundImage: `url("${encodeURI(subcategory.image || '/placeholder.png')}")` }}
                 ></div>
                 <h3>{subcategory.name}</h3>
                 <p>{subcategory.description}</p>
@@ -318,7 +319,7 @@ function Products() {
             <div key={product.id || index} className="product-item">
               <div 
                 className="product-image" 
-                style={{ backgroundImage: `url(${product.image})` }}
+                style={{ backgroundImage: `url("${encodeURI(product.image)}")` }}
               ></div>
               <h3>{product.name}</h3>
               {product.price && <p className="product-price">{product.price}</p>}

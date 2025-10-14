@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProductDetail.css';
+import { normalizeCatalogImagePath } from '../utils/catalogPaths';
 
 function ProductDetail() {
   const { institutionId, furnitureTypeId, subcategoryId, productId } = useParams();
@@ -113,21 +114,21 @@ function ProductDetail() {
           id: foundPlace.getAttribute('id'),
           name: foundPlace.getAttribute('name') || 'Unnamed',
           description: foundPlace.getAttribute('description') || '',
-          image: foundPlace.getAttribute('image') ? `/Images-Drive${foundPlace.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png'
+          image: normalizeCatalogImagePath(foundPlace.getAttribute('image'))
         };
         
         const furnitureTypeObj = {
           id: foundFurnitureType.getAttribute('id'),
           name: foundFurnitureType.getAttribute('name') || 'Unnamed',
           description: foundFurnitureType.getAttribute('description') || '',
-          image: foundFurnitureType.getAttribute('image') ? `/Images-Drive${foundFurnitureType.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png'
+          image: normalizeCatalogImagePath(foundFurnitureType.getAttribute('image'))
         };
         
         const subcategoryObj = {
           id: foundSubcategory.getAttribute('id'),
           name: foundSubcategory.getAttribute('name') || 'Unnamed',
           description: foundSubcategory.getAttribute('description') || '',
-          image: foundSubcategory.getAttribute('image') ? `/Images-Drive${foundSubcategory.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png'
+          image: normalizeCatalogImagePath(foundSubcategory.getAttribute('image'))
         };
         
         // Parse product images
@@ -137,7 +138,7 @@ function ProductDetail() {
           const imageElements = imagesNode.querySelectorAll('image');
           imageElements.forEach(img => {
             images.push({
-              src: img.getAttribute('src') ? `/Images-Drive${img.getAttribute('src').replace(/\\/g, '/')}` : '/placeholder.png',
+              src: normalizeCatalogImagePath(img.getAttribute('src')),
               alt: img.getAttribute('alt') || 'Product image'
             });
           });
@@ -164,7 +165,7 @@ function ProductDetail() {
           id: foundProduct.getAttribute('id'),
           name: foundProduct.getAttribute('name') || 'Unnamed',
           description: foundProduct.getAttribute('description') || '',
-          image: foundProduct.getAttribute('image') ? `/Images-Drive${foundProduct.getAttribute('image').replace(/\\/g, '/')}` : '/placeholder.png',
+          image: normalizeCatalogImagePath(foundProduct.getAttribute('image')),
           price: foundProduct.getAttribute('price') || null,
           tags: tags,
           images: images,
