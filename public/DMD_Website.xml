@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <places>
-	<place id="hospital" name="Hospital" description="Hospital furniture collection" image="\Images\Hospital\Waiting Area\Waiting Area.jpg">
+	<place id="hospital" name="Hospital" description="Hospital furniture collection" image="\Images\Hospital\Hospital.jpg">
 		<furnitureType id="Patient Room" name="Patient Room" description="Patient Room for Hospital" image="\Images\Hospital\Patient Room\Patient Room.jpg">
 			<subcategory id="Bedside Cabinet" name="Bedside Cabinet" description="Bedside Cabinet in Patient Room" image="\Images\Hospital\Patient Room\Bedside Cabinet\Bedside Cabinet.jpg">
 				<product id="Double Drawer Cabinet" name="Double Drawer Cabinet" description="Double Drawer Cabinet product for Bedside Cabinet" image="\Images\Hospital\Patient Room\Bedside Cabinet\Double Drawer Cabinet\Double Drawer Cabinet.jpg" tags="double,drawer,cabinet">
@@ -12,7 +12,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Lockable Cabinet" name="Lockable Cabinet" description="Lockable Cabinet product for Bedside Cabinet" image="\Images\Hospital\Patient Room\Bedside Cabinet\Lockable Cabinet\Lockable Cabinet.jpg" tags="lockable,cabinet">
@@ -24,7 +24,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Single Drawer Cabinet" name="Single Drawer Cabinet" description="Single Drawer Cabinet product for Bedside Cabinet" image="\Images\Hospital\Patient Room\Bedside Cabinet\Single Drawer Cabinet\Single Drawer Cabinet.jpg" tags="single,drawer,cabinet">
@@ -36,7 +36,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -50,7 +50,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Fixed Overbed Table" name="Fixed Overbed Table" description="Fixed Overbed Table product for Overbed Table" image="\Images\Hospital\Patient Room\Overbed Table\Fixed Overbed Table\Fixed Overbed Table.jpg" tags="fixed,overbed,table">
@@ -62,7 +62,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Rolling Overbed Table" name="Rolling Overbed Table" description="Rolling Overbed Table product for Overbed Table" image="\Images\Hospital\Patient Room\Overbed Table\Rolling Overbed Table\Rolling Overbed Table.jpg" tags="rolling,overbed,table">
@@ -74,7 +74,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -88,7 +88,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Manual Recliner" name="Manual Recliner" description="Manual Recliner product for Recliner Chair" image="\Images\Hospital\Patient Room\Recliner Chair\Manual Recliner\Manual Recliner.jpg" tags="manual,recliner">
@@ -100,7 +100,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Medical Recliner" name="Medical Recliner" description="Medical Recliner product for Recliner Chair" image="\Images\Hospital\Patient Room\Recliner Chair\Medical Recliner\Medical Recliner.jpg" tags="medical,recliner">
@@ -112,7 +112,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -128,7 +128,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Metal Table" name="Metal Table" description="Metal Table product for Magazine Table" image="\Images\Hospital\Waiting Area\Magazine Table\Metal Table\Metal Table.jpg" tags="metal,table">
@@ -140,7 +140,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Table" name="Wooden Table" description="Wooden Table product for Magazine Table" image="\Images\Hospital\Waiting Area\Magazine Table\Wooden Table\Wooden Table.jpg" tags="wooden,table">
@@ -152,45 +152,46 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Reception Desk" name="Reception Desk" description="Reception Desk in Waiting Area" image="\Images\Hospital\Waiting Area\Reception Desk\Reception Desk.jpg">
 				<product id="Curved Desk" name="Curved Desk" description="Curved Desk product for Reception Desk" image="\Images\Hospital\Waiting Area\Reception Desk\Curved Desk\Curved Desk.jpg" tags="curved,desk">
 					<images>
-						<image src="\Images\Hospital\Waiting Area\Reception Desk\Curved Desk\curved desk.png" alt="Curved Desk - curved desk" />
+						<image src="\Images\Hospital\Waiting Area\Reception Desk\Curved Desk\Curved Desk 2.jpg" alt="Curved Desk - Curved Desk 2" />
+						<image src="\Images\Hospital\Waiting Area\Reception Desk\Curved Desk\Curved Desk.jpg" alt="Curved Desk - Curved Desk" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (approx)" />
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Glass Top Desk" name="Glass Top Desk" description="Glass Top Desk product for Reception Desk" image="\Images\Hospital\Waiting Area\Reception Desk\Glass Top Desk\Glass Top Desk.jpg" tags="glass,top,desk">
 					<images>
-						<image src="\Images\Hospital\Waiting Area\Reception Desk\Glass Top Desk\Glass Top Desk.png" alt="Glass Top Desk - Glass Top Desk" />
+						<image src="\Images\Hospital\Waiting Area\Reception Desk\Glass Top Desk\Glass Top.jpg" alt="Glass Top Desk - Glass Top" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (approx)" />
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Straight Desk" name="Straight Desk" description="Straight Desk product for Reception Desk" image="\Images\Hospital\Waiting Area\Reception Desk\Straight Desk\Straight Desk.jpg" tags="straight,desk">
 					<images>
-						<image src="\Images\Hospital\Waiting Area\Reception Desk\Straight Desk\straight desk.png" alt="Straight Desk - straight desk" />
+						<image src="\Images\Hospital\Waiting Area\Reception Desk\Straight Desk\Straight Desk.jpg" alt="Straight Desk - Straight Desk" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (approx)" />
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -204,7 +205,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Plastic Waiting Chair" name="Plastic Waiting Chair" description="Plastic Waiting Chair product for Waiting Chairs" image="\Images\Hospital\Waiting Area\Waiting Chairs\Plastic Waiting Chair\Plastic Waiting Chair.jpg" tags="plastic,waiting,chair">
@@ -216,7 +217,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Upholstered Waiting Chair" name="Upholstered Waiting Chair" description="Upholstered Waiting Chair product for Waiting Chairs" image="\Images\Hospital\Waiting Area\Waiting Chairs\Upholstered Waiting Chair\Upholstered Waiting Chair.jpg" tags="upholstered,waiting,chair">
@@ -228,13 +229,13 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="hotel" name="Hotel" description="Hotel furniture collection" image="\Images\Hotel\Hotel furniture collection.jpg">
+	<place id="hotel" name="Hotel" description="Hotel furniture collection" image="\Images\Hotel\Hotel.jpg">
 		<furnitureType id="Breakfast Area" name="Breakfast Area" description="Breakfast Area for Hotel" image="\Images\Hotel\Breakfast Area\Breakfast Area.jpg">
 			<subcategory id="Buffet Counter" name="Buffet Counter" description="Buffet Counter in Breakfast Area" image="\Images\Hotel\Breakfast Area\Buffet Counter\Buffet Counter.jpg">
 				<product id="Cold Buffet Counter" name="Cold Buffet Counter" description="Cold Buffet Counter product for Buffet Counter" image="\Images\Hotel\Breakfast Area\Buffet Counter\Cold Buffet Counter\Cold Buffet Counter.jpg" tags="cold,buffet,counter">
@@ -246,7 +247,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Hot Buffet Counter" name="Hot Buffet Counter" description="Hot Buffet Counter product for Buffet Counter" image="\Images\Hotel\Breakfast Area\Buffet Counter\Hot Buffet Counter\Hot Buffet Counter.jpg" tags="hot,buffet,counter">
@@ -262,7 +263,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Mixed Buffet Counter" name="Mixed Buffet Counter" description="Mixed Buffet Counter product for Buffet Counter" image="\Images\Hotel\Breakfast Area\Buffet Counter\Mixed Buffet Counter\Mixed Buffet Counter.jpg" tags="mixed,buffet,counter">
@@ -275,7 +276,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -291,7 +292,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Upholstered Dining Chair product for Dining Chairs" image="\Images\Hotel\Breakfast Area\Dining Chairs\Upholstered Dining Chair\Upholstered Dining Chair.jpg" tags="upholstered,dining,chair">
@@ -306,7 +307,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Wooden Dining Chair product for Dining Chairs" image="\Images\Hotel\Breakfast Area\Dining Chairs\Wooden Dining Chair\Wooden Dining Chair.jpg" tags="wooden,dining,chair">
@@ -319,7 +320,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -338,7 +339,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="4-Seater Table" name="4-Seater Table" description="4-Seater Table product for Dining Tables" image="\Images\Hotel\Breakfast Area\Dining Tables\4-Seater Table\4-Seater Table.jpg" tags="4-seater,table">
@@ -352,7 +353,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="6-Seater Table" name="6-Seater Table" description="6-Seater Table product for Dining Tables" image="\Images\Hotel\Breakfast Area\Dining Tables\6-Seater Table\6-Seater Table.jpg" tags="6-seater,table">
@@ -370,7 +371,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -384,7 +385,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Heated Cabinet" name="Heated Cabinet" description="Heated Cabinet product for Food Service Cabinets" image="\Images\Hotel\Breakfast Area\Food Service Cabinets\Heated Cabinet\Heated Cabinet.jpg" tags="heated,cabinet">
@@ -396,7 +397,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Refrigerated Cabinet" name="Refrigerated Cabinet" description="Refrigerated Cabinet product for Food Service Cabinets" image="\Images\Hotel\Breakfast Area\Food Service Cabinets\Refrigerated Cabinet\Refrigerated Cabinet.jpg" tags="refrigerated,cabinet">
@@ -408,7 +409,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -424,7 +425,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="King Bed Frame" name="King Bed Frame" description="King Bed Frame product for Bed Frame" image="\Images\Hotel\Guest Room\Bed Frame\King Bed Frame\King Bed Frame.jpg" tags="king,bed,frame">
@@ -436,7 +437,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Queen Bed Frame" name="Queen Bed Frame" description="Queen Bed Frame product for Bed Frame" image="\Images\Hotel\Guest Room\Bed Frame\Queen Bed Frame\Queen Bed Frame.jpg" tags="queen,bed,frame">
@@ -448,7 +449,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -462,7 +463,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Workstation Desk" name="Workstation Desk" description="Workstation Desk product for Desk" image="\Images\Hotel\Guest Room\Desk\Workstation Desk\Workstation Desk.jpg" tags="workstation,desk">
@@ -474,7 +475,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Writing Desk" name="Writing Desk" description="Writing Desk product for Desk" image="\Images\Hotel\Guest Room\Desk\Writing Desk\Writing Desk.jpg" tags="writing,desk">
@@ -486,7 +487,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -500,7 +501,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="King Head Board" name="King Head Board" description="King Head Board product for Head Board" image="\Images\Hotel\Guest Room\Head Board\King Head Board\King Head Board.jpg" tags="king,head,board">
@@ -512,7 +513,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Queen Head Board" name="Queen Head Board" description="Queen Head Board product for Head Board" image="\Images\Hotel\Guest Room\Head Board\Queen Head Board\Queen Head Board.jpg" tags="queen,head,board">
@@ -525,7 +526,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -539,7 +540,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open Shelf Night Stand product for Night Stand" image="\Images\Hotel\Guest Room\Night Stand\Open Shelf Night Stand\Open Shelf Night Stand.jpg" tags="open,shelf,night,stand">
@@ -551,7 +552,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Single Drawer Night Stand" name="Single Drawer Night Stand" description="Single Drawer Night Stand product for Night Stand" image="\Images\Hotel\Guest Room\Night Stand\Single Drawer Night Stand\Single Drawer Night Stand.jpg" tags="single,drawer,night,stand">
@@ -564,7 +565,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -583,7 +584,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="AC01-GR-nova-Green product for Arm Chair" image="\Images\Hotel\hotel-seating\Arm Chair\AC01-GR-nova-Green\AC01-GR-nova-Green.jpg" tags="ac01-gr-nova-green">
@@ -598,7 +599,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="AC01-OR-nova-Sunset-Orange product for Arm Chair" image="\Images\Hotel\hotel-seating\Arm Chair\AC01-OR-nova-Sunset-Orange\AC01-OR-nova-Sunset-Orange.jpg" tags="ac01-or-nova-sunset-orange">
@@ -613,7 +614,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -628,7 +629,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="3-Siter Sofa" name="3-Siter Sofa" description="3-Siter Sofa product for Sofa" image="\Images\Hotel\hotel-seating\Sofa\3-Siter Sofa\3-Siter Sofa.jpg" tags="3-siter,sofa">
@@ -640,7 +641,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -658,7 +659,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Upholstered Accent Chair" name="Upholstered Accent Chair" description="Upholstered Accent Chair product for Accent Chairs" image="\Images\Hotel\Lobby Area\Accent Chairs\Upholstered Accent Chair\Upholstered Accent Chair.jpg" tags="upholstered,accent,chair">
@@ -673,7 +674,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Accent Chair" name="Wooden Accent Chair" description="Wooden Accent Chair product for Accent Chairs" image="\Images\Hotel\Lobby Area\Accent Chairs\Wooden Accent Chair\Wooden Accent Chair.jpg" tags="wooden,accent,chair">
@@ -686,7 +687,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -706,7 +707,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Round Coffee Table" name="Round Coffee Table" description="Round Coffee Table product for Coffee Tables" image="\Images\Hotel\Lobby Area\Coffee Tables\Round Coffee Table\Round Coffee Table.jpg" tags="round,coffee,table">
@@ -721,7 +722,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Square Coffee Table" name="Square Coffee Table" description="Square Coffee Table product for Coffee Tables" image="\Images\Hotel\Lobby Area\Coffee Tables\Square Coffee Table\Square Coffee Table.jpg" tags="square,coffee,table">
@@ -737,7 +738,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -752,7 +753,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="3-Seater Sofa" name="3-Seater Sofa" description="3-Seater Sofa product for Lobby Sofa" image="\Images\Hotel\Lobby Area\Lobby Sofa\3-Seater Sofa\3-Seater Sofa.jpg" tags="3-seater,sofa">
@@ -764,7 +765,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa product for Lobby Sofa" image="\Images\Hotel\Lobby Area\Lobby Sofa\Sectional Sofa\Sectional Sofa.jpg" tags="sectional,sofa">
@@ -776,7 +777,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -790,7 +791,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="L-Shaped Reception Desk" name="L-Shaped Reception Desk" description="L-Shaped Reception Desk product for Reception Desk" image="\Images\Hotel\Lobby Area\Reception Desk\L-Shaped Reception Desk\L-Shaped Reception Desk.jpg" tags="l-shaped,reception,desk">
@@ -802,7 +803,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Straight Reception Desk" name="Straight Reception Desk" description="Straight Reception Desk product for Reception Desk" image="\Images\Hotel\Lobby Area\Reception Desk\Straight Reception Desk\Straight Reception Desk.jpg" tags="straight,reception,desk">
@@ -814,14 +815,14 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="office" name="Office" description="Office furniture collection" image="\Images\Office\office.jpg">
-		<furnitureType id="Seating" name="Seating" description="Seating for Office" image="\Images\Office\Seating\Office Seating.jpg">
+	<place id="office" name="Office" description="Office furniture collection" image="\Images\Office\Office.jpg">
+		<furnitureType id="Seating" name="Seating" description="Seating for Office" image="\Images\Office\Seating\Seating.jpg">
 			<subcategory id="Ergonomic Chair" name="Ergonomic Chair" description="Ergonomic Chair in Seating" image="\Images\Office\Seating\Ergonomic Chair\Ergonomic Chair.jpg">
 				<product id="Adjustable Ergonomic Chair" name="Adjustable Ergonomic Chair" description="Adjustable Ergonomic Chair product for Ergonomic Chair" image="\Images\Office\Seating\Ergonomic Chair\Adjustable Ergonomic Chair\Adjustable Ergonomic Chair.jpg" tags="adjustable,ergonomic,chair">
 					<images>
@@ -832,7 +833,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Fabric Ergonomic Chair" name="Fabric Ergonomic Chair" description="Fabric Ergonomic Chair product for Ergonomic Chair" image="\Images\Office\Seating\Ergonomic Chair\Fabric Ergonomic Chair\Fabric Ergonomic Chair.jpg" tags="fabric,ergonomic,chair">
@@ -844,7 +845,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Mesh Ergonomic Chair" name="Mesh Ergonomic Chair" description="Mesh Ergonomic Chair product for Ergonomic Chair" image="\Images\Office\Seating\Ergonomic Chair\Mesh Ergonomic Chair\Mesh Ergonomic Chair.jpg" tags="mesh,ergonomic,chair">
@@ -856,7 +857,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -870,7 +871,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Leather Executive Chair" name="Leather Executive Chair" description="Leather Executive Chair product for Executive Chair" image="\Images\Office\Seating\Executive Chair\Leather Executive Chair\Leather Executive Chair.jpg" tags="leather,executive,chair">
@@ -882,7 +883,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Mid-Back Executive Chair" name="Mid-Back Executive Chair" description="Mid-Back Executive Chair product for Executive Chair" image="\Images\Office\Seating\Executive Chair\Mid-Back Executive Chair\Mid-Back Executive Chair.jpg" tags="mid-back,executive,chair">
@@ -894,7 +895,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -908,7 +909,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Plastic Visitor Chair" name="Plastic Visitor Chair" description="Plastic Visitor Chair product for Visitor Chairs" image="\Images\Office\Seating\Visitor Chairs\Plastic Visitor Chair\Plastic Visitor Chair.jpg" tags="plastic,visitor,chair">
@@ -920,7 +921,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Stackable Visitor Chair" name="Stackable Visitor Chair" description="Stackable Visitor Chair product for Visitor Chairs" image="\Images\Office\Seating\Visitor Chairs\Stackable Visitor Chair\Stackable Visitor Chair.jpg" tags="stackable,visitor,chair">
@@ -932,12 +933,12 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
-		<furnitureType id="Workstations" name="Workstations" description="Workstations for Office" image="\Images\Office\Workstations\Office Workstations.jpg">
+		<furnitureType id="Workstations" name="Workstations" description="Workstations for Office" image="\Images\Office\Workstations\Workstations.jpg">
 			<subcategory id="Cubicle Systems" name="Cubicle Systems" description="Cubicle Systems in Workstations" image="\Images\Office\Workstations\Cubicle Systems\Cubicle Systems.jpg">
 				<product id="2-Panel Cubicle" name="2-Panel Cubicle" description="2-Panel Cubicle product for Cubicle Systems" image="\Images\Office\Workstations\Cubicle Systems\2-Panel Cubicle\2-Panel Cubicle.jpg" tags="2-panel,cubicle">
 					<images>
@@ -948,7 +949,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="3-Panel Cubicle" name="3-Panel Cubicle" description="3-Panel Cubicle product for Cubicle Systems" image="\Images\Office\Workstations\Cubicle Systems\3-Panel Cubicle\3-Panel Cubicle.jpg" tags="3-panel,cubicle">
@@ -960,7 +961,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="4-Panel Cubicle" name="4-Panel Cubicle" description="4-Panel Cubicle product for Cubicle Systems" image="\Images\Office\Workstations\Cubicle Systems\4-Panel Cubicle\4-Panel Cubicle.jpg" tags="4-panel,cubicle">
@@ -972,7 +973,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -989,7 +990,25 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
+					</specifications>
+				</product>
+				<product id="L-Shaped Executive Desk 2" name="L-Shaped Executive Desk 2" description="L-Shaped Executive Desk 2 product for Executive Desk" image="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2.jpg" tags="l-shaped,executive,desk,2">
+					<images>
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2 - Cable Managment.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Cable Managment" />
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2 - Front View.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Front View" />
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2 - Side View.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Side View" />
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2 - Storage Details.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Storage Details" />
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2 - Top View.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Top View" />
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2.jpg" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2" />
+						<image src="\Images\Office\Workstations\Executive Desk\L-Shaped Executive Desk 2\L-Shaped Executive Desk Dark Wood.jpg" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk Dark Wood" />
+					</images>
+					<specifications>
+						<spec name="Width" value="48-72&quot; (approx)" />
+						<spec name="Depth" value="24-36&quot; (approx)" />
+						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Straight Executive Desk" name="Straight Executive Desk" description="Straight Executive Desk product for Executive Desk" image="\Images\Office\Workstations\Executive Desk\Straight Executive Desk\Straight Executive Desk.jpg" tags="straight,executive,desk">
@@ -1002,7 +1021,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="U-Shaped Executive Desk" name="U-Shaped Executive Desk" description="U-Shaped Executive Desk product for Executive Desk" image="\Images\Office\Workstations\Executive Desk\U-Shaped Executive Desk\U-Shaped Executive Desk.jpg" tags="u-shaped,executive,desk">
@@ -1016,11 +1035,10 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="L-Shaped Executive Desk 2" name="L-Shaped Executive Desk 2" description="L-Shaped Executive Desk 2 in Workstations" image="\Images\Office\Workstations\L-Shaped Executive Desk 2\L-Shaped Executive Desk 2.jpg" />
 			<subcategory id="Standing Desk" name="Standing Desk" description="Standing Desk in Workstations" image="\Images\Office\Workstations\Standing Desk\Standing Desk.jpg">
 				<product id="Convertible Standing Desk" name="Convertible Standing Desk" description="Convertible Standing Desk product for Standing Desk" image="\Images\Office\Workstations\Standing Desk\Convertible Standing Desk\Convertible Standing Desk.jpg" tags="convertible,standing,desk">
 					<images>
@@ -1031,7 +1049,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1049,7 +1067,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Medium Bar Stool" name="Medium Bar Stool" description="Medium Bar Stool product for Bar Stools" image="\Images\Restaurant\Dining Area\Bar Stools\Medium Bar Stool\Medium Bar Stool.jpg" tags="medium,bar,stool">
@@ -1061,7 +1079,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Swivel Bar Stool" name="Swivel Bar Stool" description="Swivel Bar Stool product for Bar Stools" image="\Images\Restaurant\Dining Area\Bar Stools\Swivel Bar Stool\Swivel Bar Stool.jpg" tags="swivel,bar,stool">
@@ -1073,7 +1091,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1087,7 +1105,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Double Booth" name="Double Booth" description="Double Booth product for Booths" image="\Images\Restaurant\Dining Area\Booths\Double Booth\Double Booth.jpg" tags="double,booth">
@@ -1099,7 +1117,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Single Booth" name="Single Booth" description="Single Booth product for Booths" image="\Images\Restaurant\Dining Area\Booths\Single Booth\Single Booth.jpg" tags="single,booth">
@@ -1111,7 +1129,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1125,7 +1143,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Upholstered Chair" name="Upholstered Chair" description="Upholstered Chair product for Dining Chairs" image="\Images\Restaurant\Dining Area\Dining Chairs\Upholstered Chair\Upholstered Chair.jpg" tags="upholstered,chair">
@@ -1140,7 +1158,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Dining Chairs" image="\Images\Restaurant\Dining Area\Dining Chairs\Wooden Chair\Wooden Chair.jpg" tags="wooden,chair">
@@ -1153,7 +1171,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1172,7 +1190,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="4-Seater Table" name="4-Seater Table" description="4-Seater Table product for Dining Tables" image="\Images\Restaurant\Dining Area\Dining Tables\4-Seater Table\4-Seater Table.jpg" tags="4-seater,table">
@@ -1186,7 +1204,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="6-Seater Table" name="6-Seater Table" description="6-Seater Table product for Dining Tables" image="\Images\Restaurant\Dining Area\Dining Tables\6-Seater Table\6-Seater Table.jpg" tags="6-seater,table">
@@ -1204,7 +1222,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1220,7 +1238,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Outdoor Chairs" image="\Images\Restaurant\Outdoor Seating\Outdoor Chairs\Plastic Chair\Plastic Chair.jpg" tags="plastic,chair">
@@ -1233,7 +1251,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wicker Chair" name="Wicker Chair" description="Wicker Chair product for Outdoor Chairs" image="\Images\Restaurant\Outdoor Seating\Outdoor Chairs\Wicker Chair\Wicker Chair.jpg" tags="wicker,chair">
@@ -1245,7 +1263,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1259,7 +1277,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Round Patio Table" name="Round Patio Table" description="Round Patio Table product for Patio Tables" image="\Images\Restaurant\Outdoor Seating\Patio Tables\Round Patio Table\Round Patio Table.jpg" tags="round,patio,table">
@@ -1271,7 +1289,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Square Patio Table" name="Square Patio Table" description="Square Patio Table product for Patio Tables" image="\Images\Restaurant\Outdoor Seating\Patio Tables\Square Patio Table\Square Patio Table.jpg" tags="square,patio,table">
@@ -1283,13 +1301,13 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="school" name="School" description="School furniture collection" image="\Images\School\School Furnituer.jpg">
+	<place id="school" name="School" description="School furniture collection" image="\Images\School\School.jpg">
 		<furnitureType id="Classroom" name="Classroom" description="Classroom for School" image="\Images\School\Classroom\Classroom.jpg">
 			<subcategory id="Chairs" name="Chairs" description="Chairs in Classroom" image="\Images\School\Classroom\Chairs\Chairs.jpg">
 				<product id="Ergonomic Student Chair" name="Ergonomic Student Chair" description="Ergonomic Student Chair product for Chairs" image="\Images\School\Classroom\Chairs\Ergonomic Student Chair\Ergonomic Student Chair.jpg" tags="ergonomic,student,chair">
@@ -1301,7 +1319,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Chairs" image="\Images\School\Classroom\Chairs\Plastic Chair\Plastic Chair.jpg" tags="plastic,chair">
@@ -1315,7 +1333,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Chairs" image="\Images\School\Classroom\Chairs\Wooden Chair\Wooden Chair.jpg" tags="wooden,chair">
@@ -1328,7 +1346,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1342,7 +1360,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Double Desk" name="Double Desk" description="Double Desk product for Student Desks" image="\Images\School\Classroom\Student Desks\Double Desk\Double Desk.jpg" tags="double,desk">
@@ -1354,7 +1372,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Single Desk" name="Single Desk" description="Single Desk product for Student Desks" image="\Images\School\Classroom\Student Desks\Single Desk\Single Desk.jpg" tags="single,desk">
@@ -1366,7 +1384,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1380,7 +1398,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Portable Teacher Desk" name="Portable Teacher Desk" description="Portable Teacher Desk product for Teacher Desk" image="\Images\School\Classroom\Teacher Desk\Portable Teacher Desk\Portable Teacher Desk.jpg" tags="portable,teacher,desk">
@@ -1392,7 +1410,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Teacher Desk" name="Wooden Teacher Desk" description="Wooden Teacher Desk product for Teacher Desk" image="\Images\School\Classroom\Teacher Desk\Wooden Teacher Desk\Wooden Teacher Desk.jpg" tags="wooden,teacher,desk">
@@ -1404,7 +1422,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1420,7 +1438,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Short Bookshelf" name="Short Bookshelf" description="Short Bookshelf product for Bookshelves" image="\Images\School\Library\Bookshelves\Short Bookshelf\Short Bookshelf.jpg" tags="short,bookshelf">
@@ -1432,7 +1450,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Tall Bookshelf" name="Tall Bookshelf" description="Tall Bookshelf product for Bookshelves" image="\Images\School\Library\Bookshelves\Tall Bookshelf\Tall Bookshelf.jpg" tags="tall,bookshelf">
@@ -1444,7 +1462,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1458,7 +1476,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Bean Bag" name="Bean Bag" description="Bean Bag product for Reading Chairs" image="\Images\School\Library\Reading Chairs\Bean Bag\Bean Bag.jpg" tags="bean,bag">
@@ -1470,7 +1488,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Upholstered Chair" name="Upholstered Chair" description="Upholstered Chair product for Reading Chairs" image="\Images\School\Library\Reading Chairs\Upholstered Chair\Upholstered Chair.jpg" tags="upholstered,chair">
@@ -1483,7 +1501,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1497,7 +1515,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Group Study Table" name="Group Study Table" description="Group Study Table product for Study Tables" image="\Images\School\Library\Study Tables\Group Study Table\Group Study Table.jpg" tags="group,study,table">
@@ -1509,7 +1527,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Single Study Table" name="Single Study Table" description="Single Study Table product for Study Tables" image="\Images\School\Library\Study Tables\Single Study Table\Single Study Table.jpg" tags="single,study,table">
@@ -1521,7 +1539,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1539,7 +1557,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin Bunk Bed product for Bunk Beds" image="\Images\University\Dormitory\Bunk Beds\Twin Bunk Bed\Twin Bunk Bed.jpg" tags="twin,bunk,bed">
@@ -1551,7 +1569,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Twin XL Bunk Bed" name="Twin XL Bunk Bed" description="Twin XL Bunk Bed product for Bunk Beds" image="\Images\University\Dormitory\Bunk Beds\Twin XL Bunk Bed\Twin XL Bunk Bed.jpg" tags="twin,xl,bunk,bed">
@@ -1563,7 +1581,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1577,7 +1595,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Single Study Desk" name="Single Study Desk" description="Single Study Desk product for Study Desks" image="\Images\University\Dormitory\Study Desks\Single Study Desk\Single Study Desk.jpg" tags="single,study,desk">
@@ -1589,7 +1607,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wall-Mounted Study Desk" name="Wall-Mounted Study Desk" description="Wall-Mounted Study Desk product for Study Desks" image="\Images\University\Dormitory\Study Desks\Wall-Mounted Study Desk\Wall-Mounted Study Desk.jpg" tags="wall-mounted,study,desk">
@@ -1601,7 +1619,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1615,7 +1633,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="3-Door Wardrobe" name="3-Door Wardrobe" description="3-Door Wardrobe product for Wardrobes" image="\Images\University\Dormitory\Wardrobes\3-Door Wardrobe\3-Door Wardrobe.jpg" tags="3-door,wardrobe">
@@ -1627,7 +1645,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Sliding Door Wardrobe product for Wardrobes" image="\Images\University\Dormitory\Wardrobes\Sliding Door Wardrobe\Sliding Door Wardrobe.jpg" tags="sliding,door,wardrobe">
@@ -1639,7 +1657,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1655,7 +1673,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Fixed Desk" name="Fixed Desk" description="Fixed Desk product for Lecture Desks" image="\Images\University\Lecture Hall\Lecture Desks\Fixed Desk\Fixed Desk.jpg" tags="fixed,desk">
@@ -1667,7 +1685,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1681,7 +1699,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Smart Podium" name="Smart Podium" description="Smart Podium product for Podium" image="\Images\University\Lecture Hall\Podium\Smart Podium\Smart Podium.jpg" tags="smart,podium">
@@ -1693,7 +1711,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Wooden Podium" name="Wooden Podium" description="Wooden Podium product for Podium" image="\Images\University\Lecture Hall\Podium\Wooden Podium\Wooden Podium.jpg" tags="wooden,podium">
@@ -1705,7 +1723,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1719,7 +1737,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Fixed Seating" name="Fixed Seating" description="Fixed Seating product for Tiered Seating" image="\Images\University\Lecture Hall\Tiered Seating\Fixed Seating\Fixed Seating.jpg" tags="fixed,seating">
@@ -1731,7 +1749,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 				<product id="Movable Seating" name="Movable Seating" description="Movable Seating product for Tiered Seating" image="\Images\University\Lecture Hall\Tiered Seating\Movable Seating\Movable Seating.jpg" tags="movable,seating">
@@ -1743,7 +1761,7 @@
 						<spec name="Depth" value="24-36&quot; (approx)" />
 						<spec name="Height" value="30-45&quot; (approx)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Available in multiple finishes" />
+						<spec name="Finish" value="Multiple finishes available" />
 					</specifications>
 				</product>
 			</subcategory>
