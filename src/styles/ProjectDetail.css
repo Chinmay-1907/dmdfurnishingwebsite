@@ -259,7 +259,7 @@
 
 .project-info h1 {
   font-size: 3rem;
-  color: #222;
+  color: var(--color-text);
   margin: 0;
   font-weight: 300;
   position: relative;
@@ -303,7 +303,7 @@
 .project-highlights h2,
 .client-testimonial h2 {
   font-size: 2rem;
-  color: #222;
+  color: var(--color-text);
   margin-bottom: 20px;
   font-weight: 300;
   position: relative;
@@ -373,7 +373,7 @@
 }
 
 .highlight-item::before {
-  content: 'âœ“';
+  content: "\2713";
   position: absolute;
   left: 0;
   color: #d4af37;
@@ -438,7 +438,7 @@
 }
 
 .back-to-projects-button::before {
-  content: 'â†';
+  content: "\2190";
   margin-right: 8px;
   font-size: 1.2rem;
   transition: transform 0.3s ease;

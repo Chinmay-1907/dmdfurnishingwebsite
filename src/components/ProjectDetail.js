@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProjectDetail.css';
-import projectData from '../data/projects';
+import { loadProjectById } from '../data/projects';
 
 // This component displays detailed information about a specific project
 // It shows multiple images from different angles in a scrollable container,
@@ -11,23 +11,64 @@ function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const heroRef = useRef(null);
   const heroTitleRef = useRef(null);
   const projectContentRef = useRef(null);
-  
+
   useEffect(() => {
-    // Find the project based on the URL parameter
-    const foundProject = projectData.find(proj => proj.id === projectId);
-    
-    if (foundProject) {
-      setProject(foundProject);
+    let isActive = true;
+
+    setLoading(true);
+    setError(null);
+    setProject(null);
+
+    loadProjectById(projectId)
+      .then((data) => {
+        if (!isActive) {
+          return;
+        }
+
+        if (!data) {
+          setError('Project not found.');
+          setProject(null);
+        } else {
+          setProject(data);
+        }
+      })
+      .catch((err) => {
+        if (!isActive) {
+          return;
+        }
+        setError(err.message || 'Unable to load project details.');
+      })
+      .finally(() => {
+        if (isActive) {
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [projectId]);
+
+  useEffect(() => {
+    if (!project) {
+      return undefined;
     }
-    
-    // Add scroll animation effect
+
+    if (projectContentRef.current) {
+      projectContentRef.current.style.opacity = '0';
+      projectContentRef.current.style.transform = 'translateY(30px)';
+    }
+
     const handleScroll = () => {
-      if (heroTitleRef.current && projectContentRef.current) {
+      if (heroTitleRef.current && projectContentRef.current && heroRef.current) {
         const scrollPosition = window.scrollY;
-        const heroHeight = document.querySelector('.project-hero').offsetHeight;
-        
+        const heroHeight = heroRef.current.offsetHeight || 0;
+
         // Animate hero title on scroll
         if (scrollPosition < heroHeight) {
           const translateY = scrollPosition * 0.5;
@@ -35,7 +76,7 @@ function ProjectDetail() {
           heroTitleRef.current.style.transform = `translateY(${translateY}px)`;
           heroTitleRef.current.style.opacity = Math.max(opacity, 0);
         }
-        
+
         // Fade in content on scroll
         if (scrollPosition > heroHeight * 0.3) {
           projectContentRef.current.style.opacity = '1';
@@ -43,17 +84,23 @@ function ProjectDetail() {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [projectId]);
+  }, [project]);
 
   // Navigate back function
   const handleBack = () => {
-    navigate(-1);
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/projects');
+    }
   };
 
-  if (!project) {
+  if (loading) {
     return (
       <div className="project-detail-container">
         <div className="loading">Loading project details...</div>
@@ -61,10 +108,31 @@ function ProjectDetail() {
     );
   }
 
+  if (error) {
+    return (
+      <div className="project-detail-container">
+        <div className="loading">{error}</div>
+        <div className="back-to-projects-container">
+          <button className="back-to-projects-button" onClick={handleBack}>
+            Back
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!project) {
+    return null;
+  }
+
   return (
     <div className="project-detail-container">
       {/* Full-width hero section with background image */}
-      <div className="project-hero" style={{backgroundImage: `url(${project.mainImage})`}}>
+      <div
+        className="project-hero"
+        ref={heroRef}
+        style={project.mainImage ? { backgroundImage: `url(${project.mainImage})` } : undefined}
+      >
         <div className="hero-overlay">
           <h1 className="hero-title" ref={heroTitleRef}>{project.name}</h1>
         </div>
@@ -116,7 +184,7 @@ function ProjectDetail() {
             <blockquote>
               <p>"{project.clientTestimonial}"</p>
               <footer>
-                <cite>— {project.clientName}, {project.clientPosition}</cite>
+                <cite>- {project.clientName}, {project.clientPosition}</cite>
               </footer>
             </blockquote>
           </div>
@@ -125,10 +193,10 @@ function ProjectDetail() {
           <div className="project-gallery">
             <h2 className="gallery-title">Project Gallery</h2>
             <div className="gallery-container">
-              {project.images.map((image) => (
+              {(project.images || []).map((image) => (
                 <div key={image.id} className="gallery-item">
-                  <img src={image.url} alt={image.alt} className="gallery-image" />
-                  <p className="image-caption">{image.alt}</p>
+                  <img src={image.url} alt={image.alt || project.name} className="gallery-image" />
+                  <p className="image-caption">{image.alt || project.name}</p>
                 </div>
               ))}
             </div>

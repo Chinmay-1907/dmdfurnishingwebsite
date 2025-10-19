@@ -113,6 +113,20 @@
   color: white;
 }
 
+.project-loading,
+.project-error,
+.project-empty {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.project-error {
+  color: var(--color-text);
+}
+
 .project-categories {
   padding: 60px 20px;
   background-color: var(--color-surface);

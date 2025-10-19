@@ -1,30 +1,72 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
 import styles from '../styles/AboutUs.module.css';
+import { loadProjectsData } from '../data/projects';
 
 function Projects() {
   const navigate = useNavigate();
   const heroRef = useRef(null);
+  const projectGridRef = useRef(null);
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Add scroll animation effect
   useEffect(() => {
-    const handleScroll = () => {
-      const projectGrid = document.querySelector('.project-grid');
-      if (projectGrid && heroRef.current) {
-        const scrollPosition = window.scrollY;
-        const heroHeight = heroRef.current.offsetHeight;
-        
-        if (scrollPosition > heroHeight * 0.5) {
-          projectGrid.style.opacity = '1';
-          projectGrid.style.transform = 'translateY(0)';
+    let isMounted = true;
+
+    setLoading(true);
+    setError(null);
+
+    loadProjectsData()
+      .then((data) => {
+        if (isMounted) {
+          setProjects(data);
         }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          setError(err.message || 'Unable to load projects.');
+        }
+      })
+      .finally(() => {
+        if (isMounted) {
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    const gridEl = projectGridRef.current;
+    if (!gridEl) {
+      return undefined;
+    }
+
+    const handleScroll = () => {
+      if (!heroRef.current) {
+        return;
+      }
+      const scrollPosition = window.scrollY;
+      const heroHeight = heroRef.current.offsetHeight || 0;
+      if (scrollPosition > heroHeight * 0.5) {
+        gridEl.style.opacity = '1';
+        gridEl.style.transform = 'translateY(0)';
       }
     };
-    
+
+    gridEl.style.opacity = '0';
+    gridEl.style.transform = 'translateY(30px)';
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [projects]);
+
   return (
     <div className="projects-container">
        <section ref={heroRef} className={styles.heroSection} style={{
@@ -40,85 +82,50 @@ function Projects() {
         </div>
       </section>
 
-      <div className="project-grid">
-        <div className="project-card">
-          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
-          <div className="card-content">
-            <h3>Quality Inn - Gainesville, FL</h3>
-            <p className="project-location">Hospitality</p>
-            <p className="project-description">
-              Complete furnishing solution for a hotel renovation, including guest rooms, 
-              lobby, and dining areas with custom-designed furniture pieces.
-            </p>
-            <button className="view-project" onClick={() => navigate('/projects/quality-inn-gainesville')}>View Project Details</button>
-          </div>
+      {error && (
+        <div className="project-error">
+          <p>{error}</p>
         </div>
+      )}
 
-        <div className="project-card">
-          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1560448204-61dc36dc98c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
-          <div className="card-content">
-            <h3>Towne Lyne Motel - Ogunquit, ME</h3>
-            <p className="project-location">Hospitality</p>
-            <p className="project-description">
-              Custom-designed furniture for a boutique motel, featuring coastal-inspired 
-              pieces that blend comfort with local aesthetic elements.
-            </p>
-            <button className="view-project" onClick={() => navigate('/projects/towne-lyne-motel-ogunquit')}>View Project Details</button>
-          </div>
+      {loading && (
+        <div className="project-loading">
+          <p>Loading projects...</p>
         </div>
+      )}
 
-        <div className="project-card">
-          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
-          <div className="card-content">
-            <h3>Marriott Courtyard - Boston, MA</h3>
-            <p className="project-location">Hospitality</p>
-            <p className="project-description">
-              Complete furnishing package for guest rooms and common areas, 
-              featuring custom-designed pieces that reflect the brand's identity and local culture.
-            </p>
-            <button className="view-project" onClick={() => navigate('/projects/marriott-courtyard-boston')}>View Project Details</button>
-          </div>
+      {!loading && !error && (
+        <div className="project-grid" ref={projectGridRef}>
+          {projects.map((project) => (
+            <div key={project.id} className="project-card">
+              <div
+                className="card-image"
+                style={{
+                  backgroundImage: project.mainImage ? `url('${project.mainImage}')` : undefined
+                }}
+                aria-label={project.mainImageAlt || project.name}
+              ></div>
+              <div className="card-content">
+                <h3>{project.name}</h3>
+                <p className="project-location">{project.category}</p>
+                <p className="project-description">{project.shortDescription}</p>
+                <button
+                  className="view-project"
+                  onClick={() => navigate(`/projects/${project.id}`)}
+                >
+                  View Project Details
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
+      )}
 
-        <div className="project-card">
-          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
-          <div className="card-content">
-            <h3>Hampton Inn - Portland, OR</h3>
-            <p className="project-location">Hospitality</p>
-            <p className="project-description">
-              Comprehensive furniture solution for a hotel renovation, including custom beds, 
-              seating, and case goods designed for durability and style.
-            </p>
-            <button className="view-project" onClick={() => navigate('/projects/hampton-inn-portland')}>View Project Details</button>
-          </div>
+      {!loading && !error && projects.length === 0 && (
+        <div className="project-empty">
+          <p>No projects available right now. Please check back soon.</p>
         </div>
-
-        <div className="project-card">
-          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
-          <div className="card-content">
-            <h3>Hilton Garden Inn - Miami, FL</h3>
-            <p className="project-location">Hospitality</p>
-            <p className="project-description">
-              Modern furnishing package for a newly constructed hotel, featuring contemporary designs 
-              that complement the vibrant Miami atmosphere.
-            </p>
-            <button className="view-project" onClick={() => navigate('/projects/hilton-garden-inn-miami')}>View Project Details</button>
-          </div>
-        </div>
-
-        <div className="project-card">
-          <div className="card-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1540304453527-62f979142a17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}></div>
-          <div className="card-content">
-            <h3>Ocean View Resort - San Diego, CA</h3>
-            <p className="project-location">Hospitality</p>
-            <p className="project-description">
-              Luxury furnishing solution for a beachfront resort, featuring custom pieces 
-              designed to withstand coastal conditions while providing exceptional comfort.
-            </p>
-            <button className="view-project" onClick={() => navigate('/projects/ocean-view-resort-san-diego')}>View Project Details</button>
-          </div>
-        </div>
-      </div>
+      )}
 
       <section className="project-categories">
         <h2>Browse Projects by Category</h2>

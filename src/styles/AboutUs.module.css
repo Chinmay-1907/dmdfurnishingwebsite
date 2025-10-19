@@ -34,6 +34,7 @@
   font-weight: 300;
   margin-bottom: 1rem;
   letter-spacing: 2px;
+  color: #ffffff;
   animation: fadeInDown 1.2s ease-out;
 }
 
@@ -42,6 +43,7 @@
   font-weight: 300;
   margin-bottom: 2rem;
   opacity: 0.9;
+  color: #ffffff;
   animation: fadeInUp 1.2s ease-out;
 }
 
@@ -134,20 +136,22 @@
 
 .primaryButton {
   background-color: var(--color-surface-elevated);
-  color: rgb(0, 0, 0);
-  border: 2px solid #000;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
 }
 
 .primaryButton:hover {
   background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-surface-inverse);
+  border-color: var(--color-surface-inverse);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .secondaryButton {
   background-color: transparent;
-  color: #000;
-  border: 2px solid #000;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
 }
 
 .secondaryButton:hover {

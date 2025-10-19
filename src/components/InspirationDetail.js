@@ -172,7 +172,7 @@ function InspirationDetail() {
 
         <div className="inspiration-detail-nav" data-aos="fade-up">
           <Link to="/inspirations" className="back-button">
-            ← Back to Inspirations
+            &larr; Back to Inspirations
           </Link>
         </div>
       </div>
@@ -181,3 +181,4 @@ function InspirationDetail() {
 }
 
 export default InspirationDetail;
+
