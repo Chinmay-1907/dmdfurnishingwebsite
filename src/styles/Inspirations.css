@@ -1,4 +1,4 @@
-﻿/* Inspirations Page Styles */
+/* Inspirations Page Styles */
 
 .inspirations-container {
   max-width: 100%;
@@ -116,15 +116,19 @@
   border-bottom: 1px solid #eee;
   color: var(--color-text-secondary);
   position: relative;
-  padding-left: 25px;
+  padding-left: 28px;
 }
 
 .inspiration-list li::before {
-  content: 'âœ“';
+  content: '';
   position: absolute;
+  top: 50%;
   left: 0;
-  color: #d4af37;
-  font-weight: bold;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d4af37;
+  transform: translateY(-50%);
 }
 
 .inspiration-gallery-grid {
@@ -397,3 +401,4 @@
     font-size: 0.9rem;
   }
 }
+
