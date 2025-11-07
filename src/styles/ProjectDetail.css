@@ -40,7 +40,7 @@
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   max-width: 1400px;
-  margin: -80px auto 0;
+  margin: -60px auto 0;
   position: relative;
   z-index: 10;
   background-color: var(--color-surface-elevated);
@@ -51,14 +51,14 @@
 }
 
 .project-hero {
-  height: 100vh;
+  height: clamp(650px, 70vh, 720px);
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: var(--color-surface-inverse);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .hero-overlay {
@@ -73,8 +73,8 @@
   justify-content: center;
 }
 
-.hero-title {
-  font-size: 5rem;
+.hero-title { 
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   color: white;
   text-align: center;
   font-weight: 200;
@@ -205,7 +205,7 @@
   
   .project-detail-content {
     padding: 30px 25px;
-    margin-top: -60px;
+    margin-top: -40px;
     gap: 40px;
   }
   
@@ -237,7 +237,7 @@
   
   .project-detail-content {
     padding: 25px 20px;
-    margin-top: -50px;
+    margin-top: -30px;
   }
   
   .specifications-grid {
