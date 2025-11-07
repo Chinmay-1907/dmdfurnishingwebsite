@@ -39,7 +39,50 @@ const processSteps = [
   }
 ];
 
-const servicePhases = ['Design consultation', 'Manufacturing', 'Delivery', 'Installation'];
+const servicePhases = [
+  {
+    name: 'Design Consultation',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1.618a1 1 0 0 1 .555.168l7.25 4.532a1 1 0 0 1 .445.832v8.7a1 1 0 0 1-.445.832l-7.25 4.532a1 1 0 0 1-1.11 0l-7.25-4.532A1 1 0 0 1 4 15.85V7.15a1 1 0 0 1 .445-.832l7.25-4.532A1 1 0 0 1 12 1.618z" />
+        <path d="M12 22.382V12" />
+        <path d="m19.45 6.15-7.45-4.532-7.45 4.532" />
+        <path d="m4.55 17.85 7.45 4.532 7.45-4.532" />
+        <path d="M9 12v3" />
+        <path d="M15 12v3" />
+      </svg>
+    )
+  },
+  {
+    name: 'Manufacturing',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 12V6.5a2.5 2.5 0 0 0-5 0V12h5z" />
+        <path d="M4 12v-2a4 4 0 0 1 8 0v2h8" />
+        <path d="M18 12v5.5a2.5 2.5 0 0 1-5 0V12h5z" />
+        <path d="M6 12v2a4 4 0 0 0 8 0v-2H6z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Delivery',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+        <path d="M15 12H9" />
+        <path d="m12 9 3 3-3 3" />
+      </svg>
+    )
+  },
+  {
+    name: 'Installation',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+      </svg>
+    )
+  }
+];
 const industries = ['Hospitality', 'Corporate', 'Commercial'];
 
 function Services() {
@@ -83,9 +126,9 @@ function Services() {
 
           <div className="overview-highlights" aria-label="Service phases">
             {servicePhases.map((phase) => (
-              <div key={phase} className="overview-highlight">
-                <span className="highlight-dot" />
-                <p>{phase}</p>
+              <div key={phase.name} className="overview-highlight">
+                <div className="highlight-icon">{phase.icon}</div>
+                <p>{phase.name}</p>
               </div>
             ))}
           </div>
@@ -95,19 +138,23 @@ function Services() {
       <section id="our-process" className="process-section">
         <div className="process-header">
           <p className="section-eyebrow">Our Process</p>
-          <h2>Our Process</h2>
+          <h2>A Journey from Concept to Creation</h2>
           <p>
-            From design consultation to manufacturing, delivery, and installation, we handle every aspect of your project while ensuring your complete satisfaction.
+            We follow a meticulously planned process to ensure every project is a seamless success. From the initial spark of an idea to the final installation, we're with you every step of the way.
           </p>
         </div>
 
-        <div className="process-grid">
-          {processSteps.map((step) => (
-            <article key={step.title} className="process-card">
-              <span className="process-number">{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
+        <div className="process-stepper">
+          {processSteps.map((step, index) => (
+            <div key={step.number} className="step">
+              <div className="step-number">
+                <span>{step.number}</span>
+              </div>
+              <div className="step-content">
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
