@@ -1,70 +1,127 @@
 import React from 'react';
 import '../styles/Services.css';
-import styles from '../styles/AboutUs.module.css';
+
+const processSteps = [
+  {
+    number: '01',
+    title: 'Initial Consultation',
+    description:
+      'We begin with a detailed discussion to understand your vision, requirements, and budget. Our experts will guide you through options and possibilities.'
+  },
+  {
+    number: '02',
+    title: 'Design',
+    description:
+      'Our designers create custom concepts tailored to your needs, providing detailed renderings and material samples for your approval.'
+  },
+  {
+    number: '03',
+    title: 'Manufacture',
+    description:
+      'Once designs are approved, our skilled craftsmen begin production using premium materials and meticulous attention to detail.'
+  },
+  {
+    number: '04',
+    title: 'Shipping',
+    description:
+      'We carefully package and ship your furniture, coordinating logistics to ensure safe and timely delivery to your location.'
+  },
+  {
+    number: '05',
+    title: 'Installation',
+    description:
+      'Our professional team handles the installation process, ensuring everything is perfectly placed and assembled according to plan.'
+  },
+  {
+    number: '06',
+    title: 'Follow-up',
+    description: 'Ensuring your complete satisfaction'
+  }
+];
+
+const servicePhases = ['Design consultation', 'Manufacturing', 'Delivery', 'Installation'];
+const industries = ['Hospitality', 'Corporate', 'Commercial'];
 
 function Services() {
   return (
     <div className="services-container">
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1577140917170-285929fb55b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Our Services</h1>
-          <p className={styles.heroSubtitle}>Comprehensive furniture solutions for your business</p>
+      <section className="services-hero">
+        <div className="services-hero-inner">
+          <span className="hero-tag">Furniture Solutions</span>
+          <h1>Our Services</h1>
+          <p>Comprehensive furniture solutions for your business</p>
+
+          <div className="hero-actions">
+            <button className="hero-action-primary">Get in Touch</button>
+            <a href="#our-process" className="hero-action-secondary">
+              See Our Process
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="services-overview">
-        <h2>How We Can Help You</h2>
-        <p>
-          DMD Furnishing offers end-to-end furniture solutions for hospitality, corporate, and commercial spaces.
-          From design consultation to manufacturing, delivery, and installation, we handle every aspect of your project.
-        </p>
+      <section className="services-overview" aria-labelledby="services-overview-title">
+        <div className="overview-layout">
+          <div className="overview-copy">
+            <p className="section-eyebrow">How We Can Help You</p>
+            <h2 id="services-overview-title">DMD Furnishing offers end-to-end furniture solutions</h2>
+            <p>
+              DMD Furnishing offers end-to-end furniture solutions for hospitality, corporate, and commercial spaces.
+            </p>
+            <p>
+              From design consultation to manufacturing, delivery, and installation, we handle every aspect of your project.
+            </p>
+
+            <div className="industry-pills" aria-label="Industries served">
+              {industries.map((industry) => (
+                <span key={industry} className="industry-pill">
+                  {industry}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="overview-highlights" aria-label="Service phases">
+            {servicePhases.map((phase) => (
+              <div key={phase} className="overview-highlight">
+                <span className="highlight-dot" />
+                <p>{phase}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <section className="process-section">
-        <h2>Our Process</h2>
-        <div className="process-steps">
-          <div className="process-step">
-            <div className="step-number">1</div>
-            <h3>Initial Consultation</h3>
-            <p>We begin with a detailed discussion to understand your vision, requirements, and budget. Our experts will guide you through options and possibilities.</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">2</div>
-            <h3>Design</h3>
-            <p>Our designers create custom concepts tailored to your needs, providing detailed renderings and material samples for your approval.</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">3</div>
-            <h3>Manufacture</h3>
-            <p>Once designs are approved, our skilled craftsmen begin production using premium materials and meticulous attention to detail.</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">4</div>
-            <h3>Shipping</h3>
-            <p>We carefully package and ship your furniture, coordinating logistics to ensure safe and timely delivery to your location.</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">5</div>
-            <h3>Installation</h3>
-            <p>Our professional team handles the installation process, ensuring everything is perfectly placed and assembled according to plan.</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">6</div>
-            <h3>Follow-up</h3>
-            <p>Ensuring your complete satisfaction</p>
-          </div>
+      <section id="our-process" className="process-section">
+        <div className="process-header">
+          <p className="section-eyebrow">Our Process</p>
+          <h2>Our Process</h2>
+          <p>
+            From design consultation to manufacturing, delivery, and installation, we handle every aspect of your project while ensuring your complete satisfaction.
+          </p>
+        </div>
+
+        <div className="process-grid">
+          {processSteps.map((step) => (
+            <article key={step.title} className="process-card">
+              <span className="process-number">{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="service-cta">
+        <p className="section-eyebrow">Get Started</p>
         <h2>Ready to Transform Your Space?</h2>
         <p>Contact us today to discuss your furniture needs and schedule a consultation.</p>
-        <button className="cta-button">Get in Touch</button>
+        <div className="cta-actions">
+          <button className="cta-button">Get in Touch</button>
+          <a className="cta-link" href="#our-process">
+            Review Our Process
+          </a>
+        </div>
       </section>
     </div>
   );
