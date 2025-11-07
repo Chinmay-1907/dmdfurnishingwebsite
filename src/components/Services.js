@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Services.css';
 import styles from '../styles/AboutUs.module.css';
 
 function Services() {
+  const navigate = useNavigate();
+  
+  const handleGetInTouch = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="services-container">
       <section className={styles.heroSection} style={{
@@ -64,7 +71,7 @@ function Services() {
       <section className="service-cta">
         <h2>Ready to Transform Your Space?</h2>
         <p>Contact us today to discuss your furniture needs and schedule a consultation.</p>
-        <button className="cta-button">Get in Touch</button>
+        <button className="cta-button" onClick={handleGetInTouch}>Get in Touch</button>
       </section>
     </div>
   );

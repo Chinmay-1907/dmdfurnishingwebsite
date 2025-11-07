@@ -134,17 +134,15 @@
   color: var(--color-text-muted);
 }
 
-.breadcrumb button {
-  border: none;
-  background: none;
+.breadcrumb a {
   color: var(--color-text);
-  font: inherit;
+  text-decoration: none;
   cursor: pointer;
   position: relative;
   padding-bottom: 2px;
 }
 
-.breadcrumb button::after {
+.breadcrumb a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -157,8 +155,8 @@
   transition: transform var(--transition-fast);
 }
 
-.breadcrumb button:hover::after,
-.breadcrumb button:focus-visible::after {
+.breadcrumb a:hover::after,
+.breadcrumb a:focus-visible::after {
   transform: scaleX(1);
 }
 

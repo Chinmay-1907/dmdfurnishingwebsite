@@ -1,4 +1,4 @@
-﻿/* AboutUs.module.css */
+/* AboutUs.module.css */
 
 /* Hero section styling */
 .heroSection {
@@ -11,6 +11,15 @@
   color: white;
   text-align: center;
   overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional spacer to nudge first content section downward */
+.sectionTopSpacer {
+  margin-top: 2rem;
 }
 
 .heroSection::before {
@@ -27,6 +36,12 @@
 .heroContent {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .heroTitle {
@@ -36,6 +51,12 @@
   letter-spacing: 2px;
   color: #ffffff;
   animation: fadeInDown 1.2s ease-out;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  max-width: none;
+  min-width: max-content;
 }
 
 .heroSubtitle {
@@ -90,7 +111,8 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+  max-width: 75ch;
 }
 
 /* List styling */
@@ -214,6 +236,11 @@
 @media (max-width: 768px) {
   .heroTitle {
     font-size: 3rem;
+    white-space: nowrap;
+    text-align: center;
+    width: auto;
+    max-width: none;
+    min-width: max-content;
   }
   
   .heroSubtitle {
@@ -226,16 +253,25 @@
   
   .paragraph {
     font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
   }
   
   .listItem {
     font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .heroTitle {
     font-size: 2.5rem;
+    white-space: nowrap;
+    text-align: center;
+    width: auto;
+    max-width: none;
+    min-width: max-content;
   }
   
   .heroSubtitle {
@@ -244,6 +280,18 @@
   
   .sectionTitle {
     font-size: 1.8rem;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .listItem {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
   }
   
   .button {

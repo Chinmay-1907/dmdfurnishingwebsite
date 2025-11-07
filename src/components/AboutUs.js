@@ -2,11 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming React Router is used for navigation
 import styles from '../styles/AboutUs.module.css';
 
+// Move the header image URL into the component so it's controlled here
+const HERO_IMAGE_URL = '/images/About_DMD_Furnishing_Page.jpg';
+
 const AboutUs = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className={styles.heroSection}>
+      <section
+        className={styles.heroSection}
+        style={{
+          background:
+            `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('${HERO_IMAGE_URL}')`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>About DMD Furnishing</h1>
           <p className={styles.heroSubtitle}>Crafted for Those Who Live Design</p>
@@ -18,7 +30,7 @@ const AboutUs = () => {
         <div className={`${styles.decorativePattern} ${styles.patternTopRight}`}></div>
         
         {/* Company Section */}
-        <section className={`${styles.section} ${styles.sectionLight}`}>
+        <section className={`${styles.section} ${styles.sectionLight} ${styles.sectionTopSpacer}`}>
           <div className={styles.sectionContent}>
             <h2 className={styles.sectionTitle}>Company</h2>
             <p className={styles.paragraph}>

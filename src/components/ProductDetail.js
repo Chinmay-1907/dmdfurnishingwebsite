@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import '../styles/ProductDetail.css';
-import { normalizeCatalogImagePath } from '../utils/catalogPaths';
+import { normalizeCatalogImagePath, idsMatch, toCatalogSlug } from '../utils/catalogPaths';
 
 function ProductDetail() {
   const { institutionId, furnitureTypeId, subcategoryId, productId } = useParams();
@@ -16,12 +16,20 @@ function ProductDetail() {
   const thumbRefs = useRef([]);
   
   useEffect(() => {
+    // If any segment is missing, do not run product-detail fetch/redirect logic
+    if (!institutionId || !furnitureTypeId || !subcategoryId || !productId) {
+      return;
+    }
+
+    let isActive = true;
+    const controller = new AbortController();
+
     const fetchProductDetail = async () => {
       try {
         console.log(`[ProductDetail] Fetching details for: ${institutionId}/${furnitureTypeId}/${subcategoryId}/${productId}`);
         
         // Fetch XML catalog
-        const response = await fetch('/DMD_Website.xml');
+        const response = await fetch('/DMD_Website.xml', { signal: controller.signal });
         console.log('[ProductDetail] Fetch URL:', response.url, 'Status:', response.status);
         
         if (!response.ok) {
@@ -49,7 +57,7 @@ function ProductDetail() {
         // Find place (institution)
         let foundPlace = null;
         for (const place of places) {
-          if (place.getAttribute('id') === institutionId) {
+          if (idsMatch(place.getAttribute('id'), institutionId)) {
             foundPlace = place;
             break;
           }
@@ -65,7 +73,7 @@ function ProductDetail() {
         const furnitureTypes = foundPlace.querySelectorAll('furnitureType');
         let foundFurnitureType = null;
         for (const furnitureType of furnitureTypes) {
-          if (furnitureType.getAttribute('id') === furnitureTypeId) {
+          if (idsMatch(furnitureType.getAttribute('id'), furnitureTypeId)) {
             foundFurnitureType = furnitureType;
             break;
           }
@@ -81,7 +89,7 @@ function ProductDetail() {
         const subcategories = foundFurnitureType.querySelectorAll('subcategory');
         let foundSubcategory = null;
         for (const subcategory of subcategories) {
-          if (subcategory.getAttribute('id') === subcategoryId) {
+          if (idsMatch(subcategory.getAttribute('id'), subcategoryId)) {
             foundSubcategory = subcategory;
             break;
           }
@@ -97,7 +105,7 @@ function ProductDetail() {
         const products = foundSubcategory.querySelectorAll('product');
         let foundProduct = null;
         for (const product of products) {
-          if (product.getAttribute('id') === productId) {
+          if (idsMatch(product.getAttribute('id'), productId)) {
             foundProduct = product;
             break;
           }
@@ -181,17 +189,44 @@ function ProductDetail() {
         
         console.log('[ProductDetail] Loaded', detailObj);
         
+        // Normalize URL to canonical slug path to avoid casing/spacing mismatches
+        const canonicalInstitution = toCatalogSlug(detailObj.institution.id);
+        const canonicalFurniture = toCatalogSlug(detailObj.furnitureType.id);
+        const canonicalSubcategory = toCatalogSlug(detailObj.subcategory.id);
+        const canonicalProduct = toCatalogSlug(detailObj.product.id);
+        const currentInstitution = toCatalogSlug(institutionId || '');
+        const currentFurniture = toCatalogSlug(furnitureTypeId || '');
+        const currentSubcategory = toCatalogSlug(subcategoryId || '');
+        const currentProduct = toCatalogSlug(productId || '');
+        const needsRedirect = (
+          canonicalInstitution !== currentInstitution ||
+          canonicalFurniture !== currentFurniture ||
+          canonicalSubcategory !== currentSubcategory ||
+          canonicalProduct !== currentProduct
+        );
+        if (needsRedirect) {
+          navigate(`/products/${canonicalInstitution}/${canonicalFurniture}/${canonicalSubcategory}/${canonicalProduct}`, { replace: true });
+        }
+        
+        if (!isActive) return;
         setDetail(detailObj);
         setLoading(false);
         
       } catch (e) {
         console.error('[ProductDetail] Error', e);
-        setError(e.message || 'Unknown error');
-        setLoading(false);
+        if (!isActive) return;
+        if (e.name !== 'AbortError') {
+          setError(e.message || 'Unknown error');
+          setLoading(false);
+        }
       }
     };
     
     fetchProductDetail();
+    return () => {
+      isActive = false;
+      controller.abort();
+    };
   }, [institutionId, furnitureTypeId, subcategoryId, productId]);
 
   // Reset active image when navigating to a new product
@@ -263,13 +298,13 @@ function ProductDetail() {
     <div className="product-detail-container">
       {/* Breadcrumb */}
       <div className="breadcrumb">
-        <button onClick={() => navigate('/products')}>All Spaces</button>
+        <Link to="/products">All Spaces</Link>
         <span> &gt; </span>
-        <button onClick={() => navigate(`/products/${detail.institution.id}`)}>{detail.institution.name}</button>
+        <Link to={`/products/${toCatalogSlug(detail.institution.id)}`}>{detail.institution.name}</Link>
         <span> &gt; </span>
-        <button onClick={() => navigate(`/products/${detail.institution.id}/${detail.furnitureType.id}`)}>{detail.furnitureType.name}</button>
+        <Link to={`/products/${toCatalogSlug(detail.institution.id)}/${toCatalogSlug(detail.furnitureType.id)}`}>{detail.furnitureType.name}</Link>
         <span> &gt; </span>
-        <button onClick={() => navigate(`/products/${detail.institution.id}/${detail.furnitureType.id}/${detail.subcategory.id}`)}>{detail.subcategory.name}</button>
+        <Link to={`/products/${toCatalogSlug(detail.institution.id)}/${toCatalogSlug(detail.furnitureType.id)}/${toCatalogSlug(detail.subcategory.id)}`}>{detail.subcategory.name}</Link>
         <span> &gt; </span>
         <span>{detail.product.name}</span>
       </div>

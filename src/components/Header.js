@@ -64,7 +64,7 @@ function Header({ theme = 'light', onToggleTheme }) {
             <li className="nav-contact">
               <Link to="/contact" onClick={closeMenu}>
                 <span className="nav-contact-label">Contact</span>
-                <span className="nav-contact-meta">(617) 223-7781</span>
+                <span className="nav-contact-meta">+1 (617) 223-7781</span>
               </Link>
             </li>
           </ul>

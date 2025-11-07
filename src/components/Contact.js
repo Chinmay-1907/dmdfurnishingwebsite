@@ -8,10 +8,11 @@ function Contact() {
   return (
     <div className="contact-container">
       <section className={styles.heroSection} style={{
-        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("/Images/Contact_Page.jpg")',
+		backgroundSize: 'cover',
+		backgroundPosition: 'bottom center',
+		backgroundRepeat: 'no-repeat',
+		backgroundAttachment: 'fixed'
       }}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Contact Us</h1>
@@ -55,7 +56,7 @@ function Contact() {
               <FaClock />
             </div>
             <div className="info-text">
-              <h3>Hours</h3>
+              <h3>Showroom Hours (By Appointment Only)</h3>
               <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
               <p>Saturday: 10:00 AM - 4:00 PM</p>
               <p>Sunday: Closed</p>
@@ -108,7 +109,7 @@ function Contact() {
             <div className="placeholder-content">
               <FaMapMarkerAlt className="placeholder-icon" />
               <p>5 Leonard Street, Foxborough, MA, USA</p>
-              <p className="placeholder-note">Visit us during business hours to explore our showroom</p>
+              <p className="placeholder-note">Showroom visits are available by appointment only—call to arrange a personalized viewing and experience our craftsmanship firsthand.</p>
             </div>
           </div>
         </div>

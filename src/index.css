@@ -21,8 +21,8 @@
   --color-gold-soft: rgba(201, 162, 95, 0.22);
   --color-magenta: #a42963;
 
-  --header-height: 96px;
-  --header-height-compact: 78px;
+  --header-height: 140px;
+  --header-height-compact: 120px;
 
   --shadow-soft: 0 24px 50px rgba(28, 31, 37, 0.08);
   --shadow-lift: 0 18px 35px rgba(28, 31, 37, 0.14);

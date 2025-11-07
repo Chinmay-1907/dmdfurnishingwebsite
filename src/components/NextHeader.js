@@ -24,7 +24,9 @@ function NextHeader() {
           <a href="tel:+16172237781">+1 (617) 223-7781</a>
         </div>
         <div className="nav-cta">
-          <button className="consultation-button">Book Consultation</button>
+          <Link href="/contact">
+            <button className="consultation-button">Book Consultation</button>
+          </Link>
         </div>
       </div>
     </header>

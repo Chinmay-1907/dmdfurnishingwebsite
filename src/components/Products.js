@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import '../styles/Products.css';
-import styles from '../styles/AboutUs.module.css';
-import { normalizeCatalogImagePath } from '../utils/catalogPaths';
+import { normalizeCatalogImagePath, toCatalogSlug, idsMatch } from '../utils/catalogPaths';
 
 function Products() {
+  const CUSTOM_FURNITURE_IMAGE_URL = '/Images/Tailored_Guestroom_Collections.jpg';
+  // Get URL parameters and navigation
+  const { institutionId, furnitureTypeId, subcategoryId } = useParams();
+  const navigate = useNavigate();
+  
   // State for tracking catalog and UI
   const [catalog, setCatalog] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -162,22 +166,115 @@ function Products() {
     }
   }, [catalog, selectedPlaceIndex, selectedFurnitureTypeIndex, selectedSubcategoryIndex]);
 
+  // Effect to handle URL-based navigation after catalog loads
+  useEffect(() => {
+    if (catalog.length === 0) return;
+
+    // No institution in URL => reset to All Spaces
+    if (!institutionId) {
+      setSelectedPlaceIndex(null);
+      setSelectedFurnitureTypeIndex(null);
+      setSelectedSubcategoryIndex(null);
+      return;
+    }
+    
+    // Find the place by institutionId
+    const placeIndex = catalog.findIndex(place => idsMatch(place.id, institutionId));
+    if (placeIndex === -1) return;
+    
+    setSelectedPlaceIndex(placeIndex);
+    
+    // If only institution in URL, clear deeper selections and normalize its slug
+    if (!furnitureTypeId) {
+      const place = catalog[placeIndex];
+      setSelectedFurnitureTypeIndex(null);
+      setSelectedSubcategoryIndex(null);
+      const canonicalInstitution = toCatalogSlug(place.id);
+      const currentInstitution = toCatalogSlug(institutionId || '');
+      if (canonicalInstitution !== currentInstitution) {
+        navigate(`/products/${canonicalInstitution}`, { replace: true });
+      }
+      return;
+    }
+    
+    // Find the furniture type by furnitureTypeId
+    const place = catalog[placeIndex];
+    const furnitureTypeIndex = place.furnitureTypes.findIndex(
+      (ft) => idsMatch(ft.id, furnitureTypeId) || idsMatch(ft.name, furnitureTypeId)
+    );
+    if (furnitureTypeIndex === -1) {
+      setSelectedFurnitureTypeIndex(null);
+      setSelectedSubcategoryIndex(null);
+      return;
+    }
+
+    setSelectedFurnitureTypeIndex(furnitureTypeIndex);
+
+    // If institution and furniture type in URL (no subcategory), clear subcategory and normalize slugs
+    if (!subcategoryId) {
+      setSelectedSubcategoryIndex(null);
+      const canonicalInstitution = toCatalogSlug(place.id);
+      const currentInstitution = toCatalogSlug(institutionId || '');
+      const canonicalFurniture = toCatalogSlug(place.furnitureTypes[furnitureTypeIndex].id);
+      const currentFurniture = toCatalogSlug(furnitureTypeId || '');
+      const needsRedirect = (
+        canonicalInstitution !== currentInstitution ||
+        canonicalFurniture !== currentFurniture
+      );
+      if (needsRedirect) {
+        navigate(`/products/${canonicalInstitution}/${canonicalFurniture}`, { replace: true });
+      }
+      return;
+    }
+    
+    // Find the subcategory by subcategoryId
+    const furnitureType = place.furnitureTypes[furnitureTypeIndex];
+    const subcategoryIndex = furnitureType.subcategories.findIndex(
+      (sub) => idsMatch(sub.id, subcategoryId) || idsMatch(sub.name, subcategoryId)
+    );
+    if (subcategoryIndex === -1) {
+      setSelectedSubcategoryIndex(null);
+      return;
+    }
+    
+    setSelectedSubcategoryIndex(subcategoryIndex);
+    
+    // Normalize URL to canonical slug path if current params differ
+    const canonicalInstitution = toCatalogSlug(place.id);
+    const currentInstitution = toCatalogSlug(institutionId || '');
+    const canonicalFurniture = toCatalogSlug(furnitureType.id);
+    const currentFurniture = toCatalogSlug(furnitureTypeId || '');
+    const canonicalSubcategory = toCatalogSlug(furnitureType.subcategories[subcategoryIndex].id);
+    const currentSubcategory = toCatalogSlug(subcategoryId || '');
+    const needsRedirect = (
+      canonicalInstitution !== currentInstitution ||
+      canonicalFurniture !== currentFurniture ||
+      canonicalSubcategory !== currentSubcategory
+    );
+    if (needsRedirect) {
+      navigate(`/products/${canonicalInstitution}/${canonicalFurniture}/${canonicalSubcategory}`, { replace: true });
+    }
+  }, [catalog, institutionId, furnitureTypeId, subcategoryId]);
+
   // Handle place selection
   const handlePlaceSelect = (index) => {
-    setSelectedPlaceIndex(index);
-    setSelectedFurnitureTypeIndex(null);
-    setSelectedSubcategoryIndex(null);
+    const place = catalog[index];
+    navigate(`/products/${toCatalogSlug(place.id)}`);
   };
 
   // Handle furniture type selection
   const handleFurnitureTypeSelect = (index) => {
-    setSelectedFurnitureTypeIndex(index);
-    setSelectedSubcategoryIndex(null);
+    const place = catalog[selectedPlaceIndex];
+    const furnitureType = place.furnitureTypes[index];
+    navigate(`/products/${toCatalogSlug(place.id)}/${toCatalogSlug(furnitureType.id)}`);
   };
 
   // Handle subcategory selection
   const handleSubcategorySelect = (index) => {
-    setSelectedSubcategoryIndex(index);
+    const place = catalog[selectedPlaceIndex];
+    const furnitureType = place.furnitureTypes[selectedFurnitureTypeIndex];
+    const subcategory = furnitureType.subcategories[index];
+    navigate(`/products/${toCatalogSlug(place.id)}/${toCatalogSlug(furnitureType.id)}/${toCatalogSlug(subcategory.id)}`);
   };
 
   // Go back to places
@@ -234,17 +331,18 @@ function Products() {
       return (
         <section className="product-subcategories">
           <div className="breadcrumb">
-            <button onClick={handleBackToPlaces}>All Spaces</button>
+            <Link to="/products">All Spaces</Link>
             <span> &gt; </span>
-            <span>{selectedPlace.name}</span>
+            <Link to={`/products/${toCatalogSlug(selectedPlace.id)}`}>{selectedPlace.name}</Link>
           </div>
           <h2>Browse {selectedPlace.name} Furniture</h2>
           <div className="category-grid">
             {selectedPlace.furnitureTypes.map((furnitureType, index) => (
-              <div 
-                key={furnitureType.id || index} 
+              <Link
+                key={furnitureType.id || index}
                 className="category-item"
-                onClick={() => handleFurnitureTypeSelect(index)}
+                to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(furnitureType.id)}`}
+                aria-label={`View ${furnitureType.name} products`}
               >
                 <div 
                   className="category-image"
@@ -252,8 +350,8 @@ function Products() {
                 ></div>
                 <h3>{furnitureType.name}</h3>
                 <p>{furnitureType.description}</p>
-                <button className="view-button">View Products</button>
-              </div>
+                <span className="view-button" role="button">View Products</span>
+              </Link>
             ))}
           </div>
         </section>
@@ -268,19 +366,20 @@ function Products() {
       return (
         <section className="product-subcategories">
           <div className="breadcrumb">
-            <button onClick={handleBackToPlaces}>All Spaces</button>
+            <Link to="/products">All Spaces</Link>
             <span> &gt; </span>
-            <button onClick={handleBackToFurnitureTypes}>{selectedPlace.name}</button>
+            <Link to={`/products/${toCatalogSlug(selectedPlace.id)}`}>{selectedPlace.name}</Link>
             <span> &gt; </span>
-            <span>{selectedFurnitureType.name}</span>
+            <Link to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}`}>{selectedFurnitureType.name}</Link>
           </div>
           <h2>Browse {selectedFurnitureType.name} Categories</h2>
           <div className="category-grid">
             {selectedFurnitureType.subcategories.map((subcategory, index) => (
-              <div 
-                key={subcategory.id || index} 
+              <Link
+                key={subcategory.id || index}
                 className="category-item"
-                onClick={() => handleSubcategorySelect(index)}
+                to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}/${toCatalogSlug(subcategory.id)}`}
+                aria-label={`View ${subcategory.name} products`}
               >
                 <div 
                   className="category-image"
@@ -288,8 +387,8 @@ function Products() {
                 ></div>
                 <h3>{subcategory.name}</h3>
                 <p>{subcategory.description}</p>
-                <button className="view-button">View Products</button>
-              </div>
+                <span className="view-button" role="button">View Products</span>
+              </Link>
             ))}
           </div>
         </section>
@@ -303,11 +402,11 @@ function Products() {
     return (
       <section className="product-listing">
         <div className="breadcrumb">
-          <button onClick={handleBackToPlaces}>All Spaces</button>
+          <Link to="/products">All Spaces</Link>
           <span> &gt; </span>
-          <button onClick={handleBackToFurnitureTypes}>{selectedPlace.name}</button>
+          <Link to={`/products/${toCatalogSlug(selectedPlace.id)}`}>{selectedPlace.name}</Link>
           <span> &gt; </span>
-          <button onClick={handleBackToSubcategories}>{selectedFurnitureType.name}</button>
+          <Link to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}`}>{selectedFurnitureType.name}</Link>
           <span> &gt; </span>
           <span>{selectedSubcategory.name}</span>
         </div>
@@ -331,7 +430,7 @@ function Products() {
                   ))}
                 </div>
               )}
-              <Link to={`/products/${selectedPlace.id}/${selectedFurnitureType.id}/${selectedSubcategory.id}/${product.id}`} className="details-button">View Details</Link>
+              <Link to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}/${toCatalogSlug(selectedSubcategory.id)}/${toCatalogSlug(product.id)}`} className="details-button">View Details</Link>
             </div>
           ))}
         </div>
@@ -356,23 +455,20 @@ function Products() {
 
   return (
     <div className="products-container">
-      <section className={styles.heroSection} style={{
-        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Our Products</h1>
-          <p className={styles.heroSubtitle}>Discover our premium furniture collections</p>
-        </div>
-      </section>
 
       {renderContent()}
 
-      <section className="custom-solutions">
+      <section 
+        className="custom-solutions"
+        style={{
+          background: `linear-gradient(135deg, rgba(12, 14, 18, 0.88), rgba(12, 14, 18, 0.72)), url("${CUSTOM_FURNITURE_IMAGE_URL}")`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center'
+        }}
+      >
         <h2>Custom Furniture Solutions</h2>
-        <p>We offer bespoke furniture design and manufacturing services tailored to your specific requirements.</p>
+        <p>We design and manufacture bespoke furniture sized precisely for your space, ensuring dimensions and proportions are tailored to your environment.</p>
         <Link to="/contact" aria-label="Contact us">
           <button className="cta-button">Request Custom Quote</button>
         </Link>

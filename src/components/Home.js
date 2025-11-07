@@ -11,25 +11,25 @@ import { FiPhone, FiMail, FiCalendar } from 'react-icons/fi';
 function Home() {
   const heroSlides = [
     {
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      image: '/Images/Tailored_Guestroom_Collections.jpg',
       eyebrow: 'Bespoke Hospitality Suites',
       title: 'Tailored Guestroom Collections',
       copy: 'Layer plush upholstery, bespoke case goods, and refined decor accents for signature guest experiences.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      image: '/Images/Elevated_Restaurant_Seating.jpg',
       eyebrow: 'Curated Dining Concepts',
       title: 'Elevated Restaurant Seating',
       copy: 'Craft dining environments that balance durability with sculptural silhouettes and luxe textures.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      image: '/Images/Modern_Social_Lounges.jpg',
       eyebrow: 'Signature Lobby Moments',
       title: 'Modern Social Lounges',
       copy: 'Shape welcoming arrival experiences with statement lounges, accent lighting, and bespoke detailing.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      image: '/images/Outdoor.jpg',
       eyebrow: 'Resort Serenity',
       title: 'Outdoor Retreat Vignettes',
       copy: 'Introduce weather-ready silhouettes and artisanal finishes that invite guests to linger outdoors.'
@@ -189,13 +189,13 @@ function Home() {
             </p>
           </div>
           <div className="contact-actions">
-            <a className="contact-chip" href="tel:+18005551234">
+            <a className="contact-chip" href="tel:+16172237781">
               <FiPhone aria-hidden="true" focusable="false" />
-              <span>+1 (800) 555-1234</span>
+              <span>+1 (617) 223-7781</span>
             </a>
-            <a className="contact-chip" href="mailto:info@dmdfurnishing.com">
-              <FiMail aria-hidden="true" focusable="false" />
-              <span>info@dmdfurnishing.com</span>
+            <a className="contact-chip" href="mailto:Sales@DMDFurnishing.com">
+                <FiMail aria-hidden="true" focusable="false" />
+                <span>Sales@DMDFurnishing.com</span>
             </a>
             <Link to="/contact" className="contact-chip contact-chip--cta">
               <FiCalendar aria-hidden="true" focusable="false" />

@@ -11,11 +11,11 @@
 						<image src="/Images/Hospital/Patient Room/Bedside Cabinet/Double Drawer Cabinet/double drawer cabinet.png" alt="Double Drawer Cabinet - double drawer cabinet" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Lockable Cabinet" name="Lockable Cabinet" description="Lockable Cabinet product for Bedside Cabinet" image="/Images/Hospital/Patient Room/Bedside Cabinet/Lockable Cabinet/Lockable Cabinet.png" tags="lockable,cabinet">
@@ -23,11 +23,11 @@
 						<image src="/Images/Hospital/Patient Room/Bedside Cabinet/Lockable Cabinet/Lockable Cabinet.png" alt="Lockable Cabinet - Lockable Cabinet" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Single Drawer Cabinet" name="Single Drawer Cabinet" description="Single Drawer Cabinet product for Bedside Cabinet" image="/Images/Hospital/Patient Room/Bedside Cabinet/Single Drawer Cabinet/single drawer cabinet.png" tags="single,drawer,cabinet">
@@ -35,11 +35,11 @@
 						<image src="/Images/Hospital/Patient Room/Bedside Cabinet/Single Drawer Cabinet/single drawer cabinet.png" alt="Single Drawer Cabinet - single drawer cabinet" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -49,11 +49,11 @@
 						<image src="/Images/Hospital/Patient Room/Overbed Table/Adjustable Overbed Table/adjustable overbed table.png" alt="Adjustable Overbed Table - adjustable overbed table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Fixed Overbed Table" name="Fixed Overbed Table" description="Fixed Overbed Table product for Overbed Table" image="/Images/Hospital/Patient Room/Overbed Table/Fixed Overbed Table/Fixed Overbed Table.png" tags="fixed,overbed,table">
@@ -61,11 +61,11 @@
 						<image src="/Images/Hospital/Patient Room/Overbed Table/Fixed Overbed Table/Fixed Overbed Table.png" alt="Fixed Overbed Table - Fixed Overbed Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Rolling Overbed Table" name="Rolling Overbed Table" description="Rolling Overbed Table product for Overbed Table" image="/Images/Hospital/Patient Room/Overbed Table/Rolling Overbed Table/Rolling Overbed Table.png" tags="rolling,overbed,table">
@@ -73,11 +73,11 @@
 						<image src="/Images/Hospital/Patient Room/Overbed Table/Rolling Overbed Table/Rolling Overbed Table.png" alt="Rolling Overbed Table - Rolling Overbed Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -87,11 +87,11 @@
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Electric Recliner/electric recliner.png" alt="Electric Recliner - electric recliner" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Manual Recliner" name="Manual Recliner" description="Manual Recliner product for Recliner Chair" image="/Images/Hospital/Patient Room/Recliner Chair/Manual Recliner/manual recliner.png" tags="manual,recliner">
@@ -99,11 +99,11 @@
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Manual Recliner/manual recliner.png" alt="Manual Recliner - manual recliner" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Medical Recliner" name="Medical Recliner" description="Medical Recliner product for Recliner Chair" image="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" tags="medical,recliner">
@@ -111,11 +111,11 @@
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" alt="Medical Recliner - medical recliner" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -127,11 +127,11 @@
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table.png" alt="Glass Table - glass table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Metal Table" name="Metal Table" description="Metal Table product for Magazine Table" image="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" tags="metal,table">
@@ -139,11 +139,11 @@
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" alt="Metal Table - Metal Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Table" name="Wooden Table" description="Wooden Table product for Magazine Table" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" tags="wooden,table">
@@ -151,11 +151,11 @@
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" alt="Wooden Table - Wooden Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -166,11 +166,11 @@
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Curved Desk/Curved Desk.jpg" alt="Curved Desk - Curved Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Glass Top Desk" name="Glass Top Desk" description="Glass Top Desk product for Reception Desk" image="/Images/Hospital/Waiting Area/Reception Desk/Glass Top Desk/Glass Top.jpg" tags="glass,top,desk">
@@ -178,11 +178,11 @@
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Glass Top Desk/Glass Top.jpg" alt="Glass Top Desk - Glass Top" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Straight Desk" name="Straight Desk" description="Straight Desk product for Reception Desk" image="/Images/Hospital/Waiting Area/Reception Desk/Straight Desk/Straight Desk.jpg" tags="straight,desk">
@@ -190,11 +190,11 @@
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Straight Desk/Straight Desk.jpg" alt="Straight Desk - Straight Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -204,11 +204,11 @@
 						<image src="/Images/Hospital/Waiting Area/Waiting Chairs/Linked Waiting Chair/linked waiting chair.png" alt="Linked Waiting Chair - linked waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Plastic Waiting Chair" name="Plastic Waiting Chair" description="Plastic Waiting Chair product for Waiting Chairs" image="/Images/Hospital/Waiting Area/Waiting Chairs/Plastic Waiting Chair/plastic waiting chair.png" tags="plastic,waiting,chair">
@@ -216,11 +216,11 @@
 						<image src="/Images/Hospital/Waiting Area/Waiting Chairs/Plastic Waiting Chair/plastic waiting chair.png" alt="Plastic Waiting Chair - plastic waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Upholstered Waiting Chair" name="Upholstered Waiting Chair" description="Upholstered Waiting Chair product for Waiting Chairs" image="/Images/Hospital/Waiting Area/Waiting Chairs/Upholstered Waiting Chair/upholstered waiting chair.png" tags="upholstered,waiting,chair">
@@ -228,11 +228,11 @@
 						<image src="/Images/Hospital/Waiting Area/Waiting Chairs/Upholstered Waiting Chair/upholstered waiting chair.png" alt="Upholstered Waiting Chair - upholstered waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -246,11 +246,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Cold Buffet Counter/Cold Buffet Counter.jpg" alt="Cold Buffet Counter - Cold Buffet Counter" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Hot Buffet Counter" name="Hot Buffet Counter" description="Hot Buffet Counter product for Buffet Counter" image="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Hot Buffet Counter.jpg" tags="hot,buffet,counter">
@@ -262,11 +262,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Hot Buffet Counter.jpg" alt="Hot Buffet Counter - Hot Buffet Counter" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Mixed Buffet Counter" name="Mixed Buffet Counter" description="Mixed Buffet Counter product for Buffet Counter" image="/Images/Hotel/Breakfast Area/Buffet Counter/Mixed Buffet Counter/Mixed Buffet Counter.jpg" tags="mixed,buffet,counter">
@@ -275,11 +275,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Mixed Buffet Counter/Mixed Buffet Counter.jpg" alt="Mixed Buffet Counter - Mixed Buffet Counter" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -291,11 +291,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Metal Dining Chair/Orange Upholstered Accent Chair 2.jpg" alt="Metal Dining Chair - Orange Upholstered Accent Chair 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Upholstered Dining Chair product for Dining Chairs" image="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,dining,chair">
@@ -306,11 +306,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Warm terracott Upholstered Accent Chair 360 return 1.jpg" alt="Upholstered Dining Chair - Warm terracott Upholstered Accent Chair 360 return 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Wooden Dining Chair product for Dining Chairs" image="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,dining,chair">
@@ -319,11 +319,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Dining Chair - DMD-DinningChair - DC-WOOD1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -338,11 +338,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" alt="2-Seater Table - 2-Seater Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="4-Seater Table" name="4-Seater Table" description="4-Seater Table product for Dining Tables" image="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" tags="4-seater,table">
@@ -352,11 +352,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table SS1.jpg" alt="4-Seater Table - 4-Seater Table SS1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="6-Seater Table" name="6-Seater Table" description="6-Seater Table product for Dining Tables" image="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-seater table.png" tags="6-seater,table">
@@ -370,11 +370,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-seater table.png" alt="6-Seater Table - 6-seater table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -384,11 +384,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Food Service Cabinets/Dry Storage Cabinet/Food Service Cabinets 1.jpg" alt="Dry Storage Cabinet - Food Service Cabinets 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Heated Cabinet" name="Heated Cabinet" description="Heated Cabinet product for Food Service Cabinets" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Heated Cabinet/Food Service Cabinets 2.jpg" tags="heated,cabinet">
@@ -396,11 +396,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Food Service Cabinets/Heated Cabinet/Food Service Cabinets 2.jpg" alt="Heated Cabinet - Food Service Cabinets 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Refrigerated Cabinet" name="Refrigerated Cabinet" description="Refrigerated Cabinet product for Food Service Cabinets" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Refrigerated Cabinet/Food Service Cabinets 3.jpg" tags="refrigerated,cabinet">
@@ -408,11 +408,11 @@
 						<image src="/Images/Hotel/Breakfast Area/Food Service Cabinets/Refrigerated Cabinet/Food Service Cabinets 3.jpg" alt="Refrigerated Cabinet - Food Service Cabinets 3" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -424,11 +424,11 @@
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame/Bed Base Model 2.png" alt="Full XL Bed Frame - Bed Base Model 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="King Bed Frame" name="King Bed Frame" description="King Bed Frame product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame/Bed Base Model 3.png" tags="king,bed,frame">
@@ -436,11 +436,11 @@
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame/Bed Base Model 3.png" alt="King Bed Frame - Bed Base Model 3" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Queen Bed Frame" name="Queen Bed Frame" description="Queen Bed Frame product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame/Bed Base Model 3.png" tags="queen,bed,frame">
@@ -448,11 +448,11 @@
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame/Bed Base Model 3.png" alt="Queen Bed Frame - Bed Base Model 3" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -462,11 +462,11 @@
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/Executive Desk 1.jpg" alt="Executive Desk - Executive Desk 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Workstation Desk" name="Workstation Desk" description="Workstation Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" tags="workstation,desk">
@@ -474,11 +474,11 @@
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" alt="Workstation Desk - Workstation Desk 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Writing Desk" name="Writing Desk" description="Writing Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
@@ -486,50 +486,88 @@
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" alt="Writing Desk - Writing Desk Cross Leg One side" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Head Board" name="Head Board" description="Head Board in Guest Room" image="/Images/Hotel/Guest Room/Head Board/Head Board.jpg">
-				<product id="Full XL Head Board" name="Full XL Head Board" description="Full XL Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full,xl,head,board">
+			<subcategory id="Head Board" name="Head Board" description="Head Board in Guest Room" image="/Images/Hotel/Guest Room/Head Board/Head Board.png">
+				<product id="Full XL Head Board" name="Full XL Head Board" description="Full XL Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" alt="Full XL Head Board - Full XL Head Board" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
-				<product id="King Head Board" name="King Head Board" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King Head Board/King Head Board.png" tags="king,head,board">
+				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Shoreline.jpg" tags="king,headboard - MDF/Wood">
 					<images>
-						<image src="/Images/Hotel/Guest Room/Head Board/King Head Board/King Head Board.png" alt="King Head Board - King Head Board" />
+						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Driftmark.jpg" alt="King Head Board - DMD Driftmark"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" alt="King Head Board - DMD Stratus"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Seabrook.jpg" alt="King Head Board - DMD Seabrook"/> 
+						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Shoreline.jpg" alt="King Head Board - DMD Shoreline"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Tidefall.jpg" alt="King Head Board - DMD Tidefall"/>
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value=" 80-82 &quot; (BTS)" />
+						<spec name="Depth" value="3-3.96&quot; (BTS)" />
+						<spec name="Height" value="48-46&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
+					</specifications>
+					</product>
+				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Aura.jpg" tags="king,headboard - Upholstered">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Aura.jpg" alt="King Head Board - King DMD Aura"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Axis.jpg" alt="King Head Board - King DMD Axis"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Element.jpg" alt="King Head Board - King DMD Element"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Nova.jpg" alt="King Head Board - King DMD Nova"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Prestige.jpg" alt="King Head Board - King DMD Prestige"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Regency Curve.png" alt="King Head Board - King DMD Regency Curve"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Regency Straight.png" alt="King Head Board - King DMD Regency Straight"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Solis.jpg" alt="King Head Board - King DMD Solis"/>
+					</images>
+					<specifications>
+						<spec name="Width" value=" 80-82 &quot; (BTS)" />
+						<spec name="Depth" value="3-3.96&quot; (BTS)" />
+						<spec name="Height" value="46-48&quot; (BTS)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Queen Head Board" name="Queen Head Board" description="Queen Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/HB2.jpg" tags="queen,head,board">
 					<images>
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/HB2.jpg" alt="Queen Head Board - HB2" />
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/queen headboard.png" alt="Queen Head Board - queen headboard" />
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" alt="Queen Head Board - DMD Aura"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aurelius.jpg" alt="Queen Head Board - DMD Aurelius"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Axis.jpg" alt="Queen Head Board - DMD Axis"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Crest.jpg" alt="Queen Head Board - DMD Crest"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Drift.jpg" alt="Queen Head Board - DMD Drift"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Edge.jpg" alt="Queen Head Board - DMD Edge"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Ember.jpg" alt="Queen Head Board - DMD Ember"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Halo.jpg" alt="Queen Head Board - DMD Halo"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Haven.jpg" alt="Queen Head Board - DMD Haven"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Horizon.jpg" alt="Queen Head Board - DMD Horizon"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Loft.jpg" alt="Queen Head Board - DMD Loft"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Mesa.jpg" alt="Queen Head Board - DMD Mesa"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Nest.jpg" alt="Queen Head Board - DMD Nest"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Solace.jpg" alt="Queen Head Board - DMD Solace"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Studio.jpg" alt="Queen Head Board - DMD Studio"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD TwinGlow.jpg" alt="Queen Head Board - DMD TwinGlow"/>
+						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Vault.jpg" alt="Queen Head Board - DMD Vault"/>
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -539,11 +577,11 @@
 						<image src="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" alt="Double Drawer Night Stand - Double Drawer Night Stand" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open Shelf Night Stand product for Night Stand" image="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" tags="open,shelf,night,stand">
@@ -551,11 +589,11 @@
 						<image src="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" alt="Open Shelf Night Stand - Open Shelf Night Stand" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Single Drawer Night Stand" name="Single Drawer Night Stand" description="Single Drawer Night Stand product for Night Stand" image="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" tags="single,drawer,night,stand">
@@ -564,11 +602,11 @@
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" alt="Single Drawer Night Stand - single drawer night stand" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -583,11 +621,11 @@
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Side View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Side View" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="AC01-GR-nova-Green product for Arm Chair" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
@@ -598,11 +636,11 @@
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Top-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Top-View" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="AC01-OR-nova-Sunset-Orange product for Arm Chair" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="ac01-or-nova-sunset-orange">
@@ -613,11 +651,11 @@
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Top-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Top-view" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -628,11 +666,11 @@
 						<image src="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orange-Gray.jpg" alt="2-Siter Sofa - Orange-Gray" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="3-Siter Sofa" name="3-Siter Sofa" description="3-Siter Sofa product for Sofa" image="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" tags="3-siter,sofa">
@@ -640,11 +678,11 @@
 						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" alt="3-Siter Sofa - 9" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -658,11 +696,11 @@
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Metal Accent Chair/Orange Upholstered Accent Chair 2.jpg" alt="Metal Accent Chair - Orange Upholstered Accent Chair 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Upholstered Accent Chair" name="Upholstered Accent Chair" description="Upholstered Accent Chair product for Accent Chairs" image="/Images/Hotel/Lobby Area/Accent Chairs/Upholstered Accent Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,accent,chair">
@@ -673,11 +711,11 @@
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Upholstered Accent Chair/Warm terracott Upholstered Accent Chair 360 return 1.jpg" alt="Upholstered Accent Chair - Warm terracott Upholstered Accent Chair 360 return 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Accent Chair" name="Wooden Accent Chair" description="Wooden Accent Chair product for Accent Chairs" image="/Images/Hotel/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,accent,chair">
@@ -686,11 +724,11 @@
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Accent Chair - DMD-DinningChair - DC-WOOD1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -706,11 +744,11 @@
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table X Box Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table X Box Legs" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Round Coffee Table" name="Round Coffee Table" description="Round Coffee Table product for Coffee Tables" image="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
@@ -721,11 +759,11 @@
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table one sylinder.jpg" alt="Round Coffee Table - Round Coffee Table one sylinder" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Square Coffee Table" name="Square Coffee Table" description="Square Coffee Table product for Coffee Tables" image="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
@@ -737,11 +775,11 @@
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Waterfall Legs.jpg" alt="Square Coffee Table - Square Coffee Table Waterfall Legs" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -752,11 +790,11 @@
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/2-Seater Sofa/Orange-Gray.jpg" alt="2-Seater Sofa - Orange-Gray" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="3-Seater Sofa" name="3-Seater Sofa" description="3-Seater Sofa product for Lobby Sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" tags="3-seater,sofa">
@@ -764,11 +802,11 @@
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" alt="3-Seater Sofa - 9" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa product for Lobby Sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" tags="sectional,sofa">
@@ -776,11 +814,11 @@
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" alt="Sectional Sofa - 10" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -790,11 +828,11 @@
 						<image src="/Images/Hotel/Lobby Area/Reception Desk/Curved Reception Desk/Curved Reception Desk.jpg" alt="Curved Reception Desk - Curved Reception Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="L-Shaped Reception Desk" name="L-Shaped Reception Desk" description="L-Shaped Reception Desk product for Reception Desk" image="/Images/Hotel/Lobby Area/Reception Desk/L-Shaped Reception Desk/L-Shaped Reception Desk.jpg" tags="l-shaped,reception,desk">
@@ -802,11 +840,11 @@
 						<image src="/Images/Hotel/Lobby Area/Reception Desk/L-Shaped Reception Desk/L-Shaped Reception Desk.jpg" alt="L-Shaped Reception Desk - L-Shaped Reception Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Straight Reception Desk" name="Straight Reception Desk" description="Straight Reception Desk product for Reception Desk" image="/Images/Hotel/Lobby Area/Reception Desk/Straight Reception Desk/Recepction Desk1.jpg" tags="straight,reception,desk">
@@ -814,11 +852,11 @@
 						<image src="/Images/Hotel/Lobby Area/Reception Desk/Straight Reception Desk/Recepction Desk1.jpg" alt="Straight Reception Desk - Recepction Desk1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -832,11 +870,11 @@
 						<image src="/Images/Office/Seating/Ergonomic Chair/Adjustable Ergonomic Chair/adjustable ergonomic chair.png" alt="Adjustable Ergonomic Chair - adjustable ergonomic chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Fabric Ergonomic Chair" name="Fabric Ergonomic Chair" description="Fabric Ergonomic Chair product for Ergonomic Chair" image="/Images/Office/Seating/Ergonomic Chair/Fabric Ergonomic Chair/Fabric Ergonomic Chair.png" tags="fabric,ergonomic,chair">
@@ -844,11 +882,11 @@
 						<image src="/Images/Office/Seating/Ergonomic Chair/Fabric Ergonomic Chair/Fabric Ergonomic Chair.png" alt="Fabric Ergonomic Chair - Fabric Ergonomic Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Mesh Ergonomic Chair" name="Mesh Ergonomic Chair" description="Mesh Ergonomic Chair product for Ergonomic Chair" image="/Images/Office/Seating/Ergonomic Chair/Mesh Ergonomic Chair/mesh ergonomic chair.png" tags="mesh,ergonomic,chair">
@@ -856,11 +894,11 @@
 						<image src="/Images/Office/Seating/Ergonomic Chair/Mesh Ergonomic Chair/mesh ergonomic chair.png" alt="Mesh Ergonomic Chair - mesh ergonomic chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -870,11 +908,11 @@
 						<image src="/Images/Office/Seating/Executive Chair/High-Back Executive Chair/High-Back Executive Chair.png" alt="High-Back Executive Chair - High-Back Executive Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Leather Executive Chair" name="Leather Executive Chair" description="Leather Executive Chair product for Executive Chair" image="/Images/Office/Seating/Executive Chair/Leather Executive Chair/leather executive chair.png" tags="leather,executive,chair">
@@ -882,11 +920,11 @@
 						<image src="/Images/Office/Seating/Executive Chair/Leather Executive Chair/leather executive chair.png" alt="Leather Executive Chair - leather executive chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Mid-Back Executive Chair" name="Mid-Back Executive Chair" description="Mid-Back Executive Chair product for Executive Chair" image="/Images/Office/Seating/Executive Chair/Mid-Back Executive Chair/Mid-Back Executive Chair.png" tags="mid-back,executive,chair">
@@ -894,11 +932,11 @@
 						<image src="/Images/Office/Seating/Executive Chair/Mid-Back Executive Chair/Mid-Back Executive Chair.png" alt="Mid-Back Executive Chair - Mid-Back Executive Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -908,11 +946,11 @@
 						<image src="/Images/Office/Seating/Visitor Chairs/Padded Visitor Chair/padded visitor chair.png" alt="Padded Visitor Chair - padded visitor chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Plastic Visitor Chair" name="Plastic Visitor Chair" description="Plastic Visitor Chair product for Visitor Chairs" image="/Images/Office/Seating/Visitor Chairs/Plastic Visitor Chair/plastic visitor chair.png" tags="plastic,visitor,chair">
@@ -920,11 +958,11 @@
 						<image src="/Images/Office/Seating/Visitor Chairs/Plastic Visitor Chair/plastic visitor chair.png" alt="Plastic Visitor Chair - plastic visitor chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Stackable Visitor Chair" name="Stackable Visitor Chair" description="Stackable Visitor Chair product for Visitor Chairs" image="/Images/Office/Seating/Visitor Chairs/Stackable Visitor Chair/Stackable Visitor Chair.png" tags="stackable,visitor,chair">
@@ -932,11 +970,11 @@
 						<image src="/Images/Office/Seating/Visitor Chairs/Stackable Visitor Chair/Stackable Visitor Chair.png" alt="Stackable Visitor Chair - Stackable Visitor Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -948,11 +986,11 @@
 						<image src="/Images/Office/Workstations/Cubicle Systems/2-Panel Cubicle/2-panel cubicle.png" alt="2-Panel Cubicle - 2-panel cubicle" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="3-Panel Cubicle" name="3-Panel Cubicle" description="3-Panel Cubicle product for Cubicle Systems" image="/Images/Office/Workstations/Cubicle Systems/3-Panel Cubicle/3-Panel Cubicle.png" tags="3-panel,cubicle">
@@ -960,11 +998,11 @@
 						<image src="/Images/Office/Workstations/Cubicle Systems/3-Panel Cubicle/3-Panel Cubicle.png" alt="3-Panel Cubicle - 3-Panel Cubicle" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="4-Panel Cubicle" name="4-Panel Cubicle" description="4-Panel Cubicle product for Cubicle Systems" image="/Images/Office/Workstations/Cubicle Systems/4-Panel Cubicle/4-panel cubicle.png" tags="4-panel,cubicle">
@@ -972,11 +1010,11 @@
 						<image src="/Images/Office/Workstations/Cubicle Systems/4-Panel Cubicle/4-panel cubicle.png" alt="4-Panel Cubicle - 4-panel cubicle" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -989,11 +1027,11 @@
 						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Workstation.jpg" alt="L-Shaped Executive Desk - L-Shaped Workstation" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="L-Shaped Executive Desk 2" name="L-Shaped Executive Desk 2" description="L-Shaped Executive Desk 2 product for Executive Desk" image="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk 2.jpg" tags="l-shaped,executive,desk,2">
@@ -1007,11 +1045,11 @@
 						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk Dark Wood.jpg" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk Dark Wood" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Straight Executive Desk" name="Straight Executive Desk" description="Straight Executive Desk product for Executive Desk" image="/Images/Office/Workstations/Executive Desk/Straight Executive Desk/Straight Executive Desk Tela 1.jpg" tags="straight,executive,desk">
@@ -1020,11 +1058,11 @@
 						<image src="/Images/Office/Workstations/Executive Desk/Straight Executive Desk/Straight Executive Desk Tela.jpg" alt="Straight Executive Desk - Straight Executive Desk Tela" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="U-Shaped Executive Desk" name="U-Shaped Executive Desk" description="U-Shaped Executive Desk product for Executive Desk" image="/Images/Office/Workstations/Executive Desk/U-Shaped Executive Desk/U-Shaped Executive Desk.jpg" tags="u-shaped,executive,desk">
@@ -1034,11 +1072,11 @@
 						<image src="/Images/Office/Workstations/Executive Desk/U-Shaped Executive Desk/U-Shaped Workstation.jpg" alt="U-Shaped Executive Desk - U-Shaped Workstation" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1048,11 +1086,11 @@
 						<image src="/Images/Office/Workstations/Standing Desk/Convertible Standing Desk/convertible standing desk.png" alt="Convertible Standing Desk - convertible standing desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1066,11 +1104,11 @@
 						<image src="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png" alt="High Bar Stool - high bar stool" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Medium Bar Stool" name="Medium Bar Stool" description="Medium Bar Stool product for Bar Stools" image="/Images/Restaurant/Dining Area/Bar Stools/Medium Bar Stool/Medium Bar Stool.png" tags="medium,bar,stool">
@@ -1078,11 +1116,11 @@
 						<image src="/Images/Restaurant/Dining Area/Bar Stools/Medium Bar Stool/Medium Bar Stool.png" alt="Medium Bar Stool - Medium Bar Stool" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Swivel Bar Stool" name="Swivel Bar Stool" description="Swivel Bar Stool product for Bar Stools" image="/Images/Restaurant/Dining Area/Bar Stools/Swivel Bar Stool/swivel bar stool.png" tags="swivel,bar,stool">
@@ -1090,11 +1128,11 @@
 						<image src="/Images/Restaurant/Dining Area/Bar Stools/Swivel Bar Stool/swivel bar stool.png" alt="Swivel Bar Stool - swivel bar stool" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1104,11 +1142,11 @@
 						<image src="/Images/Restaurant/Dining Area/Booths/Corner Booth/corner booth.png" alt="Corner Booth - corner booth" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Double Booth" name="Double Booth" description="Double Booth product for Booths" image="/Images/Restaurant/Dining Area/Booths/Double Booth/double booth.png" tags="double,booth">
@@ -1116,11 +1154,11 @@
 						<image src="/Images/Restaurant/Dining Area/Booths/Double Booth/double booth.png" alt="Double Booth - double booth" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Single Booth" name="Single Booth" description="Single Booth product for Booths" image="/Images/Restaurant/Dining Area/Booths/Single Booth/single booth.png" tags="single,booth">
@@ -1128,11 +1166,11 @@
 						<image src="/Images/Restaurant/Dining Area/Booths/Single Booth/single booth.png" alt="Single Booth - single booth" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1142,11 +1180,11 @@
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Plastic Chair/plastic waiting chair.png" alt="Plastic Chair - plastic waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Upholstered Chair" name="Upholstered Chair" description="Upholstered Chair product for Dining Chairs" image="/Images/Restaurant/Dining Area/Dining Chairs/Upholstered Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,chair">
@@ -1157,11 +1195,11 @@
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Upholstered Chair/Warm terracott Upholstered Accent Chair 360 return 1.jpg" alt="Upholstered Chair - Warm terracott Upholstered Accent Chair 360 return 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Dining Chairs" image="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,chair">
@@ -1170,11 +1208,11 @@
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Chair - DMD-DinningChair - DC-WOOD1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1189,11 +1227,11 @@
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" alt="2-Seater Table - 2-Seater Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="4-Seater Table" name="4-Seater Table" description="4-Seater Table product for Dining Tables" image="/Images/Restaurant/Dining Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" tags="4-seater,table">
@@ -1203,11 +1241,11 @@
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/4-Seater Table/4-Seater Table SS1.jpg" alt="4-Seater Table - 4-Seater Table SS1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="6-Seater Table" name="6-Seater Table" description="6-Seater Table product for Dining Tables" image="/Images/Restaurant/Dining Area/Dining Tables/6-Seater Table/6-seater table.png" tags="6-seater,table">
@@ -1221,11 +1259,11 @@
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/6-Seater Table/6-seater table.png" alt="6-Seater Table - 6-seater table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1237,11 +1275,11 @@
 						<image src="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Metal Chair/Metal Chair.jpg" alt="Metal Chair - Metal Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Outdoor Chairs" image="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Plastic Chair/plastic chair2.jpg" tags="plastic,chair">
@@ -1250,11 +1288,11 @@
 						<image src="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Plastic Chair/plastic chair3.jpg" alt="Plastic Chair - plastic chair3" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wicker Chair" name="Wicker Chair" description="Wicker Chair product for Outdoor Chairs" image="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Wicker Chair/wicker chair.png" tags="wicker,chair">
@@ -1262,11 +1300,11 @@
 						<image src="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Wicker Chair/wicker chair.png" alt="Wicker Chair - wicker chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1276,11 +1314,11 @@
 						<image src="/Images/Restaurant/Outdoor Seating/Patio Tables/Glass Patio Table/glass patio table.png" alt="Glass Patio Table - glass patio table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Round Patio Table" name="Round Patio Table" description="Round Patio Table product for Patio Tables" image="/Images/Restaurant/Outdoor Seating/Patio Tables/Round Patio Table/Round Patio Table.png" tags="round,patio,table">
@@ -1288,11 +1326,11 @@
 						<image src="/Images/Restaurant/Outdoor Seating/Patio Tables/Round Patio Table/Round Patio Table.png" alt="Round Patio Table - Round Patio Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Square Patio Table" name="Square Patio Table" description="Square Patio Table product for Patio Tables" image="/Images/Restaurant/Outdoor Seating/Patio Tables/Square Patio Table/square patio table.png" tags="square,patio,table">
@@ -1300,11 +1338,11 @@
 						<image src="/Images/Restaurant/Outdoor Seating/Patio Tables/Square Patio Table/square patio table.png" alt="Square Patio Table - square patio table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1318,11 +1356,11 @@
 						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" alt="Ergonomic Student Chair - ergonomic student chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Chairs" image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair.png" tags="plastic,chair">
@@ -1332,11 +1370,11 @@
 						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair.png" alt="Plastic Chair - plastic chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Chairs" image="/Images/School/Classroom/Chairs/Wooden Chair/wooden chair.png" tags="wooden,chair">
@@ -1345,11 +1383,11 @@
 						<image src="/Images/School/Classroom/Chairs/Wooden Chair/wooden chair.png" alt="Wooden Chair - wooden chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1359,11 +1397,11 @@
 						<image src="/Images/School/Classroom/Student Desks/Adjustable Height Desk/Adjustable Height Desk.png" alt="Adjustable Height Desk - Adjustable Height Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Double Desk" name="Double Desk" description="Double Desk product for Student Desks" image="/Images/School/Classroom/Student Desks/Double Desk/double desk.png" tags="double,desk">
@@ -1371,11 +1409,11 @@
 						<image src="/Images/School/Classroom/Student Desks/Double Desk/double desk.png" alt="Double Desk - double desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Single Desk" name="Single Desk" description="Single Desk product for Student Desks" image="/Images/School/Classroom/Student Desks/Single Desk/Single Desk.png" tags="single,desk">
@@ -1383,11 +1421,11 @@
 						<image src="/Images/School/Classroom/Student Desks/Single Desk/Single Desk.png" alt="Single Desk - Single Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1397,11 +1435,11 @@
 						<image src="/Images/School/Classroom/Teacher Desk/Metal Teacher Desk/metal teacher desk.png" alt="Metal Teacher Desk - metal teacher desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Portable Teacher Desk" name="Portable Teacher Desk" description="Portable Teacher Desk product for Teacher Desk" image="/Images/School/Classroom/Teacher Desk/Portable Teacher Desk/Portable Teacher Desk.png" tags="portable,teacher,desk">
@@ -1409,11 +1447,11 @@
 						<image src="/Images/School/Classroom/Teacher Desk/Portable Teacher Desk/Portable Teacher Desk.png" alt="Portable Teacher Desk - Portable Teacher Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Teacher Desk" name="Wooden Teacher Desk" description="Wooden Teacher Desk product for Teacher Desk" image="/Images/School/Classroom/Teacher Desk/Wooden Teacher Desk/Wooden Teacher Desk.png" tags="wooden,teacher,desk">
@@ -1421,11 +1459,11 @@
 						<image src="/Images/School/Classroom/Teacher Desk/Wooden Teacher Desk/Wooden Teacher Desk.png" alt="Wooden Teacher Desk - Wooden Teacher Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1437,11 +1475,11 @@
 						<image src="/Images/School/Library/Bookshelves/Medium Bookshelf/Medium Bookshelf.png" alt="Medium Bookshelf - Medium Bookshelf" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Short Bookshelf" name="Short Bookshelf" description="Short Bookshelf product for Bookshelves" image="/Images/School/Library/Bookshelves/Short Bookshelf/short bookshelf.png" tags="short,bookshelf">
@@ -1449,11 +1487,11 @@
 						<image src="/Images/School/Library/Bookshelves/Short Bookshelf/short bookshelf.png" alt="Short Bookshelf - short bookshelf" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Tall Bookshelf" name="Tall Bookshelf" description="Tall Bookshelf product for Bookshelves" image="/Images/School/Library/Bookshelves/Tall Bookshelf/Tall Bookshelf.jpg" tags="tall,bookshelf">
@@ -1461,11 +1499,11 @@
 						<image src="/Images/School/Library/Bookshelves/Tall Bookshelf/Tall Bookshelf.jpg" alt="Tall Bookshelf - Tall Bookshelf" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1475,11 +1513,11 @@
 						<image src="/Images/School/Library/Reading Chairs/Armchair/armchair.png" alt="Armchair - armchair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Bean Bag" name="Bean Bag" description="Bean Bag product for Reading Chairs" image="/Images/School/Library/Reading Chairs/Bean Bag/bean bag.png" tags="bean,bag">
@@ -1487,11 +1525,11 @@
 						<image src="/Images/School/Library/Reading Chairs/Bean Bag/bean bag.png" alt="Bean Bag - bean bag" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Upholstered Chair" name="Upholstered Chair" description="Upholstered Chair product for Reading Chairs" image="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" tags="upholstered,chair">
@@ -1500,11 +1538,11 @@
 						<image src="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" alt="Upholstered Chair - upholstered chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1514,11 +1552,11 @@
 						<image src="/Images/School/Library/Study Tables/Carrel Desk/Carrel Desk.png" alt="Carrel Desk - Carrel Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Group Study Table" name="Group Study Table" description="Group Study Table product for Study Tables" image="/Images/School/Library/Study Tables/Group Study Table/group study table.png" tags="group,study,table">
@@ -1526,11 +1564,11 @@
 						<image src="/Images/School/Library/Study Tables/Group Study Table/group study table.png" alt="Group Study Table - group study table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Single Study Table" name="Single Study Table" description="Single Study Table product for Study Tables" image="/Images/School/Library/Study Tables/Single Study Table/single study table.png" tags="single,study,table">
@@ -1538,11 +1576,11 @@
 						<image src="/Images/School/Library/Study Tables/Single Study Table/single study table.png" alt="Single Study Table - single study table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1556,11 +1594,11 @@
 						<image src="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" alt="Full Bunk Bed - full bunk bed" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin Bunk Bed product for Bunk Beds" image="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" tags="twin,bunk,bed">
@@ -1568,11 +1606,11 @@
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - twin bunk bed" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Twin XL Bunk Bed" name="Twin XL Bunk Bed" description="Twin XL Bunk Bed product for Bunk Beds" image="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" tags="twin,xl,bunk,bed">
@@ -1580,11 +1618,11 @@
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" alt="Twin XL Bunk Bed - Twin XL Bunk Bed" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1594,11 +1632,11 @@
 						<image src="/Images/University/Dormitory/Study Desks/Double Study Desk/double study desk.png" alt="Double Study Desk - double study desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Single Study Desk" name="Single Study Desk" description="Single Study Desk product for Study Desks" image="/Images/University/Dormitory/Study Desks/Single Study Desk/single study desk.png" tags="single,study,desk">
@@ -1606,11 +1644,11 @@
 						<image src="/Images/University/Dormitory/Study Desks/Single Study Desk/single study desk.png" alt="Single Study Desk - single study desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wall-Mounted Study Desk" name="Wall-Mounted Study Desk" description="Wall-Mounted Study Desk product for Study Desks" image="/Images/University/Dormitory/Study Desks/Wall-Mounted Study Desk/wall-mounted study desk.png" tags="wall-mounted,study,desk">
@@ -1618,11 +1656,11 @@
 						<image src="/Images/University/Dormitory/Study Desks/Wall-Mounted Study Desk/wall-mounted study desk.png" alt="Wall-Mounted Study Desk - wall-mounted study desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1632,11 +1670,11 @@
 						<image src="/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png" alt="2-Door Wardrobe - 2-Door Wardrobe" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="3-Door Wardrobe" name="3-Door Wardrobe" description="3-Door Wardrobe product for Wardrobes" image="/Images/University/Dormitory/Wardrobes/3-Door Wardrobe/3-door wardrobe.png" tags="3-door,wardrobe">
@@ -1644,11 +1682,11 @@
 						<image src="/Images/University/Dormitory/Wardrobes/3-Door Wardrobe/3-door wardrobe.png" alt="3-Door Wardrobe - 3-door wardrobe" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Sliding Door Wardrobe product for Wardrobes" image="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" tags="sliding,door,wardrobe">
@@ -1656,11 +1694,11 @@
 						<image src="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" alt="Sliding Door Wardrobe - Sliding Door Wardrobe" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1672,11 +1710,11 @@
 						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" alt="Attached Desk-Chair - attached desk-chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Fixed Desk" name="Fixed Desk" description="Fixed Desk product for Lecture Desks" image="/Images/University/Lecture Hall/Lecture Desks/Fixed Desk/Fixed Desk.png" tags="fixed,desk">
@@ -1684,11 +1722,11 @@
 						<image src="/Images/University/Lecture Hall/Lecture Desks/Fixed Desk/Fixed Desk.png" alt="Fixed Desk - Fixed Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1698,11 +1736,11 @@
 						<image src="/Images/University/Lecture Hall/Podium/Metal Podium/Metal Podium.png" alt="Metal Podium - Metal Podium" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Smart Podium" name="Smart Podium" description="Smart Podium product for Podium" image="/Images/University/Lecture Hall/Podium/Smart Podium/Smart Podium.png" tags="smart,podium">
@@ -1710,11 +1748,11 @@
 						<image src="/Images/University/Lecture Hall/Podium/Smart Podium/Smart Podium.png" alt="Smart Podium - Smart Podium" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Wooden Podium" name="Wooden Podium" description="Wooden Podium product for Podium" image="/Images/University/Lecture Hall/Podium/Wooden Podium/wooden podium.png" tags="wooden,podium">
@@ -1722,11 +1760,11 @@
 						<image src="/Images/University/Lecture Hall/Podium/Wooden Podium/wooden podium.png" alt="Wooden Podium - wooden podium" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -1736,11 +1774,11 @@
 						<image src="/Images/University/Lecture Hall/Tiered Seating/Cushioned Seating/cushioned seating.png" alt="Cushioned Seating - cushioned seating" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Fixed Seating" name="Fixed Seating" description="Fixed Seating product for Tiered Seating" image="/Images/University/Lecture Hall/Tiered Seating/Fixed Seating/fixed seating unit.png" tags="fixed,seating">
@@ -1748,11 +1786,11 @@
 						<image src="/Images/University/Lecture Hall/Tiered Seating/Fixed Seating/fixed seating unit.png" alt="Fixed Seating - fixed seating unit" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 				<product id="Movable Seating" name="Movable Seating" description="Movable Seating product for Tiered Seating" image="/Images/University/Lecture Hall/Tiered Seating/Movable Seating/movable seating unit.png" tags="movable,seating">
@@ -1760,11 +1798,11 @@
 						<image src="/Images/University/Lecture Hall/Tiered Seating/Movable Seating/movable seating unit.png" alt="Movable Seating - movable seating unit" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (approx)" />
-						<spec name="Depth" value="24-36&quot; (approx)" />
-						<spec name="Height" value="30-45&quot; (approx)" />
+						<spec name="Width" value="48-72&quot; (BTS)" />
+						<spec name="Depth" value="24-36&quot; (BTS)" />
+						<spec name="Height" value="30-45&quot; (BTS)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Multiple finishes available" />
+						<spec name="Finish" value="Built-to-Suit (BTS) - based on the client's exact needs" />
 					</specifications>
 				</product>
 			</subcategory>

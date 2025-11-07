@@ -31,10 +31,10 @@ body.dark-mode .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1200px, 92vw);
+  width: min(1900px, 95vw);
   margin: 0 auto;
   height: 100%;
-  gap: 32px;
+  gap: 30px;
 }
 
 .header-branding {
@@ -44,7 +44,7 @@ body.dark-mode .site-header {
 }
 
 .logo-image {
-  height: 64px;
+  height: 110px;
   width: auto;
   object-fit: contain;
 }
@@ -59,7 +59,7 @@ body.dark-mode .site-header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 8px;
   margin: 0;
   padding: 0;
 }
@@ -69,13 +69,15 @@ body.dark-mode .site-header {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-sans);
-  font-size: 0.76rem;
-  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-text);
-  padding: 8px 0;
+  padding: 12px 16px;
   transition: color var(--transition-fast);
+  border-radius: 6px;
+  background: transparent;
 }
 
 .nav-links a::after {
@@ -94,6 +96,8 @@ body.dark-mode .site-header {
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
 }
 
 .nav-links a:hover::after,
@@ -106,17 +110,24 @@ body.dark-mode .site-header {
   align-items: center;
   gap: 4px;
   padding: 8px 0;
+  white-space: nowrap;
 }
 
 .nav-contact-label {
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .nav-contact-meta {
-  font-size: 0.64rem;
-  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
   text-transform: none;
   color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .nav-contact a::after {
@@ -138,16 +149,16 @@ body.dark-mode .site-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border-radius: 999px;
-  border: 1px solid var(--color-gold);
+  border: 2px solid var(--color-gold);
   color: var(--color-gold);
   background: transparent;
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
@@ -224,7 +235,12 @@ body.dark-mode .theme-toggle {
 
 @media (max-width: 1200px) {
   .nav-links {
-    gap: 24px;
+    gap: 6px;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 10px 12px;
   }
 }
 
@@ -261,9 +277,10 @@ body.dark-mode .theme-toggle {
   }
 
   .nav-links a {
-    font-size: 0.76rem;
+    font-size: 0.9rem;
     display: block;
-    padding: 14px 0;
+    padding: 16px 20px;
+    margin-bottom: 4px;
   }
 
   .nav-links a::after {
@@ -272,6 +289,7 @@ body.dark-mode .theme-toggle {
 
   .nav-contact a {
     align-items: flex-start;
+    white-space: nowrap;
   }
 
   .nav-contact a::after {
@@ -289,7 +307,7 @@ body.dark-mode .theme-toggle {
   }
 
   .logo-image {
-    height: 56px;
+    height: 112px;
   }
 
   .consultation-button {

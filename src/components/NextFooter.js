@@ -35,8 +35,8 @@ function NextFooter() {
               <ul>
                 <li>123 Luxury Avenue, Suite 500</li>
                 <li>New York, NY 10001</li>
-                <li>+1 (555) 123-4567</li>
-                <li>info@dmdfurnishing.com</li>
+                <li>+1 (617) 223-7781</li>
+              <li>Sales@DMDFurnishing.com</li>
               </ul>
             </div>
           </div>

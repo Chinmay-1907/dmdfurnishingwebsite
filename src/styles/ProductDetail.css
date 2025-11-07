@@ -1,4 +1,4 @@
-﻿.product-detail-container {
+.product-detail-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
@@ -10,17 +10,14 @@
   color: var(--color-text-secondary);
 }
 
-.breadcrumb button {
-  background: none;
-  border: none;
+.breadcrumb a {
   color: #d4af37;
   cursor: pointer;
   font-size: 1rem;
-  padding: 0;
   text-decoration: underline;
 }
 
-.breadcrumb button:hover {
+.breadcrumb a:hover {
   color: #b08f26;
 }
 
