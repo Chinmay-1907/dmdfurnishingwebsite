@@ -227,7 +227,7 @@ function ProductDetail() {
       isActive = false;
       controller.abort();
     };
-  }, [institutionId, furnitureTypeId, subcategoryId, productId]);
+  }, [institutionId, furnitureTypeId, subcategoryId, productId, navigate]);
 
   // Reset active image when navigating to a new product
   useEffect(() => {
@@ -344,7 +344,7 @@ function ProductDetail() {
                   ref={(el) => (thumbRefs.current[idx] = el)}
                   className={`thumb ${activeIndex === idx ? 'isActive' : ''}`}
                   onClick={() => setActiveIndex(idx)}
-                  aria-selected={activeIndex === idx}
+                  role="tab"
                   aria-label={`View image ${idx + 1} of ${imagesArr.length}`}
                   tabIndex={0}
                 >
