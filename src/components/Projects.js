@@ -127,16 +127,6 @@ function Projects() {
         </div>
       )}
 
-      <section className="project-categories">
-        <h2>Browse Projects by Category</h2>
-        <div className="category-buttons">
-          <button className="category-button active">All Projects</button>
-          <button className="category-button">Hotels & Resorts</button>
-          <button className="category-button">Restaurants</button>
-          <button className="category-button">Corporate Offices</button>
-          <button className="category-button">Retail Spaces</button>
-        </div>
-      </section>
 
       <section className="project-cta">
         <h2>Ready to Start Your Project?</h2>

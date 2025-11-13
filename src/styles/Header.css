@@ -69,7 +69,7 @@ body.dark-mode .site-header {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.80rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
