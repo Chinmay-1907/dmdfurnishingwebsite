@@ -1808,4 +1808,25 @@
 			</subcategory>
 		</furnitureType>
 	</place>
+    <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/placeholder.png">
+        <furnitureType id="bedroom" name="Bedroom" description="Bedroom furniture" image="/Images/placeholder.png">
+            <subcategory id="beds" name="Beds" description="Beds for residential spaces" image="/Images/placeholder.png">
+                <product id="king-mdf-headboard-unit" name="King MDF Headboard Unit" description="A stylish and durable King MDF Headboard Unit, perfect for modern residential bedrooms." price="$1200" tags="headboard, king, mdf, bedroom, residential">
+                    <images>
+                        <image src="/Images/placeholder.png" alt="King MDF Headboard Unit" />
+                    </images>
+                    <specifications>
+                        <spec name="Material" value="MDF" />
+                        <spec name="Size" value="King" />
+                        <spec name="Color" value="Customizable" />
+                        <spec name="Dimensions" value="78W x 48H x 2D inches" />
+                        <spec name="Assembly" value="Required" />
+                        <spec name="Warranty" value="1 Year" />
+                        <spec name="Style" value="Modern" />
+                        <spec name="Finish" value="Matte" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
+    </place>
 </places>

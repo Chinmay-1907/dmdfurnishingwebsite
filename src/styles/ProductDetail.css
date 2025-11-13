@@ -212,8 +212,36 @@
 
 .specifications-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive 2x4 like grid */
   gap: 15px;
+}
+
+.specification-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px; /* Increased padding for better spacing */
+  background-color: var(--color-surface-elevated);
+  border-radius: 8px; /* Slightly more rounded corners */
+  border-left: 4px solid #d4af37; /* Thicker accent border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.specification-item:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.specification-name {
+  font-weight: 700; /* Bolder name */
+  color: var(--color-text); /* Darker color for name */
+  margin-bottom: 8px; /* More space below name */
+  font-size: 0.95rem; /* Slightly larger font */
+}
+
+.specification-value {
+  color: var(--color-text-secondary); /* Lighter color for value */
+  font-weight: 500;
+  font-size: 1rem; /* Clearer font size */
 }
 
 .specification-item {

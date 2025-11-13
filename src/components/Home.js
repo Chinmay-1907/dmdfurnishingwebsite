@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,6 +9,9 @@ import 'aos/dist/aos.css';
 import { FiPhone, FiMail, FiCalendar } from 'react-icons/fi';
 
 function Home() {
+  const [contactImage, setContactImage] = useState(
+    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'
+  );
   const heroSlides = [
     {
       image: '/Images/Tailored_Guestroom_Collections.jpg',
@@ -88,7 +91,7 @@ function Home() {
         <div className="nav-grid">
           {/* About Us Section */}
           <div className="nav-item" data-aos="fade-up" data-aos-delay="150">
-            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+            <div className="nav-image" style={{backgroundImage: `url('/Images/About_DMD_Furnishing_Page.jpg`}}>
               <div className="nav-overlay">
                 <h3>About Us</h3>
               </div>
@@ -103,7 +106,7 @@ function Home() {
 
           {/* Products Section */}
           <div className="nav-item" data-aos="fade-up" data-aos-delay="200">
-            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+            <div className="nav-image" style={{backgroundImage: `url('/Images/Our_Products_2.jpg')`}}>
               <div className="nav-overlay">
                 <h3>Our Products</h3>
               </div>
@@ -118,7 +121,7 @@ function Home() {
 
           {/* Projects Section */}
           <div className="nav-item" data-aos="fade-up" data-aos-delay="250">
-            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1540638349517-3abd5afc5847?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+            <div className="nav-image" style={{backgroundImage: `url('/Images/Our_Projects.jpg')`}}>
               <div className="nav-overlay">
                 <h3>Our Projects</h3>
               </div>
@@ -132,8 +135,8 @@ function Home() {
           </div>
 
           {/* Services Section */}
-          <div className="nav-item" data-aos="fade-up" data-aos-delay="300">
-            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+          <div className="nav-item" data-aos="fade-up" data-aos-delay="400">
+            <div className="nav-image" style={{backgroundImage: `url('/Images/Our Services.jpg')`}}>
               <div className="nav-overlay">
                 <h3>Our Services</h3>
               </div>
@@ -148,7 +151,7 @@ function Home() {
 
           {/* Testimonials Section */}
           <div className="nav-item" data-aos="fade-up" data-aos-delay="350">
-            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1538688525198-9b88f6f53126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+            <div className="nav-image" style={{backgroundImage: `url('/Images/Customer Testimonials.jpg')`}}>
               <div className="nav-overlay">
                 <h3>Customer Testimonials</h3>
               </div>
@@ -163,13 +166,15 @@ function Home() {
 
           {/* Premium Collections */}
           <div className="nav-item" data-aos="fade-up" data-aos-delay="400">
-            <div className="nav-image" style={{backgroundImage: `url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')`}}>
+            <div className="nav-image" style={{backgroundImage: `url('/Images/Premium Collections.jpg')`}}>
               <div className="nav-overlay">
                 <h3>Premium Collections</h3>
               </div>
             </div>
             <div className="nav-content">
-              <p>Discover curated suites from our signature line featuring handcrafted hospitality statements.</p>
+              <p>Discover the DMD Signature Line — handcrafted hospitality furniture that blends timeless design with modern functionality.
+					Our curated suites feature bespoke creations tailored for hotels, lounges, and commercial spaces, all designed with precision and built to last.
+			  </p>
               <Link to="/inspirations">
                 <button className="nav-button">Explore Collection</button>
               </Link>
@@ -180,7 +185,9 @@ function Home() {
 
       {/* Contact CTA Section */}
       <section className="contact-section">
-        <div className="contact-overlay"></div>
+        <div className="contact-overlay">
+          <img src={contactImage} alt="Ready to Transform Your Space" className="contact-bg-image" />
+        </div>
         <div className="contact-content">
           <div className="contact-copy">
             <h2>Ready to Transform Your Space?</h2>

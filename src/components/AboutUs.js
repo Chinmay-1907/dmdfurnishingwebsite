@@ -14,7 +14,7 @@ const AboutUs = () => {
         style={{
           background:
             `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('${HERO_IMAGE_URL}')`,
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center'
         }}

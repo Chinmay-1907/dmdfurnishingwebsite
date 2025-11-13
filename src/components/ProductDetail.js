@@ -386,9 +386,6 @@ function ProductDetail() {
           <div className="product-description">
             <h2>Description</h2>
             <p>{detail.product.description}</p>
-            {detail.product.description && (
-              <p>This premium furniture piece exemplifies our commitment to quality craftsmanship and timeless design. Each piece is meticulously crafted using the finest materials to ensure durability and aesthetic appeal that will enhance any space.</p>
-            )}
           </div>
 
           {/* Price */}
