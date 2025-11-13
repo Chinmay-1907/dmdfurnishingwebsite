@@ -16,8 +16,10 @@ function ProductDetail() {
   const thumbRefs = useRef([]);
   
   useEffect(() => {
+    console.log('[ProductDetail] useEffect called');
     // If any segment is missing, do not run product-detail fetch/redirect logic
     if (!institutionId || !furnitureTypeId || !subcategoryId || !productId) {
+      console.log('[ProductDetail] Missing parameters, returning.');
       return;
     }
 
@@ -213,21 +215,24 @@ function ProductDetail() {
         setLoading(false);
         
       } catch (e) {
+        if (e.name === 'AbortError') {
+          // Silently ignore aborted requests triggered by cleanup or route changes
+          return;
+        }
         console.error('[ProductDetail] Error', e);
         if (!isActive) return;
-        if (e.name !== 'AbortError') {
-          setError(e.message || 'Unknown error');
-          setLoading(false);
-        }
+        setError(e.message || 'Unknown error');
+        setLoading(false);
       }
     };
     
     fetchProductDetail();
     return () => {
+      console.log('[ProductDetail] Cleanup function called');
       isActive = false;
       controller.abort();
     };
-  }, [institutionId, furnitureTypeId, subcategoryId, productId]);
+  }, [institutionId, furnitureTypeId, subcategoryId, productId, navigate]);
 
   // Reset active image when navigating to a new product
   useEffect(() => {
@@ -342,11 +347,9 @@ function ProductDetail() {
                 <button
                   key={idx}
                   ref={(el) => (thumbRefs.current[idx] = el)}
-                  className={`thumb ${activeIndex === idx ? 'isActive' : ''}`}
+                  className={`thumbnail-button ${activeIndex === idx ? 'active' : ''}`}
                   onClick={() => setActiveIndex(idx)}
-                  aria-selected={activeIndex === idx}
-                  aria-label={`View image ${idx + 1} of ${imagesArr.length}`}
-                  tabIndex={0}
+                  aria-label={`View image ${idx + 1}`}
                 >
                   <img src={img.src} alt={img.alt || detail.product.name} loading="lazy" />
                 </button>

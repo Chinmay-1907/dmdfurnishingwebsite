@@ -132,6 +132,10 @@ function Products() {
         setLoading(false);
         
       } catch (e) {
+        if (e.name === 'AbortError') {
+          // Ignore aborted requests triggered by route changes or cleanup in dev
+          return;
+        }
         console.error('[Products] Load/parse error:', e);
         setError(e.message || 'Unknown error');
         setLoading(false);

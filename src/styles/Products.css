@@ -67,9 +67,10 @@
 
 .category-image,
 .product-image {
-  height: 240px;
-  background-size: cover;
+  height: 320px;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
 

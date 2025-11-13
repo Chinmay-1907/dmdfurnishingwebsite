@@ -9,8 +9,8 @@ import 'aos/dist/aos.css';
 import { FiPhone, FiMail, FiCalendar } from 'react-icons/fi';
 
 function Home() {
-  const [contactImage, setContactImage] = useState(
-    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'
+  const [contactImage] = useState(
+    '/Images/Ready to Transform Your Space 1.jpg'
   );
   const heroSlides = [
     {
