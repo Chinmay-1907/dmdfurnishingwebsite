@@ -233,7 +233,6 @@ function ProductDetail() {
       controller.abort();
     };
   }, [institutionId, furnitureTypeId, subcategoryId, productId, navigate]);
-  }, [institutionId, furnitureTypeId, subcategoryId, productId, navigate]);
 
   // Reset active image when navigating to a new product
   useEffect(() => {
