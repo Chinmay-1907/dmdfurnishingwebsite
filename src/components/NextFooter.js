@@ -33,8 +33,7 @@ function NextFooter() {
             <div className="footer-column">
               <h3>Contact</h3>
               <ul>
-                <li>123 Luxury Avenue, Suite 500</li>
-                <li>New York, NY 10001</li>
+                <li>56 Leonard St Unit 5, Foxboro, MA 02035</li>
                 <li>+1 (617) 223-7781</li>
               <li>Sales@DMDFurnishing.com</li>
               </ul>

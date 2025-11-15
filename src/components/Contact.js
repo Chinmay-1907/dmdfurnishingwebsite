@@ -28,9 +28,9 @@ function Contact() {
               <FaMapMarkerAlt />
             </div>
             <div className="info-text">
-              <h3>Address</h3>
-              <p>5 Leonard Street</p>
-              <p>Foxborough, MA, USA</p>
+            <h3>Address</h3>
+            <p>56 Leonard St Unit 5</p>
+            <p>Foxboro, MA 02035</p>
             </div>
           </div>
           <div className="info-item">
@@ -108,7 +108,7 @@ function Contact() {
           <div className="map-placeholder">
             <div className="placeholder-content">
               <FaMapMarkerAlt className="placeholder-icon" />
-              <p>5 Leonard Street, Foxborough, MA, USA</p>
+        <p>56 Leonard St Unit 5, Foxboro, MA 02035</p>
               <p className="placeholder-note">Showroom visits are available by appointment only—call to arrange a personalized viewing and experience our craftsmanship firsthand.</p>
             </div>
           </div>
