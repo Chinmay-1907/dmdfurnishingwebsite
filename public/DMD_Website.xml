@@ -494,9 +494,20 @@
 				</product>
 			</subcategory>
 			<subcategory id="Desk" name="Desk" description="Desk in Guest Room" image="/Images/Hotel/Guest Room/Desk/Desk.jpg">
-				<product id="Executive Desk" name="Executive Desk" description="Executive Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Executive Desk/Executive Desk 1.jpg" tags="executive,desk">
+				<product id="Executive Desk" name="Executive Desk" description="Executive Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" tags="executive,desk">
 					<images>
-						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/Executive Desk 1.jpg" alt="Executive Desk - Executive Desk 1" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" alt="Executive Desk - Executive Desk 1" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Axis Executive Desk.jpg" alt="Executive Desk - Executive Desk 2" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Bracket Executive Desk.jpg" alt="Executive Desk - Executive Desk 3" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Core Executive Desk.jpg" alt="Executive Desk - Executive Desk 4" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Echo Executive Desk.jpg" alt="Executive Desk - Executive Desk 5" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Forma Executive Desk.jpg" alt="Executive Desk - Executive Desk 6" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Grid Executive Desk.jpg" alt="Executive Desk - Executive Desk 7" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Modulo Executive Desk.jpg" alt="Executive Desk - Executive Desk 8" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Nexus Executive Desk.jpg" alt="Executive Desk - Executive Desk 9" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Strata Executive Desk.jpg" alt="Executive Desk - Executive Desk 10" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Terra Executive Desk.jpg" alt="Executive Desk - Executive Desk 11" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Vault Executive Desk.jpg" alt="Executive Desk - Executive Desk 12" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -521,6 +532,13 @@
 				<product id="Writing Desk" name="Writing Desk" description="Writing Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" alt="Writing Desk - Writing Desk Cross Leg One side" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Grid Writing Desk.jpg" alt="Writing Desk - DMD Grid Writing Desk" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Luma Writing Desk.jpg" alt="Writing Desk - DMD Luma Writing Desk" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Strata Writing Desk.jpg" alt="Writing Desk - DMD Strata Writing Desk" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Vault Writing Desk.jpg" alt="Writing Desk - DMD Vault Writing Desk" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Core Writing Desk.jpg" alt="Writing Desk - DMD Core Writing Desk" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Axis Writing Desk.jpg" alt="Writing Desk - DMD Axis Writing Desk" />
+						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Forma Writing Desk.jpg" alt="Writing Desk - DMD Forma Writing Desk" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
