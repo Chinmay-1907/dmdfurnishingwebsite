@@ -68,9 +68,10 @@
 .category-image,
 .product-image {
   height: 320px;
-  background-size: contain;
+  background-size: cover; /* Fill tile consistently */
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #ffffff; /* Prevent dark letterboxing */
   position: relative;
 }
 

@@ -347,9 +347,10 @@ function ProductDetail() {
                 <button
                   key={idx}
                   ref={(el) => (thumbRefs.current[idx] = el)}
-                  className={`thumbnail-button ${activeIndex === idx ? 'active' : ''}`}
+                  className={`thumb ${activeIndex === idx ? 'isActive' : ''}`}
                   onClick={() => setActiveIndex(idx)}
                   aria-label={`View image ${idx + 1}`}
+                  type="button"
                 >
                   <img src={img.src} alt={img.alt || detail.product.name} loading="lazy" />
                 </button>
