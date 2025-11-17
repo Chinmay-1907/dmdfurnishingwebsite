@@ -422,11 +422,12 @@
 				<product id="Full XL Bed Frame - Metal" name="Full XL Bed Frame - Metal" description="Full XL Bed Frame - Metal product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 2.png" tags="full,xl,bed,frame,metal">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 2.png" alt="Full XL Bed Frame - Metal - Bed Base Model 2" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 3.png" alt="Full XL Bed Frame - Metal - Bed Base Model 3" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="56&quot; (Customizable)" /> W=56", D=81.5", H=18", 16'', 10''
+						<spec name="Depth" value="81.5&quot; (Customizable)" />
+						<spec name="Height" value="18&quot;/16&quot;/10&quot; (Customizable)" />
 						<spec name="Material" value="Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
@@ -434,13 +435,14 @@
 				<product id="King Bed Frame - Metal" name="King Bed Frame - Metal" description="King Bed Frame - Metal product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 3.png" tags="king,bed,frame,metal">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 3.png" alt="King Bed Frame - Metal - Bed Base Model 3" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 2.png" alt="King Bed Frame - Metal - Bed Base Model 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="78&quot; (Customizable)" />  
+						<spec name="Depth" value="81.5&quot; (Customizable)" />
+						<spec name="Height" value="18&quot;/16&quot;/10&quot; (Customizable)" />
 						<spec name="Material" value="Metal (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Powder coating color - to Your Specifications" />
 					</specifications>
 				</product>
 				<product id="King Bed Frame - MDF" name="King Bed Frame - MDF" description="King Bed Frame - MDF product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - MDF/DMD Axis.jpg" tags="king,bed,frame,mdf">
@@ -453,9 +455,9 @@
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - MDF/DMD Vault.jpg" alt="King Bed Frame - MDF - DMD Vault" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="78&quot; (Customizable)" />
+						<spec name="Depth" value="81.5&quot; (Customizable)" />
+						<spec name="Height" value="18&quot;/16&quot;/10&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
@@ -463,12 +465,30 @@
 				<product id="Queen Bed Frame - Metal" name="Queen Bed Frame - Metal" description="Queen Bed Frame - Metal product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 3.png" tags="queen,bed,frame,metal">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 3.png" alt="Queen Bed Frame - Metal - Bed Base Model 3" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 2.png" alt="Queen Bed Frame - Metal - Bed Base Model 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="62&quot; (Customizable)" />
+						<spec name="Depth" value="81.5&quot; (Customizable)" />
+						<spec name="Height" value="18&quot;/16&quot;/10&quot; (Customizable)" />
 						<spec name="Material" value="Metal (customizable)" />
+						<spec name="Finish" value="Powder coating color - to Your Specifications" />
+					</specifications>
+				</product>
+				<product id="Queen Bed Frame - MDF" name="Queen Bed Frame - MDF" description="Queen Bed Frame - MDF product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" tags="queen,bed,frame,mdf">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" alt="Queen Bed Frame - MDF - DMD Axis" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Bloc.jpg" alt="Queen Bed Frame - MDF - DMD Bloc" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Core.jpg" alt="Queen Bed Frame - MDF - DMD Core" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Crate.jpg" alt="Queen Bed Frame - MDF - DMD Crate" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Terra.jpg" alt="Queen Bed Frame - MDF - DMD Terra" />
+						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Vault.jpg" alt="Queen Bed Frame - MDF - DMD Vault" />
+					</images>
+					<specifications>
+						<spec name="Width" value="78&quot; (Customizable)" />
+						<spec name="Depth" value="81.5&quot; (Customizable)" />
+						<spec name="Height" value="18&quot;/16&quot;/10&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
