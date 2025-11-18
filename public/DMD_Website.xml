@@ -520,6 +520,18 @@
 				<product id="Workstation Desk" name="Workstation Desk" description="Workstation Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" tags="workstation,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" alt="Workstation Desk - Workstation Desk 1" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Axis Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 2" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Bracket Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 3" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Core Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 4" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Echo Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 5" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Forma Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 6" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Grid Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 7" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Luma Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 8" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Modulo Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 9" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Nexus Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 10" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Strata Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 11" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Terra Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 12" />
+						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Vault Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 13" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -550,19 +562,19 @@
 				</product>
 			</subcategory>
 			<subcategory id="Head Board" name="Head Board" description="Head Board in Guest Room" image="/Images/Hotel/Guest Room/Head Board/Head Board.png">
-				<product id="Full XL Head Board" name="Full XL Head Board" description="Full XL Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
+				<product id="Full XL MDF Head Board" name="Full XL Head Board" description="Full XL Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" alt="Full XL Head Board - Full XL Head Board" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="56&quot; (Customizable)" />
+						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
+						<spec name="Height" value="48&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Shoreline.jpg" tags="king,headboard - MDF/Wood">
+				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" tags="king,headboard - MDF/Wood">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Driftmark.jpg" alt="King Head Board - DMD Driftmark"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" alt="King Head Board - DMD Stratus"/>
@@ -571,14 +583,15 @@
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Tidefall.jpg" alt="King Head Board - DMD Tidefall"/>
 					</images>
 					<specifications>
-						<spec name="Width" value=" 80-82 &quot; (Customizable)" />
+						<spec name="Headboard Width" value=" 80-82 &quot; (Customizable)" /> 
+						<spec name="Wallguard Width" value=" 18-24 &quot; (Customizable)" /> 
 						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
-						<spec name="Height" value="48-46&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Height" value="46-48&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 					</product>
-				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Aura.jpg" tags="king,headboard - Upholstered">
+				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD main.jpg" tags="king,headboard - Upholstered">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Aura.jpg" alt="King Head Board - King DMD Aura"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Axis.jpg" alt="King Head Board - King DMD Axis"/>
@@ -591,25 +604,21 @@
 					</images>
 					<specifications>
 						<spec name="Width" value=" 80-82 &quot; (Customizable)" />
+						<spec name="Wallguard Width" value=" 18-24 &quot; (Customizable)" /> 
 						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
 						<spec name="Height" value="46-48&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Queen Head Board" name="Queen Head Board" description="Queen Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/HB2.jpg" tags="queen,head,board">
+				<product id="Queen Head Board" name="Queen Head Board" description="Queen Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" tags="queen,head,board">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" alt="Queen Head Board - DMD Aura"/>
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aurelius.jpg" alt="Queen Head Board - DMD Aurelius"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Axis.jpg" alt="Queen Head Board - DMD Axis"/>
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Crest.jpg" alt="Queen Head Board - DMD Crest"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Drift.jpg" alt="Queen Head Board - DMD Drift"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Edge.jpg" alt="Queen Head Board - DMD Edge"/>
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Ember.jpg" alt="Queen Head Board - DMD Ember"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Halo.jpg" alt="Queen Head Board - DMD Halo"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Haven.jpg" alt="Queen Head Board - DMD Haven"/>
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Horizon.jpg" alt="Queen Head Board - DMD Horizon"/>
-						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Loft.jpg" alt="Queen Head Board - DMD Loft"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Mesa.jpg" alt="Queen Head Board - DMD Mesa"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Nest.jpg" alt="Queen Head Board - DMD Nest"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Solace.jpg" alt="Queen Head Board - DMD Solace"/>
@@ -621,7 +630,7 @@
 						<spec name="Width" value="48-72&quot; (Customizable)" />
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
