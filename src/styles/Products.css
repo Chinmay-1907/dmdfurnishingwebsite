@@ -68,7 +68,7 @@
 .category-image,
 .product-image {
   height: 320px;
-  background-size: cover; /* Fill tile consistently */
+  background-size: cover; /* default for category tiles */
   background-position: center;
   background-repeat: no-repeat;
   background-color: #ffffff; /* Prevent dark letterboxing */
@@ -284,4 +284,14 @@
   .product-image {
     height: 200px;
   }
+}
+.product-image {
+  background-size: contain !important; /* Show full image without cropping */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.category-image {
+  background-size: contain !important; /* Show full image without cropping */
+  background-repeat: no-repeat;
+  background-position: center;
 }
