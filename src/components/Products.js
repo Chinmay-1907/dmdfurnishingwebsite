@@ -419,7 +419,7 @@ function Products() {
         
         <div className="products-grid">
           {selectedSubcategory.products.map((product, index) => (
-            <div key={product.id || index} className="product-item">
+            <div key={`${toCatalogSlug(product.id || product.name)}-${index}`} className="product-item">
               <div 
                 className="product-image" 
                 style={{ backgroundImage: `url("${encodeURI(product.image)}")` }}
@@ -434,7 +434,7 @@ function Products() {
                   ))}
                 </div>
               )}
-              <Link to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}/${toCatalogSlug(selectedSubcategory.id)}/${toCatalogSlug(product.id)}`} className="details-button">View Details</Link>
+              <Link to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}/${toCatalogSlug(selectedSubcategory.id)}/${toCatalogSlug(product.name || product.id)}`} className="details-button">View Details</Link>
             </div>
           ))}
         </div>

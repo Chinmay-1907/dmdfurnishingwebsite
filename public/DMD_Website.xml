@@ -1156,21 +1156,21 @@
 				</product>
 			</subcategory>
 			<subcategory id="Writing Desk" name="Writing Desk" description="Writing Desk in Workstations" image="/Images/Office/Workstations/Writing Desk/Writing Desk Cross Leg One side.jpg" >
-				<product id="Writing Desk" name="Writing Desk - Metal Leg bbb" description="Writing Desk product for Desk" image="/Images/Office/Workstations/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
+				<product id="Writing Desk - Metal Leg" name="Writing Desk - Metal Leg" description="Writing Desk product for Desk" image="/Images/Office/Workstations/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
 					<images>
 						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk - Metal Leg/Writing Desk Cross Leg One side.jpg" alt="Writing Desk - Writing Desk Cross Leg One side" />
 						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk - Metal Leg/DMD Luma Writing Desk.jpg" alt="Writing Desk - DMD Luma Writing Desk" />
 						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk - Metal Leg/DMD Strata Writing Desk.jpg" alt="Writing Desk - DMD Strata Writing Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="64&quot; (Customizable)" />
+						<spec name="Depth" value="24&quot; (Customizable)" />
+						<spec name="Height" value="29&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Writing Desk" name="Writing Desk - MDF Leg aaa" description="Writing Desk product for Desk" image="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Grid Writing Desk.jpg" tags="writing,desk">
+				<product id="Writing Desk - MDF Leg" name="Writing Desk - MDF Leg" description="Writing Desk product for Desk" image="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Grid Writing Desk.jpg" tags="writing,desk">
 					<images>
 						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Grid Writing Desk.jpg" alt="Writing Desk - DMD Grid Writing Desk" />
 						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Vault Writing Desk.jpg" alt="Writing Desk - DMD Vault Writing Desk" />
@@ -1179,10 +1179,10 @@
 						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Forma Writing Desk.jpg" alt="Writing Desk - DMD Forma Writing Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="64&quot; (Customizable)" />
+						<spec name="Depth" value="24&quot; (Customizable)" />
+						<spec name="Height" value="29&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>

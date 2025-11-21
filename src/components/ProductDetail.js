@@ -107,7 +107,9 @@ function ProductDetail() {
         const products = foundSubcategory.querySelectorAll('product');
         let foundProduct = null;
         for (const product of products) {
-          if (idsMatch(product.getAttribute('id'), productId)) {
+          const pid = product.getAttribute('id');
+          const pname = product.getAttribute('name');
+          if (idsMatch(pid, productId) || idsMatch(pname, productId)) {
             foundProduct = product;
             break;
           }
@@ -195,7 +197,8 @@ function ProductDetail() {
         const canonicalInstitution = toCatalogSlug(detailObj.institution.id);
         const canonicalFurniture = toCatalogSlug(detailObj.furnitureType.id);
         const canonicalSubcategory = toCatalogSlug(detailObj.subcategory.id);
-        const canonicalProduct = toCatalogSlug(detailObj.product.id);
+        // Prefer product name for canonical slug to avoid collisions on duplicate IDs
+        const canonicalProduct = toCatalogSlug(detailObj.product.name || detailObj.product.id);
         const currentInstitution = toCatalogSlug(institutionId || '');
         const currentFurniture = toCatalogSlug(furnitureTypeId || '');
         const currentSubcategory = toCatalogSlug(subcategoryId || '');
