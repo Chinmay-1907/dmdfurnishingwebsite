@@ -722,6 +722,10 @@
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Modulo.jpg" alt="AC-New Collection" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Strukt.jpg" alt="AC-New Collection" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Vanta.jpg" alt="AC-New Collection" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/Soft blush_peac Upholstered Accent Chair 360 return.jpg" alt="AC-New Collection" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/Soft Yellow Upholstered Accent Chair 4.jpg" alt="AC-New Collection" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/Warm Gray and taupes Upholstered Accent Chair 360 return 6.jpg" alt="AC-New Collection" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/Warm terracott Upholstered Accent Chair 360 return 1.jpg" alt="AC-New Collection" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1092,22 +1096,20 @@
 				</product>
 			</subcategory>
 			<subcategory id="Executive Desk" name="Executive Desk" description="Executive Desk in Workstations" image="/Images/Office/Workstations/Executive Desk/Executive Desk.jpg">
-				<product id="L-Shaped Executive Desk" name="L-Shaped Executive Desk" description="L-Shaped Executive Desk product for Executive Desk" image="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Executive Desk with closet.jpg" tags="l-shaped,executive,desk">
+				<product id="L-Shaped Executive Desk" name="L-Shaped Executive Desk" description="The DMD L-Shaped Executive Desk product for Executive Desk. A sleek executive desk in dark wood finish featuring dual pedestal drawers, integrated cable cutouts, and a raised modesty panel. Supported by metal framing, it offers expansive workspace, under-desk lighting, and tech-ready functionality—ideal for modern office environments." image="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Executive Desk with LED Lights.jpg" tags="l-shaped,executive,desk">
 					<images>
-						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Executive Desk with closet.jpg" alt="L-Shaped Executive Desk - L-Shaped Executive Desk with closet" />
 						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Executive Desk with LED Lights.jpg" alt="L-Shaped Executive Desk - L-Shaped Executive Desk with LED Lights" />
-						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Workstation Dark.jpg" alt="L-Shaped Executive Desk - L-Shaped Workstation Dark" />
-						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Workstation.jpg" alt="L-Shaped Executive Desk - L-Shaped Workstation" />
+						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Executive Desk with LED Lights 1.jpg" alt="L-Shaped Executive Desk - L-Shaped Workstation Dark" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="63-66&quot; (Customizable)" />
+						<spec name="Depth" value="47-51&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Engineered wood, Powder-coated steel(customizable) (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="L-Shaped Executive Desk 2" name="L-Shaped Executive Desk 2" description="L-Shaped Executive Desk 2 product for Executive Desk" image="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk 2.jpg" tags="l-shaped,executive,desk,2">
+				<product id="L-Shaped Executive Desk 2" name="L-Shaped Executive Desk 2" description="The DMD Stratus is a modern L-shaped workstation desk designed for executive and home office environments. Its layout maximizes surface area while maintaining a sleek, professional aesthetic." image="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk 2.jpg" tags="l-shaped,executive,desk,2">
 					<images>
 						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk 2 - Cable Managment.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Cable Managment" />
 						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk 2 - Front View.png" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk 2 - Front View" />
@@ -1118,10 +1120,10 @@
 						<image src="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk 2/L-Shaped Executive Desk Dark Wood.jpg" alt="L-Shaped Executive Desk 2 - L-Shaped Executive Desk Dark Wood" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="63-66&quot; (Customizable)" />  
+						<spec name="Depth" value="47-51&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Engineered wood, Powder-coated steel(customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -1131,10 +1133,10 @@
 						<image src="/Images/Office/Workstations/Executive Desk/Straight Executive Desk/Straight Executive Desk Tela.jpg" alt="Straight Executive Desk - Straight Executive Desk Tela" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="63-66&quot; (Customizable)" />
+						<spec name="Depth" value="47-51&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Engineered wood, Powder-coated steel(customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -1145,6 +1147,22 @@
 						<image src="/Images/Office/Workstations/Executive Desk/U-Shaped Executive Desk/U-Shaped Workstation.jpg" alt="U-Shaped Executive Desk - U-Shaped Workstation" />
 					</images>
 					<specifications>
+						<spec name="Width" value="63-66&quot; (Customizable)" />
+						<spec name="Depth" value="47-51&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Engineered wood, Powder-coated steel(customizable)" />
+						<spec name="Finish" value="Custom-Built to Your Specifications" />
+					</specifications>
+				</product>
+			</subcategory>
+			<subcategory id="Writing Desk" name="Writing Desk" description="Writing Desk in Workstations" image="/Images/Office/Workstations/Writing Desk/Writing Desk Cross Leg One side.jpg" >
+				<product id="Writing Desk" name="Writing Desk - Metal Leg bbb" description="Writing Desk product for Desk" image="/Images/Office/Workstations/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
+					<images>
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk - Metal Leg/Writing Desk Cross Leg One side.jpg" alt="Writing Desk - Writing Desk Cross Leg One side" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk - Metal Leg/DMD Luma Writing Desk.jpg" alt="Writing Desk - DMD Luma Writing Desk" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk - Metal Leg/DMD Strata Writing Desk.jpg" alt="Writing Desk - DMD Strata Writing Desk" />
+					</images>
+					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
@@ -1152,11 +1170,13 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-			</subcategory>
-			<subcategory id="Standing Desk" name="Standing Desk" description="Standing Desk in Workstations" image="/Images/Office/Workstations/Standing Desk/standing-desks.jpg">
-				<product id="Convertible Standing Desk" name="Convertible Standing Desk" description="Convertible Standing Desk product for Standing Desk" image="/Images/Office/Workstations/Standing Desk/Convertible Standing Desk/convertible standing desk.png" tags="convertible,standing,desk">
+				<product id="Writing Desk" name="Writing Desk - MDF Leg aaa" description="Writing Desk product for Desk" image="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Grid Writing Desk.jpg" tags="writing,desk">
 					<images>
-						<image src="/Images/Office/Workstations/Standing Desk/Convertible Standing Desk/convertible standing desk.png" alt="Convertible Standing Desk - convertible standing desk" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Grid Writing Desk.jpg" alt="Writing Desk - DMD Grid Writing Desk" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Vault Writing Desk.jpg" alt="Writing Desk - DMD Vault Writing Desk" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Core Writing Desk.jpg" alt="Writing Desk - DMD Core Writing Desk" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Axis Writing Desk.jpg" alt="Writing Desk - DMD Axis Writing Desk" />
+						<image src="/Images/Office/Workstations/Writing Desk/Writing Desk MDF Leg/DMD Forma Writing Desk.jpg" alt="Writing Desk - DMD Forma Writing Desk" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
