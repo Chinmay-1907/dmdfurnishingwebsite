@@ -1017,15 +1017,16 @@
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Visitor Chairs" name="Visitor Chairs" description="Visitor Chairs in Seating" image="/Images/Office/Seating/Visitor Chairs/Visitor Chairs.jpg">
+			<subcategory id="Visitor Chairs" name="Visitor Chairs" description="Visitor Chairs in Seating" image="/Images/Office/Seating/Visitor Chairs/padded visitor chair.png">
 				<product id="Padded Visitor Chair" name="Padded Visitor Chair" description="Padded Visitor Chair product for Visitor Chairs" image="/Images/Office/Seating/Visitor Chairs/Padded Visitor Chair/padded visitor chair.png" tags="padded,visitor,chair">
 					<images>
 						<image src="/Images/Office/Seating/Visitor Chairs/Padded Visitor Chair/padded visitor chair.png" alt="Padded Visitor Chair - padded visitor chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="22&quot; (Customizable)" />
+						<spec name="Depth" value="23&quot; (Customizable)" />
+						<spec name="Height" value="32&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18&quot; (standard ergonomic height)"/> 
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
@@ -1035,21 +1036,24 @@
 						<image src="/Images/Office/Seating/Visitor Chairs/Plastic Visitor Chair/plastic visitor chair.png" alt="Plastic Visitor Chair - plastic visitor chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="18.5&quot; (Customizable)" />
+						<spec name="Depth" value="20&quot; (Customizable)" />
+						<spec name="Height" value="32&quot; (Customizable)" />
+						<spec name="Seat Height" value="~17.5&quot; (standard ergonomic height)"/> 
+						<spec name="Material" value="Molded polypropylene/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Stackable Visitor Chair" name="Stackable Visitor Chair" description="Stackable Visitor Chair product for Visitor Chairs" image="/Images/Office/Seating/Visitor Chairs/Stackable Visitor Chair/Stackable Visitor Chair.png" tags="stackable,visitor,chair">
+				<product id="Stackable Visitor Chair" name="Stackable Visitor Chair" description="Stackable Visitor Chair - Stacking Capacity: 4–5 chairs high (floor stack or dolly)" image="/Images/Office/Seating/Visitor Chairs/Stackable Visitor Chair/Stackable Visitor Chair.png" tags="stackable,visitor,chair">
 					<images>
 						<image src="/Images/Office/Seating/Visitor Chairs/Stackable Visitor Chair/Stackable Visitor Chair.png" alt="Stackable Visitor Chair - Stackable Visitor Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="20&quot; (Customizable)" />
+						<spec name="Depth" value="33&quot; (Customizable)" />
+						<spec name="Height" value="30-32&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18&quot; (standard ergonomic height)"/> 
+						<spec name="Arm Height" value="~25.5&quot; (standard height)"/> 						
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
