@@ -978,6 +978,29 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
+				<!-- Conference Room Chairs under Ergonomic Chair -->
+                <product id="Conference Room Chairs" name="Conference Room Chairs" description="Conference and boardroom ergonomic seating options" image="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD Axis Conference Chair.png" tags="conference,boardroom,executive,chair">
+					<images>
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD Axis Conference Chair.png" alt="Conference Room Chairs - DMD Axis Conference Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD AeroMesh Boardroom Chair.png" alt="Conference Room Chairs - DMD AeroMesh Boardroom Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD CoreSync Meeting Chair.png" alt="Conference Room Chairs - DMD CoreSync Meeting Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD Elevate Executive Chair.png" alt="Conference Room Chairs - DMD Elevate Executive Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD FlowGrid Mesh Chair.png" alt="Conference Room Chairs - DMD FlowGrid Mesh Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD Modus High-Back Chair.png" alt="Conference Room Chairs - DMD Modus High-Back Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD Skyline Director Chair.png" alt="Conference Room Chairs - DMD Skyline Director Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD StratEdge Conference Chair.png" alt="Conference Room Chairs - DMD StratEdge Conference Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD UrbanForm Executive Chair.png" alt="Conference Room Chairs - DMD UrbanForm Executive Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD VibeMesh Conference Chair.png" alt="Conference Room Chairs - DMD VibeMesh Conference Chair" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Conference Room Chairs/DMD Zenith Boardroom Chair.png" alt="Conference Room Chairs - DMD Zenith Boardroom Chair" />
+					</images>
+					<specifications>
+						<spec name="Width" value="18-24&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-50&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Custom-Built to Your Specifications" />
+					</specifications>
+				</product>
 			</subcategory>
 			<subcategory id="Executive Chair" name="Executive Chair" description="Executive Chair in Seating" image="/Images/Office/Seating/Executive Chair/Executive Chair.jpg">
 				<product id="High-Back Executive Chair" name="High-Back Executive Chair" description="High-Back Executive Chair product for Executive Chair" image="/Images/Office/Seating/Executive Chair/High-Back Executive Chair/High-Back Executive Chair.png" tags="high-back,executive,chair">
