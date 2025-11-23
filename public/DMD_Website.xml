@@ -947,10 +947,13 @@
 						<image src="/Images/Office/Seating/Ergonomic Chair/Adjustable Ergonomic Chair/adjustable ergonomic chair.png" alt="Adjustable Ergonomic Chair - adjustable ergonomic chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="26&quot; (Customizable)" />
+						<spec name="Depth" value="27&quot; (Customizable)" />
+						<spec name="Height" value="46-52&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~275 lbs; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric/black mesh (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -959,10 +962,13 @@
 						<image src="/Images/Office/Seating/Ergonomic Chair/Fabric Ergonomic Chair/Fabric Ergonomic Chair.png" alt="Fabric Ergonomic Chair - Fabric Ergonomic Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="26&quot; (Customizable)" />
+						<spec name="Depth" value="27&quot; (Customizable)" />
+						<spec name="Height" value="46-52&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~275 lbs; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric/black mesh (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -971,10 +977,13 @@
 						<image src="/Images/Office/Seating/Ergonomic Chair/Mesh Ergonomic Chair/mesh ergonomic chair.png" alt="Mesh Ergonomic Chair - mesh ergonomic chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="26&quot; (Customizable)" />
+						<spec name="Depth" value="27&quot; (Customizable)" />
+						<spec name="Height" value="46-52&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~275 lbs; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric/black mesh (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -997,6 +1006,9 @@
 						<spec name="Width" value="18-24&quot; (Customizable)" />
 						<spec name="Depth" value="18-24&quot; (Customizable)" />
 						<spec name="Height" value="32-50&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~275 lbs; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
@@ -1008,10 +1020,13 @@
 						<image src="/Images/Office/Seating/Executive Chair/High-Back Executive Chair/High-Back Executive Chair.png" alt="High-Back Executive Chair - High-Back Executive Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="26&quot; (Customizable)" />
+						<spec name="Depth" value="27&quot; (Customizable)" />
+						<spec name="Height" value="45-49&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~275 lbs; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/PU leather or bonded leather (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -1020,22 +1035,29 @@
 						<image src="/Images/Office/Seating/Executive Chair/Leather Executive Chair/leather executive chair.png" alt="Leather Executive Chair - leather executive chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="27&quot; (Customizable)" />
+						<spec name="Depth" value="28&quot; (Customizable)" />
+						<spec name="Height" value="44-48&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~300 lbs; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/PU leather or bonded leather (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
 				<product id="Mid-Back Executive Chair" name="Mid-Back Executive Chair" description="Mid-Back Executive Chair product for Executive Chair" image="/Images/Office/Seating/Executive Chair/Mid-Back Executive Chair/Mid-Back Executive Chair.png" tags="mid-back,executive,chair">
 					<images>
 						<image src="/Images/Office/Seating/Executive Chair/Mid-Back Executive Chair/Mid-Back Executive Chair.png" alt="Mid-Back Executive Chair - Mid-Back Executive Chair" />
+						<image src="/Images/Office/Seating/Executive Chair/Mid-Back Executive Chair/Mid-Back Executive Chair 2.jpg" alt="Mid-Back Executive Chair - Mid-Back Executive Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="26&quot; (Customizable)" />
+						<spec name="Depth" value="27&quot; (Customizable)" />
+						<spec name="Height" value="45-49&quot; (Customizable)" />
+						<spec name="Seat Height" value="~18-22&quot; (Customizable)" />
+						<spec name="Arm Height" value="~25&quot; (Customizable)" />
+						<spec name="Weight Capacity" value="~275 lbs; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/PU leather or bonded leather (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
@@ -1084,44 +1106,6 @@
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="Workstations" name="Workstations" description="Workstations for Office" image="/Images/Office/Workstations/Office Workstations.jpg">
-			<subcategory id="Cubicle Systems" name="Cubicle Systems" description="Cubicle Systems in Workstations" image="/Images/Office/Workstations/Cubicle Systems/Cubicle Systems.jpg">
-				<product id="2-Panel Cubicle" name="2-Panel Cubicle" description="2-Panel Cubicle product for Cubicle Systems" image="/Images/Office/Workstations/Cubicle Systems/2-Panel Cubicle/2-panel cubicle.png" tags="2-panel,cubicle">
-					<images>
-						<image src="/Images/Office/Workstations/Cubicle Systems/2-Panel Cubicle/2-panel cubicle.png" alt="2-Panel Cubicle - 2-panel cubicle" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
-					</specifications>
-				</product>
-				<product id="3-Panel Cubicle" name="3-Panel Cubicle" description="3-Panel Cubicle product for Cubicle Systems" image="/Images/Office/Workstations/Cubicle Systems/3-Panel Cubicle/3-Panel Cubicle.png" tags="3-panel,cubicle">
-					<images>
-						<image src="/Images/Office/Workstations/Cubicle Systems/3-Panel Cubicle/3-Panel Cubicle.png" alt="3-Panel Cubicle - 3-Panel Cubicle" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
-					</specifications>
-				</product>
-				<product id="4-Panel Cubicle" name="4-Panel Cubicle" description="4-Panel Cubicle product for Cubicle Systems" image="/Images/Office/Workstations/Cubicle Systems/4-Panel Cubicle/4-panel cubicle.png" tags="4-panel,cubicle">
-					<images>
-						<image src="/Images/Office/Workstations/Cubicle Systems/4-Panel Cubicle/4-panel cubicle.png" alt="4-Panel Cubicle - 4-panel cubicle" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
-					</specifications>
-				</product>
-			</subcategory>
 			<subcategory id="Executive Desk" name="Executive Desk" description="Executive Desk in Workstations" image="/Images/Office/Workstations/Executive Desk/Executive Desk.jpg">
 				<product id="L-Shaped Executive Desk" name="L-Shaped Executive Desk" description="The DMD L-Shaped Executive Desk product for Executive Desk. A sleek executive desk in dark wood finish featuring dual pedestal drawers, integrated cable cutouts, and a raised modesty panel. Supported by metal framing, it offers expansive workspace, under-desk lighting, and tech-ready functionality—ideal for modern office environments." image="/Images/Office/Workstations/Executive Desk/L-Shaped Executive Desk/L-Shaped Executive Desk with LED Lights.jpg" tags="l-shaped,executive,desk">
 					<images>
@@ -1209,6 +1193,28 @@
 						<spec name="Width" value="64&quot; (Customizable)" />
 						<spec name="Depth" value="24&quot; (Customizable)" />
 						<spec name="Height" value="29&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
+						<spec name="Finish" value="Custom-Built to Your Specifications" />
+					</specifications>
+				</product>
+			</subcategory>
+		</furnitureType>
+		<furnitureType id="Storage and Organization" name="Storage and Organization" description="Storage and organization for Office" image="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 2.png">
+			<subcategory id="Storage Cabinets" name="Storage Cabinets" description="Storage cabinets in Office" image="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 2.png">
+				<product id="DMD SoftClose Modular Cabinet" name="DMD SoftClose Modular Cabinet" description="Soft-close modular storage system for office" image="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 2.png" tags="storage,cabinet,modular,soft-close">
+					<images>
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 2.png" alt="DMD SoftClose Modular Cabinet - 2" />
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 3.png" alt="DMD SoftClose Modular Cabinet - 3" />
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 4.png" alt="DMD SoftClose Modular Cabinet - 4" />
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 5.png" alt="DMD SoftClose Modular Cabinet - 5" />
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 6.png" alt="DMD SoftClose Modular Cabinet - 6" />
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 7.png" alt="DMD SoftClose Modular Cabinet - 7" />
+						<image src="/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet/DMD SoftClose Modular Cabinet 8.png" alt="DMD SoftClose Modular Cabinet - 8" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="12-24&quot; (Customizable)" />
+						<spec name="Height" value="24-84&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
