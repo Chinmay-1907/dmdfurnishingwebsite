@@ -6,233 +6,233 @@
 				<image src="/Images/Hospital/Patient Room/Patient Room 2.jpg" alt="Patient Room 2" />
 			</images>
 			<subcategory id="Bedside Cabinet" name="Bedside Cabinet" description="Bedside Cabinet in Patient Room" image="/Images/Hospital/Patient Room/Bedside Cabinet/Bedside Cabinet.jpg">
-				<product id="Double Drawer Cabinet" name="Double Drawer Cabinet" description="Double Drawer Cabinet product for Bedside Cabinet" image="/Images/Hospital/Patient Room/Bedside Cabinet/Double Drawer Cabinet/double drawer cabinet.png" tags="double,drawer,cabinet">
+				<product id="Double Drawer Cabinet" name="Double Drawer Cabinet" description="Compact bedside cabinet with two drawers; soft-close hardware and easy-clean surfaces" image="/Images/Hospital/Patient Room/Bedside Cabinet/Double Drawer Cabinet/double drawer cabinet.png" tags="double,drawer,cabinet">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Bedside Cabinet/Double Drawer Cabinet/double drawer cabinet.png" alt="Double Drawer Cabinet - double drawer cabinet" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="16-24&quot; (Customizable)" />
+						<spec name="Depth" value="16-20&quot; (Customizable)" />
+						<spec name="Height" value="28-34&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF carcass; powder-coated steel hardware (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer; edge-banded MDF; color-match available" />
 					</specifications>
 				</product>
-				<product id="Lockable Cabinet" name="Lockable Cabinet" description="Lockable Cabinet product for Bedside Cabinet" image="/Images/Hospital/Patient Room/Bedside Cabinet/Lockable Cabinet/Lockable Cabinet.png" tags="lockable,cabinet">
+				<product id="Lockable Cabinet" name="Lockable Cabinet" description="Bedside cabinet with lockable storage for patient belongings; easy-clean surfaces" image="/Images/Hospital/Patient Room/Bedside Cabinet/Lockable Cabinet/Lockable Cabinet.png" tags="lockable,cabinet">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Bedside Cabinet/Lockable Cabinet/Lockable Cabinet.png" alt="Lockable Cabinet - Lockable Cabinet" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="16-24&quot; (Customizable)" />
+						<spec name="Depth" value="16-20&quot; (Customizable)" />
+						<spec name="Height" value="28-34&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF carcass; locking hardware; metal pull handles (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer; edge-banded MDF; color-match available" />
 					</specifications>
 				</product>
-				<product id="Single Drawer Cabinet" name="Single Drawer Cabinet" description="Single Drawer Cabinet product for Bedside Cabinet" image="/Images/Hospital/Patient Room/Bedside Cabinet/Single Drawer Cabinet/single drawer cabinet.png" tags="single,drawer,cabinet">
+				<product id="Single Drawer Cabinet" name="Single Drawer Cabinet" description="Bedside cabinet with single drawer and open shelf; compact footprint" image="/Images/Hospital/Patient Room/Bedside Cabinet/Single Drawer Cabinet/single drawer cabinet.png" tags="single,drawer,cabinet">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Bedside Cabinet/Single Drawer Cabinet/single drawer cabinet.png" alt="Single Drawer Cabinet - single drawer cabinet" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="16-22&quot; (Customizable)" />
+						<spec name="Depth" value="16-20&quot; (Customizable)" />
+						<spec name="Height" value="28-34&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF carcass; powder-coated steel hardware (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer; edge-banded MDF; color-match available" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Overbed Table" name="Overbed Table" description="Overbed Table in Patient Room" image="/Images/Hospital/Patient Room/Overbed Table/Overbed Table.jpg">
-				<product id="Adjustable Overbed Table" name="Adjustable Overbed Table" description="Adjustable Overbed Table product for Overbed Table" image="/Images/Hospital/Patient Room/Overbed Table/Adjustable Overbed Table/adjustable overbed table.png" tags="adjustable,overbed,table">
+				<product id="Adjustable Overbed Table" name="Adjustable Overbed Table" description="Height-adjustable overbed table with U-base, locking casters and HPL top" image="/Images/Hospital/Patient Room/Overbed Table/Adjustable Overbed Table/adjustable overbed table.png" tags="adjustable,overbed,table">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Overbed Table/Adjustable Overbed Table/adjustable overbed table.png" alt="Adjustable Overbed Table - adjustable overbed table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="28-34&quot; (Top, customizable)" />
+						<spec name="Depth" value="15-18&quot; (Top, customizable)" />
+						<spec name="Height" value="28-42&quot; (Adjustable)" />
+						<spec name="Material" value="HPL/Laminate top; powder-coated steel base (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated metal base" />
 					</specifications>
 				</product>
-				<product id="Fixed Overbed Table" name="Fixed Overbed Table" description="Fixed Overbed Table product for Overbed Table" image="/Images/Hospital/Patient Room/Overbed Table/Fixed Overbed Table/Fixed Overbed Table.png" tags="fixed,overbed,table">
+				<product id="Fixed Overbed Table" name="Fixed Overbed Table" description="Fixed-height bedside table with stable base and durable HPL top" image="/Images/Hospital/Patient Room/Overbed Table/Fixed Overbed Table/Fixed Overbed Table.png" tags="fixed,overbed,table">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Overbed Table/Fixed Overbed Table/Fixed Overbed Table.png" alt="Fixed Overbed Table - Fixed Overbed Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="28-34&quot; (Top, customizable)" />
+						<spec name="Depth" value="15-18&quot; (Top, customizable)" />
+						<spec name="Height" value="30-34&quot; (Fixed, customizable)" />
+						<spec name="Material" value="HPL/Laminate top; powder-coated steel base (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated metal base" />
 					</specifications>
 				</product>
-				<product id="Rolling Overbed Table" name="Rolling Overbed Table" description="Rolling Overbed Table product for Overbed Table" image="/Images/Hospital/Patient Room/Overbed Table/Rolling Overbed Table/Rolling Overbed Table.png" tags="rolling,overbed,table">
+				<product id="Rolling Overbed Table" name="Rolling Overbed Table" description="Mobile overbed table with locking casters and durable HPL top" image="/Images/Hospital/Patient Room/Overbed Table/Rolling Overbed Table/Rolling Overbed Table.png" tags="rolling,overbed,table">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Overbed Table/Rolling Overbed Table/Rolling Overbed Table.png" alt="Rolling Overbed Table - Rolling Overbed Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="28-34&quot; (Top, customizable)" />
+						<spec name="Depth" value="15-18&quot; (Top, customizable)" />
+						<spec name="Height" value="28-42&quot; (Adjustable)" />
+						<spec name="Material" value="HPL/Laminate top; powder-coated steel base (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated metal base" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Recliner Chair" name="Recliner Chair" description="Recliner Chair in Patient Room" image="/Images/Hospital/Patient Room/Recliner Chair/Recliner Chair.jpg">
-				<product id="Electric Recliner" name="Electric Recliner" description="Electric Recliner product for Recliner Chair" image="/Images/Hospital/Patient Room/Recliner Chair/Electric Recliner/electric recliner.png" tags="electric,recliner">
+				<product id="Electric Recliner" name="Electric Recliner" description="Power-assisted medical recliner with wipe-clean upholstery and optional casters" image="/Images/Hospital/Patient Room/Recliner Chair/Electric Recliner/electric recliner.png" tags="electric,recliner">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Electric Recliner/electric recliner.png" alt="Electric Recliner - electric recliner" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="35-40&quot; (Customizable)" />
+						<spec name="Height" value="40-45&quot; (Customizable)" />
+						<spec name="Material" value="Metal frame; high-density foam; PU/fabric upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Manual Recliner" name="Manual Recliner" description="Manual Recliner product for Recliner Chair" image="/Images/Hospital/Patient Room/Recliner Chair/Manual Recliner/manual recliner.png" tags="manual,recliner">
+				<product id="Manual Recliner" name="Manual Recliner" description="Manual lever recliner for patient rooms; wipe-clean upholstery" image="/Images/Hospital/Patient Room/Recliner Chair/Manual Recliner/manual recliner.png" tags="manual,recliner">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Manual Recliner/manual recliner.png" alt="Manual Recliner - manual recliner" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="35-40&quot; (Customizable)" />
+						<spec name="Height" value="40-45&quot; (Customizable)" />
+						<spec name="Material" value="Metal frame; high-density foam; PU/fabric upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Medical Recliner" name="Medical Recliner" description="Medical Recliner product for Recliner Chair" image="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" tags="medical,recliner">
+				<product id="Medical Recliner" name="Medical Recliner" description="Clinical recliner with drop-arms option for patient transfer; wipe-clean surfaces" image="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" tags="medical,recliner">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" alt="Medical Recliner - medical recliner" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="35-40&quot; (Customizable)" />
+						<spec name="Height" value="40-45&quot; (Customizable)" />
+						<spec name="Material" value="Metal frame; high-density foam; PU/fabric upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="Waiting Area" name="Waiting Area" description="Waiting Area for Hospital" image="/Images/Hospital/Waiting Area/Waiting Area.jpg">
-			<subcategory id="Magazine Table" name="Magazine Table" description="Magazine Table in Waiting Area" image="/Images/Hospital/Waiting Area/Magazine Table/Magazine Table.jpg">
-				<product id="Glass Table" name="Glass Table" description="Glass Table product for Magazine Table" image="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table.png" tags="glass,table">
+		<subcategory id="Magazine Table" name="Magazine Table" description="Magazine Table in Waiting Area" image="/Images/Hospital/Waiting Area/Magazine Table/Magazine Table.jpg">
+			<product id="Glass Table" name="Glass Table" description="Tempered glass top magazine table with powder-coated metal base" image="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table.png" tags="glass,table">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table.png" alt="Glass Table - glass table" />
 					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
-					</specifications>
+				<specifications>
+					<spec name="Width" value="18-24&quot; (Customizable)" />
+					<spec name="Depth" value="18-24&quot; (Customizable)" />
+					<spec name="Height" value="18-22&quot; (Customizable)" />
+					<spec name="Material" value="Tempered glass top; powder-coated steel base (customizable)" />
+					<spec name="Finish" value="Clear/frosted glass; powder-coated base" />
+				</specifications>
 				</product>
-				<product id="Metal Table" name="Metal Table" description="Metal Table product for Magazine Table" image="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" tags="metal,table">
+			<product id="Metal Table" name="Metal Table" description="All-metal side table suitable for high-traffic waiting areas" image="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" tags="metal,table">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" alt="Metal Table - Metal Table" />
 					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
-					</specifications>
+				<specifications>
+					<spec name="Width" value="18-24&quot; (Customizable)" />
+					<spec name="Depth" value="18-24&quot; (Customizable)" />
+					<spec name="Height" value="18-22&quot; (Customizable)" />
+					<spec name="Material" value="Powder-coated steel/aluminum (customizable)" />
+					<spec name="Finish" value="Powder-coated metal" />
+				</specifications>
 				</product>
-				<product id="Wooden Table" name="Wooden Table" description="Wooden Table product for Magazine Table" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" tags="wooden,table">
+			<product id="Wooden Table" name="Wooden Table" description="Wood top side table with durable laminate or veneer finish" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" tags="wooden,table">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" alt="Wooden Table - Wooden Table" />
 					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
-					</specifications>
+				<specifications>
+					<spec name="Width" value="18-24&quot; (Customizable)" />
+					<spec name="Depth" value="18-24&quot; (Customizable)" />
+					<spec name="Height" value="18-22&quot; (Customizable)" />
+					<spec name="Material" value="Solid/engineered wood; optional metal base (customizable)" />
+					<spec name="Finish" value="Laminate/Veneer; edge-banded MDF" />
+				</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Reception Desk" name="Reception Desk" description="Reception Desk in Waiting Area" image="/Images/Hospital/Waiting Area/Reception Desk/Reception Desk.jpg">
-				<product id="Curved Desk" name="Curved Desk" description="Curved Desk product for Reception Desk" image="/Images/Hospital/Waiting Area/Reception Desk/Curved Desk/Curved Desk.jpg" tags="curved,desk">
+				<product id="Curved Desk" name="Curved Desk" description="Curved reception desk with transaction counter and integrated storage" image="/Images/Hospital/Waiting Area/Reception Desk/Curved Desk/Curved Desk.jpg" tags="curved,desk">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Curved Desk/Curved Desk 2.jpg" alt="Curved Desk - Curved Desk 2" />
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Curved Desk/Curved Desk.jpg" alt="Curved Desk - Curved Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="96-144&quot; (Customizable)" />
+						<spec name="Depth" value="28-36&quot; (Customizable)" />
+						<spec name="Height" value="42&quot; (Counter, customizable)" />
+						<spec name="Material" value="Laminate/MDF body; optional metal/glass accents (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer; powder-coated accents; glass options" />
 					</specifications>
 				</product>
-				<product id="Glass Top Desk" name="Glass Top Desk" description="Glass Top Desk product for Reception Desk" image="/Images/Hospital/Waiting Area/Reception Desk/Glass Top Desk/Glass Top.jpg" tags="glass,top,desk">
+				<product id="Glass Top Desk" name="Glass Top Desk" description="Reception desk with tempered glass transaction top and laminate body" image="/Images/Hospital/Waiting Area/Reception Desk/Glass Top Desk/Glass Top.jpg" tags="glass,top,desk">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Glass Top Desk/Glass Top.jpg" alt="Glass Top Desk - Glass Top" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="72-120&quot; (Customizable)" />
+						<spec name="Depth" value="28-36&quot; (Customizable)" />
+						<spec name="Height" value="42&quot; (Counter, customizable)" />
+						<spec name="Material" value="Laminate/MDF body; tempered glass top; metal supports (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer body; tempered glass top" />
 					</specifications>
 				</product>
-				<product id="Straight Desk" name="Straight Desk" description="Straight Desk product for Reception Desk" image="/Images/Hospital/Waiting Area/Reception Desk/Straight Desk/Straight Desk.jpg" tags="straight,desk">
+				<product id="Straight Desk" name="Straight Desk" description="Straight reception desk with transaction counter and cable management" image="/Images/Hospital/Waiting Area/Reception Desk/Straight Desk/Straight Desk.jpg" tags="straight,desk">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Reception Desk/Straight Desk/Straight Desk.jpg" alt="Straight Desk - Straight Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="72-132&quot; (Customizable)" />
+						<spec name="Depth" value="28-36&quot; (Customizable)" />
+						<spec name="Height" value="42&quot; (Counter, customizable)" />
+						<spec name="Material" value="Laminate/MDF body; optional powder-coated metal accents (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer; powder-coated accents" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Waiting Chairs" name="Waiting Chairs" description="Waiting Chairs in Waiting Area" image="/Images/Hospital/Waiting Area/Waiting Chairs/Waiting Chairs.jpg">
-				<product id="Linked Waiting Chair" name="Linked Waiting Chair" description="Linked Waiting Chair product for Waiting Chairs" image="/Images/Hospital/Waiting Area/Waiting Chairs/Linked Waiting Chair/linked waiting chair.png" tags="linked,waiting,chair">
+				<product id="Linked Waiting Chair" name="Linked Waiting Chair" description="Beam-linked waiting chairs; 2–4 seat configurations with shared frame" image="/Images/Hospital/Waiting Area/Waiting Chairs/Linked Waiting Chair/linked waiting chair.png" tags="linked,waiting,chair">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Waiting Chairs/Linked Waiting Chair/linked waiting chair.png" alt="Linked Waiting Chair - linked waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="Per seat ~18-21&quot; (Configurable)" />
+						<spec name="Depth" value="22-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Powder-coated steel beam/frame; PU/fabric seats (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Plastic Waiting Chair" name="Plastic Waiting Chair" description="Plastic Waiting Chair product for Waiting Chairs" image="/Images/Hospital/Waiting Area/Waiting Chairs/Plastic Waiting Chair/plastic waiting chair.png" tags="plastic,waiting,chair">
+				<product id="Plastic Waiting Chair" name="Plastic Waiting Chair" description="Molded polypropylene waiting chair; easy-clean with powder-coated metal frame" image="/Images/Hospital/Waiting Area/Waiting Chairs/Plastic Waiting Chair/plastic waiting chair.png" tags="plastic,waiting,chair">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Waiting Chairs/Plastic Waiting Chair/plastic waiting chair.png" alt="Plastic Waiting Chair - plastic waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18.5-20&quot; (Customizable)" />
+						<spec name="Depth" value="20-22&quot; (Customizable)" />
+						<spec name="Height" value="32-34&quot; (Customizable)" />
+						<spec name="Material" value="Molded polypropylene seat; powder-coated metal frame (customizable)" />
+						<spec name="Finish" value="Textured polypropylene; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Upholstered Waiting Chair" name="Upholstered Waiting Chair" description="Upholstered Waiting Chair product for Waiting Chairs" image="/Images/Hospital/Waiting Area/Waiting Chairs/Upholstered Waiting Chair/upholstered waiting chair.png" tags="upholstered,waiting,chair">
+				<product id="Upholstered Waiting Chair" name="Upholstered Waiting Chair" description="Comfort upholstered waiting chair with foam cushions and durable fabric" image="/Images/Hospital/Waiting Area/Waiting Chairs/Upholstered Waiting Chair/upholstered waiting chair.png" tags="upholstered,waiting,chair">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Waiting Chairs/Upholstered Waiting Chair/upholstered waiting chair.png" alt="Upholstered Waiting Chair - upholstered waiting chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="20-24&quot; (Customizable)" />
+						<spec name="Depth" value="22-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Wood/metal frame; foam cushions; fabric/PU upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -641,22 +641,24 @@
 						<image src="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" alt="Double Drawer Night Stand - Double Drawer Night Stand" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="18-24&quot; (Customizable)" />
+						<spec name="Depth" value="12&quot; (Customizable)" />
+						<spec name="Height" value="26&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
 				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open shelf night stand for quick access" image="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" tags="open,shelf,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" alt="Open Shelf Night Stand - Open Shelf Night Stand" />
+						<image src="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Floating Night Stand.png" alt="Open Shelf Night Stand - Open Shelf Night Stand" />
+						
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="18-24&quot; (Customizable)" />
+						<spec name="Depth" value="12&quot; (Customizable)" />
+						<spec name="Height" value="26&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
@@ -666,10 +668,10 @@
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" alt="Single Drawer Night Stand - single drawer night stand" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Width" value="18-24&quot; (Customizable)" />
+						<spec name="Depth" value="12&quot; (Customizable)" />
+						<spec name="Height" value="26&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>

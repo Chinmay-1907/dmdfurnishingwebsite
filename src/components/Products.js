@@ -314,7 +314,7 @@ function Products() {
                 onClick={() => handlePlaceSelect(index)}
               >
                 <div 
-                  className="category-image"
+                  className={`category-image place-${toCatalogSlug(place.id || '')}`}
                   style={{ backgroundImage: `url("${encodeURI(place.image || '/placeholder.png')}")` }}
                 ></div>
                 <h3>{place.name}</h3>

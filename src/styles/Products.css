@@ -285,6 +285,19 @@
     height: 200px;
   }
 }
+/* Global default previously forced contain; keep cover by default for better fill */
+/* Target only the top-level Browse by Space tiles for full-cover on specified places */
+.product-categories .category-image.place-hospital,
+.product-categories .category-image.place-hotel,
+.product-categories .category-image.place-office,
+.product-categories .category-image.place-restaurant,
+.product-categories .category-image.place-school,
+.product-categories .category-image.place-university {
+  background-size: cover !important;
+  background-color: transparent;
+}
+
+/* Keep deeper layers unchanged: default to contain to avoid cropping */
 .product-image {
   background-size: contain !important; /* Show full image without cropping */
   background-repeat: no-repeat;
