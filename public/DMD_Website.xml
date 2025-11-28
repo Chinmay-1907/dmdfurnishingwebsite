@@ -241,19 +241,19 @@
 	<place id="hotel" name="Hotel" description="Hotel furniture collection" image="/Images/Hotel/Hotel furniture collection.jpg">
 		<furnitureType id="Breakfast Area" name="Breakfast Area" description="Breakfast Area for Hotel" image="/Images/Hotel/Breakfast Area/Breakfast Area.jpg">
 			<subcategory id="Buffet Counter" name="Buffet Counter" description="Buffet Counter in Breakfast Area" image="/Images/Hotel/Breakfast Area/Buffet Counter/Buffet Counter.jpg">
-				<product id="Cold Buffet Counter" name="Cold Buffet Counter" description="Cold Buffet Counter product for Buffet Counter" image="/Images/Hotel/Breakfast Area/Buffet Counter/Cold Buffet Counter/Cold Buffet Counter.jpg" tags="cold,buffet,counter">
+				<product id="Cold Buffet Counter" name="Cold Buffet Counter" description="Chilled buffet service counter with modular cold wells" image="/Images/Hotel/Breakfast Area/Buffet Counter/Cold Buffet Counter/Cold Buffet Counter.jpg" tags="cold,buffet,counter">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Cold Buffet Counter/Cold Buffet Counter.jpg" alt="Cold Buffet Counter - Cold Buffet Counter" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="72-96&quot; (Customizable)" />
+						<spec name="Depth" value="28-32&quot; (Customizable)" />
+						<spec name="Height" value="36&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Marble OR Quartz Countertops (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer body; Stone or Brushed Steel top" />
 					</specifications>
 				</product>
-				<product id="Hot Buffet Counter" name="Hot Buffet Counter" description="Hot Buffet Counter product for Buffet Counter" image="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Hot Buffet Counter.jpg" tags="hot,buffet,counter">
+				<product id="Hot Buffet Counter" name="Hot Buffet Counter" description="Heated buffet service counter with insulated wells" image="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Hot Buffet Counter.jpg" tags="hot,buffet,counter">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Buffet Counter - Deep Navy 1.jpg" alt="Hot Buffet Counter - Buffet Counter - Deep Navy 1" />
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Buffet Counter - Deep Navy.jpg" alt="Hot Buffet Counter - Buffet Counter - Deep Navy" />
@@ -262,43 +262,43 @@
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Hot Buffet Counter/Hot Buffet Counter.jpg" alt="Hot Buffet Counter - Hot Buffet Counter" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="72-96&quot; (Customizable)" />
+						<spec name="Depth" value="28-32&quot; (Customizable)" />
+						<spec name="Height" value="36&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Marble OR Quartz Countertops (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Heat-resistant laminate/veneer; Stone or Brushed Steel top" />
 					</specifications>
 				</product>
-				<product id="Mixed Buffet Counter" name="Mixed Buffet Counter" description="Mixed Buffet Counter product for Buffet Counter" image="/Images/Hotel/Breakfast Area/Buffet Counter/Mixed Buffet Counter/Mixed Buffet Counter.jpg" tags="mixed,buffet,counter">
+				<product id="Mixed Buffet Counter" name="Mixed Buffet Counter" description="Combination buffet with hot and cold service sections" image="/Images/Hotel/Breakfast Area/Buffet Counter/Mixed Buffet Counter/Mixed Buffet Counter.jpg" tags="mixed,buffet,counter">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Mixed Buffet Counter/Mixed Buffet Counter 2.jpg" alt="Mixed Buffet Counter - Mixed Buffet Counter 2" />
 						<image src="/Images/Hotel/Breakfast Area/Buffet Counter/Mixed Buffet Counter/Mixed Buffet Counter.jpg" alt="Mixed Buffet Counter - Mixed Buffet Counter" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Width" value="72-108&quot; (Customizable)" />
+						<spec name="Depth" value="28-32&quot; (Customizable)" />
+						<spec name="Height" value="36&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Marble OR Quartz Countertops (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer body; Mixed cold/hot counter surfaces" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Dining Chairs" name="Dining Chairs" description="Dining Chairs in Breakfast Area" image="/Images/Hotel/Breakfast Area/Dining Chairs/Dining Chairs.jpg">
-				<product id="Metal Dining Chair" name="Metal Dining Chair" description="Metal Dining Chair product for Dining Chairs" image="/Images/Hotel/Breakfast Area/Dining Chairs/Metal Dining Chair/Dusty Blue Upholstered Accent Chair 3.jpg" tags="metal,dining,chair">
+				<product id="Metal Dining Chair" name="Metal Dining Chair" description="Metal dining chair with upholstered seat and back" image="/Images/Hotel/Breakfast Area/Dining Chairs/Metal Dining Chair/Dusty Blue Upholstered Accent Chair 3.jpg" tags="metal,dining,chair">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Metal Dining Chair/Dusty Blue Upholstered Accent Chair 3.jpg" alt="Metal Dining Chair - Dusty Blue Upholstered Accent Chair 3" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Metal Dining Chair/Image_fx (80).jpg" alt="Metal Dining Chair - Image_fx (80)" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Metal Dining Chair/Orange Upholstered Accent Chair 2.jpg" alt="Metal Dining Chair - Orange Upholstered Accent Chair 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Customizable)" />
+						<spec name="Depth" value="21-23&quot; (Customizable)" />
+						<spec name="Height" value="33-36&quot; (Customizable)" />
+						<spec name="Material" value="Metal frame with upholstered seat/back (fabric/PU options)" />
+						<spec name="Finish" value="Powder-coated frame; fabric/PU/leather upholstery choices" />
 					</specifications>
 				</product>
-				<product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Upholstered Dining Chair product for Dining Chairs" image="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,dining,chair">
+				<product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Fully upholstered dining chair for comfort and style" image="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,dining,chair">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" alt="Upholstered Dining Chair - Soft blush_peac Upholstered Accent Chair 360 return" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Soft Yellow Upholstered Accent Chair 4.jpg" alt="Upholstered Dining Chair - Soft Yellow Upholstered Accent Chair 4" />
@@ -306,29 +306,29 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Upholstered Dining Chair/Warm terracott Upholstered Accent Chair 360 return 1.jpg" alt="Upholstered Dining Chair - Warm terracott Upholstered Accent Chair 360 return 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="19-22&quot; (Customizable)" />
+						<spec name="Depth" value="22-24&quot; (Customizable)" />
+						<spec name="Height" value="34-38&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal frame with foam upholstery" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; stained wood or powder coat" />
 					</specifications>
 				</product>
-				<product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Wooden Dining Chair product for Dining Chairs" image="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,dining,chair">
+				<product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Solid wood dining chair with ergonomic support" image="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,dining,chair">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden Dining Chair - DMD-DinningChair - DC-BL001" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Dining Chair - DMD-DinningChair - DC-WOOD1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Customizable)" />
+						<spec name="Depth" value="20-22&quot; (Customizable)" />
+						<spec name="Height" value="33-36&quot; (Customizable)" />
+						<spec name="Material" value="Solid wood frame" />
+						<spec name="Finish" value="Stain/varnish/matte lacquer" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Dining Tables" name="Dining Tables" description="Dining Tables in Breakfast Area" image="/Images/Hotel/Breakfast Area/Dining Tables/Dining Tables.jpg">
-				<product id="2-Seater Table" name="2-Seater Table" description="2-Seater Table product for Dining Tables" image="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" tags="2-seater,table">
+				<product id="2-Seater Table" name="2-Seater Table" description="Compact dining table for two guests" image="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" tags="2-seater,table">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table - M1.jpg" alt="2-Seater Table - 2-Seater Table - M1" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table 1.jpg" alt="2-Seater Table - 2-Seater Table 1" />
@@ -338,28 +338,28 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" alt="2-Seater Table - 2-Seater Table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-30&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal base with laminate/veneer/stone top" />
+						<spec name="Finish" value="Laminate/veneer/powder coat; stone polish" />
 					</specifications>
 				</product>
-				<product id="4-Seater Table" name="4-Seater Table" description="4-Seater Table product for Dining Tables" image="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" tags="4-seater,table">
+				<product id="4-Seater Table" name="4-Seater Table" description="Dining table sized for four guests" image="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" tags="4-seater,table">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" alt="4-Seater Table - 4-Seater Table M1" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table M2.jpg" alt="4-Seater Table - 4-Seater Table M2" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table SS1.jpg" alt="4-Seater Table - 4-Seater Table SS1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="30-36&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal base with laminate/veneer/stone top" />
+						<spec name="Finish" value="Laminate/veneer/powder coat; stone polish" />
 					</specifications>
 				</product>
-				<product id="6-Seater Table" name="6-Seater Table" description="6-Seater Table product for Dining Tables" image="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-seater table.png" tags="6-seater,table">
+				<product id="6-Seater Table" name="6-Seater Table" description="Dining table suitable for six guests" image="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-seater table.png" tags="6-seater,table">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-Seater Table - M3S.jpg" alt="6-Seater Table - 6-Seater Table - M3S" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-Seater Table M1.jpg" alt="6-Seater Table - 6-Seater Table M1" />
@@ -370,49 +370,49 @@
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-seater table.png" alt="6-Seater Table - 6-seater table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="36-48&quot; (Customizable)" />
+						<spec name="Depth" value="36-48&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal base with laminate/veneer/stone top" />
+						<spec name="Finish" value="Laminate/veneer/powder coat; stone polish" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Food Service Cabinets" name="Food Service Cabinets" description="Food Service Cabinets in Breakfast Area" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Food Service Cabinets.jpg">
-				<product id="Dry Storage Cabinet" name="Dry Storage Cabinet" description="Dry Storage Cabinet product for Food Service Cabinets" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Dry Storage Cabinet/Food Service Cabinets 1.jpg" tags="dry,storage,cabinet">
+				<product id="Dry Storage Cabinet" name="Dry Storage Cabinet" description="Dry goods storage cabinet for breakfast service" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Dry Storage Cabinet/Food Service Cabinets 1.jpg" tags="dry,storage,cabinet">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Food Service Cabinets/Dry Storage Cabinet/Food Service Cabinets 1.jpg" alt="Dry Storage Cabinet - Food Service Cabinets 1" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="36-60&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="72-84&quot; (Customizable)" />
+						<spec name="Material" value="Stainless steel or high-density laminate" />
+						<spec name="Finish" value="Brushed stainless or laminate finish" />
 					</specifications>
 				</product>
-				<product id="Heated Cabinet" name="Heated Cabinet" description="Heated Cabinet product for Food Service Cabinets" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Heated Cabinet/Food Service Cabinets 2.jpg" tags="heated,cabinet">
+				<product id="Heated Cabinet" name="Heated Cabinet" description="Heated holding cabinet for hot items" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Heated Cabinet/Food Service Cabinets 2.jpg" tags="heated,cabinet">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Food Service Cabinets/Heated Cabinet/Food Service Cabinets 2.jpg" alt="Heated Cabinet - Food Service Cabinets 2" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Width" value="24-36&quot; (Customizable)" />
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Height" value="72-84&quot; (Customizable)" />
+						<spec name="Material" value="Stainless steel construction with insulation" />
+						<spec name="Finish" value="Brushed stainless, heat-resistant coating" />
 					</specifications>
 				</product>
-				<product id="Refrigerated Cabinet" name="Refrigerated Cabinet" description="Refrigerated Cabinet product for Food Service Cabinets" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Refrigerated Cabinet/Food Service Cabinets 3.jpg" tags="refrigerated,cabinet">
+				<product id="Refrigerated Cabinet" name="Refrigerated Cabinet" description="Refrigerated cabinet for chilled items" image="/Images/Hotel/Breakfast Area/Food Service Cabinets/Refrigerated Cabinet/Food Service Cabinets 3.jpg" tags="refrigerated,cabinet">
 					<images>
 						<image src="/Images/Hotel/Breakfast Area/Food Service Cabinets/Refrigerated Cabinet/Food Service Cabinets 3.jpg" alt="Refrigerated Cabinet - Food Service Cabinets 3" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Width" value="24-36&quot; (Customizable)" />
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Height" value="72-84&quot; (Customizable)" />
+						<spec name="Material" value="Stainless steel construction with refrigeration components" />
+						<spec name="Finish" value="Brushed stainless" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -475,7 +475,7 @@
 						<spec name="Finish" value="Powder coating color - to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Queen Bed Frame - MDF" name="Queen Bed Frame - MDF" description="Queen Bed Frame - MDF product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" tags="queen,bed,frame,mdf">
+				<product id="Queen Bed Frame - MDF" name="Queen Bed Frame - MDF" description="Queen bed frame with durable MDF construction" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" tags="queen,bed,frame,mdf">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" alt="Queen Bed Frame - MDF - DMD Axis" />
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Bloc.jpg" alt="Queen Bed Frame - MDF - DMD Bloc" />
@@ -489,12 +489,12 @@
 						<spec name="Depth" value="81.5&quot; (Customizable)" />
 						<spec name="Height" value="18&quot;/16&quot;/10&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer; Edge-banded MDF, matte/gloss options" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Desk" name="Desk" description="Desk in Guest Room" image="/Images/Hotel/Guest Room/Desk/Desk.jpg">
-				<product id="Executive Desk" name="Executive Desk" description="Executive Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" tags="executive,desk">
+				<product id="Executive Desk" name="Executive Desk" description="Executive desk with cable management and storage options" image="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" tags="executive,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" alt="Executive Desk - Executive Desk 1" />
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Axis Executive Desk.jpg" alt="Executive Desk - Executive Desk 2" />
@@ -510,14 +510,14 @@
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Vault Executive Desk.jpg" alt="Executive Desk - Executive Desk 12" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="60-72&quot; (Customizable)" />
+						<spec name="Depth" value="28-36&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal frame with cable management options" />
+						<spec name="Finish" value="Laminate/Veneer top; Powder-coated metal base" />
 					</specifications>
 				</product>
-				<product id="Workstation Desk" name="Workstation Desk" description="Workstation Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" tags="workstation,desk">
+				<product id="Workstation Desk" name="Workstation Desk" description="Workstation desk with optional privacy/modesty panels" image="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" tags="workstation,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" alt="Workstation Desk - Workstation Desk 1" />
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Axis Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 2" />
@@ -535,13 +535,13 @@
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal frame; optional privacy/modesty panels" />
+						<spec name="Finish" value="Laminate/Veneer top; Powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Writing Desk" name="Writing Desk" description="Writing Desk product for Desk" image="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
+				<product id="Writing Desk" name="Writing Desk" description="Minimal writing desk with solid wood/metal frame" image="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" alt="Writing Desk - Writing Desk Cross Leg One side" />
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Grid Writing Desk.jpg" alt="Writing Desk - DMD Grid Writing Desk" />
@@ -553,16 +553,16 @@
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Forma Writing Desk.jpg" alt="Writing Desk - DMD Forma Writing Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="42-60&quot; (Customizable)" />
+						<spec name="Depth" value="20-28&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Solid wood or wood/metal frame" />
+						<spec name="Finish" value="Stain/Veneer/Matt lacquer; Powder coat metal" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Head Board" name="Head Board" description="Head Board in Guest Room" image="/Images/Hotel/Guest Room/Head Board/Head Board.png">
-				<product id="Full XL MDF Head Board" name="Full XL Head Board" description="Full XL Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
+				<product id="Full XL MDF Head Board" name="Full XL Head Board" description="Full XL MDF headboard with durable edge-banded construction" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" alt="Full XL Head Board - Full XL Head Board" />
 					</images>
@@ -571,10 +571,10 @@
 						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
 						<spec name="Height" value="48&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer; Edge-banded MDF" />
 					</specifications>
 				</product>
-				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" tags="king,headboard - MDF/Wood">
+				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King MDF headboard unit with wallguard" image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" tags="king,headboard - MDF/Wood">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Driftmark.jpg" alt="King Head Board - DMD Driftmark"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" alt="King Head Board - DMD Stratus"/>
@@ -588,10 +588,10 @@
 						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
 						<spec name="Height" value="46-48&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer; Edge-banded MDF, color-match available" />
 					</specifications>
 					</product>
-				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="King Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD main.jpg" tags="king,headboard - Upholstered">
+				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="King upholstered headboard with integrated wallguard" image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD main.jpg" tags="king,headboard - Upholstered">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Aura.jpg" alt="King Head Board - King DMD Aura"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Axis.jpg" alt="King Head Board - King DMD Axis"/>
@@ -608,10 +608,10 @@
 						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
 						<spec name="Height" value="46-48&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; stained/laminate accents" />
 					</specifications>
 				</product>
-				<product id="Queen Head Board" name="Queen Head Board" description="Queen Head Board product for Head Board" image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" tags="queen,head,board">
+				<product id="Queen Head Board" name="Queen Head Board" description="Queen headboard with optional upholstery and laminate/veneer finish" image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" tags="queen,head,board">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" alt="Queen Head Board - DMD Aura"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Axis.jpg" alt="Queen Head Board - DMD Axis"/>
@@ -631,12 +631,12 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer or Upholstery options" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Night Stand" name="Night Stand" description="Night Stand in Guest Room" image="/Images/Hotel/Guest Room/Night Stand/Night Stand.jpg">
-				<product id="Double Drawer Night Stand" name="Double Drawer Night Stand" description="Double Drawer Night Stand product for Night Stand" image="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" tags="double,drawer,night,stand">
+				<product id="Double Drawer Night Stand" name="Double Drawer Night Stand" description="Two-drawer night stand with ample storage" image="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" tags="double,drawer,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" alt="Double Drawer Night Stand - Double Drawer Night Stand" />
 					</images>
@@ -645,10 +645,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
-				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open Shelf Night Stand product for Night Stand" image="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" tags="open,shelf,night,stand">
+				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open shelf night stand for quick access" image="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" tags="open,shelf,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" alt="Open Shelf Night Stand - Open Shelf Night Stand" />
 					</images>
@@ -657,10 +657,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
-				<product id="Single Drawer Night Stand" name="Single Drawer Night Stand" description="Single Drawer Night Stand product for Night Stand" image="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" tags="single,drawer,night,stand">
+				<product id="Single Drawer Night Stand" name="Single Drawer Night Stand" description="Single-drawer night stand with lower shelf" image="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" tags="single,drawer,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand (2).png" alt="Single Drawer Night Stand - single drawer night stand (2)" />
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" alt="Single Drawer Night Stand - single drawer night stand" />
@@ -670,14 +670,14 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="hotel-seating" name="hotel-seating" description="hotel-seating for Hotel" image="/Images/Hotel/hotel-seating/hotel-seating.jpg">
 			<subcategory id="Arm Chair" name="Arm Chair" description="Arm Chair in hotel-seating" image="/Images/Hotel/hotel-seating/Arm Chair/Arm Chair.jpg">
-				<product id="AC001-BL-nova-blue" name="AC001-BL-nova-blue" description="AC001-BL-nova-blue product for Arm Chair" image="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" tags="ac001-bl-nova-blue">
+				<product id="AC001-BL-nova-blue" name="AC001-BL-nova-blue" description="Modern arm chair with Nova Blue upholstery" image="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" tags="ac001-bl-nova-blue">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Frount View" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - ISO View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - ISO View" />
@@ -689,10 +689,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
 					</specifications>
 				</product>
-				<product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="AC01-GR-nova-Green product for Arm Chair" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
+				<product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="Upholstered arm chair in Nova Green" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Front-View" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-green-ISO View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-green-ISO View" />
@@ -704,10 +704,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
 					</specifications>
 				</product>
-				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="AC01-OR-nova-Sunset-Orange product for Arm Chair" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="ac01-or-nova-sunset-orange">
+				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="Upholstered arm chair in Sunset Orange" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="ac01-or-nova-sunset-orange">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - Frount View" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - ISO View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - ISO View" />
@@ -715,7 +715,7 @@
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Top-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Top-view" />
 					</images>
 				</product>
-				<product id="AC-New Collection" name="AC-New Collection" description="AC-New Collection" image="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Formo.jpg" tags="Arm Chair, Hotel, Seating">
+				<product id="AC-New Collection" name="AC-New Collection" description="Curated arm chair collection in various finishes" image="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Formo.jpg" tags="Arm Chair, Hotel, Seating">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Formo.jpg" alt="AC-New Collection" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Linea.jpg" alt="AC-New Collection" />
@@ -732,12 +732,12 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained wood/powder-coated frames" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Sofa" name="Sofa" description="Sofa in hotel-seating" image="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg">
-				<product id="2-Siter Sofa" name="2-Siter Sofa" description="2-Siter Sofa product for Sofa" image="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg" tags="2-siter,sofa">
+				<product id="2-Siter Sofa" name="2-Siter Sofa" description="Two-seater sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg" tags="2-siter,sofa">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg" alt="2-Siter Sofa - Orang-Blue" />
 						<image src="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orange-Gray.jpg" alt="2-Siter Sofa - Orange-Gray" />
@@ -747,10 +747,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
 					</specifications>
 				</product>
-				<product id="3-Siter Sofa" name="3-Siter Sofa" description="3-Siter Sofa product for Sofa" image="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" tags="3-siter,sofa">
+				<product id="3-Siter Sofa" name="3-Siter Sofa" description="Three-seater sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" tags="3-siter,sofa">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" alt="3-Siter Sofa - 9" />
 					</images>
@@ -759,14 +759,14 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="Lobby Area" name="Lobby Area" description="Lobby Area for Hotel" image="/Images/Hotel/Lobby Area/Lobby Area.jpg">
 			<subcategory id="Accent Chairs" name="Accent Chairs" description="Accent Chairs in Lobby Area" image="/Images/Hotel/Lobby Area/Accent Chairs/Metal Accent Chair/Dusty Blue Upholstered Accent Chair 3.jpg">
-				<product id="Metal Accent Chair" name="Metal Accent Chair" description="Metal Accent Chair product for Accent Chairs" image="/Images/Hotel/Lobby Area/Accent Chairs/Metal Accent Chair/Dusty Blue Upholstered Accent Chair 3.jpg" tags="metal,accent,chair">
+				<product id="Metal Accent Chair" name="Metal Accent Chair" description="Metal accent chair with durable upholstery" image="/Images/Hotel/Lobby Area/Accent Chairs/Metal Accent Chair/Dusty Blue Upholstered Accent Chair 3.jpg" tags="metal,accent,chair">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Metal Accent Chair/Dusty Blue Upholstered Accent Chair 3.jpg" alt="Metal Accent Chair - Dusty Blue Upholstered Accent Chair 3" />
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Metal Accent Chair/Image_fx (80).jpg" alt="Metal Accent Chair - Image_fx (80)" />
@@ -777,10 +777,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Powder-coated frame; fabric/PU/leather upholstery" />
 					</specifications>
 				</product>
-				<product id="Upholstered Accent Chair" name="Upholstered Accent Chair" description="Upholstered Accent Chair product for Accent Chairs" image="/Images/Hotel/Lobby Area/Accent Chairs/Upholstered Accent Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,accent,chair">
+				<product id="Upholstered Accent Chair" name="Upholstered Accent Chair" description="Comfort-first upholstered accent chair" image="/Images/Hotel/Lobby Area/Accent Chairs/Upholstered Accent Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,accent,chair">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Upholstered Accent Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" alt="Upholstered Accent Chair - Soft blush_peac Upholstered Accent Chair 360 return" />
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Upholstered Accent Chair/Soft Yellow Upholstered Accent Chair 4.jpg" alt="Upholstered Accent Chair - Soft Yellow Upholstered Accent Chair 4" />
@@ -792,10 +792,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; stained wood or powder coat" />
 					</specifications>
 				</product>
-				<product id="Wooden Accent Chair" name="Wooden Accent Chair" description="Wooden Accent Chair product for Accent Chairs" image="/Images/Hotel/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,accent,chair">
+				<product id="Wooden Accent Chair" name="Wooden Accent Chair" description="Solid wood accent chair" image="/Images/Hotel/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,accent,chair">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden Accent Chair - DMD-DinningChair - DC-BL001" />
 						<image src="/Images/Hotel/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Accent Chair - DMD-DinningChair - DC-WOOD1" />
@@ -805,12 +805,12 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Stain/varnish/matte lacquer" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Coffee Tables" name="Coffee Tables" description="Coffee Tables in Lobby Area" image="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg">
-				<product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Glass Top Coffee Table product for Coffee Tables" image="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
+				<product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Coffee table with tempered glass top and sturdy base" image="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Butterfly" />
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Stare Style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Stare Style" />
@@ -825,10 +825,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Tempered glass top; stained wood or powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Round Coffee Table" name="Round Coffee Table" description="Round Coffee Table product for Coffee Tables" image="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
+				<product id="Round Coffee Table" name="Round Coffee Table" description="Round coffee table for lobby seating areas" image="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" alt="Round Coffee Table - Round Coffee Table - Round Base" />
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 1.jpg" alt="Round Coffee Table - Round Coffee Table Modern 1" />
@@ -840,10 +840,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Stain/veneer top; powder-coated/stained base" />
 					</specifications>
 				</product>
-				<product id="Square Coffee Table" name="Square Coffee Table" description="Square Coffee Table product for Coffee Tables" image="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
+				<product id="Square Coffee Table" name="Square Coffee Table" description="Square coffee table with modern base options" image="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" alt="Square Coffee Table - Square Coffee Table Cross Legs X style" />
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs 2.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs 2" />
@@ -856,12 +856,12 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Stain/veneer; powder-coated/stained base" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Lobby Sofa" name="Lobby Sofa" description="Lobby Sofa in Lobby Area" image="/Images/Hotel/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg">
-				<product id="2-Seater Sofa" name="2-Seater Sofa" description="2-Seater Sofa product for Lobby Sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" tags="2-seater,sofa">
+				<product id="2-Seater Sofa" name="2-Seater Sofa" description="Two-seater lobby sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" tags="2-seater,sofa">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" alt="2-Seater Sofa - Orang-Blue" />
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/2-Seater Sofa/Orange-Gray.jpg" alt="2-Seater Sofa - Orange-Gray" />
@@ -871,10 +871,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
 					</specifications>
 				</product>
-				<product id="3-Seater Sofa" name="3-Seater Sofa" description="3-Seater Sofa product for Lobby Sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" tags="3-seater,sofa">
+				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater lobby sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" tags="3-seater,sofa">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" alt="3-Seater Sofa - 9" />
 					</images>
@@ -883,10 +883,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
 					</specifications>
 				</product>
-				<product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa product for Lobby Sofa" image="/Images/Hotel/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" tags="sectional,sofa">
+				<product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa for lobby zones" image="/Images/Hotel/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" tags="sectional,sofa">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" alt="Sectional Sofa - 10" />
 					</images>
@@ -895,12 +895,12 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Reception Desk" name="Reception Desk" description="Reception Desk in Lobby Area" image="/Images/Hotel/Lobby Area/Reception Desk/Curved Reception Desk/Curved Reception Desk.jpg">
-				<product id="Curved Reception Desk" name="Curved Reception Desk" description="Curved Reception Desk product for Reception Desk" image="/Images/Hotel/Lobby Area/Reception Desk/Curved Reception Desk/Curved Reception Desk.jpg" tags="curved,reception,desk">
+				<product id="Curved Reception Desk" name="Curved Reception Desk" description="Curved reception desk with guest-friendly counter" image="/Images/Hotel/Lobby Area/Reception Desk/Curved Reception Desk/Curved Reception Desk.jpg" tags="curved,reception,desk">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Reception Desk/Curved Reception Desk/Curved Reception Desk.jpg" alt="Curved Reception Desk - Curved Reception Desk" />
 					</images>
@@ -909,10 +909,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer front; Powder-coated trims; Stone option" />
 					</specifications>
 				</product>
-				<product id="L-Shaped Reception Desk" name="L-Shaped Reception Desk" description="L-Shaped Reception Desk product for Reception Desk" image="/Images/Hotel/Lobby Area/Reception Desk/L-Shaped Reception Desk/L-Shaped Reception Desk.jpg" tags="l-shaped,reception,desk">
+				<product id="L-Shaped Reception Desk" name="L-Shaped Reception Desk" description="L-shaped reception desk for efficient workflows" image="/Images/Hotel/Lobby Area/Reception Desk/L-Shaped Reception Desk/L-Shaped Reception Desk.jpg" tags="l-shaped,reception,desk">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Reception Desk/L-Shaped Reception Desk/L-Shaped Reception Desk.jpg" alt="L-Shaped Reception Desk - L-Shaped Reception Desk" />
 					</images>
@@ -921,10 +921,10 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer front; Powder-coated trims; Stone option" />
 					</specifications>
 				</product>
-				<product id="Straight Reception Desk" name="Straight Reception Desk" description="Straight Reception Desk product for Reception Desk" image="/Images/Hotel/Lobby Area/Reception Desk/Straight Reception Desk/Recepction Desk1.jpg" tags="straight,reception,desk">
+				<product id="Straight Reception Desk" name="Straight Reception Desk" description="Straight reception desk with clean lines" image="/Images/Hotel/Lobby Area/Reception Desk/Straight Reception Desk/Recepction Desk1.jpg" tags="straight,reception,desk">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Reception Desk/Straight Reception Desk/Recepction Desk1.jpg" alt="Straight Reception Desk - Recepction Desk1" />
 					</images>
@@ -933,7 +933,7 @@
 						<spec name="Depth" value="24-36&quot; (Customizable)" />
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Finish" value="Laminate/Veneer front; Powder-coated trims; Stone option" />
 					</specifications>
 				</product>
 			</subcategory>
