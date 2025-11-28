@@ -106,7 +106,7 @@
 						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Medical Recliner" name="Medical Recliner" description="Clinical recliner with drop-arms option for patient transfer; wipe-clean surfaces" image="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" tags="medical,recliner">
+				<!-- <product id="Medical Recliner" name="Medical Recliner" description="Clinical recliner with drop-arms option for patient transfer; wipe-clean surfaces" image="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" tags="medical,recliner">
 					<images>
 						<image src="/Images/Hospital/Patient Room/Recliner Chair/Medical Recliner/medical recliner.png" alt="Medical Recliner - medical recliner" />
 					</images>
@@ -117,14 +117,17 @@
 						<spec name="Material" value="Metal frame; high-density foam; PU/fabric upholstery (customizable)" />
 						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
-				</product>
+				</product> -->
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="Waiting Area" name="Waiting Area" description="Waiting Area for Hospital" image="/Images/Hospital/Waiting Area/Waiting Area.jpg">
-		<subcategory id="Magazine Table" name="Magazine Table" description="Magazine Table in Waiting Area" image="/Images/Hospital/Waiting Area/Magazine Table/Magazine Table.jpg">
-			<product id="Glass Table" name="Glass Table" description="Tempered glass top magazine table with powder-coated metal base" image="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table.png" tags="glass,table">
+		<subcategory id="Magazine Table" name="Magazine Table" description="Magazine Table in Waiting Area" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table 2.png">
+			<product id="Glass Table" name="Glass Table" description="Tempered glass top magazine table with powder-coated metal base" image="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table 1.png" tags="glass,table">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table.png" alt="Glass Table - glass table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table 1.png" alt="Glass Table - glass table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table 2.png" alt="Glass Table - glass table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Glass Table/glass table 3.png" alt="Glass Table - glass table" />
 					</images>
 				<specifications>
 					<spec name="Width" value="18-24&quot; (Customizable)" />
@@ -134,9 +137,15 @@
 					<spec name="Finish" value="Clear/frosted glass; powder-coated base" />
 				</specifications>
 				</product>
-			<product id="Metal Table" name="Metal Table" description="All-metal side table suitable for high-traffic waiting areas" image="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" tags="metal,table">
+			<product id="Metal Table" name="Metal Table" description="All-metal side table suitable for high-traffic waiting areas" image="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 5.png" tags="metal,table">
 					<images>
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table.png" alt="Metal Table - Metal Table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 1.png" alt="Metal Table - Metal Table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 2.png" alt="Metal Table - Metal Table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 3.png" alt="Metal Table - Metal Table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 4.png" alt="Metal Table - Metal Table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 5.png" alt="Metal Table - Metal Table" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Metal Table/Metal Table 6.png" alt="Metal Table - Metal Table" />
 					</images>
 				<specifications>
 					<spec name="Width" value="18-24&quot; (Customizable)" />
@@ -146,8 +155,11 @@
 					<spec name="Finish" value="Powder-coated metal" />
 				</specifications>
 				</product>
-			<product id="Wooden Table" name="Wooden Table" description="Wood top side table with durable laminate or veneer finish" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" tags="wooden,table">
+			<product id="Wooden Table" name="Wooden Table" description="Wood top side table with durable laminate or veneer finish" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table 4.png" tags="wooden,table">
 					<images>
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table 4.png" alt="Wooden Table - Wooden Table 4" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table 2.png" alt="Wooden Table - Wooden Table 2" />
+						<image src="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table 3.png" alt="Wooden Table - Wooden Table 3" />
 						<image src="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table/Wooden Table.png" alt="Wooden Table - Wooden Table" />
 					</images>
 				<specifications>
@@ -1500,10 +1512,13 @@
 	</place>
 	<place id="school" name="School" description="School furniture collection" image="/Images/School/School Furnituer.jpg">
 		<furnitureType id="Classroom" name="Classroom" description="Classroom for School" image="/Images/School/Classroom/Classroom.jpg">
-			<subcategory id="Chairs" name="Chairs" description="Chairs in Classroom" image="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png">
+			<subcategory id="Chairs" name="Chairs" description="Chairs in Classroom" image="/Images/School/Classroom/Chairs/Chairs.png">
 				<product id="Ergonomic Student Chair" name="Ergonomic Student Chair" description="Ergonomic Student Chair product for Chairs" image="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" tags="ergonomic,student,chair">
 					<images>
 						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" alt="Ergonomic Student Chair - ergonomic student chair" />
+						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 1.png" alt="Ergonomic Student Chair - ergonomic student chair" />
+						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 2.png" alt="Ergonomic Student Chair - ergonomic student chair" />
+						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 3.png" alt="Ergonomic Student Chair - ergonomic student chair" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1513,11 +1528,12 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Chairs" image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair.png" tags="plastic,chair">
+				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Chairs" image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" tags="plastic,chair">
 					<images>
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair (2).png" alt="Plastic Chair - plastic chair (2)" />
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair (3).png" alt="Plastic Chair - plastic chair (3)" />
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 1.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 3.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 4.png" alt="Plastic Chair - plastic chair" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1527,10 +1543,12 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Chairs" image="/Images/School/Classroom/Chairs/Wooden Chair/wooden chair.png" tags="wooden,chair">
+				<product id="Desk-Chair" name="Desk-Chair" description="Wooden Chair product for Chairs" image="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 1.png" tags="wooden,chair">
 					<images>
-						<image src="/Images/School/Classroom/Chairs/Wooden Chair/Wooden Chair (2).png" alt="Wooden Chair - Wooden Chair (2)" />
-						<image src="/Images/School/Classroom/Chairs/Wooden Chair/wooden chair.png" alt="Wooden Chair - wooden chair" />
+						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 1.png" alt="Desk-Chair" />
+						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 2.png" alt="Desk-Chair" />
+						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 3.png" alt="Desk-Chair" />
+						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 4.png" alt="Desk-Chair" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
