@@ -494,7 +494,7 @@
 				</product>
 			</subcategory>
 			<subcategory id="Desk" name="Desk" description="Desk in Guest Room" image="/Images/Hotel/Guest Room/Desk/Desk.jpg">
-				<product id="Executive Desk" name="Executive Desk" description="Executive desk with cable management and storage options" image="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" tags="executive,desk">
+            <product id="Executive Desk" name="Executive Desk" description="Executive desk with cable management and storage options. Metal base finished with durable powder coat; color and sheen customizable." image="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" tags="executive,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" alt="Executive Desk - Executive Desk 1" />
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Axis Executive Desk.jpg" alt="Executive Desk - Executive Desk 2" />
@@ -517,7 +517,7 @@
 						<spec name="Finish" value="Laminate/Veneer top; Powder-coated metal base" />
 					</specifications>
 				</product>
-				<product id="Workstation Desk" name="Workstation Desk" description="Workstation desk with optional privacy/modesty panels" image="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" tags="workstation,desk">
+            <product id="Workstation Desk" name="Workstation Desk" description="Workstation desk with optional privacy/modesty panels. Metal base finished with durable powder coat; color and sheen customizable." image="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" tags="workstation,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/Workstation Desk 1.jpg" alt="Workstation Desk - Workstation Desk 1" />
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Axis Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 2" />
@@ -541,7 +541,7 @@
 						<spec name="Finish" value="Laminate/Veneer top; Powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Writing Desk" name="Writing Desk" description="Minimal writing desk with solid wood/metal frame" image="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
+            <product id="Writing Desk" name="Writing Desk" description="Minimal writing desk with solid wood/metal frame. Metal base finished with durable powder coat; color and sheen customizable." image="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" tags="writing,desk">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/Writing Desk Cross Leg One side.jpg" alt="Writing Desk - Writing Desk Cross Leg One side" />
 						<image src="/Images/Hotel/Guest Room/Desk/Writing Desk/DMD Grid Writing Desk.jpg" alt="Writing Desk - DMD Grid Writing Desk" />
