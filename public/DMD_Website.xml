@@ -528,10 +528,10 @@
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Grid Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 7" />
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Luma Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 8" />
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Modulo Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 9" />
-						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Nexus Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 10" />
+						<!--image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Nexus Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 10" /> -->
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Strata Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 11" />
 						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Terra Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 12" />
-						<image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Vault Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 13" />
+						<!--image src="/Images/Hotel/Guest Room/Desk/Workstation Desk/DMD Vault Workstation Desk.jpg" alt="Workstation Desk - Workstation Desk 13" /> -->
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
