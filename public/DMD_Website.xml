@@ -1513,7 +1513,7 @@
 	<place id="school" name="School" description="School furniture collection" image="/Images/School/School Furnituer.jpg">
 		<furnitureType id="Classroom" name="Classroom" description="Classroom for School" image="/Images/School/Classroom/Classroom.jpg">
 			<subcategory id="Chairs" name="Chairs" description="Chairs in Classroom" image="/Images/School/Classroom/Chairs/Chairs.png">
-				<product id="Ergonomic Student Chair" name="Ergonomic Student Chair" description="Ergonomic Student Chair product for Chairs" image="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" tags="ergonomic,student,chair">
+				<product id="Ergonomic Student Chair" name="Ergonomic Student Chair" description="Ergonomic classroom chair with contoured polypropylene seat/back and powder-coated steel frame" image="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" tags="ergonomic,student,chair">
 					<images>
 						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" alt="Ergonomic Student Chair - ergonomic student chair" />
 						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 1.png" alt="Ergonomic Student Chair - ergonomic student chair" />
@@ -1521,14 +1521,14 @@
 						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 3.png" alt="Ergonomic Student Chair - ergonomic student chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Customizable)" />
+						<spec name="Depth" value="20-22&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Polypropylene seat/back; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Textured polypropylene; powder-coated metal frame" />
 					</specifications>
 				</product>
-				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Chairs" image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" tags="plastic,chair">
+				<product id="Plastic Chair" name="Plastic Chair" description="Molded polypropylene classroom chair; stackable for easy storage" image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" tags="plastic,chair">
 					<images>
 						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 1.png" alt="Plastic Chair - plastic chair" />
 						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" alt="Plastic Chair - plastic chair" />
@@ -1536,14 +1536,14 @@
 						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 4.png" alt="Plastic Chair - plastic chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Customizable)" />
+						<spec name="Depth" value="20-22&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Molded polypropylene; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Textured polypropylene; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Desk-Chair" name="Desk-Chair" description="Wooden Chair product for Chairs" image="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 1.png" tags="wooden,chair">
+				<product id="Desk-Chair" name="Desk-Chair" description="Classic wooden classroom chair; durable construction with easy-clean finish" image="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 1.png" tags="wooden,chair">
 					<images>
 						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 1.png" alt="Desk-Chair" />
 						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 2.png" alt="Desk-Chair" />
@@ -1551,426 +1551,426 @@
 						<image src="/Images/School/Classroom/Chairs/Desk-Chair/Desk-Chair 4.png" alt="Desk-Chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Customizable)" />
+						<spec name="Depth" value="20-22&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Solid/engineered wood; optional metal bracing (customizable)" />
+						<spec name="Finish" value="Clear lacquer or veneer; edge-banded where applicable" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Student Desks" name="Student Desks" description="Student Desks in Classroom" image="/Images/School/Classroom/Student Desks/Adjustable Height Desk/Adjustable Height Desk.png">
-				<product id="Adjustable Height Desk" name="Adjustable Height Desk" description="Adjustable Height Desk product for Student Desks" image="/Images/School/Classroom/Student Desks/Adjustable Height Desk/Adjustable Height Desk.png" tags="adjustable,height,desk">
+				<product id="Adjustable Height Desk" name="Adjustable Height Desk" description="Height-adjustable student desk with HPL/laminate top and powder-coated steel legs" image="/Images/School/Classroom/Student Desks/Adjustable Height Desk/Adjustable Height Desk.png" tags="adjustable,height,desk">
 					<images>
 						<image src="/Images/School/Classroom/Student Desks/Adjustable Height Desk/Adjustable Height Desk.png" alt="Adjustable Height Desk - Adjustable Height Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-30&quot; (Top, customizable)" />
+						<spec name="Depth" value="18-22&quot; (Top, customizable)" />
+						<spec name="Height" value="22-30&quot; (Adjustable)" />
+						<spec name="Material" value="HPL/laminate top; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated metal base" />
 					</specifications>
 				</product>
-				<product id="Double Desk" name="Double Desk" description="Double Desk product for Student Desks" image="/Images/School/Classroom/Student Desks/Double Desk/double desk.png" tags="double,desk">
+				<product id="Double Desk" name="Double Desk" description="Two-student desk with shared frame and durable laminate top" image="/Images/School/Classroom/Student Desks/Double Desk/double desk.png" tags="double,desk">
 					<images>
 						<image src="/Images/School/Classroom/Student Desks/Double Desk/double desk.png" alt="Double Desk - double desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="42-48&quot; (Customizable)" />
+						<spec name="Depth" value="18-22&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Single Desk" name="Single Desk" description="Single Desk product for Student Desks" image="/Images/School/Classroom/Student Desks/Single Desk/Single Desk.png" tags="single,desk">
+				<product id="Single Desk" name="Single Desk" description="Single student desk with durable laminate top and steel frame" image="/Images/School/Classroom/Student Desks/Single Desk/Single Desk.png" tags="single,desk">
 					<images>
 						<image src="/Images/School/Classroom/Student Desks/Single Desk/Single Desk.png" alt="Single Desk - Single Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-30&quot; (Customizable)" />
+						<spec name="Depth" value="18-22&quot; (Customizable)" />
+						<spec name="Height" value="28-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated frame" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Teacher Desk" name="Teacher Desk" description="Teacher Desk in Classroom" image="/Images/School/Classroom/Teacher Desk/Metal Teacher Desk/metal teacher desk.png">
-				<product id="Metal Teacher Desk" name="Metal Teacher Desk" description="Metal Teacher Desk product for Teacher Desk" image="/Images/School/Classroom/Teacher Desk/Metal Teacher Desk/metal teacher desk.png" tags="metal,teacher,desk">
+				<product id="Metal Teacher Desk" name="Metal Teacher Desk" description="Steel teacher desk with drawer pedestal and durable laminate worktop" image="/Images/School/Classroom/Teacher Desk/Metal Teacher Desk/metal teacher desk.png" tags="metal,teacher,desk">
 					<images>
 						<image src="/Images/School/Classroom/Teacher Desk/Metal Teacher Desk/metal teacher desk.png" alt="Metal Teacher Desk - metal teacher desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="48-60&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Powder-coated steel body; laminate/MDF top (customizable)" />
+						<spec name="Finish" value="Powder-coated body; laminate top" />
 					</specifications>
 				</product>
-				<product id="Portable Teacher Desk" name="Portable Teacher Desk" description="Portable Teacher Desk product for Teacher Desk" image="/Images/School/Classroom/Teacher Desk/Portable Teacher Desk/Portable Teacher Desk.png" tags="portable,teacher,desk">
+				<product id="Portable Teacher Desk" name="Portable Teacher Desk" description="Mobile teacher lectern/desk on locking casters with compact laminate top" image="/Images/School/Classroom/Teacher Desk/Portable Teacher Desk/Portable Teacher Desk.png" tags="portable,teacher,desk">
 					<images>
 						<image src="/Images/School/Classroom/Teacher Desk/Portable Teacher Desk/Portable Teacher Desk.png" alt="Portable Teacher Desk - Portable Teacher Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="36-48&quot; (Customizable)" />
+						<spec name="Depth" value="20-24&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame; locking casters (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Wooden Teacher Desk" name="Wooden Teacher Desk" description="Wooden Teacher Desk product for Teacher Desk" image="/Images/School/Classroom/Teacher Desk/Wooden Teacher Desk/Wooden Teacher Desk.png" tags="wooden,teacher,desk">
+				<product id="Wooden Teacher Desk" name="Wooden Teacher Desk" description="Wood teacher desk with drawer storage and durable veneer/laminate finish" image="/Images/School/Classroom/Teacher Desk/Wooden Teacher Desk/Wooden Teacher Desk.png" tags="wooden,teacher,desk">
 					<images>
 						<image src="/Images/School/Classroom/Teacher Desk/Wooden Teacher Desk/Wooden Teacher Desk.png" alt="Wooden Teacher Desk - Wooden Teacher Desk" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Solid/engineered wood; metal hardware (customizable)" />
+						<spec name="Finish" value="Veneer or laminate; edge-banded MDF" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="Library" name="Library" description="Library for School" image="/Images/School/Library/Library.jpg">
 			<subcategory id="Bookshelves" name="Bookshelves" description="Bookshelves in Library" image="/Images/School/Library/Bookshelves/Medium Bookshelf/Medium Bookshelf.png">
-				<product id="Medium Bookshelf" name="Medium Bookshelf" description="Medium Bookshelf product for Bookshelves" image="/Images/School/Library/Bookshelves/Medium Bookshelf/Medium Bookshelf.png" tags="medium,bookshelf">
+				<product id="Medium Bookshelf" name="Medium Bookshelf" description="Five-shelf laminate bookcase with adjustable shelves and edge banding" image="/Images/School/Library/Bookshelves/Medium Bookshelf/Medium Bookshelf.png" tags="medium,bookshelf">
 					<images>
 						<image src="/Images/School/Library/Bookshelves/Medium Bookshelf/Medium Bookshelf.png" alt="Medium Bookshelf - Medium Bookshelf" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="12-14&quot; (Customizable)" />
+						<spec name="Height" value="60-72&quot; (Customizable)" />
+						<spec name="Material" value="Laminated MDF/particleboard; optional steel shelf supports" />
+						<spec name="Finish" value="Melamine/laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
-				<product id="Short Bookshelf" name="Short Bookshelf" description="Short Bookshelf product for Bookshelves" image="/Images/School/Library/Bookshelves/Short Bookshelf/short bookshelf.png" tags="short,bookshelf">
+				<product id="Short Bookshelf" name="Short Bookshelf" description="Two- to three-shelf low bookcase for early readers and display" image="/Images/School/Library/Bookshelves/Short Bookshelf/short bookshelf.png" tags="short,bookshelf">
 					<images>
 						<image src="/Images/School/Library/Bookshelves/Short Bookshelf/short bookshelf.png" alt="Short Bookshelf - short bookshelf" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="12-14&quot; (Customizable)" />
+						<spec name="Height" value="30-36&quot; (Customizable)" />
+						<spec name="Material" value="Laminated MDF/particleboard; optional steel shelf supports" />
+						<spec name="Finish" value="Melamine/laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
-				<product id="Tall Bookshelf" name="Tall Bookshelf" description="Tall Bookshelf product for Bookshelves" image="/Images/School/Library/Bookshelves/Tall Bookshelf/Tall Bookshelf.jpg" tags="tall,bookshelf">
+				<product id="Tall Bookshelf" name="Tall Bookshelf" description="Tall bookcase with adjustable shelves for maximum storage capacity" image="/Images/School/Library/Bookshelves/Tall Bookshelf/Tall Bookshelf.jpg" tags="tall,bookshelf">
 					<images>
 						<image src="/Images/School/Library/Bookshelves/Tall Bookshelf/Tall Bookshelf.jpg" alt="Tall Bookshelf - Tall Bookshelf" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-36&quot; (Customizable)" />
+						<spec name="Depth" value="12-14&quot; (Customizable)" />
+						<spec name="Height" value="72-84&quot; (Customizable)" />
+						<spec name="Material" value="Laminated MDF/particleboard; optional steel shelf supports" />
+						<spec name="Finish" value="Melamine/laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Reading Chairs" name="Reading Chairs" description="Reading Chairs in Library" image="/Images/School/Library/Reading Chairs/Armchair/armchair.png">
-				<product id="Armchair" name="Armchair" description="Armchair product for Reading Chairs" image="/Images/School/Library/Reading Chairs/Armchair/armchair.png" tags="armchair">
+				<product id="Armchair" name="Armchair" description="Upholstered reading armchair with foam cushions and sturdy wood/metal base" image="/Images/School/Library/Reading Chairs/Armchair/armchair.png" tags="armchair">
 					<images>
 						<image src="/Images/School/Library/Reading Chairs/Armchair/armchair.png" alt="Armchair - armchair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="28-32&quot; (Customizable)" />
+						<spec name="Depth" value="28-32&quot; (Customizable)" />
+						<spec name="Height" value="34-38&quot; (Customizable)" />
+						<spec name="Material" value="Fabric/PVC upholstery; foam cushions; wood or powder-coated steel frame" />
+						<spec name="Finish" value="Fabric/PU cover; lacquered wood or powder-coated steel" />
 					</specifications>
 				</product>
-				<product id="Bean Bag" name="Bean Bag" description="Bean Bag product for Reading Chairs" image="/Images/School/Library/Reading Chairs/Bean Bag/bean bag.png" tags="bean,bag">
+				<product id="Bean Bag" name="Bean Bag" description="Soft bean bag for casual reading; double-stitched cover with EPS fill" image="/Images/School/Library/Reading Chairs/Bean Bag/bean bag.png" tags="bean,bag">
 					<images>
 						<image src="/Images/School/Library/Reading Chairs/Bean Bag/bean bag.png" alt="Bean Bag - bean bag" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="30-40&quot; (Customizable)" />
+						<spec name="Depth" value="30-40&quot; (Customizable)" />
+						<spec name="Height" value="24-32&quot; (Customizable)" />
+						<spec name="Material" value="Fabric/PU shell; EPS bead fill (customizable)" />
+						<spec name="Finish" value="Durable fabric/PU cover; double-stitched seams" />
 					</specifications>
 				</product>
-				<product id="Upholstered Chair" name="Upholstered Chair" description="Upholstered Chair product for Reading Chairs" image="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" tags="upholstered,chair">
+				<product id="Upholstered Chair" name="Upholstered Chair" description="Comfortable lounge chair for libraries; supportive back and padded seat" image="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" tags="upholstered,chair">
 					<images>
 						<image src="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair (2).png" alt="Upholstered Chair - upholstered chair (2)" />
 						<image src="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" alt="Upholstered Chair - upholstered chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-28&quot; (Customizable)" />
+						<spec name="Depth" value="26-30&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Fabric/PVC upholstery; foam cushion; wood or powder-coated steel frame" />
+						<spec name="Finish" value="Fabric/PU cover; lacquered wood or powder-coated steel" />
 					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Study Tables" name="Study Tables" description="Study Tables in Library" image="/Images/School/Library/Study Tables/Carrel Desk/Carrel Desk.png">
-				<product id="Carrel Desk" name="Carrel Desk" description="Carrel Desk product for Study Tables" image="/Images/School/Library/Study Tables/Carrel Desk/Carrel Desk.png" tags="carrel,desk">
+				<product id="Carrel Desk" name="Carrel Desk" description="Privacy study carrel with laminate top and side panels" image="/Images/School/Library/Study Tables/Carrel Desk/Carrel Desk.png" tags="carrel,desk">
 					<images>
 						<image src="/Images/School/Library/Study Tables/Carrel Desk/Carrel Desk.png" alt="Carrel Desk - Carrel Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-30&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; privacy panels; powder-coated steel frame" />
+						<spec name="Finish" value="Laminate surfaces; PVC edge banding; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Group Study Table" name="Group Study Table" description="Group Study Table product for Study Tables" image="/Images/School/Library/Study Tables/Group Study Table/group study table.png" tags="group,study,table">
+				<product id="Group Study Table" name="Group Study Table" description="Large group study table with durable laminate worktop and steel base" image="/Images/School/Library/Study Tables/Group Study Table/group study table.png" tags="group,study,table">
 					<images>
 						<image src="/Images/School/Library/Study Tables/Group Study Table/group study table.png" alt="Group Study Table - group study table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="60-72&quot; (Customizable)" />
+						<spec name="Depth" value="30-36&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Single Study Table" name="Single Study Table" description="Single Study Table product for Study Tables" image="/Images/School/Library/Study Tables/Single Study Table/single study table.png" tags="single,study,table">
+				<product id="Single Study Table" name="Single Study Table" description="Individual study table with laminate top and sturdy steel frame" image="/Images/School/Library/Study Tables/Single Study Table/single study table.png" tags="single,study,table">
 					<images>
 						<image src="/Images/School/Library/Study Tables/Single Study Table/single study table.png" alt="Single Study Table - single study table" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="36-48&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame (customizable)" />
+						<spec name="Finish" value="Laminate top; powder-coated base" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
 	</place>
 	<place id="university" name="University" description="University furniture collection" image="/Images/University/University.jpg">
-		<furnitureType id="Dormitory" name="Dormitory" description="Dormitory for University" image="/Images/University/Dormitory/Dormitory.jpg">
-			<subcategory id="Bunk Beds" name="Bunk Beds" description="Bunk Beds in Dormitory" image="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png">
-				<product id="Full Bunk Bed" name="Full Bunk Bed" description="Full Bunk Bed product for Bunk Beds" image="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" tags="full,bunk,bed">
+		<furnitureType id="Dormitory" name="Dormitory" description="Dormitory furniture for student living" image="/Images/University/Dormitory/Dormitory.jpg">
+			<subcategory id="Bunk Beds" name="Bunk Beds" description="Bunk beds for efficient dormitory sleeping" image="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png">
+				<product id="Full Bunk Bed" name="Full Bunk Bed" description="Full-size bunk bed with powder-coated steel frame and guard rails" image="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" tags="full,bunk,bed">
 					<images>
 						<image src="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" alt="Full Bunk Bed - full bunk bed" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="54&quot; (Full mattress)" />
+						<spec name="Depth" value="75&quot; (Full mattress)" />
+						<spec name="Height" value="60-68&quot; (Customizable)" />
+						<spec name="Material" value="Powder-coated steel frame; safety rails; ladder" />
+						<spec name="Finish" value="Durable powder-coated finish" />
 					</specifications>
 				</product>
-				<product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin Bunk Bed product for Bunk Beds" image="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" tags="twin,bunk,bed">
+				<product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin-size bunk bed with sturdy steel frame and safety rails" image="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" tags="twin,bunk,bed">
 					<images>
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - twin bunk bed" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="39&quot; (Twin mattress)" />
+						<spec name="Depth" value="75&quot; (Twin mattress)" />
+						<spec name="Height" value="60-68&quot; (Customizable)" />
+						<spec name="Material" value="Powder-coated steel frame; safety rails; ladder" />
+						<spec name="Finish" value="Durable powder-coated finish" />
 					</specifications>
 				</product>
-				<product id="Twin XL Bunk Bed" name="Twin XL Bunk Bed" description="Twin XL Bunk Bed product for Bunk Beds" image="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" tags="twin,xl,bunk,bed">
+				<product id="Twin XL Bunk Bed" name="Twin XL Bunk Bed" description="Twin XL bunk bed for taller students; reinforced steel frame" image="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" tags="twin,xl,bunk,bed">
 					<images>
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" alt="Twin XL Bunk Bed - Twin XL Bunk Bed" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="39&quot; (Twin XL mattress)" />
+						<spec name="Depth" value="80&quot; (Twin XL mattress)" />
+						<spec name="Height" value="60-70&quot; (Customizable)" />
+						<spec name="Material" value="Reinforced powder-coated steel; safety rails; ladder" />
+						<spec name="Finish" value="Durable powder-coated finish" />
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Study Desks" name="Study Desks" description="Study Desks in Dormitory" image="/Images/University/Dormitory/Study Desks/Double Study Desk/double study desk.png">
-				<product id="Double Study Desk" name="Double Study Desk" description="Double Study Desk product for Study Desks" image="/Images/University/Dormitory/Study Desks/Double Study Desk/double study desk.png" tags="double,study,desk">
+			<subcategory id="Study Desks" name="Study Desks" description="Study desks for individual and shared dorm rooms" image="/Images/University/Dormitory/Study Desks/Double Study Desk/double study desk.png">
+				<product id="Double Study Desk" name="Double Study Desk" description="Two-person study desk with laminate worktop and powder-coated steel base" image="/Images/University/Dormitory/Study Desks/Double Study Desk/double study desk.png" tags="double,study,desk">
 					<images>
 						<image src="/Images/University/Dormitory/Study Desks/Double Study Desk/double study desk.png" alt="Double Study Desk - double study desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="60-72&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame" />
+						<spec name="Finish" value="Laminate top; powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Single Study Desk" name="Single Study Desk" description="Single Study Desk product for Study Desks" image="/Images/University/Dormitory/Study Desks/Single Study Desk/single study desk.png" tags="single,study,desk">
+				<product id="Single Study Desk" name="Single Study Desk" description="Compact single study desk with durable laminate top and steel frame" image="/Images/University/Dormitory/Study Desks/Single Study Desk/single study desk.png" tags="single,study,desk">
 					<images>
 						<image src="/Images/University/Dormitory/Study Desks/Single Study Desk/single study desk.png" alt="Single Study Desk - single study desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="36-48&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frame" />
+						<spec name="Finish" value="Laminate top; powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Wall-Mounted Study Desk" name="Wall-Mounted Study Desk" description="Wall-Mounted Study Desk product for Study Desks" image="/Images/University/Dormitory/Study Desks/Wall-Mounted Study Desk/wall-mounted study desk.png" tags="wall-mounted,study,desk">
+				<product id="Wall-Mounted Study Desk" name="Wall-Mounted Study Desk" description="Space-saving wall-mounted desk with steel brackets and laminate top" image="/Images/University/Dormitory/Study Desks/Wall-Mounted Study Desk/wall-mounted study desk.png" tags="wall-mounted,study,desk">
 					<images>
 						<image src="/Images/University/Dormitory/Study Desks/Wall-Mounted Study Desk/wall-mounted study desk.png" alt="Wall-Mounted Study Desk - wall-mounted study desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-36&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Worksurface)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel wall brackets" />
+						<spec name="Finish" value="Laminate top; powder-coated brackets" />
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Wardrobes" name="Wardrobes" description="Wardrobes in Dormitory" image="/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png">
-				<product id="2-Door Wardrobe" name="2-Door Wardrobe" description="2-Door Wardrobe product for Wardrobes" image="/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png" tags="2-door,wardrobe">
+			<subcategory id="Wardrobes" name="Wardrobes" description="Wardrobes for student storage and organization" image="/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png">
+				<product id="2-Door Wardrobe" name="2-Door Wardrobe" description="Two-door wardrobe with hanging rail and adjustable shelves" image="/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png" tags="2-door,wardrobe">
 					<images>
 						<image src="/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png" alt="2-Door Wardrobe - 2-Door Wardrobe" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="36-48&quot; (Customizable)" />
+						<spec name="Depth" value="20-24&quot; (Customizable)" />
+						<spec name="Height" value="72-78&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF carcass; metal hardware; optional mirror" />
+						<spec name="Finish" value="Laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
-				<product id="3-Door Wardrobe" name="3-Door Wardrobe" description="3-Door Wardrobe product for Wardrobes" image="/Images/University/Dormitory/Wardrobes/3-Door Wardrobe/3-door wardrobe.png" tags="3-door,wardrobe">
+				<product id="3-Door Wardrobe" name="3-Door Wardrobe" description="Three-door wardrobe with hanging, shelving, and full-length storage" image="/Images/University/Dormitory/Wardrobes/3-Door Wardrobe/3-door wardrobe.png" tags="3-door,wardrobe">
 					<images>
 						<image src="/Images/University/Dormitory/Wardrobes/3-Door Wardrobe/3-door wardrobe.png" alt="3-Door Wardrobe - 3-door wardrobe" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="54-72&quot; (Customizable)" />
+						<spec name="Depth" value="20-24&quot; (Customizable)" />
+						<spec name="Height" value="72-78&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF carcass; metal hardware; optional mirror" />
+						<spec name="Finish" value="Laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
-				<product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Sliding Door Wardrobe product for Wardrobes" image="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" tags="sliding,door,wardrobe">
+				<product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Sliding door wardrobe for compact rooms; smooth glide track system" image="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" tags="sliding,door,wardrobe">
 					<images>
 						<image src="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" alt="Sliding Door Wardrobe - Sliding Door Wardrobe" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="60-72&quot; (Customizable)" />
+						<spec name="Depth" value="22-24&quot; (Customizable)" />
+						<spec name="Height" value="72-84&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF carcass; metal hardware; sliding track" />
+						<spec name="Finish" value="Laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
-		<furnitureType id="Lecture Hall" name="Lecture Hall" description="Lecture Hall for University" image="/Images/University/Lecture Hall/Lecture Hall.jpg">
-			<subcategory id="Lecture Desks" name="Lecture Desks" description="Lecture Desks in Lecture Hall" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png">
-				<product id="Attached Desk-Chair" name="Attached Desk-Chair" description="Attached Desk-Chair product for Lecture Desks" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" tags="attached,desk-chair">
+		<furnitureType id="Lecture Hall" name="Lecture Hall" description="Lecture hall furniture for instruction and seating" image="/Images/University/Lecture Hall/Lecture Hall.jpg">
+			<subcategory id="Lecture Desks" name="Lecture Desks" description="Student desks for lecture halls" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png">
+				<product id="Attached Desk-Chair" name="Attached Desk-Chair" description="Integrated desk-chair unit with polypropylene seat and laminate work surface" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" tags="attached,desk-chair">
 					<images>
 						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" alt="Attached Desk-Chair - attached desk-chair" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Seat width)" />
+						<spec name="Depth" value="18-20&quot; (Seat depth)" />
+						<spec name="Height" value="29-30&quot; (Desk height)" />
+						<spec name="Material" value="Polypropylene seat/back; laminate top; powder-coated steel frame" />
+						<spec name="Finish" value="Textured polypropylene; laminate top; powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Fixed Desk" name="Fixed Desk" description="Fixed Desk product for Lecture Desks" image="/Images/University/Lecture Hall/Lecture Desks/Fixed Desk/Fixed Desk.png" tags="fixed,desk">
+				<product id="Fixed Desk" name="Fixed Desk" description="Fixed row desk with continuous laminate top and steel supports" image="/Images/University/Lecture Hall/Lecture Desks/Fixed Desk/Fixed Desk.png" tags="fixed,desk">
 					<images>
 						<image src="/Images/University/Lecture Hall/Lecture Desks/Fixed Desk/Fixed Desk.png" alt="Fixed Desk - Fixed Desk" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="48-96&quot; (Row span, customizable)" />
+						<spec name="Depth" value="16-20&quot; (Customizable)" />
+						<spec name="Height" value="29-30&quot; (Customizable)" />
+						<spec name="Material" value="Laminate/MDF top; powder-coated steel frames" />
+						<spec name="Finish" value="Laminate top; powder-coated supports" />
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Podium" name="Podium" description="Podium in Lecture Hall" image="/Images/University/Lecture Hall/Podium/Metal Podium/Metal Podium.png">
-				<product id="Metal Podium" name="Metal Podium" description="Metal Podium product for Podium" image="/Images/University/Lecture Hall/Podium/Metal Podium/Metal Podium.png" tags="metal,podium">
+			<subcategory id="Podium" name="Podium" description="Podiums for speaking and instruction" image="/Images/University/Lecture Hall/Podium/Metal Podium/Metal Podium.png">
+				<product id="Metal Podium" name="Metal Podium" description="Metal podium with angled reading surface and storage shelf" image="/Images/University/Lecture Hall/Podium/Metal Podium/Metal Podium.png" tags="metal,podium">
 					<images>
 						<image src="/Images/University/Lecture Hall/Podium/Metal Podium/Metal Podium.png" alt="Metal Podium - Metal Podium" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="20-24&quot; (Customizable)" />
+						<spec name="Depth" value="18-20&quot; (Customizable)" />
+						<spec name="Height" value="42-46&quot; (Customizable)" />
+						<spec name="Material" value="Powder-coated steel body; optional laminate shelf" />
+						<spec name="Finish" value="Powder-coated metal surfaces" />
 					</specifications>
 				</product>
-				<product id="Smart Podium" name="Smart Podium" description="Smart Podium product for Podium" image="/Images/University/Lecture Hall/Podium/Smart Podium/Smart Podium.png" tags="smart,podium">
+				<product id="Smart Podium" name="Smart Podium" description="Smart podium with integrated cable management and optional AV mounts" image="/Images/University/Lecture Hall/Podium/Smart Podium/Smart Podium.png" tags="smart,podium">
 					<images>
 						<image src="/Images/University/Lecture Hall/Podium/Smart Podium/Smart Podium.png" alt="Smart Podium - Smart Podium" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-36&quot; (Customizable)" />
+						<spec name="Depth" value="20-24&quot; (Customizable)" />
+						<spec name="Height" value="42-46&quot; (Customizable)" />
+						<spec name="Material" value="Powder-coated steel frame; laminate panels; cable routing" />
+						<spec name="Finish" value="Powder-coated frame; laminate surfaces" />
 					</specifications>
 				</product>
-				<product id="Wooden Podium" name="Wooden Podium" description="Wooden Podium product for Podium" image="/Images/University/Lecture Hall/Podium/Wooden Podium/wooden podium.png" tags="wooden,podium">
+				<product id="Wooden Podium" name="Wooden Podium" description="Wood podium with traditional profile and lacquered veneer finish" image="/Images/University/Lecture Hall/Podium/Wooden Podium/wooden podium.png" tags="wooden,podium">
 					<images>
 						<image src="/Images/University/Lecture Hall/Podium/Wooden Podium/wooden podium.png" alt="Wooden Podium - wooden podium" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="24-30&quot; (Customizable)" />
+						<spec name="Depth" value="18-22&quot; (Customizable)" />
+						<spec name="Height" value="42-46&quot; (Customizable)" />
+						<spec name="Material" value="Solid/engineered wood; metal hardware" />
+						<spec name="Finish" value="Lacquered veneer; stained options available" />
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Tiered Seating" name="Tiered Seating" description="Tiered Seating in Lecture Hall" image="/Images/University/Lecture Hall/Tiered Seating/Cushioned Seating/cushioned seating.png">
-				<product id="Cushioned Seating" name="Cushioned Seating" description="Cushioned Seating product for Tiered Seating" image="/Images/University/Lecture Hall/Tiered Seating/Cushioned Seating/cushioned seating.png" tags="cushioned,seating">
+			<subcategory id="Tiered Seating" name="Tiered Seating" description="Row seating options for tiered lecture halls" image="/Images/University/Lecture Hall/Tiered Seating/Cushioned Seating/cushioned seating.png">
+				<product id="Cushioned Seating" name="Cushioned Seating" description="Upholstered fixed row seating with foam cushions and armrests" image="/Images/University/Lecture Hall/Tiered Seating/Cushioned Seating/cushioned seating.png" tags="cushioned,seating">
 					<images>
 						<image src="/Images/University/Lecture Hall/Tiered Seating/Cushioned Seating/cushioned seating.png" alt="Cushioned Seating - cushioned seating" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="19-22&quot; (Per seat, customizable)" />
+						<spec name="Depth" value="18-20&quot; (Per seat, customizable)" />
+						<spec name="Height" value="32-36&quot; (Back height, customizable)" />
+						<spec name="Material" value="Fabric/PVC upholstery; foam cushions; powder-coated steel frame" />
+						<spec name="Finish" value="Fabric/PU cover; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Fixed Seating" name="Fixed Seating" description="Fixed Seating product for Tiered Seating" image="/Images/University/Lecture Hall/Tiered Seating/Fixed Seating/fixed seating unit.png" tags="fixed,seating">
+				<product id="Fixed Seating" name="Fixed Seating" description="Fixed row seating with polypropylene shells and shared metal supports" image="/Images/University/Lecture Hall/Tiered Seating/Fixed Seating/fixed seating unit.png" tags="fixed,seating">
 					<images>
 						<image src="/Images/University/Lecture Hall/Tiered Seating/Fixed Seating/fixed seating unit.png" alt="Fixed Seating - fixed seating unit" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-20&quot; (Per seat, customizable)" />
+						<spec name="Depth" value="18-20&quot; (Per seat, customizable)" />
+						<spec name="Height" value="32-36&quot; (Back height, customizable)" />
+						<spec name="Material" value="Polypropylene shells; powder-coated steel supports" />
+						<spec name="Finish" value="Textured polypropylene; powder-coated frame" />
 					</specifications>
 				</product>
-				<product id="Movable Seating" name="Movable Seating" description="Movable Seating product for Tiered Seating" image="/Images/University/Lecture Hall/Tiered Seating/Movable Seating/movable seating unit.png" tags="movable,seating">
+				<product id="Movable Seating" name="Movable Seating" description="Portable cushioned seating for flexible layouts; optional ganging connectors" image="/Images/University/Lecture Hall/Tiered Seating/Movable Seating/movable seating unit.png" tags="movable,seating">
 					<images>
 						<image src="/Images/University/Lecture Hall/Tiered Seating/Movable Seating/movable seating unit.png" alt="Movable Seating - movable seating unit" />
 					</images>
 					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Custom-Built to Your Specifications" />
+						<spec name="Width" value="18-22&quot; (Per seat, customizable)" />
+						<spec name="Depth" value="18-20&quot; (Per seat, customizable)" />
+						<spec name="Height" value="32-36&quot; (Back height, customizable)" />
+						<spec name="Material" value="Fabric/PVC upholstery; foam cushion; powder-coated steel frame" />
+						<spec name="Finish" value="Fabric/PU cover; powder-coated frame" />
 					</specifications>
 				</product>
 			</subcategory>
