@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <places>
-	<place id="hospital" name="Hospital" description="Hospital furniture collection" image="/Images/Hospital/Hospital.jpg">
+	<place id="hospital" name="Hospital" description="Hospital furniture collection" image="/Images/Hospital/Hospital.png">
 		<furnitureType id="Patient Room" name="Patient Room" description="Patient Room for Hospital" image="/Images/Hospital/Patient Room/Patient Room.jpg">
 			<images>
 				<image src="/Images/Hospital/Patient Room/Patient Room 2.jpg" alt="Patient Room 2" />
@@ -118,6 +118,44 @@
 						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
 					</specifications>
 				</product> -->
+			</subcategory>
+			<subcategory id="Lounge Chair" name="Lounge Chair" description="Lounge Chair in Patient Room" image="/Images/Hospital/Patient Room/Lounge Chair/Gemini_Generated_Image_963a3z963a3z963a.png">
+				<product id="Upholstered Lounge Chair" name="Upholstered Lounge Chair" description="Comfortable single-seat lounge chair with wipe-clean upholstery and supportive backrest" image="/Images/Hospital/Patient Room/Lounge Chair/Gemini_Generated_Image_963a3z963a3z963a.png" tags="lounge,chair,upholstered">
+					<images>
+						<image src="/Images/Hospital/Patient Room/Lounge Chair/Gemini_Generated_Image_963a3z963a3z963a.png" alt="Upholstered Lounge Chair - Gemini Image 963a3z" />
+					</images>
+					<specifications>
+						<spec name="Width" value="28-34&quot; (Customizable)" />
+						<spec name="Depth" value="28-34&quot; (Customizable)" />
+						<spec name="Height" value="32-40&quot; (Customizable)" />
+						<spec name="Material" value="Metal/wood frame; high-density foam; PU/fabric upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated legs/base" />
+					</specifications>
+				</product>
+				<product id="Contoured Lounge Chair" name="Contoured Lounge Chair" description="Ergonomic lounge chair with curved back for patient comfort; easy-clean surfaces" image="/Images/Hospital/Patient Room/Lounge Chair/Gemini_Generated_Image_peox7dpeox7dpeox.png" tags="lounge,chair,contoured">
+					<images>
+						<image src="/Images/Hospital/Patient Room/Lounge Chair/Gemini_Generated_Image_peox7dpeox7dpeox.png" alt="Contoured Lounge Chair - Gemini Image peox7d" />
+					</images>
+					<specifications>
+						<spec name="Width" value="28-34&quot; (Customizable)" />
+						<spec name="Depth" value="28-34&quot; (Customizable)" />
+						<spec name="Height" value="32-40&quot; (Customizable)" />
+						<spec name="Material" value="Metal frame; molded foam; PU/fabric upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated frame" />
+					</specifications>
+				</product>
+				<product id="Compact Lounge Chair" name="Compact Lounge Chair" description="Space-efficient lounge chair for patient rooms; durable and easy to sanitize" image="/Images/Hospital/Patient Room/Lounge Chair/Image_fx (8).png" tags="compact,lounge,chair">
+					<images>
+						<image src="/Images/Hospital/Patient Room/Lounge Chair/Image_fx (8).png" alt="Compact Lounge Chair - Image fx (8)" />
+					</images>
+					<specifications>
+						<spec name="Width" value="26-32&quot; (Customizable)" />
+						<spec name="Depth" value="25-32&quot; (Customizable)" />
+						<spec name="Height" value="30-38&quot; (Customizable)" />
+						<spec name="Material" value="Metal/wood frame; high-density foam; PU/fabric upholstery (customizable)" />
+						<spec name="Finish" value="Hospital-grade upholstery; powder-coated legs/base" />
+					</specifications>
+				</product>
 			</subcategory>
 		</furnitureType>
 		<furnitureType id="Waiting Area" name="Waiting Area" description="Waiting Area for Hospital" image="/Images/Hospital/Waiting Area/Waiting Area.jpg">
@@ -1258,7 +1296,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="restaurant" name="Restaurant" description="Restaurant furniture collection" image="/Images/Restaurant/Restaurant.jpg">
+	<place id="restaurant" name="Restaurant" description="Restaurant furniture collection" image="/Images/Restaurant/Restaurant.png">
 		<furnitureType id="Dining Area" name="Dining Area" description="Dining Area for Restaurant" image="/Images/Restaurant/Dining Area/Dinnig Area.jpg">
 			<subcategory id="Bar Stools" name="Bar Stools" description="Bar Stools in Dining Area" image="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png">
 				<product id="High Bar Stool" name="High Bar Stool" description="High Bar Stool product for Bar Stools" image="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png" tags="high,bar,stool">
@@ -1510,7 +1548,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="school" name="School" description="School furniture collection" image="/Images/School/School Furnituer.jpg">
+	<place id="school" name="School" description="School furniture collection" image="/Images/School/School.png">
 		<furnitureType id="Classroom" name="Classroom" description="Classroom for School" image="/Images/School/Classroom/Classroom.jpg">
 			<subcategory id="Chairs" name="Chairs" description="Chairs in Classroom" image="/Images/School/Classroom/Chairs/Chairs.png">
 				<product id="Ergonomic Student Chair" name="Ergonomic Student Chair" description="Ergonomic classroom chair with contoured polypropylene seat/back and powder-coated steel frame" image="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair.png" tags="ergonomic,student,chair">
@@ -1754,7 +1792,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="university" name="University" description="University furniture collection" image="/Images/University/University.jpg">
+	<place id="university" name="University" description="University furniture collection" image="/Images/University/University.png">
 		<furnitureType id="Dormitory" name="Dormitory" description="Dormitory furniture for student living" image="/Images/University/Dormitory/Dormitory.jpg">
 			<subcategory id="Bunk Beds" name="Bunk Beds" description="Bunk beds for efficient dormitory sleeping" image="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png">
 				<product id="Full Bunk Bed" name="Full Bunk Bed" description="Full-size bunk bed with powder-coated steel frame and guard rails" image="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" tags="full,bunk,bed">
@@ -1876,6 +1914,10 @@
 				<product id="Attached Desk-Chair" name="Attached Desk-Chair" description="Integrated desk-chair unit with polypropylene seat and laminate work surface" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" tags="attached,desk-chair">
 					<images>
 						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" alt="Attached Desk-Chair - attached desk-chair" />
+						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair 2.png" alt="Attached Desk-Chair - attached desk-chair" />
+						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 1.png" alt="Ergonomic Student Chair - ergonomic student chair" />
+						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 2.png" alt="Ergonomic Student Chair - ergonomic student chair" />
+						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 3.png" alt="Ergonomic Student Chair - ergonomic student chair" />
 					</images>
 					<specifications>
 						<spec name="Width" value="18-20&quot; (Seat width)" />

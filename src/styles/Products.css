@@ -291,10 +291,16 @@
 .product-categories .category-image.place-hotel,
 .product-categories .category-image.place-office,
 .product-categories .category-image.place-restaurant,
-.product-categories .category-image.place-school,
 .product-categories .category-image.place-university {
   background-size: cover !important;
   background-color: transparent;
+}
+
+/* Ensure School shows full word without cropping */
+.product-categories .category-image.place-school {
+  background-size: contain !important;
+  background-position: center top;
+  background-color: #ffffff;
 }
 
 /* Keep deeper layers unchanged: default to contain to avoid cropping */
