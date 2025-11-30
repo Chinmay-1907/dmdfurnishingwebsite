@@ -2018,22 +2018,414 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-    <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/placeholder.png">
-        <furnitureType id="bedroom" name="Bedroom" description="Bedroom furniture" image="/Images/placeholder.png">
-            <subcategory id="beds" name="Beds" description="Beds for residential spaces" image="/Images/placeholder.png">
-                <product id="king-mdf-headboard-unit" name="King MDF Headboard Unit" description="A stylish and durable King MDF Headboard Unit, perfect for modern residential bedrooms." price="$1200" tags="headboard, king, mdf, bedroom, residential">
+    <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/Residential/Residential.jpg">
+        <furnitureType id="Living Room" name="Living Room" description="Furniture for living rooms" image="/Images/Residential/Living Room/Living Room.jpg">
+            <subcategory id="Sofa" name="Sofa" description="Sofas and sectionals" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa.png">
+                <product id="Classic Sofa" name="Classic Sofa" description="Three-seat sofa with high-density foam cushions and stain-resistant upholstery" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa.png" tags="sofa,classic,living room">
                     <images>
-                        <image src="/Images/placeholder.png" alt="King MDF Headboard Unit" />
+                        <image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa.png" alt="Classic Sofa - living room" />
                     </images>
                     <specifications>
-                        <spec name="Material" value="MDF" />
-                        <spec name="Size" value="King" />
-                        <spec name="Color" value="Customizable" />
-                        <spec name="Dimensions" value="78W x 48H x 2D inches" />
-                        <spec name="Assembly" value="Required" />
-                        <spec name="Warranty" value="1 Year" />
-                        <spec name="Style" value="Modern" />
-                        <spec name="Finish" value="Matte" />
+                        <spec name="Width" value="78-86&quot; (Customizable)" />
+                        <spec name="Depth" value="34-38&quot; (Customizable)" />
+                        <spec name="Height" value="32-36&quot; (Customizable)" />
+                        <spec name="Material" value="Solid/engineered wood frame; high-density foam; fabric/PU upholstery" />
+                        <spec name="Finish" value="Upholstery in fabric/PU; legs in wood/metal" />
+                    </specifications>
+                </product>
+                <product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa with chaise and durable upholstery" image="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" tags="sofa,sectional,modular">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" alt="Sectional Sofa - living room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="96-120&quot; (Configurable)" />
+                        <spec name="Depth" value="34-38&quot; (Customizable)" />
+                        <spec name="Height" value="32-36&quot; (Customizable)" />
+                        <spec name="Material" value="Solid/engineered wood frame; foam cushions; fabric/PU upholstery" />
+                        <spec name="Finish" value="Upholstery in fabric/PU; powder-coated/wood legs" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Lounge Chair" name="Lounge Chair" description="Armchairs and recliners" image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png">
+                <product id="Armchair" name="Armchair" description="Upholstered armchair with supportive back and plush seat" image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png" tags="armchair,lounge">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png" alt="Armchair - lounge chair" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="28-34&quot; (Customizable)" />
+                        <spec name="Depth" value="30-34&quot; (Customizable)" />
+                        <spec name="Height" value="32-38&quot; (Customizable)" />
+                        <spec name="Material" value="Wood/metal frame; high-density foam; fabric/PU upholstery" />
+                        <spec name="Finish" value="Upholstery in fabric/PU; powder-coated/wood base" />
+                    </specifications>
+                </product>
+                <product id="Recliner" name="Recliner" description="Manual recliner with padded arms and wipe-clean upholstery" image="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" tags="recliner,lounge">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" alt="Recliner - lounge chair" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="30-36&quot; (Customizable)" />
+                        <spec name="Depth" value="34-38&quot; (Customizable)" />
+                        <spec name="Height" value="38-42&quot; (Customizable)" />
+                        <spec name="Material" value="Metal frame; foam; fabric/PU upholstery" />
+                        <spec name="Finish" value="Upholstery in fabric/PU; powder-coated frame" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png">
+                <product id="Wood Coffee Table" name="Wood Coffee Table" description="Solid wood coffee table with durable finish" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png" tags="coffee table,wood">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png" alt="Wood Coffee Table - living room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="36-48&quot; (Customizable)" />
+                        <spec name="Depth" value="20-26&quot; (Customizable)" />
+                        <spec name="Height" value="16-18&quot; (Customizable)" />
+                        <spec name="Material" value="Solid/engineered wood; metal hardware (optional)" />
+                        <spec name="Finish" value="Stain/veneer/matte lacquer" />
+                    </specifications>
+                </product>
+                <product id="Glass Coffee Table" name="Glass Coffee Table" description="Tempered glass top coffee table with metal base" image="/Images/Residential/Living Room/Coffee Table/Glass Coffee Table/glass coffee table.png" tags="coffee table,glass,metal">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Coffee Table/Glass Coffee Table/glass coffee table.png" alt="Glass Coffee Table - living room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="36-48&quot; (Customizable)" />
+                        <spec name="Depth" value="20-26&quot; (Customizable)" />
+                        <spec name="Height" value="16-18&quot; (Customizable)" />
+                        <spec name="Material" value="Tempered glass top; powder-coated steel base" />
+                        <spec name="Finish" value="Clear/frosted glass; powder-coated base" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="TV Unit" name="TV Unit" description="Media consoles and TV stands" image="/Images/Residential/Living Room/TV Unit/Media Console/media console.png">
+                <product id="Media Console" name="Media Console" description="Low-profile media console with cable management" image="/Images/Residential/Living Room/TV Unit/Media Console/media console.png" tags="tv unit,media console">
+                    <images>
+                        <image src="/Images/Residential/Living Room/TV Unit/Media Console/media console.png" alt="Media Console - tv unit" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="60-84&quot; (Customizable)" />
+                        <spec name="Depth" value="16-20&quot; (Customizable)" />
+                        <spec name="Height" value="18-26&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; optional metal legs" />
+                        <spec name="Finish" value="Laminate/veneer; edge-banded MDF" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
+
+        <furnitureType id="Bedroom" name="Bedroom" description="Furniture for bedrooms" image="/Images/Residential/Bedroom/Bedroom.jpg">
+            <subcategory id="Bed Frame" name="Bed Frame" description="Bed frames for every size" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame.png">
+                <product id="King Bed Frame" name="King Bed Frame" description="King-size bed frame with sturdy construction and optional storage" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame.png" tags="bed,king,frame">
+                    <images>
+                        <image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame.png" alt="King Bed Frame - bedroom" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="76&quot; (King)" />
+                        <spec name="Depth" value="80&quot; (King)" />
+                        <spec name="Height" value="12-16&quot; (Platform, customizable)" />
+                        <spec name="Material" value="Solid/engineered wood; metal hardware" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+                <product id="Queen Bed Frame" name="Queen Bed Frame" description="Queen-size bed frame with optional headboard" image="/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png" tags="bed,queen,frame">
+                    <images>
+                        <image src="/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png" alt="Queen Bed Frame - bedroom" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="60&quot; (Queen)" />
+                        <spec name="Depth" value="80&quot; (Queen)" />
+                        <spec name="Height" value="12-16&quot; (Platform, customizable)" />
+                        <spec name="Material" value="Solid/engineered wood; metal hardware" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Nightstand" name="Nightstand" description="Bedside tables" image="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand.png">
+                <product id="Single Drawer Nightstand" name="Single Drawer Nightstand" description="Compact nightstand with single drawer and open shelf" image="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand.png" tags="nightstand,drawer">
+                    <images>
+                        <image src="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand.png" alt="Single Drawer Nightstand - bedroom" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="16-22&quot; (Customizable)" />
+                        <spec name="Depth" value="14-18&quot; (Customizable)" />
+                        <spec name="Height" value="20-26&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; powder-coated steel hardware" />
+                        <spec name="Finish" value="Laminate/veneer; edge-banded MDF" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Dresser" name="Dresser" description="Storage dressers" image="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser.png">
+                <product id="Six Drawer Dresser" name="Six Drawer Dresser" description="Six-drawer dresser with smooth glides and durable finish" image="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser.png" tags="dresser,storage">
+                    <images>
+                        <image src="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser.png" alt="Six Drawer Dresser - bedroom" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="48-60&quot; (Customizable)" />
+                        <spec name="Depth" value="16-20&quot; (Customizable)" />
+                        <spec name="Height" value="30-36&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; metal hardware" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Wardrobe" name="Wardrobe" description="Clothes storage units" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe.png">
+                <product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Two-door sliding wardrobe with hanging and shelf storage" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe.png" tags="wardrobe,storage">
+                    <images>
+                        <image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe.png" alt="Sliding Door Wardrobe - bedroom" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="48-72&quot; (Customizable)" />
+                        <spec name="Depth" value="22-24&quot; (Customizable)" />
+                        <spec name="Height" value="78-84&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; metal hardware" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Headboard" name="Headboard" description="Upholstered or wood headboards" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard.png">
+                <product id="King Headboard" name="King Headboard" description="Padded king-size headboard with stitched panels" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard.png" tags="headboard,king">
+                    <images>
+                        <image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard.png" alt="King Headboard - bedroom" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="76-78&quot; (King)" />
+                        <spec name="Depth" value="2-4&quot; (Panel, customizable)" />
+                        <spec name="Height" value="48-60&quot; (Customizable)" />
+                        <spec name="Material" value="MDF/wood panel; foam; fabric/PU upholstery" />
+                        <spec name="Finish" value="Upholstery in fabric/PU; edge-banded panel" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
+
+        <furnitureType id="Dining Room" name="Dining Room" description="Furniture for dining" image="/Images/Residential/Dining Room/Dining Room.jpg">
+            <subcategory id="Dining Table" name="Dining Table" description="Dining tables" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png">
+                <product id="Extendable Dining Table" name="Extendable Dining Table" description="Rectangular dining table with leaf extension and sturdy base" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" tags="dining table,extendable">
+                    <images>
+                        <image src="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" alt="Extendable Dining Table - dining room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="72-96&quot; (Extended, customizable)" />
+                        <spec name="Depth" value="36-42&quot; (Customizable)" />
+                        <spec name="Height" value="29-30&quot; (Customizable)" />
+                        <spec name="Material" value="Solid/engineered wood top; metal/wood base" />
+                        <spec name="Finish" value="Stain/veneer/matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Dining Chair" name="Dining Chair" description="Dining seating" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair.png">
+                <product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Comfortable dining chair with cushioned seat and back" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair.png" tags="dining chair,upholstered">
+                    <images>
+                        <image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair.png" alt="Upholstered Dining Chair - dining room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="18-20&quot; (Per chair, customizable)" />
+                        <spec name="Depth" value="20-22&quot; (Per chair, customizable)" />
+                        <spec name="Height" value="32-36&quot; (Back height, customizable)" />
+                        <spec name="Material" value="Fabric/PU upholstery; foam; wood/metal frame" />
+                        <spec name="Finish" value="Upholstery fabric/PU; wood stain or powder-coat" />
+                    </specifications>
+                </product>
+                <product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Classic wooden chair with molded seat" image="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair.png" tags="dining chair,wood">
+                    <images>
+                        <image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair.png" alt="Wooden Dining Chair - dining room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="18-20&quot; (Per chair, customizable)" />
+                        <spec name="Depth" value="20-22&quot; (Per chair, customizable)" />
+                        <spec name="Height" value="32-36&quot; (Back height, customizable)" />
+                        <spec name="Material" value="Solid wood; metal hardware (optional)" />
+                        <spec name="Finish" value="Stain/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Sideboard" name="Sideboard" description="Buffet and sideboards" image="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet.png">
+                <product id="Buffet Cabinet" name="Buffet Cabinet" description="Four-door buffet cabinet with internal adjustable shelves" image="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet.png" tags="sideboard,buffet,storage">
+                    <images>
+                        <image src="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet.png" alt="Buffet Cabinet - dining room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="60-84&quot; (Customizable)" />
+                        <spec name="Depth" value="16-22&quot; (Customizable)" />
+                        <spec name="Height" value="30-36&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; metal hardware" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Bar Stool" name="Bar Stool" description="Counter and bar height stools" image="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool.png">
+                <product id="Counter Height Stool" name="Counter Height Stool" description="Upholstered counter-height stool with footrest" image="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool.png" tags="bar stool,counter">
+                    <images>
+                        <image src="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool.png" alt="Counter Height Stool - dining room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="16-18&quot; (Per stool, customizable)" />
+                        <spec name="Depth" value="16-18&quot; (Per stool, customizable)" />
+                        <spec name="Height" value="24-26&quot; (Seat height, counter)" />
+                        <spec name="Material" value="Fabric/PU upholstery; foam; wood/metal frame" />
+                        <spec name="Finish" value="Upholstery fabric/PU; wood stain or powder-coat" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
+
+        <furnitureType id="Home Office" name="Home Office" description="Furniture for home offices" image="/Images/Residential/Home Office/Home Office.jpg">
+            <subcategory id="Desk" name="Desk" description="Office desks" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk.png">
+                <product id="Writing Desk" name="Writing Desk" description="Compact writing desk with cable management" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk.png" tags="desk,writing,home office">
+                    <images>
+                        <image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk.png" alt="Writing Desk - home office" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="48-60&quot; (Customizable)" />
+                        <spec name="Depth" value="24-30&quot; (Customizable)" />
+                        <spec name="Height" value="29-30&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF top; powder-coated steel legs/base" />
+                        <spec name="Finish" value="Laminate top; powder-coated base" />
+                    </specifications>
+                </product>
+                <product id="Executive Desk" name="Executive Desk" description="Large executive desk with storage drawers" image="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.png" tags="desk,executive">
+                    <images>
+                        <image src="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.png" alt="Executive Desk - home office" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="60-72&quot; (Customizable)" />
+                        <spec name="Depth" value="30-36&quot; (Customizable)" />
+                        <spec name="Height" value="29-30&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF top; powder-coated steel legs/base" />
+                        <spec name="Finish" value="Laminate top; powder-coated base" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Office Chair" name="Office Chair" description="Seating for the home office" image="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png">
+                <product id="Ergonomic Office Chair" name="Ergonomic Office Chair" description="Adjustable ergonomic chair with lumbar support" image="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png" tags="office chair,ergonomic">
+                    <images>
+                        <image src="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png" alt="Ergonomic Office Chair - home office" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="22-26&quot; (Customizable)" />
+                        <spec name="Depth" value="22-26&quot; (Customizable)" />
+                        <spec name="Height" value="38-46&quot; (Adjustable)" />
+                        <spec name="Material" value="Mesh/fabric/PU upholstery; foam; plastic/metal frame" />
+                        <spec name="Finish" value="Black/grey powder-coated frame; fabric/PU seat/back" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Bookcase" name="Bookcase" description="Bookcases and storage" image="/Images/Residential/Home Office/Bookcase/Tall Bookcase/tall bookcase.png">
+                <product id="Tall Bookcase" name="Tall Bookcase" description="Tall bookcase with adjustable shelves" image="/Images/Residential/Home Office/Bookcase/Tall Bookcase/tall bookcase.png" tags="bookcase,storage">
+                    <images>
+                        <image src="/Images/Residential/Home Office/Bookcase/Tall Bookcase/tall bookcase.png" alt="Tall Bookcase - home office" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="30-36&quot; (Customizable)" />
+                        <spec name="Depth" value="12-16&quot; (Customizable)" />
+                        <spec name="Height" value="72-84&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; metal hardware" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
+
+        <furnitureType id="Kids Room" name="Kids Room" description="Furniture for kids" image="/Images/Residential/Kids Room/Kids Room.jpg">
+            <subcategory id="Bunk Bed" name="Bunk Bed" description="Space-efficient bunk beds" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png">
+                <product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin-size bunk bed with guard rails and ladder" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" tags="bunk bed,twin,kids">
+                    <images>
+                        <image src="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - kids room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="41-43&quot; (Twin)" />
+                        <spec name="Depth" value="78-80&quot; (Twin)" />
+                        <spec name="Height" value="58-65&quot; (Customizable)" />
+                        <spec name="Material" value="Powder-coated steel; optional wood components" />
+                        <spec name="Finish" value="Powder-coated frame; color options" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Study Desk" name="Study Desk" description="Study desks for kids" image="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk.png">
+                <product id="Kids Study Desk" name="Kids Study Desk" description="Compact study desk with storage cubby" image="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk.png" tags="desk,kids,study">
+                    <images>
+                        <image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk.png" alt="Kids Study Desk - kids room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="36-48&quot; (Customizable)" />
+                        <spec name="Depth" value="20-24&quot; (Customizable)" />
+                        <spec name="Height" value="28-30&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF top; powder-coated steel base" />
+                        <spec name="Finish" value="Laminate top; powder-coated base" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Toy Storage" name="Toy Storage" description="Toy storage solutions" image="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage.png">
+                <product id="Cubbies Storage" name="Cubbies Storage" description="Open cubby storage unit for toys and books" image="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage.png" tags="storage,toy,cubbies">
+                    <images>
+                        <image src="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage.png" alt="Cubbies Storage - kids room" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="36-60&quot; (Customizable)" />
+                        <spec name="Depth" value="12-16&quot; (Customizable)" />
+                        <spec name="Height" value="36-48&quot; (Customizable)" />
+                        <spec name="Material" value="Laminate/MDF; edge-banded" />
+                        <spec name="Finish" value="Laminate/veneer; matte lacquer" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
+
+        <furnitureType id="Outdoor" name="Outdoor" description="Furniture for patios and outdoor spaces" image="/Images/Residential/Outdoor/Outdoor.jpg">
+            <subcategory id="Outdoor Sofa" name="Outdoor Sofa" description="Patio sofas" image="/Images/Residential/Outdoor/Outdoor Sofa/Patio Sofa/patio sofa.png">
+                <product id="Patio Sofa" name="Patio Sofa" description="Weather-resistant patio sofa with outdoor fabric" image="/Images/Residential/Outdoor/Outdoor Sofa/Patio Sofa/patio sofa.png" tags="outdoor,sofa,patio">
+                    <images>
+                        <image src="/Images/Residential/Outdoor/Outdoor Sofa/Patio Sofa/patio sofa.png" alt="Patio Sofa - outdoor" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="72-84&quot; (Customizable)" />
+                        <spec name="Depth" value="32-36&quot; (Customizable)" />
+                        <spec name="Height" value="30-34&quot; (Customizable)" />
+                        <spec name="Material" value="Powder-coated aluminum; outdoor foam; solution-dyed fabric" />
+                        <spec name="Finish" value="UV-resistant fabric; powder-coated frame" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Outdoor Lounge Chair" name="Outdoor Lounge Chair" description="Outdoor lounge seating" image="/Images/Residential/Outdoor/Outdoor Lounge Chair/Outdoor Lounge Chair/outdoor lounge chair.png">
+                <product id="Outdoor Lounge Chair" name="Outdoor Lounge Chair" description="Outdoor lounge chair with quick-dry foam" image="/Images/Residential/Outdoor/Outdoor Lounge Chair/Outdoor Lounge Chair/outdoor lounge chair.png" tags="outdoor,lounge,chair">
+                    <images>
+                        <image src="/Images/Residential/Outdoor/Outdoor Lounge Chair/Outdoor Lounge Chair/outdoor lounge chair.png" alt="Outdoor Lounge Chair - outdoor" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="26-32&quot; (Customizable)" />
+                        <spec name="Depth" value="26-32&quot; (Customizable)" />
+                        <spec name="Height" value="30-36&quot; (Customizable)" />
+                        <spec name="Material" value="Powder-coated aluminum; quick-dry foam; outdoor fabric" />
+                        <spec name="Finish" value="UV-resistant fabric; powder-coated frame" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Outdoor Dining Set" name="Outdoor Dining Set" description="Outdoor dining sets" image="/Images/Residential/Outdoor/Dining Set/Outdoor Dining Set/outdoor dining set.png">
+                <product id="Outdoor Dining Set" name="Outdoor Dining Set" description="Outdoor dining table and chairs set" image="/Images/Residential/Outdoor/Dining Set/Outdoor Dining Set/outdoor dining set.png" tags="outdoor,dining,set">
+                    <images>
+                        <image src="/Images/Residential/Outdoor/Dining Set/Outdoor Dining Set/outdoor dining set.png" alt="Outdoor Dining Set - outdoor" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="72-84&quot; (Table width, customizable)" />
+                        <spec name="Depth" value="36-42&quot; (Table depth, customizable)" />
+                        <spec name="Height" value="29-30&quot; (Table height)" />
+                        <spec name="Material" value="Powder-coated aluminum; HPL/teak top; outdoor fabric chairs" />
+                        <spec name="Finish" value="Teak/HPL top; powder-coated frames" />
+                    </specifications>
+                </product>
+            </subcategory>
+            <subcategory id="Outdoor Side Table" name="Outdoor Side Table" description="Outdoor side tables" image="/Images/Residential/Outdoor/Side Table/Outdoor Side Table/outdoor side table.png">
+                <product id="Outdoor Side Table" name="Outdoor Side Table" description="Compact side table for outdoor seating areas" image="/Images/Residential/Outdoor/Side Table/Outdoor Side Table/outdoor side table.png" tags="outdoor,side table">
+                    <images>
+                        <image src="/Images/Residential/Outdoor/Side Table/Outdoor Side Table/outdoor side table.png" alt="Outdoor Side Table - outdoor" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="16-22&quot; (Customizable)" />
+                        <spec name="Depth" value="16-22&quot; (Customizable)" />
+                        <spec name="Height" value="18-22&quot; (Customizable)" />
+                        <spec name="Material" value="Powder-coated aluminum/steel; HPL/teak top" />
+                        <spec name="Finish" value="Teak/HPL top; powder-coated frame" />
                     </specifications>
                 </product>
             </subcategory>
