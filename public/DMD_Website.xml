@@ -743,8 +743,9 @@
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
 					</specifications>
-				</product>
-				<product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="Upholstered arm chair in Nova Green" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
+                </product>
+                <!-- Close Armchair product before starting next product -->
+                <product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="Upholstered arm chair in Nova Green" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Front-View" />
 						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-green-ISO View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-green-ISO View" />
@@ -2020,10 +2021,14 @@
 	</place>
     <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/Residential/Residential.jpg">
         <furnitureType id="Living Room" name="Living Room" description="Furniture for living rooms" image="/Images/Residential/Living Room/Living Room.jpg">
-            <subcategory id="Sofa" name="Sofa" description="Sofas and sectionals" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa.png">
-                <product id="Classic Sofa" name="Classic Sofa" description="Three-seat sofa with high-density foam cushions and stain-resistant upholstery" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa.png" tags="sofa,classic,living room">
+            <subcategory id="Sofa" name="Sofa" description="Sofas and sectionals" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 1.png">
+                <product id="Classic Sofa" name="Classic Sofa" description="Three-seat sofa with high-density foam cushions and stain-resistant upholstery" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 2.png" tags="sofa,classic,living room">
                     <images>
-                        <image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa.png" alt="Classic Sofa - living room" />
+                        <image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 1.png" alt="Classic Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 2.png" alt="Classic Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 3.png" alt="Classic Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 4.png" alt="Classic Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 5.png" alt="Classic Sofa - living room" />
                     </images>
                     <specifications>
                         <spec name="Width" value="78-86&quot; (Customizable)" />
@@ -2046,10 +2051,13 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Lounge Chair" name="Lounge Chair" description="Armchairs and recliners" image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png">
-                <product id="Armchair" name="Armchair" description="Upholstered armchair with supportive back and plush seat" image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png" tags="armchair,lounge">
+            <subcategory id="Lounge Chair" name="Lounge Chair" description="Armchairs and recliners" image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair 1.png">
+                <product id="Armchair" name="Armchair" description="Upholstered armchair with supportive back and plush seat" image="/Images/Residential/Living Room/Lounge Chair/Armchair/AC001-BL-nova-blue - Frount View.png" tags="armchair,lounge">
                     <images>
-                        <image src="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png" alt="Armchair - lounge chair" />
+                        <image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Frount View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - ISO View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - ISO View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Side View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Side View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Back View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Back View" />
                     </images>
                     <specifications>
                         <spec name="Width" value="28-34&quot; (Customizable)" />
@@ -2059,7 +2067,30 @@
                         <spec name="Finish" value="Upholstery in fabric/PU; powder-coated/wood base" />
                     </specifications>
                 </product>
-                <product id="Recliner" name="Recliner" description="Manual recliner with padded arms and wipe-clean upholstery" image="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" tags="recliner,lounge">
+                <product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="Upholstered arm chair in Nova Green" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
+					<images>
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Front-View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-green-ISO View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-green-ISO View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Side-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Side-View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Top-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Top-View" />
+					</images>
+					<specifications>
+						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Depth" value="24-36&quot; (Customizable)" />
+						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
+					</specifications>
+				</product>
+				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="Upholstered arm chair in Sunset Orange" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="ac01-or-nova-sunset-orange">
+					<images>
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - Frount View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - ISO View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - ISO View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Side-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Side-view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Top-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Top-view" />
+					</images>
+				</product>
+			    <product id="Recliner" name="Recliner" description="Manual recliner with padded arms and wipe-clean upholstery" image="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" tags="recliner,lounge">
                     <images>
                         <image src="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" alt="Recliner - lounge chair" />
                     </images>
@@ -2073,30 +2104,55 @@
                 </product>
             </subcategory>
             <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png">
-                <product id="Wood Coffee Table" name="Wood Coffee Table" description="Solid wood coffee table with durable finish" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png" tags="coffee table,wood">
-                    <images>
-                        <image src="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png" alt="Wood Coffee Table - living room" />
-                    </images>
-                    <specifications>
-                        <spec name="Width" value="36-48&quot; (Customizable)" />
-                        <spec name="Depth" value="20-26&quot; (Customizable)" />
-                        <spec name="Height" value="16-18&quot; (Customizable)" />
-                        <spec name="Material" value="Solid/engineered wood; metal hardware (optional)" />
-                        <spec name="Finish" value="Stain/veneer/matte lacquer" />
-                    </specifications>
-                </product>
-                <product id="Glass Coffee Table" name="Glass Coffee Table" description="Tempered glass top coffee table with metal base" image="/Images/Residential/Living Room/Coffee Table/Glass Coffee Table/glass coffee table.png" tags="coffee table,glass,metal">
-                    <images>
-                        <image src="/Images/Residential/Living Room/Coffee Table/Glass Coffee Table/glass coffee table.png" alt="Glass Coffee Table - living room" />
-                    </images>
-                    <specifications>
-                        <spec name="Width" value="36-48&quot; (Customizable)" />
-                        <spec name="Depth" value="20-26&quot; (Customizable)" />
-                        <spec name="Height" value="16-18&quot; (Customizable)" />
-                        <spec name="Material" value="Tempered glass top; powder-coated steel base" />
-                        <spec name="Finish" value="Clear/frosted glass; powder-coated base" />
-                    </specifications>
-                </product>
+                <product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Coffee table with tempered glass top and sturdy base" image="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
+					<images>
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Butterfly" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Stare Style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Stare Style" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood X style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood X style" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Rectangle Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Rectangle Legs" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Wide H.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Wide H" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table X Box Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table X Box Legs" />
+					</images>
+					<specifications>
+						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Depth" value="24-36&quot; (Customizable)" />
+						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Tempered glass top; stained wood or powder-coated base" />
+					</specifications>
+				</product>
+				<product id="Round Coffee Table" name="Round Coffee Table" description="Round coffee table for lobby seating areas" image="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
+					<images>
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" alt="Round Coffee Table - Round Coffee Table - Round Base" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 1.jpg" alt="Round Coffee Table - Round Coffee Table Modern 1" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 2.jpg" alt="Round Coffee Table - Round Coffee Table Modern 2" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table one sylinder.jpg" alt="Round Coffee Table - Round Coffee Table one sylinder" />
+					</images>
+					<specifications>
+						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Depth" value="24-36&quot; (Customizable)" />
+						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Stain/veneer top; powder-coated/stained base" />
+					</specifications>
+				</product>
+				<product id="Square Coffee Table" name="Square Coffee Table" description="Square coffee table with modern base options" image="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
+					<images>
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" alt="Square Coffee Table - Square Coffee Table Cross Legs X style" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs 2.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs 2" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Plus Sign.jpg" alt="Square Coffee Table - Square Coffee Table Plus Sign" />
+						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Waterfall Legs.jpg" alt="Square Coffee Table - Square Coffee Table Waterfall Legs" />
+					</images>
+					<specifications>
+						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Depth" value="24-36&quot; (Customizable)" />
+						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Stain/veneer; powder-coated/stained base" />
+					</specifications>
+				</product>
             </subcategory>
             <subcategory id="TV Unit" name="TV Unit" description="Media consoles and TV stands" image="/Images/Residential/Living Room/TV Unit/Media Console/media console.png">
                 <product id="Media Console" name="Media Console" description="Low-profile media console with cable management" image="/Images/Residential/Living Room/TV Unit/Media Console/media console.png" tags="tv unit,media console">
