@@ -2172,7 +2172,7 @@
             </subcategory>
         </furnitureType>
 
-        <furnitureType id="Bedroom" name="Bedroom" description="Furniture for bedrooms" image="/Images/Residential/Bedroom/Bedroom.jpg">
+        <furnitureType id="Bedroom" name="Bedroom" description="Furniture for bedrooms" image="/Images/Residential/Bedroom/Bedroom.png">
             <subcategory id="Bed Frame" name="Bed Frame" description="Bed frames for every size" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png">
                 <product id="King Bed Frame" name="King Bed Frame" description="King-size bed frame with sturdy construction and optional storage" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png" tags="bed,king,frame">
                     <images>
