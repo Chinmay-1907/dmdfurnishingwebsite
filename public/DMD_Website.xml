@@ -2020,7 +2020,7 @@
 		</furnitureType>
 	</place>
     <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/Residential/Residential.jpg">
-        <furnitureType id="Living Room" name="Living Room" description="Furniture for living rooms" image="/Images/Residential/Living Room/Living Room.jpg">
+        <furnitureType id="Living Room" name="Living Room" description="Furniture for living rooms" image="/Images/Residential/Living Room/Living Room.png">
             <subcategory id="Sofa" name="Sofa" description="Sofas and sectionals" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 1.png">
                 <product id="Classic Sofa" name="Classic Sofa" description="Three-seat sofa with high-density foam cushions and stain-resistant upholstery" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 2.png" tags="sofa,classic,living room">
                     <images>
@@ -2103,7 +2103,7 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png">
+            <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.jpg">
                 <product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Coffee table with tempered glass top and sturdy base" image="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
 					<images>
 						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Butterfly" />
@@ -2154,10 +2154,12 @@
 					</specifications>
 				</product>
             </subcategory>
-            <subcategory id="TV Unit" name="TV Unit" description="Media consoles and TV stands" image="/Images/Residential/Living Room/TV Unit/Media Console/media console.png">
-                <product id="Media Console" name="Media Console" description="Low-profile media console with cable management" image="/Images/Residential/Living Room/TV Unit/Media Console/media console.png" tags="tv unit,media console">
+            <subcategory id="TV Unit" name="TV Unit" description="Media consoles and TV stands" image="/Images/Residential/Living Room/TV Unit/Media Console/media console 1.png">
+                <product id="Media Console" name="Media Console" description="Low-profile media console with cable management" image="/Images/Residential/Living Room/TV Unit/Media Console/media console 1.png" tags="tv unit,media console">
                     <images>
-                        <image src="/Images/Residential/Living Room/TV Unit/Media Console/media console.png" alt="Media Console - tv unit" />
+                        <image src="/Images/Residential/Living Room/TV Unit/Media Console/media console 1.png" alt="Media Console - tv unit" />
+						<image src="/Images/Residential/Living Room/TV Unit/Media Console/media console 2.png" alt="Media Console - tv unit" />
+						<image src="/Images/Residential/Living Room/TV Unit/Media Console/media console 3.png" alt="Media Console - tv unit" />
                     </images>
                     <specifications>
                         <spec name="Width" value="60-84&quot; (Customizable)" />
@@ -2171,10 +2173,15 @@
         </furnitureType>
 
         <furnitureType id="Bedroom" name="Bedroom" description="Furniture for bedrooms" image="/Images/Residential/Bedroom/Bedroom.jpg">
-            <subcategory id="Bed Frame" name="Bed Frame" description="Bed frames for every size" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame.png">
-                <product id="King Bed Frame" name="King Bed Frame" description="King-size bed frame with sturdy construction and optional storage" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame.png" tags="bed,king,frame">
+            <subcategory id="Bed Frame" name="Bed Frame" description="Bed frames for every size" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png">
+                <product id="King Bed Frame" name="King Bed Frame" description="King-size bed frame with sturdy construction and optional storage" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png" tags="bed,king,frame">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame.png" alt="King Bed Frame - bedroom" />
+                        <image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 3.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 4.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 5.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 6.png" alt="King Bed Frame - bedroom" />						
                     </images>
                     <specifications>
                         <spec name="Width" value="76&quot; (King)" />
@@ -2186,7 +2193,12 @@
                 </product>
                 <product id="Queen Bed Frame" name="Queen Bed Frame" description="Queen-size bed frame with optional headboard" image="/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png" tags="bed,queen,frame">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png" alt="Queen Bed Frame - bedroom" />
+                        <image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 3.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 4.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 5.png" alt="King Bed Frame - bedroom" />
+						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 6.png" alt="King Bed Frame - bedroom" />						
                     </images>
                     <specifications>
                         <spec name="Width" value="60&quot; (Queen)" />
@@ -2197,10 +2209,13 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Nightstand" name="Nightstand" description="Bedside tables" image="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand.png">
-                <product id="Single Drawer Nightstand" name="Single Drawer Nightstand" description="Compact nightstand with single drawer and open shelf" image="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand.png" tags="nightstand,drawer">
+            <subcategory id="Nightstand" name="Nightstand" description="Bedside tables" image="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand 1.png">
+                <product id="Single Drawer Nightstand" name="Single Drawer Nightstand" description="Compact nightstand with single drawer and open shelf" image="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand 1.png" tags="nightstand,drawer">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand.png" alt="Single Drawer Nightstand - bedroom" />
+                        <image src="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand 1.png" alt="Single Drawer Nightstand - bedroom" />
+						<image src="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand 2.png" alt="Single Drawer Nightstand - bedroom" />
+						<image src="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand 3.png" alt="Single Drawer Nightstand - bedroom" />
+						<image src="/Images/Residential/Bedroom/Nightstand/Single Drawer Nightstand/single drawer nightstand 4.png" alt="Single Drawer Nightstand - bedroom" />
                     </images>
                     <specifications>
                         <spec name="Width" value="16-22&quot; (Customizable)" />
@@ -2211,10 +2226,13 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Dresser" name="Dresser" description="Storage dressers" image="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser.png">
-                <product id="Six Drawer Dresser" name="Six Drawer Dresser" description="Six-drawer dresser with smooth glides and durable finish" image="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser.png" tags="dresser,storage">
+            <subcategory id="Dresser" name="Dresser" description="Storage dressers" image="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser 1.png">
+                <product id="Six Drawer Dresser" name="Six Drawer Dresser" description="Six-drawer dresser with smooth glides and durable finish" image="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser 1.png" tags="dresser,storage">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser.png" alt="Six Drawer Dresser - bedroom" />
+                        <image src="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser 1.png" alt="Six Drawer Dresser - bedroom" />
+						<image src="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser 2.png" alt="Six Drawer Dresser - bedroom" />
+						<image src="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser 3.png" alt="Six Drawer Dresser - bedroom" />
+						<image src="/Images/Residential/Bedroom/Dresser/Six Drawer Dresser/six drawer dresser 4.png" alt="Six Drawer Dresser - bedroom" />
                     </images>
                     <specifications>
                         <spec name="Width" value="48-60&quot; (Customizable)" />
@@ -2225,10 +2243,13 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Wardrobe" name="Wardrobe" description="Clothes storage units" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe.png">
-                <product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Two-door sliding wardrobe with hanging and shelf storage" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe.png" tags="wardrobe,storage">
+            <subcategory id="Wardrobe" name="Wardrobe" description="Clothes storage units" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png">
+                <product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Two-door sliding wardrobe with hanging and shelf storage" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png" tags="wardrobe,storage">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe.png" alt="Sliding Door Wardrobe - bedroom" />
+                        <image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png" alt="Sliding Door Wardrobe - bedroom" />
+						<image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 2.png" alt="Sliding Door Wardrobe - bedroom" />
+						<image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 3.png" alt="Sliding Door Wardrobe - bedroom" />
+						<image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 4.png" alt="Sliding Door Wardrobe - bedroom" />
                     </images>
                     <specifications>
                         <spec name="Width" value="48-72&quot; (Customizable)" />
@@ -2239,10 +2260,18 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Headboard" name="Headboard" description="Upholstered or wood headboards" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard.png">
-                <product id="King Headboard" name="King Headboard" description="Padded king-size headboard with stitched panels" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard.png" tags="headboard,king">
+            <subcategory id="Headboard" name="Headboard" description="Upholstered or wood headboards" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png">
+                <product id="King Headboard" name="King Headboard" description="Padded king-size headboard with stitched panels" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png" tags="headboard,king">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard.png" alt="King Headboard - bedroom" />
+                        <image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 1.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 2.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 4.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 5.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 6.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 7.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 8.png" alt="King Headboard - bedroom" />
+						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 9.png" alt="King Headboard - bedroom" />
                     </images>
                     <specifications>
                         <spec name="Width" value="76-78&quot; (King)" />
