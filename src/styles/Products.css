@@ -296,6 +296,14 @@
   background-color: transparent;
 }
 
+/* Make Residential behave like Hotel: fill entire frame */
+.product-categories .category-image.place-residential {
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
 /* Ensure School shows full word without cropping */
 .product-categories .category-image.place-school {
   background-size: contain !important;

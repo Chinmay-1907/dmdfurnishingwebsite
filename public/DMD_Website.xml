@@ -2019,7 +2019,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-    <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/Residential/Residential.jpg">
+    <place id="residential" name="Residential" description="Residential furniture collection" image="/Images/Residential/Residential.png">
         <furnitureType id="Living Room" name="Living Room" description="Furniture for living rooms" image="/Images/Residential/Living Room/Living Room.png">
             <subcategory id="Sofa" name="Sofa" description="Sofas and sectionals" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 1.png">
                 <product id="Classic Sofa" name="Classic Sofa" description="Three-seat sofa with high-density foam cushions and stain-resistant upholstery" image="/Images/Residential/Living Room/Sofa/Classic Sofa/classic sofa 2.png" tags="sofa,classic,living room">
@@ -2284,7 +2284,7 @@
             </subcategory>
         </furnitureType>
 
-        <furnitureType id="Dining Room" name="Dining Room" description="Furniture for dining" image="/Images/Residential/Dining Room/Dining Room.jpg">
+        <furnitureType id="Dining Room" name="Dining Room" description="Furniture for dining" image="/Images/Residential/Dining Room/Dining Room.png">
             <subcategory id="Dining Table" name="Dining Table" description="Dining tables" image="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table SS1.jpg">
 				<product id="Dining Table" name="Dining Table" description="Rectangular dining table" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" tags="dining table,extendable">
                     <images>
@@ -2380,11 +2380,14 @@
             </subcategory>
         </furnitureType>
 
-        <furnitureType id="Home Office" name="Home Office" description="Furniture for home offices" image="/Images/Residential/Home Office/Home Office.jpg">
-            <subcategory id="Desk" name="Desk" description="Office desks" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk.png">
-                <product id="Writing Desk" name="Writing Desk" description="Compact writing desk with cable management" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk.png" tags="desk,writing,home office">
+        <furnitureType id="Home Office" name="Home Office" description="Furniture for home offices" image="/Images/Residential/Home Office/Home Office.png">
+            <subcategory id="Desk" name="Desk" description="Office desks" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 3.png">
+                <product id="Writing Desk" name="Writing Desk" description="Compact writing desk with cable management" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 1.png" tags="desk,writing,home office">
                     <images>
-                        <image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk.png" alt="Writing Desk - home office" />
+						<image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 4.png" alt="Writing Desk - home office" />
+						<image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 5.png" alt="Writing Desk - home office" />
+						<image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 6.png" alt="Writing Desk - home office" />
+						<image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 7.png" alt="Writing Desk - home office" />
                     </images>
                     <specifications>
                         <spec name="Width" value="48-60&quot; (Customizable)" />
