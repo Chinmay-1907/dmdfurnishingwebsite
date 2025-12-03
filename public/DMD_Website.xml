@@ -2285,11 +2285,15 @@
         </furnitureType>
 
         <furnitureType id="Dining Room" name="Dining Room" description="Furniture for dining" image="/Images/Residential/Dining Room/Dining Room.jpg">
-            <subcategory id="Dining Table" name="Dining Table" description="Dining tables" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png">
-                <product id="Extendable Dining Table" name="Extendable Dining Table" description="Rectangular dining table with leaf extension and sturdy base" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" tags="dining table,extendable">
+            <subcategory id="Dining Table" name="Dining Table" description="Dining tables" image="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table SS1.jpg">
+				<product id="Dining Table" name="Dining Table" description="Rectangular dining table" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" tags="dining table,extendable">
                     <images>
-                        <image src="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" alt="Extendable Dining Table - dining room" />
-                    </images>
+                        <image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table SS1.jpg" alt="2-Seater Table - 2-Seater Table SS1" />
+						<image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table Tapper Center.jpg" alt="2-Seater Table - 2-Seater Table Tapper Center" />
+						<image src="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table SS1.jpg" alt="4-Seater Table - 4-Seater Table SS1" />
+						<image src="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-Seater Table SS1.jpg" alt="6-Seater Table - 6-Seater Table SS1" />
+						<image src="/Images/Hotel/Breakfast Area/Dining Tables/6-Seater Table/6-Seater Table Wood.jpg" alt="6-Seater Table - 6-Seater Table Wood" />
+					</images>
                     <specifications>
                         <spec name="Width" value="72-96&quot; (Extended, customizable)" />
                         <spec name="Depth" value="36-42&quot; (Customizable)" />
@@ -2299,10 +2303,18 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Dining Chair" name="Dining Chair" description="Dining seating" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair.png">
-                <product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Comfortable dining chair with cushioned seat and back" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair.png" tags="dining chair,upholstered">
+            <subcategory id="Dining Chair" name="Dining Chair" description="Dining seating" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png">
+                <product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Comfortable dining chair with cushioned seat and back" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png" tags="dining chair,upholstered">
                     <images>
-                        <image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair.png" alt="Upholstered Dining Chair - dining room" />
+                        <image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 2.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 3.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 4.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 5.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 6.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 7.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 8.png" alt="Upholstered Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 9.png" alt="Upholstered Dining Chair - dining room" />
                     </images>
                     <specifications>
                         <spec name="Width" value="18-20&quot; (Per chair, customizable)" />
@@ -2312,9 +2324,16 @@
                         <spec name="Finish" value="Upholstery fabric/PU; wood stain or powder-coat" />
                     </specifications>
                 </product>
-                <product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Classic wooden chair with molded seat" image="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair.png" tags="dining chair,wood">
+                <product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Classic wooden chair with molded seat" image="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 1.png" tags="dining chair,wood">
                     <images>
-                        <image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair.png" alt="Wooden Dining Chair - dining room" />
+                        <image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 1.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 2.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 3.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 4.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 5.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 6.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 7.png" alt="Wooden Dining Chair - dining room" />
+						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 8.png" alt="Wooden Dining Chair - dining room" />
                     </images>
                     <specifications>
                         <spec name="Width" value="18-20&quot; (Per chair, customizable)" />
@@ -2325,10 +2344,13 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Sideboard" name="Sideboard" description="Buffet and sideboards" image="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet.png">
-                <product id="Buffet Cabinet" name="Buffet Cabinet" description="Four-door buffet cabinet with internal adjustable shelves" image="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet.png" tags="sideboard,buffet,storage">
+            <subcategory id="Sideboard" name="Sideboard" description="Buffet and sideboards" image="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet 1.png">
+                <product id="Buffet Cabinet" name="Buffet Cabinet" description="Four-door buffet cabinet with internal adjustable shelves" image="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet 2.png" tags="sideboard,buffet,storage">
                     <images>
-                        <image src="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet.png" alt="Buffet Cabinet - dining room" />
+                        <image src="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet 3.png" alt="Buffet Cabinet - dining room" />
+						<image src="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet 4.png" alt="Buffet Cabinet - dining room" />
+						<image src="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet 5.png" alt="Buffet Cabinet - dining room" />
+						<image src="/Images/Residential/Dining Room/Sideboard/Buffet Cabinet/buffet cabinet 6.png" alt="Buffet Cabinet - dining room" />
                     </images>
                     <specifications>
                         <spec name="Width" value="60-84&quot; (Customizable)" />
@@ -2339,11 +2361,14 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Bar Stool" name="Bar Stool" description="Counter and bar height stools" image="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool.png">
-                <product id="Counter Height Stool" name="Counter Height Stool" description="Upholstered counter-height stool with footrest" image="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool.png" tags="bar stool,counter">
+            <subcategory id="Bar Stool" name="Bar Stool" description="Counter and bar height stools" image="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool 1.png">
+                <product id="Counter Height Stool" name="Counter Height Stool" description="Upholstered counter-height stool with footrest" image="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool 1.png" tags="bar stool,counter">
                     <images>
-                        <image src="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool.png" alt="Counter Height Stool - dining room" />
-                    </images>
+                        <image src="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool 2.png" alt="Counter Height Stool - dining room" />
+						<image src="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool 3.png" alt="Counter Height Stool - dining room" />
+						<image src="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool 4.png" alt="Counter Height Stool - dining room" />
+						<image src="/Images/Residential/Dining Room/Bar Stool/Counter Height Stool/counter height stool 5.png" alt="Counter Height Stool - dining room" />
+					</images>
                     <specifications>
                         <spec name="Width" value="16-18&quot; (Per stool, customizable)" />
                         <spec name="Depth" value="16-18&quot; (Per stool, customizable)" />
