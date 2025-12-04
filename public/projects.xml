@@ -53,7 +53,7 @@
     <clientTestimonial>Working with DMD Furnishing was a pleasure from start to finish. They truly understood our vision for a coastal-inspired boutique motel and delivered furniture that perfectly captures the essence of Ogunquit. Our guests frequently comment on how beautiful and comfortable the rooms are.</clientTestimonial>
     <clientName>Sarah Miller</clientName>
     <clientPosition>Owner, Towne Lyne Motel</clientPosition>
-    <mainImage src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel project main" />
+    <mainImage src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_1.png" alt="Towne Lyne Motel project main" />
     <images>
       <image id="1" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel project image 1" />
       <image id="2" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3299.jpeg" alt="Towne Lyne Motel project image 2" />
@@ -142,4 +142,60 @@
       <highlight>Case goods built for durability in high-traffic areas</highlight>
     </highlights>
   </project>
+  <project id="quality-inn-bangor-maine" name="Quality Inn - Bangor, ME" category="Hospitality">
+    <shortDescription>Guestroom and common area updates in Bangor.</shortDescription>
+    <mainImage src="/Images/Projects/QualityInn - Bangor Maine/IMG_5211.jpeg" alt="Quality Inn Bangor project main" />
+    <images>
+      <image id="1" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5211.jpeg" alt="Quality Inn Bangor project image 1" />
+      <image id="2" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5213.jpeg" alt="Quality Inn Bangor project image 2" />
+      <image id="3" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5214.jpeg" alt="Quality Inn Bangor project image 3" />
+      <image id="4" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5215.jpeg" alt="Quality Inn Bangor project image 4" />
+      <image id="5" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5216.jpeg" alt="Quality Inn Bangor project image 5" />
+      <image id="6" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5217.jpeg" alt="Quality Inn Bangor project image 6" />
+      <image id="7" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5221.jpeg" alt="Quality Inn Bangor project image 7" />
+      <image id="8" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5223.jpeg" alt="Quality Inn Bangor project image 8" />
+      <image id="9" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5235.jpeg" alt="Quality Inn Bangor project image 9" />
+      <image id="10" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5238.jpeg" alt="Quality Inn Bangor project image 10" />
+      <image id="11" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5240.jpeg" alt="Quality Inn Bangor project image 11" />
+      <image id="12" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5242.jpeg" alt="Quality Inn Bangor project image 12" />
+      <image id="13" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5244.jpeg" alt="Quality Inn Bangor project image 13" />
+      <image id="14" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5247.jpeg" alt="Quality Inn Bangor project image 14" />
+      <image id="15" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5248.jpeg" alt="Quality Inn Bangor project image 15" />
+      <image id="16" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5256.jpeg" alt="Quality Inn Bangor project image 16" />
+      <image id="17" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5261.jpeg" alt="Quality Inn Bangor project image 17" />
+      <image id="18" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5268.jpeg" alt="Quality Inn Bangor project image 18" />
+      <image id="19" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5282.jpeg" alt="Quality Inn Bangor project image 19" />
+      <image id="20" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5284.jpeg" alt="Quality Inn Bangor project image 20" />
+      <image id="21" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5287.jpeg" alt="Quality Inn Bangor project image 21" />
+      <image id="22" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5294.jpeg" alt="Quality Inn Bangor project image 22" />
+      <image id="23" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5299.jpeg" alt="Quality Inn Bangor project image 23" />
+      <image id="24" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5304.jpeg" alt="Quality Inn Bangor project image 24" />
+      <image id="25" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5310.jpeg" alt="Quality Inn Bangor project image 25" />
+      <image id="26" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5312.jpeg" alt="Quality Inn Bangor project image 26" />
+      <image id="27" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-38.jpg" alt="Quality Inn Bangor project image 27" />
+      <image id="28" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-39 2.jpg" alt="Quality Inn Bangor project image 28" />
+      <image id="29" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-39 3.jpg" alt="Quality Inn Bangor project image 29" />
+      <image id="30" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-40 2.jpg" alt="Quality Inn Bangor project image 30" />
+      <image id="31" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-40 3.jpg" alt="Quality Inn Bangor project image 31" />
+      <image id="32" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-40 4.jpg" alt="Quality Inn Bangor project image 32" />
+      <image id="33" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-40 5.jpg" alt="Quality Inn Bangor project image 33" />
+      <image id="34" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-40.jpg" alt="Quality Inn Bangor project image 34" />
+      <image id="35" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-41.jpg" alt="Quality Inn Bangor project image 35" />
+      <image id="36" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-42 2.jpg" alt="Quality Inn Bangor project image 36" />
+      <image id="37" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-42 3.jpg" alt="Quality Inn Bangor project image 37" />
+      <image id="38" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-42.jpg" alt="Quality Inn Bangor project image 38" />
+    </images>
+
+    <beforeImages>
+      <image id="b1" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 2.jpg" alt="Quality Inn Bangor before image 1" />
+      <image id="b2" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 3.jpg" alt="Quality Inn Bangor before image 2" />
+      <image id="b3" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 3.jpg" alt="Quality Inn Bangor before image 3" />
+      <image id="b4" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 4.jpg" alt="Quality Inn Bangor before image 4" />
+      <image id="b5" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 5.jpg" alt="Quality Inn Bangor before image 5" />
+      <image id="b6" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 6.jpg" alt="Quality Inn Bangor before image 6" />
+      <image id="b7" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 7.jpg" alt="Quality Inn Bangor before image 7" />
+      <image id="b8" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 8.jpg" alt="Quality Inn Bangor before image 8" />
+    </beforeImages>
+  </project>
+
 </projects>
