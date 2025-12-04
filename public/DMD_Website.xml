@@ -2041,7 +2041,15 @@
                 <product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa with chaise and durable upholstery" image="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" tags="sofa,sectional,modular">
                     <images>
                         <image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" alt="Sectional Sofa - living room" />
-                    </images>
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 1.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 2.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 3.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 4.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 5.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 6.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 7.png" alt="Sectional Sofa - living room" />
+						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 8.png" alt="Sectional Sofa - living room" />
+					</images>
                     <specifications>
                         <spec name="Width" value="96-120&quot; (Configurable)" />
                         <spec name="Depth" value="34-38&quot; (Customizable)" />
