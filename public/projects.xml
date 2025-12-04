@@ -88,11 +88,13 @@
       <image id="31" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3332.jpeg" alt="Towne Lyne Motel project image 31" />
       <image id="32" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3333.jpeg" alt="Towne Lyne Motel project image 32" />
       <image id="33" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3334.jpeg" alt="Towne Lyne Motel project image 33" />
-      <image id="34" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Old1.jpg" alt="Towne Lyne Motel project image 34" />
-      <image id="35" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/old2.jpg" alt="Towne Lyne Motel project image 35" />
-      <image id="36" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/old3.jpg" alt="Towne Lyne Motel project image 36" />
-      <image id="37" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/old4.jpg" alt="Towne Lyne Motel project image 37" />
     </images>
+    <beforeImages>
+      <image id="b1" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Before/Old1.jpg" alt="Before renovation - room 1" />
+      <image id="b2" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Before/old2.jpg" alt="Before renovation - room 2" />
+      <image id="b3" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Before/old3.jpg" alt="Before renovation - room 3" />
+      <image id="b4" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Before/old4.jpg" alt="Before renovation - room 4" />
+    </beforeImages>
     <specifications>
       <spec name="Project Scope" value="45 guest rooms, lobby, outdoor lounge" />
       <spec name="Timeline" value="4 months" />

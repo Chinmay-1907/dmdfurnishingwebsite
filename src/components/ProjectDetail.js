@@ -202,6 +202,20 @@ function ProjectDetail() {
             </div>
           </div>
 
+          {Array.isArray(project.beforeImages) && project.beforeImages.length > 0 && (
+            <div className="project-gallery">
+              <h2 className="gallery-title">Before Gallery</h2>
+              <div className="gallery-container">
+                {project.beforeImages.map((image) => (
+                  <div key={image.id} className="gallery-item">
+                    <img src={image.url} alt={image.alt || `${project.name} (Before)`} className="gallery-image" />
+                    <p className="image-caption">{image.alt || `${project.name} (Before)`}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Back to Projects button */}
           <div className="back-to-projects-container">
             <button className="back-to-projects-button" onClick={() => navigate('/projects')}>

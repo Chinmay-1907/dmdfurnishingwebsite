@@ -51,6 +51,15 @@ function parseProjectsXml(xmlText) {
         }))
       : [];
 
+    const beforeImagesParent = projectEl.getElementsByTagName('beforeImages')[0];
+    const beforeImages = beforeImagesParent
+      ? Array.from(beforeImagesParent.getElementsByTagName('image')).map((imgEl, index) => ({
+          id: imgEl.getAttribute('id') || `before-${index + 1}`,
+          url: resolveImagePath(imgEl.getAttribute('src')),
+          alt: imgEl.getAttribute('alt') || ''
+        }))
+      : [];
+
     const specsParent = projectEl.getElementsByTagName('specifications')[0];
     const specifications = specsParent
       ? Array.from(specsParent.getElementsByTagName('spec')).map((specEl) => ({
@@ -79,6 +88,7 @@ function parseProjectsXml(xmlText) {
       mainImage,
       mainImageAlt,
       images,
+      beforeImages,
       specifications,
       highlights
     };
