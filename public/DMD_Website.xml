@@ -2440,11 +2440,13 @@
             </subcategory>
         </furnitureType>
 
-        <furnitureType id="Kids Room" name="Kids Room" description="Furniture for kids" image="/Images/Residential/Kids Room/Kids Room.jpg">
+        <furnitureType id="Kids Room" name="Kids Room" description="Furniture for kids" image="/Images/Residential/Kids Room/Kids Room.png">
             <subcategory id="Bunk Bed" name="Bunk Bed" description="Space-efficient bunk beds" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png">
                 <product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin-size bunk bed with guard rails and ladder" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" tags="bunk bed,twin,kids">
                     <images>
-                        <image src="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - kids room" />
+                        <image src="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" alt="Full Bunk Bed - full bunk bed" />
+						<image src="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - twin bunk bed" />
+						<image src="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" alt="Twin XL Bunk Bed - Twin XL Bunk Bed" />
                     </images>
                     <specifications>
                         <spec name="Width" value="41-43&quot; (Twin)" />
@@ -2459,6 +2461,13 @@
                 <product id="Kids Study Desk" name="Kids Study Desk" description="Compact study desk with storage cubby" image="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk.png" tags="desk,kids,study">
                     <images>
                         <image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 1.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 2.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 3.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 4.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 5.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 6.png" alt="Kids Study Desk - kids room" />
+						<image src="/Images/Residential/Kids Room/Study Desk/Kids Study Desk/kids study desk 7.png" alt="Kids Study Desk - kids room" />
                     </images>
                     <specifications>
                         <spec name="Width" value="36-48&quot; (Customizable)" />
@@ -2472,7 +2481,10 @@
             <subcategory id="Toy Storage" name="Toy Storage" description="Toy storage solutions" image="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage.png">
                 <product id="Cubbies Storage" name="Cubbies Storage" description="Open cubby storage unit for toys and books" image="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage.png" tags="storage,toy,cubbies">
                     <images>
-                        <image src="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage.png" alt="Cubbies Storage - kids room" />
+                        <image src="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage 1.png" alt="Cubbies Storage - kids room" />
+						<image src="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage 2.png" alt="Cubbies Storage - kids room" />
+						<image src="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage 3.png" alt="Cubbies Storage - kids room" />
+						<image src="/Images/Residential/Kids Room/Toy Storage/Cubbies Storage/cubbies storage 4.png" alt="Cubbies Storage - kids room" />
                     </images>
                     <specifications>
                         <spec name="Width" value="36-60&quot; (Customizable)" />
