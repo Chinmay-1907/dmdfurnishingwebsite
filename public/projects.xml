@@ -7,13 +7,28 @@
     <clientTestimonial>DMD Furnishing transformed our dated property into a modern, inviting space that our guests love. The quality of the furniture and attention to detail exceeded our expectations. Their team was professional and accommodating throughout the entire process.</clientTestimonial>
     <clientName>Jay Patel</clientName>
     <clientPosition>General Manager, Quality Inn Gainesville</clientPosition>
-    <mainImage src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Hotel lobby with modern furnishings" />
+    <mainImage src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_1.png" alt="Quality Inn Gainesville project main" />
     <images>
-      <image id="1" src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Hotel lobby with modern furnishings" />
-      <image id="2" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Guest room with custom bed and seating" />
-      <image id="3" src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Dining area with custom tables and chairs" />
-      <image id="4" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Reception desk and waiting area" />
-      <image id="5" src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Conference room setup" />
+      <image id="1" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7619.jpeg" alt="Quality Inn Gainesville project image 1" />
+      <image id="2" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7621.jpeg" alt="Quality Inn Gainesville project image 2" />
+      <image id="3" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7622.jpeg" alt="Quality Inn Gainesville project image 3" />
+      <image id="4" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7623.jpeg" alt="Quality Inn Gainesville project image 4" />
+      <image id="5" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7629.jpeg" alt="Quality Inn Gainesville project image 5" />
+      <image id="6" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7630.jpeg" alt="Quality Inn Gainesville project image 6" />
+      <image id="7" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7631.jpeg" alt="Quality Inn Gainesville project image 7" />
+      <image id="8" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7632.jpeg" alt="Quality Inn Gainesville project image 8" />
+      <image id="9" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7633.jpeg" alt="Quality Inn Gainesville project image 9" />
+      <image id="10" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7634.jpeg" alt="Quality Inn Gainesville project image 10" />
+      <image id="11" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7635.jpeg" alt="Quality Inn Gainesville project image 11" />
+      <image id="12" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7636.jpeg" alt="Quality Inn Gainesville project image 12" />
+      <image id="13" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7639.jpeg" alt="Quality Inn Gainesville project image 13" />
+      <image id="14" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7640.jpeg" alt="Quality Inn Gainesville project image 14" />
+      <image id="15" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7641.jpeg" alt="Quality Inn Gainesville project image 15" />
+      <image id="16" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7645.jpeg" alt="Quality Inn Gainesville project image 16" />
+      <image id="17" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7646.jpeg" alt="Quality Inn Gainesville project image 17" />
+      <image id="18" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7647.jpeg" alt="Quality Inn Gainesville project image 18" />
+      <image id="19" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7648.jpeg" alt="Quality Inn Gainesville project image 19" />
+      <image id="20" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7649.jpeg" alt="Quality Inn Gainesville project image 20" />
     </images>
     <specifications>
       <spec name="Project Scope" value="120 guest rooms, lobby, dining area, reception" />
@@ -38,13 +53,45 @@
     <clientTestimonial>Working with DMD Furnishing was a pleasure from start to finish. They truly understood our vision for a coastal-inspired boutique motel and delivered furniture that perfectly captures the essence of Ogunquit. Our guests frequently comment on how beautiful and comfortable the rooms are.</clientTestimonial>
     <clientName>Sarah Miller</clientName>
     <clientPosition>Owner, Towne Lyne Motel</clientPosition>
-    <mainImage src="https://images.unsplash.com/photo-1560448204-61dc36dc98c8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Coastal-inspired guest room" />
+    <mainImage src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel project main" />
     <images>
-      <image id="1" src="https://images.unsplash.com/photo-1560448204-61dc36dc98c8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Coastal-inspired guest room" />
-      <image id="2" src="https://images.unsplash.com/photo-1520483601560-389dff434fdf?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Custom bed with nautical elements" />
-      <image id="3" src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Outdoor lounge area with custom furniture" />
-      <image id="4" src="https://images.unsplash.com/photo-1609949279531-cf48d64bed89?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Boutique motel lobby" />
-      <image id="5" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Bathroom vanity with coastal design" />
+      <image id="1" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel project image 1" />
+      <image id="2" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3299.jpeg" alt="Towne Lyne Motel project image 2" />
+      <image id="3" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3300.jpeg" alt="Towne Lyne Motel project image 3" />
+      <image id="4" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3301.jpeg" alt="Towne Lyne Motel project image 4" />
+      <image id="5" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3302.jpeg" alt="Towne Lyne Motel project image 5" />
+      <image id="6" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3303.jpeg" alt="Towne Lyne Motel project image 6" />
+      <image id="7" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3304.jpeg" alt="Towne Lyne Motel project image 7" />
+      <image id="8" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3305.jpeg" alt="Towne Lyne Motel project image 8" />
+      <image id="9" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3306.jpeg" alt="Towne Lyne Motel project image 9" />
+      <image id="10" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3307.jpeg" alt="Towne Lyne Motel project image 10" />
+      <image id="11" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3308.jpeg" alt="Towne Lyne Motel project image 11" />
+      <image id="12" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3309.jpeg" alt="Towne Lyne Motel project image 12" />
+      <image id="13" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3313.jpeg" alt="Towne Lyne Motel project image 13" />
+      <image id="14" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3314.jpeg" alt="Towne Lyne Motel project image 14" />
+      <image id="15" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3315.jpeg" alt="Towne Lyne Motel project image 15" />
+      <image id="16" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3316.jpeg" alt="Towne Lyne Motel project image 16" />
+      <image id="17" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3317.jpeg" alt="Towne Lyne Motel project image 17" />
+      <image id="18" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3318.jpeg" alt="Towne Lyne Motel project image 18" />
+      <image id="19" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3319.jpeg" alt="Towne Lyne Motel project image 19" />
+      <image id="20" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3320.jpeg" alt="Towne Lyne Motel project image 20" />
+      <image id="21" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3321.jpeg" alt="Towne Lyne Motel project image 21" />
+      <image id="22" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3323.jpeg" alt="Towne Lyne Motel project image 22" />
+      <image id="23" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3324.jpeg" alt="Towne Lyne Motel project image 23" />
+      <image id="24" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3325.jpeg" alt="Towne Lyne Motel project image 24" />
+      <image id="25" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3326.jpeg" alt="Towne Lyne Motel project image 25" />
+      <image id="26" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3327.jpeg" alt="Towne Lyne Motel project image 26" />
+      <image id="27" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3328.jpeg" alt="Towne Lyne Motel project image 27" />
+      <image id="28" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3329.jpeg" alt="Towne Lyne Motel project image 28" />
+      <image id="29" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3330.jpeg" alt="Towne Lyne Motel project image 29" />
+      <image id="30" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3331.jpeg" alt="Towne Lyne Motel project image 30" />
+      <image id="31" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3332.jpeg" alt="Towne Lyne Motel project image 31" />
+      <image id="32" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3333.jpeg" alt="Towne Lyne Motel project image 32" />
+      <image id="33" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3334.jpeg" alt="Towne Lyne Motel project image 33" />
+      <image id="34" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Old1.jpg" alt="Towne Lyne Motel project image 34" />
+      <image id="35" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/old2.jpg" alt="Towne Lyne Motel project image 35" />
+      <image id="36" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/old3.jpg" alt="Towne Lyne Motel project image 36" />
+      <image id="37" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/old4.jpg" alt="Towne Lyne Motel project image 37" />
     </images>
     <specifications>
       <spec name="Project Scope" value="45 guest rooms, lobby, outdoor lounge" />
