@@ -111,40 +111,9 @@
       <highlight>Coordinated color palette across rooms and shared spaces</highlight>
     </highlights>
   </project>
-  <project id="hampton-inn-portland" name="Hampton Inn - Portland, OR" category="Hospitality">
-    <shortDescription>Comprehensive furniture solution for a hotel renovation, including custom beds, seating, and case goods designed for durability and style.</shortDescription>
-    <fullDescription>This renovation for Hampton Inn in Portland, Oregon focused on creating warm, welcoming spaces that reflect the Pacific Northwest aesthetic. DMD Furnishing provided custom-designed furniture for guest rooms, the lobby, breakfast area, and fitness facilities. Durable materials were selected to handle heavy traffic while maintaining a refined look.</fullDescription>
-    <completionDate>February 2023</completionDate>
-    <clientTestimonial>The custom furniture package DMD delivered elevated every space in our property. Guests notice the difference immediately, and the pieces still look fantastic after months of heavy use. Their project management kept everything on schedule.</clientTestimonial>
-    <clientName>Jennifer Park</clientName>
-    <clientPosition>Operations Manager, Hampton Inn Portland</clientPosition>
-    <mainImage src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Hotel lobby with Pacific Northwest-inspired design" />
-    <images>
-      <image id="1" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Hotel lobby with Pacific Northwest-inspired design" />
-      <image id="2" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Guest room with custom bed and seating" />
-      <image id="3" src="https://images.unsplash.com/photo-1576095910326-9de5a8b5b7b3?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Breakfast area with durable tables and chairs" />
-      <image id="4" src="https://images.unsplash.com/photo-1572177215152-32f247303126?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Fitness center with custom storage solutions" />
-      <image id="5" src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Business center with ergonomic workstations" />
-    </images>
-    <specifications>
-      <spec name="Project Scope" value="150 guest rooms, lobby, breakfast area, fitness center" />
-      <spec name="Timeline" value="4 months" />
-      <spec name="Furniture Items" value="700+ pieces" />
-      <spec name="Custom Designs" value="10 unique pieces" />
-      <spec name="Materials Used" value="Stain-resistant fabrics, solid wood, laminate surfaces" />
-      <spec name="Color Palette" value="Earth tones with green and blue accents" />
-    </specifications>
-    <highlights>
-      <highlight>Custom beds with integrated USB charging</highlight>
-      <highlight>Breakfast area furniture designed for quick cleaning and reconfiguration</highlight>
-      <highlight>Lobby seating zones that accommodate both social interaction and private work</highlight>
-      <highlight>Fitness center furniture with antimicrobial properties</highlight>
-      <highlight>Case goods built for durability in high-traffic areas</highlight>
-    </highlights>
-  </project>
   <project id="quality-inn-bangor-maine" name="Quality Inn - Bangor, ME" category="Hospitality">
     <shortDescription>Guestroom and common area updates in Bangor.</shortDescription>
-    <mainImage src="/Images/Projects/QualityInn - Bangor Maine/IMG_5211.jpeg" alt="Quality Inn Bangor project main" />
+    <mainImage src="/Images/Projects/QualityInn - Bangor Maine/IMG_1.png" alt="Quality Inn Bangor project main" />
     <images>
       <image id="1" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5211.jpeg" alt="Quality Inn Bangor project image 1" />
       <image id="2" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5213.jpeg" alt="Quality Inn Bangor project image 2" />
@@ -200,7 +169,7 @@
 
   <project id="usa-inn-wells-me" name="USA INN - Wells, ME" category="Hospitality">
     <shortDescription>Guestroom refresh and improvements in Wells, ME.</shortDescription>
-    <mainImage src="/Images/Projects/USA INN - Wells, ME/IMG_3973.jpg" alt="USA INN Wells project main" />
+    <mainImage src="/Images/Projects/USA INN - Wells, ME/IMG_1.png" alt="USA INN Wells project main" />
     <images>
       <image id="1" src="/Images/Projects/USA INN - Wells, ME/IMG_3973.jpg" alt="USA INN Wells project image 1" />
       <image id="2" src="/Images/Projects/USA INN - Wells, ME/IMG_3986.jpg" alt="USA INN Wells project image 2" />
@@ -222,6 +191,29 @@
       <image id="b8" src="/Images/Projects/USA INN - Wells, ME/Before/11-300x200.jpg" alt="USA INN Wells before image 8" />
       <image id="b9" src="/Images/Projects/USA INN - Wells, ME/Before/12-300x200.jpg" alt="USA INN Wells before image 9" />
       <image id="b10" src="/Images/Projects/USA INN - Wells, ME/Before/13-300x200.jpg" alt="USA INN Wells before image 10" />
+    </beforeImages>
+  </project>
+
+  <project id="surestay-bw-fredrick-md" name="SureStay by BW - Fredrick, MD" category="Hospitality">
+    <shortDescription>Guestroom refresh and common area updates in Fredrick, MD.</shortDescription>
+    <mainImage src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1.png" alt="SureStay Fredrick project main" />
+    <images>
+      <image id="2" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_2.png" alt="SureStay Fredrick project image 2" />
+      <image id="3" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_3.png" alt="SureStay Fredrick project image 3" />
+      <image id="4" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_4.png" alt="SureStay Fredrick project image 4" />
+      <image id="5" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_5.png" alt="SureStay Fredrick project image 5" />
+      <image id="6" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1205.jpeg" alt="SureStay Fredrick project image 6" />
+      <image id="7" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1207.jpeg" alt="SureStay Fredrick project image 7" />
+      <image id="8" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1209.jpeg" alt="SureStay Fredrick project image 8" />
+      <image id="9" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1210.jpeg" alt="SureStay Fredrick project image 9" />
+      <image id="10" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1211.jpeg" alt="SureStay Fredrick project image 10" />
+      <image id="11" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-1.png" alt="SureStay Fredrick project image 11" />
+      <image id="12" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-2.png" alt="SureStay Fredrick project image 12" />
+      <image id="13" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-4.png" alt="SureStay Fredrick project image 13" />
+    </images>
+
+    <beforeImages>
+      <image id="b1" src="/Images/Projects/SureStay by BW - Fredrick MD/Before/SSBW-3 old.png" alt="SureStay Fredrick before image 1" />
     </beforeImages>
   </project>
 
