@@ -198,4 +198,31 @@
     </beforeImages>
   </project>
 
+  <project id="usa-inn-wells-me" name="USA INN - Wells, ME" category="Hospitality">
+    <shortDescription>Guestroom refresh and improvements in Wells, ME.</shortDescription>
+    <mainImage src="/Images/Projects/USA INN - Wells, ME/IMG_3973.jpg" alt="USA INN Wells project main" />
+    <images>
+      <image id="1" src="/Images/Projects/USA INN - Wells, ME/IMG_3973.jpg" alt="USA INN Wells project image 1" />
+      <image id="2" src="/Images/Projects/USA INN - Wells, ME/IMG_3986.jpg" alt="USA INN Wells project image 2" />
+      <image id="3" src="/Images/Projects/USA INN - Wells, ME/IMG_4002.jpg" alt="USA INN Wells project image 3" />
+      <image id="4" src="/Images/Projects/USA INN - Wells, ME/IMG_4006.jpg" alt="USA INN Wells project image 4" />
+      <image id="5" src="/Images/Projects/USA INN - Wells, ME/IMG_4011.jpg" alt="USA INN Wells project image 5" />
+      <image id="6" src="/Images/Projects/USA INN - Wells, ME/IMG_4013.jpg" alt="USA INN Wells project image 6" />
+      <image id="7" src="/Images/Projects/USA INN - Wells, ME/IMG_3947-300x225.jpg" alt="USA INN Wells project image 7" />
+    </images>
+
+    <beforeImages>
+      <image id="b1" src="/Images/Projects/USA INN - Wells, ME/Before/3-3-300x200.jpg" alt="USA INN Wells before image 1" />
+      <image id="b2" src="/Images/Projects/USA INN - Wells, ME/Before/4-3-300x200.jpg" alt="USA INN Wells before image 2" />
+      <image id="b3" src="/Images/Projects/USA INN - Wells, ME/Before/5-2-300x200.jpg" alt="USA INN Wells before image 3" />
+      <image id="b4" src="/Images/Projects/USA INN - Wells, ME/Before/6-2-300x200.jpg" alt="USA INN Wells before image 4" />
+      <image id="b5" src="/Images/Projects/USA INN - Wells, ME/Before/7-300x200.jpg" alt="USA INN Wells before image 5" />
+      <image id="b6" src="/Images/Projects/USA INN - Wells, ME/Before/9-300x200.jpg" alt="USA INN Wells before image 6" />
+      <image id="b7" src="/Images/Projects/USA INN - Wells, ME/Before/10-300x200.jpg" alt="USA INN Wells before image 7" />
+      <image id="b8" src="/Images/Projects/USA INN - Wells, ME/Before/11-300x200.jpg" alt="USA INN Wells before image 8" />
+      <image id="b9" src="/Images/Projects/USA INN - Wells, ME/Before/12-300x200.jpg" alt="USA INN Wells before image 9" />
+      <image id="b10" src="/Images/Projects/USA INN - Wells, ME/Before/13-300x200.jpg" alt="USA INN Wells before image 10" />
+    </beforeImages>
+  </project>
+
 </projects>
