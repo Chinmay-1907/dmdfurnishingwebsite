@@ -157,6 +157,7 @@
 					</specifications>
 				</product>
 			</subcategory>
+			<!-- Removed misplaced Vanities block from Hospital; will reinsert under Hotel → Guest Room -->
 		</furnitureType>
 		<furnitureType id="Waiting Area" name="Waiting Area" description="Waiting Area for Hospital" image="/Images/Hospital/Waiting Area/Waiting Area.jpg">
 		<subcategory id="Magazine Table" name="Magazine Table" description="Magazine Table in Waiting Area" image="/Images/Hospital/Waiting Area/Magazine Table/Wooden Table 2.png">
@@ -286,6 +287,7 @@
 					</specifications>
 				</product>
 			</subcategory>
+			<!-- Removed misplaced Vanities from Hospital. Will relocate under Hotel → Guest Room. -->
 		</furnitureType>
 	</place>
 	<place id="hotel" name="Hotel" description="Hotel furniture collection" image="/Images/Hotel/Hotel furniture collection.jpg">
@@ -464,8 +466,9 @@
 						<spec name="Material" value="Stainless steel construction with refrigeration components" />
 						<spec name="Finish" value="Brushed stainless" />
 					</specifications>
-				</product>
+			</product>
 			</subcategory>
+			<!-- Removed misplaced Vanities from Breakfast Area. Will relocate under Hotel → Guest Room. -->
 		</furnitureType>
 		<furnitureType id="Guest Room" name="Guest Room" description="Guest Room for Hotel" image="/Images/Hotel/Guest Room/Guest Room.jpg">
 			<subcategory id="Bed Frame" name="Bed Frame" description="Bed Frame in Guest Room" image="/Images/Hotel/Guest Room/Bed Frame/Bed Frame.jpg">
@@ -723,6 +726,112 @@
 						<spec name="Height" value="26&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal (customizable)" />
 						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
+					</specifications>
+				</product>
+			</subcategory>
+			<subcategory id="Vanities" name="Vanities" description="Guest room bathroom vanities for hospitality environments" image="/Images/Hotel/Guest Room/Vanities/Vanitie 1.png">
+				<product id="Vanity 1" name="Vanity 1" description="Durable guest room vanity with waterproof marine-grade plywood base and HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Vanities/Vanitie 1.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 1.png" alt="Vanity 1" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 2" name="Vanity 2" description="Guest room vanity designed for high-traffic hospitality; waterproof marine-grade plywood and HPL for long-lasting performance." image="/Images/Hotel/Guest Room/Vanities/Vanitie 2.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 2.png" alt="Vanity 2" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 3" name="Vanity 3" description="Elegant hotel vanity with moisture-resistant construction; marine-grade plywood base and HPL top." image="/Images/Hotel/Guest Room/Vanities/Vanitie 3.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 3.png" alt="Vanity 3" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 4" name="Vanity 4" description="Compact guest vanity built for durability; marine-grade plywood and high-pressure laminate." image="/Images/Hotel/Guest Room/Vanities/Vanitie 4.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 4.png" alt="Vanity 4" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 5" name="Vanity 5" description="Hotel vanity engineered for moisture resistance and longevity; marine-grade plywood with HPL." image="/Images/Hotel/Guest Room/Vanities/Vanitie 5.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 5.png" alt="Vanity 5" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 6" name="Vanity 6" description="Robust guest bathroom vanity using marine-grade plywood and HPL for hospitality use." image="/Images/Hotel/Guest Room/Vanities/Vanitie 6.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 6.png" alt="Vanity 6" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 7" name="Vanity 7" description="Contemporary hotel vanity with waterproof construction; marine-grade plywood base, HPL surface." image="/Images/Hotel/Guest Room/Vanities/Vanitie 7.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 7.png" alt="Vanity 7" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+					</specifications>
+				</product>
+				<product id="Vanity 8" name="Vanity 8" description="Hotel guest vanity built for durability and easy maintenance; marine-grade plywood and HPL." image="/Images/Hotel/Guest Room/Vanities/Vanitie 8.png" tags="vanity,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 8.png" alt="Vanity 8" />
+					</images>
+					<specifications>
+						<spec name="Width" value="24-72&quot; (Customizable)" />
+						<spec name="Depth" value="18-24&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Waterproof marine-grade plywood base with HPL surface (customizable)" />
+						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
+						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
 					</specifications>
 				</product>
 			</subcategory>
