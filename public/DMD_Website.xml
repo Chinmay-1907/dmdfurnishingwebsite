@@ -749,6 +749,7 @@
 				<product id="Vanity 2" name="Vanity 2" description="Guest room vanity designed for high-traffic hospitality; waterproof marine-grade plywood and HPL for long-lasting performance." image="/Images/Hotel/Guest Room/Vanities/Vanitie 2.png" tags="vanity,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 2.png" alt="Vanity 2" />
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 2.1.png" alt="Vanity 2 - Alt 1" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-72&quot; (Customizable)" />
@@ -762,6 +763,7 @@
 				<product id="Vanity 3" name="Vanity 3" description="Elegant hotel vanity with moisture-resistant construction; marine-grade plywood base and HPL top." image="/Images/Hotel/Guest Room/Vanities/Vanitie 3.png" tags="vanity,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 3.png" alt="Vanity 3" />
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 3.1.png" alt="Vanity 3 - Alt 1" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-72&quot; (Customizable)" />
@@ -775,6 +777,7 @@
 				<product id="Vanity 4" name="Vanity 4" description="Compact guest vanity built for durability; marine-grade plywood and high-pressure laminate." image="/Images/Hotel/Guest Room/Vanities/Vanitie 4.png" tags="vanity,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 4.png" alt="Vanity 4" />
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 4.1.png" alt="Vanity 4 - Alt 1" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-72&quot; (Customizable)" />
@@ -801,6 +804,7 @@
 				<product id="Vanity 6" name="Vanity 6" description="Robust guest bathroom vanity using marine-grade plywood and HPL for hospitality use." image="/Images/Hotel/Guest Room/Vanities/Vanitie 6.png" tags="vanity,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 6.png" alt="Vanity 6" />
+						<image src="/Images/Hotel/Guest Room/Vanities/Vanitie 6.1.png" alt="Vanity 6 - Alt 1" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-72&quot; (Customizable)" />

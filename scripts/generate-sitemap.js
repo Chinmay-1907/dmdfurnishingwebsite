@@ -27,12 +27,14 @@ function generate() {
   const rootDir = process.cwd();
   const publicDir = path.join(rootDir, 'public');
   const xmlPath = path.join(publicDir, 'DMD_Website.xml');
+  const projectsXmlPath = path.join(publicDir, 'projects.xml');
   const sitemapPath = path.join(publicDir, 'sitemap.xml');
 
   const port = process.env.PORT || 3000;
   const baseUrl = process.env.PUBLIC_BASE_URL || `http://localhost:${port}`;
 
   const xml = fs.readFileSync(xmlPath, 'utf-8');
+  const projectsXml = fs.existsSync(projectsXmlPath) ? fs.readFileSync(projectsXmlPath, 'utf-8') : '';
 
   // Stack-based light XML walk: track context for place → furnitureType → subcategory → product
   let currentPlace = '';
@@ -41,6 +43,7 @@ function generate() {
 
   const categoryPaths = new Set();
   const productPaths = new Set();
+  const projectPaths = new Set();
 
   const tagRegex = /<\/?([a-zA-Z0-9:_-]+)([^>]*)>/g;
   let match;
@@ -84,10 +87,24 @@ function generate() {
     }
   }
 
+  // Parse projects.xml for project detail pages
+  if (projectsXml) {
+    const projRegex = /<project\s+([^>]*)>/g;
+    let pm;
+    while ((pm = projRegex.exec(projectsXml)) !== null) {
+      const attrs = pm[1] || '';
+      const pid = getAttr(attrs, 'id');
+      if (pid) {
+        projectPaths.add(`/projects/${toSlug(pid)}`);
+      }
+    }
+  }
+
   const urls = [];
   // Core pages
   urls.push(`${baseUrl}/`);
   urls.push(`${baseUrl}/products`);
+  urls.push(`${baseUrl}/projects`);
 
   // Category routes
   for (const p of categoryPaths) {
@@ -95,6 +112,10 @@ function generate() {
   }
   // Product routes
   for (const p of productPaths) {
+    urls.push(baseUrl + p);
+  }
+  // Project routes
+  for (const p of projectPaths) {
     urls.push(baseUrl + p);
   }
 
@@ -119,4 +140,3 @@ try {
   console.error('[sitemap] Failed to generate sitemap:', err);
   process.exitCode = 1;
 }
-

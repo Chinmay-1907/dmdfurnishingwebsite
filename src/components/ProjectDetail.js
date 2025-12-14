@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProjectDetail.css';
 import { loadProjectById } from '../data/projects';
+// SEO: centralized helpers
+import { setPageSEO, setBreadcrumbJsonLd, setProjectJsonLd } from '../utils/seo';
 
 // This component displays detailed information about a specific project
 // It shows multiple images from different angles in a scrollable container,
@@ -89,6 +91,39 @@ function ProjectDetail() {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
+  }, [project]);
+
+  // SEO: Project detail page metadata and JSON-LD
+  useEffect(() => {
+    if (!project) return;
+    const originTitle = 'DMD Furnishing';
+    const title = `${project.name} | Projects | ${originTitle}`;
+    const description = project.shortDescription || project.fullDescription || 'Project details';
+    const canonicalPath = `/projects/${project.id}`;
+    const image = project.mainImage || (project.images && project.images[0] && project.images[0].url) || undefined;
+
+    setPageSEO({
+      title,
+      description,
+      canonicalPath,
+      image,
+      type: 'article'
+    });
+
+    setBreadcrumbJsonLd([
+      { name: 'Home', path: '/' },
+      { name: 'Projects', path: '/projects' },
+      { name: project.name, path: canonicalPath }
+    ]);
+
+    setProjectJsonLd({
+      name: project.name,
+      description,
+      image,
+      urlPath: canonicalPath,
+      dateCreated: project.completionDate,
+      category: project.category
+    });
   }, [project]);
 
   // Navigate back function

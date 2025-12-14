@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
 import styles from '../styles/AboutUs.module.css';
 import { loadProjectsData } from '../data/projects';
+// SEO: centralized helpers
+import { setPageSEO, setBreadcrumbJsonLd } from '../utils/seo';
 
 function Projects() {
   const navigate = useNavigate();
@@ -66,6 +68,22 @@ function Projects() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [projects]);
+
+  // SEO: Projects listing page
+  useEffect(() => {
+    const originTitle = 'DMD Furnishing';
+    setPageSEO({
+      title: `Projects | ${originTitle}`,
+      description: 'Explore recent furniture installations and designs by DMD Furnishing.',
+      canonicalPath: '/projects',
+      image: undefined,
+      type: 'website'
+    });
+    setBreadcrumbJsonLd([
+      { name: 'Home', path: '/' },
+      { name: 'Projects', path: '/projects' }
+    ]);
+  }, []);
 
   return (
     <div className="projects-container">
