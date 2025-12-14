@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Infrastructure Overview
+
+For a concise architecture and build guide with exact paths and commands, see [INFRASTRUCTURE_OVERVIEW.md](INFRASTRUCTURE_OVERVIEW.md).
+
 ## Available Scripts
 
 In the project directory, you can run:
