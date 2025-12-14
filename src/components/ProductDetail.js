@@ -242,6 +242,102 @@ function ProductDetail() {
     setActiveIndex(0);
   }, [detail?.product?.id]);
 
+  // SEO related changes: set per-product meta tags and structured data
+  // Next expand: move these to a shared SEO util and add SSR/SSG via Next.js
+  useEffect(() => {
+    if (!detail) return;
+    const { institution, furnitureType, subcategory, product } = detail;
+
+    const origin = window.location.origin;
+    const canonicalPath = `/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}/${toCatalogSlug(subcategory.id)}/${toCatalogSlug(product.name || product.id)}`;
+    const canonicalUrl = `${origin}${canonicalPath}`;
+
+    const setMeta = (nameOrProp, content, isProperty = false) => {
+      const selector = isProperty ? `meta[property="${nameOrProp}"]` : `meta[name="${nameOrProp}"]`;
+      let el = document.head.querySelector(selector);
+      if (!el) {
+        el = document.createElement('meta');
+        if (isProperty) el.setAttribute('property', nameOrProp); else el.setAttribute('name', nameOrProp);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content || '');
+    };
+
+    const setLink = (rel, href) => {
+      let el = document.head.querySelector(`link[rel="${rel}"]`);
+      if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('href', href);
+    };
+
+    // Title and description
+    document.title = `${product.name} | ${subcategory.name} | ${institution.name} – DMD Furnishing`;
+    setMeta('description', product.description);
+
+    // Canonical
+    setLink('canonical', canonicalUrl);
+
+    // Open Graph
+    setMeta('og:title', product.name, true);
+    setMeta('og:description', product.description, true);
+    setMeta('og:type', 'product', true);
+    setMeta('og:url', canonicalUrl, true);
+    const ogImage = (product.images && product.images[0]?.src) || product.image;
+    setMeta('og:image', ogImage, true);
+
+    // Twitter
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', product.name);
+    setMeta('twitter:description', product.description);
+    setMeta('twitter:image', ogImage);
+
+    // JSON-LD structured data
+    const removeExistingLd = () => {
+      document.querySelectorAll('script[data-seo-json-ld="product"], script[data-seo-json-ld="breadcrumbs"]').forEach((n) => n.remove());
+    };
+    removeExistingLd();
+
+    const productLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      '@id': canonicalUrl,
+      name: product.name,
+      description: product.description,
+      image: (product.images && product.images.length > 0) ? product.images.map(i => i.src) : [product.image],
+      brand: { '@type': 'Brand', name: 'DMD Furnishing' },
+      sku: product.id,
+    };
+    const productScript = document.createElement('script');
+    productScript.type = 'application/ld+json';
+    productScript.setAttribute('data-seo-json-ld', 'product');
+    productScript.text = JSON.stringify(productLd);
+    document.head.appendChild(productScript);
+
+    const breadcrumbsLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Products', item: `${origin}/products` },
+        { '@type': 'ListItem', position: 2, name: institution.name, item: `${origin}/products/${toCatalogSlug(institution.id)}` },
+        { '@type': 'ListItem', position: 3, name: furnitureType.name, item: `${origin}/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}` },
+        { '@type': 'ListItem', position: 4, name: subcategory.name, item: `${origin}/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}/${toCatalogSlug(subcategory.id)}` },
+        { '@type': 'ListItem', position: 5, name: product.name, item: canonicalUrl },
+      ],
+    };
+    const breadcrumbsScript = document.createElement('script');
+    breadcrumbsScript.type = 'application/ld+json';
+    breadcrumbsScript.setAttribute('data-seo-json-ld', 'breadcrumbs');
+    breadcrumbsScript.text = JSON.stringify(breadcrumbsLd);
+    document.head.appendChild(breadcrumbsScript);
+
+    return () => {
+      removeExistingLd();
+    };
+  }, [detail]);
+
   // Ensure active thumbnail stays in view
   useEffect(() => {
     const el = thumbRefs.current[activeIndex];

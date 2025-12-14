@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
+# SEO related changes: expose sitemap for better crawling.
+# Next expand: replace relative sitemap with absolute URL on production (e.g., https://www.dmdfurnishing.com/sitemap.xml)
 User-agent: *
 Disallow:
+Sitemap: /sitemap.xml

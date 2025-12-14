@@ -729,6 +729,8 @@
 					</specifications>
 				</product>
 			</subcategory>
+			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
+			     Next expand: include price/availability for richer Product schema and microdata. -->
 			<subcategory id="Vanities" name="Vanities" description="Guest room bathroom vanities for hospitality environments" image="/Images/Hotel/Guest Room/Vanities/Vanitie 1.png">
 				<product id="Vanity 1" name="Vanity 1" description="Durable guest room vanity with waterproof marine-grade plywood base and HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Vanities/Vanitie 1.png" tags="vanity,hotel,guest room,customizable">
 					<images>
