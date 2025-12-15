@@ -2522,9 +2522,21 @@
                         <spec name="Finish" value="Laminate top; powder-coated base" />
                     </specifications>
                 </product>
-                <product id="Executive Desk" name="Executive Desk" description="Large executive desk with storage drawers" image="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.png" tags="desk,executive">
+                <product id="Executive Desk" name="Executive Desk" description="Large executive desk with storage drawers" image="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.jpg" tags="desk,executive">
                     <images>
-                        <image src="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.png" alt="Executive Desk - home office" />
+                        <image src="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.jpg" alt="Executive Desk - home office" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" alt="Executive Desk - Executive Desk 1" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Axis Executive Desk.jpg" alt="Executive Desk - Executive Desk 2" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Bracket Executive Desk.jpg" alt="Executive Desk - Executive Desk 3" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Core Executive Desk.jpg" alt="Executive Desk - Executive Desk 4" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Echo Executive Desk.jpg" alt="Executive Desk - Executive Desk 5" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Forma Executive Desk.jpg" alt="Executive Desk - Executive Desk 6" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Grid Executive Desk.jpg" alt="Executive Desk - Executive Desk 7" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Modulo Executive Desk.jpg" alt="Executive Desk - Executive Desk 8" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Nexus Executive Desk.jpg" alt="Executive Desk - Executive Desk 9" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Strata Executive Desk.jpg" alt="Executive Desk - Executive Desk 10" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Terra Executive Desk.jpg" alt="Executive Desk - Executive Desk 11" />
+						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Vault Executive Desk.jpg" alt="Executive Desk - Executive Desk 12" />
                     </images>
                     <specifications>
                         <spec name="Width" value="60-72&quot; (Customizable)" />
@@ -2538,7 +2550,9 @@
             <subcategory id="Office Chair" name="Office Chair" description="Seating for the home office" image="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png">
                 <product id="Ergonomic Office Chair" name="Ergonomic Office Chair" description="Adjustable ergonomic chair with lumbar support" image="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png" tags="office chair,ergonomic">
                     <images>
-                        <image src="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png" alt="Ergonomic Office Chair - home office" />
+                        <image src="/Images/Office/Seating/Ergonomic Chair/Adjustable Ergonomic Chair/adjustable ergonomic chair.png" alt="Adjustable Ergonomic Chair - adjustable ergonomic chair" />
+						<image src="/Images/Office/Seating/Ergonomic Chair/Fabric Ergonomic Chair/Fabric Ergonomic Chair.png" alt="Fabric Ergonomic Chair - Fabric Ergonomic Chair" />
+						<image src="/Images/Office/Seating/Ergonomic Chair/Mesh Ergonomic Chair/mesh ergonomic chair.png" alt="Mesh Ergonomic Chair - mesh ergonomic chair" />
                     </images>
                     <specifications>
                         <spec name="Width" value="22-26&quot; (Customizable)" />
