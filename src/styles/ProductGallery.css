@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
 
 /* Main container */
 .product-gallery-container {
@@ -113,6 +113,7 @@
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
+  overflow: visible;
 }
 
 .lightbox-image {
@@ -140,27 +141,33 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  overflow: visible;
 }
 
 .lightbox-prev,
 .lightbox-next {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
+  background: rgba(15, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   font-size: 40px;
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: background 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
 }
+.lightbox-prev { margin-left: -70px; }
+.lightbox-next { margin-right: -70px; }
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(15, 18, 24, 0.85);
+  opacity: 1;
 }
 
 /* Loading state styles */

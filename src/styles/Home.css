@@ -129,14 +129,31 @@ body.dark-mode .hero-section .slick-dots li button:before {
 .hero-section .slick-next {
   width: 48px;
   height: 48px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(15, 18, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  z-index: 2;
 }
+.hero-section .slick-prev { left: -28px; }
+.hero-section .slick-next { right: -28px; }
 
 .hero-section .slick-prev:before,
 .hero-section .slick-next:before {
   font-size: 32px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
 }
 
+.hero-section .slick-prev:hover,
+.hero-section .slick-next:hover {
+  background-color: rgba(15, 18, 24, 0.85);
+}
 .hero-section .slick-prev:hover:before,
 .hero-section .slick-next:hover:before {
   color: var(--color-gold);
