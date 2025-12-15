@@ -2385,8 +2385,8 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Headboard" name="Headboard" description="Upholstered or wood headboards" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png">
-                <product id="King Headboard" name="King Headboard" description="Padded king-size headboard with stitched panels" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png" tags="headboard,king">
+            <subcategory id="Headboards" name="Headboards" description="Upholstered or wood headboards" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png">
+                <product id="Headboard" name="Headboard" description="Padded king/Queen -size headboard with stitched panels" image="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 3.png" tags="headboard,king">
                     <images>
                         <image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 1.png" alt="King Headboard - bedroom" />
 						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 2.png" alt="King Headboard - bedroom" />
@@ -2399,11 +2399,12 @@
 						<image src="/Images/Residential/Bedroom/Headboard/King Headboard/king headboard 9.png" alt="King Headboard - bedroom" />
                     </images>
                     <specifications>
-                        <spec name="Width" value="76-78&quot; (King)" />
-                        <spec name="Depth" value="2-4&quot; (Panel, customizable)" />
-                        <spec name="Height" value="48-60&quot; (Customizable)" />
-                        <spec name="Material" value="MDF/wood panel; foam; fabric/PU upholstery" />
-                        <spec name="Finish" value="Upholstery in fabric/PU; edge-banded panel" />
+                        <spec name="Headboard Width" value="80–82 &quot; (King), 60–62 &quot; (Queen) (Customizable)" /> 
+						<spec name="Wallguard Width" value=" 18-24 &quot; (Customizable)" /> 
+						<spec name="Depth" value="3-3.96&quot; (Customizable)" />
+						<spec name="Height" value="46-48&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal (customizable)" />
+						<spec name="Finish" value="Laminate/Veneer; Edge-banded MDF, color-match available" />
                     </specifications>
                 </product>
             </subcategory>
