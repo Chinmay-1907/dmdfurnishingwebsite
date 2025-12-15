@@ -2567,6 +2567,15 @@
                 <product id="Tall Bookcase" name="Tall Bookcase" description="Tall bookcase with adjustable shelves" image="/Images/Residential/Home Office/Bookcase/Tall Bookcase/tall bookcase.png" tags="bookcase,storage">
                     <images>
                         <image src="/Images/Residential/Home Office/Bookcase/Tall Bookcase/tall bookcase.png" alt="Tall Bookcase - home office" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD narrow Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD Narrow Display Cabinet – Natural Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf – Espresso MDF.png" alt="DMD Bookshelf Collection - DMD Alto Cabinet Shelf – Espresso MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD ConceptStack Library Wall – Honey Ash MDF.png" alt="DMD Bookshelf Collection - DMD ConceptStack Library Wall – Honey Ash MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Elemental Archive Shelf – Warm Oak MDF.png" alt="DMD Bookshelf Collection - DMD Elemental Archive Shelf – Warm Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD GridForm Organizer – Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD GridForm Organizer – Natural Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Indigo Vault Shelf – Matte Blue MDF.png" alt="DMD Bookshelf Collection - DMD Indigo Vault Shelf – Matte Blue MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD StudioCore Display Shelf – Deep Blue MDF.png" alt="DMD Bookshelf Collection - DMD StudioCore Display Shelf – Deep Blue MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TerraGrid Storage Wall – Light Walnut MDF.png" alt="DMD Bookshelf Collection - DMD TerraGrid Storage Wall – Light Walnut MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TwinVault Display Cabinet – Golden Maple MDF.png" alt="DMD Bookshelf Collection - DMD TwinVault Display Cabinet – Golden Maple MDF" />
                     </images>
                     <specifications>
                         <spec name="Width" value="30-36&quot; (Customizable)" />
