@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import '../styles/Header.css';
+import ProductSearch from './ProductSearch';
 
 function Header({ theme = 'light', onToggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,6 +71,7 @@ function Header({ theme = 'light', onToggleTheme }) {
           </ul>
         </nav>
         <div className="header-actions">
+          <ProductSearch />
           <Link to="/contact" className="consultation-button" onClick={closeMenu}>
             Book Consultation
           </Link>
