@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import '../styles/Header.css';
 import ProductSearch from './ProductSearch';
@@ -8,6 +8,7 @@ function Header({ theme = 'light', onToggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isDarkMode = theme === 'dark';
+  const location = useLocation();
 
   const handleMenuToggle = () => setMenuOpen((open) => !open);
 
@@ -55,13 +56,13 @@ function Header({ theme = 'light', onToggleTheme }) {
         </div>
         <nav className={`main-nav${menuOpen ? ' open' : ''}`}> 
           <ul className="nav-links">
-            <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-            <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
-            <li><Link to="/products" onClick={closeMenu}>Products</Link></li>
-            <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
-            <li><Link to="/inspirations" onClick={closeMenu}>Inspirations</Link></li>
-            <li><Link to="/testimonials" onClick={closeMenu}>Testimonials</Link></li>
-            <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
+            <li><NavLink to="/" end onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
+            <li><NavLink to="/about" end onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>About Us</NavLink></li>
+            <li><NavLink to="/products" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Products</NavLink></li>
+            <li><NavLink to="/projects" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink></li>
+            <li><NavLink to="/inspirations" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Inspirations</NavLink></li>
+            <li><NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Testimonials</NavLink></li>
+            <li><NavLink to="/services" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink></li>
             <li className="nav-contact">
               <Link to="/contact" onClick={closeMenu}>
                 <span className="nav-contact-label">Contact</span>
