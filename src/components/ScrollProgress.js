@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import '../styles/ScrollProgress.css';
 
-function ScrollProgress({ showPercent = true, position = 'top' }) {
+function ScrollProgress({ showPercent = true, position = 'top', variant = 'bar', brandText = 'DMD' }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -25,6 +25,36 @@ function ScrollProgress({ showPercent = true, position = 'top' }) {
 
   const barStyle = position === 'bottom' ? { bottom: 0, top: 'auto' } : {};
 
+  const ringRotation = useMemo(() => progress * 3.6, [progress]);
+  const circleText = useMemo(() => {
+    const unit = `${brandText} • `;
+    let s = '';
+    while (s.length < 120) s += unit;
+    return s;
+  }, [brandText]);
+
+  if (variant === 'circle') {
+    const containerStyle = position === 'bottom' ? { bottom: 24, top: 'auto' } : { top: 24 };
+    return (
+      <div className="scroll-circle-container" style={containerStyle} aria-hidden="true">
+        <div className="scroll-circle-center">{showPercent ? `${Math.round(progress)}%` : ''}</div>
+        <svg className="scroll-circle-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <path id="scroll-circle-path" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+          </defs>
+          <circle className="scroll-circle-ring" cx="50" cy="50" r="42" />
+          <g className="scroll-circle-text" style={{ transform: `rotate(${ringRotation}deg)` }}>
+            <text>
+              <textPath href="#scroll-circle-path" startOffset="0%">
+                {circleText}
+              </textPath>
+            </text>
+          </g>
+        </svg>
+      </div>
+    );
+  }
+
   return (
     <div className="scroll-progress-container" style={barStyle} aria-hidden="true">
       <div className="scroll-progress-bar" style={{ width: `${progress}%` }} />
@@ -36,4 +66,3 @@ function ScrollProgress({ showPercent = true, position = 'top' }) {
 }
 
 export default ScrollProgress;
-

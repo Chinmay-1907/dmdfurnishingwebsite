@@ -62,7 +62,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
-        <ScrollProgress />
+        <ScrollProgress position="bottom" variant="circle" brandText="DMD" showPercent />
         <Header theme={theme} onToggleTheme={handleToggleTheme} />
         <main className="main-content">
           <Routes>
