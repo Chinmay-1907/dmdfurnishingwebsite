@@ -17,6 +17,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Inspirations from './components/Inspirations';
 import InspirationDetail from './components/InspirationDetail';
+import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   const getInitialTheme = () => {
@@ -61,6 +62,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
+        <ScrollProgress />
         <Header theme={theme} onToggleTheme={handleToggleTheme} />
         <main className="main-content">
           <Routes>
