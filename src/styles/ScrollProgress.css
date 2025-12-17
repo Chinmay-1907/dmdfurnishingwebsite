@@ -41,7 +41,15 @@ body.dark-mode .scroll-progress-label {
   width: 96px;
   height: 96px;
   z-index: 9999;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.scroll-circle-container:hover {
+  transform: scale(1.1);
 }
 
 .scroll-circle-svg {
@@ -51,14 +59,14 @@ body.dark-mode .scroll-progress-label {
 
 .scroll-circle-ring {
   fill: none;
-  stroke: rgba(212, 175, 55, 0.35);
+  stroke: currentColor;
   stroke-width: 1.5;
 }
 
 .scroll-circle-text text {
   font-size: 7px;
   letter-spacing: 2px;
-  fill: var(--color-text);
+  fill: currentColor;
 }
 
 .scroll-circle-text {
@@ -73,9 +81,5 @@ body.dark-mode .scroll-progress-label {
   justify-content: center;
   font-weight: 600;
   font-size: 14px;
-  color: var(--color-text);
-}
-
-body.dark-mode .scroll-circle-center {
-  color: #d6dae2;
+  color: currentColor;
 }

@@ -35,8 +35,23 @@ function ScrollProgress({ showPercent = true, position = 'top', variant = 'bar',
 
   if (variant === 'circle') {
     const containerStyle = position === 'bottom' ? { bottom: 24, top: 'auto' } : { top: 24 };
+    
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+
     return (
-      <div className="scroll-circle-container" style={containerStyle} aria-hidden="true">
+      <div 
+        className="scroll-circle-container" 
+        style={containerStyle} 
+        onClick={scrollToTop}
+        title="Scroll to top"
+        role="button"
+        tabIndex={0}
+      >
         <div className="scroll-circle-center">{showPercent ? `${Math.round(progress)}%` : ''}</div>
         <svg className="scroll-circle-svg" viewBox="0 0 100 100" aria-hidden="true">
           <defs>

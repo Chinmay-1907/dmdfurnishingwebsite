@@ -400,12 +400,12 @@
 						<spec name="Finish" value="Commercial grade fabric/vinyl" />
 					</specifications>
 				</product>
-				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater lobby sofa" image="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-5.jpg" tags="3-seater,sofa">
+				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater lobby sofa" image="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" tags="3-seater,sofa">
 					<images>
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" alt="3-Seater Sofa - Sofa-8" />
 						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-5.jpg" alt="3-Seater Sofa - Sofa-5" />
 						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-6.png" alt="3-Seater Sofa - Sofa-6" />
 						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-7.png" alt="3-Seater Sofa - Sofa-7" />
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" alt="3-Seater Sofa - Sofa-8" />
 						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-9.png" alt="3-Seater Sofa - Sofa-9" />
 					</images>
 					<specifications>
@@ -416,12 +416,14 @@
 						<spec name="Finish" value="Commercial grade fabric/leather" />
 					</specifications>
 				</product>
-				<product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa for lobby zones" image="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" tags="sectional,sofa">
+				<product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa for lobby zones" image="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" tags="sectional,sofa">
 					<images>
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" alt="Sectional Sofa - Sofa-3" />
 						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" alt="Sectional Sofa - 10" />
 						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-1.png" alt="Sectional Sofa - Sofa-1" />
-						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-2.png" alt="Sectional Sofa - Sofa-2" />
-						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" alt="Sectional Sofa - Sofa-3" />
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-2.png" alt="Sectional Sofa - Sofa-2" />						
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-4.png" alt="Sectional Sofa - Sofa-2" />						
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-5.png" alt="Sectional Sofa - Sofa-2" />						
 					</images>
 					<specifications>
 						<spec name="Width" value="Customizable layout" />
