@@ -299,6 +299,13 @@
 						<image src="/Images/Lobby Area/Accent Chairs/Metal Accent Chair/Image_fx (80).jpg" alt="Metal Accent Chair - Image_fx (80)" />
 						<image src="/Images/Lobby Area/Accent Chairs/Metal Accent Chair/Orange Upholstered Accent Chair 2.jpg" alt="Metal Accent Chair - Orange Upholstered Accent Chair 2" />
 					</images>
+					<specifications>
+						<spec name="Width" value="26-30&quot; (Customizable)" />
+						<spec name="Depth" value="28-32&quot; (Customizable)" />
+						<spec name="Height" value="30-34&quot; (Customizable)" />
+						<spec name="Material" value="Metal frame, High-density foam" />
+						<spec name="Finish" value="Powder coated metal, Upholstered" />
+					</specifications>
 				</product>
 				<product id="Upholstered Accent Chair" name="Upholstered Accent Chair" description="Comfort-first upholstered accent chair" image="/Images/Lobby Area/Accent Chairs/Upholstered Accent Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,accent,chair">
 					<images>
@@ -307,12 +314,26 @@
 						<image src="/Images/Lobby Area/Accent Chairs/Upholstered Accent Chair/Warm Gray and taupes Upholstered Accent Chair 360 return 6.jpg" alt="Upholstered Accent Chair - Warm Gray and taupes Upholstered Accent Chair 360 return 6" />
 						<image src="/Images/Lobby Area/Accent Chairs/Upholstered Accent Chair/Warm terracott Upholstered Accent Chair 360 return 1.jpg" alt="Upholstered Accent Chair - Warm terracott Upholstered Accent Chair 360 return 1" />
 					</images>
+					<specifications>
+						<spec name="Width" value="28-32&quot; (Customizable)" />
+						<spec name="Depth" value="30-34&quot; (Customizable)" />
+						<spec name="Height" value="32-36&quot; (Customizable)" />
+						<spec name="Material" value="Solid wood internal frame" />
+						<spec name="Finish" value="Premium fabric upholstery" />
+					</specifications>
 				</product>
 				<product id="Wooden Accent Chair" name="Wooden Accent Chair" description="Solid wood accent chair" image="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,accent,chair">
 					<images>
 						<image src="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden Accent Chair - DMD-DinningChair - DC-BL001" />
 						<image src="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Accent Chair - DMD-DinningChair - DC-WOOD1" />
 					</images>
+					<specifications>
+						<spec name="Width" value="24-28&quot; (Customizable)" />
+						<spec name="Depth" value="26-30&quot; (Customizable)" />
+						<spec name="Height" value="30-34&quot; (Customizable)" />
+						<spec name="Material" value="Solid Oak/Walnut/Ash wood" />
+						<spec name="Finish" value="Stained/Lacquered" />
+					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Coffee Tables" name="Coffee Tables" description="Coffee Tables in Lobby Area" image="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg">
@@ -326,6 +347,13 @@
 						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Wide H.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Wide H" />
 						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table X Box Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table X Box Legs" />
 					</images>
+					<specifications>
+						<spec name="Width" value="42-48&quot; (Customizable)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="16-18&quot; (Customizable)" />
+						<spec name="Material" value="Tempered Glass, Solid Wood Base" />
+						<spec name="Finish" value="Clear glass, Natural wood finish" />
+					</specifications>
 				</product>
 				<product id="Round Coffee Table" name="Round Coffee Table" description="Round coffee table for lobby seating areas" image="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
 					<images>
@@ -334,6 +362,12 @@
 						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 2.jpg" alt="Round Coffee Table - Round Coffee Table Modern 2" />
 						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table one sylinder.jpg" alt="Round Coffee Table - Round Coffee Table one sylinder" />
 					</images>
+					<specifications>
+						<spec name="Diameter" value="36-42&quot; (Customizable)" />
+						<spec name="Height" value="16-18&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Stone" />
+						<spec name="Finish" value="Veneer/Powder coat/Polished" />
+					</specifications>
 				</product>
 				<product id="Square Coffee Table" name="Square Coffee Table" description="Square coffee table with modern base options" image="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
 					<images>
@@ -343,6 +377,13 @@
 						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Plus Sign.jpg" alt="Square Coffee Table - Square Coffee Table Plus Sign" />
 						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Waterfall Legs.jpg" alt="Square Coffee Table - Square Coffee Table Waterfall Legs" />
 					</images>
+					<specifications>
+						<spec name="Width" value="36-42&quot; (Customizable)" />
+						<spec name="Depth" value="36-42&quot; (Customizable)" />
+						<spec name="Height" value="16-18&quot; (Customizable)" />
+						<spec name="Material" value="Solid Wood/Veneer" />
+						<spec name="Finish" value="Natural/Walnut/Espresso stain" />
+					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Lobby Sofa" name="Lobby Sofa" description="Lobby Sofa in Lobby Area" image="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg">
@@ -351,33 +392,60 @@
 						<image src="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" alt="2-Seater Sofa - Orang-Blue" />
 						<image src="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orange-Gray.jpg" alt="2-Seater Sofa - Orange-Gray" />
 					</images>
+					<specifications>
+						<spec name="Width" value="60-72&quot; (Customizable)" />
+						<spec name="Depth" value="32-36&quot; (Customizable)" />
+						<spec name="Height" value="30-34&quot; (Customizable)" />
+						<spec name="Material" value="Hardwood frame, High-density foam" />
+						<spec name="Finish" value="Commercial grade fabric/vinyl" />
+					</specifications>
 				</product>
-				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater lobby sofa" image="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" tags="3-seater,sofa">
+				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater lobby sofa" image="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-5.jpg" tags="3-seater,sofa">
 					<images>
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/9.jpg" alt="3-Seater Sofa - 9" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-5.jpg" alt="3-Seater Sofa - Sofa-5" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-6.png" alt="3-Seater Sofa - Sofa-6" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-7.png" alt="3-Seater Sofa - Sofa-7" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" alt="3-Seater Sofa - Sofa-8" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-9.png" alt="3-Seater Sofa - Sofa-9" />
 					</images>
+					<specifications>
+						<spec name="Width" value="78-90&quot; (Customizable)" />
+						<spec name="Depth" value="32-36&quot; (Customizable)" />
+						<spec name="Height" value="30-34&quot; (Customizable)" />
+						<spec name="Material" value="Hardwood frame, No-sag springs" />
+						<spec name="Finish" value="Commercial grade fabric/leather" />
+					</specifications>
 				</product>
 				<product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa for lobby zones" image="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" tags="sectional,sofa">
 					<images>
 						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" alt="Sectional Sofa - 10" />
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-1.png" alt="Sectional Sofa - Sofa-1" />
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-2.png" alt="Sectional Sofa - Sofa-2" />
+						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" alt="Sectional Sofa - Sofa-3" />
 					</images>
+					<specifications>
+						<spec name="Width" value="Customizable layout" />
+						<spec name="Depth" value="34-38&quot; (Customizable)" />
+						<spec name="Height" value="30-34&quot; (Customizable)" />
+						<spec name="Material" value="Reinforced wood frame" />
+						<spec name="Finish" value="Heavy-duty commercial fabric" />
+					</specifications>
 				</product>
 			</subcategory>
 			<subcategory id="Reception Desk" name="Reception Desk" description="Reception Desk in Lobby Area" image="/Images/Lobby Area/Reception Desk/Curved Reception Desk.jpg">
-				<product id="Curved Reception Desk" name="Curved Reception Desk" description="Curved reception desk with guest-friendly counter" image="/Images/Lobby Area/Reception Desk/Curved Reception Desk.jpg" tags="curved,reception,desk">
+				<product id="Reception Desk Collections" name="Reception Desk Collections" description="Versatile reception desks including curved, L-shaped, and straight designs" image="/Images/Lobby Area/Reception Desk/Curved Reception Desk.jpg" tags="reception,desk,curved,straight,l-shaped">
 					<images>
-						<image src="/Images/Lobby Area/Reception Desk/Curved Reception Desk.jpg" alt="Curved Reception Desk - Curved Reception Desk" />
+						<image src="/Images/Lobby Area/Reception Desk/Curved Reception Desk.jpg" alt="Reception Desk - Curved" />
+						<image src="/Images/Lobby Area/Reception Desk/L-Shaped Reception Desk.jpg" alt="Reception Desk - L-Shaped" />
+						<image src="/Images/Lobby Area/Reception Desk/Recepction Desk1.jpg" alt="Reception Desk - Straight" />
 					</images>
-				</product>
-				<product id="L-Shaped Reception Desk" name="L-Shaped Reception Desk" description="L-shaped reception desk for efficient workflows" image="/Images/Lobby Area/Reception Desk/L-Shaped Reception Desk.jpg" tags="l-shaped,reception,desk">
-					<images>
-						<image src="/Images/Lobby Area/Reception Desk/L-Shaped Reception Desk.jpg" alt="L-Shaped Reception Desk - L-Shaped Reception Desk" />
-					</images>
-				</product>
-				<product id="Straight Reception Desk" name="Straight Reception Desk" description="Straight reception desk with clean lines" image="/Images/Lobby Area/Reception Desk/Recepction Desk1.jpg" tags="straight,reception,desk">
-					<images>
-						<image src="/Images/Lobby Area/Reception Desk/Recepction Desk1.jpg" alt="Straight Reception Desk - Recepction Desk1" />
-					</images>
+					<specifications>
+						<spec name="Width" value="Customizable (Standard: 60-96&quot;)" />
+						<spec name="Depth" value="24-30&quot; (Customizable)" />
+						<spec name="Height" value="42-44&quot; (Counter Height)" />
+						<spec name="Material" value="Laminate/Wood Veneer/Stone/Quartz" />
+						<spec name="Finish" value="High-gloss/Matte/Textured" />
+					</specifications>
 				</product>
 			</subcategory>
 		</furnitureType>
