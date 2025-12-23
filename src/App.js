@@ -15,6 +15,7 @@ import ProjectDetail from './components/ProjectDetail';
 import Testimonials from './components/Testimonials';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import ScheduleCall from './components/ScheduleCall';
 import Inspirations from './components/Inspirations';
 import InspirationDetail from './components/InspirationDetail';
 import ScrollProgress from './components/ScrollProgress';
@@ -78,6 +79,7 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/schedule-call" element={<ScheduleCall />} />
             <Route path="/inspirations" element={<Inspirations />} />
             <Route path="/inspirations/:id" element={<InspirationDetail />} />
           </Routes>

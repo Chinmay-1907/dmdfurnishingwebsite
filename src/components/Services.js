@@ -40,11 +40,14 @@ const processSteps = [
   }
 ];
 
-const servicePhases = [
+const detailedServices = [
   {
-    name: 'Design Consultation',
+    id: 'design-consultation',
+    title: 'Design Consultation',
+    description: 'Our design team collaborates with you to translate your vision into reality. We provide material selection, space planning, and custom furniture design to perfectly match your brand aesthetic and functional requirements.',
+    points: ['Material Selection', 'Space Planning', 'Custom Design', 'Brand Alignment'],
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 1.618a1 1 0 0 1 .555.168l7.25 4.532a1 1 0 0 1 .445.832v8.7a1 1 0 0 1-.445.832l-7.25 4.532a1 1 0 0 1-1.11 0l-7.25-4.532A1 1 0 0 1 4 15.85V7.15a1 1 0 0 1 .445-.832l7.25-4.532A1 1 0 0 1 12 1.618z" />
         <path d="M12 22.382V12" />
         <path d="m19.45 6.15-7.45-4.532-7.45 4.532" />
@@ -55,9 +58,12 @@ const servicePhases = [
     )
   },
   {
-    name: 'Manufacturing',
+    id: 'custom-manufacturing',
+    title: 'Custom Manufacturing',
+    description: 'We own and operate state-of-the-art manufacturing facilities. This allows us to maintain strict quality control, offer limitless customization options, and ensure timely production for projects of any scale.',
+    points: ['Quality Control', 'Limitless Customization', 'Timely Production', 'Scalable Solutions'],
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20 12V6.5a2.5 2.5 0 0 0-5 0V12h5z" />
         <path d="M4 12v-2a4 4 0 0 1 8 0v2h8" />
         <path d="M18 12v5.5a2.5 2.5 0 0 1-5 0V12h5z" />
@@ -66,24 +72,32 @@ const servicePhases = [
     )
   },
   {
-    name: 'Delivery',
+    id: 'project-management',
+    title: 'Project Management',
+    description: 'Our dedicated project managers oversee every detail of your furniture procurement. We coordinate between designers, manufacturers, and on-site teams to ensure strict adherence to timelines and budgets. From the initial quote to the final punch list, we provide transparent communication and proactive problem-solving for seamless execution.',
+    points: ['Timeline Adherence', 'Budget Management', 'Proactive Coordination', 'Transparent Communication'],
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-        <path d="M15 12H9" />
-        <path d="m12 9 3 3-3 3" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <path d="M12 18v-6" />
+        <path d="M8 15l4 4 4-4" />
       </svg>
     )
   },
   {
-    name: 'Installation',
+    id: 'installation-services',
+    title: 'Installation Services',
+    description: 'We provide professional, white-glove installation services for hotels and commercial spaces. Our experienced teams handle logistics, warehousing, assembly, and placement with precision. We ensure minimal disruption to your operations and leave your space guest-ready, managing all packaging removal and final site cleanup.',
+    points: ['White-Glove Service', 'Logistics & Warehousing', 'Professional Assembly', 'Site Cleanup'],
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
     )
   }
 ];
+
 const industries = ['Hospitality', 'Corporate', 'Commercial'];
 
 function Services() {
@@ -102,9 +116,9 @@ function Services() {
           <p>Comprehensive furniture solutions for your business</p>
 
           <div className="hero-actions">
-            <button className="hero-action-primary">Get in Touch</button>
-            <a href="#our-process" className="hero-action-secondary">
-              See Our Process
+            <button className="hero-action-primary" onClick={handleGetInTouch}>Get in Touch</button>
+            <a href="#services-grid" className="hero-action-secondary">
+              Explore Services
             </a>
           </div>
         </div>
@@ -132,13 +146,43 @@ function Services() {
           </div>
 
           <div className="overview-highlights" aria-label="Service phases">
-            {servicePhases.map((phase) => (
-              <div key={phase.name} className="overview-highlight">
+            {detailedServices.map((phase) => (
+              <a key={phase.title} href={`#${phase.id}`} className="overview-highlight" style={{textDecoration: 'none'}}>
                 <div className="highlight-icon">{phase.icon}</div>
-                <p>{phase.name}</p>
-              </div>
+                <p>{phase.title}</p>
+              </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="services-grid" className="services-grid-section">
+        <div className="services-grid-intro">
+          <p className="section-eyebrow">What We Do</p>
+          <h2>Tailored Services for Every Project</h2>
+          <p>
+            Whether you need a single custom piece or a complete hotel fit-out, our comprehensive range of services ensures your project is delivered on time, on budget, and to the highest standards of quality.
+          </p>
+        </div>
+        
+        <div className="services-grid">
+          {detailedServices.map((service) => (
+            <div key={service.id} id={service.id} className="service-card">
+              <div className="service-icon">
+                {service.icon}
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <ul className="service-points">
+                {service.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+              <button className="learn-more" onClick={handleGetInTouch}>
+                Start Your Project
+              </button>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -67,6 +67,7 @@ body {
   color: var(--color-text);
   transition: background-color var(--transition-base), color var(--transition-base);
   line-height: 1.65;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {

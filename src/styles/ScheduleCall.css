@@ -1,0 +1,275 @@
+.schedule-call-page {
+  font-family: 'Lato', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.schedule-hero {
+  /* background image set inline in component */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  margin-bottom: 60px;
+}
+
+.schedule-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.schedule-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--color-gold);
+}
+
+.schedule-hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--color-gold);
+  color: #fff;
+  border: 2px solid var(--color-gold);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-gold);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+/* Content Wrapper */
+.schedule-content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* General Section Styles */
+.schedule-section {
+  margin-bottom: 80px;
+}
+
+.schedule-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--color-gold);
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.schedule-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-gold);
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Lists */
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.schedule-list li {
+  background-color: rgba(212, 175, 55, 0.05); /* Light gold tint */
+  padding: 15px 20px;
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 4px 4px 0;
+}
+
+.schedule-list.check-list li {
+  position: relative;
+  padding-left: 45px;
+}
+
+.schedule-list.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 15px;
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+.schedule-note {
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Booking Section */
+.booking-section {
+  background-color: #f9f9f9;
+  padding: 60px 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+body.dark-mode .booking-section {
+  background-color: #1e1e1e;
+}
+
+.booking-intro {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.calendar-embed-container {
+  min-height: 400px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode .calendar-embed-container {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.calendar-fallback {
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Trust Grid */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.trust-item h3 {
+  color: var(--color-gold);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* FAQ Grid */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.faq-item {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .faq-item {
+  background: #2a2a2a;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.faq-item h3 {
+  color: var(--color-gold);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Final CTA */
+.schedule-final-cta {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: rgba(212, 175, 55, 0.1);
+  margin-top: 60px;
+}
+
+.schedule-final-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.schedule-final-cta p {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+body.dark-mode .schedule-final-cta p {
+  color: #aaa;
+}
+
+.btn-primary.large {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .schedule-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .schedule-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-primary, .btn-secondary {
+    text-align: center;
+  }
+}

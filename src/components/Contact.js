@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Contact.css';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import styles from '../styles/AboutUs.module.css';
@@ -12,6 +13,7 @@ function Contact() {
   const [otpCode, setOtpCode] = useState('');
   const [resendCount, setResendCount] = useState(0);
   const [recaptchaReady, setRecaptchaReady] = useState(false);
+  const navigate = useNavigate();
 
   // Load reCAPTCHA v3 script when site key is present
   useEffect(() => {
@@ -330,7 +332,7 @@ function Contact() {
       <section className="consultation-cta">
         <h2>Prefer a Phone Consultation?</h2>
         <p>Schedule a call with one of our furniture specialists at your convenience.</p>
-        <button className="cta-button" onClick={() => window.location.href = 'tel:+16172237781'}>
+        <button className="cta-button" onClick={() => navigate('/schedule-call')}>
           Schedule a Call
         </button>
       </section>
