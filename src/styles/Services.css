@@ -285,6 +285,7 @@
 }
 
 .service-card {
+  scroll-margin-top: 100px;
   background-color: var(--color-surface-elevated);
   box-shadow: var(--shadow-elevated);
   padding: 40px 30px;
