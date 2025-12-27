@@ -72,3 +72,28 @@ button {
     padding: 72px 0;
   }
 }
+
+/* Back Button Styles */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary, #666);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.back-button:hover {
+  color: var(--color-gold, #c9a25f);
+  transform: translateX(-4px);
+  opacity: 1;
+}
+
