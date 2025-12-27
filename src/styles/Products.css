@@ -8,7 +8,7 @@
 .product-listing {
   width: min(1200px, 92vw);
   margin: 0 auto;
-  padding: 120px 0 80px;
+  padding: 40px 0 80px;
 }
 
 .product-categories {
@@ -251,7 +251,7 @@
   .product-categories,
   .product-subcategories,
   .product-listing {
-    padding: 96px 0 64px;
+    padding: 32px 0 64px;
   }
 
   .category-item h3,

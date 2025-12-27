@@ -49,6 +49,41 @@ function Home() {
     });
   }, []);
 
+  const [autoplay, setAutoplay] = useState(true);
+
+  // Custom arrow components to handle auto-scroll disable
+  const CustomPrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style }}
+        onClick={(e) => {
+          setAutoplay(false);
+          if (onClick) onClick(e);
+        }}
+        role="button"
+        aria-label="Previous Slide"
+      />
+    );
+  };
+
+  const CustomNextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style }}
+        onClick={(e) => {
+          setAutoplay(false);
+          if (onClick) onClick(e);
+        }}
+        role="button"
+        aria-label="Next Slide"
+      />
+    );
+  };
+
   // Slideshow settings
   const sliderSettings = {
     dots: true,
@@ -56,11 +91,13 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: autoplay,
     autoplaySpeed: 5000,
     fade: true,
     cssEase: 'linear',
-    pauseOnHover: false
+    pauseOnHover: false,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />
   };
 
   return (

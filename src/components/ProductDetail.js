@@ -339,12 +339,15 @@ function ProductDetail() {
   }, [detail]);
 
   // Ensure active thumbnail stays in view
+  // Removed scrollIntoView to prevent page jumping when navigating images
+  /*
   useEffect(() => {
     const el = thumbRefs.current[activeIndex];
     if (el && typeof el.scrollIntoView === 'function') {
       el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
   }, [activeIndex]);
+  */
 
   const imagesArr = useMemo(() => {
     if (!detail) return [];
