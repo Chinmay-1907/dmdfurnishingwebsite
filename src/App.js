@@ -19,6 +19,7 @@ import ScheduleCall from './components/ScheduleCall';
 import Inspirations from './components/Inspirations';
 import InspirationDetail from './components/InspirationDetail';
 import ScrollProgress from './components/ScrollProgress';
+import BackButton from './components/BackButton';
 
 function App() {
   const getInitialTheme = () => {
@@ -66,6 +67,7 @@ function App() {
         <ScrollProgress position="bottom" variant="circle" brandText="DMD" showPercent />
         <Header theme={theme} onToggleTheme={handleToggleTheme} />
         <main className="main-content">
+          <BackButton />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
