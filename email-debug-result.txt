@@ -1,0 +1,15 @@
+Testing credentials with updated password (SAMP@DMD415156i)...
+
+Testing: GoDaddy: smtpout.secureserver.net (587/STARTTLS)
+❌ FAILED: GoDaddy: smtpout.secureserver.net (587/STARTTLS)
+Error: Invalid login: 535 Authentication Failed for sales@dmdfurnishing.com
+
+Testing: GoDaddy: smtpout.secureserver.net (80/STARTTLS)
+❌ FAILED: GoDaddy: smtpout.secureserver.net (80/STARTTLS)
+Error: connect ETIMEDOUT 216.69.141.32:80
+
+Testing: GoDaddy: smtpout.secureserver.net (465/SSL)
+❌ FAILED: GoDaddy: smtpout.secureserver.net (465/SSL)
+Error: Invalid login: 535 Authentication Failed for sales@dmdfurnishing.com
+
+❌ All configurations failed.
