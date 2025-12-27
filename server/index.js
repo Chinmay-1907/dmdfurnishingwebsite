@@ -6,7 +6,7 @@ const https = require('https');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.SERVER_PORT || 3002;
 
 app.use(express.json({ limit: '1mb' }));
 app.use(
@@ -35,10 +35,8 @@ const otpStore = new Map();
 const transporter = nodemailer.createTransport({
   host: smtpHost,
   port: smtpPort,
-  secure: smtpSecure,
-  requireTLS: !smtpSecure,
-  authMethod: 'LOGIN',
-  tls: { minVersion: 'TLSv1.2' },
+  secure: smtpSecure, // true for 465, false for other ports
+  requireTLS: !smtpSecure, // true for 587
   auth: smtpUser && smtpPass ? { user: smtpUser, pass: smtpPass } : undefined,
 });
 
@@ -126,8 +124,8 @@ app.post('/api/request-otp', async (req, res) => {
   if (!isValidEmail(email) || isDisposableEmail(email)) {
     return res.status(400).json({ success: false, error: 'Invalid submission. Please review your contact details and try again.' });
   }
-  // Phone
-  if (!isValidPhone(phone)) {
+  // Phone (optional for OTP request)
+  if (phone && !isValidPhone(phone)) {
     return res.status(400).json({ success: false, error: 'Invalid submission. Please review your contact details and try again.' });
   }
   // Profanity
@@ -146,16 +144,18 @@ app.post('/api/request-otp', async (req, res) => {
   const existing = otpStore.get(email);
   if (existing) {
     if (existing.resends >= 2 && existing.expiresAt > Date.now()) {
-      return res.status(429).json({ success: false, error: 'Verification failed. Please request a new OTP and try again.' });
+      return res.status(429).json({ success: false, error: 'Too many OTP requests. Please wait 5 minutes.' });
     }
   }
 
   const code = generateOtp(4, 6);
   const expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
   const resends = existing ? Math.min(existing.resends + 1, 2) : 0;
-  otpStore.set(email, { code, expiresAt, resends, payload: { name, company, email, phone, project, message, subject } });
+  // Store the full request body as payload to capture all form fields
+  otpStore.set(email, { code, expiresAt, resends, payload: { ...req.body } });
 
   try {
+    console.log(`Attempting to send OTP to ${email} via ${smtpHost}:${smtpPort} (${smtpSecure ? 'secure' : 'insecure'})`);
     await transporter.sendMail({
       from: mailFrom,
       to: email,
@@ -163,8 +163,10 @@ app.post('/api/request-otp', async (req, res) => {
       text: `Your verification code is ${code}. It expires in 5 minutes.`,
       html: `<p>Your verification code is <strong>${escapeHtml(code)}</strong>.</p><p>This code expires in 5 minutes.</p>`,
     });
+    console.log(`OTP sent successfully to ${email}`);
     res.json({ success: true });
   } catch (err) {
+    console.error('OTP Send Error:', err);
     const hint = getSmtpHint(err);
     res.status(500).json({ success: false, error: 'OTP send failed', details: err.message, code: err.code, response: err.response, hint });
   }
@@ -194,25 +196,48 @@ app.post('/api/verify-otp', async (req, res) => {
   const { payload } = entry;
   otpStore.delete(email); // one-time use
 
+  // Helper to safely display optional fields
+  const row = (label, value) => value ? `<tr><th align="left">${label}</th><td>${escapeHtml(value)}</td></tr>` : '';
+  const textRow = (label, value) => value ? `${label}: ${value}\n` : '';
+
   const html = `
     <h2>${payload.subject}</h2>
     <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
-      <tr><th align="left">Name</th><td>${escapeHtml(payload.name)}</td></tr>
-      <tr><th align="left">Company</th><td>${escapeHtml(payload.company)}</td></tr>
-      <tr><th align="left">Email</th><td>${escapeHtml(payload.email)}</td></tr>
-      <tr><th align="left">Phone</th><td>${escapeHtml(payload.phone)}</td></tr>
-      <tr><th align="left">Project</th><td>${escapeHtml(payload.project)}</td></tr>
-      <tr><th align="left">Message</th><td>${escapeHtml(payload.message)}</td></tr>
+      ${row('Name', payload.name)}
+      ${row('Company', payload.company)}
+      ${row('Email', payload.email)}
+      ${row('Phone', payload.phone)}
+      ${row('Project Category', payload.project)}
+      ${row('Room Count', payload.roomCount)}
+      ${row('Room Types', Array.isArray(payload.roomTypes) ? payload.roomTypes.join(', ') : payload.roomTypes)}
+      ${row('Project Scope', Array.isArray(payload.projectScope) ? payload.projectScope.join(', ') : payload.projectScope)}
+      ${row('Seating Capacity', payload.seatingCapacity)}
+      ${row('Furniture Needed', Array.isArray(payload.furnitureNeeded) ? payload.furnitureNeeded.join(', ') : payload.furnitureNeeded)}
+      ${row('Restaurant Type', payload.restaurantType)}
+      ${row('Space Type', payload.spaceType)}
+      ${row('Team Size', payload.teamSize)}
+      ${row('Area Type', payload.areaType)}
+      ${row('Message', payload.message)}
     </table>
   `;
+  
   const text = `
 ${payload.subject}
-Name: ${payload.name}
-Company: ${payload.company}
-Email: ${payload.email}
-Phone: ${payload.phone}
-Project: ${payload.project}
-Message: ${payload.message}
+${textRow('Name', payload.name)}
+${textRow('Company', payload.company)}
+${textRow('Email', payload.email)}
+${textRow('Phone', payload.phone)}
+${textRow('Project Category', payload.project)}
+${textRow('Room Count', payload.roomCount)}
+${textRow('Room Types', Array.isArray(payload.roomTypes) ? payload.roomTypes.join(', ') : payload.roomTypes)}
+${textRow('Project Scope', Array.isArray(payload.projectScope) ? payload.projectScope.join(', ') : payload.projectScope)}
+${textRow('Seating Capacity', payload.seatingCapacity)}
+${textRow('Furniture Needed', Array.isArray(payload.furnitureNeeded) ? payload.furnitureNeeded.join(', ') : payload.furnitureNeeded)}
+${textRow('Restaurant Type', payload.restaurantType)}
+${textRow('Space Type', payload.spaceType)}
+${textRow('Team Size', payload.teamSize)}
+${textRow('Area Type', payload.areaType)}
+${textRow('Message', payload.message)}
   `;
 
   try {

@@ -1,8 +1,9 @@
-﻿.contact-container {
+.contact-container {
   max-width: 100%;
   overflow-x: hidden;
 }
 
+/* Reusing AboutUs module for hero, but keeping this for fallback or specific overrides */
 .contact-hero {
   height: 50vh;
   background-color: var(--color-surface-inverse);
@@ -12,23 +13,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   background-position: center;
   padding: 0 20px;
-}
-
-.contact-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.contact-hero p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  max-width: 600px;
 }
 
 .contact-content {
@@ -88,17 +75,24 @@
   line-height: 1.6;
 }
 
-.contact-form {
+/* --- New Multi-Step Form Styles --- */
+
+.contact-form-wrapper {
   flex: 1;
   min-width: 300px;
+}
+
+.consultation-form-card {
   background-color: var(--color-surface);
   padding: 40px;
   box-shadow: var(--shadow-elevated);
   border-left: 4px solid #d4af37;
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.contact-form::before {
+.consultation-form-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -109,7 +103,7 @@
   pointer-events: none;
 }
 
-.contact-form h2 {
+.consultation-form-card h2 {
   font-size: 2rem;
   margin-bottom: 30px;
   color: var(--color-text);
@@ -118,6 +112,7 @@
 
 .form-group {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .form-group label {
@@ -125,6 +120,12 @@
   margin-bottom: 8px;
   color: var(--color-text);
   font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #d4af37;
+  margin-left: 4px;
 }
 
 .form-group input,
@@ -137,6 +138,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background-color: var(--color-surface-elevated);
+  color: var(--color-text);
 }
 
 .form-group textarea {
@@ -153,153 +155,255 @@
   background-color: var(--color-surface-elevated);
 }
 
-.submit-button {
-  background-color: #d4af37;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  letter-spacing: 1px;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.submit-button:hover {
-  background-color: #c4a030;
-  transform: translateY(-2px);
-}
-
-.map-section {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: var(--color-surface);
-}
-
-.map-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: var(--color-text);
-  font-weight: 300;
-}
-
-.map-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.map-placeholder {
-  height: 400px;
-  background-color: var(--color-surface-muted);
-  border-radius: 8px;
+/* Input with Action Button (Email Verification) */
+.input-with-action {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 10px;
 }
 
-.placeholder-content {
-  text-align: center;
-  padding: 30px;
+.input-with-action input {
+  flex: 1;
 }
 
-.placeholder-icon {
-  font-size: 48px;
+.btn-verify {
+  background-color: transparent;
+  border: 1px solid #d4af37;
   color: #d4af37;
-  margin-bottom: 20px;
-}
-
-.placeholder-note {
-  margin-top: 10px;
-  font-style: italic;
-  color: var(--color-text-secondary);
-}
-
-/* Map marker styling */
-.map-marker {
-  position: absolute;
-  transform: translate(-50%, -100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.marker-icon {
-  color: #d4af37;
-  font-size: 2.5rem;
-  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
-}
-
-.marker-text {
-  background-color: var(--color-surface-elevated);
-  padding: 5px 10px;
+  padding: 0 20px;
   border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin-top: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
-.consultation-cta {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: var(--color-surface-inverse);
-  color: white;
-}
-
-.consultation-cta h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-.consultation-cta p {
-  max-width: 800px;
-  margin: 0 auto 30px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #ccc;
-}
-
-.cta-button {
+.btn-verify:hover:not(:disabled) {
   background-color: #d4af37;
   color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  letter-spacing: 1px;
 }
 
-.cta-button:hover {
-  background-color: #c4a030;
+.btn-verify:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+/* Locked Input (OTP Step) */
+.input-locked {
+  position: relative;
+}
+
+.input-locked input {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+  padding-right: 40px;
+}
+
+.lock-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+}
+
+/* Verified Badge */
+.verified-badge {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.btn-text:hover {
+  color: #d4af37;
+}
+
+/* Checkbox Groups */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d4af37;
+}
+
+/* Helper Text & Error Messages */
+.helper-text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+}
+
+.helper-note {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-left: 5px;
+}
+
+.error-message {
+  color: #e53935;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgba(229, 57, 53, 0.1);
+  border-radius: 4px;
+}
+
+/* Success State */
+.success-message {
+  text-align: center;
+  padding: 40px;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevated);
+  border-top: 4px solid #4caf50;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.success-message h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--color-text);
+}
+
+.success-message p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.conditional-section {
+  padding: 20px;
+  background-color: var(--color-surface-muted);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 3px solid #d4af37;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 999px; /* Pill shape */
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-gold);
+  color: #121212;
+  border: 1px solid var(--color-gold);
+}
+
+.btn-primary:hover {
+  background-color: #b38e4d;
+  border-color: #b38e4d;
   transform: translateY(-2px);
+  color: #121212;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+/* Form Row for Side-by-Side Inputs */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
 }
 
 @media (max-width: 768px) {
-  .contact-hero h1 {
-    font-size: 2.5rem;
-  }
-  
   .contact-content {
     flex-direction: column;
+    padding: 40px 20px;
   }
   
-  .contact-form,
-  .contact-info {
+  .contact-info,
+  .contact-form-wrapper {
     width: 100%;
   }
   
-  .consultation-cta h2 {
-    font-size: 1.8rem;
+  .form-row {
+    flex-direction: column;
+    gap: 0;
   }
   
-  .consultation-cta p {
-    font-size: 1rem;
+  .input-with-action {
+    flex-direction: column;
+  }
+  
+  .btn-verify {
+    width: 100%;
+    padding: 12px;
   }
 }
