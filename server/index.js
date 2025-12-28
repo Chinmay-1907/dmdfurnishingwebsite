@@ -51,11 +51,23 @@ app.post('/api/send-consultation', async (req, res) => {
     project = '',
     message = '',
     subject = 'New Consultation Request from DMD Furnishing Website',
+    roomCount,
+    roomTypes,
+    projectScope,
+    seatingCapacity,
+    furnitureNeeded,
+    restaurantType,
+    spaceType,
+    teamSize,
+    areaType
   } = req.body || {};
 
   if (!name || !email || !phone || !project || !message) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
   }
+
+  // Helper for arrays
+  const formatArray = (arr) => Array.isArray(arr) ? arr.join(', ') : (arr || '');
 
   const html = `
     <h2>${subject}</h2>
@@ -64,7 +76,20 @@ app.post('/api/send-consultation', async (req, res) => {
       <tr><th align="left">Company</th><td>${escapeHtml(company)}</td></tr>
       <tr><th align="left">Email</th><td>${escapeHtml(email)}</td></tr>
       <tr><th align="left">Phone</th><td>${escapeHtml(phone)}</td></tr>
-      <tr><th align="left">Project</th><td>${escapeHtml(project)}</td></tr>
+      <tr><th align="left">Project Category</th><td>${escapeHtml(project)}</td></tr>
+      
+      ${roomCount ? `<tr><th align="left">Room Count</th><td>${escapeHtml(roomCount)}</td></tr>` : ''}
+      ${roomTypes && roomTypes.length ? `<tr><th align="left">Room Types</th><td>${escapeHtml(formatArray(roomTypes))}</td></tr>` : ''}
+      ${projectScope ? `<tr><th align="left">Project Scope</th><td>${escapeHtml(projectScope)}</td></tr>` : ''}
+      
+      ${seatingCapacity ? `<tr><th align="left">Seating Capacity</th><td>${escapeHtml(seatingCapacity)}</td></tr>` : ''}
+      ${furnitureNeeded && furnitureNeeded.length ? `<tr><th align="left">Furniture Needed</th><td>${escapeHtml(formatArray(furnitureNeeded))}</td></tr>` : ''}
+      ${restaurantType ? `<tr><th align="left">Restaurant Type</th><td>${escapeHtml(restaurantType)}</td></tr>` : ''}
+      
+      ${spaceType && spaceType.length ? `<tr><th align="left">Space Type</th><td>${escapeHtml(formatArray(spaceType))}</td></tr>` : ''}
+      ${teamSize ? `<tr><th align="left">Team Size</th><td>${escapeHtml(teamSize)}</td></tr>` : ''}
+      ${areaType && areaType.length ? `<tr><th align="left">Area Type</th><td>${escapeHtml(formatArray(areaType))}</td></tr>` : ''}
+
       <tr><th align="left">Message</th><td>${escapeHtml(message)}</td></tr>
     </table>
   `;
@@ -75,8 +100,22 @@ Company: ${company}
 Email: ${email}
 Phone: ${phone}
 Project: ${project}
+
+${roomCount ? `Room Count: ${roomCount}` : ''}
+${roomTypes ? `Room Types: ${formatArray(roomTypes)}` : ''}
+${projectScope ? `Project Scope: ${projectScope}` : ''}
+
+${seatingCapacity ? `Seating Capacity: ${seatingCapacity}` : ''}
+${furnitureNeeded ? `Furniture Needed: ${formatArray(furnitureNeeded)}` : ''}
+${restaurantType ? `Restaurant Type: ${restaurantType}` : ''}
+
+${spaceType ? `Space Type: ${formatArray(spaceType)}` : ''}
+${teamSize ? `Team Size: ${teamSize}` : ''}
+${areaType ? `Area Type: ${formatArray(areaType)}` : ''}
+
 Message: ${message}
-  `;
+  `.replace(/^\s*[\r\n]/gm, ''); // Remove empty lines
+
 
   // Helpful early check for missing SMTP configuration
   if (!smtpHost || !smtpUser || !smtpPass) {
@@ -143,7 +182,8 @@ app.post('/api/request-otp', async (req, res) => {
   }
 
   // Resend limit
-  const existing = otpStore.get(email);
+  const emailLower = email.toLowerCase();
+  const existing = otpStore.get(emailLower);
   if (existing) {
     if (existing.resends >= 2 && existing.expiresAt > Date.now()) {
       return res.status(429).json({ success: false, error: 'Too many attempts. Please wait 5 minutes before requesting a new code.' });
@@ -153,7 +193,7 @@ app.post('/api/request-otp', async (req, res) => {
   const code = generateOtp(4, 6);
   const expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
   const resends = existing ? Math.min(existing.resends + 1, 2) : 0;
-  otpStore.set(email, { code, expiresAt, resends, payload: { name, company, email, phone, project, message, subject } });
+  otpStore.set(emailLower, { code, expiresAt, resends, payload: { name, company, email, phone, project, message, subject } });
 
   try {
     await transporter.sendMail({
@@ -167,7 +207,7 @@ app.post('/api/request-otp', async (req, res) => {
   } catch (err) {
     console.error('OTP Send Error:', err);
     // Remove from store if send failed so user can try again
-    otpStore.delete(email);
+    otpStore.delete(emailLower);
     const hint = getSmtpHint(err);
     res.status(500).json({ success: false, error: 'OTP send failed', details: err.message, code: err.code, response: err.response, hint });
   }
@@ -185,17 +225,24 @@ app.post('/api/verify-otp', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Invalid submission. Please review your contact details and try again.' });
     }
   }
-  const entry = otpStore.get(email);
-  if (!entry || !entry.code || !code || Date.now() > entry.expiresAt) {
-    otpStore.delete(email);
+  const emailLower = email.toLowerCase();
+  const entry = otpStore.get(emailLower);
+  const cleanCode = String(code).trim();
+
+  if (!entry || !entry.code || !cleanCode || Date.now() > entry.expiresAt) {
+    // Only delete if it was expired or invalid entry to avoid race conditions, 
+    // but here we just want to be safe. If entry doesn't exist, delete does nothing.
+    if (entry && Date.now() > entry.expiresAt) otpStore.delete(emailLower);
     return res.status(400).json({ success: false, error: 'Verification failed. Please request a new OTP and try again.' });
   }
-  if (String(entry.code) !== String(code)) {
-    return res.status(400).json({ success: false, error: 'Verification failed. Please request a new OTP and try again.' });
+  
+  if (String(entry.code) !== cleanCode) {
+    // Do NOT delete OTP on simple code mismatch, allow retry
+    return res.status(400).json({ success: false, error: 'Invalid code. Please check and try again.' });
   }
 
   const { payload } = entry;
-  otpStore.delete(email); // one-time use
+  otpStore.delete(emailLower); // one-time use
 
   const html = `
     <h2>${payload.subject}</h2>
@@ -204,7 +251,20 @@ app.post('/api/verify-otp', async (req, res) => {
       <tr><th align="left">Company</th><td>${escapeHtml(payload.company)}</td></tr>
       <tr><th align="left">Email</th><td>${escapeHtml(payload.email)}</td></tr>
       <tr><th align="left">Phone</th><td>${escapeHtml(payload.phone)}</td></tr>
-      <tr><th align="left">Project</th><td>${escapeHtml(payload.project)}</td></tr>
+      <tr><th align="left">Project Category</th><td>${escapeHtml(payload.project)}</td></tr>
+
+      ${payload.roomCount ? `<tr><th align="left">Room Count</th><td>${escapeHtml(payload.roomCount)}</td></tr>` : ''}
+      ${payload.roomTypes && payload.roomTypes.length ? `<tr><th align="left">Room Types</th><td>${escapeHtml(Array.isArray(payload.roomTypes) ? payload.roomTypes.join(', ') : payload.roomTypes)}</td></tr>` : ''}
+      ${payload.projectScope ? `<tr><th align="left">Project Scope</th><td>${escapeHtml(payload.projectScope)}</td></tr>` : ''}
+      
+      ${payload.seatingCapacity ? `<tr><th align="left">Seating Capacity</th><td>${escapeHtml(payload.seatingCapacity)}</td></tr>` : ''}
+      ${payload.furnitureNeeded && payload.furnitureNeeded.length ? `<tr><th align="left">Furniture Needed</th><td>${escapeHtml(Array.isArray(payload.furnitureNeeded) ? payload.furnitureNeeded.join(', ') : payload.furnitureNeeded)}</td></tr>` : ''}
+      ${payload.restaurantType ? `<tr><th align="left">Restaurant Type</th><td>${escapeHtml(payload.restaurantType)}</td></tr>` : ''}
+      
+      ${payload.spaceType && payload.spaceType.length ? `<tr><th align="left">Space Type</th><td>${escapeHtml(Array.isArray(payload.spaceType) ? payload.spaceType.join(', ') : payload.spaceType)}</td></tr>` : ''}
+      ${payload.teamSize ? `<tr><th align="left">Team Size</th><td>${escapeHtml(payload.teamSize)}</td></tr>` : ''}
+      ${payload.areaType && payload.areaType.length ? `<tr><th align="left">Area Type</th><td>${escapeHtml(Array.isArray(payload.areaType) ? payload.areaType.join(', ') : payload.areaType)}</td></tr>` : ''}
+
       <tr><th align="left">Message</th><td>${escapeHtml(payload.message)}</td></tr>
     </table>
   `;
@@ -215,8 +275,21 @@ Company: ${payload.company}
 Email: ${payload.email}
 Phone: ${payload.phone}
 Project: ${payload.project}
+
+${payload.roomCount ? `Room Count: ${payload.roomCount}` : ''}
+${payload.roomTypes ? `Room Types: ${Array.isArray(payload.roomTypes) ? payload.roomTypes.join(', ') : payload.roomTypes}` : ''}
+${payload.projectScope ? `Project Scope: ${payload.projectScope}` : ''}
+
+${payload.seatingCapacity ? `Seating Capacity: ${payload.seatingCapacity}` : ''}
+${payload.furnitureNeeded ? `Furniture Needed: ${Array.isArray(payload.furnitureNeeded) ? payload.furnitureNeeded.join(', ') : payload.furnitureNeeded}` : ''}
+${payload.restaurantType ? `Restaurant Type: ${payload.restaurantType}` : ''}
+
+${payload.spaceType ? `Space Type: ${Array.isArray(payload.spaceType) ? payload.spaceType.join(', ') : payload.spaceType}` : ''}
+${payload.teamSize ? `Team Size: ${payload.teamSize}` : ''}
+${payload.areaType ? `Area Type: ${Array.isArray(payload.areaType) ? payload.areaType.join(', ') : payload.areaType}` : ''}
+
 Message: ${payload.message}
-  `;
+  `.replace(/^\s*[\r\n]/gm, '');
 
   try {
     await transporter.sendMail({

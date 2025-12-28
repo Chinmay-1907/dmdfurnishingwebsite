@@ -87,12 +87,59 @@ function Contact() {
 
   // Auto-draft message logic
   useEffect(() => {
-    if (step === 'details' && formData.projectCategory && !formData.message) {
+    if (step === 'details' && formData.projectCategory) {
       const categoryLabel = PROJECT_CATEGORIES.find(c => c.id === formData.projectCategory)?.label || 'your services';
-      const draft = `I was reviewing your furniture solutions for ${categoryLabel} and would like to request a consultation to discuss scope, materials, and timelines for my project.`;
-      setFormData(prev => ({ ...prev, message: draft }));
+      const baseMessage = `I was reviewing your furniture solutions for ${categoryLabel} and would like to request a consultation to discuss scope, materials, and timelines for my project.`;
+      
+      let details = [];
+      const { projectCategory, roomCount, roomTypes, projectScope, seatingCapacity, furnitureNeeded, restaurantType, spaceType, teamSize, areaType } = formData;
+
+      if (projectCategory === 'hotel') {
+        if (roomCount) details.push(`Approximate Number of Rooms: ${roomCount}`);
+        if (roomTypes?.length) details.push(`Room Types: ${roomTypes.join(', ')}`);
+        if (projectScope) details.push(`Project Scope: ${projectScope}`);
+      } else if (projectCategory === 'restaurant') {
+        if (seatingCapacity) details.push(`Seating Capacity: ${seatingCapacity}`);
+        if (furnitureNeeded?.length) details.push(`Furniture Needed: ${furnitureNeeded.join(', ')}`);
+        if (restaurantType) details.push(`Project Type: ${restaurantType}`);
+      } else if (projectCategory === 'corporate') {
+        if (spaceType?.length) details.push(`Space Type: ${spaceType.join(', ')}`);
+        if (teamSize) details.push(`Approximate Team Size: ${teamSize}`);
+      } else if (projectCategory === 'university') {
+        if (spaceType?.length) details.push(`Space Type: ${spaceType.join(', ')}`);
+      } else if (projectCategory === 'healthcare') {
+        if (areaType?.length) details.push(`Area Type: ${areaType.join(', ')}`);
+      }
+
+      const detailsText = details.length > 0 ? `\n\nProject Details:\n${details.join('\n')}` : '';
+      const fullMessage = `${baseMessage}${detailsText}`;
+
+      setFormData(prev => {
+        // Update if message is empty OR if it matches the pattern of our auto-draft (allowing for category changes)
+        // We check if the current message starts with the static prefix of our template
+        const prefix = "I was reviewing your furniture solutions for";
+        const shouldUpdate = !prev.message || prev.message.startsWith(prefix);
+        
+        if (shouldUpdate) {
+           if (prev.message === fullMessage) return prev;
+           return { ...prev, message: fullMessage };
+        }
+        return prev;
+      });
     }
-  }, [formData.projectCategory, step]);
+  }, [
+    step,
+    formData.projectCategory, 
+    formData.roomCount, 
+    formData.roomTypes, 
+    formData.projectScope, 
+    formData.seatingCapacity, 
+    formData.furnitureNeeded, 
+    formData.restaurantType, 
+    formData.spaceType, 
+    formData.teamSize, 
+    formData.areaType
+  ]);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
