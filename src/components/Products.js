@@ -4,6 +4,7 @@ import '../styles/Products.css';
 import { normalizeCatalogImagePath, toCatalogSlug, idsMatch } from '../utils/catalogPaths';
 // SEO: centralized helpers for meta and JSON-LD
 import { setPageSEO, setBreadcrumbJsonLd } from '../utils/seo';
+import ProductOverview from './ProductOverview';
 
 function Products() {
   const CUSTOM_FURNITURE_IMAGE_URL = '/Images/Tailored_Guestroom_Collections.jpg';
@@ -129,8 +130,57 @@ function Products() {
           parsedCatalog.push(place);
         }
         
-        console.log('[Products] Parsed catalog:', parsedCatalog);
-        setCatalog(parsedCatalog);
+        // Transform catalog to match new "Products by Market" structure
+        // 1. Rename existing places
+        const nameMap = {
+          'hotel': 'Hotels & Motels',
+          'restaurant': 'Restaurants & Cafés',
+          'office': 'Office & Corporate Spaces',
+          'residential': 'Multi-Family & Residential Projects',
+          'hospital': 'Healthcare & Care Facilities',
+          'Lobby Area': 'Public & Common Areas'
+        };
+
+        // 2. Merge School and University into "Educational Facilities"
+        const schoolIndex = parsedCatalog.findIndex(p => idsMatch(p.id, 'school'));
+        const universityIndex = parsedCatalog.findIndex(p => idsMatch(p.id, 'university'));
+        
+        let educationalFacilities = null;
+        
+        if (schoolIndex !== -1 || universityIndex !== -1) {
+          educationalFacilities = {
+            id: 'educational-facilities',
+            name: 'Educational Facilities',
+            description: 'Support learning and collaboration with flexible, durable furniture for classrooms, libraries, and common areas.',
+            image: '/Images/University/University.png',
+            furnitureTypes: []
+          };
+          
+          if (schoolIndex !== -1) {
+             educationalFacilities.furnitureTypes.push(...parsedCatalog[schoolIndex].furnitureTypes);
+          }
+          if (universityIndex !== -1) {
+             educationalFacilities.furnitureTypes.push(...parsedCatalog[universityIndex].furnitureTypes);
+          }
+        }
+        
+        // Filter out School and University, and map names
+        const transformedCatalog = parsedCatalog.filter(p => {
+          // Rename if in map
+          if (nameMap[p.id]) {
+            p.name = nameMap[p.id];
+          }
+          // Remove school and university (they are merged)
+          return !idsMatch(p.id, 'school') && !idsMatch(p.id, 'university');
+        });
+        
+        // Add merged Educational Facilities
+        if (educationalFacilities) {
+          transformedCatalog.push(educationalFacilities);
+        }
+
+        console.log('[Products] Parsed & Transformed catalog:', transformedCatalog);
+        setCatalog(transformedCatalog);
         setLoading(false);
         
       } catch (e) {
@@ -273,7 +323,7 @@ function Products() {
     // No selection: products root
     if (selectedPlaceIndex === null) {
       setPageSEO({
-        title: `${baseTitle} | ${originTitle}`,
+        title: `Products by Market | ${originTitle}`,
         description: baseDesc,
         canonicalPath: '/products',
         image: undefined,
@@ -281,7 +331,7 @@ function Products() {
       });
       setBreadcrumbJsonLd([
         { name: 'Home', path: '/' },
-        { name: 'Products', path: '/products' }
+        { name: 'Products by Market', path: '/products' }
       ]);
       return;
     }
@@ -396,28 +446,7 @@ function Products() {
   const renderContent = () => {
     // Show places list
     if (selectedPlaceIndex === null) {
-      return (
-        <section className="product-categories">
-          <h2>Browse by Space</h2>
-          <div className="category-grid">
-            {catalog.map((place, index) => (
-              <div 
-                key={place.id || index} 
-                className="category-item"
-                onClick={() => handlePlaceSelect(index)}
-              >
-                <div 
-                  className={`category-image place-${toCatalogSlug(place.id || '')}`}
-                  style={{ backgroundImage: `url("${encodeURI(place.image || '/placeholder.png')}")` }}
-                ></div>
-                <h3>{place.name}</h3>
-                <p>{place.description}</p>
-                <button className="view-button">View Collection</button>
-              </div>
-            ))}
-          </div>
-        </section>
-      );
+      return <ProductOverview />;
     }
 
     const selectedPlace = catalog[selectedPlaceIndex];
