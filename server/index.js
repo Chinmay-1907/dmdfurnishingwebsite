@@ -36,10 +36,10 @@ const transporter = nodemailer.createTransport({
   host: smtpHost,
   port: smtpPort,
   secure: smtpSecure,
-  auth: {
-    user: smtpUser,
-    pass: smtpPass,
-  },
+  requireTLS: !smtpSecure,
+  authMethod: 'LOGIN',
+  tls: { minVersion: 'TLSv1.2', ciphers: 'SSLv3' },
+  auth: smtpUser && smtpPass ? { user: smtpUser, pass: smtpPass } : undefined,
 });
 
 app.post('/api/send-consultation', async (req, res) => {
