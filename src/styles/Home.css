@@ -187,9 +187,18 @@
 }
 
 .hero-support-text {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.03em;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* 2. Who We Serve */
@@ -480,5 +489,11 @@
   .project-caption {
     transform: translateY(0); /* Always show caption on mobile */
     background: rgba(0,0,0,0.6);
+  }
+
+  .hero-support-text {
+    font-size: 1rem;
+    padding: 10px 16px;
+    margin-top: 1.5rem;
   }
 }
