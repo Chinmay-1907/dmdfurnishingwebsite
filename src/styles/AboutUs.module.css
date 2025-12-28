@@ -66,6 +66,11 @@
   opacity: 0.9;
   color: #ffffff;
   animation: fadeInUp 1.2s ease-out;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  padding: 0 1rem;
 }
 
 /* Section styling */
@@ -209,28 +214,137 @@
   left: -100px;
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Process Steps */
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; /* Match valuesGrid gap */
+  margin-top: 3rem;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.processStep {
+  background: rgba(212, 175, 55, 0.1); /* Match valueItem background */
+  padding: 2rem;
+  border-radius: 4px; /* Match valueItem radius */
+  border: 1px solid rgba(212, 175, 55, 0.2); /* Match valueItem border */
+  text-align: left;
+  transition: transform 0.3s ease;
+  /* Removed shadow to match valueItem flat look */
 }
+
+.processStep:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 175, 55, 0.15); /* Slightly darker on hover */
+}
+
+.stepNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  opacity: 0.8; /* Increased opacity for better visibility on gold background */
+}
+
+.processStep h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.processStep p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Checklist */
+.checkList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.checkItem {
+  position: relative;
+  padding-left: 2.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+.checkItem::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* Values Grid */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.valueItem {
+  background: rgba(212, 175, 55, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 4px;
+  color: var(--color-text);
+  font-weight: 500;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: var(--color-surface-elevated);
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtonWrapper {
+  margin-top: 2rem;
+}
+
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 /* Responsive styles */
 @media (max-width: 768px) {

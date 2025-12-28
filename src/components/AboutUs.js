@@ -1,43 +1,52 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Assuming React Router is used for navigation
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/AboutUs.module.css';
 
-// Move the header image URL into the component so it's controlled here
+// Header image
 const HERO_IMAGE_URL = '/images/About_DMD_Furnishing_Page.jpg';
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div>
+    <div className={styles.aboutContainer}>
       {/* Hero Section */}
       <section
         className={styles.heroSection}
         style={{
           background:
-            `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('${HERO_IMAGE_URL}')`,
+            `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('${HERO_IMAGE_URL}')`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center'
         }}
       >
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>About DMD Furnishing</h1>
-          <p className={styles.heroSubtitle}>Crafted for Those Who Live Design</p>
+          <h1 className={styles.heroTitle}>Built for Commercial Spaces.<br/>Designed for Real-World Use.</h1>
+          <p className={styles.heroSubtitle}>
+            We provide thoughtfully designed, well-crafted furniture solutions for hospitality and commercial projects—combining practical design, reliable manufacturing, and hands-on project coordination.
+          </p>
         </div>
       </section>
       
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <div className={styles.mainContent}>
         {/* Decorative pattern */}
         <div className={`${styles.decorativePattern} ${styles.patternTopRight}`}></div>
         
-        {/* Company Section */}
-        <section className={`${styles.section} ${styles.sectionLight} ${styles.sectionTopSpacer}`}>
+        {/* Our Story Section */}
+        <section className={`${styles.section} ${styles.sectionLight}`}>
           <div className={styles.sectionContent}>
-            <h2 className={styles.sectionTitle}>Company</h2>
+            <h2 className={styles.sectionTitle}>Our Story</h2>
             <p className={styles.paragraph}>
-              For years, DMD Furnishing has helped shape beautiful interiors through custom-crafted furniture solutions for both commercial and residential spaces. From luxury hotels to modern offices, our work reflects a deep commitment to craftsmanship, design integrity, and personal service.
+              Our company was established with a simple goal: to make commercial furniture sourcing more dependable and more transparent.
             </p>
             <p className={styles.paragraph}>
-              We offer full customization and hands-on collaboration to ensure that each project not only meets expectations — but redefines them. With agile manufacturing, design-centric thinking, and a budget-conscious approach, DMD is proud to be a trusted partner to designers, property developers, and homeowners alike.
+              In many projects, delays, unclear specifications, and inconsistent quality create unnecessary challenges. We built our approach around clarity—clear communication, defined scopes, and coordinated execution from start to finish.
+            </p>
+            <p className={styles.paragraph}>
+              By aligning design intent with manufacturing realities, we help clients move projects forward with confidence.
             </p>
           </div>
         </section>
@@ -49,71 +58,156 @@ const AboutUs = () => {
           <div className={styles.sectionContent}>
             <h2 className={styles.sectionTitle}>What We Do</h2>
             <p className={styles.paragraph}>
-              At DMD, we know that no two projects are the same. Whether you're starting from a rough sketch or a refined design brief, our team partners with engineers and designers to craft pieces that fit your vision perfectly.
+              We support commercial projects with furniture solutions tailored to real-world use, timelines, and budgets.
             </p>
+            <p className={styles.paragraph}><strong>Our services include:</strong></p>
             <ul className={styles.list}>
-              <li className={styles.listItem}>Custom-built furniture tailored to specific dimensions, materials, and finishes</li>
-              <li className={styles.listItem}>End-to-end project support, from ideation to delivery</li>
-              <li className={styles.listItem}>Solutions that meet the design vision, timeline, and budget — every time</li>
+              <li className={styles.listItem}>Custom furniture design and detailing</li>
+              <li className={styles.listItem}>Casegoods and seating manufacturing</li>
+              <li className={styles.listItem}>FF&E coordination</li>
+              <li className={styles.listItem}>Project-based sourcing and fabrication</li>
+              <li className={styles.listItem}>Delivery and installation coordination support</li>
             </ul>
             <p className={styles.paragraph}>
-              From standout statement pieces to complete furnishing solutions, we turn concepts into functional art.
+              Each project is approached with attention to durability, functionality, and long-term value.
             </p>
           </div>
         </section>
         
         <div className={styles.decorativeLine}></div>
         
-        {/* Service Section */}
+        {/* How We Work Section */}
         <section className={`${styles.section} ${styles.sectionLight}`}>
           <div className={styles.sectionContent}>
-            <h2 className={styles.sectionTitle}>Service</h2>
+            <h2 className={styles.sectionTitle}>How We Work</h2>
             <p className={styles.paragraph}>
-              We believe that great design deserves great execution. That's why we focus on transparency, precision, and proactive communication throughout the entire process.
+              Our process is structured, collaborative, and designed to reduce uncertainty at every stage.
             </p>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>Timely coordination with stakeholders</li>
-              <li className={styles.listItem}>On-budget production with scalable flexibility</li>
-              <li className={styles.listItem}>Responsive support and updates from our team</li>
-            </ul>
-            <p className={styles.paragraph}>
-              Your vision is our blueprint. Every detail matters, and every milestone is tracked — so you can move forward with confidence.
-            </p>
-            <div>
-              <Link 
-                to="/services"
-                className={`${styles.button} ${styles.primaryButton}`}
-              >
-                Explore Our Services
-              </Link>
+            
+            <div className={styles.processSteps}>
+              <div className={styles.processStep}>
+                <div className={styles.stepNumber}>1</div>
+                <h3>Consultation & Requirements</h3>
+                <p>We begin by understanding project scope, usage needs, timelines, and constraints.</p>
+              </div>
+              <div className={styles.processStep}>
+                <div className={styles.stepNumber}>2</div>
+                <h3>Design & Specifications</h3>
+                <p>Materials, dimensions, finishes, and compliance considerations are aligned before production.</p>
+              </div>
+              <div className={styles.processStep}>
+                <div className={styles.stepNumber}>3</div>
+                <h3>Manufacturing & Quality Review</h3>
+                <p>Production is managed with a focus on consistency and project readiness.</p>
+              </div>
+              <div className={styles.processStep}>
+                <div className={styles.stepNumber}>4</div>
+                <h3>Delivery & Installation Coordination</h3>
+                <p>We support smooth delivery and on-site coordination to meet project schedules.</p>
+              </div>
             </div>
           </div>
         </section>
-        
+
+        <div className={styles.decorativeLine}></div>
+
+        {/* Our Manufacturing Approach Section */}
+        <section className={`${styles.section} ${styles.sectionDark}`}>
+          <div className={styles.sectionContent}>
+            <h2 className={styles.sectionTitle}>Our Manufacturing Approach</h2>
+            <p className={styles.paragraph}>
+              Commercial projects often require a balance between efficiency, quality, and schedule reliability. To support this, we operate with a hybrid manufacturing and sourcing model that combines domestic production capabilities with an established overseas supply chain.
+            </p>
+            <p className={styles.paragraph}>
+              Domestic manufacturing allows us to support projects that require shorter lead times, revisions, or phased deliveries. It also provides closer oversight during prototyping, quality checks, and final adjustments.
+            </p>
+            <p className={styles.paragraph}>
+              Overseas manufacturing and sourcing enables scalable production and material flexibility for larger-volume programs, while maintaining consistent specifications and finish standards.
+            </p>
+            <p className={styles.paragraph}>
+              By aligning both capabilities under one coordinated process, we help clients reduce risk, manage timelines more effectively, and adapt to real-world project changes without disruption.
+            </p>
+            
+            <p className={styles.paragraph}><strong>This approach helps our clients by:</strong></p>
+            <ul className={styles.checkList}>
+              <li className={styles.checkItem}>Reducing dependency on a single production source</li>
+              <li className={styles.checkItem}>Allowing flexibility when project scope or timelines evolve</li>
+              <li className={styles.checkItem}>Supporting consistent quality across phases and locations</li>
+              <li className={styles.checkItem}>Balancing cost considerations with execution reliability</li>
+            </ul>
+          </div>
+        </section>
+
         <div className={styles.decorativeLine}></div>
         
         {/* Who We Serve Section */}
-        <section className={`${styles.section} ${styles.sectionDark}`}>
+        <section className={`${styles.section} ${styles.sectionLight}`}>
           <div className={styles.sectionContent}>
             <h2 className={styles.sectionTitle}>Who We Serve</h2>
             <p className={styles.paragraph}>
-              We're proud to work with:
+              We work with clients across a range of commercial environments, including:
             </p>
             <ul className={styles.list}>
-              <li className={styles.listItem}>Hospitality groups</li>
-              <li className={styles.listItem}>Interior design firms</li>
-              <li className={styles.listItem}>Commercial real estate developers</li>
-              <li className={styles.listItem}>Homeowners with a passion for great design</li>
+              <li className={styles.listItem}>Hotels & Motels</li>
+              <li className={styles.listItem}>Multi-family and Residential Developments</li>
+              <li className={styles.listItem}>Restaurants & Cafés</li>
+              <li className={styles.listItem}>Corporate and Office Spaces</li>
+              <li className={styles.listItem}>Educational and Healthcare-adjacent Facilities</li>
             </ul>
             <p className={styles.paragraph}>
-              Each partnership is built on trust, collaboration, and a shared vision for quality.
+              Each category brings unique requirements, and our approach adapts accordingly.
             </p>
-            <div>
+          </div>
+        </section>
+
+        <div className={styles.decorativeLine}></div>
+
+        {/* What Sets Us Apart Section */}
+        <section className={`${styles.section} ${styles.sectionDark}`}>
+          <div className={styles.sectionContent}>
+            <h2 className={styles.sectionTitle}>What Sets Us Apart</h2>
+            <ul className={styles.checkList}>
+              <li className={styles.checkItem}>Project-focused approach rather than one-size-fits-all solutions</li>
+              <li className={styles.checkItem}>Practical customization without unnecessary complexity</li>
+              <li className={styles.checkItem}>Clear communication and scope alignment</li>
+              <li className={styles.checkItem}>Experience supporting renovation and repeat-project cycles</li>
+              <li className={styles.checkItem}>Designs developed with durability and long-term use in mind</li>
+            </ul>
+          </div>
+        </section>
+
+        <div className={styles.decorativeLine}></div>
+
+        {/* Our Commitment Section */}
+        <section className={`${styles.section} ${styles.sectionLight}`}>
+          <div className={styles.sectionContent}>
+            <h2 className={styles.sectionTitle}>Our Commitment</h2>
+            <p className={styles.paragraph}>
+              We are committed to delivering furniture solutions that balance design intent, functionality, and execution reliability.
+            </p>
+            <p className={styles.paragraph}><strong>Our work is guided by:</strong></p>
+            <div className={styles.valuesGrid}>
+              <div className={styles.valueItem}>Quality craftsmanship</div>
+              <div className={styles.valueItem}>Transparent communication</div>
+              <div className={styles.valueItem}>Respect for timelines and budgets</div>
+              <div className={styles.valueItem}>Long-term client relationships</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className={`${styles.section} ${styles.ctaSection}`}>
+          <div className={styles.sectionContent}>
+            <h2 className={styles.ctaTitle}>Have a project in mind?</h2>
+            <p className={styles.ctaText}>
+              We welcome the opportunity to discuss your requirements and explore the right furniture solution for your space.
+            </p>
+            <div className={styles.ctaButtonWrapper}>
               <Link 
-                to="/testimonials"
-                className={`${styles.button} ${styles.secondaryButton}`}
+                to="/contact"
+                className={`${styles.button} ${styles.primaryButton}`}
               >
-                Read Our Testimonials
+                Request a Consultation
               </Link>
             </div>
           </div>
