@@ -241,70 +241,9 @@ app.post('/api/verify-otp', async (req, res) => {
     return res.status(400).json({ success: false, error: 'Invalid code. Please check and try again.' });
   }
 
-  const { payload } = entry;
+  // Verification successful
   otpStore.delete(emailLower); // one-time use
-
-  const html = `
-    <h2>${payload.subject}</h2>
-    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
-      <tr><th align="left">Name</th><td>${escapeHtml(payload.name)}</td></tr>
-      <tr><th align="left">Company</th><td>${escapeHtml(payload.company)}</td></tr>
-      <tr><th align="left">Email</th><td>${escapeHtml(payload.email)}</td></tr>
-      <tr><th align="left">Phone</th><td>${escapeHtml(payload.phone)}</td></tr>
-      <tr><th align="left">Project Category</th><td>${escapeHtml(payload.project)}</td></tr>
-
-      ${payload.roomCount ? `<tr><th align="left">Room Count</th><td>${escapeHtml(payload.roomCount)}</td></tr>` : ''}
-      ${payload.roomTypes && payload.roomTypes.length ? `<tr><th align="left">Room Types</th><td>${escapeHtml(Array.isArray(payload.roomTypes) ? payload.roomTypes.join(', ') : payload.roomTypes)}</td></tr>` : ''}
-      ${payload.projectScope ? `<tr><th align="left">Project Scope</th><td>${escapeHtml(payload.projectScope)}</td></tr>` : ''}
-      
-      ${payload.seatingCapacity ? `<tr><th align="left">Seating Capacity</th><td>${escapeHtml(payload.seatingCapacity)}</td></tr>` : ''}
-      ${payload.furnitureNeeded && payload.furnitureNeeded.length ? `<tr><th align="left">Furniture Needed</th><td>${escapeHtml(Array.isArray(payload.furnitureNeeded) ? payload.furnitureNeeded.join(', ') : payload.furnitureNeeded)}</td></tr>` : ''}
-      ${payload.restaurantType ? `<tr><th align="left">Restaurant Type</th><td>${escapeHtml(payload.restaurantType)}</td></tr>` : ''}
-      
-      ${payload.spaceType && payload.spaceType.length ? `<tr><th align="left">Space Type</th><td>${escapeHtml(Array.isArray(payload.spaceType) ? payload.spaceType.join(', ') : payload.spaceType)}</td></tr>` : ''}
-      ${payload.teamSize ? `<tr><th align="left">Team Size</th><td>${escapeHtml(payload.teamSize)}</td></tr>` : ''}
-      ${payload.areaType && payload.areaType.length ? `<tr><th align="left">Area Type</th><td>${escapeHtml(Array.isArray(payload.areaType) ? payload.areaType.join(', ') : payload.areaType)}</td></tr>` : ''}
-
-      <tr><th align="left">Message</th><td>${escapeHtml(payload.message)}</td></tr>
-    </table>
-  `;
-  const text = `
-${payload.subject}
-Name: ${payload.name}
-Company: ${payload.company}
-Email: ${payload.email}
-Phone: ${payload.phone}
-Project: ${payload.project}
-
-${payload.roomCount ? `Room Count: ${payload.roomCount}` : ''}
-${payload.roomTypes ? `Room Types: ${Array.isArray(payload.roomTypes) ? payload.roomTypes.join(', ') : payload.roomTypes}` : ''}
-${payload.projectScope ? `Project Scope: ${payload.projectScope}` : ''}
-
-${payload.seatingCapacity ? `Seating Capacity: ${payload.seatingCapacity}` : ''}
-${payload.furnitureNeeded ? `Furniture Needed: ${Array.isArray(payload.furnitureNeeded) ? payload.furnitureNeeded.join(', ') : payload.furnitureNeeded}` : ''}
-${payload.restaurantType ? `Restaurant Type: ${payload.restaurantType}` : ''}
-
-${payload.spaceType ? `Space Type: ${Array.isArray(payload.spaceType) ? payload.spaceType.join(', ') : payload.spaceType}` : ''}
-${payload.teamSize ? `Team Size: ${payload.teamSize}` : ''}
-${payload.areaType ? `Area Type: ${Array.isArray(payload.areaType) ? payload.areaType.join(', ') : payload.areaType}` : ''}
-
-Message: ${payload.message}
-  `.replace(/^\s*[\r\n]/gm, '');
-
-  try {
-    await transporter.sendMail({
-      from: mailFrom,
-      to: mailTo,
-      subject: payload.subject,
-      text,
-      html,
-      replyTo: payload.email || undefined,
-    });
-    res.json({ success: true });
-  } catch (err) {
-    const hint = getSmtpHint(err);
-    res.status(500).json({ success: false, error: 'Email send failed', details: err.message, code: err.code, response: err.response, hint });
-  }
+  res.json({ success: true });
 });
 
 app.get('/health', (_req, res) => {
