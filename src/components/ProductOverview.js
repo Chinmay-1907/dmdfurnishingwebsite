@@ -59,23 +59,32 @@ const ProductOverview = () => {
       </header>
       
       <div className={styles.grid}>
-        {CATEGORIES.map((category) => (
-          <Link 
-            key={category.id} 
-            to={`/products/${toCatalogSlug(category.id)}`}
-            className={styles.card}
-          >
-            <div 
-              className={styles.cardImage} 
-              style={{ backgroundImage: `url("${encodeURI(category.image)}")` }}
-            />
-            <div className={styles.cardContent}>
-              <h2 className={styles.cardTitle}>{category.title}</h2>
-              <p className={styles.cardDescription}>{category.description}</p>
-              <span className={styles.ctaButton}>View Collection</span>
-            </div>
-          </Link>
-        ))}
+        {CATEGORIES.map((category) => {
+          // Map category IDs to the requested anchor IDs
+          let anchorId = category.id;
+          if (category.id === 'educational-facilities') anchorId = 'education';
+          if (category.id === 'hospital') anchorId = 'healthcare';
+          
+          return (
+            <Link 
+              key={category.id} 
+              id={anchorId}
+              to={`/products/${toCatalogSlug(category.id)}`}
+              className={styles.card}
+              style={{ scrollMarginTop: '120px' }}
+            >
+              <div 
+                className={styles.cardImage} 
+                style={{ backgroundImage: `url("${encodeURI(category.image)}")` }}
+              />
+              <div className={styles.cardContent}>
+                <h2 className={styles.cardTitle}>{category.title}</h2>
+                <p className={styles.cardDescription}>{category.description}</p>
+                <span className={styles.ctaButton}>View Collection</span>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

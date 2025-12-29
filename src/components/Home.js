@@ -121,30 +121,30 @@ function Home() {
           </div>
           
           <div className="segments-grid">
-            <div className="segment-card" data-aos="fade-up">
+            <Link to="/products#hotel" className="segment-card" data-aos="fade-up" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaHotel className="segment-icon" /></div>
               <h3>Hotels & Motels</h3>
-            </div>
-            <div className="segment-card" data-aos="fade-up" data-aos-delay="100">
+            </Link>
+            <Link to="/products#restaurant" className="segment-card" data-aos="fade-up" data-aos-delay="100" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaUtensils className="segment-icon" /></div>
               <h3>Restaurants & Cafés</h3>
-            </div>
-            <div className="segment-card" data-aos="fade-up" data-aos-delay="200">
+            </Link>
+            <Link to="/products#office" className="segment-card" data-aos="fade-up" data-aos-delay="200" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaBuilding className="segment-icon" /></div>
               <h3>Corporate Offices & Workspaces</h3>
-            </div>
-            <div className="segment-card" data-aos="fade-up" data-aos-delay="300">
+            </Link>
+            <Link to="/products#hotel" className="segment-card" data-aos="fade-up" data-aos-delay="300" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaTools className="segment-icon" /></div>
               <h3>Franchise Renovation Projects</h3>
-            </div>
-             <div className="segment-card" data-aos="fade-up" data-aos-delay="400">
+            </Link>
+             <Link to="/products#education" className="segment-card" data-aos="fade-up" data-aos-delay="400" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaGraduationCap className="segment-icon" /></div>
               <h3>Universities & Educational Facilities</h3>
-            </div>
-             <div className="segment-card" data-aos="fade-up" data-aos-delay="500">
+            </Link>
+             <Link to="/products#healthcare" className="segment-card" data-aos="fade-up" data-aos-delay="500" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaHospital className="segment-icon" /></div>
               <h3>Healthcare & Institutional Environments</h3>
-            </div>
+            </Link>
           </div>
           
           <div className="section-note" data-aos="fade-up" data-aos-delay="600">
