@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
+﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
 
 /* Main container */
 .product-gallery-container {
@@ -148,7 +148,7 @@
 .lightbox-next {
   background: rgba(15, 18, 24, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #ffffff;
+  color: var(--text-on-dark);
   font-size: 40px;
   width: 54px;
   height: 54px;

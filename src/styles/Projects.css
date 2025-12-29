@@ -1,4 +1,4 @@
-﻿.projects-container {
+.projects-container {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -110,7 +110,7 @@
 
 .view-project:hover {
   background-color: #d4af37;
-  color: white;
+  color: #1a1a1a;
 }
 
 .project-loading,
@@ -163,7 +163,7 @@
 .category-button.active,
 .category-button:hover {
   background-color: #d4af37;
-  color: white;
+  color: #1a1a1a;
   border-color: #d4af37;
 }
 
@@ -171,7 +171,7 @@
   padding: 80px 20px;
   text-align: center;
   background-color: var(--color-surface-inverse);
-  color: white;
+  color: var(--text-on-dark);
 }
 
 .project-cta h2 {
@@ -190,7 +190,7 @@
 
 .cta-button {
   background-color: #d4af37;
-  color: white;
+  color: #1a1a1a;
   border: none;
   padding: 15px 30px;
   font-size: 1.1rem;

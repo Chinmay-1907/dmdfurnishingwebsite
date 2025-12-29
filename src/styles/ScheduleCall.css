@@ -52,7 +52,7 @@
 
 .btn-primary {
   background-color: var(--color-gold);
-  color: #fff;
+  color: #1a1a1a; /* Dark text for contrast on gold */
   border: 2px solid var(--color-gold);
 }
 
@@ -151,14 +151,14 @@
 
 /* Booking Section */
 .booking-section {
-  background-color: #f9f9f9;
+  background-color: var(--color-surface-elevated);
   padding: 60px 40px;
   border-radius: 8px;
   text-align: center;
 }
 
-body.dark-mode .booking-section {
-  background-color: #1e1e1e;
+:root[data-theme='dark'] .booking-section {
+  background-color: var(--color-surface-elevated);
 }
 
 .booking-intro {
@@ -168,17 +168,17 @@ body.dark-mode .booking-section {
 
 .calendar-embed-container {
   min-height: 400px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-body.dark-mode .calendar-embed-container {
-  background: #2a2a2a;
-  border-color: #444;
+:root[data-theme='dark'] .calendar-embed-container {
+  background: var(--color-surface);
+  border-color: var(--color-border);
 }
 
 .calendar-fallback {

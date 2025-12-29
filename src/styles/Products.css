@@ -215,7 +215,7 @@
   font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: var(--text-on-dark);
 }
 
 .custom-solutions p {

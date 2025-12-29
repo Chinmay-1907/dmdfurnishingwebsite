@@ -373,7 +373,7 @@
 
 .learn-more:hover {
   background-color: #d4af37;
-  color: white;
+  color: #1a1a1a;
 }
 
 .process-section {
@@ -575,7 +575,7 @@
 
 .cta-button {
   background-color: #d4af37;
-  color: white;
+  color: #1a1a1a;
   border: none;
   display: inline-flex;
   align-items: center;

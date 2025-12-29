@@ -28,7 +28,7 @@
   pointer-events: none;
 }
 
-body.dark-mode .scroll-progress-label {
+:root[data-theme='dark'] .scroll-progress-label {
   background: rgba(18, 22, 29, 0.85);
   border-color: rgba(168, 178, 197, 0.24);
   color: #d6dae2;

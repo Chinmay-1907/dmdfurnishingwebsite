@@ -207,9 +207,9 @@ function Home() {
       </section>
 
       {/* 5. How It Works */}
-      <section className="section process-section bg-dark text-light">
+      <section className="section process-section">
          <div className="container">
-            <h2 className="section-title text-center text-white" data-aos="fade-up">A Clear, Proven Process</h2>
+            <h2 className="section-title text-center" data-aos="fade-up">A Clear, Proven Process</h2>
             <div className="process-steps">
                <div className="step" data-aos="fade-up" data-aos-delay="100">
                   <span className="step-number">01</span>

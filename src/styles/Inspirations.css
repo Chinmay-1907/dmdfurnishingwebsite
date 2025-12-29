@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  color: white;
+  color: var(--text-on-dark);
 }
 
 .inspiration-detail-overlay {
@@ -307,7 +307,7 @@
 }
 
 .inspiration-category {
-  color: white;
+  color: var(--text-on-gold);
   background-color: #d4af37;
   padding: 5px 10px;
   font-size: 0.8rem;
@@ -589,8 +589,9 @@
 .cta-button {
   padding: 12px 18px;
   text-decoration: none;
-  color: #fff;
-  background: #111827;
+  background-color: #d4af37;
+  color: #1a1a1a;
+  border: none;
 }
 
 .cta-button.primary {

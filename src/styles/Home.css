@@ -15,11 +15,6 @@
   background-color: var(--color-surface);
 }
 
-.bg-dark {
-  background-color: #1a1d23;
-  color: #fff;
-}
-
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -34,8 +29,8 @@
 .gap-4 { gap: 1.5rem; }
 
 .text-gold { color: var(--color-gold); }
-.text-muted { color: var(--color-text-secondary); }
-.text-muted-light { color: rgba(255,255,255,0.6); }
+.text-muted { color: var(--text-secondary); }
+.text-muted-light { color: var(--text-muted); }
 
 .font-medium { font-weight: 500; }
 
@@ -357,21 +352,22 @@
   display: inline-block;
   font-family: var(--font-serif);
   font-size: 3rem;
-  color: rgba(255,255,255,0.15);
+  color: var(--text-muted);
+  opacity: 0.2;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .step h4 {
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--heading-color);
   margin: 0;
 }
 
 .step-divider {
   width: 100px;
   height: 1px;
-  background: rgba(255,255,255,0.2);
+  background: var(--color-border);
   margin-top: 30px;
 }
 

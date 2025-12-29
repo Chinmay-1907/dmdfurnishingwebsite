@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  color: #ffffff;
+  color: var(--text-on-dark);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
 }
@@ -307,7 +307,7 @@
 }
 
 .contact-button:hover {
-  color: white;
+  color: #1a1a1a;
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(212, 175, 55, 0.25);
 }

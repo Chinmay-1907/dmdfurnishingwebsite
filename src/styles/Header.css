@@ -13,7 +13,7 @@
   transition: height var(--transition-base), background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-body.dark-mode .site-header {
+:root[data-theme='dark'] .site-header {
   background: rgba(18, 22, 29, 0.92);
   border-bottom: 1px solid rgba(168, 178, 197, 0.18);
 }

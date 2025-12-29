@@ -44,8 +44,15 @@ function App() {
 
   useEffect(() => {
     if (typeof document !== 'undefined') {
-      document.body.classList.toggle('dark-mode', theme === 'dark');
-      document.body.dataset.theme = theme;
+      const root = document.documentElement;
+      root.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        root.classList.add('dark-mode');
+        document.body.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+        document.body.classList.remove('dark-mode');
+      }
     }
     if (typeof window !== 'undefined') {
       try {
