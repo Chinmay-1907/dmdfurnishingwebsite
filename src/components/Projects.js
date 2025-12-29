@@ -88,10 +88,9 @@ function Projects() {
   return (
     <div className="projects-container">
        <section ref={heroRef} className={styles.heroSection} style={{
-        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundColor: 'var(--color-surface-inverse)',
+        backgroundImage: 'none',
+        minHeight: '40vh'
       }}>
         
         <div className={styles.heroContent}>
