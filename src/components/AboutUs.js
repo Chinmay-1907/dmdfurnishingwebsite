@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/AboutUs.module.css';
+import SEO from './SEO';
 
 // Header image
 const HERO_IMAGE_URL = '/images/About_DMD_Furnishing_Page.jpg';
@@ -12,6 +13,11 @@ const AboutUs = () => {
 
   return (
     <div className={styles.aboutContainer}>
+      <SEO 
+        title="About Us | Commercial Furniture Manufacturing" 
+        description="DMD Furnishing provides custom commercial furniture and FF&E solutions for hotels, restaurants, and institutional spaces. Learn about our story, process, and commitment to quality."
+        canonical="https://dmdfurnishing.com/about"
+      />
       {/* Hero Section */}
       <section
         className={styles.heroSection}
@@ -148,11 +154,21 @@ const AboutUs = () => {
               We work with clients across a range of commercial environments, including:
             </p>
             <ul className={styles.list}>
-              <li className={styles.listItem}>Hotels & Motels</li>
-              <li className={styles.listItem}>Multi-family and Residential Developments</li>
-              <li className={styles.listItem}>Restaurants & Cafés</li>
-              <li className={styles.listItem}>Corporate and Office Spaces</li>
-              <li className={styles.listItem}>Educational and Healthcare-adjacent Facilities</li>
+              <li className={styles.listItem}>
+                <Link to="/products/hotel">Hotels & Motels</Link>
+              </li>
+              <li className={styles.listItem}>
+                <Link to="/products/hotel">Multi-family and Residential Developments</Link>
+              </li>
+              <li className={styles.listItem}>
+                <Link to="/products/restaurant">Restaurants & Cafés</Link>
+              </li>
+              <li className={styles.listItem}>
+                <Link to="/products/corporate">Corporate and Office Spaces</Link>
+              </li>
+              <li className={styles.listItem}>
+                <Link to="/products/university">Educational</Link> and <Link to="/products/healthcare">Healthcare-adjacent Facilities</Link>
+              </li>
             </ul>
             <p className={styles.paragraph}>
               Each category brings unique requirements, and our approach adapts accordingly.

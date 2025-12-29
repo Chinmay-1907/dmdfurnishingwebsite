@@ -71,7 +71,7 @@
   background-size: cover; /* default for category tiles */
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #ffffff; /* Prevent dark letterboxing */
+  background-color: var(--color-surface-elevated); /* Prevent dark letterboxing */
   position: relative;
 }
 
@@ -308,7 +308,7 @@
 .product-categories .category-image.place-school {
   background-size: contain !important;
   background-position: center top;
-  background-color: #ffffff;
+  background-color: var(--color-surface-elevated);
 }
 
 /* Keep deeper layers unchanged: default to contain to avoid cropping */

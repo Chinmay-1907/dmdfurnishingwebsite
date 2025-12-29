@@ -10,7 +10,7 @@
   /* background image set inline in component */
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: var(--text-on-dark);
   text-align: center;
   padding: 120px 20px;
   margin-bottom: 60px;
@@ -63,12 +63,12 @@
 
 .btn-secondary {
   background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+  color: var(--text-on-dark);
+  border: 2px solid var(--text-on-dark);
 }
 
 .btn-secondary:hover {
-  background-color: #fff;
+  background-color: var(--color-surface-elevated);
   color: var(--color-text);
 }
 

@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import SEO from './SEO';
 import '../styles/Contact.css';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaCheckCircle, FaLock } from 'react-icons/fa';
 import styles from '../styles/AboutUs.module.css';
@@ -23,7 +24,6 @@ function Contact() {
   const [step, setStep] = useState('email'); // 'email' | 'otp' | 'details' | 'success'
   const [submitStatus, setSubmitStatus] = useState('idle'); // 'idle' | 'sending' | 'error' | 'success'
   const [errorMessage, setErrorMessage] = useState('');
-  const [resendCount, setResendCount] = useState(0);
   
   // Form Data State
   const [email, setEmail] = useState('');
@@ -56,12 +56,10 @@ function Contact() {
   }, [location.state]);
 
   // Recaptcha setup
-  const [recaptchaReady, setRecaptchaReady] = useState(false);
   useEffect(() => {
     if (!RECAPTCHA_SITE_KEY) return;
     const existing = document.querySelector('script[data-recaptcha="v3"]');
     if (existing) {
-      setRecaptchaReady(true);
       return;
     }
     const s = document.createElement('script');
@@ -69,8 +67,6 @@ function Contact() {
     s.async = true;
     s.defer = true;
     s.setAttribute('data-recaptcha', 'v3');
-    s.onload = () => setRecaptchaReady(true);
-    s.onerror = () => setRecaptchaReady(false);
     document.head.appendChild(s);
   }, []);
 
@@ -396,6 +392,11 @@ function Contact() {
 
   return (
     <div className="contact-container">
+      <SEO 
+        title="Contact Us | Request a Consultation" 
+        description="Get in touch with DMD Furnishing for commercial furniture inquiries. Request a consultation for your hotel, restaurant, or institutional project."
+        canonical="https://dmdfurnishing.com/contact"
+      />
       <section className={styles.heroSection} style={{
         background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("/Images/Contact_Page.jpg")',
         backgroundSize: 'cover',

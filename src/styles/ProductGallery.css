@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ProductGallery.css - Styles for the premium interactive product gallery */
 
 /* Main container */
 .product-gallery-container {
@@ -128,7 +128,7 @@
   right: 0;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-on-dark);
   font-size: 30px;
   cursor: pointer;
 }

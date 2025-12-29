@@ -2,9 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import '../styles/Products.css';
 import { normalizeCatalogImagePath, toCatalogSlug, idsMatch } from '../utils/catalogPaths';
-// SEO: centralized helpers for meta and JSON-LD
-import { setPageSEO, setBreadcrumbJsonLd } from '../utils/seo';
+import SEO from './SEO';
 import ProductOverview from './ProductOverview';
+
+const CATEGORY_DESCRIPTIONS = {
+  hotel: 'Commercial-grade hotel furniture manufacturing and installation for guestrooms, suites, and public spaces.',
+  restaurant: 'Durable restaurant seating, tables, and fixtures designed for high-traffic dining environments.',
+  corporate: 'Office furniture solutions for modern workspaces, meeting areas, and reception environments.',
+  franchise: 'Standardized furniture programs and rollout coordination for franchise renovation projects.',
+  university: 'Functional furniture for student housing, libraries, and campus facilities.',
+  healthcare: 'Non-clinical institutional furniture built for durability and daily use.'
+};
 
 function Products() {
   const CUSTOM_FURNITURE_IMAGE_URL = '/Images/Tailored_Guestroom_Collections.jpg';
@@ -313,71 +321,55 @@ function Products() {
   }, [catalog, institutionId, furnitureTypeId, subcategoryId]);
 
   // SEO: Update page-level metadata based on current selection/context
+  const [seoData, setSeoData] = useState({
+    title: 'Products | DMD Furnishing',
+    description: 'Browse DMD Furnishing products by space, type, and category.',
+    canonical: 'https://dmdfurnishing.com/products'
+  });
+
   useEffect(() => {
     if (!catalog.length) return;
 
-    const originTitle = 'DMD Furnishing';
-    const baseTitle = 'Products';
     const baseDesc = 'Browse DMD Furnishing products by space, type, and category.';
 
     // No selection: products root
     if (selectedPlaceIndex === null) {
-      setPageSEO({
-        title: `Products by Market | ${originTitle}`,
+      setSeoData({
+        title: `Products by Market`,
         description: baseDesc,
-        canonicalPath: '/products',
-        image: undefined,
-        type: 'website'
+        canonical: 'https://dmdfurnishing.com/products'
       });
-      setBreadcrumbJsonLd([
-        { name: 'Home', path: '/' },
-        { name: 'Products by Market', path: '/products' }
-      ]);
       return;
     }
 
     const place = catalog[selectedPlaceIndex];
     if (!place) return;
 
+    const placeSlug = toCatalogSlug(place.id);
+    const placeDesc = CATEGORY_DESCRIPTIONS[place.id] || place.description || baseDesc;
+
     // Place selected only
     if (selectedFurnitureTypeIndex === null) {
-      const placeSlug = toCatalogSlug(place.id);
-      setPageSEO({
-        title: `Browse ${place.name} Furniture | ${originTitle}`,
-        description: place.description || baseDesc,
-        canonicalPath: `/products/${placeSlug}`,
-        image: place.image,
-        type: 'website'
+      setSeoData({
+        title: `${place.name} Furniture Manufacturing`,
+        description: placeDesc,
+        canonical: `https://dmdfurnishing.com/products/${placeSlug}`
       });
-      setBreadcrumbJsonLd([
-        { name: 'Home', path: '/' },
-        { name: 'Products', path: '/products' },
-        { name: place.name, path: `/products/${placeSlug}` }
-      ]);
       return;
     }
 
     const furniture = place.furnitureTypes[selectedFurnitureTypeIndex];
     if (!furniture) return;
 
-    const placeSlug = toCatalogSlug(place.id);
     const furnitureSlug = toCatalogSlug(furniture.id);
 
     // Furniture type selected only
     if (selectedSubcategoryIndex === null) {
-      setPageSEO({
-        title: `Browse ${furniture.name} in ${place.name} | ${originTitle}`,
-        description: furniture.description || baseDesc,
-        canonicalPath: `/products/${placeSlug}/${furnitureSlug}`,
-        image: furniture.image,
-        type: 'website'
+      setSeoData({
+        title: `${furniture.name} for ${place.name}`,
+        description: furniture.description || `Custom ${furniture.name} solutions for ${place.name} environments.`,
+        canonical: `https://dmdfurnishing.com/products/${placeSlug}/${furnitureSlug}`
       });
-      setBreadcrumbJsonLd([
-        { name: 'Home', path: '/' },
-        { name: 'Products', path: '/products' },
-        { name: place.name, path: `/products/${placeSlug}` },
-        { name: furniture.name, path: `/products/${placeSlug}/${furnitureSlug}` }
-      ]);
       return;
     }
 
@@ -387,60 +379,12 @@ function Products() {
     const subcategorySlug = toCatalogSlug(subcategory.id);
 
     // Subcategory listing
-    setPageSEO({
-      title: `Browse ${subcategory.name} – ${furniture.name} in ${place.name} | ${originTitle}`,
-      description: subcategory.description || baseDesc,
-      canonicalPath: `/products/${placeSlug}/${furnitureSlug}/${subcategorySlug}`,
-      image: subcategory.image,
-      type: 'website'
+    setSeoData({
+      title: `${subcategory.name} – ${furniture.name}`,
+      description: subcategory.description || `High-quality ${subcategory.name} for ${place.name} projects.`,
+      canonical: `https://dmdfurnishing.com/products/${placeSlug}/${furnitureSlug}/${subcategorySlug}`
     });
-    setBreadcrumbJsonLd([
-      { name: 'Home', path: '/' },
-      { name: 'Products', path: '/products' },
-      { name: place.name, path: `/products/${placeSlug}` },
-      { name: furniture.name, path: `/products/${placeSlug}/${furnitureSlug}` },
-      { name: subcategory.name, path: `/products/${placeSlug}/${furnitureSlug}/${subcategorySlug}` }
-    ]);
   }, [catalog, selectedPlaceIndex, selectedFurnitureTypeIndex, selectedSubcategoryIndex]);
-
-  // Handle place selection
-  const handlePlaceSelect = (index) => {
-    const place = catalog[index];
-    navigate(`/products/${toCatalogSlug(place.id)}`);
-  };
-
-  // Handle furniture type selection
-  const handleFurnitureTypeSelect = (index) => {
-    const place = catalog[selectedPlaceIndex];
-    const furnitureType = place.furnitureTypes[index];
-    navigate(`/products/${toCatalogSlug(place.id)}/${toCatalogSlug(furnitureType.id)}`);
-  };
-
-  // Handle subcategory selection
-  const handleSubcategorySelect = (index) => {
-    const place = catalog[selectedPlaceIndex];
-    const furnitureType = place.furnitureTypes[selectedFurnitureTypeIndex];
-    const subcategory = furnitureType.subcategories[index];
-    navigate(`/products/${toCatalogSlug(place.id)}/${toCatalogSlug(furnitureType.id)}/${toCatalogSlug(subcategory.id)}`);
-  };
-
-  // Go back to places
-  const handleBackToPlaces = () => {
-    setSelectedPlaceIndex(null);
-    setSelectedFurnitureTypeIndex(null);
-    setSelectedSubcategoryIndex(null);
-  };
-
-  // Go back to furniture types
-  const handleBackToFurnitureTypes = () => {
-    setSelectedFurnitureTypeIndex(null);
-    setSelectedSubcategoryIndex(null);
-  };
-
-  // Go back to subcategories
-  const handleBackToSubcategories = () => {
-    setSelectedSubcategoryIndex(null);
-  };
 
   // Render content based on state
   const renderContent = () => {
@@ -581,6 +525,7 @@ function Products() {
 
   return (
     <div className="products-container">
+      <SEO {...seoData} />
 
       {renderContent()}
 

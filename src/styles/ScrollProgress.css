@@ -44,7 +44,7 @@
   pointer-events: auto;
   cursor: pointer;
   mix-blend-mode: difference;
-  color: #ffffff;
+  color: var(--text-on-dark);
   transition: transform 0.2s ease;
 }
 

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Services.css';
+import SEO from './SEO';
 import { setPageSEO } from '../utils/seo';
 
 // Process Steps Data
@@ -122,6 +123,13 @@ function Services() {
 
   return (
     <div className="services-container">
+      <SEO 
+        title="End-to-End Furniture Services"
+        description="Comprehensive furniture services including design consultation, custom manufacturing, FF&E project management, and installation support for hospitality and commercial spaces."
+        canonical="https://dmdfurnishing.com/services"
+      />
+      
+      {/* Hero Section */}
       <section className="services-hero">
         <div className="services-hero-inner">
           <span className="hero-tag">Furniture Services</span>
@@ -155,6 +163,9 @@ function Services() {
                 {industry}
               </span>
             ))}
+          </div>
+          <div className="col-image" data-aos="fade-left">
+            <img src="/Images/Our Services.jpg" alt="DMD Furnishing commercial furniture manufacturing and project capabilities" className="rounded-image shadow-lift" />
           </div>
         </div>
       </section>

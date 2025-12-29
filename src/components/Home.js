@@ -8,6 +8,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaHotel, FaUtensils, FaBuilding, FaTools, FaGraduationCap, FaHospital } from 'react-icons/fa';
 import { FiCheck } from 'react-icons/fi';
+import SEO from './SEO';
 
 function Home() {
   useEffect(() => {
@@ -72,21 +73,57 @@ function Home() {
 
   // Hero Background Images
   const heroImages = [
-    '/Images/Tailored_Guestroom_Collections.jpg',
-    '/Images/Elevated_Restaurant_Seating.jpg',
-    '/Images/Modern_Social_Lounges.jpg',
-    '/images/Outdoor.jpg'
+    { src: '/Images/Tailored_Guestroom_Collections.jpg', alt: 'Tailored hotel guestroom furniture collection' },
+    { src: '/Images/Elevated_Restaurant_Seating.jpg', alt: 'Elevated restaurant seating and dining furniture' },
+    { src: '/Images/Modern_Social_Lounges.jpg', alt: 'Modern social lounge furniture for hotels' },
+    { src: '/images/Outdoor.jpg', alt: 'Durable outdoor hospitality furniture' }
   ];
+
+  const pageDescription = 'Custom furniture solutions for hotels, restaurants, offices, and institutional spaces. Designed, manufactured, and installed with precision.';
+
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DMD Furnishing",
+    "url": "https://dmdfurnishing.com",
+    "logo": "https://dmdfurnishing.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-617-223-7781",
+      "contactType": "sales",
+      "email": "Sales@DMDFurnishing.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "56 Leonard St Unit 5",
+      "addressLocality": "Foxboro",
+      "addressRegion": "MA",
+      "postalCode": "02035",
+      "addressCountry": "US"
+    }
+  };
 
   return (
     <div className="home-container">
+      <SEO 
+        title="Custom Hospitality Furniture & FF&E Solutions" 
+        description={pageDescription}
+        canonical="https://dmdfurnishing.com/"
+        type="website"
+      />
+      <SEO 
+        title="Custom Hospitality Furniture & FF&E Solutions"
+        description="Custom furniture solutions for hotels, restaurants, offices, and institutional spaces. Designed, manufactured, and installed with precision."
+        canonical="https://dmdfurnishing.com/"
+        schema={orgSchema}
+      />
       {/* 1. Hero Section */}
       <section className="hero-section">
         <Slider {...sliderSettings} className="hero-slider">
           {heroImages.map((img, index) => (
             <div key={index} className="hero-slide">
                <div className="slide-image-wrapper">
-                  <img src={img} alt={`Hospitality Furniture ${index + 1}`} className="slide-image" />
+                  <img src={img.src} alt={img.alt} className="slide-image" />
                </div>
             </div>
           ))}
@@ -121,27 +158,27 @@ function Home() {
           </div>
           
           <div className="segments-grid">
-            <Link to="/products#hotel" className="segment-card" data-aos="fade-up" style={{ textDecoration: 'none' }}>
+            <Link to="/products/hotels-motels" className="segment-card" data-aos="fade-up" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaHotel className="segment-icon" /></div>
               <h3>Hotels & Motels</h3>
             </Link>
-            <Link to="/products#restaurant" className="segment-card" data-aos="fade-up" data-aos-delay="100" style={{ textDecoration: 'none' }}>
+            <Link to="/products/restaurants-cafes" className="segment-card" data-aos="fade-up" data-aos-delay="100" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaUtensils className="segment-icon" /></div>
               <h3>Restaurants & Cafés</h3>
             </Link>
-            <Link to="/products#office" className="segment-card" data-aos="fade-up" data-aos-delay="200" style={{ textDecoration: 'none' }}>
+            <Link to="/products/office-corporate-spaces" className="segment-card" data-aos="fade-up" data-aos-delay="200" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaBuilding className="segment-icon" /></div>
               <h3>Corporate Offices & Workspaces</h3>
             </Link>
-            <Link to="/products#hotel" className="segment-card" data-aos="fade-up" data-aos-delay="300" style={{ textDecoration: 'none' }}>
+            <Link to="/products/hotels-motels" className="segment-card" data-aos="fade-up" data-aos-delay="300" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaTools className="segment-icon" /></div>
               <h3>Franchise Renovation Projects</h3>
             </Link>
-             <Link to="/products#education" className="segment-card" data-aos="fade-up" data-aos-delay="400" style={{ textDecoration: 'none' }}>
+             <Link to="/products/educational-facilities" className="segment-card" data-aos="fade-up" data-aos-delay="400" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaGraduationCap className="segment-icon" /></div>
               <h3>Universities & Educational Facilities</h3>
             </Link>
-             <Link to="/products#healthcare" className="segment-card" data-aos="fade-up" data-aos-delay="500" style={{ textDecoration: 'none' }}>
+             <Link to="/products/healthcare-care-facilities" className="segment-card" data-aos="fade-up" data-aos-delay="500" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaHospital className="segment-icon" /></div>
               <h3>Healthcare & Institutional Environments</h3>
             </Link>
@@ -267,7 +304,7 @@ function Home() {
          <div className="container">
             <div className="split-layout reverse-mobile">
                <div className="col-image" data-aos="fade-right">
-                  <img src="/Images/About_DMD_Furnishing_Page.jpg" alt="Quality Materials" className="rounded-image" />
+                  <img src="/Images/About_DMD_Furnishing_Page.jpg" alt="DMD Furnishing premium materials and craftsmanship" className="rounded-image" />
                </div>
                <div className="col-text" data-aos="fade-left">
                   <h2 className="section-title">Built with Quality Materials</h2>

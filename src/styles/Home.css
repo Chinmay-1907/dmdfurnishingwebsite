@@ -139,7 +139,7 @@
 
 .hero-content-wrapper {
   text-align: center;
-  color: #fff;
+  color: var(--text-on-dark);
   max-width: 900px;
   padding: 0 20px;
   pointer-events: auto;
@@ -160,7 +160,7 @@
   line-height: 1.6;
   margin: 0 auto 2.5rem;
   max-width: 700px;
-  color: rgba(255,255,255,0.95);
+  color: var(--text-on-dark);
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
@@ -172,19 +172,19 @@
 }
 
 .hero-cta-group .btn-secondary {
-  color: #fff;
+  color: var(--text-on-dark);
   border-color: rgba(255,255,255,0.5);
 }
 
 .hero-cta-group .btn-secondary:hover {
   background: rgba(255,255,255,0.1);
-  border-color: #fff;
+  border-color: var(--text-on-dark);
 }
 
 .hero-support-text {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--text-on-dark);
   background: rgba(0, 0, 0, 0.5);
   padding: 12px 24px;
   border-radius: 8px;
@@ -404,7 +404,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  color: #fff;
+  color: var(--text-on-dark);
   padding: 30px 20px 20px;
   font-size: 1.1rem;
   font-weight: 500;

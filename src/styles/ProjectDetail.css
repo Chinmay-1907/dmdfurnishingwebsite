@@ -286,7 +286,7 @@
 
 .category-tag {
   background-color: #d4af37;
-  color: white;
+  color: var(--text-on-gold);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.9rem;

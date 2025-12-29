@@ -203,7 +203,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  color: white;
+  color: var(--text-on-dark);
   text-align: center;
 }
 
@@ -444,7 +444,7 @@
   height: 100%;
   padding: 16px;
   background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.0));
-  color: #fff;
+  color: var(--text-on-dark);
 }
 
 .category-overlay h3 {
@@ -506,7 +506,7 @@
 .material-chip {
   padding: 6px 10px;
   background: #111827;
-  color: #fff;
+  color: var(--text-on-dark);
   font-size: 0.85rem;
 }
 

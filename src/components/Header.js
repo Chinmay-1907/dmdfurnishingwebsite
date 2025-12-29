@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import '../styles/Header.css';
 import ProductSearch from './ProductSearch';
@@ -8,7 +8,6 @@ function Header({ theme = 'light', onToggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isDarkMode = theme === 'dark';
-  const location = useLocation();
 
   const handleMenuToggle = () => setMenuOpen((open) => !open);
 
