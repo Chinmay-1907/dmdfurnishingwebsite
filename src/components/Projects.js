@@ -115,15 +115,15 @@ function Projects() {
       {!loading && !error && (
         <div className="project-grid" ref={projectGridRef}>
           {projects.map((project) => (
-            <div key={project.id} className="project-card">
+            <div key={project.id} className="listing-card">
               <div
-                className="card-image"
+                className="listing-image"
                 style={{
                   backgroundImage: project.mainImage ? `url('${project.mainImage}')` : undefined
                 }}
                 aria-label={project.mainImageAlt || project.name}
               ></div>
-              <div className="card-content">
+              <div className="listing-content">
                 <h3>{project.name}</h3>
                 <p className="project-location">{project.category}</p>
                 <p className="project-description">{project.shortDescription}</p>
