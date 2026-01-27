@@ -208,8 +208,16 @@ function Home() {
                  <p>Premium design balanced with cost-effective manufacturing.</p>
               </div>
               <div className="diff-item" data-aos="fade-up" data-aos-delay="300">
-                 <h3>Flexible Manufacturing Options</h3>
-                 <p>Domestic and overseas production aligned to project needs.</p>
+                 <h3 style={{ 
+                    fontWeight: '700', 
+                    color: 'var(--color-gold)',
+                    border: '2px solid var(--color-magenta)',
+                    backgroundColor: 'rgba(164, 41, 99, 0.1)',
+                    padding: '8px 16px',
+                    display: 'inline-block',
+                    borderRadius: '4px'
+                 }}>Flexible Manufacturing Options</h3>
+                 <p style={{ fontWeight: '500' }}>Domestic and overseas production strategically aligned to project scope, timelines, and budget.</p>
               </div>
               <div className="diff-item" data-aos="fade-up" data-aos-delay="400">
                  <h3>Reliable Execution</h3>

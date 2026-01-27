@@ -82,6 +82,67 @@ const AboutUs = () => {
         
         <div className={styles.decorativeLine}></div>
         
+        {/* Vision, Mission, and Values Section */}
+        <section className={`${styles.section} ${styles.sectionLight}`}>
+          <div className={styles.sectionContent}>
+            {/* Vision */}
+            <div className={styles.vmvBlock}>
+              <h2 className={styles.sectionTitle}>Our Vision</h2>
+              <p className={styles.paragraph}>
+                To elevate how commercial spaces are imagined, designed, and furnished by combining intelligent design processes, flexible manufacturing, and reliable execution—bringing spaces to life without compromising quality, budget, or timeline.
+              </p>
+            </div>
+
+            {/* Mission */}
+            <div className={styles.vmvBlock} style={{ marginTop: '3rem' }}>
+              <h2 className={styles.sectionTitle}>Our Mission</h2>
+              <p className={styles.paragraph}>
+                DMD Furnishing transforms spaces into purpose-built environments through a thoughtful blend of technology-enabled design, hybrid domestic and international manufacturing, and end-to-end project coordination.
+              </p>
+              <p className={styles.paragraph}>
+                From concept and visualization to manufacturing, logistics, and installation, we help clients select the most effective production strategy—local or overseas—based on project scope, budget, and schedule, while maintaining consistent quality, durability, and compliance.
+              </p>
+            </div>
+
+            {/* Values */}
+            <div className={styles.vmvBlock} style={{ marginTop: '3rem' }}>
+              <h2 className={styles.sectionTitle}>Our Values</h2>
+              <div className={styles.valuesGrid} style={{ marginTop: '2rem' }}>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>Intelligent Design Approach</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>We prioritize function, durability, and long-term performance—using digital tools and design expertise to ensure furniture is purpose-built for real-world use.</p>
+                </div>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>Hybrid Manufacturing Strategy</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>Our flexible model combines domestic agility with global production capacity, allowing us to balance cost, lead time, and quality without a one-size-fits-all approach.</p>
+                </div>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>End-to-End Accountability</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>We manage the full furniture lifecycle—from design through installation—so clients have one accountable partner throughout the project.</p>
+                </div>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>Global Supply Chain Experience</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>With established sourcing networks and local delivery capabilities, we navigate complex supply chains while maintaining quality control and schedule reliability.</p>
+                </div>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>Quality Without Compromise</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>Every material, finish, and construction method is selected to meet commercial-grade standards and long-term lifecycle expectations.</p>
+                </div>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>Budget & Timeline Alignment</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>We align design and production strategies to client budgets and schedules while preserving design intent and product integrity.</p>
+                </div>
+                <div className={styles.valueItem} style={{ textAlign: 'left', alignItems: 'flex-start', height: 'auto', padding: '1.5rem', gridColumn: '1 / -1' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-gold)', marginBottom: '0.5rem' }}>Partnership Mindset</h3>
+                  <p style={{ fontSize: '0.95rem', margin: 0 }}>We work collaboratively with owners, designers, architects, and operators to simplify complexity and deliver predictable outcomes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className={styles.decorativeLine}></div>
+        
         {/* How We Work Section */}
         <section className={`${styles.section} ${styles.sectionLight}`}>
           <div className={styles.sectionContent}>
