@@ -1,144 +1,186 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Inspirations.css';
-import { FiZoomIn, FiX } from 'react-icons/fi';
+import { Link, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import styles from '../styles/AboutUs.module.css';
 
 function Inspirations() {
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [selectedImage, setSelectedImage] = useState(null);
-
   useEffect(() => {
     AOS.init({ duration: 800, once: true, mirror: false });
   }, []);
 
-  // Consolidated Gallery Data
-  const galleryItems = [
-    { id: 1, category: 'Hotel', src: '/Images/Hotel/Lobby Area/Lobby Area.jpg', title: 'Grand Lobby Entrance', desc: 'Luxury arrival experience' },
-    { id: 2, category: 'Restaurant', src: '/Images/Restaurant/Restaurant.jpg', title: 'Fine Dining Ambience', desc: 'Warm lighting and plush seating' },
-    { id: 3, category: 'Office', src: '/Images/Office/Workstations/Office Workstations.jpg', title: 'Modern Workstations', desc: 'Collaborative open-plan design' },
-    { id: 4, category: 'Hotel', src: '/Images/Hotel/hotel-seating/hotel-seating.jpg', title: 'Lounge Seating', desc: 'Comfortable waiting areas' },
-    { id: 5, category: 'Restaurant', src: '/Images/Restaurant/Dining Area/Dinnig Area.jpg', title: 'Bistro Setting', desc: 'Casual dining arrangement' },
-    { id: 6, category: 'Office', src: '/Images/Office/office.jpg', title: 'Executive Suite', desc: 'Premium office furniture' },
-    { id: 7, category: 'Outdoor', src: '/Images/Outdoor.jpg', title: 'Al Fresco Dining', desc: 'Durable outdoor solutions' },
-    { id: 8, category: 'Hotel', src: '/Images/Hotel/Guest Room/Bed Frame/Bed Frame.jpg', title: 'Guest Room Suite', desc: 'Custom bed frame design' },
-    { id: 9, category: 'Hotel', src: '/Images/Hotel/Guest Room/Head Board/Head Board.jpg', title: 'Upholstered Headboard', desc: 'Detail-oriented craftsmanship' },
-    { id: 10, category: 'Restaurant', src: '/Images/Restaurant/Dining Area/Booths/double booth.png', title: 'Private Booths', desc: 'Intimate dining experience' },
-    { id: 11, category: 'Office', src: '/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet.png', title: 'Modular Storage', desc: 'Functional office organization' }
+  const navigate = useNavigate();
+
+  const categories = [
+    {
+      title: 'Hotel Interiors',
+      subtitle: 'Guestrooms, Suites, Lobbies',
+      image: '/Images/Hotel/Lobby Area/Lobby Area.jpg',
+      to: '/products'
+    },
+    {
+      title: 'Restaurant & Café Designs',
+      subtitle: 'Dining, Bar tables, Booths',
+      image: '/Images/Restaurant/Restaurant.jpg',
+      to: '/products'
+    },
+    {
+      title: 'Office Inspirations',
+      subtitle: 'Conference rooms, workstations',
+      image: '/Images/Office/Workstations/Office Workstations.jpg',
+      to: '/products'
+    },
+    {
+      title: 'Commercial & Retail Spaces',
+      subtitle: 'Reception, waiting area, custom storage',
+      image: '/Images/Premium Collections.jpg',
+      to: '/products'
+    }
   ];
 
-  // Mood Boards Data
   const moodBoards = [
     {
       title: 'Modern Hotel Room',
       palette: ['#2E2E2E', '#707070', '#D4AF37', '#F0F0F0'],
-      materials: 'Matte black metal, Beige linen, Walnut veneer'
+      materials: ['Matte black metal', 'Beige linen', 'Walnut veneer']
     },
     {
       title: 'Industrial Restaurant',
       palette: ['#1F2937', '#6B7280', '#B45309', '#F3F4F6'],
-      materials: 'Raw steel, Leather, Reclaimed wood'
+      materials: ['Raw steel', 'Leather', 'Reclaimed wood']
     },
     {
       title: 'Luxury Lobby',
       palette: ['#0F172A', '#334155', '#C69C6D', '#E5E7EB'],
-      materials: 'Brass, Velvet, Marble'
+      materials: ['Brass', 'Velvet', 'Marble']
+    },
+    {
+      title: 'Minimalist Office',
+      palette: ['#111827', '#9CA3AF', '#E5E7EB', '#FFFFFF'],
+      materials: ['Birch plywood', 'Powder-coated steel', 'Grey fabric']
+    },
+    {
+      title: 'Classic Guestroom',
+      palette: ['#3F3F46', '#78716C', '#A78BFA', '#FAFAF9'],
+      materials: ['Solid wood', 'Woven textiles', 'Antique brass']
     }
   ];
 
-  const filteredItems = activeFilter === 'All' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
+  const furnitureShowcase = [
+    { title: 'Beds', image: '/Images/Hotel/Guest Room/Bed Frame/Bed Frame.jpg', description: 'Durable frames in MDF or metal, tailored sizes.' },
+    { title: 'Headboards', image: '/Images/Hotel/Guest Room/Head Board/Head Board.jpg', description: 'Upholstered and MDF designs with elegant profiles.' },
+    { title: 'Nightstands', image: '/Images/Hotel/Guest Room/Night Stand/Night Stand.jpg', description: 'Single or double drawer options with soft-close.' },
+    { title: 'Desks', image: '/Images/Hotel/Guest Room/Desk/Desk.jpg', description: 'Executive and workstation desks for hospitality use.' },
+    { title: 'Credenzas', image: '/Images/Office/Storage and Organization/DMD SoftClose Modular Cabinet.png', description: 'Modular storage solutions with premium finishes.' },
+    { title: 'Booths', image: '/Images/Restaurant/Dining Area/Booths/double booth.png', description: 'Restaurant booth seating in custom configurations.' },
+    { title: 'Wardrobes', image: '/Images/University/Dormitory/Wardrobes/2-Door Wardrobe/2-Door Wardrobe.png', description: 'Sturdy wardrobes with sliding or hinged doors.' }
+  ];
 
-  const filters = ['All', 'Hotel', 'Restaurant', 'Office', 'Outdoor'];
+  const inspirationGallery = [
+    '/Images/Hotel/Lobby Area/Lobby Area.jpg',
+    '/Images/Hotel/hotel-seating/hotel-seating.jpg',
+    '/Images/Restaurant/Dining Area/Dinnig Area.jpg',
+    '/Images/Restaurant/Restaurant.jpg',
+    '/Images/Office/Workstations/Office Workstations.jpg',
+    '/Images/Office/office.jpg',
+    '/Images/Outdoor.jpg'
+  ];
 
   return (
-    <div className="inspirations-page">
+    <div className="inspirations-container">
       {/* Hero Section */}
-      <section className="inspirations-hero" style={{ backgroundImage: "url('/Images/Our_Projects.jpg')" }}>
-        <div className="hero-overlay"></div>
-        <div className="hero-content" data-aos="fade-up">
-          <h1>Curated Inspirations</h1>
-          <p>Explore our portfolio of design-driven furniture solutions for hospitality, commercial, and retail spaces.</p>
+      <section className={styles.heroSection} style={{
+        background: `linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.35)), url("${encodeURI('/Images/Our_Projects.jpg')}" )`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Design Inspirations</h1>
+          <p className={styles.heroSubtitle}>Explore our curated collection of hospitality design inspirations.</p>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="gallery-section container">
-        <div className="filter-bar" data-aos="fade-up" data-aos-delay="100">
-          {filters.map(filter => (
+      {/* Category Image Cards */}
+      <section className="inspirations-categories" data-aos="fade-up">
+        <div className="category-grid">
+          {categories.map((cat, idx) => (
             <button
-              key={filter}
-              className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
-              onClick={() => setActiveFilter(filter)}
+              key={idx}
+              className="category-card"
+              onClick={() => navigate(cat.to)}
+              aria-label={`Explore ${cat.title}`}
             >
-              {filter}
+              <div
+                className="category-image"
+                style={{ backgroundImage: `url("${encodeURI(cat.image)}")` }}
+              >
+                <div className="category-overlay">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.subtitle}</p>
+                </div>
+              </div>
             </button>
           ))}
         </div>
+      </section>
 
-        <div className="masonry-grid">
-          {filteredItems.map((item, index) => (
-            <div 
-              key={item.id} 
-              className="grid-item"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
-              onClick={() => setSelectedImage(item)}
-            >
-              <div className="image-wrapper">
-                <img src={item.src} alt={item.title} loading="lazy" />
-                <div className="hover-overlay">
-                  <div className="hover-content">
-                    <span className="category-tag">{item.category}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.desc}</p>
-                    <button className="view-btn"><FiZoomIn /> View</button>
-                  </div>
-                </div>
+      {/* Mood Boards */}
+      <section className="inspirations-moodboards" data-aos="fade-up">
+        <h2>Inspiration Mood Boards</h2>
+        <div className="moodboard-grid">
+          {moodBoards.map((board, idx) => (
+            <div className="moodboard-card" key={idx}>
+              <h3>{board.title}</h3>
+              <div className="moodboard-palettes">
+                {board.palette.map((color, cIdx) => (
+                  <span key={cIdx} className="palette-swatch" style={{ backgroundColor: color }} />
+                ))}
+              </div>
+              <div className="moodboard-materials">
+                {board.materials.map((m, mIdx) => (
+                  <span key={mIdx} className="material-chip">{m}</span>
+                ))}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Mood Boards Section */}
-      <section className="mood-boards-section">
-        <div className="container">
-          <div className="section-header" data-aos="fade-up">
-            <h2>Design Palettes</h2>
-            <p>Material and color concepts that define our collections.</p>
-          </div>
-          <div className="mood-boards-grid">
-            {moodBoards.map((board, index) => (
-              <div key={index} className="mood-card" data-aos="fade-up" data-aos-delay={index * 100}>
-                <h3>{board.title}</h3>
-                <div className="palette-strip">
-                  {board.palette.map((color, i) => (
-                    <div key={i} className="color-swatch" style={{ backgroundColor: color }} title={color}></div>
-                  ))}
-                </div>
-                <p className="materials-text"><strong>Materials:</strong> {board.materials}</p>
+      {/* DMD Custom Furniture Showcase */}
+      <section className="inspirations-showcase" data-aos="fade-up">
+        <h2>DMD Custom Furniture Showcase</h2>
+        <div className="showcase-grid">
+          {furnitureShowcase.map((item, idx) => (
+            <div className="showcase-card" key={idx}>
+              <div className="showcase-image" style={{ backgroundImage: `url("${encodeURI(item.image)}")` }} />
+              <div className="showcase-content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Lightbox Modal */}
-      {selectedImage && (
-        <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setSelectedImage(null)}><FiX /></button>
-            <img src={selectedImage.src} alt={selectedImage.title} />
-            <div className="lightbox-details">
-              <h3>{selectedImage.title}</h3>
-              <p>{selectedImage.desc}</p>
-              <span className="lightbox-category">{selectedImage.category}</span>
-            </div>
-          </div>
+      {/* Inspiration Gallery */}
+      <section className="inspirations-image-grid" data-aos="fade-up">
+        <div className="image-grid">
+          {inspirationGallery.map((img, idx) => (
+            <div key={idx} className="image-item" style={{ backgroundImage: `url("${encodeURI(img)}")` }} />
+          ))}
         </div>
-      )}
+      </section>
+
+      {/* Call to Action */}
+      <section className="inspirations-cta" data-aos="fade-up">
+        <h2>Ready to bring your design vision to life?</h2>
+        <div className="cta-actions">
+          <Link to="/contact" className="cta-button primary">Request a Quote</Link>
+          <Link to="/contact" className="cta-button">Contact Us</Link>
+        </div>
+      </section>
     </div>
   );
 }
