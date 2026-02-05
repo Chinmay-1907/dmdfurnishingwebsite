@@ -61,7 +61,7 @@ function Header({ theme = 'light', onToggleTheme }) {
             <li><NavLink to="/services" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Services</NavLink></li>
             <li><NavLink to="/projects" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink></li>
             <li><NavLink to="/inspirations" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Inspirations</NavLink></li>
-            <li><NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Testimonials</NavLink></li>
+            {/* <li><NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Testimonials</NavLink></li> */}
             <li className="nav-contact">
               <Link to="/contact" onClick={closeMenu}>
                 <span className="nav-contact-label">Contact</span>

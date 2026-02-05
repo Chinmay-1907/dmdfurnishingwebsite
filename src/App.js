@@ -12,7 +12,7 @@ import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
 import Projects from './components/Projects';
 import ProjectDetail from './components/ProjectDetail';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import ScheduleCall from './components/ScheduleCall';
@@ -85,7 +85,7 @@ function App() {
             <Route path="/products/:institutionId/:furnitureTypeId/:subcategoryId/:productId" element={<ProductDetail />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
-            <Route path="/testimonials" element={<Testimonials />} />
+            {/* <Route path="/testimonials" element={<Testimonials />} /> */}
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/schedule-call" element={<ScheduleCall />} />

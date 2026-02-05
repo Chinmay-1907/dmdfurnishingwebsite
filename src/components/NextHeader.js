@@ -15,7 +15,7 @@ function NextHeader() {
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/products">Our Products</Link></li>
             <li><Link href="/projects">Recent Projects</Link></li>
-            <li><Link href="/testimonials">Testimonials</Link></li>
+            {/* <li><Link href="/testimonials">Testimonials</Link></li> */}
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>
