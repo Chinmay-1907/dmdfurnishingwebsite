@@ -3,4 +3,4 @@
 # Next expand: replace relative sitemap with absolute URL on production (e.g., https://www.dmdfurnishing.com/sitemap.xml)
 User-agent: *
 Disallow:
-Sitemap: /sitemap.xml
+Sitemap: https://www.dmdfurnishing.com/sitemap.xml

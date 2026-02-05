@@ -31,7 +31,8 @@ function generate() {
   const sitemapPath = path.join(publicDir, 'sitemap.xml');
 
   const port = process.env.PORT || 3000;
-  const baseUrl = process.env.PUBLIC_BASE_URL || `http://localhost:${port}`;
+  // Use production domain for sitemap generation
+  const baseUrl = 'https://www.dmdfurnishing.com';
 
   const xml = fs.readFileSync(xmlPath, 'utf-8');
   const projectsXml = fs.existsSync(projectsXmlPath) ? fs.readFileSync(projectsXmlPath, 'utf-8') : '';
