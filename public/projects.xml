@@ -2,11 +2,11 @@
 <projects>
   <project id="quality-inn-gainesville" name="Quality Inn - Gainesville, FL" category="Hospitality">
     <shortDescription>Complete furnishing solution for a hotel renovation, including guest rooms, lobby, and dining areas with custom-designed furniture pieces.</shortDescription>
-    <fullDescription>This comprehensive renovation project for Quality Inn in Gainesville, Florida involved furnishing 120 guest rooms, the main lobby, reception area, and dining facilities. Our team worked closely with the hotel management to create a cohesive design that balanced comfort, durability, and aesthetic appeal. The project was completed over a period of 3 months, with minimal disruption to hotel operations.</fullDescription>
+    <fullDescription>This comprehensive renovation project for Quality Inn in Gainesville, Florida involved furnishing 60 guest rooms, the main lobby, reception area, and dining facilities. Our team worked closely with the hotel management to create a cohesive design that balanced comfort, durability, and aesthetic appeal. The project was completed efficiently, with minimal disruption to hotel operations.</fullDescription>
     <completionDate>June 2022</completionDate>
-    <clientTestimonial>DMD Furnishing transformed our dated property into a modern, inviting space that our guests love. The quality of the furniture and attention to detail exceeded our expectations. Their team was professional and accommodating throughout the entire process.</clientTestimonial>
-    <clientName>Jay Patel</clientName>
-    <clientPosition>General Manager, Quality Inn Gainesville</clientPosition>
+    <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
+    <clientName>DMD Furnishing Team</clientName>
+    <clientPosition></clientPosition>
     <mainImage src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_1.png" alt="Quality Inn Gainesville project main" />
     <images>
       <image id="1" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7619.jpeg" alt="Quality Inn Gainesville project image 1" />
@@ -31,8 +31,8 @@
       <image id="20" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7649.jpeg" alt="Quality Inn Gainesville project image 20" />
     </images>
     <specifications>
-      <spec name="Project Scope" value="120 guest rooms, lobby, dining area, reception" />
-      <spec name="Timeline" value="3 months" />
+      <spec name="Project Scope" value="60 guest rooms, lobby, dining area, reception" />
+      <spec name="Timeline" value="10 weeks" />
       <spec name="Furniture Items" value="580+ pieces" />
       <spec name="Custom Designs" value="15 unique pieces" />
       <spec name="Materials Used" value="Sustainable hardwoods, commercial-grade fabrics, metal accents" />
@@ -48,11 +48,11 @@
   </project>
   <project id="towne-lyne-motel-ogunquit" name="Towne Lyne Motel - Ogunquit, ME" category="Hospitality">
     <shortDescription>Custom-designed furniture for a boutique motel, featuring coastal-inspired pieces that blend comfort with local aesthetic elements.</shortDescription>
-    <fullDescription>The Towne Lyne Motel in Ogunquit, Maine underwent a complete transformation to create a boutique experience that celebrates the coastal charm of the region. Our team designed and manufactured custom furniture pieces that incorporate nautical elements while providing modern comfort. The project included 45 guest rooms, a small lobby, and an outdoor lounge area, all designed to create a cohesive, memorable guest experience.</fullDescription>
+    <fullDescription>The Towne Lyne Motel in Ogunquit, Maine underwent a complete transformation to create a boutique experience that celebrates the coastal charm of the region. Our team designed and manufactured custom furniture pieces that incorporate nautical elements while providing modern comfort. The project included 20 guest rooms, a small lobby, and an outdoor lounge area, all designed to create a cohesive, memorable guest experience.</fullDescription>
     <completionDate>April 2023</completionDate>
-    <clientTestimonial>Working with DMD Furnishing was a pleasure from start to finish. They truly understood our vision for a coastal-inspired boutique motel and delivered furniture that perfectly captures the essence of Ogunquit. Our guests frequently comment on how beautiful and comfortable the rooms are.</clientTestimonial>
-    <clientName>Sarah Miller</clientName>
-    <clientPosition>Owner, Towne Lyne Motel</clientPosition>
+    <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
+    <clientName>DMD Furnishing Team</clientName>
+    <clientPosition></clientPosition>
     <mainImage src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_1.png" alt="Towne Lyne Motel project main" />
     <images>
       <image id="1" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel project image 1" />
@@ -96,8 +96,8 @@
       <image id="b4" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Before/old4.jpg" alt="Before renovation - room 4" />
     </beforeImages>
     <specifications>
-      <spec name="Project Scope" value="45 guest rooms, lobby, outdoor lounge" />
-      <spec name="Timeline" value="4 months" />
+      <spec name="Project Scope" value="20 guest rooms, lobby, outdoor lounge" />
+      <spec name="Timeline" value="8 weeks" />
       <spec name="Furniture Items" value="220+ pieces" />
       <spec name="Custom Designs" value="8 unique pieces" />
       <spec name="Materials Used" value="Reclaimed wood, weather-resistant fabrics, brass accents" />
@@ -155,6 +155,21 @@
       <image id="38" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-42.jpg" alt="Quality Inn Bangor project image 38" />
     </images>
 
+    <fullDescription>Guestroom and common area updates in Bangor, ME. This project involved furnishing 98 guest rooms to meet modern standards of comfort and style.</fullDescription>
+    <completionDate>2024</completionDate>
+    <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
+    <clientName>DMD Furnishing Team</clientName>
+    <clientPosition></clientPosition>
+    <specifications>
+      <spec name="Project Scope" value="98 guest rooms" />
+      <spec name="Timeline" value="12 weeks" />
+      <spec name="Furniture Items" value="Custom pieces" />
+      <spec name="Custom Designs" value="Yes" />
+    </specifications>
+    <highlights>
+      <highlight>Complete guestroom refresh</highlight>
+      <highlight>Modern durability standards</highlight>
+    </highlights>
     <beforeImages>
       <image id="b1" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 2.jpg" alt="Quality Inn Bangor before image 1" />
       <image id="b2" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 3.jpg" alt="Quality Inn Bangor before image 2" />
@@ -180,6 +195,21 @@
       <image id="7" src="/Images/Projects/USA INN - Wells, ME/IMG_3947-300x225.jpg" alt="USA INN Wells project image 7" />
     </images>
 
+    <fullDescription>Guestroom refresh and improvements in Wells, ME. This project involved furnishing 50 guest rooms, ensuring a welcoming environment for guests.</fullDescription>
+    <completionDate>2024</completionDate>
+    <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
+    <clientName>DMD Furnishing Team</clientName>
+    <clientPosition></clientPosition>
+    <specifications>
+      <spec name="Project Scope" value="50 guest rooms" />
+      <spec name="Timeline" value="9 weeks" />
+      <spec name="Furniture Items" value="Custom pieces" />
+      <spec name="Custom Designs" value="Yes" />
+    </specifications>
+    <highlights>
+      <highlight>Guestroom updates</highlight>
+      <highlight>Enhanced guest comfort</highlight>
+    </highlights>
     <beforeImages>
       <image id="b1" src="/Images/Projects/USA INN - Wells, ME/Before/3-3-300x200.jpg" alt="USA INN Wells before image 1" />
       <image id="b2" src="/Images/Projects/USA INN - Wells, ME/Before/4-3-300x200.jpg" alt="USA INN Wells before image 2" />
@@ -212,6 +242,21 @@
       <image id="13" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-4.png" alt="SureStay Fredrick project image 13" />
     </images>
 
+    <fullDescription>Guestroom refresh and common area updates in Fredrick, MD. This project included furnishing 57 guest rooms and common areas.</fullDescription>
+    <completionDate>2024</completionDate>
+    <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
+    <clientName>DMD Furnishing Team</clientName>
+    <clientPosition></clientPosition>
+    <specifications>
+      <spec name="Project Scope" value="57 guest rooms, common areas" />
+      <spec name="Timeline" value="10 weeks" />
+      <spec name="Furniture Items" value="Custom pieces" />
+      <spec name="Custom Designs" value="Yes" />
+    </specifications>
+    <highlights>
+      <highlight>Common area revitalization</highlight>
+      <highlight>Guest room modernization</highlight>
+    </highlights>
     <beforeImages>
       <image id="b1" src="/Images/Projects/SureStay by BW - Fredrick MD/Before/SSBW-3 old.png" alt="SureStay Fredrick before image 1" />
     </beforeImages>
