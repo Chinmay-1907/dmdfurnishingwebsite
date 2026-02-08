@@ -196,7 +196,7 @@ function Home() {
            <h2 className="section-title text-center mb-5" data-aos="fade-up">What Sets DMD Furnishing Apart</h2>
            <div className="differentiators-grid">
               <div className="diff-item" data-aos="fade-up">
-                 <h3>End-to-End Control</h3>
+                 <h3>End-to-End Management</h3>
                  <p>Design, manufacturing, delivery, and installation managed under one accountable partner.</p>
               </div>
               <div className="diff-item" data-aos="fade-up" data-aos-delay="100">
@@ -268,7 +268,7 @@ function Home() {
                <div className="step-divider"></div>
                <div className="step" data-aos="fade-up" data-aos-delay="300">
                   <span className="step-number">03</span>
-                  <h4>Manufacturing & Quality Control</h4>
+                  <h4>Manufacturing & Quality Assurance</h4>
                </div>
                <div className="step-divider"></div>
                <div className="step" data-aos="fade-up" data-aos-delay="400">
