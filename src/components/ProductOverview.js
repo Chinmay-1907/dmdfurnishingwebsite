@@ -54,7 +54,7 @@ const ProductOverview = () => {
       <header className={styles.header}>
         <h1 className={styles.title}>Products by Market</h1>
         <p className={styles.subtitle}>
-          Explore our specialized furniture collections designed for the unique demands of commercial sectors.
+          Explore our specialized furniture collections designed for the unique requirements of commercial sectors.
         </p>
       </header>
       
