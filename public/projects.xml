@@ -31,10 +31,10 @@
       <image id="20" src="/Images/Projects/Quality Inn - Gainesville, FL/IMG_7649.jpeg" alt="Quality Inn Gainesville project image 20" />
     </images>
     <specifications>
-      <spec name="Project Scope" value="60 guest rooms, lobby, dining area, reception" />
-      <spec name="Timeline" value="10 weeks" />
-      <spec name="Furniture Items" value="580+ pieces" />
-      <spec name="Custom Designs" value="15 unique pieces" />
+      <spec name="Scope of Work" value="60 guest rooms, lobby, dining area, reception" />
+      <spec name="Project Duration" value="10 weeks" />
+      <spec name="Total Furniture Pieces" value="580+ pieces" />
+      <spec name="Custom Furniture Suite" value="15 custom furniture pieces" />
       <spec name="Materials Used" value="Sustainable hardwoods, commercial-grade fabrics, metal accents" />
       <spec name="Color Palette" value="Earth tones with blue accents" />
     </specifications>
@@ -96,10 +96,10 @@
       <image id="b4" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/Before/old4.jpg" alt="Before renovation - room 4" />
     </beforeImages>
     <specifications>
-      <spec name="Project Scope" value="20 guest rooms, lobby, outdoor lounge" />
-      <spec name="Timeline" value="8 weeks" />
-      <spec name="Furniture Items" value="220+ pieces" />
-      <spec name="Custom Designs" value="8 unique pieces" />
+      <spec name="Scope of Work" value="20 guest rooms, lobby, outdoor lounge" />
+      <spec name="Project Duration" value="8 weeks" />
+      <spec name="Total Furniture Pieces" value="220+ pieces" />
+      <spec name="Custom Furniture Suite" value="8 custom furniture pieces" />
       <spec name="Materials Used" value="Reclaimed wood, weather-resistant fabrics, brass accents" />
       <spec name="Color Palette" value="Blues, whites, and natural wood tones" />
     </specifications>
@@ -161,10 +161,10 @@
     <clientName>DMD Furnishing Team</clientName>
     <clientPosition></clientPosition>
     <specifications>
-      <spec name="Project Scope" value="98 guest rooms" />
-      <spec name="Timeline" value="12 weeks" />
-      <spec name="Furniture Items" value="Custom pieces" />
-      <spec name="Custom Designs" value="Yes" />
+      <spec name="Scope of Work" value="98 guest rooms" />
+      <spec name="Project Duration" value="12 weeks" />
+      <spec name="Total Furniture Pieces" value="Full room package" />
+      <spec name="Custom Furniture Suite" value="Included" />
     </specifications>
     <highlights>
       <highlight>Complete guestroom refresh</highlight>
@@ -201,10 +201,10 @@
     <clientName>DMD Furnishing Team</clientName>
     <clientPosition></clientPosition>
     <specifications>
-      <spec name="Project Scope" value="50 guest rooms" />
-      <spec name="Timeline" value="9 weeks" />
-      <spec name="Furniture Items" value="Custom pieces" />
-      <spec name="Custom Designs" value="Yes" />
+      <spec name="Scope of Work" value="50 guest rooms" />
+      <spec name="Project Duration" value="9 weeks" />
+      <spec name="Total Furniture Pieces" value="Full room package" />
+      <spec name="Custom Furniture Suite" value="Included" />
     </specifications>
     <highlights>
       <highlight>Guestroom updates</highlight>
@@ -248,10 +248,10 @@
     <clientName>DMD Furnishing Team</clientName>
     <clientPosition></clientPosition>
     <specifications>
-      <spec name="Project Scope" value="57 guest rooms, common areas" />
-      <spec name="Timeline" value="10 weeks" />
-      <spec name="Furniture Items" value="Custom pieces" />
-      <spec name="Custom Designs" value="Yes" />
+      <spec name="Scope of Work" value="57 guest rooms, common areas" />
+      <spec name="Project Duration" value="10 weeks" />
+      <spec name="Total Furniture Pieces" value="Full room package" />
+      <spec name="Custom Furniture Suite" value="Included" />
     </specifications>
     <highlights>
       <highlight>Common area revitalization</highlight>
