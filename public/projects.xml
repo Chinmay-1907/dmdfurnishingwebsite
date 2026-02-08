@@ -35,7 +35,7 @@
       <spec name="Project Duration" value="10 weeks" />
       <spec name="Total Furniture Pieces" value="580+ pieces" />
       <spec name="Custom Furniture Suite" value="15 custom furniture pieces" />
-      <spec name="Materials Used" value="Sustainable hardwoods, commercial-grade fabrics, metal accents" />
+      <spec name="Materials Used" value="HPL - MDF, commercial-grade fabrics" />
       <spec name="Color Palette" value="Earth tones with blue accents" />
     </specifications>
     <highlights>
@@ -100,7 +100,7 @@
       <spec name="Project Duration" value="8 weeks" />
       <spec name="Total Furniture Pieces" value="220+ pieces" />
       <spec name="Custom Furniture Suite" value="8 custom furniture pieces" />
-      <spec name="Materials Used" value="Reclaimed wood, weather-resistant fabrics, brass accents" />
+      <spec name="Materials Used" value="Pre-laminated MDF" />
       <spec name="Color Palette" value="Blues, whites, and natural wood tones" />
     </specifications>
     <highlights>
@@ -165,6 +165,7 @@
       <spec name="Project Duration" value="12 weeks" />
       <spec name="Total Furniture Pieces" value="Full room package" />
       <spec name="Custom Furniture Suite" value="Included" />
+      <spec name="Materials Used" value="HPL - MDF, commercial-grade fabrics" />
     </specifications>
     <highlights>
       <highlight>Complete guestroom refresh</highlight>
@@ -205,6 +206,7 @@
       <spec name="Project Duration" value="9 weeks" />
       <spec name="Total Furniture Pieces" value="Full room package" />
       <spec name="Custom Furniture Suite" value="Included" />
+      <spec name="Materials Used" value="Pre-laminated MDF" />
     </specifications>
     <highlights>
       <highlight>Guestroom updates</highlight>
@@ -252,6 +254,7 @@
       <spec name="Project Duration" value="10 weeks" />
       <spec name="Total Furniture Pieces" value="Full room package" />
       <spec name="Custom Furniture Suite" value="Included" />
+      <spec name="Materials Used" value="Pre-laminated MDF" />
     </specifications>
     <highlights>
       <highlight>Common area revitalization</highlight>
