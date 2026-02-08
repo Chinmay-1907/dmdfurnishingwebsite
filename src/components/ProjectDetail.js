@@ -215,11 +215,11 @@ function ProjectDetail() {
           </div>
 
           <div className="client-testimonial">
-            <h2>Client Testimonial</h2>
+            <h2>DMD Commitment</h2>
             <blockquote>
               <p>"{project.clientTestimonial}"</p>
               <footer>
-                <cite>- {project.clientName}, {project.clientPosition}</cite>
+                <cite>- {project.clientName}{project.clientPosition ? `, ${project.clientPosition}` : ''}</cite>
               </footer>
             </blockquote>
           </div>
