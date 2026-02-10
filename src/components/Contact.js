@@ -28,6 +28,7 @@ function Contact() {
   // Form Data State
   const [email, setEmail] = useState('');
   const [otpCode, setOtpCode] = useState('');
+  const [verificationToken, setVerificationToken] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -171,6 +172,7 @@ function Contact() {
 
       const json = await res.json().catch(() => ({}));
       if (res.ok && (json?.success === true || json?.success === 'true')) {
+        setVerificationToken(json.token || '');
         setStep('otp');
         setSubmitStatus('idle');
       } else {
@@ -194,7 +196,7 @@ function Contact() {
       const res = await fetch(VERIFY_OTP_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, code: otpCode, recaptchaToken }),
+        body: JSON.stringify({ email, code: otpCode, token: verificationToken, recaptchaToken }),
       });
 
       const json = await res.json().catch(() => ({}));

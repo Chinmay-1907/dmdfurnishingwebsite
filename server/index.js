@@ -27,10 +27,8 @@ const mailTo = process.env.MAIL_TO || 'sales@dmdfurnishing.com';
 // reCAPTCHA configuration
 const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY || '';
 const recaptchaMinScore = Number(process.env.RECAPTCHA_MIN_SCORE || 0.5);
-
-// OTP store (in-memory). Use a persistent store for production.
-// Structure: Map<email, { code, expiresAt, resends, payload }>
-const otpStore = new Map();
+// Secret for hashing OTPs
+const OTP_SECRET = process.env.OTP_SECRET || 'dev-secret-key-change-in-prod';
 
 const transporter = nodemailer.createTransport({
   host: smtpHost,
@@ -41,6 +39,24 @@ const transporter = nodemailer.createTransport({
   tls: { minVersion: 'TLSv1.2', ciphers: 'SSLv3' },
   auth: smtpUser && smtpPass ? { user: smtpUser, pass: smtpPass } : undefined,
 });
+
+function generateOtp(minDigits = 4, maxDigits = 6) {
+  const digits = Math.max(minDigits, Math.min(maxDigits, 6));
+  const max = 10 ** digits;
+  const num = crypto.randomInt(0, max);
+  return String(num).padStart(digits, '0');
+}
+
+function createOtpHash(email, otp, expires) {
+  const data = `${email}.${otp}.${expires}`;
+  return crypto.createHmac('sha256', OTP_SECRET).update(data).digest('hex');
+}
+
+function verifyOtpHash(email, otp, hash, expires) {
+  if (Date.now() > parseInt(expires)) return false;
+  const expectedHash = createOtpHash(email, otp, expires);
+  return expectedHash === hash;
+}
 
 app.post('/api/send-consultation', async (req, res) => {
   const {
@@ -59,8 +75,15 @@ app.post('/api/send-consultation', async (req, res) => {
     restaurantType,
     spaceType,
     teamSize,
-    areaType
+    areaType,
+    recaptchaToken
   } = req.body || {};
+
+  // Recaptcha
+  const ok = await verifyRecaptcha(recaptchaToken, req.ip);
+  if (!ok && recaptchaSecret) {
+    return res.status(400).json({ success: false, error: 'reCAPTCHA verification failed.' });
+  }
 
   if (!name || !email || !phone || !project || !message) {
     return res.status(400).json({ success: false, error: 'Missing required fields' });
@@ -70,7 +93,7 @@ app.post('/api/send-consultation', async (req, res) => {
   const formatArray = (arr) => Array.isArray(arr) ? arr.join(', ') : (arr || '');
 
   const html = `
-    <h2>${subject}</h2>
+    <h2>${escapeHtml(subject)}</h2>
     <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
       <tr><th align="left">Name</th><td>${escapeHtml(name)}</td></tr>
       <tr><th align="left">Company</th><td>${escapeHtml(company)}</td></tr>
@@ -126,8 +149,6 @@ Message: ${message}
     });
   }
 
-  // Skip transporter.verify() to avoid premature failures on providers that block verify.
-
   try {
     await transporter.sendMail({
       from: mailFrom,
@@ -143,6 +164,7 @@ Message: ${message}
     res.status(500).json({ success: false, error: 'Email send failed', details: err.message, code: err.code, response: err.response, hint });
   }
 });
+
 // Request OTP: validate anti-spam, issue OTP, email to user
 app.post('/api/request-otp', async (req, res) => {
   const {
@@ -181,19 +203,9 @@ app.post('/api/request-otp', async (req, res) => {
     }
   }
 
-  // Resend limit
-  const emailLower = email.toLowerCase();
-  const existing = otpStore.get(emailLower);
-  if (existing) {
-    if (existing.resends >= 2 && existing.expiresAt > Date.now()) {
-      return res.status(429).json({ success: false, error: 'Too many attempts. Please wait 5 minutes before requesting a new code.' });
-    }
-  }
-
   const code = generateOtp(4, 6);
   const expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
-  const resends = existing ? Math.min(existing.resends + 1, 2) : 0;
-  otpStore.set(emailLower, { code, expiresAt, resends, payload: { name, company, email, phone, project, message, subject } });
+  const hash = createOtpHash(email, code, expiresAt);
 
   try {
     await transporter.sendMail({
@@ -203,11 +215,12 @@ app.post('/api/request-otp', async (req, res) => {
       text: `Your verification code is ${code}. It expires in 5 minutes.`,
       html: `<p>Your verification code is <strong>${escapeHtml(code)}</strong>.</p><p>This code expires in 5 minutes.</p>`,
     });
-    res.json({ success: true });
+    
+    // Return hash token
+    const token = `${hash}.${expiresAt}`;
+    res.json({ success: true, token });
   } catch (err) {
     console.error('OTP Send Error:', err);
-    // Remove from store if send failed so user can try again
-    otpStore.delete(emailLower);
     const hint = getSmtpHint(err);
     res.status(500).json({ success: false, error: 'OTP send failed', details: err.message, code: err.code, response: err.response, hint });
   }
@@ -215,7 +228,7 @@ app.post('/api/request-otp', async (req, res) => {
 
 // Verify OTP: consume code and forward consultation email to business inbox
 app.post('/api/verify-otp', async (req, res) => {
-  const { email = '', code = '', recaptchaToken = '' } = req.body || {};
+  const { email = '', code = '', token = '', recaptchaToken = '' } = req.body || {};
   if (!isValidEmail(email)) {
     return res.status(400).json({ success: false, error: 'Invalid submission. Please review your contact details and try again.' });
   }
@@ -225,24 +238,25 @@ app.post('/api/verify-otp', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Invalid submission. Please review your contact details and try again.' });
     }
   }
-  const emailLower = email.toLowerCase();
-  const entry = otpStore.get(emailLower);
+  
+  if (!token || !token.includes('.')) {
+    return res.status(400).json({ success: false, error: 'Missing verification token.' });
+  }
+
+  const [hash, expires] = token.split('.');
   const cleanCode = String(code).trim();
 
-  if (!entry || !entry.code || !cleanCode || Date.now() > entry.expiresAt) {
-    // Only delete if it was expired or invalid entry to avoid race conditions, 
-    // but here we just want to be safe. If entry doesn't exist, delete does nothing.
-    if (entry && Date.now() > entry.expiresAt) otpStore.delete(emailLower);
-    return res.status(400).json({ success: false, error: 'Verification failed. Please request a new OTP and try again.' });
+  if (Date.now() > parseInt(expires)) {
+    return res.status(400).json({ success: false, error: 'Code expired. Please request a new one.' });
   }
-  
-  if (String(entry.code) !== cleanCode) {
-    // Do NOT delete OTP on simple code mismatch, allow retry
+
+  const isValid = verifyOtpHash(email, cleanCode, hash, expires);
+
+  if (!isValid) {
     return res.status(400).json({ success: false, error: 'Invalid code. Please check and try again.' });
   }
 
   // Verification successful
-  otpStore.delete(emailLower); // one-time use
   res.json({ success: true });
 });
 
@@ -253,13 +267,6 @@ app.get('/health', (_req, res) => {
 app.listen(PORT, () => {
   console.log(`Email server listening on http://localhost:${PORT}`);
 });
-
-function generateOtp(minDigits = 4, maxDigits = 6) {
-  const digits = Math.max(minDigits, Math.min(maxDigits, 6));
-  const max = 10 ** digits;
-  const num = crypto.randomInt(0, max);
-  return String(num).padStart(digits, '0');
-}
 
 function isValidEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
