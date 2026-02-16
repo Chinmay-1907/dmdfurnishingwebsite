@@ -28,6 +28,17 @@ function Header({ theme = 'light', onToggleTheme }) {
     return () => window.removeEventListener('scroll', updateScrollState);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('body-no-scroll');
+    } else {
+      document.body.classList.remove('body-no-scroll');
+    }
+    return () => {
+      document.body.classList.remove('body-no-scroll');
+    };
+  }, [menuOpen]);
+
   const headerStyle = {
     '--header-current-height': isScrolled ? 'var(--header-height-compact)' : 'var(--header-height)',
   };
@@ -62,6 +73,7 @@ function Header({ theme = 'light', onToggleTheme }) {
             <li><NavLink to="/projects" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink></li>
             <li><NavLink to="/inspirations" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Inspirations</NavLink></li>
             {/* <li><NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Testimonials</NavLink></li> */}
+            <li className="nav-consultation-mobile"><Link to="/contact" className="btn" onClick={closeMenu}>Book Consultation</Link></li>
             <li className="nav-contact">
               <Link to="/contact" onClick={closeMenu}>
                 <span className="nav-contact-label">Contact</span>

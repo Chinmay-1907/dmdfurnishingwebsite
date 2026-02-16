@@ -30,7 +30,7 @@ const AboutUs = () => {
         }}
       >
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Built for Commercial Spaces.<br/>Designed for Real-World Use.</h1>
+          <h1 className={styles.heroTitle}>Built for Commercial Spaces. Designed for Real-World Use.</h1>
           <p className={styles.heroSubtitle}>
             We provide thoughtfully designed, well-crafted furniture solutions for hospitality and commercial projects—combining practical design, reliable manufacturing, and hands-on project coordination.
           </p>

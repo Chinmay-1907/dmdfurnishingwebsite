@@ -153,18 +153,49 @@
   .inspiration-image {
     aspect-ratio: 16 / 9;
   }
+
+  .inspiration-content {
+    text-align: center;
+  }
+
+  .inspiration-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
+  .inspiration-sections {
+    padding: 40px 20px;
+  }
+  .design-collaboration {
+    padding: 60px 20px;
+  }
   .inspiration-content h2 {
     font-size: 1.8rem;
+  }
+  .inspiration-content p {
+    font-size: 1rem;
   }
 
   .collaboration-content h2 {
     font-size: 2rem;
   }
+  .collaboration-content p {
+    font-size: 1.1rem;
+  }
 
+  .inspirations-cta {
+    padding: 20px 20px 60px;
+  }
   .inspirations-cta h2 {
     font-size: 1.8rem;
+  }
+  .cta-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .cta-button {
+    width: 100%;
   }
 }

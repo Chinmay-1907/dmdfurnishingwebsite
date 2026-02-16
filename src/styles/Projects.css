@@ -208,32 +208,58 @@
 @media (max-width: 1024px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
   
-  .hero-title {
-    font-size: 3.5rem;
+  .projects-hero h1 {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
   }
 }
 
 @media (max-width: 768px) {
+  .projects-hero {
+    height: 40vh;
+  }
+
   .projects-hero h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .projects-hero p {
+    font-size: 1rem;
   }
   
   .project-grid {
     grid-template-columns: 1fr;
     padding: 60px 20px;
   }
-  
-  .card-image {
-    height: 200px;
+
+  .listing-content {
+    padding: 25px;
   }
   
-  .project-cta h2 {
+  .listing-image {
+    height: 220px;
+  }
+
+  .project-categories {
+    padding: 50px 20px;
+  }
+
+  .project-categories h2, .project-cta h2 {
     font-size: 1.8rem;
   }
   
   .project-cta p {
     font-size: 1rem;
+  }
+
+  .category-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .project-cta {
+    padding: 60px 20px;
   }
 }
