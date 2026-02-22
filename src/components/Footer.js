@@ -10,6 +10,7 @@ function Footer() {
           <div className="footer-logo">
             <h2>DMD Furnishing</h2>
             <p>Luxury furniture solutions for discerning clients</p>
+            <Link to="/website-policies" className="footer-policy-link">Website Policies</Link>
           </div>
           <div className="footer-links">
             <div className="footer-column">

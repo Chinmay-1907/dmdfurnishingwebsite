@@ -33,11 +33,22 @@
 }
 
 .footer-logo p {
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(231, 233, 237, 0.72);
-  max-width: 32ch;
+  margin: 0 0 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-policy-link {
+  font-size: 0.9rem;
+  color: var(--text-on-dark-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.footer-policy-link:hover {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
 }
 
 .footer-column h3 {

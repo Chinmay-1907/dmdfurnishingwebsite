@@ -16,6 +16,7 @@ import ProjectDetail from './components/ProjectDetail';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import ScheduleCall from './components/ScheduleCall';
+import WebsitePolicies from './components/WebsitePolicies';
 import Inspirations from './components/Inspirations';
 import InspirationDetail from './components/InspirationDetail';
 import ScrollProgress from './components/ScrollProgress';
@@ -91,6 +92,7 @@ function App() {
             <Route path="/schedule-call" element={<ScheduleCall />} />
             <Route path="/inspirations" element={<Inspirations />} />
             <Route path="/inspirations/:id" element={<InspirationDetail />} />
+            <Route path="/website-policies" element={<WebsitePolicies />} />
           </Routes>
         </main>
         <Footer />
