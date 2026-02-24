@@ -80,9 +80,9 @@ function collectTargets(block) {
 }
 
 function promptFor({ title, type }) {
-  const base = `Photorealistic studio product shot of a ${title}, modern contemporary design, front 3/4 angle, white seamless background, softbox lighting, high detail, realistic materials, clean edges, no watermark, isolated object, no props.`;
+  const base = `Professional, photorealistic image of a high-end ${title.toLowerCase()}. The scene should be bright, well-lit, and professionally staged to highlight the furniture's quality and design. The style should be modern and luxurious, suitable for an architectural digest-style magazine. Ensure the image is clean, sharp, and focuses on the product against a tastefully decorated, generic luxury interior background. Avoid any text, logos, or distracting elements. The final output must be a high-resolution, photorealistic image that looks like a professional photograph, not a computer rendering. No people or animals in the scene. Emphasize realism and high-end materials.`;
   if (type === 'category' || type === 'subcategory' || type === 'collection') {
-    return `Photorealistic studio image representing ${title}, minimal composition, white seamless background, soft shadows, modern aesthetic, no text, no watermark.`;
+    return `Professional, photorealistic image representing the concept of "${title}" in a luxury residential setting. The style should be modern and luxurious, suitable for an architectural digest-style magazine. The image should be a clean, sharp, tastefully decorated, generic luxury interior scene that evokes the essence of "${title}". Avoid any text, logos, or distracting elements. No people or animals in the scene.`;
   }
   return base;
 }

@@ -32,8 +32,9 @@ const AboutUs = () => {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Built for Commercial Spaces. Designed for Real-World Use.</h1>
           <p className={styles.heroSubtitle}>
-            We provide thoughtfully designed, well-crafted furniture solutions for hospitality and commercial projects-combining practical design, reliable manufacturing, and hands-on project coordination.
-          </p>
+          We are a team of passionate designers, engineers, and artisans dedicated to crafting exceptional furniture for commercial spaces. 
+          Our philosophy is simple-to merge timeless design with robust, real-world functionality. We don’t just make furniture; we build long-lasting partnerships founded on trust, transparency, and a shared commitment to excellence.
+        </p>
         </div>
       </section>
       

@@ -125,7 +125,7 @@ function Services() {
     <div className="services-container">
       <SEO
         title="Our Services - DMD Furnishing"
-        description="Explore our comprehensive FF&E services, including product design, manufacturing, and logistics. We deliver end-to-end solutions for commercial projects."
+        description="Explore the comprehensive services offered by DMD Furnishing, from custom design and manufacturing to logistics and installation. We provide end-to-end solutions for hospitality and commercial projects, ensuring quality, durability, and style. Discover how our expertise in casegoods, seating, and custom furniture can bring your vision to life-on time and on budget."
         canonical="https://dmdfurnishing.com/services"
       />
       
