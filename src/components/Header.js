@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { FiMoon, FiSun } from 'react-icons/fi';
+
 import '../styles/Header.css';
 import ProductSearch from './ProductSearch';
 
-function Header({ theme = 'light', onToggleTheme }) {
+function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const isDarkMode = theme === 'dark';
 
   const handleMenuToggle = () => setMenuOpen((open) => !open);
-
   const closeMenu = () => setMenuOpen(false);
-  const handleThemeToggle = () => {
-    if (onToggleTheme) {
-      onToggleTheme();
-    }
-  };
+
 
   useEffect(() => {
     const updateScrollState = () => {
@@ -87,17 +81,7 @@ function Header({ theme = 'light', onToggleTheme }) {
           <Link to="/contact" className="consultation-button" onClick={closeMenu}>
             Book Consultation
           </Link>
-          <button
-            type="button"
-            className="theme-toggle"
-            onClick={handleThemeToggle}
-            aria-label={`${isDarkMode ? 'light' : 'dark'} mode`}
-            aria-pressed={isDarkMode}
-            title={`${isDarkMode ? 'Light' : 'Dark'} mode`}
-          >
-            <span className="visually-hidden">{`${isDarkMode ? 'light' : 'dark'} mode`}</span>
-            {isDarkMode ? <FiSun aria-hidden="true" focusable="false" /> : <FiMoon aria-hidden="true" focusable="false" />}
-          </button>
+
         </div>
       </div>
     </header>

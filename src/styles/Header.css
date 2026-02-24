@@ -178,34 +178,6 @@
   transform: translateY(-2px);
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  background-color: rgba(31, 35, 43, 0.08);
-  color: var(--color-text);
-  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.theme-toggle:hover,
-.theme-toggle:focus-visible {
-  background-color: var(--color-surface-muted);
-  border-color: var(--color-border-strong);
-  transform: translateY(-1px);
-}
-
-.theme-toggle svg {
-  font-size: 1.1rem;
-}
-
-body.dark-mode .theme-toggle {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(158, 176, 204, 0.35);
-}
 
 .hamburger-menu {
   display: none;

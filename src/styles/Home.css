@@ -276,6 +276,7 @@
 }
 
 /* 3. What Sets Us Apart */
+
 .differentiators-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -293,6 +294,13 @@
 .diff-item p {
   color: var(--color-text-secondary);
   line-height: 1.6;
+}
+
+.diff-item-row-last {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 /* 4. Core Capabilities */
@@ -384,7 +392,6 @@
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4/3;
-  group: hover;
 }
 
 .project-card img {

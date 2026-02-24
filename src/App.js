@@ -23,49 +23,10 @@ import ScrollProgress from './components/ScrollProgress';
 import BackButton from './components/BackButton';
 
 function App() {
-  const getInitialTheme = () => {
-    if (typeof window === 'undefined') {
-      return 'light';
-    }
-    try {
-      const storedTheme = window.localStorage.getItem('dmd-theme-preference');
-      if (storedTheme === 'dark' || storedTheme === 'light') {
-        return storedTheme;
-      }
-    } catch (error) {
-      /* Ignore storage read issues */
-    }
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
-  };
-
-  const [theme, setTheme] = useState(getInitialTheme);
-
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      const root = document.documentElement;
-      root.setAttribute('data-theme', theme);
-      if (theme === 'dark') {
-        root.classList.add('dark-mode');
-        document.body.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
-        document.body.classList.remove('dark-mode');
-      }
-    }
-    if (typeof window !== 'undefined') {
-      try {
-        window.localStorage.setItem('dmd-theme-preference', theme);
-      } catch (error) {
-        /* Ignore storage write issues */
-      }
-    }
-  }, [theme]);
-
-  const handleToggleTheme = useCallback(() => {
-    setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.classList.add('dark-mode');
+    document.body.classList.add('dark-mode');
   }, []);
 
   return (
@@ -73,7 +34,7 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <ScrollProgress position="bottom" variant="circle" brandText="DMD" showPercent />
-        <Header theme={theme} onToggleTheme={handleToggleTheme} />
+        <Header />
         <main className="main-content">
           <BackButton />
           <Routes>

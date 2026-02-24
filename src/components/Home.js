@@ -134,7 +134,7 @@ function Home() {
           <div className="hero-content-wrapper">
              <h1 data-aos="fade-up">Custom Hospitality Furniture.<br/>Designed. Manufactured. Delivered.</h1>
              <p className="hero-subheadline" data-aos="fade-up" data-aos-delay="100">
-               End-to-end FF&E solutions for hotels, motels, restaurants, and commercial spaces — built to meet brand standards, timelines, and budgets.
+               End-to-end FF&E solutions for hotels, motels, restaurants, and commercial spaces built to meet brand standards, timelines, and budgets.
              </p>
              <div className="hero-cta-group" data-aos="fade-up" data-aos-delay="200">
                <Link to="/schedule-call" className="btn btn-primary">Schedule a Call</Link>
@@ -207,23 +207,25 @@ function Home() {
                  <h3>Custom & Value-Engineered Solutions</h3>
                  <p>Premium design balanced with cost-effective manufacturing.</p>
               </div>
-              <div className="diff-item" data-aos="fade-up" data-aos-delay="300">
-                 <h3 style={{ 
-                    fontWeight: '700', 
-                    color: 'var(--color-gold)',
-                    border: '2px solid var(--color-magenta)',
-                    backgroundColor: 'rgba(164, 41, 99, 0.1)',
-                    padding: '8px 16px',
-                    display: 'inline-block',
-                    borderRadius: '4px'
-                 }}>Flexible Manufacturing Options</h3>
-                 <p style={{ fontWeight: '500' }}>Domestic and overseas production strategically aligned to project scope, timelines, and budget.</p>
+              <div className="diff-item-row-last">
+                <div className="diff-item" data-aos="fade-up" data-aos-delay="300">
+                   <h3 style={{ 
+                      fontWeight: '700', 
+                      color: 'var(--color-gold)',
+                      border: '2px solid var(--color-magenta)',
+                      backgroundColor: 'rgba(164, 41, 99, 0.1)',
+                      padding: '8px 16px',
+                      display: 'inline-block',
+                      borderRadius: '4px'
+                   }}>Flexible Manufacturing Options</h3>
+                   <p style={{ fontWeight: '500' }}>Domestic and overseas production strategically aligned to project scope, timelines, and budget.</p>
+                </div>
+                <div className="diff-item" data-aos="fade-up" data-aos-delay="400">
+                   <h3>Reliable Execution</h3>
+                   <p>Clear communication, realistic timelines, and dependable delivery.</p>
+                </div>
               </div>
-              <div className="diff-item" data-aos="fade-up" data-aos-delay="400">
-                 <h3>Reliable Execution</h3>
-                 <p>Clear communication, realistic timelines, and dependable delivery.</p>
-              </div>
-           </div>
+            </div>
         </div>
       </section>
 
@@ -276,7 +278,7 @@ function Home() {
                   <h4>Delivery, Installation & Close-Out</h4>
                </div>
             </div>
-            <p className="text-center mt-6 text-muted-light" data-aos="fade-in" data-aos-delay="500">Transparent communication at every stage — no surprises.</p>
+            <p className="text-center mt-6 text-muted-light" data-aos="fade-in" data-aos-delay="500">Transparent communication at every stage - no surprises.</p>
          </div>
       </section>
 

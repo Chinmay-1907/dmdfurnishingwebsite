@@ -16,7 +16,7 @@ function ScheduleCall() {
         <div className="schedule-hero-content">
           <h1>Speak with a Hospitality Furniture Specialist</h1>
           <p className="schedule-hero-subtitle">
-            Get expert guidance on custom FF&E, materials, timelines, and budgets — no obligation.
+            Get expert guidance on custom FF&E, materials, timelines, and budgets - no obligation.
           </p>
           <div className="hero-cta-group">
             <a href="#scheduling-section" className="btn-primary">Schedule a Call</a>
