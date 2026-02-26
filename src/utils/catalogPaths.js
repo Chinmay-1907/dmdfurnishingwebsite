@@ -25,7 +25,7 @@ export function toCatalogSlug(str) {
     .trim()
     .toLowerCase()
     .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9\-]/g, '');
+    .replace(/[^a-z0-9-]/g, '');
 }
 
 // Compare an XML id/name to a URL param, normalizing both via slug rules

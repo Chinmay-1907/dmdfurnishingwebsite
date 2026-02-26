@@ -157,6 +157,8 @@
 					</specifications>
 				</product>
 			</subcategory>
+
+
 			<!-- Removed misplaced Vanities block from Hospital; will reinsert under Hotel → Guest Room -->
 		</furnitureType>
 		<furnitureType id="Waiting Area" name="Waiting Area" description="Waiting Area for Hospital" image="/Images/Hospital/Waiting Area/Waiting Area.jpg">
@@ -887,6 +889,7 @@
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand (2).png" alt="Single Drawer Night Stand - single drawer night stand (2)" />
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" alt="Single Drawer Night Stand - single drawer night stand" />
+						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/Nightstand.png" alt="Single Drawer Night Stand - single drawer night stand" />
 					</images>
 					<specifications>
 						<spec name="Width" value="18-24&quot; (Customizable)" />

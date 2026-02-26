@@ -318,7 +318,7 @@ function Products() {
     if (needsRedirect) {
       navigate(`/products/${canonicalInstitution}/${canonicalFurniture}/${canonicalSubcategory}`, { replace: true });
     }
-  }, [catalog, institutionId, furnitureTypeId, subcategoryId]);
+  }, [catalog, institutionId, furnitureTypeId, subcategoryId, navigate]);
 
   // SEO: Update page-level metadata based on current selection/context
   const [seoData, setSeoData] = useState({

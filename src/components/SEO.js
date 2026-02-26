@@ -132,7 +132,7 @@ const SEO = ({ title, description, canonical, schema, type = 'website', image })
     }
 
     // No cleanup: meta/link tags remain valid across navigation; JSON-LD is updated per call
-  }, [fullTitle, description, currentUrl, type, metaImage, siteTitle, schema]);
+  }, [fullTitle, description, currentUrl, type, metaImage, schema]);
 
   return null;
 };
