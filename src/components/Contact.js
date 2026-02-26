@@ -126,6 +126,7 @@ function Contact() {
     }
   }, [
     step,
+    formData,
     formData.projectCategory, 
     formData.roomCount, 
     formData.roomTypes, 
