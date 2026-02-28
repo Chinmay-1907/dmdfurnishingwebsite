@@ -900,6 +900,23 @@
 					</specifications>
 				</product>
 			</subcategory>
+			<subcategory id="Chair" name="Chair" description="Guest room Chair for desk and coffee table hospitality environments" image="/Images/Hotel/Guest Room/Chair/Chair-1.png">
+				<product id="Chair" name="Chair" description="Durable guest room Chair. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Chair/Chair-2.png" tags="Chair,hotel,guest room,customizable">
+					<images>
+						<image src="/Images/Hotel/Guest Room/Chair/Chair-2.png" alt="Chair" />
+						<image src="/Images/Hotel/Guest Room/Chair/Chair-3.png" alt="Chair" />
+					</images>
+					<specifications>
+						<spec name="Width" value="22-28&quot; (Customizable)" />
+						<spec name="Depth" value="17-18&quot; (Customizable)" />
+						<spec name="Height" value="32-47&quot; (Customizable)" />
+						<spec name="Seat Height" value="17.5-18&quot; (Customizable)" />
+						<spec name="Material" value="Mesh/fabric/PU/Wood/Metal" />
+						<spec name="Finish" value="Black/Color selection" />
+						<spec name="Customization" value="Dimensions, finishes, and Style" />
+					</specifications>
+				</product>
+			</subcategory>
 						
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
@@ -915,7 +932,7 @@
 						<spec name="Height" value="32-47&quot; (Customizable)" />
 						<spec name="Material" value="Plywood/MDF - veneer/laminate base with HPL surface (customizable)" />
 						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
-						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+						<spec name="Customization" value="Dimensions, finishes, and hardware (customizable)" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -933,7 +950,7 @@
 						<spec name="Height" value="47-87&quot; (Customizable)" />
 						<spec name="Material" value="Plywood/MDF - veneer/laminate base with HPL surface (customizable)" />
 						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
-						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+						<spec name="Customization" value="Dimensions, finishes, and hardware (customizable)" />
 					</specifications>
 				</product>
 			</subcategory>
@@ -949,12 +966,12 @@
 						<image src="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 5.png" alt="Luggage Bentch" />
 					</images>
 					<specifications>
-						<spec name="Width" value="24-72&quot; (Customizable)" />
-						<spec name="Depth" value="23-25&quot; (Customizable)" />
-						<spec name="Height" value="47-87&quot; (Customizable)" />
+						<spec name="Width" value="35-40&quot; (Customizable)" />
+						<spec name="Depth" value="20-25&quot; (Customizable)" />
+						<spec name="Height" value="20&quot; (Customizable)" />
 						<spec name="Material" value="Plywood/MDF - veneer/laminate base with HPL surface (customizable)" />
 						<spec name="Finish" value="HPL/laminate; edge-banded, moisture-sealed edges" />
-						<spec name="Customization" value="Dimensions, finishes, basins, and hardware (customizable)" />
+						<spec name="Customization" value="Dimensions, finishes, and hardware (customizable)" />
 					</specifications>
 				</product>
 			</subcategory>	
