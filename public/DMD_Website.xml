@@ -1168,6 +1168,12 @@
 				<product id="3-Siter Sofa" name="3-Siter Sofa" description="Three-seater sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" tags="3-siter,sofa">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" alt="3-Siter Sofa - 9" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 1.png" alt="3-Siter Sofa - 9" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 2.png" alt="3-Siter Sofa - 9" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 3.png" alt="3-Siter Sofa - 9" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 4.png" alt="3-Siter Sofa - 9" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 6.png" alt="3-Siter Sofa - 9" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 6 back.png" alt="3-Siter Sofa - 9" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1176,6 +1182,19 @@
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
 					</specifications>
+				<product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" tags="Sectional Sofa,sofa">
+					<images>
+						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" alt="Sectional Sofa" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 2.png" alt="Sectional Sofa" />
+						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 3.png" alt="Sectional Sofa" />
+					</images>
+					<specifications>
+						<spec name="Width" value="48-72&quot; (Customizable)" />
+						<spec name="Depth" value="24-36&quot; (Customizable)" />
+						<spec name="Height" value="30-45&quot; (Customizable)" />
+						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
+						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
+					</specifications>	
 				</product>
 			</subcategory>
 		</furnitureType>
