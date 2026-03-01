@@ -75,6 +75,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/bed-frame</loc>
     <priority>0.7</priority>
   </url>
@@ -83,11 +91,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board</loc>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/chair</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand</loc>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/tv-media-penal</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/amenity-tower</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/luggage-bentch</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -467,6 +483,34 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/full-xl-head-board</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/king-mdf-headboard-unit</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/king-upholstered-headboard-unit</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/queen-head-board</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand/double-drawer-night-stand</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand/open-shelf-night-stand</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand/single-drawer-night-stand</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/bed-frame/full-xl-bed-frame---metal</loc>
     <priority>0.7</priority>
   </url>
@@ -499,31 +543,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/full-xl-head-board</loc>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/chair/chair</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/king-mdf-headboard-unit</loc>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/tv-media-penal/tv-media-penal-1</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/king-upholstered-headboard-unit</loc>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/amenity-tower/tv-media-penal-1</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/head-board/queen-head-board</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand/double-drawer-night-stand</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand/open-shelf-night-stand</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/night-stand/single-drawer-night-stand</loc>
+    <loc>https://www.dmdfurnishing.com/products/hotel/guest-room/luggage-bentch/luggage-bentch</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -580,6 +612,10 @@
   </url>
   <url>
     <loc>https://www.dmdfurnishing.com/products/hotel/hotel-seating/sofa/3-siter-sofa</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dmdfurnishing.com/products/hotel/hotel-seating/sofa/sectional-sofa</loc>
     <priority>0.7</priority>
   </url>
   <url>
