@@ -1181,8 +1181,9 @@
 						<spec name="Height" value="30-45&quot; (Customizable)" />
 						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
 						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
-					</specifications>
-				<product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" tags="Sectional Sofa,sofa">
+          </specifications>
+        </product>
+        <product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" tags="Sectional Sofa,sofa">
 					<images>
 						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" alt="Sectional Sofa" />
 						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 2.png" alt="Sectional Sofa" />
@@ -1198,7 +1199,6 @@
 				</product>
 			</subcategory>
 		</furnitureType>
-		<!-- Lobby Area moved to top-level place -->
 	</place>
 	<place id="office" name="Office" description="Office furniture collection" image="/Images/Office/Office.jpg">
 		<furnitureType id="Seating" name="Seating" description="Seating for Office" image="/Images/Office/Seating/Office Seating.jpg">
@@ -2394,7 +2394,6 @@
                 </product>
             </subcategory>
         </furnitureType>
-
         <furnitureType id="Bedroom" name="Bedroom" description="Furniture for bedrooms" image="/Images/Residential/Bedroom/Bedroom.png">
             <subcategory id="Bed Frame" name="Bed Frame" description="Bed frames for every size" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png">
                 <product id="King Bed Frame" name="King Bed Frame" description="King-size bed frame with sturdy construction and optional storage" image="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png" tags="bed,king,frame">

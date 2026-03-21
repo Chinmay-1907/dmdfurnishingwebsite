@@ -29,7 +29,7 @@ const CATEGORIES = [
     image: '/Images/Residential/Residential.png'
   },
   {
-    id: 'educational-facilities',
+    id: 'university',
     title: 'Educational Facilities',
     description: 'Support learning and collaboration with flexible, durable furniture for classrooms, libraries, and common areas.',
     image: '/Images/University/University.png' 
@@ -62,7 +62,7 @@ const ProductOverview = () => {
         {CATEGORIES.map((category) => {
           // Map category IDs to the requested anchor IDs
           let anchorId = category.id;
-          if (category.id === 'educational-facilities') anchorId = 'education';
+          if (category.id === 'university') anchorId = 'education';
           if (category.id === 'hospital') anchorId = 'healthcare';
           
           return (

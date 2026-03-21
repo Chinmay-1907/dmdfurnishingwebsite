@@ -51,7 +51,7 @@ function Products() {
           throw new Error('Invalid XML: missing <places> root');
         }
         
-        const placeElements = xmlDoc.getElementsByTagName('place');
+        const placeElements = Array.from(placesRoot.children).filter(child => child.tagName === 'place');
         if (placeElements.length === 0) {
           throw new Error('No <place> elements found');
         }
@@ -69,7 +69,7 @@ function Products() {
             furnitureTypes: []
           };
           
-          const furnitureTypeElements = placeEl.getElementsByTagName('furnitureType');
+          const furnitureTypeElements = Array.from(placeEl.children).filter(child => child.tagName === 'furnitureType');
           
           for (let j = 0; j < furnitureTypeElements.length; j++) {
             const furnitureTypeEl = furnitureTypeElements[j];
@@ -81,7 +81,7 @@ function Products() {
               subcategories: []
             };
             
-            const subcategoryElements = furnitureTypeEl.getElementsByTagName('subcategory');
+            const subcategoryElements = Array.from(furnitureTypeEl.children).filter(child => child.tagName === 'subcategory');
             
             for (let k = 0; k < subcategoryElements.length; k++) {
               const subcategoryEl = subcategoryElements[k];
@@ -93,7 +93,7 @@ function Products() {
                   products: []
                 };
               
-              const productElements = subcategoryEl.getElementsByTagName('product');
+              const productElements = Array.from(subcategoryEl.children).filter(child => child.tagName === 'product');
               
               for (let l = 0; l < productElements.length; l++) {
                 const productEl = productElements[l];
@@ -244,7 +244,14 @@ function Products() {
     
     // Find the place by institutionId
     const placeIndex = catalog.findIndex(place => idsMatch(place.id, institutionId));
-    if (placeIndex === -1) return;
+    
+    if (placeIndex === -1) {
+      // Place not found, reset to show all spaces
+      setSelectedPlaceIndex(null);
+      setSelectedFurnitureTypeIndex(null);
+      setSelectedSubcategoryIndex(null);
+      return;
+    }
     
     setSelectedPlaceIndex(placeIndex);
     
