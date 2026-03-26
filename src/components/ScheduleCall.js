@@ -1,12 +1,76 @@
 import React from 'react';
 import '../styles/ScheduleCall.css';
+import SEO from './SEO';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the consultation free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the initial 30-minute consultation is completely free with no obligation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need finalized drawings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, we can start with rough concepts or floor plans. If you have them, great! If not, we can help guide the design process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with my designer or architect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We often collaborate with design teams to ensure manufacturability and budget alignment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle small renovations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we assist with renovations of all sizes. Whether you are refreshing a lobby, updating a restaurant, or renovating a block of rooms, our team provides custom solutions to match your needs and budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer value engineering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, value engineering is a core part of our service to help you achieve your design vision within budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this lead to an in-person meeting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, depending on the project scope and location, a site visit or showroom meeting can be the next step."
+      }
+    }
+  ]
+};
 
 function ScheduleCall() {
   return (
     <div className="schedule-call-page">
+      <SEO
+        title="Schedule a Free Consultation | Hospitality Furniture Specialist"
+        description="Book a free 30-minute consultation with DMD Furnishing. Discuss custom FF&E, materials, timelines, and budgets for your hospitality or commercial project."
+        canonical="https://dmdfurnishing.com/schedule-call"
+        schema={faqSchema}
+      />
       {/* 1. Hero Section */}
-      <section 
+      <section
         className="schedule-hero"
+        role="img"
+        aria-label="Schedule a free hospitality furniture consultation with DMD Furnishing"
         style={{
           background: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Images/Contact_Page.jpg')",
           backgroundSize: "cover",

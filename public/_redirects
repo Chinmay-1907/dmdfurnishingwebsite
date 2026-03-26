@@ -1,2 +1,14 @@
 /api/*  /.netlify/functions/:splat  200
+
+# 301 redirects for fixed URL typos
+/products/hotel/guest-room/tv-media-penal/*  /products/hotel/guest-room/tv-media-panel/:splat  301
+/products/hotel/guest-room/tv-media-penal  /products/hotel/guest-room/tv-media-panel  301
+/products/hotel/guest-room/amenity-tower/tv-media-penal-1  /products/hotel/guest-room/amenity-tower/tv-media-panel-1  301
+/products/hotel/guest-room/luggage-bentch/*  /products/hotel/guest-room/luggage-bench/:splat  301
+/products/hotel/guest-room/luggage-bentch  /products/hotel/guest-room/luggage-bench  301
+
+# 301 redirects for lobby area duplicate segment fix
+/products/lobby-area/lobby-area/*  /products/lobby-area/lobby-furniture/:splat  301
+/products/lobby-area/lobby-area  /products/lobby-area/lobby-furniture  301
+
 /*  /index.html  200

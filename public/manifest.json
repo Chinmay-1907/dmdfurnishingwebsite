@@ -6,6 +6,16 @@
       "src": "DMD_Furnishing_Logo_Embedded.svg",
       "sizes": "any",
       "type": "image/svg+xml"
+    },
+    {
+      "src": "DMD_Furnishing_Logo_Embedded.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "DMD_Furnishing_Logo_Embedded.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",

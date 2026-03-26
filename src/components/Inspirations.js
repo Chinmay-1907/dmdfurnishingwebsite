@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../styles/AboutUs.module.css';
+import SEO from './SEO';
 
 function Inspirations() {
   useEffect(() => {
@@ -45,8 +46,13 @@ function Inspirations() {
 
   return (
     <div className="inspirations-container">
+      <SEO
+        title="Design Inspirations | Hospitality Furniture Ideas"
+        description="Explore furniture design inspirations for hospitality projects. Wood veneers, upholstery details, casegoods craftsmanship, and custom finish options by DMD Furnishing."
+        canonical="https://dmdfurnishing.com/inspirations"
+      />
       {/* Hero Section */}
-      <section className={styles.heroSection} style={{
+      <section className={styles.heroSection} role="img" aria-label="Design inspirations for hospitality furniture projects" style={{
         background: `linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.35)), url("${encodeURI('/Images/Our_Projects.jpg')}" )`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -63,8 +69,9 @@ function Inspirations() {
         {inspirationSections.map((section, index) => (
           <div key={index} className={`inspiration-section ${index % 2 !== 0 ? 'reverse' : ''}`} data-aos="fade-up">
             <div className="inspiration-image-wrapper">
-              <div 
-                className="inspiration-image" 
+              <div
+                className="inspiration-image"
+                role="img"
                 style={{ backgroundImage: `url("${encodeURI(section.image)}")` }}
                 aria-label={section.alt}
               />

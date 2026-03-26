@@ -128,33 +128,6 @@ export function setBreadcrumbJsonLd(items) {
   injectJsonLd('seo-breadcrumbs', json);
 }
 
-export function setProductJsonLd({
-  name,
-  description,
-  image,
-  urlPath,
-  brand = 'DMD Furnishing',
-  sku,
-  offers
-}) {
-  const origin = typeof window !== 'undefined' ? window.location.origin : '';
-  const json = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name,
-    description,
-    image: image ? [image] : undefined,
-    url: origin + (urlPath || '/'),
-    brand: {
-      '@type': 'Brand',
-      name: brand
-    },
-  };
-  if (sku) json.sku = sku;
-  if (offers) json.offers = offers;
-  injectJsonLd('seo-product', json);
-}
-
 export function setProjectJsonLd({
   name,
   description,
@@ -166,7 +139,7 @@ export function setProjectJsonLd({
   const origin = typeof window !== 'undefined' ? window.location.origin : '';
   const json = {
     '@context': 'https://schema.org',
-    '@type': 'Project',
+    '@type': 'CreativeWork',
     name,
     description,
     image: image ? [image] : undefined,

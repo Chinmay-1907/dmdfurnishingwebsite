@@ -24,7 +24,8 @@
   gap: 32px;
 }
 
-.footer-logo h2 {
+.footer-logo h2,
+.footer-logo .footer-brand-title {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 500;
@@ -51,7 +52,8 @@
   border-bottom-color: var(--color-gold);
 }
 
-.footer-column h3 {
+.footer-column h3,
+.footer-column .footer-column-title {
   font-family: var(--font-sans);
   font-size: 0.82rem;
   letter-spacing: 0.34em;

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:dmdfurnishing.com)",
+      "WebFetch(domain:www.dmdfurnishing.com)",
+      "Bash(mv \"C:/Users/chin/dmdfurnishingwebsite-1/FULL-AUDIT-REPORT.md\" \"C:/Users/chin/dmdfurnishingwebsite-1/seo-audits/01-FULL-SITE-AUDIT.md\")",
+      "Bash(mv \"C:/Users/chin/dmdfurnishingwebsite-1/ACTION-PLAN.md\" \"C:/Users/chin/dmdfurnishingwebsite-1/seo-audits/02-ACTION-PLAN.md\")",
+      "Bash(npx react-scripts:*)",
+      "Bash(node scripts/generate-sitemap.js)",
+      "Bash(ls \"C:/Users/chin/dmdfurnishingwebsite-1/public/og-image\"*)"
+    ]
+  }
+}

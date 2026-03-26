@@ -4,6 +4,7 @@ import '../styles/Inspirations.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from '../styles/AboutUs.module.css';
+import SEO from './SEO';
 
 function InspirationDetail() {
   const { id } = useParams();
@@ -121,6 +122,12 @@ function InspirationDetail() {
 
   return (
     <div className="inspiration-detail-container">
+      <SEO
+        title={`${inspiration.title} | Design Inspirations`}
+        description={inspiration.description ? inspiration.description.substring(0, 155) + '...' : 'Explore this design inspiration from DMD Furnishing.'}
+        canonical={`https://dmdfurnishing.com/inspirations/${id}`}
+        image={inspiration.image}
+      />
       <section className={styles.heroSection} style={{
         background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
         backgroundSize: 'cover',
@@ -164,7 +171,7 @@ function InspirationDetail() {
             <h2>Gallery</h2>
             <div className="inspiration-gallery-grid">
               {inspiration.relatedImages.map((image, index) => (
-                <div key={index} className="gallery-image" style={{ backgroundImage: `url(${image})` }}></div>
+                <div key={index} className="gallery-image" style={{ backgroundImage: `url(${image})` }} role="img" aria-label={`${inspiration.title} gallery image ${index + 1}`}></div>
               ))}
             </div>
           </div>

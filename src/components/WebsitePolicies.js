@@ -11,7 +11,7 @@ const WebsitePolicies = () => {
     <div className={styles.policiesContainer}>
       <SEO 
         title="Website Policies | DMD Furnishing"
-        description="Review the website policies, terms of use, and disclaimers for the DMD Furnishing website. Understand the conditions of using our services and content."
+        description="Review DMD Furnishing's website policies including terms of use, privacy policy, CCPA and GDPR compliance. Understand the conditions of using our services and content."
         canonical="https://dmdfurnishing.com/website-policies"
       />
       <div className={styles.pageHeader}>
@@ -51,7 +51,33 @@ const WebsitePolicies = () => {
         </section>
 
         <section>
-          <h2>7. Changes to These Policies</h2>
+          <h2>7. Privacy Policy</h2>
+          <p>DMD Furnishing respects your privacy and is committed to protecting personal information you may provide through our website. This section explains what information we collect and how we use it.</p>
+          <h3>Information We Collect</h3>
+          <p>We may collect personal information that you voluntarily provide when using our contact forms, scheduling consultations, or requesting quotes. This may include your name, email address, phone number, company name, and project details.</p>
+          <h3>How We Use Your Information</h3>
+          <p>We use the information we collect to respond to your inquiries, provide project consultations, send relevant communications about our services, and improve our website experience. We do not sell, trade, or rent your personal information to third parties.</p>
+          <h3>Cookies and Analytics</h3>
+          <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience and analyze site usage. You can control cookie preferences through your browser settings.</p>
+          <h3>Data Security</h3>
+          <p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+          <h3>Contact Us</h3>
+          <p>For questions about our privacy practices, contact us at <a href="mailto:Sales@DMDFurnishing.com" style={{ color: 'var(--color-gold, #c9a96e)' }}>Sales@DMDFurnishing.com</a> or write to DMD Furnishing, 56 Leonard St Unit 5, Foxboro, MA 02035.</p>
+        </section>
+
+        <section>
+          <h2>8. California Privacy Rights (CCPA)</h2>
+          <p>If you are a California resident, you have the right to request disclosure of the categories and specific pieces of personal information we have collected about you. You may also request deletion of your personal information, subject to certain exceptions. To exercise these rights, contact us at <a href="mailto:Sales@DMDFurnishing.com" style={{ color: 'var(--color-gold, #c9a96e)' }}>Sales@DMDFurnishing.com</a>.</p>
+        </section>
+
+        <section>
+          <h2>9. European Privacy Rights (GDPR)</h2>
+          <p>If you are located in the European Economic Area or United Kingdom, you have additional rights regarding your personal data, including the right to access, rectify, erase, restrict processing, and data portability. You also have the right to withdraw consent at any time. To exercise these rights, contact us at <a href="mailto:Sales@DMDFurnishing.com" style={{ color: 'var(--color-gold, #c9a96e)' }}>Sales@DMDFurnishing.com</a>.</p>
+          <p>Our legal basis for processing personal information includes consent, contractual necessity, and legitimate business interests in responding to commercial inquiries.</p>
+        </section>
+
+        <section>
+          <h2>10. Changes to These Policies</h2>
           <p>DMD Furnishing may revise these website policies at any time without notice. By using this website, you are agreeing to be bound by the then-current version of these policies.</p>
           <p><em>Last Updated: February 16, 2026</em></p>
         </section>

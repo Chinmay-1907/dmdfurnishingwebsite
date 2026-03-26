@@ -103,10 +103,12 @@ const ProductGallery = ({ images }) => {
           >
             ×
           </button>
-          <img 
-            src={images[currentSlide].url} 
-            alt={images[currentSlide].alt} 
-            className="lightbox-image" 
+          <img
+            src={images[currentSlide].url}
+            alt={images[currentSlide].alt}
+            className="lightbox-image"
+            loading="lazy"
+            style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }}
           />
           <div className="lightbox-navigation">
             <button 
@@ -149,10 +151,12 @@ const ProductGallery = ({ images }) => {
           <Slider ref={heroSlider} {...heroSettings}>
             {images.map((image, index) => (
               <div key={image.id} className="hero-slide">
-                <img 
-                  src={image.url} 
-                  alt={image.alt} 
-                  className="hero-image" 
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  className="hero-image"
+                  loading="lazy"
+                  style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }}
                   onClick={() => setShowLightbox(true)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -166,10 +170,12 @@ const ProductGallery = ({ images }) => {
           </Slider>
         ) : (
           <div className="loading-slider">
-            <img 
-              src={images[0]?.url} 
-              alt={images[0]?.alt || 'Product image'} 
-              className="hero-image" 
+            <img
+              src={images[0]?.url}
+              alt={images[0]?.alt || 'Product image'}
+              className="hero-image"
+              loading="lazy"
+              style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }}
             />
           </div>
         )}
@@ -196,10 +202,12 @@ const ProductGallery = ({ images }) => {
                   role="button"
                   tabIndex="0"
                 >
-                  <img 
-                    src={image.url} 
-                    alt={`Thumbnail for ${image.alt}`} 
-                    className="thumbnail-image" 
+                  <img
+                    src={image.url}
+                    alt={`Thumbnail for ${image.alt}`}
+                    className="thumbnail-image"
+                    loading="lazy"
+                    style={{ aspectRatio: '1/1', width: '100%', height: 'auto' }}
                   />
                 </button>
               </div>
@@ -210,10 +218,12 @@ const ProductGallery = ({ images }) => {
             {images.slice(0, 5).map((image, index) => (
               <div key={image.id} className="thumbnail-slide">
                 <div className="thumbnail-button">
-                  <img 
-                    src={image.url} 
-                    alt={`Thumbnail for ${image.alt}`} 
-                    className="thumbnail-image" 
+                  <img
+                    src={image.url}
+                    alt={`Thumbnail for ${image.alt}`}
+                    className="thumbnail-image"
+                    loading="lazy"
+                    style={{ aspectRatio: '1/1', width: '100%', height: 'auto' }}
                   />
                 </div>
               </div>

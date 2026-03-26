@@ -260,16 +260,38 @@ function ProductDetail() {
       image: (product.images && product.images.length > 0) ? product.images.map(i => i.src) : [product.image],
       brand: { '@type': 'Brand', name: 'DMD Furnishing' },
       sku: product.id,
+      category: `${institution.name} > ${furnitureType.name} > ${subcategory.name}`,
+      manufacturer: { '@type': 'Organization', name: 'DMD Furnishing', '@id': 'https://dmdfurnishing.com/#organization' },
     };
+    if (product.price) {
+      productLd.offers = {
+        '@type': 'Offer',
+        'priceCurrency': 'USD',
+        'price': product.price,
+        'availability': 'https://schema.org/InStock',
+        'url': canonicalUrl
+      };
+    } else {
+      productLd.offers = {
+        '@type': 'Offer',
+        'availability': 'https://schema.org/InStock',
+        'url': canonicalUrl,
+        'priceSpecification': {
+          '@type': 'PriceSpecification',
+          'priceCurrency': 'USD'
+        }
+      };
+    }
 
     const breadcrumbsLd = {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Products', item: `${origin}/products` },
-        { '@type': 'ListItem', position: 2, name: institution.name, item: `${origin}/products/${toCatalogSlug(institution.id)}` },
-        { '@type': 'ListItem', position: 3, name: furnitureType.name, item: `${origin}/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}` },
-        { '@type': 'ListItem', position: 4, name: subcategory.name, item: `${origin}/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}/${toCatalogSlug(subcategory.id)}` },
-        { '@type': 'ListItem', position: 5, name: product.name, item: canonicalUrl },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${origin}/` },
+        { '@type': 'ListItem', position: 2, name: 'Products', item: `${origin}/products` },
+        { '@type': 'ListItem', position: 3, name: institution.name, item: `${origin}/products/${toCatalogSlug(institution.id)}` },
+        { '@type': 'ListItem', position: 4, name: furnitureType.name, item: `${origin}/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}` },
+        { '@type': 'ListItem', position: 5, name: subcategory.name, item: `${origin}/products/${toCatalogSlug(institution.id)}/${toCatalogSlug(furnitureType.id)}/${toCatalogSlug(subcategory.id)}` },
+        { '@type': 'ListItem', position: 6, name: product.name, item: canonicalUrl },
       ],
     };
 
@@ -378,6 +400,7 @@ function ProductDetail() {
               src={imagesArr[activeIndex]?.src}
               alt={imagesArr[activeIndex]?.alt || detail.product.name}
               loading="lazy"
+              style={{ aspectRatio: '4/3', width: '100%', height: 'auto' }}
             />
             {imagesArr.length > 1 && (
               <div className="gallery-nav" aria-hidden="false">
@@ -403,7 +426,7 @@ function ProductDetail() {
                   aria-label={`View image ${idx + 1}`}
                   type="button"
                 >
-                  <img src={img.src} alt={img.alt || detail.product.name} loading="lazy" />
+                  <img src={img.src} alt={img.alt || detail.product.name} loading="lazy" style={{ aspectRatio: '1/1', width: '100%', height: 'auto' }} />
                 </button>
               ))}
             </div>

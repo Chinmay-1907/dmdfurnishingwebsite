@@ -8,13 +8,13 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-logo">
-            <h2>DMD Furnishing</h2>
-            <p>Luxury furniture solutions for discerning clients</p>
+            <div className="footer-brand-title">DMD Furnishing</div>
+            <p>Commercial furniture solutions for hospitality and corporate projects</p>
             <Link to="/website-policies" className="footer-policy-link">Website Policies</Link>
           </div>
           <div className="footer-links">
             <div className="footer-column">
-              <h3>Quick Links</h3>
+              <div className="footer-column-title">Quick Links</div>
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
@@ -23,7 +23,7 @@ function Footer() {
               </ul>
             </div>
             <div className="footer-column">
-              <h3>Services</h3>
+              <div className="footer-column-title">Services</div>
               <ul>
                 <li><Link to="/services#design-consultation">Design Consultation (Hospitality)</Link></li>
                 <li><Link to="/services#custom-manufacturing">Custom Furniture Manufacturing</Link></li>
@@ -32,7 +32,7 @@ function Footer() {
               </ul>
             </div>
             <div className="footer-column">
-              <h3>Contact</h3>
+              <div className="footer-column-title">Contact</div>
               <ul>
                 <li>56 Leonard St Unit 5, Foxboro, MA 02035</li>
                 <li>+1 (617) 223-7781</li>
@@ -46,10 +46,10 @@ function Footer() {
             <p>&copy; {new Date().getFullYear()} DMD Furnishing. All Rights Reserved.</p>
           </div>
           <div className="social-links">
-            <a href="https://facebook.com/dmdfurnishing" className="social-icon" aria-label="Visit our Facebook page">FB</a>
-            <a href="https://instagram.com/dmdfurnishing" className="social-icon" aria-label="Visit our Instagram profile">IG</a>
-            <a href="https://linkedin.com/company/dmdfurnishing" className="social-icon" aria-label="Visit our LinkedIn page">LI</a>
-            <a href="https://pinterest.com/dmdfurnishing" className="social-icon" aria-label="Visit our Pinterest board">PT</a>
+            <a href="https://facebook.com/dmdfurnishing" className="social-icon" aria-label="Visit our Facebook page" target="_blank" rel="noopener noreferrer">FB</a>
+            <a href="https://instagram.com/dmdfurnishing" className="social-icon" aria-label="Visit our Instagram profile" target="_blank" rel="noopener noreferrer">IG</a>
+            <a href="https://linkedin.com/company/dmdfurnishing" className="social-icon" aria-label="Visit our LinkedIn page" target="_blank" rel="noopener noreferrer">LI</a>
+            <a href="https://pinterest.com/dmdfurnishing" className="social-icon" aria-label="Visit our Pinterest board" target="_blank" rel="noopener noreferrer">PT</a>
           </div>
         </div>
       </div>

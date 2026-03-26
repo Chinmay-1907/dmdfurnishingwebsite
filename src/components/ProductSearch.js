@@ -191,7 +191,7 @@ function ProductSearch() {
               }}
             >
               <div className="result-left">
-                {it.image ? <img src={it.image} alt="" className="result-thumb" /> : <div className="result-thumb placeholder" />}
+                {it.image ? <img src={it.image} alt={it.name || 'Product thumbnail'} className="result-thumb" loading="lazy" width="48" height="48" /> : <div className="result-thumb placeholder" />}
               </div>
               <div className="result-right">
                 <div className="result-title">{it.name}</div>

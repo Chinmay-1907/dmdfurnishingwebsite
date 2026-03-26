@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Services.css';
 import SEO from './SEO';
-import { setPageSEO } from '../utils/seo';
 
 // Process Steps Data
 const processSteps = [
@@ -106,16 +105,100 @@ const whyChooseUsPoints = [
   'Practical solutions designed for real-world use'
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How DMD Furnishing Delivers Commercial Furniture Projects",
+  "description": "DMD Furnishing follows a structured 6-step process to deliver custom commercial furniture from initial consultation through project close-out.",
+  "step": processSteps.map((step, idx) => ({
+    "@type": "HowToStep",
+    "position": idx + 1,
+    "name": step.title,
+    "text": step.description
+  }))
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "name": "DMD Furnishing Services",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Consultation & Project Discovery",
+            "description": "Every project begins with a detailed consultation focused on understanding scope, functional needs, timelines, and budget considerations. Where appropriate, we collaborate with clients, designers, and contractors to review layouts, usage requirements, and space constraints—supporting informed decisions early in the process.",
+            "provider": { "@type": "Organization", "name": "DMD Furnishing" },
+            "areaServed": "US"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Design Support & Specifications",
+            "description": "We provide design support to help translate project intent into clear furniture specifications. This includes material selection, finish coordination, dimensional planning, and alignment with brand or operational requirements.",
+            "provider": { "@type": "Organization", "name": "DMD Furnishing" },
+            "areaServed": "US"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Manufacturing & Sourcing",
+            "description": "To support a wide range of project needs, we operate through a hybrid manufacturing and sourcing model, combining domestic production capabilities with an established overseas supply chain. Domestic manufacturing supports projects requiring shorter lead times, prototyping, phased deliveries, or revisions. Overseas manufacturing and sourcing allows scalable production and material flexibility for larger programs.",
+            "provider": { "@type": "Organization", "name": "DMD Furnishing" },
+            "areaServed": "US"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "FF&E (Furniture & Fixtures) Project Management",
+            "description": "End-to-end furniture and fixture project management for hospitality environments, from design coordination through manufacturing and installation. We manage specifications, production, logistics, and on-site execution to deliver projects on time and on brand.",
+            "provider": { "@type": "Organization", "name": "DMD Furnishing" },
+            "areaServed": "US"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Logistics & Delivery Coordination",
+            "description": "We coordinate logistics and delivery planning to align with project schedules and site readiness. This includes packaging coordination, delivery sequencing, and staging considerations to support efficient installation.",
+            "provider": { "@type": "Organization", "name": "DMD Furnishing" },
+            "areaServed": "US"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Installation Support",
+            "description": "Installation services are provided through experienced teams and trusted partners, depending on project location and scope. Our role focuses on coordination, sequencing, and readiness—supporting a smooth transition from delivery to final placement.",
+            "provider": { "@type": "Organization", "name": "DMD Furnishing" },
+            "areaServed": "US"
+          }
+        }
+      ]
+    },
+    howToSchema
+  ]
+};
+
 function Services() {
   const navigate = useNavigate();
-  
-  useEffect(() => {
-    setPageSEO({
-      title: 'Commercial Furniture Services | Custom Manufacturing & Project Solutions',
-      description: 'Comprehensive commercial furniture services including custom manufacturing, project-based solutions, and global sourcing for hospitality and corporate environments.',
-      canonicalPath: '/services'
-    });
-  }, []);
 
   const handleGetInTouch = () => {
     navigate('/contact');
@@ -124,17 +207,18 @@ function Services() {
   return (
     <div className="services-container">
       <SEO
-        title="Our Services - DMD Furnishing"
-        description="Explore the comprehensive services offered by DMD Furnishing, from custom design and manufacturing to logistics and installation. We provide end-to-end solutions for hospitality and commercial projects, ensuring quality, durability, and style. Discover how our expertise in casegoods, seating, and custom furniture can bring your vision to life-on time and on budget."
+        title="Commercial Furniture Services | Custom Manufacturing & FF&E Solutions"
+        description="End-to-end commercial furniture services: custom design, manufacturing, FF&E procurement, and installation for hospitality and corporate projects."
         canonical="https://dmdfurnishing.com/services"
+        schema={serviceSchema}
       />
       
       {/* Hero Section */}
-      <section className="services-hero">
+      <section className="services-hero" role="img" aria-label="Commercial furniture services by DMD Furnishing">
         <div className="services-hero-inner">
           <span className="hero-tag">Furniture Services</span>
           <h1>Commercial Furniture Services, Built Around Your Project</h1>
-          <p>From early planning to final installation, we provide project-based furniture solutions designed to support complex commercial environments.</p>
+          <p>DMD Furnishing provides end-to-end commercial furniture services — from design consultation and custom manufacturing to FF&E procurement, delivery, and installation — for hotels, restaurants, and corporate spaces nationwide. From early planning to final installation, we deliver project-based furniture solutions designed to support complex commercial environments.</p>
 
           <div className="hero-actions">
             <button className="hero-action-primary" onClick={handleGetInTouch}>Request a Consultation</button>
@@ -165,7 +249,7 @@ function Services() {
             ))}
           </div>
           <div className="col-image" data-aos="fade-left">
-            <img src="/Images/Our Services.jpg" alt="DMD Furnishing commercial furniture manufacturing and project capabilities" className="rounded-image shadow-lift" />
+            <img src="/Images/Our Services.jpg" alt="DMD Furnishing commercial furniture manufacturing and project capabilities" className="rounded-image shadow-lift" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
           </div>
         </div>
       </section>
@@ -232,6 +316,38 @@ function Services() {
             ))}
           </ul>
         </div>
+      </section>
+
+      {/* Industry Terms & Definitions — aids AI citability */}
+      <section className="glossary-section" aria-labelledby="glossary-title" style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
+        <p className="section-eyebrow">Industry Terms</p>
+        <h2 id="glossary-title" className="section-title">Key Commercial Furniture Terms</h2>
+        <dl style={{ lineHeight: '1.8' }}>
+          <dt style={{ fontWeight: '700', marginTop: '1.5rem', color: 'var(--color-gold, #c9a96e)' }}>FF&E (Furniture, Fixtures & Equipment)</dt>
+          <dd style={{ marginLeft: '0', marginBottom: '0.75rem', color: 'var(--text-secondary, #b0b0b0)' }}>
+            FF&E stands for Furniture, Fixtures, and Equipment. In hospitality and commercial projects, FF&E refers to all movable items — beds, desks, chairs, lighting, drapery, and decorative accessories — that are not permanently attached to the building structure. FF&E budgets typically represent 15-25% of total hotel construction costs.
+          </dd>
+
+          <dt style={{ fontWeight: '700', marginTop: '1.5rem', color: 'var(--color-gold, #c9a96e)' }}>Casegoods</dt>
+          <dd style={{ marginLeft: '0', marginBottom: '0.75rem', color: 'var(--text-secondary, #b0b0b0)' }}>
+            Casegoods are hard-surface furniture pieces such as dressers, nightstands, desks, credenzas, and wardrobes. In commercial furniture manufacturing, casegoods are typically constructed from engineered wood, hardwood veneers, HPL (High-Pressure Laminate), or solid wood, and are finished to meet durability requirements for high-traffic environments.
+          </dd>
+
+          <dt style={{ fontWeight: '700', marginTop: '1.5rem', color: 'var(--color-gold, #c9a96e)' }}>BOQ (Bill of Quantities)</dt>
+          <dd style={{ marginLeft: '0', marginBottom: '0.75rem', color: 'var(--text-secondary, #b0b0b0)' }}>
+            A BOQ (Bill of Quantities) is a detailed document listing all furniture items, quantities, dimensions, materials, and finishes required for a project. In FF&E procurement, the BOQ serves as the primary reference for quoting, manufacturing, and delivery coordination.
+          </dd>
+
+          <dt style={{ fontWeight: '700', marginTop: '1.5rem', color: 'var(--color-gold, #c9a96e)' }}>HPL (High-Pressure Laminate)</dt>
+          <dd style={{ marginLeft: '0', marginBottom: '0.75rem', color: 'var(--text-secondary, #b0b0b0)' }}>
+            HPL is a durable, scratch-resistant surface material widely used in commercial furniture. Made by fusing layers of kraft paper and decorative paper under high heat and pressure, HPL is preferred for hotel casegoods, restaurant tables, and office surfaces due to its resistance to wear, moisture, and chemicals.
+          </dd>
+
+          <dt style={{ fontWeight: '700', marginTop: '1.5rem', color: 'var(--color-gold, #c9a96e)' }}>Value Engineering</dt>
+          <dd style={{ marginLeft: '0', marginBottom: '0.75rem', color: 'var(--text-secondary, #b0b0b0)' }}>
+            Value engineering in commercial furniture is the process of analyzing materials, construction methods, and design details to reduce cost without compromising quality, durability, or visual intent. It often involves substituting materials (e.g., veneer vs. solid wood) or simplifying joinery while maintaining performance specifications.
+          </dd>
+        </dl>
       </section>
 
       <section className="service-cta">

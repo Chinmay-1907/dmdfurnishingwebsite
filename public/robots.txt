@@ -1,6 +1,25 @@
-# https://www.robotstxt.org/robotstxt.html
-# SEO related changes: expose sitemap for better crawling.
-# Next expand: replace relative sitemap with absolute URL on production (e.g., https://www.dmdfurnishing.com/sitemap.xml)
+# robots.txt — DMD Furnishing
+# https://dmdfurnishing.com
+
+# Allow all crawlers
 User-agent: *
 Disallow:
-Sitemap: https://www.dmdfurnishing.com/sitemap.xml
+
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap
+Sitemap: https://dmdfurnishing.com/sitemap.xml

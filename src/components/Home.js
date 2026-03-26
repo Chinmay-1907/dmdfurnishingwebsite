@@ -76,46 +76,53 @@ function Home() {
     { src: '/Images/Tailored_Guestroom_Collections.jpg', alt: 'Tailored hotel guestroom furniture collection' },
     { src: '/Images/Elevated_Restaurant_Seating.jpg', alt: 'Elevated restaurant seating and dining furniture' },
     { src: '/Images/Modern_Social_Lounges.jpg', alt: 'Modern social lounge furniture for hotels' },
-    { src: '/images/Outdoor.jpg', alt: 'Durable outdoor hospitality furniture' }
+    { src: '/Images/Outdoor.jpg', alt: 'Durable outdoor hospitality furniture' }
   ];
 
-  const pageDescription = 'Custom furniture solutions for hotels, restaurants, offices, and institutional spaces. Designed, manufactured, and installed with precision.';
+  const pageDescription = 'Custom hospitality furniture designed, manufactured & installed by DMD Furnishing. End-to-end FF&E solutions for hotels, restaurants & offices. Free consultation.';
 
-  const orgSchema = {
+  // Homepage-specific WebPage schema
+  const webPageSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "DMD Furnishing",
-    "url": "https://dmdfurnishing.com",
-    "logo": "https://dmdfurnishing.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-617-223-7781",
-      "contactType": "sales",
-      "email": "Sales@DMDFurnishing.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "56 Leonard St Unit 5",
-      "addressLocality": "Foxboro",
-      "addressRegion": "MA",
-      "postalCode": "02035",
-      "addressCountry": "US"
+    "@type": "WebPage",
+    "@id": "https://dmdfurnishing.com/#webpage",
+    "url": "https://dmdfurnishing.com/",
+    "name": "Custom Hospitality Furniture & FF&E Solutions | DMD Furnishing",
+    "description": pageDescription,
+    "isPartOf": { "@id": "https://dmdfurnishing.com/#website" },
+    "about": { "@id": "https://dmdfurnishing.com/#organization" },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg"
     }
   };
 
+  // ItemList schema for "Who We Serve" section
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Markets Served by DMD Furnishing",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hotels & Motels", "url": "https://dmdfurnishing.com/products/hotels-motels" },
+      { "@type": "ListItem", "position": 2, "name": "Restaurants & Cafes", "url": "https://dmdfurnishing.com/products/restaurants-cafes" },
+      { "@type": "ListItem", "position": 3, "name": "Corporate Offices", "url": "https://dmdfurnishing.com/products/office-corporate-spaces" },
+      { "@type": "ListItem", "position": 4, "name": "Educational Facilities", "url": "https://dmdfurnishing.com/products/educational-facilities" },
+      { "@type": "ListItem", "position": 5, "name": "Healthcare Facilities", "url": "https://dmdfurnishing.com/products/healthcare-care-facilities" }
+    ]
+  };
+
+  // Combined schema array for the homepage
+  const homepageSchema = [webPageSchema, itemListSchema];
+
   return (
     <div className="home-container">
-      <SEO 
-        title="Custom Hospitality Furniture & FF&E Solutions" 
+      <SEO
+        title="Custom Hospitality Furniture & FF&E Solutions"
         description={pageDescription}
         canonical="https://dmdfurnishing.com/"
         type="website"
-      />
-      <SEO 
-        title="Custom Hospitality Furniture & FF&E Solutions"
-        description="Custom furniture solutions for hotels, restaurants, offices, and institutional spaces. Designed, manufactured, and installed with precision."
-        canonical="https://dmdfurnishing.com/"
-        schema={orgSchema}
+        image="/Images/Tailored_Guestroom_Collections.jpg"
+        schema={homepageSchema}
       />
       {/* 1. Hero Section */}
       <section className="hero-section">
@@ -123,7 +130,14 @@ function Home() {
           {heroImages.map((img, index) => (
             <div key={index} className="hero-slide">
                <div className="slide-image-wrapper">
-                  <img src={img.src} alt={img.alt} className="slide-image" />
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="slide-image"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchpriority={index === 0 ? "high" : undefined}
+                    style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }}
+                  />
                </div>
             </div>
           ))}
@@ -147,13 +161,14 @@ function Home() {
         </div>
       </section>
 
+
       {/* 2. Who We Serve */}
       <section className="section who-we-serve">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title" data-aos="fade-up">Who We Serve</h2>
             <p className="section-intro" data-aos="fade-up" data-aos-delay="100">
-              DMD Furnishing partners with owners, operators, designers, and project teams who need reliable, high-quality furniture solutions for active and future spaces.
+              DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts, serving hotels, restaurants, corporate offices, educational facilities, and healthcare environments nationwide. We partner with owners, operators, designers, and project teams who need reliable, high-quality FF&E (Furniture, Fixtures &amp; Equipment) solutions for active and future spaces.
             </p>
           </div>
           
@@ -170,7 +185,7 @@ function Home() {
               <div className="icon-wrapper"><FaBuilding className="segment-icon" /></div>
               <h3>Corporate Offices & Workspaces</h3>
             </Link>
-            <Link to="/products/hotels-motels" className="segment-card" data-aos="fade-up" data-aos-delay="300" style={{ textDecoration: 'none' }}>
+            <Link to="/products" className="segment-card" data-aos="fade-up" data-aos-delay="300" style={{ textDecoration: 'none' }}>
               <div className="icon-wrapper"><FaTools className="segment-icon" /></div>
               <h3>Franchise Renovation Projects</h3>
             </Link>
@@ -247,7 +262,7 @@ function Home() {
                   </div>
                </div>
                <div className="col-image" data-aos="fade-left">
-                  <img src="/Images/Our Services.jpg" alt="DMD Capabilities" className="rounded-image shadow-lift" />
+                  <img src="/Images/Our Services.jpg" alt="Custom casegood manufacturing and furniture assembly at DMD Furnishing facility" className="rounded-image shadow-lift" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                </div>
             </div>
          </div>
@@ -260,22 +275,22 @@ function Home() {
             <div className="process-steps">
                <div className="step" data-aos="fade-up" data-aos-delay="100">
                   <span className="step-number">01</span>
-                  <h4>Consultation & Scope Review</h4>
+                  <h3>Consultation & Scope Review</h3>
                </div>
                <div className="step-divider"></div>
                <div className="step" data-aos="fade-up" data-aos-delay="200">
                   <span className="step-number">02</span>
-                  <h4>Design, BOQ & Material Finalization</h4>
+                  <h3>Design, BOQ & Material Finalization</h3>
                </div>
                <div className="step-divider"></div>
                <div className="step" data-aos="fade-up" data-aos-delay="300">
                   <span className="step-number">03</span>
-                  <h4>Manufacturing & Quality Assurance</h4>
+                  <h3>Manufacturing & Quality Assurance</h3>
                </div>
                <div className="step-divider"></div>
                <div className="step" data-aos="fade-up" data-aos-delay="400">
                   <span className="step-number">04</span>
-                  <h4>Delivery, Installation & Close-Out</h4>
+                  <h3>Delivery, Installation & Close-Out</h3>
                </div>
             </div>
             <p className="text-center mt-6 text-muted-light" data-aos="fade-in" data-aos-delay="500">Transparent communication at every stage - no surprises.</p>
@@ -289,22 +304,23 @@ function Home() {
             <p className="section-intro text-center" data-aos="fade-up" data-aos-delay="100">A snapshot of recent hospitality and commercial furniture projects completed by DMD Furnishing.</p>
             
             <div className="projects-grid">
-               <div className="project-card" data-aos="fade-up" data-aos-delay="100">
-                  <img src="/Images/Tailored_Guestroom_Collections.jpg" alt="Luxury Hotel Guestroom" />
+               <Link to="/projects" className="project-card" data-aos="fade-up" data-aos-delay="100" style={{ textDecoration: 'none' }}>
+                  <img src="/Images/Tailored_Guestroom_Collections.jpg" alt="Luxury Hotel Guestroom" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                   <div className="project-caption">Luxury Hotel Guestroom</div>
-               </div>
-               <div className="project-card" data-aos="fade-up" data-aos-delay="200">
-                  <img src="/Images/Elevated_Restaurant_Seating.jpg" alt="Fine Dining Restaurant" />
+               </Link>
+               <Link to="/projects" className="project-card" data-aos="fade-up" data-aos-delay="200" style={{ textDecoration: 'none' }}>
+                  <img src="/Images/Elevated_Restaurant_Seating.jpg" alt="Fine Dining Restaurant" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                   <div className="project-caption">Fine Dining Restaurant</div>
-               </div>
-               <div className="project-card" data-aos="fade-up" data-aos-delay="300">
-                  <img src="/Images/Modern_Social_Lounges.jpg" alt="Corporate Lounge" />
+               </Link>
+               <Link to="/projects" className="project-card" data-aos="fade-up" data-aos-delay="300" style={{ textDecoration: 'none' }}>
+                  <img src="/Images/Modern_Social_Lounges.jpg" alt="Corporate Lounge" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                   <div className="project-caption">Corporate Lounge</div>
-               </div>
+               </Link>
             </div>
             
-            <div className="text-center mt-6" data-aos="fade-up">
+            <div className="text-center mt-6 cta-buttons gap-4 d-flex justify-content-center flex-wrap" data-aos="fade-up">
                <Link to="/projects" className="btn btn-primary">View All Projects</Link>
+               <Link to="/inspirations" className="btn btn-outline">Browse Design Inspirations</Link>
             </div>
          </div>
       </section>
@@ -314,7 +330,7 @@ function Home() {
          <div className="container">
             <div className="split-layout reverse-mobile">
                <div className="col-image" data-aos="fade-right">
-                  <img src="/Images/About_DMD_Furnishing_Page.jpg" alt="DMD Furnishing premium materials and craftsmanship" className="rounded-image" />
+                  <img src="/Images/About_DMD_Furnishing_Page.jpg" alt="DMD Furnishing premium materials and craftsmanship" className="rounded-image" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                </div>
                <div className="col-text" data-aos="fade-left">
                   <h2 className="section-title">Built with Quality Materials</h2>
@@ -326,6 +342,9 @@ function Home() {
                      <li>Custom finishes and textures</li>
                   </ul>
                   <p className="mt-6 text-gold font-medium">Samples and finish options available upon request.</p>
+                  <div className="mt-4">
+                     <Link to="/about" className="btn btn-outline">Learn More About DMD</Link>
+                  </div>
                </div>
             </div>
          </div>

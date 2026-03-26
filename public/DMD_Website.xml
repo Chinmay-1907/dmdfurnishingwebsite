@@ -291,7 +291,7 @@
 		</furnitureType>
 	</place>
 	<place id="Lobby Area" name="Lobby Area" description="Lobby Area furniture collection" image="/Images/Lobby Area/Lobby Area.jpg">
-		<furnitureType id="Lobby Area" name="Lobby Area" description="Lobby Area Collections" image="/Images/Lobby Area/Lobby Area.jpg">
+		<furnitureType id="Lobby Furniture" name="Lobby Furniture" description="Lobby Furniture Collections" image="/Images/Lobby Area/Lobby Area.jpg">
 			<subcategory id="Accent Chairs" name="Accent Chairs" description="Accent Chairs in Lobby Area" image="/Images/Lobby Area/Accent Chairs/Metal Accent Chair/Dusty Blue Upholstered Accent Chair 3.jpg">
 				<product id="Metal Accent Chair" name="Metal Accent Chair" description="Metal accent chair with durable upholstery" image="/Images/Lobby Area/Accent Chairs/Metal Accent Chair/Dusty Blue Upholstered Accent Chair 3.jpg" tags="metal,accent,chair">
 					<images>
@@ -920,11 +920,11 @@
 						
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
-			<subcategory id="TV Media Penal" name="TV Media Penal" description="Guest room TV Media Penal for hospitality environments" image="/Images/Hotel/Guest Room/TV Media Penal/TV Media Penal - 2 color 1.png">
-				<product id="TV Media Penal 1" name="TV Media Penal 1" description="Durable guest room TV Media Penal with 2 color HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/TV Media Penal/TV Media Penal - 2 color 1.png" tags="vanity,hotel,guest room,customizable">
+			<subcategory id="TV Media Panel" name="TV Media Panel" description="Guest room TV Media Panel for hospitality environments" image="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 1.png">
+				<product id="TV Media Panel 1" name="TV Media Panel 1" description="Durable guest room TV Media Panel with 2 color HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 1.png" tags="vanity,hotel,guest room,customizable">
 					<images>
-						<image src="/Images/Hotel/Guest Room/TV Media Penal/TV Media Penal - 2 color 2.png" alt="TV Media Penal 1" />
-						<image src="/Images/Hotel/Guest Room/TV Media Penal/TV Media Penal - 2 color.png" alt="TV Media Penal 2" />
+						<image src="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 2.png" alt="TV Media Panel 1" />
+						<image src="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color.png" alt="TV Media Panel 2" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-72&quot; (Customizable)" />
@@ -939,7 +939,7 @@
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
 			<subcategory id="Amenity Tower" name="Amenity Tower" description="Guest room Amenity Tower for hospitality environments" image="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png">
-				<product id="Amenity Tower" name="TV Media Penal 1" description="Durable guest room TV Media Penal with 2 color HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png" tags="Amenity Tower,hotel,guest room,customizable">
+				<product id="Amenity Tower" name="Amenity Tower" description="Durable guest room Amenity Tower with HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png" tags="Amenity Tower,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png" alt="Amenity Tower" />
 						<image src="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower - 2.png" alt="Amenity Tower" />
@@ -956,14 +956,14 @@
 			</subcategory>
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
-			<subcategory id="Luggage Bentch" name="Luggage Bentch" description="Guest room Luggage Bentch for hospitality environments" image="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 1.png">
-				<product id="Luggage Bentch" name="Luggage Bentch" description="Durable guest room Luggage Bentch HPL Top surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 1.png" tags="Luggage Bentch,hotel,guest room,customizable">
+			<subcategory id="Luggage Bench" name="Luggage Bench" description="Guest room Luggage Bench for hospitality environments" image="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png">
+				<product id="Luggage Bench" name="Luggage Bench" description="Durable guest room Luggage Bench HPL Top surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png" tags="Luggage Bench,hotel,guest room,customizable">
 					<images>
-						<image src="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 1.png" alt="Luggage Bentch" />
-						<image src="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 2.png" alt="Luggage Bentch" />
-						<image src="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 3.png" alt="Luggage Bentch" />
-						<image src="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 4.png" alt="Luggage Bentch" />
-						<image src="/Images/Hotel/Guest Room/Luggage Bentch/Luggage Bentch 5.png" alt="Luggage Bentch" />
+						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png" alt="Luggage Bench" />
+						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 2.png" alt="Luggage Bench" />
+						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 3.png" alt="Luggage Bench" />
+						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 4.png" alt="Luggage Bench" />
+						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 5.png" alt="Luggage Bench" />
 					</images>
 					<specifications>
 						<spec name="Width" value="35-40&quot; (Customizable)" />

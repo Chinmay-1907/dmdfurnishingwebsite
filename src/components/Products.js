@@ -421,9 +421,11 @@ function Products() {
                 to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(furnitureType.id)}`}
                 aria-label={`View ${furnitureType.name} products`}
               >
-                <div 
+                <div
                   className="category-image"
                   style={{ backgroundImage: `url("${encodeURI(furnitureType.image || '/placeholder.png')}")` }}
+                  role="img"
+                  aria-label={`${furnitureType.name} furniture`}
                 ></div>
                 <h3>{furnitureType.name}</h3>
                 <p>{furnitureType.description}</p>
@@ -458,9 +460,11 @@ function Products() {
                 to={`/products/${toCatalogSlug(selectedPlace.id)}/${toCatalogSlug(selectedFurnitureType.id)}/${toCatalogSlug(subcategory.id)}`}
                 aria-label={`View ${subcategory.name} products`}
               >
-                <div 
+                <div
                   className="category-image"
                   style={{ backgroundImage: `url("${encodeURI(subcategory.image || '/placeholder.png')}")` }}
+                  role="img"
+                  aria-label={`${subcategory.name} collection`}
                 ></div>
                 <h3>{subcategory.name}</h3>
                 <p>{subcategory.description}</p>
@@ -493,9 +497,11 @@ function Products() {
         <div className="products-grid">
           {selectedSubcategory.products.map((product, index) => (
             <div key={`${toCatalogSlug(product.id || product.name)}-${index}`} className="product-item">
-              <div 
-                className="product-image" 
+              <div
+                className="product-image"
                 style={{ backgroundImage: `url("${encodeURI(product.image)}")` }}
+                role="img"
+                aria-label={`${product.name}`}
               ></div>
               <h3>{product.name}</h3>
               {product.price && <p className="product-price">{product.price}</p>}
@@ -533,6 +539,19 @@ function Products() {
   return (
     <div className="products-container">
       <SEO {...seoData} />
+
+      {!institutionId && (
+        <section className="products-intro" style={{ padding: '3rem 2rem', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-gold, #c9a96e)' }}>Commercial Furniture Collections</h2>
+          <p style={{ lineHeight: '1.8', color: 'var(--text-secondary, #b0b0b0)', fontSize: '1.05rem' }}>
+            DMD Furnishing manufactures custom commercial furniture for hospitality, corporate, healthcare, and institutional environments.
+            Our product catalog spans guest room casegoods, lobby seating, restaurant tables, office workstations, and specialty millwork —
+            each engineered for high-traffic durability and designed to meet brand specifications. Browse by project type below, or{' '}
+            <a href="/contact" style={{ color: 'var(--color-gold, #c9a96e)' }}>request a custom quote</a>{' '}
+            for pieces tailored to your space.
+          </p>
+        </section>
+      )}
 
       {renderContent()}
 

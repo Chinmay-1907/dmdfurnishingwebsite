@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Projects.css';
 import styles from '../styles/AboutUs.module.css';
 import { loadProjectsData } from '../data/projects';
-// SEO: centralized helpers
-import { setPageSEO, setBreadcrumbJsonLd } from '../utils/seo';
+import SEO from './SEO';
 
 function Projects() {
   const navigate = useNavigate();
@@ -69,24 +68,14 @@ function Projects() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [projects]);
 
-  // SEO: Projects listing page
-  useEffect(() => {
-    const originTitle = 'DMD Furnishing';
-    setPageSEO({
-      title: `Projects | ${originTitle}`,
-      description: 'Explore recent furniture installations and designs by DMD Furnishing.',
-      canonicalPath: '/projects',
-      image: undefined,
-      type: 'website'
-    });
-    setBreadcrumbJsonLd([
-      { name: 'Home', path: '/' },
-      { name: 'Projects', path: '/projects' }
-    ]);
-  }, []);
 
   return (
     <div className="projects-container">
+      <SEO
+        title="Our Projects | Commercial Furniture Installations"
+        description="Explore DMD Furnishing's completed hospitality and commercial furniture projects. Custom FF&E installations for hotels, restaurants, offices, and institutional spaces."
+        canonical="https://dmdfurnishing.com/projects"
+      />
        <section ref={heroRef} className={styles.heroSection} style={{
         background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
         backgroundSize: 'cover',
@@ -98,6 +87,13 @@ function Projects() {
           <h1 className={styles.heroTitle}>Recent Projects</h1>
           <p className={styles.heroSubtitle}>Explore our latest furniture installations and designs</p>
         </div>
+      </section>
+
+      <section style={{ padding: '2.5rem 2rem 1rem', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+        <p style={{ lineHeight: '1.8', color: 'var(--text-secondary, #b0b0b0)', fontSize: '1.05rem' }}>
+          From boutique hotels to large-scale franchise renovations, our portfolio reflects a commitment to quality craftsmanship and reliable project execution.
+          Each installation showcases custom-manufactured furniture designed to meet the specific needs of the space — balancing aesthetics, durability, and budget.
+        </p>
       </section>
 
       {error && (
@@ -121,7 +117,8 @@ function Projects() {
                 style={{
                   backgroundImage: project.mainImage ? `url('${project.mainImage}')` : undefined
                 }}
-                aria-label={project.mainImageAlt || project.name}
+                role="img"
+                aria-label={project.mainImageAlt || `${project.name} project`}
               ></div>
               <div className="listing-content">
                 <h3>{project.name}</h3>
@@ -149,7 +146,9 @@ function Projects() {
       <section className="project-cta">
         <h2>Ready to Start Your Project?</h2>
         <p>Let us help you create exceptional spaces with our premium furniture solutions.</p>
-        <button className="cta-button">Schedule a Consultation</button>
+        <Link to="/schedule-call" style={{ textDecoration: 'none' }}>
+          <button className="cta-button">Schedule a Consultation</button>
+        </Link>
       </section>
     </div>
   );

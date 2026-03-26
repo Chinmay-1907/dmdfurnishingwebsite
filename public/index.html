@@ -4,22 +4,23 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/DMD_Furnishing_Logo_Embedded.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="image" href="%PUBLIC_URL%/Images/Tailored_Guestroom_Collections.jpg" fetchpriority="high" />
     <meta name="theme-color" content="#000000" />
     <!-- SEO related changes: set default meta description, Open Graph, and Twitter tags.
          Next expand: move to per-route dynamic tags (or Next.js Head) for product/category pages. -->
     <meta
       name="description"
-      content="DMD Furnishing specializes in high-quality, custom-manufactured furniture for commercial spaces-including hotels, restaurants, and multi-family residences. Explore our FF&E project solutions."
+      content="Custom hospitality furniture designed, manufactured and installed by DMD Furnishing. End-to-end FF&E solutions for hotels, restaurants and offices."
     />
     <meta property="og:site_name" content="DMD Furnishing" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="DMD Furnishing" />
     <meta property="og:description" content="Explore guest room, lobby, office, and restaurant furniture collections." />
-    <meta property="og:image" content="%PUBLIC_URL%/DMD_Furnishing_Logo_Embedded.svg" />
+    <meta property="og:image" content="%PUBLIC_URL%/Images/Tailored_Guestroom_Collections.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="DMD Furnishing" />
     <meta name="twitter:description" content="Explore guest room, lobby, office, and restaurant furniture collections." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/DMD_Furnishing_Logo_Embedded.svg" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/Images/Tailored_Guestroom_Collections.jpg" />
     <!-- Canonical will be set per page in ProductDetail via JS; default here avoided to prevent duplicate canonical across routes. -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/DMD_Furnishing_Logo_Embedded.svg" />
     <!--
@@ -38,9 +39,119 @@
     -->
     <!-- SEO related changes: brand-first title. Next expand: per-page titles in components. -->
     <title>DMD Furnishing</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dmdfurnishing.com/#organization",
+          "name": "DMD Furnishing",
+          "url": "https://dmdfurnishing.com",
+          "logo": "https://dmdfurnishing.com/DMD_Furnishing_Logo_Embedded.svg",
+          "description": "Custom commercial furniture manufacturer specializing in hospitality FF&E.",
+          "telephone": "+1-617-223-7781",
+          "email": "Sales@DMDFurnishing.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "56 Leonard St Unit 5",
+            "addressLocality": "Foxboro",
+            "addressRegion": "MA",
+            "postalCode": "02035",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://facebook.com/dmdfurnishing",
+            "https://instagram.com/dmdfurnishing",
+            "https://linkedin.com/company/dmdfurnishing",
+            "https://pinterest.com/dmdfurnishing"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dmdfurnishing.com/#website",
+          "name": "DMD Furnishing",
+          "url": "https://dmdfurnishing.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://dmdfurnishing.com/products?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+    <link rel="dns-prefetch" href="https://www.facebook.com" />
+    <link rel="dns-prefetch" href="https://www.instagram.com" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div>
+        <h1>DMD Furnishing — Custom Commercial Furniture Manufacturer</h1>
+        <p>DMD Furnishing is a B2B commercial furniture manufacturer specializing in hospitality FF&E (Furniture, Fixtures &amp; Equipment). Based in Foxboro, Massachusetts, we design, manufacture, and install custom furniture for hotels, restaurants, offices, and institutional spaces nationwide.</p>
+
+        <h2>Our Services</h2>
+        <ul>
+          <li>Consultation &amp; Project Discovery</li>
+          <li>Design Support &amp; Specifications</li>
+          <li>Manufacturing &amp; Sourcing (Domestic &amp; Overseas)</li>
+          <li>FF&amp;E Project Management</li>
+          <li>Logistics &amp; Delivery Coordination</li>
+          <li>Installation Support</li>
+        </ul>
+
+        <h2>Markets We Serve</h2>
+        <ul>
+          <li>Hotels &amp; Motels</li>
+          <li>Restaurants &amp; Cafes</li>
+          <li>Corporate Offices &amp; Workspaces</li>
+          <li>Educational Facilities</li>
+          <li>Healthcare &amp; Care Facilities</li>
+          <li>Multi-Family &amp; Residential Projects</li>
+        </ul>
+
+        <h2>Our Process</h2>
+        <ol>
+          <li>Consultation &amp; Scope Alignment</li>
+          <li>Design Support &amp; Specifications</li>
+          <li>Manufacturing &amp; Sourcing</li>
+          <li>Quality Review &amp; Readiness</li>
+          <li>Delivery &amp; Installation Coordination</li>
+          <li>Project Close-Out &amp; Follow-Up</li>
+        </ol>
+
+        <h2>Industry Terms</h2>
+        <dl>
+          <dt>FF&amp;E (Furniture, Fixtures &amp; Equipment)</dt>
+          <dd>All movable items in a commercial space — beds, desks, chairs, lighting, drapery, and decorative accessories — not permanently attached to the building structure.</dd>
+          <dt>Casegoods</dt>
+          <dd>Hard-surface furniture such as dressers, nightstands, desks, credenzas, and wardrobes, constructed from engineered wood, veneers, HPL, or solid wood.</dd>
+          <dt>BOQ (Bill of Quantities)</dt>
+          <dd>A detailed document listing all furniture items, quantities, dimensions, materials, and finishes required for a project.</dd>
+          <dt>HPL (High-Pressure Laminate)</dt>
+          <dd>A durable, scratch-resistant surface material widely used for hotel casegoods, restaurant tables, and office surfaces.</dd>
+          <dt>Value Engineering</dt>
+          <dd>The process of reducing cost without compromising quality by analyzing materials, construction methods, and design details.</dd>
+        </dl>
+
+        <h2>Contact</h2>
+        <p>Phone: +1 (617) 223-7781 | Email: Sales@DMDFurnishing.com</p>
+        <p>Address: 56 Leonard St Unit 5, Foxboro, MA 02035</p>
+
+        <h2>Key Pages</h2>
+        <ul>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/schedule-call">Schedule Consultation</a></li>
+        </ul>
+      </div>
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.

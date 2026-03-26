@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/ProjectDetail.css';
 import { loadProjectById } from '../data/projects';
-// SEO: centralized helpers
-import { setPageSEO, setBreadcrumbJsonLd, setProjectJsonLd } from '../utils/seo';
+import SEO from './SEO';
 
 // This component displays detailed information about a specific project
 // It shows multiple images from different angles in a scrollable container,
@@ -93,39 +92,6 @@ function ProjectDetail() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [project]);
 
-  // SEO: Project detail page metadata and JSON-LD
-  useEffect(() => {
-    if (!project) return;
-    const originTitle = 'DMD Furnishing';
-    const title = `${project.name} | Projects | ${originTitle}`;
-    const description = project.shortDescription || project.fullDescription || 'Project details';
-    const canonicalPath = `/projects/${project.id}`;
-    const image = project.mainImage || (project.images && project.images[0] && project.images[0].url) || undefined;
-
-    setPageSEO({
-      title,
-      description,
-      canonicalPath,
-      image,
-      type: 'article'
-    });
-
-    setBreadcrumbJsonLd([
-      { name: 'Home', path: '/' },
-      { name: 'Projects', path: '/projects' },
-      { name: project.name, path: canonicalPath }
-    ]);
-
-    setProjectJsonLd({
-      name: project.name,
-      description,
-      image,
-      urlPath: canonicalPath,
-      dateCreated: project.completionDate,
-      category: project.category
-    });
-  }, [project]);
-
   // Navigate back function
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -162,6 +128,38 @@ function ProjectDetail() {
 
   return (
     <div className="project-detail-container">
+      {project && (
+        <SEO
+          title={`${project.name} | Projects`}
+          description={project.shortDescription || project.fullDescription || 'Project details'}
+          canonical={`https://dmdfurnishing.com/projects/${project.id}`}
+          image={project.mainImage || (project.images && project.images[0] && project.images[0].url) || undefined}
+          type="article"
+          schema={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "CreativeWork",
+                "name": project.name,
+                "description": project.shortDescription || project.fullDescription || 'Project details',
+                "image": project.mainImage ? [project.mainImage] : undefined,
+                "url": `https://dmdfurnishing.com/projects/${project.id}`,
+                "dateCreated": project.completionDate || undefined,
+                "category": project.category || undefined,
+                "author": { "@type": "Organization", "name": "DMD Furnishing" }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmdfurnishing.com/" },
+                  { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://dmdfurnishing.com/projects" },
+                  { "@type": "ListItem", "position": 3, "name": project.name, "item": `https://dmdfurnishing.com/projects/${project.id}` }
+                ]
+              }
+            ]
+          }}
+        />
+      )}
       {/* Full-width hero section with background image */}
       <div
         className="project-hero"
@@ -182,7 +180,7 @@ function ProjectDetail() {
       <div className="project-detail-content" ref={projectContentRef}>
 
         <div className="project-info">
-          <h1>{project.name}</h1>
+          <h2>{project.name}</h2>
           <div className="project-category">
             <span className="category-tag">{project.category}</span>
             <span className="completion-date">Completed: {project.completionDate}</span>
@@ -230,7 +228,7 @@ function ProjectDetail() {
             <div className="gallery-container">
               {(project.images || []).map((image) => (
                 <div key={image.id} className="gallery-item">
-                  <img src={image.url} alt={image.alt || project.name} className="gallery-image" />
+                  <img src={image.url} alt={image.alt || project.name} className="gallery-image" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                   <p className="image-caption">{image.alt || project.name}</p>
                 </div>
               ))}
@@ -243,7 +241,7 @@ function ProjectDetail() {
               <div className="gallery-container">
                 {project.beforeImages.map((image) => (
                   <div key={image.id} className="gallery-item">
-                    <img src={image.url} alt={image.alt || `${project.name} (Before)`} className="gallery-image" />
+                    <img src={image.url} alt={image.alt || `${project.name} (Before)`} className="gallery-image" loading="lazy" style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }} />
                     <p className="image-caption">{image.alt || `${project.name} (Before)`}</p>
                   </div>
                 ))}

@@ -55,7 +55,7 @@ function Header() {
             <span className="hamburger-icon"></span>
           </button>
           <Link to="/">
-            <img src="/DMD_Furnishing_Logo_Embedded.svg" alt="DMD Furnishing Logo" className="logo-image" />
+            <img src="/DMD_Furnishing_Logo_Embedded.svg" alt="DMD Furnishing Logo" className="logo-image" width="180" height="60" />
           </Link>
         </div>
         <nav className={`main-nav${menuOpen ? ' open' : ''}`}> 
@@ -69,10 +69,12 @@ function Header() {
             {/* <li><NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>Testimonials</NavLink></li> */}
             <li className="nav-consultation-mobile"><Link to="/contact" className="btn" onClick={closeMenu}>Book Consultation</Link></li>
             <li className="nav-contact">
-              <Link to="/contact" onClick={closeMenu}>
-                <span className="nav-contact-label">Contact</span>
-                <span className="nav-contact-meta">+1 (617) 223-7781</span>
-              </Link>
+              <a href="tel:+16172237781" className="nav-contact-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.41 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 6 6l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>+1 (617) 223-7781</span>
+              </a>
             </li>
           </ul>
         </nav>

@@ -4,7 +4,7 @@ import styles from '../styles/AboutUs.module.css';
 import SEO from './SEO';
 
 // Header image
-const HERO_IMAGE_URL = '/images/About_DMD_Furnishing_Page.jpg';
+const HERO_IMAGE_URL = '/Images/About_DMD_Furnishing_Page.jpg';
 
 const AboutUs = () => {
   useEffect(() => {
@@ -21,6 +21,8 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section
         className={styles.heroSection}
+        role="img"
+        aria-label="DMD Furnishing about page hero — commercial furniture showroom"
         style={{
           background:
             `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('${HERO_IMAGE_URL}')`,
@@ -32,8 +34,7 @@ const AboutUs = () => {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Built for Commercial Spaces. Designed for Real-World Use.</h1>
           <p className={styles.heroSubtitle}>
-          We are a team of passionate designers, engineers, and artisans dedicated to crafting exceptional furniture for commercial spaces. 
-          Our philosophy is simple-to merge timeless design with robust, real-world functionality. We don’t just make furniture; we build long-lasting partnerships founded on trust, transparency, and a shared commitment to excellence.
+          DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts, providing custom FF&amp;E solutions for hotels, restaurants, offices, and institutional spaces nationwide. We are a team of designers, engineers, and artisans dedicated to crafting exceptional furniture for commercial spaces. Our philosophy is simple — merge timeless design with robust, real-world functionality. We don’t just make furniture; we build long-lasting partnerships founded on trust, transparency, and a shared commitment to excellence.
         </p>
         </div>
       </section>
@@ -179,16 +180,49 @@ const AboutUs = () => {
 
         <div className={styles.decorativeLine}></div>
 
+        {/* DMD at a Glance / Stats Section */}
+        <section className={`${styles.section} ${styles.sectionLight}`}>
+          <div className={styles.sectionContent}>
+            <h2 className={styles.sectionTitle}>DMD Furnishing at a Glance</h2>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '2rem',
+              textAlign: 'center',
+              padding: '2rem 0'
+            }}>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-gold, #c9a96e)' }}>475+</div>
+                <div style={{ color: 'var(--text-secondary, #b0b0b0)', marginTop: '0.5rem' }}>Products in Catalog</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-gold, #c9a96e)' }}>6</div>
+                <div style={{ color: 'var(--text-secondary, #b0b0b0)', marginTop: '0.5rem' }}>Market Segments Served</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-gold, #c9a96e)' }}>End-to-End</div>
+                <div style={{ color: 'var(--text-secondary, #b0b0b0)', marginTop: '0.5rem' }}>Design to Installation</div>
+              </div>
+              <div>
+                <div style={{ fontSize: '2.5rem', fontWeight: '700', color: 'var(--color-gold, #c9a96e)' }}>Foxboro, MA</div>
+                <div style={{ color: 'var(--text-secondary, #b0b0b0)', marginTop: '0.5rem' }}>Headquarters — Nationwide Service</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className={styles.decorativeLine}></div>
+
         {/* What Sets Us Apart Section */}
         <section className={`${styles.section} ${styles.sectionDark}`}>
           <div className={styles.sectionContent}>
             <h2 className={styles.sectionTitle}>What Sets Us Apart</h2>
             <ul className={styles.checkList}>
-              <li className={styles.checkItem}>Project-focused approach rather than one-size-fits-all solutions</li>
-              <li className={styles.checkItem}>Practical customization without unnecessary complexity</li>
-              <li className={styles.checkItem}>Clear communication and scope alignment</li>
-              <li className={styles.checkItem}>Experience supporting renovation and repeat-project cycles</li>
-              <li className={styles.checkItem}>Designs developed with durability and long-term use in mind</li>
+              <li className={styles.checkItem}>In-house design team that translates concepts into production-ready specifications</li>
+              <li className={styles.checkItem}>Dual manufacturing capability — domestic production for speed, overseas for scale</li>
+              <li className={styles.checkItem}>Dedicated project managers from initial quote through final installation</li>
+              <li className={styles.checkItem}>Material sourcing relationships built over years of hospitality-focused work</li>
+              <li className={styles.checkItem}>Quality control processes aligned with commercial-grade durability standards</li>
             </ul>
           </div>
         </section>

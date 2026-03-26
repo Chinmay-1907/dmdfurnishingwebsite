@@ -73,9 +73,11 @@ const ProductOverview = () => {
               className={styles.card}
               style={{ scrollMarginTop: '120px' }}
             >
-              <div 
-                className={styles.cardImage} 
+              <div
+                className={styles.cardImage}
                 style={{ backgroundImage: `url("${encodeURI(category.image)}")` }}
+                role="img"
+                aria-label={`${category.title} collection`}
               />
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{category.title}</h2>

@@ -7,9 +7,17 @@ const siteUrl = 'https://dmdfurnishing.com';
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   'name': 'DMD Furnishing',
   'url': siteUrl,
-  'logo': `${siteUrl}/logo.png`,
+  'email': 'Sales@DMDFurnishing.com',
+  'logo': {
+    '@type': 'ImageObject',
+    'url': `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
+    'width': 300,
+    'height': 100
+  },
+  'description': 'Custom commercial furniture manufacturer specializing in hospitality FF&E. Design, manufacturing, and installation for hotels, restaurants, offices, and institutional spaces.',
   'contactPoint': {
     '@type': 'ContactPoint',
     'telephone': '+1-617-223-7781',
@@ -24,14 +32,20 @@ const organizationSchema = {
     'addressRegion': 'MA',
     'postalCode': '02035',
     'addressCountry': 'US'
-  }
+  },
+  'sameAs': [
+    'https://facebook.com/dmdfurnishing',
+    'https://instagram.com/dmdfurnishing',
+    'https://linkedin.com/company/dmdfurnishing',
+    'https://pinterest.com/dmdfurnishing'
+  ]
 };
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   'name': 'DMD Furnishing',
-  'image': `${siteUrl}/logo.png`,
+  'image': `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
   '@id': `${siteUrl}/#localbusiness`,
   'url': siteUrl,
   'telephone': '+1-617-223-7781',
@@ -44,6 +58,11 @@ const localBusinessSchema = {
     'postalCode': '02035',
     'addressCountry': 'US'
   },
+  'geo': {
+    '@type': 'GeoCoordinates',
+    'latitude': 42.0654,
+    'longitude': -71.2478
+  },
   'openingHoursSpecification': {
     '@type': 'OpeningHoursSpecification',
     'dayOfWeek': [
@@ -55,14 +74,26 @@ const localBusinessSchema = {
     ],
     'opens': '09:00',
     'closes': '18:00'
-  }
+  },
+  'description': 'Custom commercial furniture manufacturer specializing in hospitality FF&E. Design, manufacturing, and installation for hotels, restaurants, offices, and institutional spaces.',
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Commercial Furniture Collections',
+    'url': `${siteUrl}/products`
+  },
+  'sameAs': [
+    'https://facebook.com/dmdfurnishing',
+    'https://instagram.com/dmdfurnishing',
+    'https://linkedin.com/company/dmdfurnishing',
+    'https://pinterest.com/dmdfurnishing'
+  ]
 };
 
 const SEO = ({ title, description, canonical, schema, type = 'website', image }) => {
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const location = useLocation();
   const currentUrl = canonical ? canonical : `${siteUrl}${location.pathname}`;
-  const defaultImage = `${siteUrl}/logo.png`; // Fallback image
+  const defaultImage = `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`; // Fallback image
   const metaImage = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : defaultImage;
 
   useEffect(() => {
@@ -123,12 +154,33 @@ const SEO = ({ title, description, canonical, schema, type = 'website', image })
     // Organization schema (always)
     upsertJsonLd('organization', organizationSchema);
     upsertJsonLd('local-business', localBusinessSchema);
-    // Page-specific schema (optional)
+    // Page-specific schema (optional) - supports single object or array
     if (schema) {
-      upsertJsonLd('page-schema', schema);
+      if (Array.isArray(schema)) {
+        schema.forEach((s, i) => upsertJsonLd(`page-schema-${i}`, s));
+        // Clean up any extra leftover page-schema tags beyond current array length
+        let idx = schema.length;
+        let extra;
+        while ((extra = document.head.querySelector(`script[type="application/ld+json"][data-id="page-schema-${idx}"]`))) {
+          extra.remove();
+          idx++;
+        }
+        // Also remove singular page-schema if present from previous non-array usage
+        const singular = document.head.querySelector(`script[type="application/ld+json"][data-id="page-schema"]`);
+        if (singular) singular.remove();
+      } else {
+        upsertJsonLd('page-schema', schema);
+      }
     } else {
+      // Clean up any page-schema tags
       const existing = document.head.querySelector(`script[type="application/ld+json"][data-id="page-schema"]`);
       if (existing) existing.remove();
+      let idx = 0;
+      let extra;
+      while ((extra = document.head.querySelector(`script[type="application/ld+json"][data-id="page-schema-${idx}"]`))) {
+        extra.remove();
+        idx++;
+      }
     }
 
     // No cleanup: meta/link tags remain valid across navigation; JSON-LD is updated per call

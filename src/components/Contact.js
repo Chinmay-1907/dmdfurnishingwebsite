@@ -400,7 +400,7 @@ function Contact() {
         description="Get in touch with DMD Furnishing for commercial furniture inquiries. Request a consultation for your hotel, restaurant, or institutional project."
         canonical="https://dmdfurnishing.com/contact"
       />
-      <section className={styles.heroSection} style={{
+      <section className={styles.heroSection} role="img" aria-label="DMD Furnishing contact page hero — request a consultation" style={{
         background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("/Images/Contact_Page.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'bottom center',

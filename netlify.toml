@@ -1,3 +1,15 @@
+[[redirects]]
+  from = "https://www.dmdfurnishing.com/*"
+  to = "https://dmdfurnishing.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:path*/"
+  to = "/:path*"
+  status = 301
+  force = false
+
 [build]
   publish = "build"
   functions = "netlify/functions"
