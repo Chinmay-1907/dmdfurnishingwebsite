@@ -1,0 +1,73 @@
+.page {
+  color: var(--page-dark-text);
+  background: var(--page-dark-background);
+}
+
+.hero {
+  min-height: 48vh;
+  display: grid;
+  align-items: end;
+  padding: 96px 24px 48px;
+  background:
+    linear-gradient(90deg, rgba(13, 13, 16, 0.84), rgba(13, 13, 16, 0.45)),
+    url('/Images/Contact_Page.jpg') center/cover no-repeat;
+}
+
+.heroContent,
+.shell {
+  width: min(960px, 100%);
+  margin: 0 auto;
+}
+
+.heroContent h1,
+.section h2 {
+  margin: 0;
+}
+
+.heroContent h1 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #c9a96e;
+  font-size: 0.8rem;
+}
+
+.shell {
+  padding: 72px 0 96px;
+}
+
+.section {
+  padding: 28px 0;
+}
+
+.sectionAlt {
+  border-top: 1px solid rgba(201, 169, 110, 0.12);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+}
+
+.section p,
+.section li {
+  color: var(--page-dark-muted);
+  line-height: 1.8;
+}
+
+.section a {
+  color: #f0ca89;
+  text-decoration: underline;
+  text-decoration-color: rgba(240, 202, 137, 0.45);
+  text-underline-offset: 0.16em;
+}
+
+@media (max-width: 720px) {
+  .hero,
+  .shell {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

@@ -1,0 +1,85 @@
+.scrollProgressContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.scrollProgressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gold), #f5d98a);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  transition: width 80ms linear;
+}
+
+.scrollProgressLabel {
+  position: fixed;
+  bottom: 10px;
+  right: 12px;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background: rgba(247, 244, 239, 0.85);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2px 6px;
+  pointer-events: none;
+}
+
+:root[data-theme='dark'] .scrollProgressLabel {
+  background: rgba(18, 22, 29, 0.85);
+  border-color: rgba(168, 178, 197, 0.24);
+  color: #d6dae2;
+}
+
+.scrollCircleContainer {
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  width: 96px;
+  height: 96px;
+  z-index: 9999;
+  pointer-events: auto;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  color: var(--text-on-dark);
+  transition: transform 0.2s ease;
+}
+
+.scrollCircleContainer:hover {
+  transform: scale(1.1);
+}
+
+.scrollCircleSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.scrollCircleRing {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.scrollCircleText text {
+  font-size: 7px;
+  letter-spacing: 2px;
+  fill: currentColor;
+}
+
+.scrollCircleText {
+  transform-origin: 50% 50%;
+}
+
+.scrollCircleCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: currentColor;
+}

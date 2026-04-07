@@ -1,0 +1,181 @@
+.page {
+  color: var(--page-dark-text);
+  background: var(--page-dark-background);
+}
+
+.hero {
+  min-height: 72vh;
+  display: grid;
+  align-items: end;
+  padding: 96px 24px 64px;
+  background:
+    linear-gradient(90deg, rgba(13, 13, 16, 0.84), rgba(13, 13, 16, 0.48)),
+    url('/Images/Contact_Page.jpg') center/cover no-repeat;
+}
+
+.heroContent,
+.shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.heroContent h1,
+.section h2,
+.cta h2 {
+  margin: 0;
+}
+
+.heroContent h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+}
+
+.heroContent p,
+.section p,
+.card p,
+.faqCard p,
+.cta p,
+.note {
+  color: var(--page-dark-muted);
+  line-height: 1.8;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #c9a96e;
+  font-size: 0.8rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primaryButton {
+  color: #111;
+  background: #c9a96e;
+}
+
+.secondaryButton {
+  color: var(--page-dark-text);
+  border: 1px solid rgba(201, 169, 110, 0.38);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.shell {
+  padding: 80px 0 96px;
+}
+
+.section,
+.cta {
+  padding: 36px 0;
+}
+
+.sectionAlt {
+  border-top: 1px solid rgba(201, 169, 110, 0.12);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+}
+
+.list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.list li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.list li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: #c9a96e;
+}
+
+.note {
+  margin-top: 16px;
+}
+
+.bookingCard,
+.card,
+.faqCard {
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--page-dark-panel);
+  border: 1px solid var(--page-dark-border);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.bookingTitle {
+  margin: 0 0 8px;
+  font-weight: 800;
+  color: #c9a96e;
+}
+
+.bookingCard a {
+  color: var(--page-dark-text);
+}
+
+.cardGrid,
+.faqGrid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.cardGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.faqGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card h3,
+.faqCard h3 {
+  margin: 0 0 10px;
+}
+
+.cta {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .hero,
+  .shell {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cardGrid,
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}

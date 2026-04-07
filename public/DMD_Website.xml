@@ -2327,15 +2327,15 @@
                 </product>
             </subcategory>
             <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.jpg">
-                <product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Coffee table with tempered glass top and sturdy base" image="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
+                <product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Coffee table with tempered glass top and sturdy base" image="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
 					<images>
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Butterfly" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Stare Style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Stare Style" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood X style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood X style" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Rectangle Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Rectangle Legs" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Wide H.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Wide H" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table X Box Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table X Box Legs" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Butterfly" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Stare Style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Stare Style" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood X style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood X style" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Rectangle Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Rectangle Legs" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Wide H.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Wide H" />
+						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table X Box Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table X Box Legs" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -2345,12 +2345,12 @@
 						<spec name="Finish" value="Tempered glass top; stained wood or powder-coated base" />
 					</specifications>
 				</product>
-				<product id="Round Coffee Table" name="Round Coffee Table" description="Round coffee table for lobby seating areas" image="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
+				<product id="Round Coffee Table" name="Round Coffee Table" description="Round coffee table for lobby seating areas" image="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
 					<images>
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" alt="Round Coffee Table - Round Coffee Table - Round Base" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 1.jpg" alt="Round Coffee Table - Round Coffee Table Modern 1" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 2.jpg" alt="Round Coffee Table - Round Coffee Table Modern 2" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table one sylinder.jpg" alt="Round Coffee Table - Round Coffee Table one sylinder" />
+						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" alt="Round Coffee Table - Round Coffee Table - Round Base" />
+						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 1.jpg" alt="Round Coffee Table - Round Coffee Table Modern 1" />
+						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 2.jpg" alt="Round Coffee Table - Round Coffee Table Modern 2" />
+						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table one sylinder.jpg" alt="Round Coffee Table - Round Coffee Table one sylinder" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -2360,13 +2360,13 @@
 						<spec name="Finish" value="Stain/veneer top; powder-coated/stained base" />
 					</specifications>
 				</product>
-				<product id="Square Coffee Table" name="Square Coffee Table" description="Square coffee table with modern base options" image="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
+				<product id="Square Coffee Table" name="Square Coffee Table" description="Square coffee table with modern base options" image="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
 					<images>
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" alt="Square Coffee Table - Square Coffee Table Cross Legs X style" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs 2.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs 2" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Plus Sign.jpg" alt="Square Coffee Table - Square Coffee Table Plus Sign" />
-						<image src="/Images/Hotel/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Waterfall Legs.jpg" alt="Square Coffee Table - Square Coffee Table Waterfall Legs" />
+						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" alt="Square Coffee Table - Square Coffee Table Cross Legs X style" />
+						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs 2.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs 2" />
+						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs" />
+						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Plus Sign.jpg" alt="Square Coffee Table - Square Coffee Table Plus Sign" />
+						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Waterfall Legs.jpg" alt="Square Coffee Table - Square Coffee Table Waterfall Legs" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />

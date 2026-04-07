@@ -8,6 +8,13 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
+// Import inspirations data to get dynamic count
+const inspirationsModule = require('../lib/inspirations.js');
+const inspirations = inspirationsModule.default?.INSPIRATIONS ||
+                     (typeof inspirationsModule.getAllInspirations === 'function'
+                       ? { length: 6 } // Fallback to 6 if import fails
+                       : inspirationsModule);
+
 // Slugify similar to src/utils/catalogPaths.js
 function toSlug(str) {
   if (!str && str !== 0) return '';
@@ -122,8 +129,18 @@ function generate() {
   urls.push(`${baseUrl}/inspirations`);
   urls.push(`${baseUrl}/website-policies`);
 
-  // Inspiration detail pages
-  for (let i = 1; i <= 6; i++) {
+  // Blog pages
+  urls.push(`${baseUrl}/blog`);
+  urls.push(`${baseUrl}/blog/what-is-ffe-hospitality`);
+  urls.push(`${baseUrl}/blog/hotel-guestroom-furniture-checklist`);
+  urls.push(`${baseUrl}/blog/value-engineering-commercial-furniture`);
+  urls.push(`${baseUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`);
+  urls.push(`${baseUrl}/blog/restaurant-seating-guide`);
+  urls.push(`${baseUrl}/blog/ffe-procurement-timeline`);
+
+  // Inspiration detail pages - dynamically count from inspirations data
+  const inspirationCount = Array.isArray(inspirations) ? inspirations.length : 6;
+  for (let i = 1; i <= inspirationCount; i++) {
     urls.push(`${baseUrl}/inspirations/${i}`);
   }
 
@@ -159,6 +176,8 @@ function generate() {
       else if (u === baseUrl + '/contact' || u === baseUrl + '/schedule-call') { pri = '0.7'; freq = 'monthly'; }
       else if (u.includes('/inspirations')) { pri = '0.5'; freq = 'monthly'; }
       else if (u === baseUrl + '/website-policies') { pri = '0.3'; freq = 'yearly'; }
+      else if (u === baseUrl + '/blog') { pri = '0.8'; freq = 'weekly'; }
+      else if (u.includes('/blog/')) { pri = '0.6'; freq = 'monthly'; }
       else if (u.includes('/products/')) {
         const depth = u.replace(baseUrl, '').split('/').filter(Boolean).length;
         if (depth === 2) pri = '0.8'; // institution level

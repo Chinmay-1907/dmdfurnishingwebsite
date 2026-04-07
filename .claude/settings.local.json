@@ -7,7 +7,24 @@
       "Bash(mv \"C:/Users/chin/dmdfurnishingwebsite-1/ACTION-PLAN.md\" \"C:/Users/chin/dmdfurnishingwebsite-1/seo-audits/02-ACTION-PLAN.md\")",
       "Bash(npx react-scripts:*)",
       "Bash(node scripts/generate-sitemap.js)",
-      "Bash(ls \"C:/Users/chin/dmdfurnishingwebsite-1/public/og-image\"*)"
+      "Bash(ls \"C:/Users/chin/dmdfurnishingwebsite-1/public/og-image\"*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(grep -E \"\\\\.\\(png|jpg|jpeg|gif|svg|webp\\)$\")",
+      "Bash(sed 's/image=\"\"\"\"//g')",
+      "Bash(sed 's/\"\"\"\"$//g')",
+      "Bash(sed 's/src=\"\"\"\"//g')",
+      "Bash(git ls-tree:*)",
+      "Bash(xargs basename:*)",
+      "Bash(find /c/Users/chin/dmdfurnishingwebsite-1 -name *ScheduleCall* -o -name *schedule*call*)",
+      "Bash(find /c/Users/chin/dmdfurnishingwebsite-1 -path */app/api/* -type f)",
+      "Bash(find /c/Users/chin/dmdfurnishingwebsite-1/components -type f -name *.js -o -name *.jsx -o -name *.ts -o -name *.tsx)",
+      "Bash(grep -E \"\\\\.js$|\\\\.jsx$|\\\\.tsx$|\\\\.ts$\")",
+      "Bash(grep -r \"animation\\\\|transition\\\\|keyframe\" /c/Users/chin/dmdfurnishingwebsite-1/src/styles/ --include=*.css)",
+      "Bash(ls /c/Users/chin/dmdfurnishingwebsite-1/components/*.module.css)",
+      "Bash(mv \"TV Media Penal - 2 color 1.png\" \"TV Media Panel - 2 color 1.png\")",
+      "Bash(mv \"TV Media Penal - 2 color 2.png\" \"TV Media Panel - 2 color 2.png\")",
+      "Bash(mv \"TV Media Penal - 2 color.png\" \"TV Media Panel - 2 color.png\")",
+      "Bash(npm run:*)"
     ]
   }
 }

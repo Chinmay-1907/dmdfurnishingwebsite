@@ -1,60 +1,52 @@
-# Getting Started with Create React App
+# DMD Furnishing Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The primary runtime is **Next.js App Router** on standard Node.
 
-## Infrastructure Overview
+## Runtime
 
-For a concise architecture and build guide with exact paths and commands, see [INFRASTRUCTURE_OVERVIEW.md](INFRASTRUCTURE_OVERVIEW.md).
+- Primary dev: `npm run dev`
+- Primary build: `npm run build`
+- Primary start: `npm run start`
+- Primary lint: `npm run lint`
 
-## Available Scripts
+## Architecture
 
-In the project directory, you can run:
+- App Router frontend: `app/`
+- Shared Next UI: `components/`
+- Server-side data helpers: `lib/`
+- Retained stylesheet assets: `src/styles/`
+- Product data: `public/DMD_Website.xml`
+- Project data: `public/projects.xml`
+- Images and static assets: `public/`
 
-### `npm start`
+## Data model
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Product catalog data is sourced from `public/DMD_Website.xml`.
+- Project data is sourced from `public/projects.xml`.
+- The Next runtime reads these files server-side through helpers in `lib/`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## API
 
-## Image asset paths
+The site uses same-origin API endpoints for the consultation flow:
 
-- All product, category, and gallery images are stored under `public/Images` and referenced from `public/DMD_Website.xml`.
-- Paths in the XML must use leading `/Images/...` with forward slashes and match the exact filename (including spaces and case) that lives in `public/Images`.
-- A helper script (`fix-image-paths.js`) is available at the repo root to re-normalize XML image references against the directory structure if new assets are added or filenames change.
-- The runtime catalog parser now uses `src/utils/catalogPaths.js` to normalize every image path (swap Windows backslashes for forward slashes and ensure a single leading `/`) before rendering, so keep XML entries relative to the site root and the components will resolve them correctly.
+- `/api/request-otp`
+- `/api/verify-otp`
+- `/api/send-consultation`
 
-## EmailJS Form Submission (Free, Client-Only)
+Environment variables still use the existing SMTP and reCAPTCHA surface:
 
-The Contact form can send consultation requests via EmailJS with no server cost.
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `MAIL_FROM`
+- `MAIL_TO`
+- `OTP_SECRET`
+- `RECAPTCHA_SITE_KEY`
+- `RECAPTCHA_SECRET_KEY`
+- `RECAPTCHA_MIN_SCORE`
 
-### Setup Steps
-- Create a free account at emailjs.com.
-- Add an Email Service (e.g., Gmail/SMTP). Note your `Service ID`.
-- Create a Template and include fields:
-  - `to_email` (set to `sales@dfurnusa.com` or leave configurable)
-  - `name`
-  - `company`
-  - `email`
-  - `phone`
-  - `project`
-  - `message`
-  - `subject`
-- Find your `Public Key` and `Template ID` in the EmailJS dashboard.
+## Notes
 
-### Configure Environment
-- Copy `.env.example` to `.env` or `.env.local` and set:
-  - `REACT_APP_EMAILJS_PUBLIC_KEY`
-  - `REACT_APP_EMAILJS_SERVICE_ID`
-  - `REACT_APP_EMAILJS_TEMPLATE_ID`
-- Stop and restart `npm start` to load env vars.
-
-### Where it’s used
-- Keys are read in `src/config/email.js`.
-- The Contact form in `src/components/Contact.js` sends via EmailJS and shows success/error messages without redirects.
-
-### Troubleshooting
-- If the form shows “Email service not configured”, ensure env vars are set and the dev server has been restarted.
-- Check EmailJS template variable names match exactly the ones listed above.
-- For full control without third-party services, add a small Node/Nodemailer backend.
+- `netlify.toml` still exists for historical compatibility, but it is not the source of truth for the portable Next runtime.

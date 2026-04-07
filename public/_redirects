@@ -10,5 +10,3 @@
 # 301 redirects for lobby area duplicate segment fix
 /products/lobby-area/lobby-area/*  /products/lobby-area/lobby-furniture/:splat  301
 /products/lobby-area/lobby-area  /products/lobby-area/lobby-furniture  301
-
-/*  /index.html  200

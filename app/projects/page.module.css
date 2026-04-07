@@ -1,0 +1,243 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 0 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 2rem;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  padding: 3.25rem clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 1.75rem;
+  background: linear-gradient(135deg, rgba(7, 23, 29, 0.98), rgba(11, 37, 43, 0.92));
+  color: #f4f6f5;
+  isolation: isolate;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(198, 153, 84, 0.24), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(53, 111, 109, 0.3), transparent 38%);
+  z-index: -1;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 42rem;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #d8b37b;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.hero h1,
+.sectionHeading h2,
+.callout h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.1rem);
+  line-height: 0.95;
+}
+
+.sectionHeading h2,
+.callout h2 {
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1.05;
+}
+
+.heroText {
+  margin: 0;
+  max-width: 36rem;
+  color: rgba(244, 246, 245, 0.84);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.heroImageWrap {
+  position: relative;
+  min-height: 22rem;
+  border-radius: 1.35rem;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.gridSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeading {
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sectionHeading p:last-child {
+  margin: 0;
+  color: var(--text-secondary, #5f6561);
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(19, 42, 45, 0.08);
+  background: #ffffff;
+  box-shadow: 0 22px 60px rgba(11, 25, 27, 0.08);
+}
+
+.cardImageWrap {
+  position: relative;
+  min-height: 18rem;
+  background: #e8ebe8;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.category {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(7, 23, 29, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.25rem 1.2rem 1.3rem;
+}
+
+.cardBody h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.projectMeta {
+  margin: 0;
+  color: #8b6a3f;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.cardBody p {
+  margin: 0;
+  color: var(--text-secondary, #5f6561);
+  line-height: 1.65;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 0.2rem;
+}
+
+.cardLink,
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cardLink {
+  color: #0d3538;
+  background: rgba(19, 42, 45, 0.06);
+}
+
+.callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.75rem clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgba(224, 209, 186, 0.48), rgba(201, 224, 223, 0.34));
+}
+
+.callout p {
+  margin: 0.65rem 0 0;
+  max-width: 42rem;
+  color: #394544;
+  line-height: 1.7;
+}
+
+.cta {
+  color: #fff;
+  background: #0f3a3d;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .hero,
+  .grid,
+  .callout {
+    grid-template-columns: 1fr;
+  }
+
+  .callout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    gap: 2.5rem;
+  }
+
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .heroImageWrap,
+  .cardImageWrap {
+    min-height: 15rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

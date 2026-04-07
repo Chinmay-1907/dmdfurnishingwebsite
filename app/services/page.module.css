@@ -1,0 +1,244 @@
+.page {
+  color: var(--page-dark-text);
+  background: var(--page-dark-background);
+}
+
+.hero {
+  min-height: 72vh;
+  display: grid;
+  align-items: end;
+  padding: 96px 24px 64px;
+  background:
+    linear-gradient(90deg, rgba(13, 13, 16, 0.84), rgba(13, 13, 16, 0.48)),
+    url('/Images/Our Services.jpg') center/cover no-repeat;
+}
+
+.heroContent,
+.shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.heroContent h1,
+.section h2,
+.cta h2 {
+  margin: 0;
+}
+
+.heroContent h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+}
+
+.heroContent p,
+.section p,
+.card p,
+.stepCard p,
+.glossary dd,
+.cta p {
+  color: var(--page-dark-muted);
+  line-height: 1.8;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #c9a96e;
+  font-size: 0.8rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primaryButton {
+  color: #111;
+  background: #c9a96e;
+}
+
+.secondaryButton {
+  color: var(--page-dark-text);
+  border: 1px solid rgba(201, 169, 110, 0.38);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.shell {
+  padding: 80px 0 96px;
+}
+
+.section,
+.cta {
+  padding: 36px 0;
+}
+
+.sectionAlt {
+  border-top: 1px solid rgba(201, 169, 110, 0.12);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.card,
+.stepCard,
+.pill,
+.glossaryRow {
+  background: var(--page-dark-panel);
+  border: 1px solid var(--page-dark-border);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.card,
+.stepCard {
+  padding: 22px;
+  border-radius: 22px;
+}
+
+.card h3,
+.stepCard h3 {
+  margin: 0 0 10px;
+}
+
+.card ul,
+.checkList {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.card li,
+.checkList li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.card li::before,
+.checkList li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: #c9a96e;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.stepNumber {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  color: #111;
+  background: #c9a96e;
+  font-weight: 800;
+}
+
+.glossary {
+  margin: 20px 0 0;
+}
+
+.glossaryRow {
+  padding: 18px 20px;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.glossary dt {
+  font-weight: 800;
+  color: #c9a96e;
+}
+
+.glossary dd {
+  margin: 10px 0 0;
+}
+
+.faqList {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.faqItem {
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: var(--page-dark-panel);
+  border: 1px solid var(--page-dark-border);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.faqQuestion {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: var(--page-dark-text);
+  line-height: 1.5;
+}
+
+.faqAnswer {
+  margin: 0;
+  color: var(--page-dark-muted);
+  line-height: 1.8;
+}
+
+.cta {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cardGrid,
+  .stepGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .hero,
+  .shell {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cardGrid,
+  .stepGrid {
+    grid-template-columns: 1fr;
+  }
+}
