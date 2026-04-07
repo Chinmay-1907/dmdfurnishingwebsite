@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { GiWoodBeam, GiMaterialsScience, GiTreeBranch, GiMetalBar, GiGears } from 'react-icons/gi';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 import styles from './page.module.css';
 
@@ -13,18 +14,17 @@ const differentiators = [
 ];
 
 const materials = [
-  ['HPL (High-Pressure Laminate)', 'Scratch-resistant surface material used for hotel casegoods, restaurant tables, and office surfaces. Fuses kraft paper and decorative paper under high heat and pressure.'],
-  ['Engineered Wood & Veneer', 'Stable substrate with natural hardwood veneer face for a premium appearance. Used in guestroom casegoods, credenzas, and custom millwork.'],
-  ['Solid Wood', 'Selected hardwoods for structural elements, frames, and accent pieces requiring natural grain and durability.'],
-  ['Metal Structures', 'Powder-coated steel and aluminum frames for seating, tables, and beds designed for commercial load ratings.'],
-  ['Commercial-Grade Hardware', 'Hinges, drawer slides, and locking mechanisms selected for high-cycle durability in hotel and restaurant environments.'],
+  { title: 'HPL (High-Pressure Laminate)', desc: 'Scratch-resistant surface material for hotel casegoods, restaurant tables, and office surfaces.', Icon: GiMaterialsScience },
+  { title: 'Engineered Wood & Veneer', desc: 'Natural hardwood veneer face on a stable substrate for guestroom casegoods and custom millwork.', Icon: GiWoodBeam },
+  { title: 'Solid Wood', desc: 'Selected hardwoods for structural elements, frames, and accent pieces requiring natural grain.', Icon: GiTreeBranch },
+  { title: 'Metal Structures', desc: 'Powder-coated steel and aluminum frames for seating, tables, and beds at commercial load ratings.', Icon: GiMetalBar },
+  { title: 'Commercial-Grade Hardware', desc: 'Hinges, drawer slides, and locking mechanisms selected for high-cycle durability.', Icon: GiGears },
 ];
 
 const values = [
   'Quality craftsmanship',
   'Transparent communication',
-  'Respect for timelines and budgets',
-  'Long-term client relationships',
+  'Respect for timelines',
 ];
 
 export function generateMetadata() {
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>About DMD Furnishing</p>
-          <h1>Built for Commercial Spaces. Designed for Real-World Use.</h1>
+          <h1>Built for Commercial Spaces.<br />Designed for Real-World Use.</h1>
           <p className={styles.heroLede}>
             A commercial furniture manufacturer based in Foxboro, Massachusetts — providing
             custom FF&E solutions for hotels, restaurants, offices, and institutional
@@ -169,12 +169,15 @@ export default function AboutPage() {
             visual consistency across repeat renovation cycles.
           </p>
         </div>
-        <div className={styles.materialsList}>
-          {materials.map(([name, description]) => (
-            <details key={name} className={styles.materialItem}>
-              <summary className={styles.materialTitle}>{name}</summary>
-              <p className={styles.materialDesc}>{description}</p>
-            </details>
+        <div className={styles.materialsGrid}>
+          {materials.map(({ title, desc, Icon }) => (
+            <article key={title} className={styles.materialCard}>
+              <div className={styles.materialIconWrap}>
+                <Icon className={styles.materialIcon} />
+              </div>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+            </article>
           ))}
         </div>
       </section>
