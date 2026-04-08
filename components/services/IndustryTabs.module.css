@@ -1,0 +1,210 @@
+/* ─── Wrapper ───────────────────────────────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ─── Pill Tab Bar ───────────────────────────────────────────────────────── */
+
+.tabBar {
+  width: 100%;
+}
+
+.tabScroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.tabScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+  font-family: inherit;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.tabActive {
+  background: #c9a96e;
+  border-color: #c9a96e;
+  color: #111;
+}
+
+.tabActive:hover {
+  background: #d4b47e;
+  border-color: #d4b47e;
+  color: #111;
+}
+
+/* ─── Content Panel ──────────────────────────────────────────────────────── */
+
+.panel {
+  background:
+    linear-gradient(135deg, rgba(201, 169, 110, 0.03) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(201, 169, 110, 0.12);
+  border-radius: 22px;
+  padding: 2rem 2.25rem;
+  animation: fadeIn 280ms ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Split Grid ─────────────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ─── Image ──────────────────────────────────────────────────────────────── */
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* ─── Text Content ───────────────────────────────────────────────────────── */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.industryName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+/* ─── Highlight List ─────────────────────────────────────────────────────── */
+
+.highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.highlightItem {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.highlightItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c9a96e;
+  flex-shrink: 0;
+}
+
+/* ─── Product Link ───────────────────────────────────────────────────────── */
+
+.productLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #c9a96e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 150ms ease, gap 150ms ease;
+  width: fit-content;
+}
+
+.productLink:hover {
+  color: #d4b47e;
+  gap: 0.6rem;
+}
+
+.productCount {
+  font-weight: 400;
+  color: rgba(201, 169, 110, 0.7);
+}
+
+.arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ─── Responsive: stack on mobile ───────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .panel {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .imageWrapper {
+    border-radius: 1rem;
+  }
+
+  .industryName {
+    font-size: 1.25rem;
+  }
+}

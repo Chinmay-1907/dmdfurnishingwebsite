@@ -35,10 +35,7 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
     <div
       ref={containerRef}
       className="ba-slider"
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      style={{ position: 'relative', overflow: 'hidden', borderRadius: 24, cursor: 'ew-resize', touchAction: 'none' }}
+      style={{ position: 'relative', overflow: 'hidden', borderRadius: 24, touchAction: 'none' }}
     >
       {/* After image (full width, behind) */}
       <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
@@ -60,7 +57,7 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
       <span className="ba-label ba-label-before" style={{ position: 'absolute', top: 20, left: 20, zIndex: 3 }}>Before</span>
       <span className="ba-label ba-label-after" style={{ position: 'absolute', top: 20, right: 20, zIndex: 3 }}>After</span>
 
-      {/* Divider line + handle */}
+      {/* Divider line (visual only) */}
       <div
         style={{
           position: 'absolute',
@@ -73,14 +70,30 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
           zIndex: 4,
           pointerEvents: 'none',
         }}
+      />
+
+      {/* Draggable handle — wide hit area for easy grabbing */}
+      <div
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        style={{
+          position: 'absolute',
+          top: 0,
+          bottom: 0,
+          left: `${position}%`,
+          transform: 'translateX(-50%)',
+          width: 44,
+          zIndex: 5,
+          cursor: 'ew-resize',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       >
         {/* Handle circle */}
         <div
           style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
             width: 44,
             height: 44,
             borderRadius: '50%',
@@ -91,6 +104,7 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
             justifyContent: 'center',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)',
             backdropFilter: 'blur(4px)',
+            pointerEvents: 'none',
           }}
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">

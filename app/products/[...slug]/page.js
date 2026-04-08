@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import ProductDetailPage from '../../../components/products/ProductDetailPage';
-import { getAllProductPaths, getProductContext } from '../../../lib/catalog';
+import { getAllProductPaths, getProductContext, getProducts } from '../../../lib/catalog';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
 
 function getContextFromSlug(slugParts) {
@@ -144,6 +144,12 @@ export default async function ProductCatchAllPage({ params }) {
     notFound();
   }
 
+  const { place, furnitureType, subcategory, product } = context;
+  const siblingProducts = getProducts(place.slug, furnitureType.slug, subcategory.slug);
+  const relatedProducts = siblingProducts
+    .filter((p) => p.slug !== product.slug)
+    .slice(0, 6);
+
   return (
     <>
       <script
@@ -151,10 +157,11 @@ export default async function ProductCatchAllPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildStructuredData(context)) }}
       />
       <ProductDetailPage
-        place={context.place}
-        furnitureType={context.furnitureType}
-        subcategory={context.subcategory}
-        product={context.product}
+        place={place}
+        furnitureType={furnitureType}
+        subcategory={subcategory}
+        product={product}
+        relatedProducts={relatedProducts}
       />
     </>
   );

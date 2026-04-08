@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import ProductGallery from './ProductGallery';
 import styles from './product-detail.module.css';
@@ -15,7 +16,7 @@ function buildGalleryImages(product) {
   ];
 }
 
-export default function ProductDetailPage({ place, furnitureType, subcategory, product }) {
+export default function ProductDetailPage({ place, furnitureType, subcategory, product, relatedProducts }) {
   const galleryImages = buildGalleryImages(product);
   const productTags = product.tags?.filter(Boolean) || [];
   const specifications = product.specifications?.filter((spec) => spec.name && spec.value) || [];
@@ -26,9 +27,7 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
       <section className={styles.shell}>
         <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
           <ol>
-            <li><Link href="/products">Products</Link></li>
-            <li><Link href={`/products/${place.slug}`}>{place.name}</Link></li>
-            <li><Link href={`/products/${place.slug}/${furnitureType.slug}`}>{furnitureType.name}</Link></li>
+            <li><Link href={`/products/${place.slug}`}>Products</Link></li>
             <li><Link href={subcategoryHref}>{subcategory.name}</Link></li>
             <li><span aria-current="page">{product.name}</span></li>
           </ol>
@@ -150,12 +149,37 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
                 See the full range of {subcategory.name.toLowerCase()} products available for{' '}
                 {place.name.toLowerCase()} environments, or explore other {furnitureType.name.toLowerCase()} options.
               </p>
+
+              {relatedProducts?.length > 0 && (
+                <div className={styles.relatedGrid}>
+                  {relatedProducts.map((rp) => (
+                    <Link
+                      key={rp.slug}
+                      href={`/products/${place.slug}/${furnitureType.slug}/${subcategory.slug}/${rp.slug}`}
+                      className={styles.relatedCard}
+                    >
+                      <div className={styles.relatedImageWrap}>
+                        <Image
+                          src={rp.image || '/placeholder.png'}
+                          alt={rp.name}
+                          fill
+                          sizes="(max-width: 640px) 50vw, 180px"
+                          className={styles.relatedImage}
+                          loading="lazy"
+                        />
+                      </div>
+                      <span className={styles.relatedName}>{rp.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
               <div className={styles.actions} style={{ marginTop: '1.25rem' }}>
-                <Link href={subcategoryHref} className={styles.secondaryAction}>
-                  View all {subcategory.name}
+                <Link href={`/products?space=${place.slug}`} className={styles.secondaryAction}>
+                  Back to Catalog
                 </Link>
-                <Link href={`/products/${place.slug}/${furnitureType.slug}`} className={styles.ghostAction}>
-                  Browse {furnitureType.name}
+                <Link href={subcategoryHref} className={styles.ghostAction}>
+                  View all {subcategory.name}
                 </Link>
               </div>
             </div>

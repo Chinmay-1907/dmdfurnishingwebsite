@@ -1,17 +1,19 @@
 import { notFound } from 'next/navigation';
-import { siteUrl } from '../../../../lib/metadata';
 import {
   getAllPlaces,
   getFurnitureTypes,
   getPlaceBySlug,
-  getSubcategories,
+  getAllProductsFlat,
+  getFilterOptions,
 } from '../../../../lib/catalog';
-import { generatePageMetadata } from '../../../../lib/metadata';
-import { CatalogPageLayout, CatalogSection } from '../../../../components/products/CatalogPage';
+import { generatePageMetadata, siteUrl } from '../../../../lib/metadata';
+import ProductCatalog from '../../../../components/products/ProductCatalog';
+
+const allProducts = getAllProductsFlat();
+const filterOptions = getFilterOptions();
 
 export function generateStaticParams() {
   const params = [];
-
   for (const place of getAllPlaces()) {
     for (const furnitureType of getFurnitureTypes(place.slug)) {
       params.push({
@@ -20,61 +22,42 @@ export function generateStaticParams() {
       });
     }
   }
-
   return params;
 }
 
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
-  const place = getPlaceBySlug(params.placeSlug);
-  const furnitureType = place?.furnitureTypes.find((item) => item.slug === params.furnitureTypeSlug);
+  const { placeSlug, furnitureTypeSlug } = await params;
+  const place = getPlaceBySlug(placeSlug);
+  const furnitureType = place?.furnitureTypes.find((item) => item.slug === furnitureTypeSlug);
 
   if (!place || !furnitureType) {
     return generatePageMetadata({
       title: 'Products',
-      description: 'Browse commercial furniture products by place and furniture type.',
-      path: `/products/${params.placeSlug}/${params.furnitureTypeSlug}`,
+      description: 'Browse commercial furniture products.',
+      path: `/products/${placeSlug}/${furnitureTypeSlug}`,
     });
   }
 
   return generatePageMetadata({
-    title: `${furnitureType.name} in ${place.name}`,
+    title: `${furnitureType.name} for ${place.name} | FF&E Products`,
     description: furnitureType.description
-      ? `${furnitureType.description} Browse subcategories within ${furnitureType.name} for ${place.name}.`
-      : `Browse subcategories within ${furnitureType.name} for ${place.name}.`,
+      ? `${furnitureType.description} Browse ${furnitureType.name.toLowerCase()} products for ${place.name.toLowerCase()}.`
+      : `Browse ${furnitureType.name.toLowerCase()} products for ${place.name.toLowerCase()} environments.`,
     path: `/products/${place.slug}/${furnitureType.slug}`,
     image: furnitureType.image || place.image,
   });
 }
 
-export default function FurnitureTypeProductsPage({ params }) {
-  const place = getPlaceBySlug(params.placeSlug);
+export default async function FurnitureTypeProductsPage({ params }) {
+  const { placeSlug, furnitureTypeSlug } = await params;
+  const place = getPlaceBySlug(placeSlug);
 
-  if (!place) {
-    notFound();
-  }
+  if (!place) notFound();
 
-  const furnitureType = place.furnitureTypes.find((item) => item.slug === params.furnitureTypeSlug);
-
-  if (!furnitureType) {
-    notFound();
-  }
-
-  const subcategories = getSubcategories(place.slug, furnitureType.slug);
-  const productCount = subcategories.reduce((total, subcategory) => total + subcategory.products.length, 0);
-
-  const items = subcategories.map((subcategory) => ({
-    key: subcategory.slug,
-    title: subcategory.name,
-    description:
-      subcategory.description ||
-      `Browse the products available in ${subcategory.name.toLowerCase()}.`,
-    href: `/products/${place.slug}/${furnitureType.slug}/${subcategory.slug}`,
-    image: subcategory.image || furnitureType.image || place.image,
-    imageAlt: `${subcategory.name} in ${furnitureType.name}`,
-    meta: `${subcategory.products.length} products`,
-  }));
+  const furnitureType = place.furnitureTypes.find((item) => item.slug === furnitureTypeSlug);
+  if (!furnitureType) notFound();
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -90,34 +73,13 @@ export default function FurnitureTypeProductsPage({ params }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <CatalogPageLayout
-        breadcrumbs={[
-          { label: 'Products', href: '/products' },
-          { label: place.name, href: `/products/${place.slug}` },
-          { label: furnitureType.name },
-        ]}
-      eyebrow="Furniture Type"
-      title={furnitureType.name}
-      description={
-        furnitureType.description ||
-        `Browse the subcategories available within ${furnitureType.name} for ${place.name}.`
-      }
-      image={furnitureType.image || place.image}
-      imageAlt={`${furnitureType.name} catalog`}
-      stats={[
-        { label: 'Subcategories', value: subcategories.length },
-        { label: 'Products', value: productCount },
-        { label: 'Place', value: place.name },
-      ]}
-    >
-      <CatalogSection
-        title="Browse subcategories"
-        description="Each subcategory narrows the catalog to a more specific furniture application."
-        items={items}
-        emptyTitle="No subcategories found"
-        emptyDescription="This furniture type exists in the catalog, but no subcategories were returned for it."
+      <ProductCatalog
+        products={allProducts}
+        filterOptions={filterOptions}
+        initialFilters={{ space: place.slug, furnitureType: furnitureType.slug }}
+        heroTitle={`${furnitureType.name} for ${place.name}`}
+        heroDescription={furnitureType.description || `Browse all ${furnitureType.name.toLowerCase()} products available for ${place.name.toLowerCase()} environments.`}
       />
-      </CatalogPageLayout>
     </>
   );
 }
