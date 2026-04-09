@@ -11,7 +11,7 @@
   force = false
 
 [build]
-  publish = "build"
+  publish = ".next"
   functions = "netlify/functions"
 
 [dev]
