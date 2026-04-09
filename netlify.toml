@@ -4,11 +4,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/:path*/"
-  to = "/:path*"
-  status = 301
-  force = false
 
 [build]
   publish = ".next"

@@ -1,5 +1,3 @@
-/api/*  /.netlify/functions/:splat  200
-
 # 301 redirects for fixed URL typos
 /products/hotel/guest-room/tv-media-penal/*  /products/hotel/guest-room/tv-media-panel/:splat  301
 /products/hotel/guest-room/tv-media-penal  /products/hotel/guest-room/tv-media-panel  301
