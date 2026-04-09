@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Main featured image ── */
+.mainImageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+/* ── Strip wrapper with arrows ── */
+.stripWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrollBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(201, 169, 110, 0.25);
+  background: rgba(13, 15, 20, 0.7);
+  color: #c9a96e;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+}
+
+.scrollBtn:hover {
+  border-color: #c9a96e;
+  background: rgba(201, 169, 110, 0.12);
+  transform: scale(1.08);
+}
+
+/* ── Horizontal thumbnail strip ── */
+.strip {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.strip::-webkit-scrollbar {
+  display: none;
+}
+
+.thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 110px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 200ms ease, box-shadow 200ms ease, opacity 200ms ease;
+  opacity: 0.6;
+}
+
+.thumb:hover {
+  opacity: 0.85;
+  border-color: rgba(201, 169, 110, 0.3);
+}
+
+.thumbActive {
+  opacity: 1;
+  border-color: #c9a96e;
+  box-shadow: 0 0 12px rgba(201, 169, 110, 0.25);
+}
+
+.thumbImage {
+  object-fit: cover;
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .thumb {
+    width: 88px;
+    height: 58px;
+  }
+
+  .scrollBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}

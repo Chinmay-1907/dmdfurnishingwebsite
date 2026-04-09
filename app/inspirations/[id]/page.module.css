@@ -66,7 +66,7 @@
   box-shadow: 0 0 16px rgba(164, 41, 99, 0.1);
 }
 
-/* ── 1. Hero — immersive full-bleed ── */
+/* ── 1. Hero ── */
 .hero {
   position: relative;
   display: flex;
@@ -92,7 +92,7 @@
   z-index: 2;
   width: min(1120px, 100%);
   margin: 0 auto;
-  padding: 3rem 0 3rem;
+  padding: 3rem 0;
 }
 
 .heroContent h1 {
@@ -100,14 +100,6 @@
   max-width: 20ch;
   font-size: clamp(2.4rem, 5vw, 4.2rem);
   line-height: 1.05;
-}
-
-.heroMeta {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1rem;
 }
 
 .categoryPill {
@@ -120,11 +112,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-}
-
-.heroDate {
-  color: rgba(244, 240, 230, 0.5);
-  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
 }
 
 .heroDesc {
@@ -193,7 +181,7 @@
   color: #c9a96e;
 }
 
-/* ── 3. Overview Panel ── */
+/* ── 3. Overview panel ── */
 .overviewPanel {
   margin-top: 2rem;
   padding: 2rem;
@@ -203,20 +191,6 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
-.panelBlock {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(201, 169, 110, 0.08);
-}
-
-.panelBlock:first-child {
-  padding-top: 0;
-}
-
-.panelBlock:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
 .bodyText {
   margin: 0;
   color: var(--page-dark-muted);
@@ -224,38 +198,21 @@
   font-size: 1rem;
 }
 
-/* Specs grid */
-.specGrid {
+.twoCol {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.85rem;
-  margin-top: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.specItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  padding: 1rem;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.04);
+.subPanel {
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(201, 169, 110, 0.06);
 }
 
-.specName {
-  color: var(--page-dark-text);
-  font-weight: 700;
-  font-size: 0.85rem;
-}
-
-.specValue {
-  color: var(--page-dark-muted);
-  line-height: 1.5;
-  font-size: 0.9rem;
-}
-
-/* Highlights */
-.highlights {
+.bulletList {
   margin: 0.5rem 0 0;
   padding: 0;
   list-style: none;
@@ -263,7 +220,7 @@
   gap: 10px;
 }
 
-.highlights li {
+.bulletList li {
   position: relative;
   padding-left: 20px;
   font-size: 0.92rem;
@@ -271,7 +228,7 @@
   line-height: 1.6;
 }
 
-.highlights li::before {
+.bulletList li::before {
   content: '';
   position: absolute;
   left: 0;
@@ -282,45 +239,140 @@
   background: linear-gradient(135deg, #c9a96e, #a42963);
 }
 
-/* Testimonial */
-.testimonial {
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  border-left: 4px solid #c9a96e;
-  border-radius: 0 14px 14px 0;
-  background: rgba(201, 169, 110, 0.04);
-}
-
-.testimonial p {
-  margin: 0;
-  color: rgba(244, 240, 230, 0.85);
-  font-size: 1.05rem;
-  font-style: italic;
-  line-height: 1.7;
-}
-
-.testimonial footer {
-  margin-top: 0.85rem;
-}
-
-.testimonial cite {
-  color: #c9a96e;
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* ── Section spacing for components ── */
-.componentSection {
+/* ── 4. Gallery section ── */
+.gallerySection {
   margin-top: 3rem;
 }
 
-.componentSection h2 {
+.gallerySection h2 {
   margin: 0;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   line-height: 1.1;
 }
 
-/* ── CTA ── */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 110, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.galleryImage {
+  object-fit: cover;
+}
+
+/* ── 5. Product connection ── */
+.productLink {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  text-decoration: none;
+  color: var(--page-dark-text);
+  transition: border-color 280ms ease, box-shadow 280ms ease, transform 280ms ease;
+}
+
+.productLink:hover {
+  transform: translateY(-3px);
+  border-color: rgba(164, 41, 99, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.productLinkText {
+  flex: 1;
+}
+
+.productLinkText h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.productLinkText p {
+  margin: 0.35rem 0 0;
+  color: var(--page-dark-muted);
+  font-size: 0.9rem;
+}
+
+.productLinkArrow {
+  color: #c9a96e;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ── 6. Navigation ── */
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.navCard {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(201, 169, 110, 0.08);
+  text-decoration: none;
+  color: var(--page-dark-text);
+  transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.navCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(164, 41, 99, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navCardNext {
+  justify-content: flex-end;
+}
+
+.navArrow {
+  color: #c9a96e;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.navInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.navLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(244, 240, 230, 0.4);
+}
+
+.navName {
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── 7. CTA ── */
 .ctaSection {
   text-align: center;
   margin-top: 4rem;
@@ -393,7 +445,19 @@
     padding: 1.25rem;
   }
 
-  .specGrid {
+  .twoCol {
     grid-template-columns: 1fr;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .productLink {
+    padding: 1.25rem;
   }
 }

@@ -1,135 +1,224 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAllProjects } from '../../lib/projects';
+import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 import styles from './page.module.css';
 
-const projectsSchema = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'CollectionPage',
-      name: 'Commercial Furniture Projects | DMD Furnishing',
-      description:
-        'Browse DMD Furnishing\'s portfolio of commercial hospitality furniture installations — hotels, restaurants, and multi-family properties across the United States.',
-      url: 'https://dmdfurnishing.com/projects',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dmdfurnishing.com' },
-        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://dmdfurnishing.com/projects' },
-      ],
-    },
-  ],
-};
+// ---------------------------------------------------------------------------
+// Metadata
+// ---------------------------------------------------------------------------
 
-export const metadata = {
-  title: 'Hospitality Furniture Projects | Commercial Installations',
-  description:
-    'Browse DMD Furnishing\'s portfolio of commercial hospitality furniture installations — hotels, restaurants, and multi-family properties across the United States.',
-  alternates: {
-    canonical: 'https://dmdfurnishing.com/projects',
-  },
-  openGraph: {
-    title: 'Projects | DMD Furnishing',
+export function generateMetadata() {
+  return generatePageMetadata({
+    title: 'Hospitality Furniture Projects | Commercial Installations',
     description:
-      'Browse DMD Furnishing\'s portfolio of commercial hospitality furniture installations — hotels, restaurants, and multi-family properties across the United States.',
-    url: 'https://dmdfurnishing.com/projects',
-    images: [
+      'Browse DMD Furnishing\u2019s portfolio of commercial hospitality furniture installations \u2014 hotels, restaurants, and multi-family properties across the United States.',
+    path: '/projects',
+    image: '/Images/Our_Projects.jpg',
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Schema
+// ---------------------------------------------------------------------------
+
+function buildSchema(projects) {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        url: '/Images/Our_Projects.jpg',
-        width: 1200,
-        height: 630,
+        '@type': 'CollectionPage',
+        name: 'Commercial Furniture Projects | DMD Furnishing',
+        description:
+          'Browse DMD Furnishing\u2019s portfolio of commercial hospitality furniture installations.',
+        url: `${siteUrl}/projects`,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Projects', item: `${siteUrl}/projects` },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        name: 'DMD Furnishing Project Portfolio',
+        itemListElement: projects.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'Article',
+            name: p.name,
+            description: p.shortDescription,
+            url: `${siteUrl}/projects/${p.id}`,
+            image: p.mainImage?.startsWith('http') ? p.mainImage : `${siteUrl}${p.mainImage}`,
+          },
+        })),
       },
     ],
-  },
-};
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+/** Pick up to `count` specs that make good pills (short values) */
+function pickSpecs(specs, count = 3) {
+  if (!specs?.length) return [];
+  return specs.slice(0, count);
+}
+
+// ---------------------------------------------------------------------------
+// Page
+// ---------------------------------------------------------------------------
 
 export default function ProjectsPage() {
   const projects = getAllProjects();
+  const [featured, ...rest] = projects;
+  const schema = buildSchema(projects);
 
   return (
     <main className={styles.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsSchema) }} />
-      <section className={styles.hero}>
-        <div className={styles.heroBackdrop} aria-hidden="true" />
-        <div className={styles.heroContent}>
-          <p className={styles.eyebrow}>Project Portfolio</p>
-          <h1>Recent Projects</h1>
-          <p className={styles.heroText}>
-            From boutique hotels to large-scale franchise renovations, our portfolio reflects a
-            commitment to quality craftsmanship and reliable project execution.
-          </p>
-          <p className={styles.heroText}>
-            Each installation showcases custom-manufactured furniture designed to balance
-            aesthetics, durability, and budget.
-          </p>
-        </div>
-        <div className={styles.heroImageWrap}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
+      {/* ── 1. Hero ── */}
+      <section className={styles.hero} aria-label="Project portfolio">
+        <div className={styles.heroBg}>
           <Image
             src="/Images/Our_Projects.jpg"
-            alt="Completed hospitality project portfolio"
+            alt="DMD Furnishing completed projects"
             fill
             priority
-            sizes="(max-width: 900px) 100vw, 42vw"
-            className={styles.heroImage}
+            sizes="100vw"
+            className={styles.heroBgImage}
           />
         </div>
+        <div className={styles.heroOverlay} aria-hidden="true" />
+        <div className={styles.heroContent}>
+          <p className={styles.eyebrow}>Project Portfolio</p>
+          <h1>Spaces We&rsquo;ve Transformed</h1>
+          <p className={styles.heroLede}>
+            From boutique hotels to large-scale franchise renovations &mdash; custom-manufactured
+            furniture designed to balance aesthetics, durability, and budget.
+          </p>
+          <div className={styles.heroActions}>
+            <Link href="/schedule-call" className={styles.primaryBtn}>
+              Schedule a Consultation
+            </Link>
+            <a href="#projects" className={styles.secondaryBtn}>
+              Browse Our Work
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section className={styles.gridSection}>
-        <div className={styles.sectionHeading}>
-          <p className={styles.eyebrow}>Browse Work</p>
-          <h2>Selected installations</h2>
-          <p>
-            These projects show the breadth of our hospitality and commercial work across guest
-            rooms, lobbies, dining areas, and common spaces. Explore the{' '}
-            <Link href="/products">furniture collections</Link> used in these projects, or learn
-            about our <Link href="/services">full-service capabilities</Link>.
-          </p>
-        </div>
-
-        <div className={styles.grid}>
-          {projects.map((project) => (
-            <article key={project.id} className={styles.card}>
-              <div className={styles.cardImageWrap}>
+      <div className={styles.shell}>
+        {/* ── 2. Featured Project ── */}
+        {featured && (
+          <section className={styles.section} aria-label="Featured project">
+            <p className={styles.eyebrow}>Featured Project</p>
+            <div className={styles.featuredPanel}>
+              <div className={styles.featuredImageWrap}>
                 <Image
-                  src={project.mainImage || '/placeholder.png'}
-                  alt={project.mainImageAlt || `${project.name} project`}
+                  src={featured.mainImage || '/placeholder.png'}
+                  alt={featured.mainImageAlt || `${featured.name} project`}
                   fill
-                  sizes="(max-width: 900px) 100vw, 33vw"
-                  className={styles.cardImage}
+                  sizes="(max-width: 1024px) 100vw, 55vw"
+                  className={styles.featuredImage}
                 />
-                <span className={styles.category}>{project.category}</span>
               </div>
-              <div className={styles.cardBody}>
-                <h3>{project.name}</h3>
-                <p className={styles.projectMeta}>{project.completionDate}</p>
-                <p>{project.shortDescription}</p>
-                <div className={styles.cardFooter}>
-                  <Link href={`/projects/${project.id}`} className={styles.cardLink}>
-                    View Project Details
-                  </Link>
-                </div>
+              <div className={styles.featuredInfo}>
+                <h2>{featured.name}</h2>
+                <p className={styles.featuredDesc}>{featured.shortDescription}</p>
+                {featured.specifications?.length > 0 && (
+                  <div className={styles.featuredSpecs}>
+                    {pickSpecs(featured.specifications).map((spec) => (
+                      <span key={spec.name} className={styles.specPill}>
+                        <span className={styles.specLabel}>{spec.name}:</span>
+                        <span className={styles.specVal}>{spec.value}</span>
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <Link href={`/projects/${featured.id}`} className={styles.featuredLink}>
+                  View Full Project <span className={styles.featuredArrow}>&rarr;</span>
+                </Link>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
+            </div>
+          </section>
+        )}
 
-      <section className={styles.callout}>
-        <div>
-          <p className={styles.eyebrow}>Project Planning</p>
-          <h2>Ready to start your project?</h2>
-          <p>
-            Let us help you create exceptional spaces with premium furniture solutions built for
-            your property and schedule.
+        {/* ── 3. Project Grid ── */}
+        <section id="projects" className={`${styles.section} ${styles.gridSection}`}>
+          <p className={styles.eyebrow}>Browse Work</p>
+          <h2>More Installations</h2>
+          <p className={styles.sectionLede}>
+            Each project reflects our commitment to quality craftsmanship and reliable execution
+            &mdash; from guest rooms and lobbies to dining areas and common spaces.
           </p>
-        </div>
-        <Link href="/schedule-call" className={styles.cta}>
-          Schedule a Consultation
-        </Link>
-      </section>
+          <div className={styles.grid}>
+            {rest.map((project) => (
+              <Link
+                key={project.id}
+                href={`/projects/${project.id}`}
+                className={styles.card}
+              >
+                <div className={styles.cardBg}>
+                  <Image
+                    src={project.mainImage || '/placeholder.png'}
+                    alt={project.mainImageAlt || `${project.name} project`}
+                    fill
+                    sizes="(max-width: 720px) 100vw, 50vw"
+                    className={styles.cardBgImage}
+                  />
+                </div>
+                <div className={styles.cardOverlay} aria-hidden="true" />
+                <div className={styles.cardContent}>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.categoryPill}>{project.category}</span>
+                    {project.completionDate && (
+                      <span className={styles.cardDate}>{project.completionDate}</span>
+                    )}
+                  </div>
+                  <h3>{project.name}</h3>
+                  <p className={styles.cardDesc}>{project.shortDescription}</p>
+                  <span className={styles.cardArrow}>
+                    View Project <span>&rarr;</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 4. CTA ── */}
+        <section className={styles.ctaSection}>
+          <div className={styles.ctaLine} />
+          <p className={styles.eyebrow}>Ready to Start?</p>
+          <h2>Let&rsquo;s build something exceptional.</h2>
+          <p className={styles.ctaLede}>
+            Free 30-minute consultation &mdash; leave with a budget range, timeline estimate, and
+            clear next steps.
+          </p>
+          <div className={styles.ctaButtons}>
+            <Link href="/schedule-call" className={styles.primaryBtn}>
+              Schedule a Call
+            </Link>
+            <Link href="/contact" className={styles.secondaryBtn}>
+              Request a Quote
+            </Link>
+          </div>
+          <div className={styles.ctaContact}>
+            <a href="tel:+16172237781">+1 (617) 223-7781</a>
+            <span>|</span>
+            <a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

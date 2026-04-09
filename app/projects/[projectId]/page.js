@@ -1,9 +1,15 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllProjects, getProjectById } from '../../../lib/projects';
-import { siteUrl } from '../../../lib/metadata';
+import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
+import BeforeAfterShowcase from '../../../components/projects/BeforeAfterShowcase';
+import ProjectGallery from '../../../components/projects/ProjectGallery';
+import ProjectNav from '../../../components/projects/ProjectNav';
 import styles from './page.module.css';
+
+// ---------------------------------------------------------------------------
+// Static params
+// ---------------------------------------------------------------------------
 
 export function generateStaticParams() {
   return getAllProjects().map((project) => ({
@@ -11,138 +17,158 @@ export function generateStaticParams() {
   }));
 }
 
+// ---------------------------------------------------------------------------
+// Metadata
+// ---------------------------------------------------------------------------
+
 export async function generateMetadata({ params }) {
   const { projectId } = await params;
   const project = getProjectById(projectId);
 
   if (!project) {
-    return {
-      title: 'Project Not Found',
-      robots: {
-        index: false,
-        follow: false,
-      },
-    };
+    return { title: 'Project Not Found', robots: { index: false, follow: false } };
   }
 
   const description = project.shortDescription || project.fullDescription || 'Project details';
-  const image = project.mainImage || project.images?.[0]?.url || '/Images/Our_Projects.jpg';
-
-  return {
+  return generatePageMetadata({
     title: project.name,
     description,
-    alternates: {
-      canonical: `${siteUrl}/projects/${project.id}`,
-    },
-    openGraph: {
-      title: `${project.name} | DMD Furnishing`,
-      description,
-      url: `${siteUrl}/projects/${project.id}`,
-      type: 'article',
-      images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-        },
+    path: `/projects/${project.id}`,
+    image: project.mainImage || '/Images/Our_Projects.jpg',
+    type: 'article',
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Schema
+// ---------------------------------------------------------------------------
+
+function buildSchema(project, pageUrl) {
+  const imageUrl = project.mainImage?.startsWith('http')
+    ? project.mainImage
+    : `${siteUrl}${project.mainImage}`;
+
+  const graph = [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: `${siteUrl}/projects` },
+        { '@type': 'ListItem', position: 3, name: project.name, item: pageUrl },
       ],
     },
-  };
+    {
+      '@type': 'Article',
+      '@id': pageUrl,
+      headline: project.name,
+      description: project.shortDescription || project.fullDescription || '',
+      image: imageUrl,
+      url: pageUrl,
+      datePublished: project.completionDate || '2024-01-01',
+      publisher: { '@type': 'Organization', name: 'DMD Furnishing', '@id': `${siteUrl}/#organization` },
+      about: { '@type': 'LocalBusiness', '@id': `${siteUrl}/#localbusiness` },
+    },
+  ];
+
+  // Gallery schema
+  const galleryImages = Array.isArray(project.images) ? project.images : [];
+  if (galleryImages.length > 0) {
+    graph.push({
+      '@type': 'ImageGallery',
+      name: `${project.name} Gallery`,
+      about: { '@type': 'Article', '@id': pageUrl },
+      image: galleryImages.map((img) => ({
+        '@type': 'ImageObject',
+        contentUrl: img.url.startsWith('http') ? img.url : `${siteUrl}${img.url}`,
+        name: img.alt || project.name,
+      })),
+    });
+  }
+
+  // Review schema
+  if (project.clientTestimonial && project.clientName !== 'DMD Furnishing Team') {
+    graph.push({
+      '@type': 'Review',
+      reviewBody: project.clientTestimonial,
+      author: { '@type': 'Person', name: project.clientName },
+      itemReviewed: { '@type': 'LocalBusiness', '@id': `${siteUrl}/#localbusiness` },
+    });
+  }
+
+  return { '@context': 'https://schema.org', '@graph': graph };
 }
+
+// ---------------------------------------------------------------------------
+// Page
+// ---------------------------------------------------------------------------
 
 export default async function ProjectDetailPage({ params }) {
   const { projectId } = await params;
   const project = getProjectById(projectId);
 
-  if (!project) {
-    notFound();
-  }
+  if (!project) notFound();
 
+  const allProjects = getAllProjects();
   const galleryImages = Array.isArray(project.images) ? project.images : [];
   const beforeImages = Array.isArray(project.beforeImages) ? project.beforeImages : [];
   const pageUrl = `${siteUrl}/projects/${project.id}`;
-  const imageUrl = project.mainImage
-    ? (project.mainImage.startsWith('http') ? project.mainImage : `${siteUrl}${project.mainImage}`)
-    : `${siteUrl}/Images/Our_Projects.jpg`;
-
-  const schema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-          { '@type': 'ListItem', position: 2, name: 'Projects', item: `${siteUrl}/projects` },
-          { '@type': 'ListItem', position: 3, name: project.name, item: pageUrl },
-        ],
-      },
-      {
-        '@type': 'Article',
-        '@id': pageUrl,
-        headline: project.name,
-        description: project.shortDescription || project.fullDescription || '',
-        image: imageUrl,
-        url: pageUrl,
-        datePublished: project.completionDate || '2024-01-01',
-        publisher: {
-          '@type': 'Organization',
-          name: 'DMD Furnishing',
-          '@id': `${siteUrl}/#organization`,
-        },
-        about: {
-          '@type': 'LocalBusiness',
-          '@id': `${siteUrl}/#localbusiness`,
-        },
-      },
-    ],
-  };
+  const schema = buildSchema(project, pageUrl);
 
   return (
     <main className={styles.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
+      {/* ── 1. Hero ── */}
       <section
         className={styles.hero}
         style={
           project.mainImage
-            ? {
-                backgroundImage: `linear-gradient(180deg, rgba(8, 23, 29, 0.2), rgba(8, 23, 29, 0.8)), url(${project.mainImage})`,
-              }
+            ? { backgroundImage: `url(${project.mainImage})` }
             : undefined
         }
       >
-        <div className={styles.heroOverlay}>
-          <p className={styles.eyebrow}>{project.category}</p>
+        <div className={styles.heroOverlay} aria-hidden="true" />
+        <div className={styles.heroContent}>
           <h1>{project.name}</h1>
-          <p className={styles.heroText}>{project.shortDescription || project.fullDescription}</p>
+          <div className={styles.heroMeta}>
+            <span className={styles.categoryPill}>{project.category}</span>
+            {project.completionDate && (
+              <span className={styles.heroDate}>{project.completionDate}</span>
+            )}
+          </div>
+          {(project.shortDescription || project.fullDescription) && (
+            <p className={styles.heroDesc}>
+              {project.shortDescription || project.fullDescription}
+            </p>
+          )}
         </div>
       </section>
 
-      <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-        <Link href="/projects">All Projects</Link>
-        <span aria-hidden="true">/</span>
-        <span>{project.name}</span>
-      </nav>
+      <div className={styles.shell}>
+        {/* ── 2. Breadcrumb ── */}
+        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+          <Link href="/projects">All Projects</Link>
+          <span aria-hidden="true">/</span>
+          <span>{project.name}</span>
+        </nav>
 
-      <section className={styles.content}>
-        <article className={styles.panel}>
-          <div className={styles.summary}>
-            <div>
+        {/* ── 3. Overview Panel ── */}
+        <div className={styles.overviewPanel}>
+          {/* Description */}
+          {project.fullDescription && (
+            <div className={styles.panelBlock}>
               <p className={styles.eyebrow}>Project Overview</p>
-              <h2>{project.name}</h2>
+              <p className={styles.bodyText}>{project.fullDescription}</p>
             </div>
-            <div className={styles.metaRow}>
-              <span className={styles.categoryTag}>{project.category}</span>
-              {project.completionDate ? (
-                <span className={styles.completionDate}>Completed: {project.completionDate}</span>
-              ) : null}
-            </div>
-          </div>
+          )}
 
-          {project.fullDescription ? <p className={styles.bodyText}>{project.fullDescription}</p> : null}
-
-          {project.specifications.length > 0 ? (
-            <section className={styles.block}>
-              <p className={styles.sectionLabel}>Project Details</p>
+          {/* Specifications */}
+          {project.specifications?.length > 0 && (
+            <div className={styles.panelBlock}>
+              <p className={styles.eyebrow}>Project Details</p>
               <div className={styles.specGrid}>
                 {project.specifications.map((spec) => (
                   <div key={`${spec.name}-${spec.value}`} className={styles.specItem}>
@@ -151,95 +177,91 @@ export default async function ProjectDetailPage({ params }) {
                   </div>
                 ))}
               </div>
-            </section>
-          ) : null}
+            </div>
+          )}
 
-          {project.highlights.length > 0 ? (
-            <section className={styles.block}>
-              <p className={styles.sectionLabel}>Project Highlights</p>
-              <ul className={styles.list}>
-                {project.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
+          {/* Highlights */}
+          {project.highlights?.length > 0 && (
+            <div className={styles.panelBlock}>
+              <p className={styles.eyebrow}>Highlights</p>
+              <ul className={styles.highlights}>
+                {project.highlights.map((h) => (
+                  <li key={h}>{h}</li>
                 ))}
               </ul>
-            </section>
-          ) : null}
+            </div>
+          )}
 
-          {project.clientTestimonial && project.clientName !== 'DMD Furnishing Team' ? (
-            <section className={styles.block}>
-              <p className={styles.sectionLabel}>Client Feedback</p>
-              <blockquote className={styles.quote}>
-                <p>"{project.clientTestimonial}"</p>
+          {/* Testimonial */}
+          {project.clientTestimonial && project.clientName !== 'DMD Furnishing Team' && (
+            <div className={styles.panelBlock}>
+              <p className={styles.eyebrow}>Client Feedback</p>
+              <blockquote className={styles.testimonial}>
+                <p>&ldquo;{project.clientTestimonial}&rdquo;</p>
                 <footer>
                   <cite>
-                    - {project.clientName}
+                    &mdash; {project.clientName}
                     {project.clientPosition ? `, ${project.clientPosition}` : ''}
                   </cite>
                 </footer>
               </blockquote>
-            </section>
-          ) : null}
-        </article>
-
-        {galleryImages.length > 0 ? (
-          <section className={styles.gallerySection}>
-            <div className={styles.sectionHeading}>
-              <p className={styles.eyebrow}>Project Gallery</p>
-              <h2>Completed installation imagery</h2>
             </div>
-            <div className={styles.gallery}>
-              {galleryImages.map((image, index) => (
-                <figure key={image.id || `${image.url}-${index}`} className={styles.galleryItem}>
-                  <div className={styles.galleryImageWrap}>
-                    <Image
-                      src={image.url}
-                      alt={image.alt || project.name}
-                      fill
-                      sizes="(max-width: 900px) 100vw, 40vw"
-                      className={styles.galleryImage}
-                    />
-                  </div>
-                  {image.alt ? <figcaption>{image.alt}</figcaption> : null}
-                </figure>
-              ))}
+          )}
+        </div>
+
+        {/* ── 4. Before/After ── */}
+        {beforeImages.length > 0 && galleryImages.length > 0 && (
+          <section className={styles.componentSection}>
+            <p className={styles.eyebrow}>Transformation</p>
+            <h2>Before &amp; After</h2>
+            <div style={{ marginTop: '1.25rem' }}>
+              <BeforeAfterShowcase
+                beforeImages={beforeImages}
+                afterImages={galleryImages}
+                projectName={project.name}
+              />
             </div>
           </section>
-        ) : null}
+        )}
 
-        {beforeImages.length > 0 ? (
-          <section className={styles.gallerySection}>
-            <div className={styles.sectionHeading}>
-              <p className={styles.eyebrow}>Before Gallery</p>
-              <h2>Pre-renovation context</h2>
-            </div>
-            <div className={styles.gallery}>
-              {beforeImages.map((image, index) => (
-                <figure key={image.id || `before-${image.url}-${index}`} className={styles.galleryItem}>
-                  <div className={styles.galleryImageWrap}>
-                    <Image
-                      src={image.url}
-                      alt={image.alt || `${project.name} before`}
-                      fill
-                      sizes="(max-width: 900px) 100vw, 40vw"
-                      className={styles.galleryImage}
-                    />
-                  </div>
-                  {image.alt ? <figcaption>{image.alt}</figcaption> : null}
-                </figure>
-              ))}
+        {/* ── 5. Gallery ── */}
+        {galleryImages.length > 0 && (
+          <section className={styles.componentSection}>
+            <p className={styles.eyebrow}>Gallery</p>
+            <h2>Installation Photography</h2>
+            <div style={{ marginTop: '1.25rem' }}>
+              <ProjectGallery images={galleryImages} projectName={project.name} />
             </div>
           </section>
-        ) : null}
-      </section>
+        )}
 
-      <section className={styles.actions}>
-        <Link href="/projects" className={styles.secondaryCta}>
-          Back to Projects
-        </Link>
-        <Link href="/schedule-call" className={styles.cta}>
-          Schedule a Consultation
-        </Link>
-      </section>
+        {/* ── 6. Project Navigation ── */}
+        <ProjectNav currentId={project.id} projects={allProjects} />
+
+        {/* ── 7. CTA ── */}
+        <section className={styles.ctaSection}>
+          <div className={styles.ctaLine} />
+          <p className={styles.eyebrow}>Start Your Project</p>
+          <h2>Ready to transform your space?</h2>
+          <p className={styles.ctaLede}>
+            Free 30-minute consultation &mdash; leave with a budget range, timeline estimate,
+            and clear next steps.
+          </p>
+          <div className={styles.ctaButtons}>
+            <Link href="/schedule-call" className={styles.primaryBtn}>
+              Schedule a Call
+            </Link>
+            <Link href="/contact" className={styles.secondaryBtn}>
+              Request a Quote
+            </Link>
+          </div>
+          <div className={styles.ctaContact}>
+            <a href="tel:+16172237781">+1 (617) 223-7781</a>
+            <span>|</span>
+            <a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
