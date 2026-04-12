@@ -24,3 +24,20 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Next.js build output
+/.next/
+/out/
+
+# Runtime logs
+*.log
+server*.err.log
+server*.out.log
+
+# Tool artifacts
+.claude/scheduled_tasks.lock
+.playwright-mcp/
+.project-tracker/
+.qwen/
+screenshots/
+hotel-response.html

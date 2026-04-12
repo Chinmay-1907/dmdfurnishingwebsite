@@ -115,12 +115,11 @@ export default function InspirationsPage() {
           <div className={styles.heroCardGlow} aria-hidden="true" />
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>Design Library</p>
-            <h1>Commercial Furniture Design Inspirations</h1>
+            <h1>Design Ideas You Can Actually Build</h1>
             <p className={styles.heroLede}>
-              A reference library of commercial furniture design inspirations — material
-              palettes, furniture layouts, and finish directions for hotel guestrooms,
-              restaurant dining rooms, lobbies, and office common areas. Every concept pairs
-              a visual direction with BIFMA contract-grade specs our shop can actually build.
+              Material palettes, furniture layouts, and finish directions for hotel guestrooms,
+              restaurant dining rooms, lobbies, and offices. Every concept pairs a visual
+              direction with contract-grade specs our shop can manufacture.
             </p>
             <div className={styles.heroPills}>
               {highlights.map((item) => (

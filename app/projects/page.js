@@ -100,12 +100,11 @@ export default function ProjectsPage() {
         <div className={styles.heroOverlay} aria-hidden="true" />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Project Portfolio</p>
-          <h1>Commercial Furniture Projects & Hotel Furniture Installations</h1>
+          <h1>Projects That Speak for Themselves</h1>
           <p className={styles.heroLede}>
-            A portfolio of completed commercial furniture projects from DMD Furnishing —
-            hotel guestroom packages, restaurant dining rooms, lobby refreshes, and
-            multi-property renovations. Each entry shows the scope, the room or seat count,
-            and the BIFMA contract-grade materials we built it from.
+            Hotel guestrooms, restaurant dining rooms, lobby refreshes, and multi-property
+            rollouts — built with BIFMA contract-grade materials and installed on schedule.
+            Browse the work and see the scope behind every delivery.
           </p>
           <div className={styles.heroActions}>
             <Link href="/schedule-call" className={styles.primaryBtn}>

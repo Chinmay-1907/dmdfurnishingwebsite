@@ -418,40 +418,32 @@ export default function ServicesPage() {
 
       {/* ── 1. Hero ── */}
       <section className={styles.hero} aria-label="Commercial furniture services">
-        <div className={styles.heroGlow} aria-hidden="true" />
-        <div className={styles.heroSplit}>
-          <div className={styles.heroText}>
-            <p className={styles.eyebrow}>Commercial FF&E Services</p>
-            <h1>
-              Commercial Furniture Manufacturing Services,
-              <br />
-              Concept to Installation.
-            </h1>
-            <p className={styles.heroLede}>
-              DMD Furnishing delivers six custom FF&E services under one contract:
-              consultation, design specification, commercial furniture manufacturing, FF&E
-              project management, logistics, and installation. Built for hotels, restaurants,
-              offices, and institutional projects across the United States from our Foxboro,
-              Massachusetts shop.
-            </p>
-            <div className={styles.heroActions}>
-              <Link href="/schedule-call" className={styles.primaryBtn}>
-                Schedule a Consultation
-              </Link>
-              <a href="#process" className={styles.secondaryBtn}>
-                See Our Process
-              </a>
-            </div>
-          </div>
-          <div className={styles.heroImageWrap}>
-            <Image
-              src="/Images/Our Services.jpg"
-              alt="Custom commercial casegoods and upholstery in production at the Foxboro, Massachusetts manufacturing shop"
-              fill
-              sizes="(max-width: 800px) 100vw, 45vw"
-              className={styles.heroImage}
-              priority
-            />
+        <div className={styles.heroBg}>
+          <Image
+            src="/Images/services-hero.png"
+            alt="Luxury hotel guestroom with custom casegoods, upholstered bed, and dresser — commercial furniture by DMD Furnishing"
+            fill
+            priority
+            sizes="100vw"
+            className={styles.heroBgImage}
+          />
+        </div>
+        <div className={styles.heroOverlay} aria-hidden="true" />
+        <div className={styles.heroContent}>
+          <p className={styles.eyebrow}>Commercial FF&E Services</p>
+          <h1>One Team, Concept to Installation</h1>
+          <p className={styles.heroLede}>
+            Six FF&E services under one contract — consultation, design specs, manufacturing,
+            project management, logistics, and installation. Custom commercial furniture for
+            hotels, restaurants, offices, and institutions, built from our Foxboro, MA shop.
+          </p>
+          <div className={styles.heroActions}>
+            <Link href="/schedule-call" className={styles.primaryBtn}>
+              Schedule a Consultation
+            </Link>
+            <a href="#process" className={styles.secondaryBtn}>
+              See Our Process
+            </a>
           </div>
         </div>
       </section>
