@@ -2,9 +2,15 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { FaCheckCircle, FaClock, FaEnvelope, FaLock, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import styles from '../../src/styles/AboutUs.module.css';
+import {
+  FaCheckCircle,
+  FaClock,
+  FaEnvelope,
+  FaLock,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaCalendarAlt,
+} from 'react-icons/fa';
 
 const PROJECT_CATEGORIES = [
   { id: 'hotel', label: 'Hotels & Motels' },
@@ -16,8 +22,9 @@ const PROJECT_CATEGORIES = [
   { id: 'other', label: 'Other / Not Sure Yet' },
 ];
 
-export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '' }) {
+export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '', calendlyUrl = '' }) {
   const router = useRouter();
+  const [activeTab, setActiveTab] = useState('schedule');
   const [step, setStep] = useState('email');
   const [submitStatus, setSubmitStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -42,15 +49,20 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
   });
 
   const categoryLabel = useMemo(
-    () => PROJECT_CATEGORIES.find((category) => category.id === formData.projectCategory)?.label || 'your services',
+    () => PROJECT_CATEGORIES.find((c) => c.id === formData.projectCategory)?.label || 'your services',
     [formData.projectCategory]
   );
+
+  // Activate message tab if URL hash is #message, otherwise default to schedule
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === '#message') setActiveTab('message');
+  }, []);
 
   useEffect(() => {
     if (!recaptchaSiteKey) return;
     const existing = document.querySelector('script[data-recaptcha="v3"]');
     if (existing) return;
-
     const script = document.createElement('script');
     script.src = `https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`;
     script.async = true;
@@ -61,7 +73,6 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
 
   useEffect(() => {
     if (step !== 'details' || !formData.projectCategory) return;
-
     const details = [];
     if (formData.projectCategory === 'hotel') {
       if (formData.roomCount) details.push(`Approximate Number of Rooms: ${formData.roomCount}`);
@@ -79,14 +90,11 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     } else if (formData.projectCategory === 'healthcare') {
       if (formData.areaType.length) details.push(`Area Type: ${formData.areaType.join(', ')}`);
     }
-
     const baseMessage = `I'm looking at commercial furniture for ${categoryLabel} and would like to set up a call to walk through scope, materials, and lead times for my project.`;
     const detailsText = details.length ? `\n\nProject Details:\n${details.join('\n')}` : '';
-    const composedMessage = `${baseMessage}${detailsText}`;
-
     setFormData((current) => {
-      const shouldUpdate = !current.message || current.message.startsWith('I was reviewing your furniture solutions for') || current.message.startsWith("I'm looking at commercial furniture for");
-      return shouldUpdate ? { ...current, message: composedMessage } : current;
+      const shouldUpdate = !current.message || current.message.startsWith("I'm looking at commercial furniture for");
+      return shouldUpdate ? { ...current, message: `${baseMessage}${detailsText}` } : current;
     });
   }, [categoryLabel, formData.areaType, formData.furnitureNeeded, formData.projectCategory, formData.projectScope, formData.roomCount, formData.roomTypes, formData.restaurantType, formData.seatingCapacity, formData.spaceType, formData.teamSize, step]);
 
@@ -105,18 +113,9 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     setFormData((current) => {
       if (type === 'checkbox') {
         const currentValues = current[name] || [];
-        return {
-          ...current,
-          [name]: checked
-            ? [...currentValues, value]
-            : currentValues.filter((item) => item !== value),
-        };
+        return { ...current, [name]: checked ? [...currentValues, value] : currentValues.filter((item) => item !== value) };
       }
-
-      return {
-        ...current,
-        [name]: value,
-      };
+      return { ...current, [name]: value };
     });
   }
 
@@ -125,12 +124,8 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     if (submitStatus === 'sending') return;
     setSubmitStatus('sending');
     setErrorMessage('');
-
     try {
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        throw new Error('Please enter a valid email address.');
-      }
-
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Please enter a valid email address.');
       const recaptchaToken = await getRecaptchaToken('request_otp');
       const response = await fetch('/api/request-otp', {
         method: 'POST',
@@ -138,11 +133,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         body: JSON.stringify({ email, subject: 'Consultation Verification', recaptchaToken }),
       });
       const json = await response.json().catch(() => ({}));
-
-      if (!response.ok || (json?.success !== true && json?.success !== 'true')) {
-        throw new Error(json?.error || 'Failed to send verification code.');
-      }
-
+      if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Failed to send verification code.');
       setVerificationToken(json.token || '');
       setStep('otp');
       setSubmitStatus('idle');
@@ -157,7 +148,6 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     if (submitStatus === 'sending') return;
     setSubmitStatus('sending');
     setErrorMessage('');
-
     try {
       const recaptchaToken = await getRecaptchaToken('verify_otp');
       const response = await fetch('/api/verify-otp', {
@@ -166,11 +156,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         body: JSON.stringify({ email, code: otpCode, token: verificationToken, recaptchaToken }),
       });
       const json = await response.json().catch(() => ({}));
-
-      if (!response.ok || (json?.success !== true && json?.success !== 'true')) {
-        throw new Error(json?.error || 'Invalid verification code.');
-      }
-
+      if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Invalid verification code.');
       setStep('details');
       setSubmitStatus('idle');
     } catch (error) {
@@ -184,40 +170,25 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     if (submitStatus === 'sending') return;
     setSubmitStatus('sending');
     setErrorMessage('');
-
     try {
       const recaptchaToken = await getRecaptchaToken('submit_consultation');
       const payload = {
-        name: formData.name,
-        company: formData.company,
-        email,
-        phone: formData.phone,
-        project: formData.projectCategory,
-        message: formData.message,
-        roomCount: formData.roomCount,
-        roomTypes: formData.roomTypes,
-        projectScope: formData.projectScope,
-        seatingCapacity: formData.seatingCapacity,
-        furnitureNeeded: formData.furnitureNeeded,
-        restaurantType: formData.restaurantType,
-        spaceType: formData.spaceType,
-        teamSize: formData.teamSize,
-        areaType: formData.areaType,
+        name: formData.name, company: formData.company, email, phone: formData.phone,
+        project: formData.projectCategory, message: formData.message,
+        roomCount: formData.roomCount, roomTypes: formData.roomTypes,
+        projectScope: formData.projectScope, seatingCapacity: formData.seatingCapacity,
+        furnitureNeeded: formData.furnitureNeeded, restaurantType: formData.restaurantType,
+        spaceType: formData.spaceType, teamSize: formData.teamSize, areaType: formData.areaType,
         subject: `Consultation Request: ${formData.company || formData.name}`,
         recaptchaToken,
       };
-
       const response = await fetch('/api/send-consultation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
       const json = await response.json().catch(() => ({}));
-
-      if (!response.ok || (json?.success !== true && json?.success !== 'true')) {
-        throw new Error(json?.error || 'Submission failed. Please try again.');
-      }
-
+      if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Submission failed. Please try again.');
       setStep('success');
       setSubmitStatus('success');
     } catch (error) {
@@ -229,23 +200,23 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
   function renderConditionalFields() {
     if (formData.projectCategory === 'hotel') {
       return (
-        <div className="conditional-section fade-in">
-          <div className="form-group">
+        <div className="cp-conditional fade-in-up">
+          <div className="cp-field">
             <label>Approximate Number of Rooms</label>
             <input type="number" name="roomCount" value={formData.roomCount} onChange={handleInputChange} placeholder="e.g. 100" />
           </div>
-          <div className="form-group">
+          <div className="cp-field">
             <label>Room Types</label>
-            <div className="checkbox-group">
+            <div className="cp-checkbox-grid">
               {['King', 'Queen', 'Double', 'Deluxe', 'ADA / Accessible'].map((type) => (
-                <label key={type} className="checkbox-label">
+                <label key={type} className="cp-checkbox">
                   <input type="checkbox" name="roomTypes" value={type} checked={formData.roomTypes.includes(type)} onChange={handleInputChange} />
-                  {type}
+                  <span>{type}</span>
                 </label>
               ))}
             </div>
           </div>
-          <div className="form-group">
+          <div className="cp-field">
             <label>Project Scope</label>
             <select name="projectScope" value={formData.projectScope} onChange={handleInputChange}>
               <option value="">Select Scope</option>
@@ -257,26 +228,25 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         </div>
       );
     }
-
     if (formData.projectCategory === 'restaurant') {
       return (
-        <div className="conditional-section fade-in">
-          <div className="form-group">
+        <div className="cp-conditional fade-in-up">
+          <div className="cp-field">
             <label>Seating Capacity</label>
             <input type="number" name="seatingCapacity" value={formData.seatingCapacity} onChange={handleInputChange} />
           </div>
-          <div className="form-group">
+          <div className="cp-field">
             <label>Furniture Needed</label>
-            <div className="checkbox-group">
+            <div className="cp-checkbox-grid">
               {['Tables', 'Chairs', 'Booths', 'Bar Seating'].map((item) => (
-                <label key={item} className="checkbox-label">
+                <label key={item} className="cp-checkbox">
                   <input type="checkbox" name="furnitureNeeded" value={item} checked={formData.furnitureNeeded.includes(item)} onChange={handleInputChange} />
-                  {item}
+                  <span>{item}</span>
                 </label>
               ))}
             </div>
           </div>
-          <div className="form-group">
+          <div className="cp-field">
             <label>Project Type</label>
             <select name="restaurantType" value={formData.restaurantType} onChange={handleInputChange}>
               <option value="">Select Type</option>
@@ -287,22 +257,21 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         </div>
       );
     }
-
     if (formData.projectCategory === 'corporate') {
       return (
-        <div className="conditional-section fade-in">
-          <div className="form-group">
+        <div className="cp-conditional fade-in-up">
+          <div className="cp-field">
             <label>Space Type</label>
-            <div className="checkbox-group">
+            <div className="cp-checkbox-grid">
               {['Workstations', 'Conference Rooms', 'Reception Areas', 'Breakout / Collaboration Areas'].map((item) => (
-                <label key={item} className="checkbox-label">
+                <label key={item} className="cp-checkbox">
                   <input type="checkbox" name="spaceType" value={item} checked={formData.spaceType.includes(item)} onChange={handleInputChange} />
-                  {item}
+                  <span>{item}</span>
                 </label>
               ))}
             </div>
           </div>
-          <div className="form-group">
+          <div className="cp-field">
             <label>Approximate Team Size</label>
             <select name="teamSize" value={formData.teamSize} onChange={handleInputChange}>
               <option value="">Select Size</option>
@@ -315,17 +284,16 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         </div>
       );
     }
-
     if (formData.projectCategory === 'university') {
       return (
-        <div className="conditional-section fade-in">
-          <div className="form-group">
-            <label>Space Type <span className="helper-note">(Non-clinical furniture)</span></label>
-            <div className="checkbox-group">
+        <div className="cp-conditional fade-in-up">
+          <div className="cp-field">
+            <label>Space Type <span className="cp-hint">(Non-clinical furniture)</span></label>
+            <div className="cp-checkbox-grid">
               {['Dormitories', 'Common Areas', 'Faculty Offices', 'Lounges'].map((item) => (
-                <label key={item} className="checkbox-label">
+                <label key={item} className="cp-checkbox">
                   <input type="checkbox" name="spaceType" value={item} checked={formData.spaceType.includes(item)} onChange={handleInputChange} />
-                  {item}
+                  <span>{item}</span>
                 </label>
               ))}
             </div>
@@ -333,17 +301,16 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         </div>
       );
     }
-
     if (formData.projectCategory === 'healthcare') {
       return (
-        <div className="conditional-section fade-in">
-          <div className="form-group">
-            <label>Area Type <span className="helper-note">(Non-clinical furniture only)</span></label>
-            <div className="checkbox-group">
+        <div className="cp-conditional fade-in-up">
+          <div className="cp-field">
+            <label>Area Type <span className="cp-hint">(Non-clinical furniture only)</span></label>
+            <div className="cp-checkbox-grid">
               {['Waiting Areas', 'Administrative Offices', 'Public Lounges'].map((item) => (
-                <label key={item} className="checkbox-label">
+                <label key={item} className="cp-checkbox">
                   <input type="checkbox" name="areaType" value={item} checked={formData.areaType.includes(item)} onChange={handleInputChange} />
-                  {item}
+                  <span>{item}</span>
                 </label>
               ))}
             </div>
@@ -351,199 +318,281 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         </div>
       );
     }
-
     return null;
   }
 
   return (
-    <div className="contact-container">
-      <section
-        className={styles.heroSection}
-        role="img"
-        aria-label="DMD Furnishing contact page hero request a consultation"
-        style={{
-          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("/Images/Contact_Page.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'bottom center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-        }}
-      >
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Request a Commercial Furniture Manufacturer Quote</h1>
-          <p className={styles.heroSubtitle}>Tell DMD Furnishing your scope, room count, and target budget. Our Foxboro, Massachusetts project managers respond within one business day with a realistic FF&E price range and lead-time estimate.</p>
+    <main className="cp-page">
+      {/* ── HERO BANNER ── */}
+      <section className="cp-hero">
+        <p className="cp-eyebrow">Free Consultation</p>
+        <h1>Let&#39;s Talk About Your Project</h1>
+        <p className="cp-hero-sub">
+          Book a free 30-minute call to walk through scope, materials, budgets, and timelines. Or send us a message and we&#39;ll follow up within one business day.
+        </p>
+      </section>
+
+      {/* ── TABBED CONTENT ── */}
+      <section className="cp-main">
+        <div className="cp-tab-bar" id="contact-tabs">
+          <button
+            type="button"
+            className={`cp-tab ${activeTab === 'schedule' ? 'cp-tab-active' : ''}`}
+            onClick={() => setActiveTab('schedule')}
+          >
+            Schedule a Call
+          </button>
+          <button
+            type="button"
+            className={`cp-tab ${activeTab === 'message' ? 'cp-tab-active' : ''}`}
+            onClick={() => setActiveTab('message')}
+          >
+            Send a Message
+          </button>
+        </div>
+
+        <div className="cp-main-inner">
+          {/* ── CONTENT COLUMN ── */}
+          <div className="cp-form-col">
+            {activeTab === 'schedule' && (
+              <div className="fade-in-up">
+                {calendlyUrl ? (
+                  <div className="cp-calendly-embed" id="schedule">
+                    <iframe
+                      title="Schedule a consultation with DMD Furnishing"
+                      src={calendlyUrl}
+                      width="100%"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div className="cp-schedule-card" id="schedule">
+                    <div className="cp-schedule-header">
+                      <div className="cp-schedule-icon-wrap">
+                        <FaCalendarAlt />
+                      </div>
+                      <h2>Book Your Free Consultation</h2>
+                      <p>Pick a time that works for you. We&#39;ll walk through your project scope, materials, budget, and timeline in a focused 30-minute call.</p>
+                    </div>
+
+                    <div className="cp-schedule-benefits">
+                      <div className="cp-schedule-benefit">
+                        <FaCheckCircle />
+                        <span>No obligation, completely free</span>
+                      </div>
+                      <div className="cp-schedule-benefit">
+                        <FaCheckCircle />
+                        <span>30-minute focused session</span>
+                      </div>
+                      <div className="cp-schedule-benefit">
+                        <FaCheckCircle />
+                        <span>Speak directly with a project manager</span>
+                      </div>
+                    </div>
+
+                    <div className="cp-schedule-cta">
+                      <a href="tel:+16172237781" className="cp-btn cp-btn-gold cp-btn-full">
+                        <FaPhone /> Call Now: +1 (617) 223-7781
+                      </a>
+                    </div>
+
+                    <p className="cp-schedule-note">
+                      <FaClock /> Mon to Fri 9 AM to 6 PM ET &nbsp;|&nbsp; Sat to Sun 10 AM to 4 PM ET (by appointment)
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {activeTab === 'message' && (
+              <div className="fade-in-up">
+                {step === 'success' ? (
+                  <div className="cp-success">
+                    <div className="cp-success-icon"><FaCheckCircle /></div>
+                    <h2>Request Received</h2>
+                    <p>
+                      Thanks, your request is in. A DMD project manager will review your scope
+                      and respond within one business day, usually with a short list of clarifying
+                      questions so we can prepare a realistic budget range before the call.
+                    </p>
+                    <button type="button" className="cp-btn cp-btn-gold" onClick={() => router.push('/')}>
+                      Return Home
+                    </button>
+                  </div>
+                ) : (
+                  <div className="cp-form-card">
+                    <div className="cp-form-header">
+                      <h2>Request a Consultation</h2>
+                      <p>Fill out the form and our team will get back to you within one business day.</p>
+                    </div>
+
+                    {/* Step indicators */}
+                    <div className="cp-steps">
+                      <div className={`cp-step ${step === 'email' ? 'active' : ''} ${step === 'otp' || step === 'details' ? 'done' : ''}`}>
+                        <span className="cp-step-num">1</span>
+                        <span className="cp-step-label">Verify Email</span>
+                      </div>
+                      <div className="cp-step-line" />
+                      <div className={`cp-step ${step === 'otp' ? 'active' : ''} ${step === 'details' ? 'done' : ''}`}>
+                        <span className="cp-step-num">2</span>
+                        <span className="cp-step-label">Enter Code</span>
+                      </div>
+                      <div className="cp-step-line" />
+                      <div className={`cp-step ${step === 'details' ? 'active' : ''}`}>
+                        <span className="cp-step-num">3</span>
+                        <span className="cp-step-label">Project Details</span>
+                      </div>
+                    </div>
+
+                    {step === 'email' && (
+                      <form onSubmit={handleRequestOtp} className="fade-in-up" method="POST">
+                        <div className="cp-field">
+                          <label htmlFor="email">Email Address <span className="cp-req">*</span></label>
+                          <div className="cp-input-action">
+                            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" required />
+                            <button type="submit" className="cp-btn-verify" disabled={submitStatus === 'sending'}>
+                              {submitStatus === 'sending' ? 'Sending...' : 'Verify Email'}
+                            </button>
+                          </div>
+                          <p className="cp-helper">We send a one-time code to verify your email. This keeps our inbox clean of spam so a real PM can follow up.</p>
+                        </div>
+                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
+                      </form>
+                    )}
+
+                    {step === 'otp' && (
+                      <form onSubmit={handleVerifyOtp} className="fade-in-up" method="POST">
+                        <div className="cp-field">
+                          <label>Email Address</label>
+                          <div className="cp-input-locked">
+                            <input type="email" value={email} disabled />
+                            <FaLock className="cp-lock-icon" />
+                          </div>
+                        </div>
+                        <div className="cp-field">
+                          <label htmlFor="otp">Verification Code <span className="cp-req">*</span></label>
+                          <input type="text" id="otp" name="otp" value={otpCode} onChange={(e) => setOtpCode(e.target.value)} placeholder="Enter 6-digit code" maxLength={6} required />
+                          <p className="cp-helper">Check your email for the verification code.</p>
+                        </div>
+                        <div className="cp-form-actions">
+                          <button type="submit" className="cp-btn cp-btn-gold" disabled={submitStatus === 'sending'}>
+                            {submitStatus === 'sending' ? 'Verifying...' : 'Verify Code'}
+                          </button>
+                          <button type="button" className="cp-btn-text" onClick={() => setStep('email')}>Change Email</button>
+                        </div>
+                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
+                      </form>
+                    )}
+
+                    {step === 'details' && (
+                      <form onSubmit={handleFinalSubmit} className="fade-in-up" method="POST">
+                        <div className="cp-verified">
+                          <FaCheckCircle /> Email Verified: <strong>{email}</strong>
+                        </div>
+
+                        <div className="cp-row">
+                          <div className="cp-field">
+                            <label htmlFor="name">Full Name <span className="cp-req">*</span></label>
+                            <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} required />
+                          </div>
+                          <div className="cp-field">
+                            <label htmlFor="company">Company Name</label>
+                            <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} />
+                          </div>
+                        </div>
+
+                        <div className="cp-field">
+                          <label htmlFor="phone">Phone Number</label>
+                          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="+1 (555) 000-0000" />
+                        </div>
+
+                        <div className="cp-field">
+                          <label htmlFor="projectCategory">Project Category <span className="cp-req">*</span></label>
+                          <select id="projectCategory" name="projectCategory" value={formData.projectCategory} onChange={handleInputChange} required>
+                            <option value="">Select a Category</option>
+                            {PROJECT_CATEGORIES.map((cat) => (
+                              <option key={cat.id} value={cat.id}>{cat.label}</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {renderConditionalFields()}
+
+                        <div className="cp-field">
+                          <label htmlFor="message">Message <span className="cp-req">*</span></label>
+                          <textarea id="message" name="message" rows="3" value={formData.message} onChange={handleInputChange} required />
+                        </div>
+
+                        <div className="cp-form-actions">
+                          <button type="submit" className="cp-btn cp-btn-gold cp-btn-full" disabled={submitStatus === 'sending'}>
+                            {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Consultation'}
+                          </button>
+                        </div>
+                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
+                      </form>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* ── INFO COLUMN ── */}
+          <div className="cp-info-col">
+            <div className="cp-info-card">
+              <h3>Get in Touch</h3>
+              <div className="cp-info-item">
+                <div className="cp-info-icon"><FaMapMarkerAlt /></div>
+                <div>
+                  <strong>Address</strong>
+                  <p>56 Leonard St Unit 5<br />Foxboro, MA 02035</p>
+                </div>
+              </div>
+              <div className="cp-info-item">
+                <div className="cp-info-icon"><FaPhone /></div>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:+16172237781">+1 (617) 223-7781</a></p>
+                </div>
+              </div>
+              <div className="cp-info-item">
+                <div className="cp-info-icon"><FaEnvelope /></div>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a></p>
+                </div>
+              </div>
+              <div className="cp-info-item">
+                <div className="cp-info-icon"><FaClock /></div>
+                <div>
+                  <strong>Showroom Hours</strong>
+                  <p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: 10:00 AM - 4:00 PM<br /><em>(By Appointment Only)</em></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      <section className="contact-content">
-        <div className="contact-info">
-          <h2>Reach Out to Us</h2>
-          <div className="info-item">
-            <div className="info-icon"><FaMapMarkerAlt /></div>
-            <div className="info-text">
-              <h3>Address</h3>
-              <p>56 Leonard St Unit 5<br />Foxboro, MA 02035</p>
-            </div>
-          </div>
-          <div className="info-item">
-            <div className="info-icon"><FaPhone /></div>
-            <div className="info-text">
-              <h3>Phone</h3>
-              <p>+1 (617) 223-7781</p>
-            </div>
-          </div>
-          <div className="info-item">
-            <div className="info-icon"><FaEnvelope /></div>
-            <div className="info-text">
-              <h3>Email</h3>
-              <p>sales@dmdfurnishing.com</p>
-            </div>
-          </div>
-          <div className="info-item">
-            <div className="info-icon"><FaClock /></div>
-            <div className="info-text">
-              <h3>Showroom Hours</h3>
-              <p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: 10:00 AM - 4:00 PM<br />(By Appointment Only)</p>
-            </div>
-          </div>
-
-          <p className="contact-hours" style={{ marginTop: '1.5rem' }}>
-            <strong>Showroom hours:</strong> By appointment only — please call or email ahead.
-          </p>
-
-          <figure className="contact-map" style={{ margin: '1.5rem 0 0', padding: 0 }}>
-            <iframe
-              title="DMD Furnishing showroom location — 56 Leonard St, Foxboro, MA"
-              src="https://www.google.com/maps?q=56+Leonard+St+Unit+5,+Foxboro,+MA+02035&output=embed"
-              width="100%"
-              height="360"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-            <figcaption style={{ marginTop: '0.5rem', fontSize: '0.9rem', opacity: 0.85 }}>
-              DMD Furnishing showroom — 56 Leonard St Unit 5, Foxboro, MA 02035. Visits by appointment.
-            </figcaption>
-          </figure>
-
-          <div className="quick-links-section" style={{ marginTop: '2rem' }}>
-            <h3 style={{ marginBottom: '0.75rem' }}>Quick Links</h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <li><Link href="/products" style={{ color: 'inherit', textDecoration: 'underline' }}>Browse commercial furniture catalog</Link></li>
-              <li><Link href="/services" style={{ color: 'inherit', textDecoration: 'underline' }}>Commercial furniture manufacturing services</Link></li>
-              <li><Link href="/projects" style={{ color: 'inherit', textDecoration: 'underline' }}>Hotel & restaurant furniture projects</Link></li>
-              <li><Link href="/blog" style={{ color: 'inherit', textDecoration: 'underline' }}>FF&E insights & guides</Link></li>
-            </ul>
-          </div>
+      {/* ── MAP (pushed well below fold) ── */}
+      <section className="cp-map-section">
+        <div className="cp-map-heading">
+          <h2>Visit Our Showroom</h2>
+          <p>56 Leonard St Unit 5, Foxboro, MA 02035</p>
         </div>
-
-        <div className="contact-form-wrapper">
-          {step === 'success' ? (
-            <div className="success-message fade-in">
-              <div className="success-icon"><FaCheckCircle /></div>
-              <h2>Request Received</h2>
-              <p>Thanks — your request is in. A DMD project manager will review your scope and respond within one business day, usually with a short list of clarifying questions so we can prepare a realistic budget range before the call.</p>
-              <button className="btn btn-primary mt-4" onClick={() => router.push('/')}>Return Home</button>
-            </div>
-          ) : (
-            <div className="consultation-form-card">
-              <h2>Request a Consultation</h2>
-
-              {step === 'email' ? (
-                <form onSubmit={handleRequestOtp} className="fade-in">
-                  <div className="form-group">
-                    <label htmlFor="email">Email Address <span className="required">*</span></label>
-                    <div className="input-with-action">
-                      <input type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="name@company.com" required />
-                      <button type="submit" className="btn-verify" disabled={submitStatus === 'sending'}>
-                        {submitStatus === 'sending' ? 'Sending...' : 'Verify Email'}
-                      </button>
-                    </div>
-                    <p className="helper-text">We send a one-time code to verify your email so a real PM can follow up — this keeps the inbox clean of form spam.</p>
-                  </div>
-                  {errorMessage ? <div className="error-message">{errorMessage}</div> : null}
-                </form>
-              ) : null}
-
-              {step === 'otp' ? (
-                <form onSubmit={handleVerifyOtp} className="fade-in">
-                  <div className="form-group">
-                    <label>Email Address</label>
-                    <div className="input-locked">
-                      <input type="email" value={email} disabled />
-                      <FaLock className="lock-icon" />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="otp">Verification Code <span className="required">*</span></label>
-                    <input type="text" id="otp" value={otpCode} onChange={(event) => setOtpCode(event.target.value)} placeholder="Enter 6-digit code" maxLength={6} required />
-                    <p className="helper-text">Check your email for the verification code.</p>
-                  </div>
-                  <div className="form-actions">
-                    <button type="submit" className="btn btn-primary" disabled={submitStatus === 'sending'}>
-                      {submitStatus === 'sending' ? 'Verifying...' : 'Verify Code'}
-                    </button>
-                    <button type="button" className="btn btn-text" onClick={() => setStep('email')}>
-                      Change Email
-                    </button>
-                  </div>
-                  {errorMessage ? <div className="error-message">{errorMessage}</div> : null}
-                </form>
-              ) : null}
-
-              {step === 'details' ? (
-                <form onSubmit={handleFinalSubmit} className="fade-in">
-                  <div className="verified-badge">
-                    <FaCheckCircle /> Email Verified: <strong>{email}</strong>
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="name">Full Name <span className="required">*</span></label>
-                      <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="company">Company Name</label>
-                      <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} />
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="+1 (555) 000-0000" />
-                    <p className="helper-text">Optional, for quicker coordination if needed.</p>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="projectCategory">Project Category <span className="required">*</span></label>
-                    <select id="projectCategory" name="projectCategory" value={formData.projectCategory} onChange={handleInputChange} required>
-                      <option value="">Select a Category</option>
-                      {PROJECT_CATEGORIES.map((category) => (
-                        <option key={category.id} value={category.id}>{category.label}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {renderConditionalFields()}
-
-                  <div className="form-group">
-                    <label htmlFor="message">Message <span className="required">*</span></label>
-                    <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleInputChange} required />
-                  </div>
-
-                  <div className="form-actions">
-                    <button type="submit" className="btn btn-primary full-width" disabled={submitStatus === 'sending'}>
-                      {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Consultation'}
-                    </button>
-                  </div>
-                  {errorMessage ? <div className="error-message">{errorMessage}</div> : null}
-                </form>
-              ) : null}
-            </div>
-          )}
+        <div className="cp-map-card">
+          <iframe
+            title="DMD Furnishing showroom location, 56 Leonard St, Foxboro, MA"
+            src="https://www.google.com/maps?q=56+Leonard+St+Unit+5,+Foxboro,+MA+02035&output=embed"
+            width="100%"
+            style={{ border: 0, height: '100%', minHeight: '300px' }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </div>
       </section>
-    </div>
+    </main>
   );
 }

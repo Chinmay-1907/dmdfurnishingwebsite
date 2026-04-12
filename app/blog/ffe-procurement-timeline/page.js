@@ -439,7 +439,7 @@ export default function FFEProcurementTimeline() {
               Ready to start planning your FF&amp;E procurement? Schedule a consultation to
               discuss timeline, scope, and specifications.
             </p>
-            <Link href="/schedule-call" className={styles.ctaLink}>
+            <Link href="/contact#schedule" className={styles.ctaLink}>
               Schedule a Consultation
             </Link>
           </div>

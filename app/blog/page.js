@@ -33,34 +33,6 @@ export const metadata = {
   },
 };
 
-const collectionSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  '@id': `${siteUrl}/blog#webpage`,
-  url: `${siteUrl}/blog`,
-  name: 'Commercial Furniture & FF&E Blog | DMD Furnishing',
-  description:
-    'Practical FF&E and commercial furniture insights for hospitality professionals.',
-  isPartOf: { '@id': `${siteUrl}/#website` },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: siteUrl,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: `${siteUrl}/blog`,
-      },
-    ],
-  },
-};
-
 const posts = [
   {
     slug: 'what-is-ffe-hospitality',
@@ -118,6 +90,44 @@ const posts = [
   },
 ];
 
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${siteUrl}/blog#webpage`,
+  url: `${siteUrl}/blog`,
+  name: 'Commercial Furniture & FF&E Blog | DMD Furnishing',
+  description:
+    'Practical FF&E and commercial furniture insights for hospitality professionals.',
+  isPartOf: { '@id': `${siteUrl}/#website` },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: siteUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${siteUrl}/blog`,
+      },
+    ],
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: posts.length,
+    itemListElement: posts.map((post, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      url: `${siteUrl}/blog/${post.slug}`,
+      name: post.title,
+    })),
+  },
+};
+
 export default function BlogIndexPage() {
   return (
     <div className={styles.blogPage}>
@@ -167,7 +177,7 @@ export default function BlogIndexPage() {
             <h3>About DMD</h3>
             <p>Learn about our manufacturing approach and commitment to quality.</p>
           </Link>
-          <Link href="/schedule-call" className={styles.resourceCard}>
+          <Link href="/contact#schedule" className={styles.resourceCard}>
             <h3>Free Consultation</h3>
             <p>Speak with a hospitality furniture specialist today.</p>
           </Link>

@@ -287,7 +287,7 @@ export default function HotelGuestroomChecklistPage() {
 
             <h2 id="seating">What Seating Is Specified for Guestrooms?</h2>
             <p>
-              Guestroom seating almost always includes a desk chair; full-service and upscale rooms add a lounge chair with ottoman. All pieces use contract-grade upholstery with a high rub count and frames that meet <a href="https://bifma.org/" target="_blank" rel="noopener noreferrer">BIFMA</a> durability testing — residential seating fails fast in hospitality use cycles.
+              Guestroom seating almost always includes a desk chair; full-service and upscale rooms add a lounge chair with ottoman. All pieces use contract-grade upholstery with a high rub count and frames that meet <a href="https://www.bifma.org/" target="_blank" rel="noopener">BIFMA</a> durability testing — residential seating fails fast in hospitality use cycles.
             </p>
 
             <h3>Desk Chair</h3>

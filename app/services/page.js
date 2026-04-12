@@ -60,7 +60,7 @@ const coreServices = [
     id: 'ffe-project-management',
     title: 'FF&E Project Management',
     description:
-      'One PM owns the job from signed PO to punch list. They track specs, change orders, vendor lead times, and budget — and send you one weekly status update instead of twenty emails.',
+      'One PM owns the job from signed PO to punch list. They track specs, change orders, vendor lead times, and budget. One weekly status update instead of twenty emails.',
     Icon: GiChecklist,
     bullets: [
       'Spec sheet version control and change-order tracking',
@@ -123,7 +123,7 @@ const processSteps = [
     number: '04',
     title: 'Pre-Shipment QC',
     description:
-      'Every piece inspected against the approved spec sheet — dimensions, finish, hardware, fabric. Photo report sent before containers load. Nothing with a defect leaves the factory.',
+      'Every piece inspected against the approved spec sheet: dimensions, finish, hardware, fabric. Photo report sent before containers load. Nothing with a defect leaves the factory.',
     timeline: 'Week 8\u20139',
     deliverable: 'QC inspection report with photos',
   },
@@ -152,7 +152,7 @@ const serviceFaqs = [
   ],
   [
     'Do you offer value engineering?',
-    'Yes, on every bid. We mark up the BOQ line by line and flag where a finish swap, a drawer box change, or a different substrate can reduce cost without changing what a guest sees or touches. Typical savings come from hardware, non-visible joinery, and finish grades — not from downgrading the face materials.',
+    'Yes, on every bid. We mark up the BOQ line by line and flag where a finish swap, a drawer box change, or a different substrate can reduce cost without changing what a guest sees or touches. Typical savings come from hardware, non-visible joinery, and finish grades, not from downgrading the face materials.',
   ],
   [
     'What are your lead times?',
@@ -160,7 +160,7 @@ const serviceFaqs = [
   ],
   [
     'Can you work with my designer or architect?',
-    'Yes — most of our projects come in with a design team already engaged. We handle the manufacturing side: shop drawings, material substitution recommendations, and spec-sheet translation so the design intent survives the move from rendering to production line.',
+    'Yes. Most of our projects come in with a design team already engaged. We handle the manufacturing side: shop drawings, material substitution recommendations, and spec-sheet translation so the design intent survives the move from rendering to production line.',
   ],
   [
     'Do you handle installation?',
@@ -176,7 +176,7 @@ const serviceFaqs = [
   ],
   [
     'What warranty do you offer?',
-    'Warranty terms are documented in writing at project close-out and vary by product category and material — frame warranties for seating, mechanism warranties for drawer hardware, and finish warranties for casegoods. We stand behind the spec sheet we build to.',
+    'Warranty terms are documented in writing at project close-out and vary by product category and material. Frame warranties for seating, mechanism warranties for drawer hardware, and finish warranties for casegoods. We stand behind the spec sheet we build to.',
   ],
   [
     'What standards do you build to?',
@@ -213,7 +213,7 @@ const industryDescriptions = {
   },
   hospital: {
     description:
-      'Non-clinical areas: waiting rooms, family lounges, administrative offices, and cafeteria spaces. Wipeable fabrics and cleanable surfaces — no patient-care clinical furniture.',
+      'Non-clinical areas: waiting rooms, family lounges, administrative offices, and cafeteria spaces. Wipeable fabrics and cleanable surfaces. No patient-care clinical furniture.',
     highlights: [
       'Waiting-room lounge seating with Crypton Health fabric',
       'Administrative desks and filing casegoods',
@@ -231,7 +231,7 @@ const industryDescriptions = {
   },
   residential: {
     description:
-      'Multifamily common rooms, model units, and resident amenity spaces. Residential look, commercial-grade guts — frames and fabrics sized for shared-use wear.',
+      'Multifamily common rooms, model units, and resident amenity spaces. Residential look, commercial-grade guts. Frames and fabrics sized for shared-use wear.',
     highlights: [
       'Amenity-room lounge and dining packages',
       'Model-unit casegoods, beds, and accent pieces',
@@ -240,7 +240,7 @@ const industryDescriptions = {
   },
   'lobby-area': {
     description:
-      'Lobbies, corridors, and public transition spaces. This is the first thing a guest touches — the seating has to look considered and hold up to luggage, umbrellas, and foot traffic.',
+      'Lobbies, corridors, and public transition spaces. This is the first thing a guest touches. The seating has to look considered and hold up to luggage, umbrellas, and foot traffic.',
     highlights: [
       'Lobby sofas, lounge chairs, and occasional tables',
       'Reception desks and concierge millwork',
@@ -421,7 +421,7 @@ export default function ServicesPage() {
         <div className={styles.heroBg}>
           <Image
             src="/Images/services-hero.png"
-            alt="Luxury hotel guestroom with custom casegoods, upholstered bed, and dresser — commercial furniture by DMD Furnishing"
+            alt="Luxury hotel guestroom with custom casegoods, upholstered bed, and dresser, commercial furniture by DMD Furnishing"
             fill
             priority
             sizes="100vw"
@@ -433,12 +433,12 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>Commercial FF&E Services</p>
           <h1>One Team, Concept to Installation</h1>
           <p className={styles.heroLede}>
-            Six FF&E services under one contract — consultation, design specs, manufacturing,
+            Six FF&E services under one contract: consultation, design specs, manufacturing,
             project management, logistics, and installation. Custom commercial furniture for
             hotels, restaurants, offices, and institutions, built from our Foxboro, MA shop.
           </p>
           <div className={styles.heroActions}>
-            <Link href="/schedule-call" className={styles.primaryBtn}>
+            <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Consultation
             </Link>
             <a href="#process" className={styles.secondaryBtn}>
@@ -452,7 +452,7 @@ export default function ServicesPage() {
         {/* ── 2. Services Grid ── */}
         <section id="services-grid" className={styles.section}>
           <p className={styles.eyebrow}>What We Do</p>
-          <h2>Six commercial furniture manufacturing services, one contract.</h2>
+          <h2>Six services, one contract, one team.</h2>
           <p className={styles.sectionLede}>
             Each service below answers a specific question: what gets built, who manages it,
             how it ships, and who installs it. You can hire us for all six or plug us into
@@ -481,7 +481,7 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>How We Work</p>
           <h2>Six phases, each with a named deliverable.</h2>
           <p className={styles.sectionLede}>
-            Every phase has a week range and a document you get at the end of it — a scope
+            Every phase has a week range and a document you get at the end of it: scope
             doc, approved specs, a QC report, a punch list sign-off. If a phase slips, you
             see it in the weekly status report the same week it happens.
           </p>
@@ -493,9 +493,7 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>Industries We Serve</p>
           <h2>Built for {places.length} commercial environments.</h2>
           <p className={styles.sectionLede}>
-            Each industry has its own failure modes — hotel dressers take suitcase impact,
-            restaurant chairs take ten seatings a night, office workstations take daily
-            keyboard wear. We spec materials and hardware to match.
+            Each industry has its own failure modes. Hotel dressers take suitcase impact. Restaurant chairs take ten seatings a night. Office workstations take daily keyboard wear. We spec materials and hardware to match.
           </p>
           <IndustryTabs industries={industries} />
         </section>
@@ -503,7 +501,7 @@ export default function ServicesPage() {
         {/* ── 5. FAQ (compact, matches homepage style) ── */}
         <section className={styles.section}>
           <p className={styles.eyebrow}>Common Questions</p>
-          <h2>Frequently Asked Questions</h2>
+          <h2>What buyers ask about our services.</h2>
           <div className={styles.faqList}>
             {serviceFaqs.map(([question, answer]) => (
               <details key={question} className={styles.faqItem}>
@@ -520,11 +518,11 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>Get Started</p>
           <h2>Have a project in mind?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute call. Bring a rough room count and a target budget. Leave with a
+            Free 30-minute call. Bring a room count and a target budget. Leave with a
             realistic price range, a lead-time estimate, and a written list of next steps.
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/schedule-call" className={styles.primaryBtn}>
+            <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
             </Link>
             <Link href="/contact" className={styles.secondaryBtn}>

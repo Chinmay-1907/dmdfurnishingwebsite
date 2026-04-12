@@ -33,7 +33,7 @@ DMD Furnishing is a B2B commercial furniture manufacturer specializing in hospit
 - Projects: https://dmdfurnishing.com/projects
 - About Us: https://dmdfurnishing.com/about
 - Contact: https://dmdfurnishing.com/contact
-- Schedule Consultation: https://dmdfurnishing.com/schedule-call
+- Schedule Consultation: https://dmdfurnishing.com/contact
 - Design Inspirations: https://dmdfurnishing.com/inspirations
 - Blog: https://dmdfurnishing.com/blog
 
@@ -61,7 +61,7 @@ DMD Furnishing is a B2B commercial furniture manufacturer specializing in hospit
 ## Industry Glossary
 
 ### FF&E (Furniture, Fixtures & Equipment)
-All movable items in a commercial space — beds, desks, chairs, lighting, drapery, and decorative accessories — not permanently attached to the building structure. FF&E budgets typically represent 15-25% of total hotel construction costs.
+All movable items in a commercial space: beds, desks, chairs, lighting, drapery, and decorative accessories. These are not permanently attached to the building structure. FF&E budgets typically represent 15 to 25 percent of total hotel construction costs.
 
 ### Casegoods
 Hard-surface furniture such as dressers, nightstands, desks, credenzas, and wardrobes. In commercial manufacturing, casegoods are typically constructed from engineered wood, hardwood veneers, HPL, or solid wood.
@@ -87,7 +87,7 @@ No, we can start with rough concepts or floor plans.
 Yes, we often collaborate with design teams to ensure manufacturability and budget alignment.
 
 ### Do you handle small renovations?
-Yes, we assist with renovations of all sizes — from refreshing a lobby to renovating a block of hotel rooms.
+Yes, we assist with renovations of all sizes, from refreshing a lobby to renovating a block of hotel rooms.
 
 ### Do you offer value engineering?
 Yes, value engineering is a core part of our service to help achieve design vision within budget.
@@ -108,8 +108,8 @@ All products are available for custom specification. Contact DMD for quote reque
 - Hotel Guestroom Furniture Checklist: https://dmdfurnishing.com/blog/hotel-guestroom-furniture-checklist
 - Value Engineering Commercial Furniture: https://dmdfurnishing.com/blog/value-engineering-commercial-furniture
 - HPL vs Veneer vs Solid Wood for Hotel Casegoods: https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods
-- Restaurant Seating Guide — Booth, Chair, or Bar Stool: https://dmdfurnishing.com/blog/restaurant-seating-guide
-- FF&E Procurement Timeline — Concept to Install: https://dmdfurnishing.com/blog/ffe-procurement-timeline
+- Restaurant Seating Guide: Booth, Chair, or Bar Stool: https://dmdfurnishing.com/blog/restaurant-seating-guide
+- FF&E Procurement Timeline: Concept to Install: https://dmdfurnishing.com/blog/ffe-procurement-timeline
 
 ## Projects
 DMD Furnishing has completed commercial furniture installations for hospitality properties including hotels, restaurants, healthcare facilities, and multi-family residential developments. The portfolio spans projects across the United States, from boutique hotels to large institutional clients.

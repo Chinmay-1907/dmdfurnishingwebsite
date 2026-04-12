@@ -12,7 +12,7 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'Hospitality Furniture Design Inspirations',
     description:
-      'Browse hospitality furniture design inspirations from DMD Furnishing \u2014 hotel lobbies, guestroom casegoods, restaurant seating, suites, lounges, and cafe concepts for commercial projects.',
+      'Browse hospitality furniture design inspirations from DMD Furnishing. Hotel lobbies, guestroom casegoods, restaurant seating, suites, lounges, and cafe concepts for commercial projects.',
     path: '/inspirations',
     image: '/Images/Elevated_Restaurant_Seating.jpg',
   });
@@ -115,7 +115,7 @@ export default function InspirationsPage() {
           <div className={styles.heroCardGlow} aria-hidden="true" />
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>Design Library</p>
-            <h1>Design Ideas You Can Actually Build</h1>
+            <h1>Design Ideas You Can Build</h1>
             <p className={styles.heroLede}>
               Material palettes, furniture layouts, and finish directions for hotel guestrooms,
               restaurant dining rooms, lobbies, and offices. Every concept pairs a visual
@@ -127,7 +127,7 @@ export default function InspirationsPage() {
               ))}
             </div>
             <div className={styles.heroActions}>
-              <Link href="/schedule-call" className={styles.primaryBtn}>
+              <Link href="/contact#schedule" className={styles.primaryBtn}>
                 Schedule a Consultation
               </Link>
               <a href="#gallery" className={styles.secondaryBtn}>
@@ -155,7 +155,7 @@ export default function InspirationsPage() {
           <h2>Hospitality and commercial design inspirations to start your next project.</h2>
           <p className={styles.sectionLede}>
             Each board pairs a visual direction with the materials that make it work in a
-            commercial setting — HPL versus real veneer, Crypton versus linen, solid oak
+            commercial setting. HPL versus real veneer, Crypton versus linen, solid oak
             versus oak-on-substrate. Use them as a starting point, not a fixed catalog.
           </p>
 
@@ -220,12 +220,12 @@ export default function InspirationsPage() {
           <p className={styles.eyebrow}>Have a Space in Mind?</p>
           <h2>Let&rsquo;s bring your vision to life.</h2>
           <p className={styles.ctaLede}>
-            Pick a board you like and we will adapt it — different finishes, different
-            fabrics, different dimensions — to fit your brand standards, your floor plan,
+            Pick a board you like and we will adapt it. Different finishes, different
+            fabrics, different dimensions. All tailored to fit your brand standards, your floor plan,
             and your budget.
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/schedule-call" className={styles.primaryBtn}>
+            <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
             </Link>
             <Link href="/contact" className={styles.secondaryBtn}>

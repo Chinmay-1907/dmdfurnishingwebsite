@@ -460,7 +460,7 @@ export default function HospitalityFfeGuide() {
                 before fabrication.
               </p>
               <div className={styles.ctaActions}>
-                <Link href="/schedule-call" className={styles.primaryBtn}>
+                <Link href="/contact#schedule" className={styles.primaryBtn}>
                   Schedule a free consultation
                 </Link>
                 <Link href="/contact" className={styles.secondaryBtn}>

@@ -79,6 +79,16 @@
   font-size: 0.8rem;
 }
 
+/* ─── Hero Tagline ─────────────────────────────────────────────────────── */
+
+.heroTagline {
+  margin: 12px 0 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(244, 240, 230, 0.7);
+}
+
 /* ─── Lede ──────────────────────────────────────────────────────────────── */
 
 .lede {

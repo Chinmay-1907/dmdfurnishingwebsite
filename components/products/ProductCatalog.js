@@ -256,7 +256,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
           <h2>Need help selecting the right products?</h2>
           <p>Our FF&E project management team can guide your selection from specification through delivery.</p>
           <div className={styles.ctaActions}>
-            <Link href="/schedule-call" className={styles.ctaPrimary}>Schedule a Call</Link>
+            <Link href="/contact#schedule" className={styles.ctaPrimary}>Schedule a Call</Link>
             <Link href="/contact" className={styles.ctaSecondary}>Request a Quote</Link>
           </div>
         </div>

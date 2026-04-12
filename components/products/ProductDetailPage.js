@@ -11,7 +11,7 @@ function buildGalleryImages(product) {
   return [
     {
       src: product.image || '/placeholder.png',
-      alt: product.name,
+      alt: `${product.name}, custom commercial furniture by DMD Furnishing`,
     },
   ];
 }
@@ -53,7 +53,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
 
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Catalog Detail</p>
+            <p className={styles.eyebrow}>Product Detail</p>
             <h1>{product.name}</h1>
             <p className={styles.description}>
               {product.description ||
@@ -88,7 +88,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
             ) : null}
 
             <div className={styles.actions}>
-              <Link href="/schedule-call" className={styles.primaryAction}>
+              <Link href="/contact#schedule" className={styles.primaryAction}>
                 Schedule a free consultation
               </Link>
               <Link href="/contact" className={styles.secondaryAction}>
@@ -98,7 +98,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
           </div>
 
           <aside className={styles.summaryCard}>
-            <p className={styles.cardLabel}>Catalog Context</p>
+            <p className={styles.cardLabel}>Product Context</p>
             <dl className={styles.summaryGrid}>
               <div>
                 <dt>Primary Space</dt>
@@ -198,7 +198,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
                       <div className={styles.relatedImageWrap}>
                         <Image
                           src={rp.image || '/placeholder.png'}
-                          alt={rp.name}
+                          alt={`${rp.name}, custom commercial furniture by DMD Furnishing`}
                           fill
                           sizes="(max-width: 640px) 50vw, 180px"
                           className={styles.relatedImage}
@@ -224,7 +224,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
               <p className={styles.cardLabel}>Ready to specify?</p>
               <h3>Let&apos;s build your project together.</h3>
               <p>Free consultation, no obligation. Our team can help align this product with your room package, budget, and timeline.</p>
-              <Link href="/schedule-call" className={styles.primaryAction}>
+              <Link href="/contact#schedule" className={styles.primaryAction}>
                 Book a free call
               </Link>
             </div>

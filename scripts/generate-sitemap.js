@@ -125,7 +125,6 @@ function generate() {
   urls.push(`${baseUrl}/about`);
   urls.push(`${baseUrl}/services`);
   urls.push(`${baseUrl}/contact`);
-  urls.push(`${baseUrl}/schedule-call`);
   urls.push(`${baseUrl}/inspirations`);
   urls.push(`${baseUrl}/website-policies`);
 
@@ -173,7 +172,7 @@ function generate() {
       else if (u === baseUrl + '/products') { pri = '0.9'; freq = 'weekly'; }
       else if (u === baseUrl + '/projects') { pri = '0.8'; freq = 'monthly'; }
       else if (u === baseUrl + '/about' || u === baseUrl + '/services') { pri = '0.7'; freq = 'monthly'; }
-      else if (u === baseUrl + '/contact' || u === baseUrl + '/schedule-call') { pri = '0.7'; freq = 'monthly'; }
+      else if (u === baseUrl + '/contact') { pri = '0.7'; freq = 'monthly'; }
       else if (u.includes('/inspirations')) { pri = '0.5'; freq = 'monthly'; }
       else if (u === baseUrl + '/website-policies') { pri = '0.3'; freq = 'yearly'; }
       else if (u === baseUrl + '/blog') { pri = '0.8'; freq = 'weekly'; }

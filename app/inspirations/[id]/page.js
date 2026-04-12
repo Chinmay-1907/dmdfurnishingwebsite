@@ -211,11 +211,11 @@ export default async function InspirationDetailPage({ params }) {
           <p className={styles.eyebrow}>Start Your Project</p>
           <h2>Ready to bring this to life?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute consultation &mdash; leave with a budget range, timeline estimate,
+            Free 30-minute consultation. Leave with a budget range, timeline estimate,
             and clear next steps.
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/schedule-call" className={styles.primaryBtn}>
+            <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
             </Link>
             <Link href="/contact" className={styles.secondaryBtn}>

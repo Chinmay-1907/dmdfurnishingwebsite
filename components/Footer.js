@@ -9,7 +9,7 @@ function Footer() {
         <div className="footer-top">
           <div className="footer-logo">
             <div className="footer-brand-title">DMD Furnishing</div>
-            <p>Commercial furniture solutions for hospitality and corporate projects</p>
+            <p>Custom commercial furniture for hospitality and corporate projects</p>
             <Link href="/website-policies" className="footer-policy-link">Website Policies</Link>
           </div>
           <div className="footer-links">

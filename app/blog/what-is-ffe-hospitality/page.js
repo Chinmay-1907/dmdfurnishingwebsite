@@ -235,21 +235,53 @@ export default function WhatIsFFEPage() {
               While both are procured before a hotel opens, they serve different purposes and carry
               different budget treatment.
             </p>
-            <p>
-              <strong>FF&amp;E</strong> covers the durable, capital items that appear on the balance
-              sheet and depreciate over their useful life: furniture, light fixtures, major equipment.
-              These items are specified once per renovation cycle, typically every 7–12 years for
-              guestrooms depending on brand standards and property tier. Commercial furniture
-              performance benchmarks are published by organizations such as{' '}
-              <a href="https://www.bifma.org/" target="_blank" rel="noopener noreferrer">BIFMA</a>,
-              the Business and Institutional Furniture Manufacturer&rsquo;s Association, which sets
-              widely referenced durability and safety standards for contract furniture.
-            </p>
-            <p>
-              <strong>OS&amp;E</strong> covers operational and consumable items that are replenished
-              regularly: bed linens, towels, glassware, silverware, uniforms, and guest amenity
-              products. OS&amp;E is an operating expense, not a capital expense.
-            </p>
+
+            <table className={styles.comparisonTable}>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>FF&amp;E</th>
+                  <th>OS&amp;E</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Full name</td>
+                  <td>Furniture, Fixtures &amp; Equipment</td>
+                  <td>Operating Supplies &amp; Equipment</td>
+                </tr>
+                <tr>
+                  <td>Item type</td>
+                  <td>Durable capital items</td>
+                  <td>Consumable and operational items</td>
+                </tr>
+                <tr>
+                  <td>Typical examples</td>
+                  <td>Beds, casegoods, seating, light fixtures, major equipment</td>
+                  <td>Bed linens, towels, glassware, silverware, uniforms, guest amenities</td>
+                </tr>
+                <tr>
+                  <td>Budget treatment</td>
+                  <td>Capital expense — appears on balance sheet and depreciates</td>
+                  <td>Operating expense — expensed and reordered regularly</td>
+                </tr>
+                <tr>
+                  <td>Replacement cycle</td>
+                  <td>Once per renovation cycle, typically every 7–12 years</td>
+                  <td>Replenished quarterly or as consumed</td>
+                </tr>
+                <tr>
+                  <td>Procurement timing</td>
+                  <td>Design development phase; long lead times (10–16 weeks)</td>
+                  <td>Pre-opening; shorter lead times</td>
+                </tr>
+                <tr>
+                  <td>Standards body</td>
+                  <td><a href="https://www.bifma.org/" target="_blank" rel="noopener noreferrer">BIFMA</a> — durability and safety standards for contract furniture</td>
+                  <td>Brand operating standards and procurement guidelines</td>
+                </tr>
+              </tbody>
+            </table>
 
             <div className={styles.callout}>
               <p>
@@ -341,7 +373,7 @@ export default function WhatIsFFEPage() {
               Material choices have a dramatic impact on budget. HPL-faced casegoods, for example,
               are significantly less expensive than matched wood veneer while delivering comparable
               commercial durability. Publications like{' '}
-              <a href="https://hdmagazine.com/" target="_blank" rel="noopener noreferrer">Hospitality Design</a>{' '}
+              <a href="https://www.hospitalitydesign.com/" target="_blank" rel="noopener">Hospitality Design</a>{' '}
               regularly document how leading operators navigate these trade-offs across different
               property tiers. Understanding the performance characteristics of each material
               allows owners and designers to make value-driven choices without compromising the

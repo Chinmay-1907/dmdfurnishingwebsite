@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
       <div className={styles.productImageWrap}>
         <Image
           src={product.image || '/placeholder.png'}
-          alt={product.name}
+          alt={`${product.name} for ${product.placeName || 'commercial'} environments`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
           className={styles.productImage}
@@ -21,7 +21,7 @@ export default function ProductCard({ product }) {
         {hasHover && (
           <Image
             src={product.hoverImage}
-            alt={`${product.name} alternate view`}
+            alt={`${product.name} for ${product.placeName || 'commercial'} environments, alternate view`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
             className={styles.productImageHover}

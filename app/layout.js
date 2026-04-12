@@ -69,6 +69,9 @@ export const viewport = { width: 'device-width', initialScale: 1 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark" className={`${playfair.variable} ${sourceSans.variable} dark-mode`}>
+      <head>
+        <link rel="preload" as="image" href="/Images/Tailored_Guestroom_Collections.jpg" fetchPriority="high" />
+      </head>
       <body className="dark-mode">
         <WebVitals />
         <ScrollToTop />

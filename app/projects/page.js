@@ -12,7 +12,7 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'Hospitality Furniture Projects | Commercial Installations',
     description:
-      'Browse DMD Furnishing\u2019s portfolio of commercial hospitality furniture installations \u2014 hotels, restaurants, and multi-family properties across the United States.',
+      'Browse DMD Furnishing\u2019s portfolio of commercial hospitality furniture installations. Hotels, restaurants, and multi-family properties across the United States.',
     path: '/projects',
     image: '/Images/Our_Projects.jpg',
   });
@@ -103,11 +103,11 @@ export default function ProjectsPage() {
           <h1>Projects That Speak for Themselves</h1>
           <p className={styles.heroLede}>
             Hotel guestrooms, restaurant dining rooms, lobby refreshes, and multi-property
-            rollouts — built with BIFMA contract-grade materials and installed on schedule.
+            rollouts. Built with BIFMA contract-grade materials and installed on schedule.
             Browse the work and see the scope behind every delivery.
           </p>
           <div className={styles.heroActions}>
-            <Link href="/schedule-call" className={styles.primaryBtn}>
+            <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Consultation
             </Link>
             <a href="#projects" className={styles.secondaryBtn}>
@@ -203,12 +203,12 @@ export default function ProjectsPage() {
           <p className={styles.eyebrow}>Ready to Start?</p>
           <h2>Have a project like one of these?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute call. Bring a rough room or seat count and a target budget. Leave
-            with a realistic price range, a lead-time estimate, and a written list of next
+            Free 30-minute call. Bring a room or seat count and a target budget. Leave
+            with a realistic price range, a lead-time estimate, and a clear list of next
             steps.
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/schedule-call" className={styles.primaryBtn}>
+            <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
             </Link>
             <Link href="/contact" className={styles.secondaryBtn}>

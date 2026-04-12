@@ -83,6 +83,7 @@
   font-weight: 500;
   color: var(--color-text);
   padding: 10px 18px;
+  min-height: 48px;
   transition: color var(--transition-fast), border-color var(--transition-fast);
   border-radius: 0;
   background: transparent;
@@ -352,5 +353,7 @@ body.body-no-scroll {
   .theme-toggle {
     width: 36px;
     height: 36px;
+    min-width: 48px;
+    min-height: 48px;
   }
 }

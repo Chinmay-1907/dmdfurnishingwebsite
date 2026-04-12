@@ -454,7 +454,7 @@ export default function CommercialFurnitureManufacturingGuide() {
                 business day with a quote path and questions that help tighten the spec.
               </p>
               <div className={styles.ctaActions}>
-                <Link href="/schedule-call" className={styles.primaryBtn}>
+                <Link href="/contact#schedule" className={styles.primaryBtn}>
                   Schedule a free consultation
                 </Link>
                 <Link href="/contact" className={styles.secondaryBtn}>
