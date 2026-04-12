@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
+import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
@@ -38,27 +39,37 @@ const articleSchema = {
   '@graph': [
     {
       '@type': 'Article',
+      '@id': `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods#article`,
       headline:
         'HPL vs Veneer vs Solid Wood: Choosing the Right Surface for Hotel Casegoods',
-      datePublished: '2026-03-28',
-      dateModified: '2026-03-28',
+      datePublished: '2026-03-16',
+      dateModified: '2026-03-22',
       author: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: 'https://dmdfurnishing.com',
+        '@type': 'Person',
+        name: 'DMD Furnishing Editorial Team',
+        jobTitle: 'Commercial Furniture Specialists',
+        url: `${siteUrl}/about`,
+        worksFor: {
+          '@type': 'Organization',
+          name: 'DMD Furnishing',
+          '@id': `${siteUrl}/#organization`,
+        },
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
       },
       publisher: {
         '@type': 'Organization',
         name: 'DMD Furnishing',
-        url: 'https://dmdfurnishing.com',
+        url: siteUrl,
         logo: {
           '@type': 'ImageObject',
-          url: 'https://dmdfurnishing.com/DMD_Furnishing_Logo_Embedded.svg',
+          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
         },
       },
-      mainEntityOfPage:
-        'https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods',
-      image: 'https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg',
+      mainEntityOfPage: `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`,
+      image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
     },
     {
       '@type': 'BreadcrumbList',
@@ -67,19 +78,57 @@ const articleSchema = {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://dmdfurnishing.com',
+          item: siteUrl,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://dmdfurnishing.com/blog',
+          item: `${siteUrl}/blog`,
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'HPL vs Veneer vs Solid Wood for Hotel Casegoods',
-          item: 'https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods',
+          item: `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`,
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods#faq`,
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is HPL suitable for luxury hotel casegoods?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'HPL is suitable for functional surfaces in luxury hotels — vanity tops, desk writing surfaces, and secondary panel backs — where durability matters more than natural material perception. On guest-facing visual surfaces like headboards and wardrobe fronts, luxury properties typically specify veneer or solid wood to meet brand and guest expectation standards.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can wood veneer handle hotel bathroom moisture conditions?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Not reliably without additional protection. Standard veneer is susceptible to delamination and raised grain in sustained moisture environments. Bathroom vanity surfaces should be specified in HPL or a sealed stone product. Veneer is appropriate for the vanity carcass exterior in dry areas, provided edges are sealed and housekeeping avoids standing water.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What does "Laminate/Veneer; edge-banded MDF" mean in a furniture specification?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'This describes a mixed construction: the carcass is MDF (medium-density fiberboard) for dimensional stability, edges are finished with banded laminate for durability and a clean profile, and primary visual surfaces use either laminate or wood veneer depending on the application. It is a standard commercial hotel casegood construction offering both efficiency and aesthetic flexibility.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does surface material affect hotel furniture lead times?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'HPL is the fastest: it is manufactured to consistent specifications and stocked in standard finishes. Veneer adds lead time for species selection, face matching, and panel sequencing. Solid wood has the longest lead time due to material sourcing, drying, and machining requirements. Projects requiring veneer or solid wood should build additional lead time into the procurement schedule.',
+          },
         },
       ],
     },
@@ -291,48 +340,16 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
 
           <h2>Side-by-Side Comparison</h2>
 
-          <div
-            style={{
-              overflowX: 'auto',
-              margin: '1.5rem 0 2rem',
-              borderRadius: '6px',
-              border: '1px solid rgba(201, 169, 110, 0.2)',
-            }}
-          >
-            <table
-              style={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                fontFamily: "var(--font-sans, 'Source Sans 3', Arial, sans-serif)",
-                fontSize: '0.9375rem',
-                color: '#c8bfb0',
-              }}
-            >
+          <table className={styles.comparisonTable}>
               <thead>
-                <tr
-                  style={{
-                    background: 'rgba(201, 169, 110, 0.1)',
-                    borderBottom: '1px solid rgba(201, 169, 110, 0.25)',
-                  }}
-                >
+                <tr>
                   {[
                     'Attribute',
                     'HPL',
                     'Wood Veneer',
                     'Solid Wood',
                   ].map((h) => (
-                    <th
-                      key={h}
-                      style={{
-                        padding: '12px 16px',
-                        textAlign: 'left',
-                        color: '#e2c98e',
-                        fontWeight: 600,
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      {h}
-                    </th>
+                    <th key={h}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -346,32 +363,16 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
                   ['Relative material cost', 'Low', 'Medium', 'High'],
                   ['Maintenance requirement', 'Low', 'Medium', 'Medium–High'],
                   ['Weight', 'Light', 'Light', 'Heavy'],
-                ].map(([attr, hpl, veneer, solid], i) => (
-                  <tr
-                    key={attr}
-                    style={{
-                      background: i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)',
-                      borderBottom: '1px solid rgba(201, 169, 110, 0.08)',
-                    }}
-                  >
-                    <td
-                      style={{
-                        padding: '11px 16px',
-                        color: '#e2c98e',
-                        fontWeight: 500,
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      {attr}
-                    </td>
-                    <td style={{ padding: '11px 16px' }}>{hpl}</td>
-                    <td style={{ padding: '11px 16px' }}>{veneer}</td>
-                    <td style={{ padding: '11px 16px' }}>{solid}</td>
+                ].map(([attr, hpl, veneer, solid]) => (
+                  <tr key={attr}>
+                    <td>{attr}</td>
+                    <td>{hpl}</td>
+                    <td>{veneer}</td>
+                    <td>{solid}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-          </div>
 
           <h2>Practical Recommendation by Hotel Tier</h2>
           <p>
@@ -514,6 +515,14 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               </p>
             </div>
           </section>
+        </div>
+
+        <div className={styles.authorCard}>
+          <div className={styles.authorAvatar}>D</div>
+          <div className={styles.authorInfo}>
+            <strong>DMD Furnishing Editorial Team</strong>
+            <span>Commercial Furniture Specialists</span>
+          </div>
         </div>
       </article>
     </main>

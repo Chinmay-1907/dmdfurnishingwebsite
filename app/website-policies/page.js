@@ -38,7 +38,7 @@ export default function WebsitePoliciesPage() {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Website Policies</p>
-          <h1>Terms, privacy, and data use information</h1>
+          <h1>Terms of use, privacy, and data handling.</h1>
         </div>
       </section>
 
@@ -87,7 +87,7 @@ export default function WebsitePoliciesPage() {
           <h3>Data Security</h3>
           <p>We implement reasonable security measures to protect your personal information, but no method of transmission over the internet is 100% secure.</p>
           <h3>Contact Us</h3>
-          <p>For questions about our privacy practices, contact us at <a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a> or write to DMD Furnishing, 56 Leonard St Unit 5, Foxboro, MA 02035.</p>
+          <p>For questions about our privacy practices, contact us at <a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a> or write to DMD Furnishing, 56 Leonard St Unit 5, Foxboro, MA 02035.</p>
         </section>
 
         <section className={`${styles.section} ${styles.sectionAlt}`}>

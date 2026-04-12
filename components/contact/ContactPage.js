@@ -80,12 +80,12 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
       if (formData.areaType.length) details.push(`Area Type: ${formData.areaType.join(', ')}`);
     }
 
-    const baseMessage = `I was reviewing your furniture solutions for ${categoryLabel} and would like to request a consultation to discuss scope, materials, and timelines for my project.`;
+    const baseMessage = `I'm looking at commercial furniture for ${categoryLabel} and would like to set up a call to walk through scope, materials, and lead times for my project.`;
     const detailsText = details.length ? `\n\nProject Details:\n${details.join('\n')}` : '';
     const composedMessage = `${baseMessage}${detailsText}`;
 
     setFormData((current) => {
-      const shouldUpdate = !current.message || current.message.startsWith('I was reviewing your furniture solutions for');
+      const shouldUpdate = !current.message || current.message.startsWith('I was reviewing your furniture solutions for') || current.message.startsWith("I'm looking at commercial furniture for");
       return shouldUpdate ? { ...current, message: composedMessage } : current;
     });
   }, [categoryLabel, formData.areaType, formData.furnitureNeeded, formData.projectCategory, formData.projectScope, formData.roomCount, formData.roomTypes, formData.restaurantType, formData.seatingCapacity, formData.spaceType, formData.teamSize, step]);
@@ -370,8 +370,8 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
         }}
       >
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Request a Consultation</h1>
-          <p className={styles.heroSubtitle}>Get in touch for a personalized furniture consultation</p>
+          <h1 className={styles.heroTitle}>Request a Commercial Furniture Manufacturer Quote</h1>
+          <p className={styles.heroSubtitle}>Tell DMD Furnishing your scope, room count, and target budget. Our Foxboro, Massachusetts project managers respond within one business day with a realistic FF&E price range and lead-time estimate.</p>
         </div>
       </section>
 
@@ -407,13 +407,33 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
             </div>
           </div>
 
+          <p className="contact-hours" style={{ marginTop: '1.5rem' }}>
+            <strong>Showroom hours:</strong> By appointment only — please call or email ahead.
+          </p>
+
+          <figure className="contact-map" style={{ margin: '1.5rem 0 0', padding: 0 }}>
+            <iframe
+              title="DMD Furnishing showroom location — 56 Leonard St, Foxboro, MA"
+              src="https://www.google.com/maps?q=56+Leonard+St+Unit+5,+Foxboro,+MA+02035&output=embed"
+              width="100%"
+              height="360"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <figcaption style={{ marginTop: '0.5rem', fontSize: '0.9rem', opacity: 0.85 }}>
+              DMD Furnishing showroom — 56 Leonard St Unit 5, Foxboro, MA 02035. Visits by appointment.
+            </figcaption>
+          </figure>
+
           <div className="quick-links-section" style={{ marginTop: '2rem' }}>
             <h3 style={{ marginBottom: '0.75rem' }}>Quick Links</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <li><Link href="/products" style={{ color: 'inherit', textDecoration: 'underline' }}>Browse our products</Link></li>
-              <li><Link href="/services" style={{ color: 'inherit', textDecoration: 'underline' }}>View our services</Link></li>
-              <li><Link href="/projects" style={{ color: 'inherit', textDecoration: 'underline' }}>See our projects</Link></li>
-              <li><Link href="/blog" style={{ color: 'inherit', textDecoration: 'underline' }}>Read our blog</Link></li>
+              <li><Link href="/products" style={{ color: 'inherit', textDecoration: 'underline' }}>Browse commercial furniture catalog</Link></li>
+              <li><Link href="/services" style={{ color: 'inherit', textDecoration: 'underline' }}>Commercial furniture manufacturing services</Link></li>
+              <li><Link href="/projects" style={{ color: 'inherit', textDecoration: 'underline' }}>Hotel & restaurant furniture projects</Link></li>
+              <li><Link href="/blog" style={{ color: 'inherit', textDecoration: 'underline' }}>FF&E insights & guides</Link></li>
             </ul>
           </div>
         </div>
@@ -423,7 +443,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
             <div className="success-message fade-in">
               <div className="success-icon"><FaCheckCircle /></div>
               <h2>Request Received</h2>
-              <p>Thank you for your request. Our team will review your information and contact you within one business day.</p>
+              <p>Thanks — your request is in. A DMD project manager will review your scope and respond within one business day, usually with a short list of clarifying questions so we can prepare a realistic budget range before the call.</p>
               <button className="btn btn-primary mt-4" onClick={() => router.push('/')}>Return Home</button>
             </div>
           ) : (
@@ -440,7 +460,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                         {submitStatus === 'sending' ? 'Sending...' : 'Verify Email'}
                       </button>
                     </div>
-                    <p className="helper-text">We verify email addresses to prevent spam and ensure accurate follow-up.</p>
+                    <p className="helper-text">We send a one-time code to verify your email so a real PM can follow up — this keeps the inbox clean of form spam.</p>
                   </div>
                   {errorMessage ? <div className="error-message">{errorMessage}</div> : null}
                 </form>

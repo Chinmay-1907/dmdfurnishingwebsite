@@ -9,36 +9,36 @@ import { getAllProjects } from '../lib/projects';
 import styles from './page.module.css';
 
 const heroImages = [
-  '/Images/Tailored_Guestroom_Collections.jpg',
-  '/Images/Elevated_Restaurant_Seating.jpg',
-  '/Images/Modern_Social_Lounges.jpg',
-  '/Images/Outdoor.jpg',
+  { src: '/Images/Tailored_Guestroom_Collections.jpg', alt: 'DMD Furnishing custom hotel guestroom casegoods with HPL desks and upholstered headboards in a Foxboro Massachusetts project' },
+  { src: '/Images/Elevated_Restaurant_Seating.jpg', alt: 'Elevated commercial restaurant seating with custom wood dining chairs and upholstered banquettes built by DMD Furnishing' },
+  { src: '/Images/Modern_Social_Lounges.jpg', alt: 'Modern hotel lobby social lounge with custom lounge chairs and occasional tables manufactured by DMD Furnishing' },
+  { src: '/Images/Outdoor.jpg', alt: 'Commercial outdoor patio furniture with powder-coated frames for hotel and restaurant terraces by DMD Furnishing' },
 ];
 
 const whyDmd = [
-  ['End-to-End Management', 'Design, manufacturing, delivery, and installation coordinated under one accountable team.'],
-  ['Hospitality-Grade Durability', 'Furniture engineered for high-traffic environments and repeat renovation cycles.'],
-  ['Custom & Value-Engineered', 'Premium design balanced with practical manufacturing choices and budgets.'],
-  ['Reliable Execution', 'Clear communication, realistic timelines, and dependable delivery from start to finish.'],
-  ['Full FF&E Capability', 'Custom casegoods, seating, upholstery, millwork, procurement, and installation — all in-house.'],
-  ['Durable Material Selection', 'HPL, veneer, solid wood, metal structures, and commercial-grade hardware — chosen for performance and visual consistency.'],
+  ['One Team, PO to Punch List', 'Shop drawings, production, freight, and install run through one project manager. You call one number, not five.'],
+  ['Built for BIFMA-Level Use', 'Frames, joinery, and hardware specified against BIFMA X5.1 and X5.4 durability benchmarks so pieces survive guest turnover cycles.'],
+  ['Value Engineering on Every Bid', 'We redline the cut list, swap finishes, and adjust construction methods to hit budget without cheapening the visible surfaces.'],
+  ['Written Timelines You Can Plan Around', 'Each phase has a week range and a named deliverable — scope doc, approved specs, QC report, punch list sign-off.'],
+  ['Full FF&E Scope In-House', 'Custom casegoods, lounge and dining seating, upholstery, wardrobes, millwork, and loose furniture procurement under one contract.'],
+  ['Commercial Materials, Not Residential', 'HPL work surfaces, hardwood veneer on stable substrates, powder-coated steel frames, Crypton and NFPA 701-rated fabrics, soft-close commercial hardware.'],
 ];
 
 const processSteps = [
-  ['01', 'Consultation and scope alignment', 'Establish project goals, budget, and timeline requirements.'],
-  ['02', 'Design support and specifications', 'Coordinate materials, dimensions, and product requirements.'],
-  ['03', 'Manufacturing and sourcing', 'Manage production across domestic and global facilities.'],
-  ['04', 'Quality review and readiness', 'Confirm specifications and readiness before shipment.'],
-  ['05', 'Delivery and installation', 'Sequence logistics for efficient delivery and install.'],
-  ['06', 'Project close-out and follow-up', 'Final verification and post-project support.'],
+  ['01', 'Scope & Budget', 'Walkthrough, room counts, brand standard review. You leave with a scope document and a preliminary BOQ.'],
+  ['02', 'Specifications', 'Finish samples, shop drawings, dimensions, and fabric call-outs reviewed with your designer or architect.'],
+  ['03', 'Manufacturing', 'Production in our domestic shop or partner overseas facility, whichever fits your timeline and budget.'],
+  ['04', 'Pre-Ship QC', 'Every piece inspected against the approved spec sheet. Photo report before containers load.'],
+  ['05', 'Delivery & Install', 'Phased drops coordinated with your GC. Assembly, placement, and protection of existing finishes.'],
+  ['06', 'Punch & Close-Out', 'Final walkthrough, warranty documentation, and touch-ups resolved before we leave site.'],
 ];
 
 const pageDescription =
-  'Custom hospitality furniture and FF&E solutions for hotels, restaurants, offices, and institutional spaces. Based in Foxboro, MA — designed, manufactured, and installed nationwide by DMD Furnishing.';
+  'Custom hospitality FF&E for hotels, restaurants, offices and institutional projects. Designed, manufactured and installed nationwide by DMD Furnishing, Foxboro MA.';
 
 export function generateMetadata() {
   return generatePageMetadata({
-    title: 'Custom Hospitality Furniture & FF&E Solutions',
+    title: 'Hospitality Furniture Manufacturer | Custom FF&E',
     description: pageDescription,
     path: '/',
     image: '/Images/Tailored_Guestroom_Collections.jpg',
@@ -96,20 +96,85 @@ export default function HomePage() {
     },
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': 'https://dmdfurnishing.com/#faq',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is FF&E and why does it matter for hospitality projects?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'FF&E stands for Furniture, Fixtures & Equipment — the movable items in a commercial space such as beds, desks, chairs, lighting, and accessories that are not permanently attached to the structure. For hotels, restaurants, and offices, FF&E typically represents 15–25% of total construction costs and directly shapes guest experience and brand consistency.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What types of commercial spaces does DMD Furnishing serve?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `DMD Furnishing serves hotels and motels, restaurants and cafes, corporate offices, educational facilities, healthcare-adjacent spaces, and franchise renovation programs. Our catalog covers over ${totalProducts} products across ${places.length} market categories, all engineered for commercial durability and high-use environments.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does the custom furniture process work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Every project begins with a consultation to align on scope, budget, and timeline. From there, we support design and material specifications, manage manufacturing through our domestic and overseas network, coordinate delivery, and oversee installation. The entire process is managed under one team from start to close-out.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is value engineering in commercial furniture?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Value engineering is the process of analyzing materials, construction methods, and design details to reduce cost without compromising quality, durability, or visual intent. At DMD Furnishing, value engineering is a standard part of our service — we identify where practical material substitutions or manufacturing adjustments can meet budget requirements while preserving the design direction.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does custom hospitality furniture cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Costs vary based on scope, materials, room count, and customization level. Value engineering is built into every DMD project — we balance design intent with practical manufacturing choices to meet your budget without compromising quality. Schedule a free consultation to discuss your project and get a realistic budget range and timeline estimate.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you handle both small renovations and large-scale projects?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. We work with projects of varying scale — from refreshing a lobby or updating a restaurant dining area to full-scale hotel room block renovations and phased franchise rollouts. Our hybrid manufacturing model supports both speed-sensitive smaller projects and high-volume programs that require scale.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Where is DMD Furnishing based and what areas do you serve?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'DMD Furnishing is headquartered at 56 Leonard St, Foxboro, Massachusetts 02035. We serve commercial clients and hospitality operators nationwide, with project experience spanning hotels, restaurants, and institutional spaces across the United States.',
+        },
+      },
+    ],
+  };
+
   return (
     <main className={styles.page}>
       <JsonLd data={schema} />
+      <JsonLd data={faqSchema} />
 
       {/* ── 1. Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroMedia} aria-hidden="true">
-          {heroImages.map((src, index) => (
+          {heroImages.map((img, index) => (
             <Image
-              key={src}
-              src={src}
-              alt="DMD Furnishing commercial hospitality furniture"
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
               priority={index === 0}
               style={{ animationDelay: `${index * 7}s` }}
               className={styles.heroImage}
@@ -121,9 +186,10 @@ export default function HomePage() {
           <p className={styles.eyebrow}>Custom Hospitality Furniture</p>
           <h1><span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
           <p className={styles.lede} data-speakable="lede">
-            From boutique hotels to national chains — we handle design, manufacturing, and
-            installation so your renovation stays on time, on brand, and on budget. Based in
-            Foxboro, MA — serving clients nationwide.
+            DMD Furnishing is a commercial furniture manufacturer in Foxboro, Massachusetts.
+            We custom-build casegoods, seating, and millwork for hotels, restaurants, offices,
+            and institutional spaces — from 20-room motel refreshes to multi-property
+            franchise rollouts, shipped and installed nationwide.
           </p>
           <div className={styles.ctaRow}>
             <Link href="/schedule-call" className={styles.primaryCta}>
@@ -162,7 +228,7 @@ export default function HomePage() {
       <section className={styles.sectionWide}>
         <div className={`${styles.sectionHeader} fade-in-up`}>
           <p className={styles.eyebrow}>Who We Serve</p>
-          <h2>{totalProducts}+ products built for commercial spaces.</h2>
+          <h2>A commercial furniture manufacturer with {totalProducts}+ catalog pieces.</h2>
         </div>
         <div className={styles.productGrid}>
           {featuredPlaces.map((place, index) => (
@@ -189,7 +255,7 @@ export default function HomePage() {
         </div>
         <div className={`${styles.ctaRow} ${styles.center}`} style={{ marginTop: 32 }}>
           <Link href="/products" className={styles.secondaryCta}>
-            Browse the Full Catalog
+            Browse Commercial Furniture Catalog
           </Link>
         </div>
       </section>
@@ -262,7 +328,7 @@ export default function HomePage() {
       <section className={`${styles.section} ${styles.altSection}`}>
         <div className={`${styles.sectionHeader} fade-in-up`}>
           <p className={styles.eyebrow}>Why DMD</p>
-          <h2>Structured execution for demanding commercial work.</h2>
+          <h2>What you actually get when you hire us.</h2>
         </div>
         <div className={styles.whyGrid}>
           {whyDmd.map(([title, description]) => (
@@ -274,7 +340,7 @@ export default function HomePage() {
         </div>
         <div className={styles.ctaRow} style={{ marginTop: 32 }}>
           <Link href="/about" className={styles.secondaryCta}>
-            Learn More About Us
+            About Our Foxboro MA Manufacturing Shop
           </Link>
         </div>
       </section>
@@ -356,7 +422,7 @@ export default function HomePage() {
         <div className={`${styles.sectionHeader} ${styles.center}`}>
           <p className={styles.eyebrow}>Next Step</p>
           <h2>Ready to furnish your space?</h2>
-          <p>Free 30-minute consultation — leave with a budget range and timeline estimate.</p>
+          <p>Free 30-minute call. Bring a rough room count and a rough budget. Leave with a realistic price range, a lead-time estimate, and a written list of next steps.</p>
         </div>
         <div className={`${styles.ctaRow} ${styles.center}`}>
           <Link href="/schedule-call" className={styles.primaryCtaLarge}>
@@ -369,7 +435,7 @@ export default function HomePage() {
         <div className={`${styles.ctaContact} ${styles.center}`}>
           <a href="tel:+16172237781" className={styles.ctaContactLink}>+1 (617) 223-7781</a>
           <span className={styles.ctaContactDivider}>|</span>
-          <a href="mailto:Sales@DMDFurnishing.com" className={styles.ctaContactLink}>Sales@DMDFurnishing.com</a>
+          <a href="mailto:sales@dmdfurnishing.com" className={styles.ctaContactLink}>sales@dmdfurnishing.com</a>
         </div>
       </section>
     </main>

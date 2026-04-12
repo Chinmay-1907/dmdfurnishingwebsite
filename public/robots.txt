@@ -33,5 +33,14 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+# Disallow crawl noise
+User-agent: *
+Disallow: /api/
+Disallow: /_next/static/chunks/
+
 # Sitemap
 Sitemap: https://dmdfurnishing.com/sitemap.xml
+
+# LLM / AI agent discovery file
+# Also mirrored at /.well-known/llms.txt per emerging convention
+# https://llmstxt.org/

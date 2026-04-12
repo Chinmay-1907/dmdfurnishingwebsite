@@ -3,13 +3,21 @@
 import { useEffect, useRef, useState } from 'react';
 
 export default function CountUp({ end, suffix = '', duration = 2000, className }) {
-  const [count, setCount] = useState(0);
+  // SSR renders the real end value so AI crawlers / no-JS clients see "285+", not "0+"
+  const [count, setCount] = useState(end);
   const ref = useRef(null);
+  const hasMounted = useRef(false);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // On first client mount, reset to 0 so the animation has somewhere to count from
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      setCount(0);
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

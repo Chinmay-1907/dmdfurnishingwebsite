@@ -1,0 +1,272 @@
+# DMD Furnishing — Full Site Content for LLM Agents
+
+This file is a consolidated content snapshot of dmdfurnishing.com intended for
+LLM-based search, retrieval and agent systems. It mirrors the canonical
+content on the live site. For the canonical browsable version, visit the URLs
+listed under each section.
+
+- Canonical site: https://dmdfurnishing.com/
+- LLM-friendly summary: https://dmdfurnishing.com/llms.txt
+- Sitemap: https://dmdfurnishing.com/sitemap.xml
+
+---
+
+# About DMD Furnishing
+
+source: https://dmdfurnishing.com/about
+
+DMD Furnishing is a B2B commercial furniture manufacturer specializing in
+hospitality FF&E (Furniture, Fixtures & Equipment). Based in Foxboro,
+Massachusetts, we design, manufacture, and install custom furniture for hotels,
+restaurants, offices, healthcare facilities, educational facilities, and
+multi-family residential developments nationwide.
+
+## Contact
+- Phone: +1 (617) 223-7781
+- Email: sales@dmdfurnishing.com
+- Address: 56 Leonard St Unit 5, Foxboro, MA 02035
+- LinkedIn: https://www.linkedin.com/company/dmd-usaa/
+- Showroom: by appointment only
+
+## Services
+- Custom casegoods and millwork
+- Seating and upholstered furniture manufacturing
+- FF&E procurement and sourcing
+- Delivery, installation and project coordination
+- Value engineering
+- Design consultation for commercial and hospitality projects
+
+---
+
+# Product Categories
+
+source: https://dmdfurnishing.com/products
+
+DMD Furnishing offers a full catalog of commercial furniture across seven
+hospitality and institutional market categories. Each category page includes
+a buying guide, materials notes, and FAQs.
+
+## Hotel Furniture
+source: https://dmdfurnishing.com/products/hotel
+
+Hotel FF&E covers guestroom casegoods, headboards, desks, luggage benches,
+nightstands, corridor consoles, and lobby seating. DMD specifies contract-grade
+furniture engineered to BIFMA durability standards, suitable for the
+seven-to-ten-year renovation cycles most hotel flags operate on. Guestroom
+casegoods typically use HPL tops on hardwood-veneer or solid-wood accents,
+with dovetailed drawer boxes and full-extension soft-close slides. Upholstered
+pieces meet CAL 117-2013 for foam and NFPA 701 for face fabrics in assembly
+spaces.
+
+## Restaurant Furniture
+source: https://dmdfurnishing.com/products/restaurant
+
+Restaurant seating operates in one of the harshest commercial environments:
+continuous turnover, spilled food and beverage, aggressive sanitizer contact,
+and the physical stress of being stacked and moved daily. DMD supplies custom
+banquettes, booths, dining chairs, bar stools, host stands, and outdoor-rated
+pieces. Frames use solid European beech, oak, or ash for wood chairs, or
+welded powder-coated steel and aluminum. Coated upholstery (polyurethane,
+vinyl, Crypton-class) dominates because it survives the cleaning chemistry
+used in operating kitchens and dining rooms.
+
+## Office Furniture
+source: https://dmdfurnishing.com/products/office
+
+Commercial office furniture now spans focused desking, collaborative lounge,
+phone rooms, and touchdown space. DMD supplies height-adjustable workstations,
+ergonomic task seating meeting ANSI/BIFMA X5.1, conference tables, and
+acoustic millwork for corporate headquarters, coworking operators, and tenant
+fit-outs. Workstation tops use HPL or melamine over particleboard/MDF with
+3mm impact-resistant edge banding. Seating uses molded polymer shells, mesh
+backs, and polished or powder-coated aluminum bases.
+
+## Healthcare Furniture
+source: https://dmdfurnishing.com/products/hospital
+
+Healthcare furniture lives at the intersection of patient dignity, infection
+control, and structural durability. DMD supplies waiting area seating, patient
+room wardrobes and overbed tables, nursing station millwork, and bariatric
+chairs (500-750 lb capacity) for hospitals, outpatient clinics, medical office
+buildings, and long-term care facilities. Upholstery uses bleach-cleanable
+coated fabrics (Crypton Health, medical polyurethane, antimicrobial vinyl)
+with moisture barriers between fabric and foam. Casegoods use HPL over
+moisture-resistant MDF for bleach compatibility.
+
+## Educational Facility Furniture
+source: https://dmdfurnishing.com/products/educational-facilities
+
+Educational furniture takes more physical abuse than almost any commercial
+category. DMD supplies classroom seating and desks, dormitory wardrobes and
+beds, library tables and carrels, and flexible collaboration pieces for K-12
+schools, colleges, and universities. Dormitory casegoods use welded steel or
+HPL-faced particleboard with 3mm PVC edge banding to survive move-ins,
+cleaning chemistry, and bed-bug treatments. Institutional buyers should expect
+BIFMA contract-grade structural warranties in the ten-to-fifteen-year range.
+
+## Multi-family & Residential Furniture
+source: https://dmdfurnishing.com/products/residential
+
+Multi-family common area furniture is a commercial category, not consumer.
+Apartment clubhouses, leasing offices, amenity lounges, and rooftop common
+areas see hospitality-level traffic. DMD supplies leasing office desks,
+clubhouse lounge and dining, amenity space furniture, rooftop and pool deck
+seating, and custom casegoods for co-working and package rooms. Consumer
+retail furniture is not warranted for public or multi-family common area use
+and will fail structurally within 18-24 months of installation.
+
+## Lobby & Common Area Furniture
+source: https://dmdfurnishing.com/products/lobby-area
+
+Lobbies are the first impression of a building. DMD manufactures custom
+reception and concierge desks, statement sofas and lounge chairs, communal
+tables, and oversized feature pieces for hotels, corporate headquarters,
+multi-family developments, healthcare facilities, and civic buildings.
+Double-height lobbies often require upsized furniture built to custom
+dimensions so pieces read at architectural scale. Reception desks integrate
+power, data, cable management, and ADA-compliant transaction heights into
+the millwork.
+
+---
+
+# Blog — FF&E, Commercial Furniture & Hospitality
+
+source: https://dmdfurnishing.com/blog
+
+Content is written and reviewed by the DMD Furnishing editorial team —
+project managers, shop floor leads, procurement coordinators, and installers.
+See https://dmdfurnishing.com/author/dmd-furnishing-editorial
+
+## What Is FF&E? A Complete Guide for Hospitality Projects
+source: https://dmdfurnishing.com/blog/what-is-ffe-hospitality
+
+FF&E stands for Furniture, Fixtures & Equipment — the movable items in a
+commercial space (beds, desks, chairs, lighting, drapery, accessories) that
+are not permanently attached to the building structure. In hospitality and
+commercial construction, FF&E is typically specified separately from shell
+and core, procured from dedicated manufacturers, and installed as a distinct
+phase at the end of the build schedule. FF&E is also distinct from OS&E
+(Operating Supplies and Equipment) such as linens, tableware, and consumables.
+Industry coverage: American Hotel & Lodging Association (https://www.ahla.com/).
+
+## Hotel Guestroom Furniture Checklist
+source: https://dmdfurnishing.com/blog/hotel-guestroom-furniture-checklist
+
+A complete guestroom furniture package typically includes: bed frame and
+headboard (often wall-mounted), nightstands with integrated power and USB,
+dresser or casegood media unit, desk and desk chair, luggage bench, accent
+chair, wardrobe or closet system, floor and table lamps, mirror and vanity,
+drapery and hardware, and in-room signage. Specifications must match the
+brand prototype book for flagged properties. Coordinate electrical rough-in
+with casegoods design during shop drawing review.
+
+## HPL vs Veneer vs Solid Wood for Hotel Casegoods
+source: https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods
+
+HPL (high-pressure laminate) is the default for horizontal guestroom surfaces
+where scratch, moisture and chemical resistance matter more than tactile
+quality — desks, dresser tops, wardrobe tops, and most daily-contact surfaces.
+Hardwood veneer over ply substrate provides a premium tactile finish at
+moderate cost and is suitable for drawer fronts, accent pieces, and boutique
+guestrooms. Solid wood is rarely specified for full casegoods in commercial
+hospitality because of cost, weight, and dimensional stability in HVAC
+environments; it appears instead on accent trims, carved details, and
+boutique feature pieces. HPL conforms to NEMA LD 3 standards.
+
+## Value Engineering Commercial Furniture
+source: https://dmdfurnishing.com/blog/value-engineering-commercial-furniture
+
+Value engineering (VE) is the process of analyzing materials, construction
+methods, and design details to reduce cost without compromising quality,
+durability, or design intent. In commercial furniture, VE typically targets
+material substitutions (veneer instead of solid wood, HPL instead of veneer
+on hidden faces), construction simplification (doweled joinery instead of
+mortise and tenon where loads permit), finish consolidation (reducing the
+number of custom stains), and hardware standardization across a project.
+BIFMA contract-grade durability must be preserved regardless of cost
+engineering.
+
+## Restaurant Seating Guide — Booth, Chair, or Bar Stool
+source: https://dmdfurnishing.com/blog/restaurant-seating-guide
+
+Booths maximize covers per square foot and give guests a sense of privacy
+but are the most expensive per seat and least flexible. Freestanding chairs
+offer layout flexibility and easier housekeeping access but cost more per
+operational hour because of higher per-chair replacement and maintenance.
+Bar stools are specialized for bar-height counters (42" bar height, 34"
+counter height) and require back, footrail, and swivel specifications
+tailored to the operator's cover turn strategy. Upholstery must meet
+CAL 117-2013 and NFPA 701 for any restaurant with public assembly occupancy.
+
+## FF&E Procurement Timeline — Concept to Install
+source: https://dmdfurnishing.com/blog/ffe-procurement-timeline
+
+FF&E procurement typically runs 16-24 weeks from design lock to on-site
+delivery. Phase 1 (design and specification) takes 2-4 weeks. Phase 2
+(quoting and BOQ finalization) takes 1-2 weeks. Phase 3 (shop drawings and
+finish approvals) takes 2-3 weeks. Phase 4 (manufacturing) takes 8-12 weeks
+depending on scope and finish complexity. Phase 5 (logistics, receiving,
+warehousing, and installation) takes 2-3 weeks. Lock specifications early
+to keep FF&E off the project's critical path.
+
+---
+
+# Services
+
+source: https://dmdfurnishing.com/services
+
+DMD Furnishing provides end-to-end FF&E services managed under a single
+project manager from initial consultation through final punch list:
+
+1. Consultation and project discovery — review of scope, budget, brand
+   standards, and timeline requirements.
+2. Design support and specifications — materials, dimensions, finishes, and
+   BOQ development coordinated with the interior designer or owner.
+3. Manufacturing and sourcing — production across DMD's domestic and global
+   manufacturing network, including custom casegoods, seating, and millwork.
+4. FF&E project management — coordinating furniture scope with the GC,
+   installer, and brand approvals across the project schedule.
+5. Logistics and delivery coordination — receiving, warehousing, and
+   blanket-wrap delivery scheduling.
+6. Installation and close-out — room-by-room install coordination and final
+   punch list resolution.
+
+---
+
+# Industry Standards We Work To
+
+- **BIFMA (Business and Institutional Furniture Manufacturers Association)**
+  Durability, strength, and safety standards for commercial and institutional
+  furniture. ANSI/BIFMA X5.1 covers office seating. https://bifma.org/
+- **NFPA 701** — flammability standards for face fabrics in public assembly
+  spaces, required for most hospitality upholstery. https://www.nfpa.org/
+- **CAL 117-2013** — California flammability standard for upholstered
+  furniture foam, widely adopted across U.S. commercial projects.
+- **ANSI/BIFMA X5.1** — baseline durability and safety standard for office
+  task seating used eight hours per day.
+- **NEMA LD 3** — standard for decorative HPL (high-pressure laminate)
+  including scratch, impact, and stain resistance classes.
+- **AHLA (American Hotel & Lodging Association)** — hospitality industry
+  guidance on capital planning and FF&E lifecycle. https://www.ahla.com/
+- **AWI Quality Standards** — Architectural Woodwork Institute standards
+  for custom millwork.
+
+---
+
+# Projects & Portfolio
+
+source: https://dmdfurnishing.com/projects
+
+DMD Furnishing has completed commercial furniture installations for
+hospitality properties including hotels, restaurants, healthcare facilities,
+and multi-family residential developments across the United States. The
+portfolio spans boutique hotels to large institutional clients.
+
+---
+
+# Geographic Coverage
+
+Headquartered in Foxboro, Massachusetts (56 Leonard St Unit 5, Foxboro, MA
+02035). Serving hospitality and commercial clients nationwide. Showroom
+visits are by appointment only. Contact sales@dmdfurnishing.com or
++1 (617) 223-7781 to schedule.

@@ -4,10 +4,49 @@
   status = 301
   force = true
 
+# Legacy 4-segment product URLs -> new flat canonical URL
+# /products/{place}/{furnitureType}/{subcategory}/{productSlug} -> /products/{productSlug}
+# Post 2026-04-10 flat catalog refactor. Preserves SEO equity from pre-refactor URLs.
+[[redirects]]
+  from = "/products/:place/:ft/:sub/:productSlug"
+  to = "/products/:productSlug"
+  status = 301
+  force = false
+
+# Intermediate 2-segment and 3-segment category URLs are no longer valid routes
+# (the old [...slug] page only handled 4-segment anyway). Redirect them up to the
+# closest place listing so any external links don't 404.
+[[redirects]]
+  from = "/products/:place/:ft/:sub"
+  to = "/products/:place"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/products/:place/:ft"
+  to = "/products/:place"
+  status = 301
+  force = false
+
 
 [build]
   publish = ".next"
   functions = "netlify/functions"
+
+[[headers]]
+  for = "/_next/image*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/Images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
 
 [dev]
   framework = "#custom"

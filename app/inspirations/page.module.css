@@ -342,11 +342,11 @@
 }
 
 .cardLinkMuted {
-  color: rgba(244, 240, 230, 0.5);
+  color: rgba(244, 240, 230, 0.72);
 }
 
 .cardLinkMuted:hover {
-  color: rgba(244, 240, 230, 0.8);
+  color: rgba(244, 240, 230, 0.92);
 }
 
 /* ── 3. CTA ── */
@@ -391,11 +391,11 @@
   gap: 0.75rem;
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: rgba(244, 240, 230, 0.5);
+  color: rgba(244, 240, 230, 0.72);
 }
 
 .ctaContact a {
-  color: rgba(244, 240, 230, 0.7);
+  color: rgba(244, 240, 230, 0.85);
   text-decoration: none;
   transition: color 0.2s ease;
 }

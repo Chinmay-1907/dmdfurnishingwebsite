@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -20,6 +20,7 @@ function Footer() {
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/products">Our Products</Link></li>
                 <li><Link href="/projects">Recent Projects</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
               </ul>
             </div>
             <div className="footer-column">
@@ -37,7 +38,7 @@ function Footer() {
                 <ul>
                   <li>56 Leonard St Unit 5, Foxboro, MA 02035</li>
                   <li><a href="tel:+16172237781">+1 (617) 223-7781</a></li>
-                  <li><a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a></li>
+                  <li><a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a></li>
                 </ul>
               </address>
             </div>
@@ -48,10 +49,8 @@ function Footer() {
             <p>&copy; {new Date().getFullYear()} DMD Furnishing. All Rights Reserved.</p>
           </div>
           <div className="social-links">
-            <a href="https://facebook.com/dmdfurnishing" className="social-icon" aria-label="Visit our Facebook page" target="_blank" rel="noopener noreferrer"><FaFacebookF size={16} /></a>
-            <a href="https://instagram.com/dmdfurnishing" className="social-icon" aria-label="Visit our Instagram profile" target="_blank" rel="noopener noreferrer"><FaInstagram size={16} /></a>
-            <a href="https://linkedin.com/company/dmdfurnishing" className="social-icon" aria-label="Visit our LinkedIn page" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={16} /></a>
-            <a href="https://pinterest.com/dmdfurnishing" className="social-icon" aria-label="Visit our Pinterest board" target="_blank" rel="noopener noreferrer"><FaPinterestP size={16} /></a>
+            <a href="https://www.linkedin.com/company/dmd-usaa/" className="social-icon" aria-label="Visit DMD Furnishing on LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={16} /></a>
+            {/* Facebook, Instagram, Pinterest: re-add when company pages are created */}
           </div>
         </div>
       </div>

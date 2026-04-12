@@ -123,7 +123,7 @@
 }
 
 .heroDate {
-  color: rgba(244, 240, 230, 0.5);
+  color: rgba(244, 240, 230, 0.72);
   font-size: 0.9rem;
 }
 
@@ -178,12 +178,12 @@
   gap: 0.55rem;
   align-items: center;
   padding: 1.25rem 0 0;
-  color: rgba(244, 240, 230, 0.5);
+  color: rgba(244, 240, 230, 0.72);
   font-size: 0.9rem;
 }
 
 .breadcrumb a {
-  color: rgba(244, 240, 230, 0.6);
+  color: rgba(244, 240, 230, 0.85);
   text-decoration: none;
   font-weight: 600;
   transition: color 150ms ease;
@@ -363,11 +363,11 @@
   gap: 0.75rem;
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: rgba(244, 240, 230, 0.5);
+  color: rgba(244, 240, 230, 0.72);
 }
 
 .ctaContact a {
-  color: rgba(244, 240, 230, 0.7);
+  color: rgba(244, 240, 230, 0.85);
   text-decoration: none;
   transition: color 0.2s ease;
 }

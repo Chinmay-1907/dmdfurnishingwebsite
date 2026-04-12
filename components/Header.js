@@ -84,11 +84,13 @@ function Header() {
         <nav id="site-navigation" className={`main-nav${menuOpen ? ' open' : ''}`}>
           <ul className="nav-links">
             <li><Link href="/" onClick={closeMenu} className={navLinkClass('/', true)}>Home</Link></li>
-            <li><Link href="/about" onClick={closeMenu} className={navLinkClass('/about', true)}>About Us</Link></li>
+            <li><Link href="/about" prefetch={false} onClick={closeMenu} className={navLinkClass('/about', true)}>About Us</Link></li>
             <li><Link href="/products" onClick={closeMenu} className={navLinkClass('/products')}>Products</Link></li>
             <li><Link href="/services" onClick={closeMenu} className={navLinkClass('/services')}>Services</Link></li>
-            <li><Link href="/projects" onClick={closeMenu} className={navLinkClass('/projects')}>Projects</Link></li>
-            <li><Link href="/inspirations" onClick={closeMenu} className={navLinkClass('/inspirations')}>Inspirations</Link></li>
+            <li><Link href="/projects" prefetch={false} onClick={closeMenu} className={navLinkClass('/projects')}>Projects</Link></li>
+            <li><Link href="/inspirations" prefetch={false} onClick={closeMenu} className={navLinkClass('/inspirations')}>Inspirations</Link></li>
+            <li><Link href="/guides" prefetch={false} onClick={closeMenu} className={navLinkClass('/guides')}>Guides</Link></li>
+            <li><Link href="/blog" prefetch={false} onClick={closeMenu} className={navLinkClass('/blog')}>Blog</Link></li>
             {/* <li><Link href="/testimonials" onClick={closeMenu} className={navLinkClass('/testimonials')}>Testimonials</Link></li> */}
             <li className="nav-consultation-mobile"><Link href="/contact" className="btn" onClick={closeMenu}>Book Consultation</Link></li>
             <li className="nav-contact">

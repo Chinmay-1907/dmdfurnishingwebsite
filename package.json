@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "node scripts/generate-sitemap.js && next build",
+    "build": "next build",
     "lint": "next lint",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:residential": "node scripts/generate-residential-images.js",

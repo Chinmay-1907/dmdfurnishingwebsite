@@ -1,71 +1,305 @@
 import { notFound } from 'next/navigation';
-import { getAllPlaces, getPlaceBySlug, getAllProductsFlat, getFilterOptions } from '../../../lib/catalog';
+import {
+  getAllPlaces,
+  getPlaceBySlug,
+  getAllProductsFlat,
+  getAllProductSlugs,
+  getFilterOptions,
+  getProductBySlug,
+  getRelatedProducts,
+  isProductSlug,
+} from '../../../lib/catalog';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
+import { placeContent } from '../../../lib/place-content';
 import ProductCatalog from '../../../components/products/ProductCatalog';
+import CategoryContentBlock from '../../../components/products/CategoryContentBlock';
+import ProductDetailPage from '../../../components/products/ProductDetailPage';
+
+/**
+ * Single-segment dispatcher at /products/[slug].
+ *
+ * The param `placeSlug` is named that way for legacy reasons — the folder name is
+ * still [placeSlug] to avoid a filesystem rename in this refactor. It now accepts
+ * any slug and dispatches:
+ *   1. If the slug matches a place -> render the category listing (as before)
+ *   2. If the slug matches a flat product -> render the product detail page
+ *   3. Otherwise -> 404
+ *
+ * The old 4-segment hierarchical product URLs (/products/hotel/seating/sofa/3-seater-sofa)
+ * redirect to the new flat URL via netlify.toml.
+ */
 
 const allProducts = getAllProductsFlat();
 const filterOptions = getFilterOptions();
 
 export function generateStaticParams() {
-  return getAllPlaces().map((place) => ({
-    placeSlug: place.slug,
-  }));
+  // Build both place pages and flat product pages from one dynamic route.
+  const places = getAllPlaces().map((place) => ({ placeSlug: place.slug }));
+  const products = getAllProductSlugs().map((slug) => ({ placeSlug: slug }));
+  return [...places, ...products];
 }
 
 export const dynamicParams = false;
 
-export async function generateMetadata({ params }) {
-  const { placeSlug } = await params;
-  const place = getPlaceBySlug(placeSlug);
+// --- Per-category metadata overrides (vertical-specific primary keywords) ---
+const placeMetaOverrides = {
+  hotel: {
+    title: 'Hotel Furniture Manufacturer | Guestroom Casegoods & Seating',
+    description:
+      'BIFMA contract-grade hotel guestroom casegoods, headboards, desks and lobby seating. Custom furniture manufacturer for boutique and branded hotels nationwide. DMD Furnishing, Foxboro MA.',
+  },
+  restaurant: {
+    title: 'Commercial Restaurant Furniture | Booths, Banquettes & Dining Chairs',
+    description:
+      'Custom restaurant banquettes, booths, dining chairs and bar stools meeting NFPA 701 and CAL 117 flammability standards. Commercial furniture manufacturer serving U.S. restaurant operators.',
+  },
+  office: {
+    title: 'Commercial Office Furniture | Ergonomic Seating & Workstations',
+    description:
+      'ANSI/BIFMA X5.1 task seating, height-adjustable workstations, conference tables and collaboration lounge for corporate fit-outs and coworking. Custom commercial office furniture manufacturer.',
+  },
+  hospital: {
+    title: 'Healthcare Furniture Manufacturer | Patient Rooms & Waiting Areas',
+    description:
+      'Bleach-cleanable healthcare furniture for hospitals, clinics and medical office buildings. Bariatric seating, patient room casegoods and Crypton Health upholstery. DMD Furnishing.',
+  },
+  'educational-facilities': {
+    title: 'Educational Facility Furniture | Classroom & Dormitory Casegoods',
+    description:
+      'Classroom seating, dormitory wardrobes, library carrels and active-learning furniture for K-12 and higher-education institutions. BIFMA contract-grade, built for daily student use.',
+  },
+  residential: {
+    title: 'Multi-family Amenity Furniture | Clubhouse & Leasing Office',
+    description:
+      'Commercial furniture for multi-family clubhouses, leasing offices, amenity lounges, rooftops and student housing. Contract-grade performance fabrics and BIFMA-rated construction.',
+  },
+  'lobby-area': {
+    title: 'Lobby Furniture & Custom Reception Desks | Commercial Manufacturer',
+    description:
+      'Custom reception desks, statement lounge seating and feature tables for hotel, corporate, healthcare and multi-family lobbies. Built to architectural scale with ADA-coordinated transaction heights.',
+  },
+};
 
-  if (!place) {
+export async function generateMetadata({ params }) {
+  const { placeSlug: slug } = await params;
+
+  // Product detail path
+  if (isProductSlug(slug)) {
+    const product = getProductBySlug(slug);
+    if (!product) {
+      return generatePageMetadata({
+        title: 'Product',
+        description: 'Browse commercial furniture product details.',
+        path: `/products/${slug}`,
+      });
+    }
+    const primary = product.primary;
     return generatePageMetadata({
-      title: 'Products',
-      description: 'Browse commercial furniture products by place.',
-      path: `/products/${placeSlug}`,
+      title: product.name,
+      description:
+        product.description ||
+        `${product.name} — commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`,
+      path: `/products/${slug}`,
+      image: product.image,
     });
   }
 
+  // Place listing path
+  const place = getPlaceBySlug(slug);
+  if (!place) {
+    return generatePageMetadata({
+      title: 'Products',
+      description: 'Browse commercial furniture products by category.',
+      path: `/products/${slug}`,
+    });
+  }
+
+  const override = placeMetaOverrides[place.slug];
   return generatePageMetadata({
-    title: `${place.name} Furniture | Commercial FF&E Products`,
-    description: place.description
-      ? `${place.description} Browse all ${place.name.toLowerCase()} furniture products.`
-      : `Browse all furniture products for ${place.name.toLowerCase()} environments.`,
+    title: override?.title || `${place.name} Furniture | Commercial FF&E Products`,
+    description:
+      override?.description ||
+      (place.description
+        ? `${place.description} Browse all ${place.name.toLowerCase()} furniture products.`
+        : `Browse all furniture products for ${place.name.toLowerCase()} environments.`),
     path: `/products/${place.slug}`,
     image: place.image,
   });
 }
 
-export default async function PlaceProductsPage({ params }) {
-  const { placeSlug } = await params;
-  const place = getPlaceBySlug(placeSlug);
+function buildProductStructuredData(product) {
+  const primary = product.primary;
+  const canonicalPath = `/products/${product.slug}`;
+  const canonicalUrl = `${siteUrl}${canonicalPath}`;
+  const productImages = (
+    product.images?.length
+      ? product.images
+      : [{ src: product.image || '/placeholder.png', alt: product.name }]
+  )
+    .filter((image) => image?.src)
+    .map((image) => (image.src.startsWith('http') ? image.src : `${siteUrl}${image.src}`));
 
-  if (!place) {
-    notFound();
-  }
-
-  const placeProducts = allProducts.filter((p) => p.placeSlug === place.slug);
-
-  const breadcrumbSchema = {
+  return {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Products', item: `${siteUrl}/products` },
-      { '@type': 'ListItem', position: 3, name: place.name, item: `${siteUrl}/products/${place.slug}` },
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Products', item: `${siteUrl}/products` },
+          ...(primary?.placeSlug
+            ? [
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: primary.placeName,
+                  item: `${siteUrl}/products/${primary.placeSlug}`,
+                },
+                { '@type': 'ListItem', position: 4, name: product.name, item: canonicalUrl },
+              ]
+            : [{ '@type': 'ListItem', position: 3, name: product.name, item: canonicalUrl }]),
+        ],
+      },
+      {
+        '@type': 'Product',
+        '@id': canonicalUrl,
+        url: canonicalUrl,
+        name: product.name,
+        description:
+          product.description ||
+          `${product.name} — commercial-grade furniture for ${primary?.placeName?.toLowerCase() || 'commercial'} environments.`,
+        image: productImages,
+        sku: product.id || product.slug,
+        brand: { '@type': 'Organization', name: 'DMD Furnishing' },
+        category: primary?.subcategoryName || 'Commercial Furniture',
+        manufacturer: {
+          '@type': 'Organization',
+          name: 'DMD Furnishing',
+          '@id': `${siteUrl}/#organization`,
+        },
+        material:
+          product.specifications?.find((spec) => spec.name?.toLowerCase() === 'material')?.value ||
+          undefined,
+        offers: {
+          '@type': 'Offer',
+          url: canonicalUrl,
+          availability: 'https://schema.org/InStock',
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            priceCurrency: 'USD',
+          },
+          description: 'Custom pricing — contact DMD Furnishing for a project quote.',
+          seller: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
+        },
+        additionalProperty:
+          product.specifications?.map((spec) => ({
+            '@type': 'PropertyValue',
+            name: spec.name,
+            value: spec.value,
+          })) || [],
+      },
     ],
   };
+}
+
+function buildPlaceStructuredData(place, content, placeProducts) {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Products', item: `${siteUrl}/products` },
+          { '@type': 'ListItem', position: 3, name: place.name, item: `${siteUrl}/products/${place.slug}` },
+        ],
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${siteUrl}/products/${place.slug}#collection`,
+        url: `${siteUrl}/products/${place.slug}`,
+        name: `${place.name} Furniture — Commercial FF&E Collection`,
+        description:
+          content?.intro ||
+          place.description ||
+          `Commercial furniture collection for ${place.name.toLowerCase()} environments.`,
+        isPartOf: { '@id': `${siteUrl}/#website` },
+        about: { '@id': `${siteUrl}/#organization` },
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: placeProducts.length,
+          itemListElement: placeProducts.slice(0, 20).map((product, idx) => ({
+            '@type': 'ListItem',
+            position: idx + 1,
+            url: `${siteUrl}/products/${product.slug}`,
+            name: product.name,
+          })),
+        },
+      },
+      ...(content?.faqs
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${siteUrl}/products/${place.slug}#faq`,
+              mainEntity: content.faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+              })),
+            },
+          ]
+        : []),
+    ],
+  };
+}
+
+export default async function ProductsDispatchPage({ params }) {
+  const { placeSlug: slug } = await params;
+
+  // ----- Product detail branch -----
+  if (isProductSlug(slug)) {
+    const product = getProductBySlug(slug);
+    if (!product) notFound();
+
+    const related = getRelatedProducts(slug, 6);
+    const schema = buildProductStructuredData(product);
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+        <ProductDetailPage product={product} relatedProducts={related} />
+      </>
+    );
+  }
+
+  // ----- Place listing branch -----
+  const place = getPlaceBySlug(slug);
+  if (!place) notFound();
+
+  const placeProducts = allProducts.filter((p) => p.placeSlugs.includes(place.slug));
+  const content = placeContent[place.slug];
+  const schema = buildPlaceStructuredData(place, content, placeProducts);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <ProductCatalog
         products={allProducts}
         filterOptions={filterOptions}
         initialFilters={{ space: place.slug }}
         heroTitle={`${place.name} Furniture`}
-        heroDescription={place.description || `Browse all ${placeProducts.length} furniture products designed for ${place.name.toLowerCase()} environments.`}
+        heroDescription={
+          place.description ||
+          `Browse all ${placeProducts.length} furniture products designed for ${place.name.toLowerCase()} environments.`
+        }
       />
+      <CategoryContentBlock placeName={place.name} content={content} />
     </>
   );
 }

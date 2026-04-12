@@ -16,19 +16,37 @@ function buildGalleryImages(product) {
   ];
 }
 
-export default function ProductDetailPage({ place, furnitureType, subcategory, product, relatedProducts }) {
+/**
+ * ProductDetailPage
+ *
+ * Accepts a FLAT product record (with memberships[] and primary). Renders:
+ *   - Breadcrumb using primary membership
+ *   - Hero, specs, gallery, related
+ *   - "Also appears in" badges for all additional memberships so users see every
+ *     context this product is built for (hotel lobby, hotel guestroom, restaurant, etc.)
+ */
+export default function ProductDetailPage({ product, relatedProducts = [] }) {
+  const primary = product.primary || (product.memberships && product.memberships[0]);
+  const otherMemberships = (product.memberships || []).filter((m) => m !== primary);
+
   const galleryImages = buildGalleryImages(product);
   const productTags = product.tags?.filter(Boolean) || [];
   const specifications = product.specifications?.filter((spec) => spec.name && spec.value) || [];
-  const subcategoryHref = `/products/${place.slug}/${furnitureType.slug}/${subcategory.slug}`;
+
+  const primaryPlaceName = primary?.placeName || 'Commercial Spaces';
+  const primarySubName = primary?.subcategoryName || 'Commercial Furniture';
+  const primaryFtName = primary?.furnitureTypeName || '';
+  const primaryPlaceHref = primary?.placeSlug ? `/products/${primary.placeSlug}` : '/products';
 
   return (
     <main className={styles.page}>
       <section className={styles.shell}>
         <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
           <ol>
-            <li><Link href={`/products/${place.slug}`}>Products</Link></li>
-            <li><Link href={subcategoryHref}>{subcategory.name}</Link></li>
+            <li><Link href="/products">Products</Link></li>
+            {primary?.placeSlug ? (
+              <li><Link href={primaryPlaceHref}>{primaryPlaceName}</Link></li>
+            ) : null}
             <li><span aria-current="page">{product.name}</span></li>
           </ol>
         </nav>
@@ -38,8 +56,26 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
             <p className={styles.eyebrow}>Catalog Detail</p>
             <h1>{product.name}</h1>
             <p className={styles.description}>
-              {product.description || `Commercial furniture for ${subcategory.name.toLowerCase()} applications.`}
+              {product.description ||
+                `Commercial-grade ${primarySubName.toLowerCase()} built for ${primaryPlaceName.toLowerCase()} environments.`}
             </p>
+
+            {otherMemberships.length > 0 ? (
+              <div className={styles.alsoAppearsIn}>
+                <p className={styles.alsoLabel}>Also built for:</p>
+                <div className={styles.alsoChips}>
+                  {otherMemberships.map((m) => (
+                    <Link
+                      key={`${m.placeSlug}-${m.subcategorySlug}`}
+                      href={`/products/${m.placeSlug}`}
+                      className={styles.alsoChip}
+                    >
+                      {m.placeName}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
             {productTags.length ? (
               <div className={styles.tags} aria-label="Product tags">
@@ -65,16 +101,18 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
             <p className={styles.cardLabel}>Catalog Context</p>
             <dl className={styles.summaryGrid}>
               <div>
-                <dt>Place</dt>
-                <dd>{place.name}</dd>
+                <dt>Primary Space</dt>
+                <dd>{primaryPlaceName}</dd>
               </div>
-              <div>
-                <dt>Furniture type</dt>
-                <dd>{furnitureType.name}</dd>
-              </div>
+              {primaryFtName ? (
+                <div>
+                  <dt>Furniture Type</dt>
+                  <dd>{primaryFtName}</dd>
+                </div>
+              ) : null}
               <div>
                 <dt>Subcategory</dt>
-                <dd>{subcategory.name}</dd>
+                <dd>{primarySubName}</dd>
               </div>
               <div>
                 <dt>Specifications</dt>
@@ -92,10 +130,9 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
               <p className={styles.cardLabel}>Product Summary</p>
               <h2>Designed for commercial use</h2>
               <p>
-                This catalog entry sits within the {subcategory.name.toLowerCase()} range under{' '}
-                {furnitureType.name.toLowerCase()} for {place.name.toLowerCase()} environments.
-                Use the listed specifications and imagery as the starting point for material,
-                finish, and dimensional discussions.
+                This piece sits within the {primarySubName.toLowerCase()} range for{' '}
+                {primaryPlaceName.toLowerCase()} environments. Use the listed specifications and
+                imagery as the starting point for material, finish, and dimensional discussions.
               </p>
             </section>
 
@@ -119,8 +156,8 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
             <p className={styles.eyebrow}>Technical Details</p>
             <h2>Specifications</h2>
             <p>
-              Standard dimensions, materials, and finish options for this product. All specifications
-              can be confirmed, adjusted, or value-engineered during project planning.
+              Standard dimensions, materials, and finish options. All specifications can be
+              confirmed, adjusted, or value-engineered during project planning.
             </p>
           </div>
 
@@ -144,10 +181,10 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
           <div className={styles.relatedContent}>
             <div>
               <p className={styles.eyebrow}>Browse More</p>
-              <h2>More in {subcategory.name}</h2>
+              <h2>More in {primarySubName}</h2>
               <p>
-                See the full range of {subcategory.name.toLowerCase()} products available for{' '}
-                {place.name.toLowerCase()} environments, or explore other {furnitureType.name.toLowerCase()} options.
+                See the full range of {primarySubName.toLowerCase()} products available for{' '}
+                {primaryPlaceName.toLowerCase()} environments.
               </p>
 
               {relatedProducts?.length > 0 && (
@@ -155,7 +192,7 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
                   {relatedProducts.map((rp) => (
                     <Link
                       key={rp.slug}
-                      href={`/products/${place.slug}/${furnitureType.slug}/${subcategory.slug}/${rp.slug}`}
+                      href={`/products/${rp.slug}`}
                       className={styles.relatedCard}
                     >
                       <div className={styles.relatedImageWrap}>
@@ -175,11 +212,11 @@ export default function ProductDetailPage({ place, furnitureType, subcategory, p
               )}
 
               <div className={styles.actions} style={{ marginTop: '1.25rem' }}>
-                <Link href={`/products?space=${place.slug}`} className={styles.secondaryAction}>
-                  Back to Catalog
+                <Link href={primaryPlaceHref} className={styles.secondaryAction}>
+                  Back to {primaryPlaceName}
                 </Link>
-                <Link href={subcategoryHref} className={styles.ghostAction}>
-                  View all {subcategory.name}
+                <Link href="/products" className={styles.ghostAction}>
+                  View all products
                 </Link>
               </div>
             </div>

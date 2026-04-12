@@ -90,7 +90,7 @@ export default function ProjectsPage() {
         <div className={styles.heroBg}>
           <Image
             src="/Images/Our_Projects.jpg"
-            alt="DMD Furnishing completed projects"
+            alt="Completed hotel guestroom and restaurant dining installations from the DMD project portfolio"
             fill
             priority
             sizes="100vw"
@@ -100,10 +100,12 @@ export default function ProjectsPage() {
         <div className={styles.heroOverlay} aria-hidden="true" />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Project Portfolio</p>
-          <h1>Spaces We&rsquo;ve Transformed</h1>
+          <h1>Commercial Furniture Projects & Hotel Furniture Installations</h1>
           <p className={styles.heroLede}>
-            From boutique hotels to large-scale franchise renovations &mdash; custom-manufactured
-            furniture designed to balance aesthetics, durability, and budget.
+            A portfolio of completed commercial furniture projects from DMD Furnishing —
+            hotel guestroom packages, restaurant dining rooms, lobby refreshes, and
+            multi-property renovations. Each entry shows the scope, the room or seat count,
+            and the BIFMA contract-grade materials we built it from.
           </p>
           <div className={styles.heroActions}>
             <Link href="/schedule-call" className={styles.primaryBtn}>
@@ -155,10 +157,11 @@ export default function ProjectsPage() {
         {/* ── 3. Project Grid ── */}
         <section id="projects" className={`${styles.section} ${styles.gridSection}`}>
           <p className={styles.eyebrow}>Browse Work</p>
-          <h2>More Installations</h2>
+          <h2>More hotel furniture installations and commercial build-outs.</h2>
           <p className={styles.sectionLede}>
-            Each project reflects our commitment to quality craftsmanship and reliable execution
-            &mdash; from guest rooms and lobbies to dining areas and common spaces.
+            Click any project to see the scope, the room or seat count, the finish palette,
+            and the materials we built it from. Everything on this page was custom-made and
+            installed by our team.
           </p>
           <div className={styles.grid}>
             {rest.map((project) => (
@@ -199,10 +202,11 @@ export default function ProjectsPage() {
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
           <p className={styles.eyebrow}>Ready to Start?</p>
-          <h2>Let&rsquo;s build something exceptional.</h2>
+          <h2>Have a project like one of these?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute consultation &mdash; leave with a budget range, timeline estimate, and
-            clear next steps.
+            Free 30-minute call. Bring a rough room or seat count and a target budget. Leave
+            with a realistic price range, a lead-time estimate, and a written list of next
+            steps.
           </p>
           <div className={styles.ctaButtons}>
             <Link href="/schedule-call" className={styles.primaryBtn}>
@@ -215,7 +219,7 @@ export default function ProjectsPage() {
           <div className={styles.ctaContact}>
             <a href="tel:+16172237781">+1 (617) 223-7781</a>
             <span>|</span>
-            <a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a>
+            <a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a>
           </div>
         </section>
       </div>

@@ -777,7 +777,7 @@
   font-family: var(--font-sans);
   font-size: 1.4rem;
   font-weight: 300;
-  color: rgba(201, 169, 110, 0.5);
+  color: rgba(201, 169, 110, 0.8);
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
@@ -981,7 +981,7 @@
 }
 
 .ctaContactDivider {
-  color: rgba(201, 169, 110, 0.3);
+  color: rgba(201, 169, 110, 0.75);
   font-size: 0.85rem;
 }
 

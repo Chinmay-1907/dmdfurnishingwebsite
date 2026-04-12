@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import JsonLd from '../components/JsonLd';
 import ScrollReveal from '../components/ScrollReveal';
 import ScrollToTop from '../components/ScrollToTop';
+import WebVitals from '../components/WebVitals';
 import {
   localBusinessSchema,
   organizationSchema,
@@ -47,6 +48,17 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
   },
+  // Verification tokens for Search Console tooling.
+  // Replace placeholder strings once each property is created:
+  //  - google: Search Console property token (DNS or HTML tag method)
+  //  - msvalidate.01: Bing Webmaster Tools token
+  //  - yandex: Yandex Webmaster token (optional)
+  verification: {
+    google: process.env.GSC_VERIFICATION_TOKEN || 'GSC_VERIFICATION_TOKEN_PENDING',
+    other: {
+      'msvalidate.01': process.env.BING_VERIFICATION_TOKEN || 'BING_VERIFICATION_TOKEN_PENDING',
+    },
+  },
   other: {
     'theme-color': '#000000',
   },
@@ -58,6 +70,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark" className={`${playfair.variable} ${sourceSans.variable} dark-mode`}>
       <body className="dark-mode">
+        <WebVitals />
         <ScrollToTop />
         <ScrollReveal />
         <JsonLd data={organizationSchema} />

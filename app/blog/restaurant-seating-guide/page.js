@@ -38,25 +38,36 @@ const articleSchema = {
   '@graph': [
     {
       '@type': 'Article',
+      '@id': `${siteUrl}/blog/restaurant-seating-guide#article`,
       headline: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool?',
-      datePublished: '2026-03-28',
-      dateModified: '2026-03-28',
+      datePublished: '2026-03-20',
+      dateModified: '2026-03-31',
       author: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: 'https://dmdfurnishing.com',
+        '@type': 'Person',
+        name: 'DMD Furnishing Editorial Team',
+        jobTitle: 'Commercial Furniture Specialists',
+        url: `${siteUrl}/about`,
+        worksFor: {
+          '@type': 'Organization',
+          name: 'DMD Furnishing',
+          '@id': `${siteUrl}/#organization`,
+        },
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
       },
       publisher: {
         '@type': 'Organization',
         name: 'DMD Furnishing',
-        url: 'https://dmdfurnishing.com',
+        url: siteUrl,
         logo: {
           '@type': 'ImageObject',
-          url: 'https://dmdfurnishing.com/DMD_Furnishing_Logo_Embedded.svg',
+          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
         },
       },
-      mainEntityOfPage: 'https://dmdfurnishing.com/blog/restaurant-seating-guide',
-      image: 'https://dmdfurnishing.com/Images/Elevated_Restaurant_Seating.jpg',
+      mainEntityOfPage: `${siteUrl}/blog/restaurant-seating-guide`,
+      image: `${siteUrl}/Images/Elevated_Restaurant_Seating.jpg`,
     },
     {
       '@type': 'BreadcrumbList',
@@ -65,19 +76,57 @@ const articleSchema = {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://dmdfurnishing.com',
+          item: siteUrl,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://dmdfurnishing.com/blog',
+          item: `${siteUrl}/blog`,
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool?',
-          item: 'https://dmdfurnishing.com/blog/restaurant-seating-guide',
+          item: `${siteUrl}/blog/restaurant-seating-guide`,
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/blog/restaurant-seating-guide#faq`,
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I decide between booths and dining chairs for a new restaurant?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Start with your concept and layout flexibility needs. If your floor plan is fixed and the concept is casual or family dining, booths along perimeter walls maximize comfort and density. If you need to reconfigure for events or private dining, dining chairs give you the flexibility booths cannot provide. Many operators use both.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What seat height should I specify for bar stools?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Match the stool height to the counter or bar surface: counter-height stools with 24 to 26-inch seat heights pair with 34 to 36-inch counters, while bar-height stools with 28 to 30-inch seat heights pair with 40 to 42-inch bar tops. Always confirm surface height before ordering stools to avoid ergonomic mismatches.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What materials hold up best for outdoor restaurant seating?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Powder-coated aluminum frames with all-weather woven seats or perforated metal surfaces are the most durable and lowest-maintenance option for outdoor commercial seating. Avoid standard interior upholstery outdoors — it degrades quickly under UV exposure and moisture. Solution-dyed acrylic fabric is acceptable if covered patios limit direct rain exposure.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How many seats can I fit per square foot in a restaurant?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A common benchmark for casual dining is 15 to 18 square feet of total dining room area per seat, which accounts for table space, chair clearance, and circulation aisles. Fine dining concepts typically allocate more space per seat. High-top bar seating is denser. Confirm local fire and occupancy codes, as they set the binding limits for your specific space.',
+          },
         },
       ],
     },
@@ -377,6 +426,14 @@ export default function RestaurantSeatingGuide() {
               </p>
             </div>
           </section>
+        </div>
+
+        <div className={styles.authorCard}>
+          <div className={styles.authorAvatar}>D</div>
+          <div className={styles.authorInfo}>
+            <strong>DMD Furnishing Editorial Team</strong>
+            <span>Commercial Furniture Specialists</span>
+          </div>
         </div>
       </article>
     </main>

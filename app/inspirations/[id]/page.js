@@ -225,7 +225,7 @@ export default async function InspirationDetailPage({ params }) {
           <div className={styles.ctaContact}>
             <a href="tel:+16172237781">+1 (617) 223-7781</a>
             <span>|</span>
-            <a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a>
+            <a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a>
           </div>
         </section>
       </div>

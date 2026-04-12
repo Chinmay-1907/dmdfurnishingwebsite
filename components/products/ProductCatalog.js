@@ -8,6 +8,8 @@ import CatalogFilters from './CatalogFilters';
 import ProductCard from './ProductCard';
 import styles from './catalog-new.module.css';
 
+const PAGE_SIZE = 24;
+
 function getInitialFilters(initialFilters) {
   if (typeof window === 'undefined') {
     return {
@@ -33,6 +35,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
   const [sortOrder, setSortOrder] = useState('az');
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
     setMounted(true);
@@ -98,14 +101,25 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
   const filtered = useMemo(() => {
     let result = products;
 
+    // Membership-based filtering — a product shows up in every category it's a member of.
+    // Fall back to the primary slug fields if membership arrays aren't present (legacy shape).
     if (activeFilters.spaces.length) {
-      result = result.filter((p) => activeFilters.spaces.includes(p.placeSlug));
+      result = result.filter((p) => {
+        const places = p.placeSlugs?.length ? p.placeSlugs : [p.placeSlug].filter(Boolean);
+        return activeFilters.spaces.some((f) => places.includes(f));
+      });
     }
     if (activeFilters.furnitureTypes.length) {
-      result = result.filter((p) => activeFilters.furnitureTypes.includes(p.furnitureTypeSlug));
+      result = result.filter((p) => {
+        const fts = p.furnitureTypeSlugs?.length ? p.furnitureTypeSlugs : [p.furnitureTypeSlug].filter(Boolean);
+        return activeFilters.furnitureTypes.some((f) => fts.includes(f));
+      });
     }
     if (activeFilters.subcategories.length) {
-      result = result.filter((p) => activeFilters.subcategories.includes(p.subcategoryKey));
+      result = result.filter((p) => {
+        const subs = p.subcategoryKeys?.length ? p.subcategoryKeys : [p.subcategoryKey].filter(Boolean);
+        return activeFilters.subcategories.some((f) => subs.includes(f));
+      });
     }
 
     if (searchQuery.trim()) {
@@ -134,6 +148,15 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
 
     return result;
   }, [products, activeFilters, searchQuery, sortOrder]);
+
+  // Reset paging window whenever the filtered result set changes
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [activeFilters, searchQuery, sortOrder]);
+
+  const visibleProducts = filtered.slice(0, visibleCount);
+  const hasMore = filtered.length > visibleCount;
+  const remaining = filtered.length - visibleCount;
 
   const stats = [
     { label: 'Spaces', value: filterOptions.spaces.length },
@@ -178,7 +201,8 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
                 Filters
               </button>
               <span className={styles.resultCount}>
-                Showing <strong>{filtered.length}</strong> of {products.length} products
+                Showing <strong>{visibleProducts.length}</strong> of {filtered.length}
+                {filtered.length !== products.length ? ` matches` : ` products`}
               </span>
             </div>
             <select
@@ -194,11 +218,27 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
           </div>
 
           {filtered.length > 0 ? (
-            <div className={styles.productGrid}>
-              {filtered.map((product) => (
-                <ProductCard key={product.href} product={product} />
-              ))}
-            </div>
+            <>
+              <div className={styles.productGrid}>
+                {visibleProducts.map((product) => (
+                  <ProductCard key={product.slug} product={product} />
+                ))}
+              </div>
+              {hasMore && (
+                <div className={styles.loadMoreWrap}>
+                  <button
+                    type="button"
+                    className={styles.loadMoreBtn}
+                    onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                  >
+                    Show more products
+                    <span className={styles.loadMoreRemaining}>
+                      {remaining} remaining
+                    </span>
+                  </button>
+                </div>
+              )}
+            </>
           ) : (
             <div className={styles.emptyState}>
               <h2>No products match your filters</h2>

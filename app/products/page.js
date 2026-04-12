@@ -6,12 +6,30 @@ const products = getAllProductsFlat();
 const filterOptions = getFilterOptions();
 
 export const metadata = generatePageMetadata({
-  title: 'Commercial Furniture Products | Hotel & Office FF&E',
+  title: 'Commercial Furniture Manufacturer | Custom FF&E Catalog',
   description:
-    `Browse ${products.length}+ commercial furniture products by environment: hotel, restaurant, office, healthcare, educational, and residential. Custom FF&E solutions from DMD Furnishing, Foxboro MA.`,
+    `Commercial furniture manufacturer serving hotel, restaurant, office, healthcare, educational and multi-family projects. Browse ${products.length}+ BIFMA contract-grade products or request custom FF&E.`,
   path: '/products',
   image: '/Images/Our_Products.jpg',
 });
+
+const faqs = [
+  {
+    question: 'What types of commercial furniture does DMD Furnishing manufacture?',
+    answer:
+      'DMD Furnishing manufactures a full range of commercial FF&E: casegoods, lounge and dining seating, banquettes, occasional and dining tables, headboards, built-in millwork and custom cabinetry. We produce these categories for hospitality, restaurant, corporate office, healthcare, education and multi-family projects, supplying both guestroom and public-area furniture packages.',
+  },
+  {
+    question: 'Can DMD produce custom furniture to match our design specs?',
+    answer:
+      'Yes. Custom manufacturing is our core capability. We work directly from designer BOQs, construction drawings, finish schedules and brand standards to build furniture to your exact specifications. Our team can prototype pieces, suggest value-engineering options where it helps budget or lead time, and match wood species, fabrics, laminates and metal finishes across an entire project.',
+  },
+  {
+    question: 'How do I request a quote for a furniture project?',
+    answer:
+      'Send your drawings, BOQ or project brief through our contact page, or book a free 30-minute consultation through the schedule-a-call page. A project manager will review the scope, ask any clarifying questions about quantities, finishes and timeline, then return a detailed quote. The initial consultation is free and carries no obligation.',
+  },
+];
 
 const productsSchema = {
   '@context': 'https://schema.org',
@@ -31,6 +49,18 @@ const productsSchema = {
       description: `Browse ${products.length}+ commercial furniture products across hotel, restaurant, office, healthcare, educational, and residential environments.`,
       isPartOf: { '@id': `${siteUrl}/#website` },
       provider: { '@id': `${siteUrl}/#organization` },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/products#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
     },
   ],
 };

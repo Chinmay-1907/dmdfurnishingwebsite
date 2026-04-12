@@ -63,10 +63,10 @@ function buildSchema(inspirations) {
 // ---------------------------------------------------------------------------
 
 const highlights = [
-  'Material & finish direction',
-  'Furniture planning ideas',
-  'Hospitality-focused styling',
-  'Custom project adaptation',
+  'Material & finish palettes',
+  'Furniture layout plans',
+  'Hospitality-grade specs',
+  'Adaptable to your brand',
 ];
 
 // Category → product space slug mapping
@@ -115,10 +115,12 @@ export default function InspirationsPage() {
           <div className={styles.heroCardGlow} aria-hidden="true" />
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>Design Library</p>
-            <h1>Inspiration for Every Space</h1>
+            <h1>Commercial Furniture Design Inspirations</h1>
             <p className={styles.heroLede}>
-              Visual concepts and material direction for hospitality, commercial, and
-              institutional environments &mdash; paired with the furniture to bring them to life.
+              A reference library of commercial furniture design inspirations — material
+              palettes, furniture layouts, and finish directions for hotel guestrooms,
+              restaurant dining rooms, lobbies, and office common areas. Every concept pairs
+              a visual direction with BIFMA contract-grade specs our shop can actually build.
             </p>
             <div className={styles.heroPills}>
               {highlights.map((item) => (
@@ -137,7 +139,7 @@ export default function InspirationsPage() {
           <div className={styles.heroImageWrap}>
             <Image
               src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Hospitality design inspiration"
+              alt="Warmly lit hotel lobby lounge with custom upholstered seating and walnut casegoods"
               fill
               priority
               sizes="(max-width: 720px) 100vw, 50vw"
@@ -151,10 +153,11 @@ export default function InspirationsPage() {
         {/* ── 2. Gallery ── */}
         <section id="gallery" className={styles.gallerySection}>
           <p className={styles.eyebrow}>Browse Concepts</p>
-          <h2>Ideas You Can Build From</h2>
+          <h2>Hospitality and commercial design inspirations to start your next project.</h2>
           <p className={styles.sectionLede}>
-            Each concept pairs a strong visual direction with practical materials and features
-            that translate to commercial furniture programs.
+            Each board pairs a visual direction with the materials that make it work in a
+            commercial setting — HPL versus real veneer, Crypton versus linen, solid oak
+            versus oak-on-substrate. Use them as a starting point, not a fixed catalog.
           </p>
 
           <div className={styles.gallery}>
@@ -218,8 +221,9 @@ export default function InspirationsPage() {
           <p className={styles.eyebrow}>Have a Space in Mind?</p>
           <h2>Let&rsquo;s bring your vision to life.</h2>
           <p className={styles.ctaLede}>
-            These concepts are starting points &mdash; we adapt materials, finishes, and
-            furniture to fit your project, timeline, and budget.
+            Pick a board you like and we will adapt it — different finishes, different
+            fabrics, different dimensions — to fit your brand standards, your floor plan,
+            and your budget.
           </p>
           <div className={styles.ctaButtons}>
             <Link href="/schedule-call" className={styles.primaryBtn}>
@@ -232,7 +236,7 @@ export default function InspirationsPage() {
           <div className={styles.ctaContact}>
             <a href="tel:+16172237781">+1 (617) 223-7781</a>
             <span>|</span>
-            <a href="mailto:Sales@DMDFurnishing.com">Sales@DMDFurnishing.com</a>
+            <a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a>
           </div>
         </section>
       </div>

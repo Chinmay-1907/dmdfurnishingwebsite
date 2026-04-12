@@ -324,8 +324,8 @@
 				</product>
 				<product id="Wooden Accent Chair" name="Wooden Accent Chair" description="Solid wood accent chair" image="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,accent,chair">
 					<images>
-						<image src="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden Accent Chair - DMD-DinningChair - DC-BL001" />
-						<image src="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Accent Chair - DMD-DinningChair - DC-WOOD1" />
+						<image src="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden accent chair DC-BL001 hardwood finish" />
+						<image src="/Images/Lobby Area/Accent Chairs/Wooden Accent Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden accent chair DC-WOOD1 natural wood finish" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-28&quot; (Customizable)" />
@@ -387,10 +387,13 @@
 				</product>
 			</subcategory>
 			<subcategory id="Lobby Sofa" name="Lobby Sofa" description="Lobby Sofa in Lobby Area" image="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg">
-				<product id="2-Seater Sofa" name="2-Seater Sofa" description="Two-seater lobby sofa" image="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" tags="2-seater,sofa">
+				<product id="2-Seater Sofa" name="2-Seater Sofa" description="Two-seater commercial sofa for hotel lobbies, guest seating areas, and lounges. Hardwood frame with high-density foam and commercial-grade upholstery." image="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" tags="2-seater,sofa,lobby,hotel">
+					<memberships>
+						<member place="hotel" furnitureType="hotel-seating" subcategory="sofa" />
+					</memberships>
 					<images>
-						<image src="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" alt="2-Seater Sofa - Orang-Blue" />
-						<image src="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orange-Gray.jpg" alt="2-Seater Sofa - Orange-Gray" />
+						<image src="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orang-Blue.jpg" alt="Two-seater commercial sofa in blue and orange fabric" />
+						<image src="/Images/Lobby Area/Lobby Sofa/2-Seater Sofa/Orange-Gray.jpg" alt="Two-seater commercial sofa in orange and gray fabric" />
 					</images>
 					<specifications>
 						<spec name="Width" value="60-72&quot; (Customizable)" />
@@ -400,13 +403,16 @@
 						<spec name="Finish" value="Commercial grade fabric/vinyl" />
 					</specifications>
 				</product>
-				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater lobby sofa" image="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" tags="3-seater,sofa">
+				<product id="3-Seater Sofa" name="3-Seater Sofa" description="Three-seater commercial sofa for hotel lobbies, guest seating, and public lounge areas. Hardwood frame with no-sag springs and commercial-grade upholstery options." image="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" tags="3-seater,sofa,lobby,hotel">
+					<memberships>
+						<member place="hotel" furnitureType="hotel-seating" subcategory="sofa" />
+					</memberships>
 					<images>
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" alt="3-Seater Sofa - Sofa-8" />
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-5.jpg" alt="3-Seater Sofa - Sofa-5" />
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-6.png" alt="3-Seater Sofa - Sofa-6" />
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-7.png" alt="3-Seater Sofa - Sofa-7" />
-						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-9.png" alt="3-Seater Sofa - Sofa-9" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-8.png" alt="Three-seater commercial sofa classic silhouette" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-5.jpg" alt="Three-seater commercial sofa profile view" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-6.png" alt="Three-seater commercial sofa front view" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-7.png" alt="Three-seater commercial sofa angle view" />
+						<image src="/Images/Lobby Area/Lobby Sofa/3-Seater Sofa/Sofa-9.png" alt="Three-seater commercial sofa alternate fabric" />
 					</images>
 					<specifications>
 						<spec name="Width" value="78-90&quot; (Customizable)" />
@@ -416,7 +422,10 @@
 						<spec name="Finish" value="Commercial grade fabric/leather" />
 					</specifications>
 				</product>
-				<product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa for lobby zones" image="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" tags="sectional,sofa">
+				<product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa for hotel lobbies, lounges, and public seating zones. Reinforced wood frame with heavy-duty commercial fabric and customizable layout." image="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" tags="sectional,sofa,lobby,hotel">
+					<memberships>
+						<member place="hotel" furnitureType="hotel-seating" subcategory="sofa" />
+					</memberships>
 					<images>
 						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/Sofa-3.png" alt="Sectional Sofa - Sofa-3" />
 						<image src="/Images/Lobby Area/Lobby Sofa/Sectional Sofa/10.jpg" alt="Sectional Sofa - 10" />
@@ -529,8 +538,8 @@
 				</product>
 				<product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Solid wood dining chair with ergonomic support" image="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,dining,chair">
 					<images>
-						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden Dining Chair - DMD-DinningChair - DC-BL001" />
-						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Dining Chair - DMD-DinningChair - DC-WOOD1" />
+						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden dining chair DC-BL001" />
+						<image src="/Images/Hotel/Breakfast Area/Dining Chairs/Wooden Dining Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden dining chair DC-WOOD1" />
 					</images>
 					<specifications>
 						<spec name="Width" value="18-20&quot; (Customizable)" />
@@ -1091,12 +1100,12 @@
 		</furnitureType>
 		<furnitureType id="hotel-seating" name="hotel-seating" description="hotel-seating for Hotel" image="/Images/Hotel/hotel-seating/hotel-seating.jpg">
 			<subcategory id="Arm Chair" name="Arm Chair" description="Arm Chair in hotel-seating" image="/Images/Hotel/hotel-seating/Arm Chair/Arm Chair.jpg">
-				<product id="AC001-BL-nova-blue" name="AC001-BL-nova-blue" description="Modern arm chair with Nova Blue upholstery" image="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" tags="ac001-bl-nova-blue">
+				<product id="Nova Blue Arm Chair" name="Nova Blue Arm Chair" description="Modern upholstered arm chair for hotel guest seating, lobby lounges, and suite living rooms. Nova Blue performance fabric over a hardwood frame with powder-coated metal legs." image="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" tags="arm chair,nova blue,hotel,upholstered">
 					<images>
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Frount View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - ISO View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - ISO View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Side View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Side View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Back View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Back View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" alt="Nova Blue upholstered arm chair front view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - ISO View.png" alt="Nova Blue upholstered arm chair isometric view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Side View.png" alt="Nova Blue upholstered arm chair side profile" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Back View.png" alt="Nova Blue upholstered arm chair back view" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1106,13 +1115,12 @@
 						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
 					</specifications>
                 </product>
-                <!-- Close Armchair product before starting next product -->
-                <product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="Upholstered arm chair in Nova Green" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
+                <product id="Nova Green Arm Chair" name="Nova Green Arm Chair" description="Upholstered arm chair in Nova Green for hotel guestrooms, lobbies, and lounge seating. Supportive hardwood frame with powder-coated or natural wood legs." image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="arm chair,nova green,hotel,upholstered">
 					<images>
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Front-View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-green-ISO View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-green-ISO View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Side-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Side-View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Top-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Top-View" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" alt="Nova Green upholstered arm chair front view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-green-ISO View.png" alt="Nova Green upholstered arm chair isometric view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Side-View.png" alt="Nova Green upholstered arm chair side profile" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Top-View.png" alt="Nova Green upholstered arm chair top view" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1122,13 +1130,20 @@
 						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
 					</specifications>
 				</product>
-				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="Upholstered arm chair in Sunset Orange" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="ac01-or-nova-sunset-orange">
+				<product id="Sunset Orange Arm Chair" name="Sunset Orange Arm Chair" description="Upholstered arm chair in Sunset Orange for hotel guestrooms, lobbies, and lounge seating. Accent-color option for hospitality interior palettes." image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="arm chair,sunset orange,hotel,upholstered">
 					<images>
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - Frount View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - ISO View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - ISO View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Side-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Side-view" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Top-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Top-view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" alt="Sunset Orange upholstered arm chair front view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - ISO View.png" alt="Sunset Orange upholstered arm chair isometric view" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Side-view.png" alt="Sunset Orange upholstered arm chair side profile" />
+						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Top-view.png" alt="Sunset Orange upholstered arm chair top view" />
 					</images>
+					<specifications>
+						<spec name="Width" value="28-34&quot; (Customizable)" />
+						<spec name="Depth" value="30-34&quot; (Customizable)" />
+						<spec name="Height" value="32-38&quot; (Customizable)" />
+						<spec name="Material" value="Hardwood frame, high-density foam, Nova performance fabric" />
+						<spec name="Finish" value="Sunset Orange upholstery; powder-coated or natural wood legs" />
+					</specifications>
 				</product>
 				<product id="AC-New Collection" name="AC-New Collection" description="Curated arm chair collection in various finishes" image="/Images/Hotel/hotel-seating/Arm Chair/AC-New Collection/DMD Formo.jpg" tags="Arm Chair, Hotel, Seating">
 					<images>
@@ -1152,51 +1167,10 @@
 				</product>
 			</subcategory>
 			<subcategory id="Sofa" name="Sofa" description="Sofa in hotel-seating" image="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg">
-				<product id="2-Siter Sofa" name="2-Siter Sofa" description="Two-seater sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg" tags="2-siter,sofa">
-					<images>
-						<image src="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orang-Blue.jpg" alt="2-Siter Sofa - Orang-Blue" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/2-Siter Sofa/Orange-Gray.jpg" alt="2-Siter Sofa - Orange-Gray" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
-					</specifications>
-				</product>
-				<product id="3-Siter Sofa" name="3-Siter Sofa" description="Three-seater sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" tags="3-siter,sofa">
-					<images>
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/9.jpg" alt="3-Siter Sofa - 9" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 1.png" alt="3-Siter Sofa - 9" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 2.png" alt="3-Siter Sofa - 9" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 3.png" alt="3-Siter Sofa - 9" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 4.png" alt="3-Siter Sofa - 9" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 6.png" alt="3-Siter Sofa - 9" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/3-Siter Sofa/classic sofa 6 back.png" alt="3-Siter Sofa - 9" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
-          </specifications>
-        </product>
-        <product id="Sectional Sofa" name="Sectional Sofa" description="Sectional Sofa for guest seating" image="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" tags="Sectional Sofa,sofa">
-					<images>
-						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 1.png" alt="Sectional Sofa" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 2.png" alt="Sectional Sofa" />
-						<image src="/Images/Hotel/hotel-seating/Sofa/Sectional Sofa/Sectional Sofa 3.png" alt="Sectional Sofa" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Fabric/PU/leather upholstery; Stained/powder-coated legs" />
-					</specifications>	
-				</product>
+				<!-- 2-Seater Sofa, 3-Seater Sofa, and Sectional Sofa canonical entries live in
+				     the Lobby Area > Lobby Sofa subcategory. They are cross-listed into
+				     hotel > hotel-seating > sofa via the <memberships> block on those canonical
+				     entries so they appear when filtering the Hotel category. -->
 			</subcategory>
 		</furnitureType>
 	</place>
@@ -1596,7 +1570,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Upholstered Chair" name="Upholstered Chair" description="Upholstered Chair product for Dining Chairs" image="/Images/Restaurant/Dining Area/Dining Chairs/Upholstered Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,chair">
+				<product id="Restaurant Upholstered Chair" name="Restaurant Upholstered Chair" description="Fully upholstered dining chair for restaurants and cafés. Fabric or vinyl seat and back over a reinforced hardwood frame. CAL 117-2013 compliant foam available." image="/Images/Restaurant/Dining Area/Dining Chairs/Upholstered Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" tags="upholstered,chair,restaurant,dining">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Upholstered Chair/Soft blush_peac Upholstered Accent Chair 360 return.jpg" alt="Upholstered Chair - Soft blush_peac Upholstered Accent Chair 360 return" />
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Upholstered Chair/Soft Yellow Upholstered Accent Chair 4.jpg" alt="Upholstered Chair - Soft Yellow Upholstered Accent Chair 4" />
@@ -1613,8 +1587,8 @@
 				</product>
 				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Dining Chairs" image="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,chair">
 					<images>
-						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden Chair - DMD-DinningChair - DC-BL001" />
-						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden Chair - DMD-DinningChair - DC-WOOD1" />
+						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden restaurant dining chair DC-BL001" />
+						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden restaurant dining chair DC-WOOD1" />
 					</images>
 					<specifications>
 						<spec name="Width" value="48-72&quot; (Customizable)" />
@@ -1626,7 +1600,7 @@
 				</product>
 			</subcategory>
 			<subcategory id="Dining Tables" name="Dining Tables" description="Dining Tables in Dining Area" image="/Images/Restaurant/Dining Area/Dining Tables/2-Seater Table/2-Seater Table - M1.jpg">
-				<product id="2-Seater Table" name="2-Seater Table" description="2-Seater Table product for Dining Tables" image="/Images/Restaurant/Dining Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" tags="2-seater,table">
+				<product id="Restaurant 2-Seater Dining Table" name="Restaurant 2-Seater Dining Table" description="Compact two-top dining table for restaurants, cafés, and bistros. Available with T-leg, cross, or tapered center-post bases; HPL, solid wood, or stone tops." image="/Images/Restaurant/Dining Area/Dining Tables/2-Seater Table/2-Seater Table.jpg" tags="2-seater,table,restaurant,dining">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/2-Seater Table/2-Seater Table - M1.jpg" alt="2-Seater Table - 2-Seater Table - M1" />
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/2-Seater Table/2-Seater Table 1.jpg" alt="2-Seater Table - 2-Seater Table 1" />
@@ -1645,7 +1619,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="4-Seater Table" name="4-Seater Table" description="4-Seater Table product for Dining Tables" image="/Images/Restaurant/Dining Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" tags="4-seater,table">
+				<product id="Restaurant 4-Seater Dining Table" name="Restaurant 4-Seater Dining Table" description="Four-top dining table sized for restaurants, cafés, and casual dining rooms. Available in multiple base profiles; HPL, solid wood, or stone-composite tops." image="/Images/Restaurant/Dining Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" tags="4-seater,table,restaurant,dining">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/4-Seater Table/4-Seater Table M1.jpg" alt="4-Seater Table - 4-Seater Table M1" />
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/4-Seater Table/4-Seater Table M2.jpg" alt="4-Seater Table - 4-Seater Table M2" />
@@ -1661,7 +1635,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="6-Seater Table" name="6-Seater Table" description="6-Seater Table product for Dining Tables" image="/Images/Restaurant/Dining Area/Dining Tables/6-Seater Table/6-seater table.png" tags="6-seater,table">
+				<product id="Restaurant 6-Seater Dining Table" name="Restaurant 6-Seater Dining Table" description="Six-top communal dining table for restaurants and family-style dining rooms. Wood, HPL, or stone-composite tops over reinforced metal or wood bases." image="/Images/Restaurant/Dining Area/Dining Tables/6-Seater Table/6-seater table.png" tags="6-seater,table,restaurant,dining">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/6-Seater Table/6-Seater Table - M3S.jpg" alt="6-Seater Table - 6-Seater Table - M3S" />
 						<image src="/Images/Restaurant/Dining Area/Dining Tables/6-Seater Table/6-Seater Table M1.jpg" alt="6-Seater Table - 6-Seater Table M1" />
@@ -1697,7 +1671,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Plastic Chair" name="Plastic Chair" description="Plastic Chair product for Outdoor Chairs" image="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Plastic Chair/plastic chair2.jpg" tags="plastic,chair">
+				<product id="Outdoor Plastic Chair" name="Outdoor Plastic Chair" description="Weather-resistant molded polypropylene chair for restaurant patios and outdoor dining. UV-stable and stackable for off-season storage." image="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Plastic Chair/plastic chair2.jpg" tags="plastic,chair,outdoor,restaurant">
 					<images>
 						<image src="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Plastic Chair/plastic chair2.jpg" alt="Plastic Chair - plastic chair2" />
 						<image src="/Images/Restaurant/Outdoor Seating/Outdoor Chairs/Plastic Chair/plastic chair3.jpg" alt="Plastic Chair - plastic chair3" />
@@ -1781,7 +1755,7 @@
 						<spec name="Finish" value="Textured polypropylene; powder-coated metal frame" />
 					</specifications>
 				</product>
-				<product id="Plastic Chair" name="Plastic Chair" description="Molded polypropylene classroom chair; stackable for easy storage" image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" tags="plastic,chair">
+				<product id="Classroom Plastic Chair" name="Classroom Plastic Chair" description="Molded polypropylene classroom chair in ergonomic student sizes (K-12 and university). Stackable for easy storage and reconfiguration between classes." image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" tags="plastic,chair,classroom,school">
 					<images>
 						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 1.png" alt="Plastic Chair - plastic chair" />
 						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" alt="Plastic Chair - plastic chair" />
@@ -1929,7 +1903,7 @@
 				</product>
 			</subcategory>
 			<subcategory id="Reading Chairs" name="Reading Chairs" description="Reading Chairs in Library" image="/Images/School/Library/Reading Chairs/Armchair/armchair.png">
-				<product id="Armchair" name="Armchair" description="Upholstered reading armchair with foam cushions and sturdy wood/metal base" image="/Images/School/Library/Reading Chairs/Armchair/armchair.png" tags="armchair">
+				<product id="Library Reading Armchair" name="Library Reading Armchair" description="Upholstered reading armchair for school and university libraries. High-density foam cushions, durable fabric upholstery, and a reinforced wood or powder-coated metal base for daily student use." image="/Images/School/Library/Reading Chairs/Armchair/armchair.png" tags="armchair,library,reading,school">
 					<images>
 						<image src="/Images/School/Library/Reading Chairs/Armchair/armchair.png" alt="Armchair - armchair" />
 					</images>
@@ -1953,7 +1927,7 @@
 						<spec name="Finish" value="Durable fabric/PU cover; double-stitched seams" />
 					</specifications>
 				</product>
-				<product id="Upholstered Chair" name="Upholstered Chair" description="Comfortable lounge chair for libraries; supportive back and padded seat" image="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" tags="upholstered,chair">
+				<product id="Library Upholstered Reading Chair" name="Library Upholstered Reading Chair" description="Padded reading chair for school and university libraries. Cushioned seat and back with high-traffic upholstery rated for daily student use." image="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" tags="upholstered,chair,library,reading,school">
 					<images>
 						<image src="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair (2).png" alt="Upholstered Chair - upholstered chair (2)" />
 						<image src="/Images/School/Library/Reading Chairs/Upholstered Chair/upholstered chair.png" alt="Upholstered Chair - upholstered chair" />
@@ -2022,7 +1996,7 @@
 						<spec name="Finish" value="Durable powder-coated finish" />
 					</specifications>
 				</product>
-				<product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin-size bunk bed with sturdy steel frame and safety rails" image="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" tags="twin,bunk,bed">
+				<product id="Dormitory Twin Bunk Bed" name="Dormitory Twin Bunk Bed" description="Twin-size bunk bed for university and college dormitories. Heavy-gauge steel frame with welded joints, full-length safety rails, and ladder. Built to withstand daily student use across academic years." image="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" tags="twin,bunk,bed,dormitory,university">
 					<images>
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - twin bunk bed" />
 					</images>
@@ -2110,7 +2084,7 @@
 						<spec name="Finish" value="Laminate surfaces; PVC edge banding" />
 					</specifications>
 				</product>
-				<product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Sliding door wardrobe for compact rooms; smooth glide track system" image="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" tags="sliding,door,wardrobe">
+				<product id="Dormitory Sliding Door Wardrobe" name="Dormitory Sliding Door Wardrobe" description="Compact sliding-door wardrobe for university dormitory rooms and residence halls. Top-track glide system clears tight floor plans; built-in hanging rail and adjustable shelving." image="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" tags="sliding,door,wardrobe,dormitory,university">
 					<images>
 						<image src="/Images/University/Dormitory/Wardrobes/Sliding Door Wardrobe/Sliding Door Wardrobe.png" alt="Sliding Door Wardrobe - Sliding Door Wardrobe" />
 					</images>
@@ -2253,7 +2227,7 @@
                         <spec name="Finish" value="Upholstery in fabric/PU; legs in wood/metal" />
                     </specifications>
                 </product>
-                <product id="Sectional Sofa" name="Sectional Sofa" description="Modular sectional sofa with chaise and durable upholstery" image="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" tags="sofa,sectional,modular">
+                <product id="Residential Sectional Sofa" name="Residential Sectional Sofa" description="Modular sectional sofa for multi-family living rooms, apartment amenities, and clubhouse lounges. Chaise configuration with durable performance fabric upholstery." image="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" tags="sofa,sectional,modular,residential,living room">
                     <images>
                         <image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa.png" alt="Sectional Sofa - living room" />
 						<image src="/Images/Residential/Living Room/Sofa/Sectional Sofa/sectional sofa 1.png" alt="Sectional Sofa - living room" />
@@ -2275,44 +2249,21 @@
                 </product>
             </subcategory>
             <subcategory id="Lounge Chair" name="Lounge Chair" description="Armchairs and recliners" image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair 1.png">
-                <product id="Armchair" name="Armchair" description="Upholstered armchair with supportive back and plush seat" image="/Images/Residential/Living Room/Lounge Chair/Armchair/AC001-BL-nova-blue - Frount View.png" tags="armchair,lounge">
+                <product id="Residential Armchair" name="Residential Armchair" description="Upholstered armchair for multi-family living rooms and apartment amenities. Supportive high-back design with plush cushioning and a sturdy hardwood frame." image="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png" tags="armchair,lounge,residential,living room">
                     <images>
-                        <image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Frount View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Frount View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - ISO View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - ISO View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Side View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Side View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC001-BL-nova-blue/AC001-BL-nova-blue - Back View.png" alt="AC001-BL-nova-blue - AC001-BL-nova-blue - Back View" />
+                        <image src="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.png" alt="Residential upholstered armchair front view" />
+                        <image src="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair 1.png" alt="Residential upholstered armchair alternate view" />
+                        <image src="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair 2.png" alt="Residential upholstered armchair profile" />
+                        <image src="/Images/Residential/Living Room/Lounge Chair/Armchair/armchair.jpg" alt="Residential upholstered armchair in room setting" />
                     </images>
                     <specifications>
                         <spec name="Width" value="28-34&quot; (Customizable)" />
                         <spec name="Depth" value="30-34&quot; (Customizable)" />
                         <spec name="Height" value="32-38&quot; (Customizable)" />
-                        <spec name="Material" value="Wood/metal frame; high-density foam; fabric/PU upholstery" />
-                        <spec name="Finish" value="Upholstery in fabric/PU; powder-coated/wood base" />
+                        <spec name="Material" value="Hardwood frame; high-density foam; fabric/PU upholstery" />
+                        <spec name="Finish" value="Fabric or PU upholstery; natural or stained wood base" />
                     </specifications>
                 </product>
-                <product id="AC01-GR-nova-Green" name="AC01-GR-nova-Green" description="Upholstered arm chair in Nova Green" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" tags="ac01-gr-nova-green">
-					<images>
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Front-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Front-View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-green-ISO View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-green-ISO View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Side-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Side-View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-GR-nova-Green/AC01-GR-nova-Green-Top-View.png" alt="AC01-GR-nova-Green - AC01-GR-nova-Green-Top-View" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Fabric/PU/leather upholstery; Powder-coated/wood legs" />
-					</specifications>
-				</product>
-				<product id="AC01-OR-nova-Sunset-Orange" name="AC01-OR-nova-Sunset-Orange" description="Upholstered arm chair in Sunset Orange" image="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" tags="ac01-or-nova-sunset-orange">
-					<images>
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - Frount View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - Frount View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR - nova-Sunset-Orange - ISO View.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR - nova-Sunset-Orange - ISO View" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Side-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Side-view" />
-						<image src="/Images/Hotel/hotel-seating/Arm Chair/AC01-OR-nova-Sunset-Orange/AC01-OR-nova-Sunset-Orange-Top-view.png" alt="AC01-OR-nova-Sunset-Orange - AC01-OR-nova-Sunset-Orange-Top-view" />
-					</images>
-				</product>
 			    <product id="Recliner" name="Recliner" description="Manual recliner with padded arms and wipe-clean upholstery" image="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" tags="recliner,lounge">
                     <images>
                         <image src="/Images/Residential/Living Room/Lounge Chair/Recliner/recliner.png" alt="Recliner - lounge chair" />
@@ -2326,56 +2277,32 @@
                     </specifications>
                 </product>
             </subcategory>
-            <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.jpg">
-                <product id="Glass Top Coffee Table" name="Glass Top Coffee Table" description="Coffee table with tempered glass top and sturdy base" image="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" tags="glass,top,coffee,table">
-					<images>
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Butterfly.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Butterfly" />
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood Stare Style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood Stare Style" />
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood X style.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood X style" />
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Natural Wood.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Natural Wood" />
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Rectangle Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Rectangle Legs" />
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table Wide H.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table Wide H" />
-						<image src="/Images/Lobby Area/Coffee Tables/Glass Top Coffee Table/Glass Top Coffee Table X Box Legs.jpg" alt="Glass Top Coffee Table - Glass Top Coffee Table X Box Legs" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Tempered glass top; stained wood or powder-coated base" />
-					</specifications>
-				</product>
-				<product id="Round Coffee Table" name="Round Coffee Table" description="Round coffee table for lobby seating areas" image="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" tags="round,coffee,table">
-					<images>
-						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table - Round Base.jpg" alt="Round Coffee Table - Round Coffee Table - Round Base" />
-						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 1.jpg" alt="Round Coffee Table - Round Coffee Table Modern 1" />
-						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table Modern 2.jpg" alt="Round Coffee Table - Round Coffee Table Modern 2" />
-						<image src="/Images/Lobby Area/Coffee Tables/Round Coffee Table/Round Coffee Table one sylinder.jpg" alt="Round Coffee Table - Round Coffee Table one sylinder" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Stain/veneer top; powder-coated/stained base" />
-					</specifications>
-				</product>
-				<product id="Square Coffee Table" name="Square Coffee Table" description="Square coffee table with modern base options" image="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" tags="square,coffee,table">
-					<images>
-						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Legs X style.jpg" alt="Square Coffee Table - Square Coffee Table Cross Legs X style" />
-						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs 2.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs 2" />
-						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Cross Wood Legs.jpg" alt="Square Coffee Table - Square Coffee Table Cross Wood Legs" />
-						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Plus Sign.jpg" alt="Square Coffee Table - Square Coffee Table Plus Sign" />
-						<image src="/Images/Lobby Area/Coffee Tables/Square Coffee Table/Square Coffee Table Waterfall Legs.jpg" alt="Square Coffee Table - Square Coffee Table Waterfall Legs" />
-					</images>
-					<specifications>
-						<spec name="Width" value="48-72&quot; (Customizable)" />
-						<spec name="Depth" value="24-36&quot; (Customizable)" />
-						<spec name="Height" value="30-45&quot; (Customizable)" />
-						<spec name="Material" value="Wood/Metal/Fabric (customizable)" />
-						<spec name="Finish" value="Stain/veneer; powder-coated/stained base" />
-					</specifications>
-				</product>
+            <subcategory id="Coffee Table" name="Coffee Table" description="Center tables for residential living rooms" image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.jpg">
+                <product id="Residential Glass Coffee Table" name="Glass Coffee Table" description="Residential glass-top coffee table with sturdy wood base. Tempered glass surface resists scratches from daily use." image="/Images/Residential/Living Room/Coffee Table/Glass Coffee Table/glass coffee table.png" tags="glass,coffee,table,residential,living room">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Coffee Table/Glass Coffee Table/glass coffee table.png" alt="Residential glass coffee table with wood base" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="42-54&quot; (Customizable)" />
+                        <spec name="Depth" value="24-28&quot; (Customizable)" />
+                        <spec name="Height" value="16-18&quot; (Customizable)" />
+                        <spec name="Material" value="Tempered glass top; stained solid wood base" />
+                        <spec name="Finish" value="Clear glass; walnut, oak, or espresso stain" />
+                    </specifications>
+                </product>
+                <product id="Residential Wood Coffee Table" name="Wood Coffee Table" description="Residential solid wood coffee table for apartment living rooms, multi-family units, and rental amenities. Hardwood top with built-in lower shelf." image="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.jpg" tags="wood,coffee,table,residential,living room">
+                    <images>
+                        <image src="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.jpg" alt="Residential wood coffee table" />
+                        <image src="/Images/Residential/Living Room/Coffee Table/Wood Coffee Table/wood coffee table.png" alt="Residential wood coffee table alternate view" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="42-54&quot; (Customizable)" />
+                        <spec name="Depth" value="24-28&quot; (Customizable)" />
+                        <spec name="Height" value="16-18&quot; (Customizable)" />
+                        <spec name="Material" value="Solid hardwood" />
+                        <spec name="Finish" value="Natural, walnut, or espresso stain" />
+                    </specifications>
+                </product>
             </subcategory>
             <subcategory id="TV Unit" name="TV Unit" description="Media consoles and TV stands" image="/Images/Residential/Living Room/TV Unit/Media Console/media console 1.png">
                 <product id="Media Console" name="Media Console" description="Low-profile media console with cable management" image="/Images/Residential/Living Room/TV Unit/Media Console/media console 1.png" tags="tv unit,media console">
@@ -2466,7 +2393,7 @@
                 </product>
             </subcategory>
             <subcategory id="Wardrobe" name="Wardrobe" description="Clothes storage units" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png">
-                <product id="Sliding Door Wardrobe" name="Sliding Door Wardrobe" description="Two-door sliding wardrobe with hanging and shelf storage" image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png" tags="wardrobe,storage">
+                <product id="Residential Sliding Door Wardrobe" name="Residential Sliding Door Wardrobe" description="Two-door sliding wardrobe for apartment bedrooms and multi-family units. Hanging rail plus adjustable shelving; smooth top-track glide system." image="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png" tags="wardrobe,storage,residential,bedroom">
                     <images>
                         <image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 1.png" alt="Sliding Door Wardrobe - bedroom" />
 						<image src="/Images/Residential/Bedroom/Wardrobe/Sliding Door Wardrobe/sliding door wardrobe 2.png" alt="Sliding Door Wardrobe - bedroom" />
@@ -2527,7 +2454,7 @@
                 </product>
             </subcategory>
             <subcategory id="Dining Chair" name="Dining Chair" description="Dining seating" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png">
-                <product id="Upholstered Dining Chair" name="Upholstered Dining Chair" description="Comfortable dining chair with cushioned seat and back" image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png" tags="dining chair,upholstered">
+                <product id="Residential Upholstered Dining Chair" name="Residential Upholstered Dining Chair" description="Cushioned dining chair for apartment dining rooms and multi-family clubhouses. Fabric seat and back over a hardwood frame." image="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png" tags="dining chair,upholstered,residential">
                     <images>
                         <image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 1.png" alt="Upholstered Dining Chair - dining room" />
 						<image src="/Images/Residential/Dining Room/Dining Chair/Upholstered Dining Chair/upholstered dining chair 2.png" alt="Upholstered Dining Chair - dining room" />
@@ -2547,7 +2474,7 @@
                         <spec name="Finish" value="Upholstery fabric/PU; wood stain or powder-coat" />
                     </specifications>
                 </product>
-                <product id="Wooden Dining Chair" name="Wooden Dining Chair" description="Classic wooden chair with molded seat" image="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 1.png" tags="dining chair,wood">
+                <product id="Residential Wooden Dining Chair" name="Residential Wooden Dining Chair" description="Solid wood dining chair with contoured seat, designed for apartment dining rooms and multi-family common areas." image="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 1.png" tags="dining chair,wood,residential">
                     <images>
                         <image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 1.png" alt="Wooden Dining Chair - dining room" />
 						<image src="/Images/Residential/Dining Room/Dining Chair/Wooden Dining Chair/wooden dining chair 2.png" alt="Wooden Dining Chair - dining room" />
@@ -2605,7 +2532,7 @@
 
         <furnitureType id="Home Office" name="Home Office" description="Furniture for home offices" image="/Images/Residential/Home Office/Home Office.png">
             <subcategory id="Desk" name="Desk" description="Office desks" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 3.png">
-                <product id="Writing Desk" name="Writing Desk" description="Compact writing desk with cable management" image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 1.png" tags="desk,writing,home office">
+                <product id="Residential Writing Desk" name="Residential Writing Desk" description="Compact writing desk for apartment home offices and student housing rooms. Built-in cable management and optional drawer storage." image="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 1.png" tags="desk,writing,home office,residential">
                     <images>
 						<image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 4.png" alt="Writing Desk - home office" />
 						<image src="/Images/Residential/Home Office/Desk/Writing Desk/writing desk 5.png" alt="Writing Desk - home office" />
@@ -2620,7 +2547,7 @@
                         <spec name="Finish" value="Laminate top; powder-coated base" />
                     </specifications>
                 </product>
-                <product id="Executive Desk" name="Executive Desk" description="Large executive desk with storage drawers" image="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.jpg" tags="desk,executive">
+                <product id="Residential Executive Desk" name="Residential Executive Desk" description="Full-size executive desk for apartment home offices. Multi-drawer storage, cable grommets, and optional return or hutch configurations." image="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.jpg" tags="desk,executive,residential,home office">
                     <images>
                         <image src="/Images/Residential/Home Office/Desk/Executive Desk/executive desk.jpg" alt="Executive Desk - home office" />
 						<image src="/Images/Hotel/Guest Room/Desk/Executive Desk/DMD Luma Executive Desk.jpg" alt="Executive Desk - Executive Desk 1" />
@@ -2688,7 +2615,7 @@
 
         <furnitureType id="Kids Room" name="Kids Room" description="Furniture for kids" image="/Images/Residential/Kids Room/Kids Room.png">
             <subcategory id="Bunk Bed" name="Bunk Bed" description="Space-efficient bunk beds" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png">
-                <product id="Twin Bunk Bed" name="Twin Bunk Bed" description="Twin-size bunk bed with guard rails and ladder" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" tags="bunk bed,twin,kids">
+                <product id="Kids Twin Bunk Bed" name="Kids Twin Bunk Bed" description="Twin-size bunk bed for children's rooms and multi-family family-unit bedrooms. Full-length guard rails and built-in ladder; sturdy hardwood or steel frame options." image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" tags="bunk bed,twin,kids,residential">
                     <images>
                         <image src="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" alt="Full Bunk Bed - full bunk bed" />
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - twin bunk bed" />

@@ -135,8 +135,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 42px;
-  padding: 8px 16px;
+  min-height: 48px;
+  padding: 12px 16px;
   border-radius: 999px;
   border: 2px solid var(--color-gold);
   color: var(--color-gold);
@@ -161,8 +161,10 @@
 
 .hamburger-menu {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   border: 1px solid var(--color-border);
   border-radius: 50%;
   background: transparent;
@@ -285,7 +287,9 @@ body.body-no-scroll {
 
   .nav-links a {
     font-size: 0.95rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
     padding: 14px 16px;
     margin-bottom: 2px;
     border-bottom: none;
@@ -305,6 +309,7 @@ body.body-no-scroll {
   }
 
   .nav-contact-phone {
+    min-height: 48px;
     padding: 14px 16px;
   }
 

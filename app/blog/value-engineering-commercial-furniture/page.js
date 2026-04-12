@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
+import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
@@ -37,26 +38,36 @@ const articleSchema = {
   '@graph': [
     {
       '@type': 'Article',
+      '@id': `${siteUrl}/blog/value-engineering-commercial-furniture#article`,
       headline: 'How to Value-Engineer Commercial Furniture Without Losing Quality',
-      datePublished: '2026-03-28',
-      dateModified: '2026-03-28',
+      datePublished: '2026-03-12',
+      dateModified: '2026-03-26',
       author: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: 'https://dmdfurnishing.com',
+        '@type': 'Person',
+        name: 'DMD Furnishing Editorial Team',
+        jobTitle: 'Commercial Furniture Specialists',
+        url: `${siteUrl}/about`,
+        worksFor: {
+          '@type': 'Organization',
+          name: 'DMD Furnishing',
+          '@id': `${siteUrl}/#organization`,
+        },
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
       },
       publisher: {
         '@type': 'Organization',
         name: 'DMD Furnishing',
-        url: 'https://dmdfurnishing.com',
+        url: siteUrl,
         logo: {
           '@type': 'ImageObject',
-          url: 'https://dmdfurnishing.com/DMD_Furnishing_Logo_Embedded.svg',
+          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
         },
       },
-      mainEntityOfPage:
-        'https://dmdfurnishing.com/blog/value-engineering-commercial-furniture',
-      image: 'https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg',
+      mainEntityOfPage: `${siteUrl}/blog/value-engineering-commercial-furniture`,
+      image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
     },
     {
       '@type': 'BreadcrumbList',
@@ -65,19 +76,108 @@ const articleSchema = {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://dmdfurnishing.com',
+          item: siteUrl,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://dmdfurnishing.com/blog',
+          item: `${siteUrl}/blog`,
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Value Engineering Commercial Furniture',
-          item: 'https://dmdfurnishing.com/blog/value-engineering-commercial-furniture',
+          item: `${siteUrl}/blog/value-engineering-commercial-furniture`,
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/blog/value-engineering-commercial-furniture#faq`,
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is the difference between value engineering and cost-cutting in furniture?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Value engineering is a structured review that matches specification to actual performance requirements, eliminating cost where it does not add function or perceived value. Cost-cutting is indiscriminate reduction. Good VE maintains or improves long-term performance; poor cost-cutting creates durability, compliance, or replacement issues.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'When in a project is value engineering most effective?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'VE delivers the most options when introduced at design development, before shop drawings are issued. At that stage, material substitutions, construction changes, and dimension adjustments can be made without disrupting approvals or lead times. Post-production VE is usually limited to hardware or finish changes.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can HPL replace veneer in hotel casegoods without guests noticing?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In many applications, yes. Modern HPL prints credibly replicate wood grain on horizontal surfaces and secondary panels. The substitution is most detectable on large vertical surfaces at close range. A targeted approach — preserving veneer on key visual planes and substituting HPL elsewhere — achieves most of the aesthetic at lower cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does value engineering affect furniture warranties?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It depends on what is changed. Substituting materials with equivalent or higher performance ratings typically preserves warranty coverage. Replacing specified structural components with lower-rated alternatives may void manufacturer warranties. Any VE change to structural elements, hardware ratings, or fire compliance should be reviewed and confirmed in writing by the manufacturer before acceptance.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'HowTo',
+      '@id': `${siteUrl}/blog/value-engineering-commercial-furniture#howto`,
+      name: 'How to Value Engineer Commercial Furniture',
+      description:
+        'A structured approach to reducing commercial furniture cost through material substitution, construction optimization, and specification review without compromising quality.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Define What Value Engineering Means for Furniture',
+          text: 'Treat VE as a structured review of every line item on the bill of quantities, asking whether each specification delivers the required performance at the most efficient cost. Introduce the review at design development rather than after shop drawings are issued, when substitutions can still be made without disrupting approvals or lead times.',
+          url: `${siteUrl}/blog/value-engineering-commercial-furniture#ve-definition`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Substitute Materials Where Savings Are Largest',
+          text: 'Surface material is the single largest cost driver after labor. Use HPL on surfaces that see sustained daily use like desks, nightstand tops, and TV media panels. Preserve veneer on guest-facing feature areas and reserve solid wood for structural legs and tactile details rather than whole casegood runs.',
+          url: `${siteUrl}/blog/value-engineering-commercial-furniture#material-substitution`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Optimize the Construction Method',
+          text: 'Specify an MDF carcass with edge-banded laminate for dimensional stability, consistent hinge and slide performance, and predictable manufacturing at scale. Review shop drawings for unnecessary joinery complexity and consolidate hardware across SKUs to lower both material and assembly costs.',
+          url: `${siteUrl}/blog/value-engineering-commercial-furniture#construction-method`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Rationalize Finish and Hardware Choices',
+          text: 'Substitute powder-coated steel for decorative brass in back-of-house and secondary pieces. Consolidate decorative hardware to fewer profiles, rationalize the finish palette to a core set, and use color-matched edge banding instead of unique moldings to reduce setup and lead time on large orders.',
+          url: `${siteUrl}/blog/value-engineering-commercial-furniture#finish-hardware`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 5,
+          name: 'Align Dimensions to Standard Material Yields',
+          text: 'Review whether custom dimensions are genuinely required by the space or are carryovers from previous specifications. Adjust dimensions in small increments to align with standard sheet goods and substrate sizes, reducing material waste and unit cost with no visible impact on the finished installation.',
+          url: `${siteUrl}/blog/value-engineering-commercial-furniture#spec-optimization`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Protect Safety, Code, and Accessibility',
+          text: 'Do not cut structural integrity, fire safety compliance (CAL 133 or NFPA), or ADA dimensional requirements. Any substitution affecting load-bearing joints, fire-rated components, or accessible clearances must be re-tested, re-certified, or confirmed in writing before acceptance.',
+          url: `${siteUrl}/blog/value-engineering-commercial-furniture#when-not-to-cut`,
         },
       ],
     },

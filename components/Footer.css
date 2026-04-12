@@ -56,6 +56,9 @@
   font-size: 0.9rem;
   color: var(--text-on-dark-muted);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   border-bottom: 1px solid transparent;
   transition: color 0.3s, border-color 0.3s;
 }
@@ -94,6 +97,9 @@
   font-size: 0.95rem;
   color: rgba(231, 233, 237, 0.72);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -133,8 +139,10 @@
 }
 
 .social-icon {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: inline-flex;
