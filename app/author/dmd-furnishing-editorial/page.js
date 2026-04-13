@@ -4,9 +4,9 @@ import JsonLd from '../../../components/JsonLd';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'DMD Furnishing Editorial Team — Commercial Furniture Specialists',
+  title: 'Our Editorial Team',
   description:
-    'About the DMD Furnishing editorial team — commercial furniture specialists writing about hospitality FF&E, casegoods, seating, value engineering and procurement.',
+    'About the DMD Furnishing editorial team. Commercial furniture specialists writing about hospitality FF&E, casegoods, seating, value engineering and procurement.',
   path: '/author/dmd-furnishing-editorial',
   image: '/DMD_Furnishing_Logo_Embedded.svg',
 });
@@ -18,7 +18,7 @@ const articles = [
   },
   {
     slug: 'hotel-guestroom-furniture-checklist',
-    title: 'Hotel Guestroom Furniture Checklist — Everything That Goes In a Room',
+    title: 'Hotel Guestroom Furniture Checklist: Everything That Goes In a Room',
   },
   {
     slug: 'value-engineering-commercial-furniture',
@@ -30,11 +30,11 @@ const articles = [
   },
   {
     slug: 'restaurant-seating-guide',
-    title: 'Restaurant Seating Guide — Booth, Chair or Bar Stool',
+    title: 'Restaurant Seating Guide: Booth, Chair or Bar Stool',
   },
   {
     slug: 'ffe-procurement-timeline',
-    title: 'FF&E Procurement Timeline — Concept to Install',
+    title: 'FF&E Procurement Timeline: Concept to Install',
   },
 ];
 

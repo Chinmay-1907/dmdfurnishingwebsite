@@ -4,16 +4,16 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'FF&E Procurement Timeline: Concept to Install',
+  title: 'FF&E Procurement Timeline',
   description:
-    'A realistic FF&E procurement timeline covering all five phases from design and spec to delivery and installation, with tips on avoiding the most common schedule delays.',
+    'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
   alternates: {
     canonical: 'https://dmdfurnishing.com/blog/ffe-procurement-timeline',
   },
   openGraph: {
-    title: 'FF&E Procurement Timeline: Concept to Install',
+    title: 'FF&E Procurement Timeline | DMD Furnishing',
     description:
-      'A realistic FF&E procurement timeline covering all five phases from design and spec to delivery and installation, with tips on avoiding the most common schedule delays.',
+      'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
     url: 'https://dmdfurnishing.com/blog/ffe-procurement-timeline',
     siteName: 'DMD Furnishing',
     type: 'article',
@@ -27,9 +27,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FF&E Procurement Timeline: Concept to Install',
+    title: 'FF&E Procurement Timeline | DMD Furnishing',
     description:
-      'A realistic FF&E procurement timeline covering all five phases from design and spec to delivery and installation, with tips on avoiding the most common schedule delays.',
+      'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
   },
 };
 

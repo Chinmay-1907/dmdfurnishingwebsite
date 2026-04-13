@@ -4,9 +4,9 @@ import JsonLd from '../../../components/JsonLd';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Commercial Furniture Manufacturing — A Complete Buyer Guide',
+  title: 'Furniture Manufacturing Guide',
   description:
-    'A commercial furniture manufacturing guide for hospitality, corporate, healthcare and institutional buyers. Construction standards (BIFMA X5.1, NFPA 701, CAL 117), materials, process, and value engineering from a Foxboro MA manufacturer.',
+    'Commercial furniture manufacturing guide for hospitality, corporate, and institutional buyers. Commercial durability and fire safety standards. Foxboro, MA.',
   path: '/guides/commercial-furniture-manufacturing',
   image: '/Images/Our_Products.jpg',
 });
@@ -27,17 +27,17 @@ const faqs = [
   {
     question: 'What is the difference between commercial and residential furniture?',
     answer:
-      'Commercial furniture is built to contract-grade standards (BIFMA X5.1 for task seating, BIFMA X5.4 for lounge, ANSI/BIFMA X5.5 for desks) that specify load ratings, cycle counts, and stability thresholds residential furniture is not tested against. Frames use reinforced hardwood or welded steel; drawer slides carry 100-pound full-extension ratings; hinges survive 80,000+ cycles; upholstery is rated for 50,000+ Wyzenbeek double-rubs; foam is CAL 117-2013 compliant. Residential furniture optimizes for price and aesthetics; commercial furniture is engineered to survive daily institutional use for 7-10 years.',
+      'Commercial furniture is built to contract-grade standards that specify load ratings, cycle counts, and stability thresholds residential furniture is not tested against. Frames use reinforced hardwood or welded steel; drawer slides carry heavy-duty full-extension ratings; hinges survive high-cycle commercial use; upholstery is rated for commercial abrasion resistance; foam meets fire safety standards. Residential furniture optimizes for price and aesthetics; commercial furniture is engineered to survive daily institutional use for years of renovation cycles.',
   },
   {
     question: 'Which industry standards should I specify for hospitality furniture?',
     answer:
-      'For hotel guestroom and public-area furniture, specify BIFMA contract-grade construction (X5.1 for task seating, X5.4 for lounge). Upholstered pieces should meet NFPA 701 (vertical flame) and CAL 117-2013 (California TB117 foam flammability). Casegoods should reference AWI Quality Standards for architectural woodwork. Healthcare-adjacent pieces should specify Crypton Health or equivalent bleach-cleanable upholstery. Reference AHLA standards when specifying guestroom packages for branded properties. Citing these by name in your BOQ makes compliance verifiable and removes ambiguity at bid time.',
+      'For hotel guestroom and public-area furniture, specify contract-grade construction for seating and lounge pieces. Upholstered pieces should meet applicable fire safety and flammability standards. Casegoods should reference recognized woodwork quality standards. Healthcare-adjacent pieces should specify commercial-grade bleach-cleanable upholstery. Reference brand standards when specifying guestroom packages for branded properties. Citing clear performance requirements in your BOQ makes compliance verifiable and removes ambiguity at bid time.',
   },
   {
     question: 'How long does custom commercial furniture manufacturing take?',
     answer:
-      'Lead times vary with scope, custom content, and material availability. A typical project runs through six phases: specification and sample approval, sourcing and purchase orders, fabrication, quality control, finishing and packaging, then logistics and installation. Starting vendor engagement during the design development phase — not after construction documents are issued — is the single most effective way to protect an opening date. For detailed timeline guidance, see our FF&E procurement timeline guide.',
+      'Lead times vary with scope, custom content, and material availability. A typical project runs through six phases: specification and sample approval, sourcing and purchase orders, fabrication, quality control, finishing and packaging, then logistics and installation. Starting vendor engagement during the design development phase, not after construction documents are issued, is the single most effective way to protect an opening date. For detailed timeline guidance, see our FF&E procurement timeline guide.',
   },
 ];
 
@@ -61,9 +61,9 @@ const pillarSchema = {
     {
       '@type': 'Article',
       '@id': `${siteUrl}/guides/commercial-furniture-manufacturing#article`,
-      headline: 'Commercial Furniture Manufacturing — A Complete Buyer Guide',
+      headline: 'Commercial Furniture Manufacturing: A Complete Buyer Guide',
       description:
-        'A practical guide to commercial furniture manufacturing: construction standards (BIFMA, NFPA, CAL 117, AWI), materials, process, and value engineering from a Foxboro MA manufacturer.',
+        'A practical guide to commercial furniture manufacturing: construction standards, materials, process, and value engineering from a Foxboro MA manufacturer.',
       url: `${siteUrl}/guides/commercial-furniture-manufacturing`,
       mainEntityOfPage: `${siteUrl}/guides/commercial-furniture-manufacturing`,
       datePublished: '2026-04-10',
@@ -74,7 +74,7 @@ const pillarSchema = {
       about: [
         { '@type': 'Thing', name: 'commercial furniture manufacturing' },
         { '@type': 'Thing', name: 'hospitality FF&E' },
-        { '@type': 'Thing', name: 'BIFMA contract-grade standards' },
+        { '@type': 'Thing', name: 'contract-grade construction standards' },
         { '@type': 'Thing', name: 'value engineering' },
       ],
       speakable: {
@@ -173,25 +173,23 @@ export default function CommercialFurnitureManufacturingGuide() {
                   use.
                 </li>
                 <li>
-                  <strong>Hardware ratings.</strong> Commercial drawer slides are rated for 100-pound
-                  full-extension loads; commercial hinges survive 80,000 open/close cycles.
+                  <strong>Hardware ratings.</strong> Commercial drawer slides carry heavy-duty
+                  full-extension ratings; commercial hinges survive high-cycle use.
                   Residential hardware is rated for a fraction of those numbers.
                 </li>
                 <li>
-                  <strong>Upholstery standards.</strong> Commercial fabrics carry 50,000+ Wyzenbeek
-                  double-rub ratings for abrasion resistance. Performance fabrics (Crypton,
-                  Sunbrella Contract, Maharam) handle stains, bleach, and UV. Residential fabrics
-                  rarely exceed 15,000 double-rubs.
+                  <strong>Upholstery standards.</strong> Commercial fabrics carry high commercial
+                  abrasion ratings for durability. Performance fabrics handle stains, bleach,
+                  and UV. Residential fabrics are rated for a fraction of the wear resistance.
                 </li>
                 <li>
                   <strong>Flammability compliance.</strong> Commercial upholstered pieces in
-                  hospitality and institutional settings must meet NFPA 701 (vertical flame) and
-                  CAL 117-2013 (California TB117 foam). Residential furniture does not carry those
-                  labels.
+                  hospitality and institutional settings must meet fire safety and foam
+                  flammability standards. Residential furniture does not carry those labels.
                 </li>
                 <li>
                   <strong>Weight and stability.</strong> Commercial casegoods are built heavier to
-                  pass ANSI/BIFMA X5.5 stability tests that prevent tipping on unlevel installations.
+                  pass contract-grade stability tests that prevent tipping on unlevel installations.
                 </li>
               </ul>
             </section>
@@ -199,43 +197,36 @@ export default function CommercialFurnitureManufacturingGuide() {
             <section id="standards">
               <h2>Construction Standards Every Buyer Should Know</h2>
               <p>
-                Citing specific standards in your bill of quantities (BOQ) is the single most
-                effective way to make compliance verifiable at bid time. Here are the standards
-                commercial furniture should reference:
+                Citing clear performance requirements in your bill of quantities (BOQ) is the
+                single most effective way to make compliance verifiable at bid time. Here are the
+                categories of standards commercial furniture should reference:
               </p>
               <ul>
                 <li>
-                  <strong>BIFMA X5.1</strong> — general-purpose office chair testing. Specifies
-                  load, durability, and stability thresholds for task seating.
+                  <strong>Commercial seating durability standards</strong> — load, durability, and
+                  stability thresholds for task seating, lounge seating, and public-area chairs.
                 </li>
                 <li>
-                  <strong>BIFMA X5.4</strong> — lounge and public seating. Governs lobby chairs,
-                  waiting-room pieces, and hospitality lounge seating.
+                  <strong>Desk and table stability standards</strong> — deflection, pull, and
+                  stability tests for workstations and conference tables.
                 </li>
                 <li>
-                  <strong>ANSI/BIFMA X5.5</strong> — desk and table products. Specifies deflection,
-                  pull, and stability tests for workstations and conference tables.
+                  <strong>Fire safety standards</strong> — vertical flame propagation for
+                  upholstery textiles and foam flammability for upholstered furniture.
                 </li>
                 <li>
-                  <strong>NFPA 701</strong> — vertical flame propagation for draperies and textile
-                  wall coverings. Referenced in hospitality upholstery specs.
+                  <strong>Architectural woodwork quality standards</strong> — specifications for
+                  casework, reception desks, and built-in millwork with graded construction and
+                  finish requirements.
                 </li>
                 <li>
-                  <strong>CAL 117-2013</strong> — California Technical Bulletin 117 foam flammability.
-                  The de facto national standard for upholstered furniture foam.
-                </li>
-                <li>
-                  <strong>AWI Quality Standards</strong> — Architectural Woodwork Institute
-                  specifications for casework, reception desks, and built-in millwork. Three grades
-                  (Economy, Custom, Premium) with specific construction and finish requirements.
-                </li>
-                <li>
-                  <strong>Crypton Health</strong> — bleach-cleanable performance upholstery tested
-                  against hospital-grade disinfectants. Required spec for healthcare seating.
+                  <strong>Commercial-grade performance textiles</strong> — bleach-cleanable
+                  upholstery tested against hospital-grade disinfectants. Required spec for
+                  healthcare seating.
                 </li>
               </ul>
               <p>
-                Buyers who cite standards by name get better bids, clearer warranty commitments, and
+                Buyers who cite clear performance requirements get better bids, clearer warranty commitments, and
                 an easier path to resolution when a product fails. For a breakdown of how materials
                 choices intersect with these standards, see our{' '}
                 <Link href="/blog/hpl-veneer-solid-wood-hotel-casegoods">
@@ -277,12 +268,11 @@ export default function CommercialFurnitureManufacturingGuide() {
                 <li>
                   <strong>Commercial-grade upholstery.</strong> Performance fabrics and vinyls
                   rated for high-cycle abrasion resistance, stain release, and bleach cleanability.
-                  Common specs include Crypton, Sunbrella Contract, Momentum, and Maharam.
                 </li>
                 <li>
-                  <strong>Commercial hardware.</strong> Soft-close drawer slides, 80,000-cycle
-                  hinges, locking mechanisms, and leveling glides selected for daily use rather
-                  than retail price points.
+                  <strong>Commercial hardware.</strong> Soft-close drawer slides, high-cycle
+                  commercial hinges, locking mechanisms, and leveling glides selected for daily
+                  use rather than retail price points.
                 </li>
               </ul>
             </section>
@@ -396,25 +386,25 @@ export default function CommercialFurnitureManufacturingGuide() {
               <ul>
                 <li>
                   <Link href="/products/hotel">Hotel guestroom and public area furniture</Link> —
-                  casegoods, headboards, desks, lobby seating. AHLA-aligned brand standards.
+                  casegoods, headboards, desks, lobby seating. Brand-standard aligned.
                 </li>
                 <li>
                   <Link href="/products/restaurant">Restaurant furniture</Link> — booths, banquettes,
-                  dining chairs, bar stools. NFPA 701 and CAL 117-2013 compliance.
+                  dining chairs, bar stools. Fire safety compliant.
                 </li>
                 <li>
                   <Link href="/products/office">Commercial office furniture</Link> — task seating,
-                  workstations, conference tables. ANSI/BIFMA X5.1 and X5.5 compliance.
+                  workstations, conference tables. Contract-grade durability.
                 </li>
                 <li>
                   <Link href="/products/hospital">Healthcare furniture</Link> — patient room
-                  casegoods, bleach-cleanable waiting area seating. Crypton Health upholstery.
+                  casegoods, bleach-cleanable waiting area seating. Commercial-grade performance textiles.
                 </li>
                 <li>
                   <Link href="/products/educational-facilities">
                     Educational facility furniture
                   </Link>{' '}
-                  — classroom seating, dormitory casegoods, library carrels. BIFMA contract-grade.
+                  — classroom seating, dormitory casegoods, library carrels. Contract-grade construction.
                 </li>
                 <li>
                   <Link href="/products/residential">Multi-family amenity furniture</Link> —
@@ -422,7 +412,7 @@ export default function CommercialFurnitureManufacturingGuide() {
                 </li>
                 <li>
                   <Link href="/products/lobby-area">Lobby and reception furniture</Link> — custom
-                  reception desks, statement seating, feature tables. ADA-coordinated transaction
+                  reception desks, statement seating, feature tables. Accessible transaction
                   heights.
                 </li>
               </ul>

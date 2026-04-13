@@ -1,9 +1,11 @@
 # robots.txt — DMD Furnishing
 # https://dmdfurnishing.com
 
-# Allow all crawlers
+# Default rules for all crawlers
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/
 
 # Explicitly allow AI crawlers
 User-agent: GPTBot
@@ -32,11 +34,6 @@ Allow: /
 
 User-agent: cohere-ai
 Allow: /
-
-# Disallow crawl noise
-User-agent: *
-Disallow: /api/
-Disallow: /_next/static/chunks/
 
 # Sitemap
 Sitemap: https://dmdfurnishing.com/sitemap.xml

@@ -51,12 +51,11 @@ source: https://dmdfurnishing.com/products/hotel
 
 Hotel FF&E covers guestroom casegoods, headboards, desks, luggage benches,
 nightstands, corridor consoles, and lobby seating. DMD specifies contract-grade
-furniture engineered to BIFMA durability standards, suitable for the
+furniture built for commercial durability, suitable for the
 seven-to-ten-year renovation cycles most hotel flags operate on. Guestroom
 casegoods typically use HPL tops on hardwood-veneer or solid-wood accents,
 with dovetailed drawer boxes and full-extension soft-close slides. Upholstered
-pieces meet CAL 117-2013 for foam and NFPA 701 for face fabrics in assembly
-spaces.
+pieces use commercial-grade foam and face fabrics selected for public-area use.
 
 ## Restaurant Furniture
 source: https://dmdfurnishing.com/products/restaurant
@@ -67,19 +66,19 @@ and the physical stress of being stacked and moved daily. DMD supplies custom
 banquettes, booths, dining chairs, bar stools, host stands, and outdoor-rated
 pieces. Frames use solid European beech, oak, or ash for wood chairs, or
 welded powder-coated steel and aluminum. Coated upholstery (polyurethane,
-vinyl, Crypton-class) dominates because it survives the cleaning chemistry
-used in operating kitchens and dining rooms.
+vinyl, performance textiles) dominates because it survives the cleaning
+chemistry used in operating kitchens and dining rooms.
 
 ## Office Furniture
 source: https://dmdfurnishing.com/products/office
 
 Commercial office furniture now spans focused desking, collaborative lounge,
 phone rooms, and touchdown space. DMD supplies height-adjustable workstations,
-ergonomic task seating meeting ANSI/BIFMA X5.1, conference tables, and
-acoustic millwork for corporate headquarters, coworking operators, and tenant
-fit-outs. Workstation tops use HPL or melamine over particleboard/MDF with
-3mm impact-resistant edge banding. Seating uses molded polymer shells, mesh
-backs, and polished or powder-coated aluminum bases.
+ergonomic task seating, conference tables, and acoustic millwork for corporate
+headquarters, coworking operators, and tenant fit-outs. Workstation tops use
+HPL or melamine over particleboard/MDF with 3mm impact-resistant edge banding.
+Seating uses molded polymer shells, mesh backs, and polished or powder-coated
+aluminum bases.
 
 ## Healthcare Furniture
 source: https://dmdfurnishing.com/products/hospital
@@ -87,10 +86,10 @@ source: https://dmdfurnishing.com/products/hospital
 Healthcare furniture lives at the intersection of patient dignity, infection
 control, and structural durability. DMD supplies waiting area seating, patient
 room wardrobes and overbed tables, nursing station millwork, and bariatric
-chairs (500-750 lb capacity) for hospitals, outpatient clinics, medical office
-buildings, and long-term care facilities. Upholstery uses bleach-cleanable
-coated fabrics (Crypton Health, medical polyurethane, antimicrobial vinyl)
-with moisture barriers between fabric and foam. Casegoods use HPL over
+chairs for hospitals, outpatient clinics, medical office buildings, and
+long-term care facilities. Upholstery uses bleach-cleanable coated fabrics
+(medical polyurethane, performance textiles, antimicrobial vinyl) with
+moisture barriers between fabric and foam. Casegoods use HPL over
 moisture-resistant MDF for bleach compatibility.
 
 ## Educational Facility Furniture
@@ -101,8 +100,7 @@ category. DMD supplies classroom seating and desks, dormitory wardrobes and
 beds, library tables and carrels, and flexible collaboration pieces for K-12
 schools, colleges, and universities. Dormitory casegoods use welded steel or
 HPL-faced particleboard with 3mm PVC edge banding to survive move-ins,
-cleaning chemistry, and bed-bug treatments. Institutional buyers should expect
-BIFMA contract-grade structural warranties in the ten-to-fifteen-year range.
+cleaning chemistry, and bed-bug treatments.
 
 ## Multi-family & Residential Furniture
 source: https://dmdfurnishing.com/products/residential
@@ -124,8 +122,7 @@ tables, and oversized feature pieces for hotels, corporate headquarters,
 multi-family developments, healthcare facilities, and civic buildings.
 Double-height lobbies often require upsized furniture built to custom
 dimensions so pieces read at architectural scale. Reception desks integrate
-power, data, cable management, and ADA-compliant transaction heights into
-the millwork.
+power, data, and cable management into the millwork.
 
 ---
 
@@ -183,7 +180,7 @@ material substitutions (veneer instead of solid wood, HPL instead of veneer
 on hidden faces), construction simplification (doweled joinery instead of
 mortise and tenon where loads permit), finish consolidation (reducing the
 number of custom stains), and hardware standardization across a project.
-BIFMA contract-grade durability must be preserved regardless of cost
+Contract-grade commercial durability must be preserved regardless of cost
 engineering.
 
 ## Restaurant Seating Guide — Booth, Chair, or Bar Stool
@@ -196,7 +193,7 @@ operational hour because of higher per-chair replacement and maintenance.
 Bar stools are specialized for bar-height counters (42" bar height, 34"
 counter height) and require back, footrail, and swivel specifications
 tailored to the operator's cover turn strategy. Upholstery must meet
-CAL 117-2013 and NFPA 701 for any restaurant with public assembly occupancy.
+applicable fire safety standards for any restaurant with public assembly occupancy.
 
 ## FF&E Procurement Timeline — Concept to Install
 source: https://dmdfurnishing.com/blog/ffe-procurement-timeline
@@ -232,24 +229,6 @@ project manager from initial consultation through final punch list:
    punch list resolution.
 
 ---
-
-# Industry Standards We Work To
-
-- **BIFMA (Business and Institutional Furniture Manufacturers Association)**
-  Durability, strength, and safety standards for commercial and institutional
-  furniture. ANSI/BIFMA X5.1 covers office seating. https://bifma.org/
-- **NFPA 701** — flammability standards for face fabrics in public assembly
-  spaces, required for most hospitality upholstery. https://www.nfpa.org/
-- **CAL 117-2013** — California flammability standard for upholstered
-  furniture foam, widely adopted across U.S. commercial projects.
-- **ANSI/BIFMA X5.1** — baseline durability and safety standard for office
-  task seating used eight hours per day.
-- **NEMA LD 3** — standard for decorative HPL (high-pressure laminate)
-  including scratch, impact, and stain resistance classes.
-- **AHLA (American Hotel & Lodging Association)** — hospitality industry
-  guidance on capital planning and FF&E lifecycle. https://www.ahla.com/
-- **AWI Quality Standards** — Architectural Woodwork Institute standards
-  for custom millwork.
 
 ---
 

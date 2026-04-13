@@ -4,17 +4,17 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'HPL vs Veneer vs Solid Wood for Hotel Casegoods',
+  title: 'HPL vs Veneer vs Solid Wood',
   description:
-    'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces. Understand durability, cost, moisture resistance, and which surface fits economy, midscale, and luxury hotel tiers.',
+    'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces — durability, cost, moisture resistance, and best fit by hotel tier.',
   alternates: {
     canonical:
       'https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods',
   },
   openGraph: {
-    title: 'HPL vs Veneer vs Solid Wood for Hotel Casegoods | DMD Furnishing',
+    title: 'HPL vs Veneer vs Solid Wood | DMD Furnishing',
     description:
-      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces. Understand durability, cost, moisture resistance, and which surface fits economy, midscale, and luxury hotel tiers.',
+      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces — durability, cost, moisture resistance, and best fit by hotel tier.',
     url: 'https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods',
     siteName: 'DMD Furnishing',
     type: 'article',
@@ -28,9 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HPL vs Veneer vs Solid Wood for Hotel Casegoods | DMD Furnishing',
+    title: 'HPL vs Veneer vs Solid Wood | DMD Furnishing',
     description:
-      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces. Understand durability, cost, moisture resistance, and which surface fits economy, midscale, and luxury hotel tiers.',
+      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces — durability, cost, moisture resistance, and best fit by hotel tier.',
   },
 };
 
@@ -441,7 +441,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               Review DMD Furnishing's hotel guest room casegood collection, including
               material and finish options available for each product category.
             </p>
-            <Link href="/products/hotel/guest-room" className={styles.ctaLink}>
+            <Link href="/products/hotel" className={styles.ctaLink}>
               Guest Room Products
             </Link>
           </div>

@@ -9,7 +9,7 @@ const differentiators = [
   ['Dual Manufacturing Model', 'Our Foxboro shop handles prototypes, short runs, and anything that needs a fast revision cycle. Partner factories overseas handle high-volume guestroom packages where unit economics matter. You pick the mix on every project.'],
   ['Dedicated Project Managers', 'One PM owns your job from the signed PO to the punch list. They know your spec book, your GC, and your install sequence, so you never re-explain the project to someone new.'],
   ['Value Engineering on Every Bid', 'We mark up the BOQ line by line. Swap an exotic veneer for a commercial-grade equivalent, change a drawer box, resize a headboard. Cuts cost without touching what the guest sees or touches.'],
-  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, Crypton Health and performance fabric weavers, and commercial hardware distributors, so lead times and pricing stay predictable.'],
+  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors, so lead times and pricing stay predictable.'],
   ['Three-Point Quality Control', 'Specs confirmed before production starts. Pieces photographed and inspected before they leave the factory. Installers verify piece count and condition on site before the crate is signed off.'],
 ];
 
@@ -18,7 +18,7 @@ const materials = [
   { title: 'Hardwood Veneer on Stable Substrate', desc: 'Use this when the design calls for real wood grain but a solid hardwood panel would warp. A thin face of walnut, oak, or maple laid over MDF or particleboard gives you the look without the seasonal movement that splits drawer fronts.', Icon: GiWoodBeam },
   { title: 'Solid Hardwood', desc: 'Reserved for chair frames, table legs, bed rails, and anything that takes structural load or needs to be refinished over its life. Oak, maple, ash, and walnut are the usual picks for commercial seating frames.', Icon: GiTreeBranch },
   { title: 'Powder-Coated Steel & Aluminum', desc: 'Powder-coat finish outlasts wet paint in high-traffic rooms and resists chipping from housekeeping carts. Steel is used for load-bearing chair and bed frames; aluminum where weight matters, like outdoor patio seating.', Icon: GiMetalBar },
-  { title: 'Commercial-Grade Hardware', desc: 'Full-extension ball-bearing drawer slides rated for 100-lb loads, soft-close hinges tested for 80,000+ cycles, and cam locks sized for housekeeping key systems. The hardware is what makes guestroom casegoods survive a five-year renovation cycle.', Icon: GiGears },
+  { title: 'Commercial-Grade Hardware', desc: 'Full-extension ball-bearing drawer slides, soft-close hinges, and cam locks sized for housekeeping key systems. The hardware is what makes guestroom casegoods survive a five-year renovation cycle.', Icon: GiGears },
 ];
 
 const values = [
@@ -29,9 +29,9 @@ const values = [
 
 export function generateMetadata() {
   return generatePageMetadata({
-    title: 'About Us | Commercial Furniture Manufacturer in Foxboro MA',
+    title: 'About Us | Foxboro MA Manufacturer',
     description:
-      'DMD Furnishing is a commercial furniture manufacturer in Foxboro, Massachusetts. Custom casegoods, seating and millwork for hotels, restaurants, healthcare and institutional FF&E projects nationwide.',
+      'DMD Furnishing is a commercial furniture manufacturer in Foxboro, MA. Custom casegoods, seating, and millwork for hotels, restaurants, and institutional FF&E projects.',
     path: '/about',
     image: '/Images/About_DMD_Furnishing_Page.jpg',
   });
@@ -42,7 +42,7 @@ const aboutFaqs = [
   ['Do you work on small projects?', 'Yes. A single boutique restaurant, a lobby refresh, or a 20-room motel are all inside our normal range. Small projects get the same PM, the same QC process, and the same written timeline as a 200-room rollout.'],
   ['What industries do you serve?', 'Primary focus is hospitality: hotels, motels, resorts, restaurants, and bars. We also produce FF&E for corporate offices, educational buildings (dormitories, common areas, libraries), and non-clinical healthcare spaces like waiting rooms and administrative offices.'],
   ['How long does a typical project take?', 'Typical lead times run multiple weeks once specifications are approved. The exact number depends on scope, finish selections, and whether production is domestic or overseas. We give you a written timeline at contract signing and update it at each milestone.'],
-  ['What standards do you build to?', 'Seating is built against BIFMA X5.1 (task) and X5.4 (lounge) durability benchmarks. Upholstery fabrics are specified to CAL 117-2013 and NFPA 701 where code requires. Architectural millwork follows AWI Quality Standards. We will call out deviations from these on the spec sheet so nothing is ambiguous.'],
+  ['What standards do you build to?', 'We build to commercial contract-grade durability standards appropriate for each project type. Specific material, fire safety, and durability requirements are documented on the spec sheet for every project so nothing is ambiguous.'],
 ];
 
 const aboutSchema = {
@@ -209,7 +209,7 @@ export default function AboutPage() {
         <p className={styles.eyebrow}>Next Step</p>
         <h2>Have a project in mind?</h2>
         <p className={styles.ctaLede}>
-          Free 30-minute call. Bring a room count and a target budget. Leave with a
+          Bring a room count and a target budget. Leave with a
           realistic price range, a lead-time estimate, and a clear list of next steps.
         </p>
         <div className={styles.ctaButtons}>

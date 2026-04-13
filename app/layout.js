@@ -33,7 +33,7 @@ export const metadata = {
     template: '%s | DMD Furnishing',
   },
   description:
-    'Custom hospitality furniture designed, manufactured and installed by DMD Furnishing in Foxboro, MA. End-to-end FF&E solutions for hotels, restaurants, offices, and institutional spaces nationwide.',
+    'Custom hospitality furniture designed, manufactured, and installed by DMD Furnishing in Foxboro, MA. FF&E for hotels, restaurants, and offices nationwide.',
   openGraph: {
     type: 'website',
     siteName: 'DMD Furnishing',
@@ -54,10 +54,10 @@ export const metadata = {
   //  - msvalidate.01: Bing Webmaster Tools token
   //  - yandex: Yandex Webmaster token (optional)
   verification: {
-    google: process.env.GSC_VERIFICATION_TOKEN || 'GSC_VERIFICATION_TOKEN_PENDING',
-    other: {
-      'msvalidate.01': process.env.BING_VERIFICATION_TOKEN || 'BING_VERIFICATION_TOKEN_PENDING',
-    },
+    ...(process.env.GSC_VERIFICATION_TOKEN && { google: process.env.GSC_VERIFICATION_TOKEN }),
+    ...(process.env.BING_VERIFICATION_TOKEN && {
+      other: { 'msvalidate.01': process.env.BING_VERIFICATION_TOKEN },
+    }),
   },
   other: {
     'theme-color': '#000000',

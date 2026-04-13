@@ -4,16 +4,16 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'Value-Engineer Commercial Furniture | Cost Guide',
+  title: 'Value Engineering Furniture',
   description:
-    'Learn how specifiers and procurement teams can value-engineer commercial furniture projects — cutting costs through smart material and construction choices while protecting quality and compliance.',
+    'How to value-engineer commercial furniture — smart material and construction choices that cut costs while protecting quality and compliance.',
   alternates: {
     canonical: 'https://dmdfurnishing.com/blog/value-engineering-commercial-furniture',
   },
   openGraph: {
-    title: 'Value-Engineer Commercial Furniture Without Losing Quality | DMD Furnishing',
+    title: 'Value Engineering Furniture | DMD Furnishing',
     description:
-      'Learn how specifiers and procurement teams can value-engineer commercial furniture projects — cutting costs through smart material and construction choices while protecting quality and compliance.',
+      'How to value-engineer commercial furniture — smart material and construction choices that cut costs while protecting quality and compliance.',
     url: 'https://dmdfurnishing.com/blog/value-engineering-commercial-furniture',
     siteName: 'DMD Furnishing',
     type: 'article',
@@ -27,9 +27,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Value-Engineer Commercial Furniture Without Losing Quality | DMD Furnishing',
+    title: 'Value Engineering Furniture | DMD Furnishing',
     description:
-      'Learn how specifiers and procurement teams can value-engineer commercial furniture projects — cutting costs through smart material and construction choices while protecting quality and compliance.',
+      'How to value-engineer commercial furniture — smart material and construction choices that cut costs while protecting quality and compliance.',
   },
 };
 

@@ -40,10 +40,13 @@ export async function generateMetadata({ params }) {
     });
   }
 
+  const fullTitle = `${furnitureType.name} for ${place.name}`;
+  const rawTitle = fullTitle.length > 41 ? furnitureType.name : fullTitle;
+
   return generatePageMetadata({
-    title: `${furnitureType.name} for ${place.name} | FF&E Products`,
+    title: rawTitle,
     description: furnitureType.description
-      ? `${furnitureType.description} Browse ${furnitureType.name.toLowerCase()} products for ${place.name.toLowerCase()}.`
+      ? `${furnitureType.description.slice(0, 120)} Browse ${furnitureType.name.toLowerCase()} for ${place.name.toLowerCase()}.`
       : `Browse ${furnitureType.name.toLowerCase()} products for ${place.name.toLowerCase()} environments.`,
     path: `/products/${place.slug}/${furnitureType.slug}`,
     image: furnitureType.image || place.image,

@@ -45,10 +45,14 @@ export async function generateMetadata({ params }) {
     });
   }
 
+  let rawTitle = `${subcategory.name} | ${furnitureType.name} for ${place.name}`;
+  if (rawTitle.length > 41) rawTitle = `${subcategory.name} for ${place.name}`;
+  if (rawTitle.length > 41) rawTitle = subcategory.name;
+
   return generatePageMetadata({
-    title: `${subcategory.name} | ${furnitureType.name} for ${place.name}`,
+    title: rawTitle,
     description: subcategory.description
-      ? `${subcategory.description} Browse ${subcategory.name.toLowerCase()} products for ${place.name.toLowerCase()}.`
+      ? `${subcategory.description.slice(0, 120)} Browse ${subcategory.name.toLowerCase()} for ${place.name.toLowerCase()}.`
       : `Browse ${subcategory.name.toLowerCase()} products for ${place.name.toLowerCase()} environments.`,
     path: `/products/${place.slug}/${furnitureType.slug}/${subcategory.slug}`,
     image: subcategory.image || furnitureType.image || place.image,
@@ -86,7 +90,7 @@ export default async function SubcategoryProductsPage({ params }) {
         products={allProducts}
         filterOptions={filterOptions}
         initialFilters={{ space: place.slug, furnitureType: furnitureType.slug, subcategory: `${place.slug}/${furnitureType.slug}/${subcategory.slug}` }}
-        heroTitle={`${subcategory.name} — ${furnitureType.name}`}
+        heroTitle={`${subcategory.name}: ${furnitureType.name}`}
         heroDescription={subcategory.description || `Browse all ${subcategory.name.toLowerCase()} products within ${furnitureType.name.toLowerCase()} for ${place.name.toLowerCase()}.`}
       />
     </>

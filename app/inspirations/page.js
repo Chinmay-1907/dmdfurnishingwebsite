@@ -12,7 +12,7 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'Hospitality Furniture Design Inspirations',
     description:
-      'Browse hospitality furniture design inspirations from DMD Furnishing. Hotel lobbies, guestroom casegoods, restaurant seating, suites, lounges, and cafe concepts for commercial projects.',
+      'Hospitality furniture design inspirations from DMD Furnishing. Hotel lobbies, guestroom casegoods, restaurant seating, lounges, and cafe concepts.',
     path: '/inspirations',
     image: '/Images/Elevated_Restaurant_Seating.jpg',
   });

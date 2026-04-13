@@ -9,7 +9,7 @@ const quickLinks = [
   { href: '/products', label: 'Browse Commercial Furniture' },
   { href: '/services', label: 'Our Services' },
   { href: '/projects', label: 'Recent Projects' },
-  { href: '/schedule-call', label: 'Schedule a Free Consultation' },
+  { href: '/contact#schedule', label: 'Schedule a Free Consultation' },
   { href: '/contact', label: 'Contact Us' },
 ];
 

@@ -4,9 +4,9 @@ import JsonLd from '../../../components/JsonLd';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Hospitality FF&E — A Complete Procurement Guide',
+  title: 'Hospitality FF&E Guide',
   description:
-    'A hospitality FF&E procurement guide for hotel owners, GMs, and interior designers. What FF&E includes, how lifecycles work, industry standards (AHLA, BIFMA, NFPA 701, CAL 117), and the buying process from concept to install.',
+    'Hospitality FF&E procurement guide: budgeting, sourcing, manufacturing, delivery, and installation for hotels, restaurants, and commercial spaces.',
   path: '/guides/hospitality-ffe',
   image: '/Images/Tailored_Guestroom_Collections.jpg',
 });
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'How long does a hotel FF&E package typically last?',
     answer:
-      'Hospitality FF&E replacement cycles vary by property type and position. Upscale and upper-upscale hotels generally run 6-8 year casegoods replacement cycles and 4-5 year soft seating cycles. Select-service and extended-stay properties often extend casegoods to 7-10 years. Brand standards from Marriott, Hilton, IHG, Hyatt, Wyndham, and Choice typically specify minimum refresh frequencies for branded refresh programs. Actual lifecycle depends on occupancy rate, guest demographic, and whether the piece was specified contract-grade at original install. Contract-grade BIFMA-rated casegoods last substantially longer than residential-grade alternatives under the same service.',
+      'Hospitality FF&E replacement cycles vary by property type and position. Upscale and upper-upscale hotels generally run shorter casegoods and soft seating replacement cycles, while select-service and extended-stay properties often extend lifecycles further. Brand standards from major hotel groups typically specify minimum refresh frequencies for branded refresh programs. Actual lifecycle depends on occupancy rate, guest demographic, and whether the piece was specified contract-grade at original install. Contract-grade casegoods last substantially longer than residential-grade alternatives under the same service.',
   },
   {
     question: 'When should I start the FF&E procurement process?',
@@ -61,9 +61,9 @@ const pillarSchema = {
     {
       '@type': 'Article',
       '@id': `${siteUrl}/guides/hospitality-ffe#article`,
-      headline: 'Hospitality FF&E — A Complete Procurement Guide',
+      headline: 'Hospitality FF&E: A Complete Procurement Guide',
       description:
-        'A practical guide to hospitality FF&E procurement — what it includes, lifecycles, standards, and the buying process from concept to install.',
+        'A practical guide to hospitality FF&E procurement: what it includes, lifecycles, standards, and the buying process from concept to install.',
       url: `${siteUrl}/guides/hospitality-ffe`,
       mainEntityOfPage: `${siteUrl}/guides/hospitality-ffe`,
       datePublished: '2026-04-10',
@@ -75,7 +75,7 @@ const pillarSchema = {
         { '@type': 'Thing', name: 'hospitality FF&E' },
         { '@type': 'Thing', name: 'hotel procurement' },
         { '@type': 'Thing', name: 'hotel guestroom furniture' },
-        { '@type': 'Thing', name: 'AHLA brand standards' },
+        { '@type': 'Thing', name: 'hotel brand standards' },
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -177,8 +177,8 @@ export default function HospitalityFfeGuide() {
                 </li>
                 <li>
                   <strong>Guestroom seating</strong> — desk chairs, lounge chairs, ottomans,
-                  vanity stools. Must meet BIFMA contract-grade specifications and NFPA 701 or
-                  CAL 117-2013 upholstery flammability.
+                  vanity stools. Must meet contract-grade durability specifications and fire
+                  safety standards for upholstery.
                 </li>
                 <li>
                   <strong>Public area seating</strong> — lobby lounge, bar stools, restaurant
@@ -242,10 +242,10 @@ export default function HospitalityFfeGuide() {
               </ul>
               <p>
                 The single biggest determinant of actual lifecycle is whether the original
-                specification was contract-grade. BIFMA X5.4 lounge seating survives daily hotel
-                lobby use for 8 to 10 years. Residential-grade lounge seating specified to save
-                money rarely survives four. That is the most common and most expensive mistake in
-                hospitality FF&amp;E.
+                specification was contract-grade. Contract-grade lounge seating survives daily
+                hotel lobby use far longer than residential-grade alternatives. Residential-grade
+                lounge seating specified to save money fails years earlier. That is the most
+                common and most expensive mistake in hospitality FF&amp;E.
               </p>
             </section>
 
@@ -257,30 +257,25 @@ export default function HospitalityFfeGuide() {
               </p>
               <ul>
                 <li>
-                  <strong>BIFMA X5.1</strong> — task seating (desk chairs).
+                  <strong>Commercial seating durability standards</strong> — load, stability, and
+                  cycle-count thresholds for task seating, lounge seating, and public-area chairs.
                 </li>
                 <li>
-                  <strong>BIFMA X5.4</strong> — lounge and public-area seating (lobby chairs,
-                  restaurant lounge seating).
+                  <strong>Desk and table stability standards</strong> — deflection, pull, and
+                  stability tests for workstations and conference tables.
                 </li>
                 <li>
-                  <strong>ANSI/BIFMA X5.5</strong> — desks, workstations, and conference tables.
+                  <strong>Fire safety standards</strong> — vertical flame propagation for
+                  upholstery textiles and foam flammability for upholstered furniture. Required
+                  in most jurisdictions for hospitality upholstered pieces.
                 </li>
                 <li>
-                  <strong>NFPA 701</strong> — vertical flame propagation for upholstery textiles.
-                  Required in most jurisdictions for hospitality upholstered pieces.
+                  <strong>Architectural woodwork quality standards</strong> — specifications for
+                  custom reception desks, luggage storage, and built-in millwork.
                 </li>
                 <li>
-                  <strong>CAL 117-2013</strong> — California Technical Bulletin 117 foam
-                  flammability. The de facto national standard for upholstered furniture foam.
-                </li>
-                <li>
-                  <strong>AWI Quality Standards</strong> — Architectural Woodwork Institute
-                  specifications for custom reception desks, luggage storage, and built-in millwork.
-                </li>
-                <li>
-                  <strong>AHLA guidelines</strong> — American Hotel &amp; Lodging Association
-                  positions on guestroom standards and accessibility.
+                  <strong>Brand and lodging association guidelines</strong> — industry positions
+                  on guestroom standards and accessibility.
                 </li>
               </ul>
               <p>
@@ -316,8 +311,8 @@ export default function HospitalityFfeGuide() {
                   and approved. Purchase orders issued with deposits.
                 </li>
                 <li>
-                  <strong>Fabrication.</strong> The longest phase. Lead times run 6 to 16 weeks
-                  depending on scope, custom content, and material sourcing.
+                  <strong>Fabrication.</strong> The longest phase. Lead times vary by scope,
+                  custom content, and material sourcing.
                 </li>
                 <li>
                   <strong>Quality control and packaging.</strong> Pre-shipment inspection verifies
@@ -424,8 +419,8 @@ export default function HospitalityFfeGuide() {
                 </li>
                 <li>
                   <strong>Vague specifications.</strong> BOQs that say &quot;commercial grade&quot;
-                  without naming BIFMA X5.1 or NFPA 701 let vendors bid at different quality
-                  levels. Always cite specific standards by name.
+                  without specifying clear durability and fire safety requirements let vendors
+                  bid at different quality levels. Always cite specific performance criteria.
                 </li>
                 <li>
                   <strong>Treating FF&amp;E as separable from design.</strong> Changes to room
@@ -436,7 +431,7 @@ export default function HospitalityFfeGuide() {
               </ul>
               <p>
                 Avoid these patterns by starting procurement during design development and
-                specifying standards by name. If you&apos;d like help reviewing an existing
+                specifying clear performance requirements. If you&apos;d like help reviewing an existing
                 FF&amp;E specification, <Link href="/contact">contact our team</Link>.
               </p>
             </section>

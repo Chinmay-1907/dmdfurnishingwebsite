@@ -10,9 +10,9 @@ import styles from './page.module.css';
 
 export function generateMetadata() {
   return generatePageMetadata({
-    title: 'Hospitality Furniture Projects | Commercial Installations',
+    title: 'Hospitality Furniture Projects',
     description:
-      'Browse DMD Furnishing\u2019s portfolio of commercial hospitality furniture installations. Hotels, restaurants, and multi-family properties across the United States.',
+      'Browse DMD Furnishing\u2019s portfolio of commercial furniture installations. Hotels, restaurants, and multi-family properties across the United States.',
     path: '/projects',
     image: '/Images/Our_Projects.jpg',
   });
@@ -203,7 +203,7 @@ export default function ProjectsPage() {
           <p className={styles.eyebrow}>Ready to Start?</p>
           <h2>Have a project like one of these?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute call. Bring a room or seat count and a target budget. Leave
+            Bring a room or seat count and a target budget. Leave
             with a realistic price range, a lead-time estimate, and a clear list of next
             steps.
           </p>

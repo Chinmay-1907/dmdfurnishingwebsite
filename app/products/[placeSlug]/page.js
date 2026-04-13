@@ -44,39 +44,39 @@ export const dynamicParams = false;
 // --- Per-category metadata overrides (vertical-specific primary keywords) ---
 const placeMetaOverrides = {
   hotel: {
-    title: 'Hotel Furniture Manufacturer | Guestroom Casegoods & Seating',
+    title: 'Hotel Furniture & Casegoods',
     description:
-      'BIFMA contract-grade hotel guestroom casegoods, headboards, desks and lobby seating. Custom furniture manufacturer for boutique and branded hotels nationwide. DMD Furnishing, Foxboro MA.',
+      'BIFMA contract-grade hotel guestroom casegoods, headboards, desks, and lobby seating. Custom manufacturer for boutique and branded hotels.',
   },
   restaurant: {
-    title: 'Commercial Restaurant Furniture | Booths, Banquettes & Dining Chairs',
+    title: 'Restaurant Furniture & Seating',
     description:
-      'Custom restaurant banquettes, booths, dining chairs and bar stools meeting NFPA 701 and CAL 117 flammability standards. Commercial furniture manufacturer serving U.S. restaurant operators.',
+      'Custom restaurant banquettes, booths, dining chairs, and bar stools. NFPA 701 and CAL 117 compliant. Built for U.S. restaurant operators.',
   },
   office: {
-    title: 'Commercial Office Furniture | Ergonomic Seating & Workstations',
+    title: 'Office Furniture & Workstations',
     description:
-      'ANSI/BIFMA X5.1 task seating, height-adjustable workstations, conference tables and collaboration lounge for corporate fit-outs and coworking. Custom commercial office furniture manufacturer.',
+      'BIFMA X5.1 task seating, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
   },
   hospital: {
-    title: 'Healthcare Furniture Manufacturer | Patient Rooms & Waiting Areas',
+    title: 'Healthcare Furniture',
     description:
-      'Bleach-cleanable healthcare furniture for hospitals, clinics and medical office buildings. Bariatric seating, patient room casegoods and Crypton Health upholstery. DMD Furnishing.',
+      'Bleach-cleanable healthcare furniture for hospitals, clinics, and medical offices. Bariatric seating, patient room casegoods, and Crypton upholstery.',
   },
   'educational-facilities': {
-    title: 'Educational Facility Furniture | Classroom & Dormitory Casegoods',
+    title: 'Educational Facility Furniture',
     description:
-      'Classroom seating, dormitory wardrobes, library carrels and active-learning furniture for K-12 and higher-education institutions. BIFMA contract-grade, built for daily student use.',
+      'Classroom seating, dormitory wardrobes, library carrels, and active-learning furniture for K-12 and higher education. BIFMA contract-grade.',
   },
   residential: {
-    title: 'Multi-family Amenity Furniture | Clubhouse & Leasing Office',
+    title: 'Multi-family Amenity Furniture',
     description:
-      'Commercial furniture for multi-family clubhouses, leasing offices, amenity lounges, rooftops and student housing. Contract-grade performance fabrics and BIFMA-rated construction.',
+      'Commercial furniture for multi-family clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics, BIFMA rated.',
   },
   'lobby-area': {
-    title: 'Lobby Furniture & Custom Reception Desks | Commercial Manufacturer',
+    title: 'Lobby & Reception Furniture',
     description:
-      'Custom reception desks, statement lounge seating and feature tables for hotel, corporate, healthcare and multi-family lobbies. Built to architectural scale with ADA-coordinated transaction heights.',
+      'Custom reception desks, lounge seating, and feature tables for hotel, corporate, healthcare, and multi-family lobbies. ADA coordinated.',
   },
 };
 
@@ -98,7 +98,7 @@ export async function generateMetadata({ params }) {
       title: product.name,
       description:
         product.description ||
-        `${product.name} — commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`,
+        `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`,
       path: `/products/${slug}`,
       image: product.image,
     });
@@ -116,7 +116,7 @@ export async function generateMetadata({ params }) {
 
   const override = placeMetaOverrides[place.slug];
   return generatePageMetadata({
-    title: override?.title || `${place.name} Furniture | Commercial FF&E Products`,
+    title: override?.title || `${place.name} Furniture`,
     description:
       override?.description ||
       (place.description
@@ -167,7 +167,7 @@ function buildProductStructuredData(product) {
         name: product.name,
         description:
           product.description ||
-          `${product.name} — commercial-grade furniture for ${primary?.placeName?.toLowerCase() || 'commercial'} environments.`,
+          `${product.name}, commercial-grade furniture for ${primary?.placeName?.toLowerCase() || 'commercial'} environments.`,
         image: productImages,
         sku: product.id || product.slug,
         brand: { '@type': 'Organization', name: 'DMD Furnishing' },
@@ -188,7 +188,7 @@ function buildProductStructuredData(product) {
             '@type': 'PriceSpecification',
             priceCurrency: 'USD',
           },
-          description: 'Custom pricing — contact DMD Furnishing for a project quote.',
+          description: 'Custom pricing. Contact DMD Furnishing for a project quote.',
           seller: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
         },
         additionalProperty:
@@ -218,7 +218,7 @@ function buildPlaceStructuredData(place, content, placeProducts) {
         '@type': 'CollectionPage',
         '@id': `${siteUrl}/products/${place.slug}#collection`,
         url: `${siteUrl}/products/${place.slug}`,
-        name: `${place.name} Furniture — Commercial FF&E Collection`,
+        name: `${place.name} Furniture: Commercial FF&E Collection`,
         description:
           content?.intro ||
           place.description ||

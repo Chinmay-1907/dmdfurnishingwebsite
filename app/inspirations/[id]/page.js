@@ -211,7 +211,7 @@ export default async function InspirationDetailPage({ params }) {
           <p className={styles.eyebrow}>Start Your Project</p>
           <h2>Ready to bring this to life?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute consultation. Leave with a budget range, timeline estimate,
+            Request a consultation. Leave with a budget range, timeline estimate,
             and clear next steps.
           </p>
           <div className={styles.ctaButtons}>

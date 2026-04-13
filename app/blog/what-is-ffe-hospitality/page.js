@@ -4,16 +4,16 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'What Is FF&E? A Guide for Hospitality Projects',
+  title: 'What Is FF&E in Hospitality?',
   description:
-    'FF&E — Furniture, Fixtures & Equipment — defines every movable element in a hotel or restaurant fit-out. DMD Furnishing in Foxboro, MA explains what qualifies, how to budget, and how procurement works.',
+    'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. Learn what qualifies, budgeting, and procurement.',
   alternates: {
     canonical: `${siteUrl}/blog/what-is-ffe-hospitality`,
   },
   openGraph: {
-    title: 'What Is FF&E? A Guide for Hospitality Projects | DMD Furnishing',
+    title: 'What Is FF&E in Hospitality? | DMD Furnishing',
     description:
-      'FF&E — Furniture, Fixtures & Equipment — defines every movable element in a hotel or restaurant fit-out. DMD Furnishing in Foxboro, MA explains what qualifies, how to budget, and how procurement works.',
+      'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. Learn what qualifies, budgeting, and procurement.',
     url: `${siteUrl}/blog/what-is-ffe-hospitality`,
     siteName: 'DMD Furnishing',
     type: 'article',
@@ -27,9 +27,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'What Is FF&E? A Guide for Hospitality Projects | DMD Furnishing',
+    title: 'What Is FF&E in Hospitality? | DMD Furnishing',
     description:
-      'FF&E — Furniture, Fixtures & Equipment — defines every movable element in a hotel or restaurant fit-out. DMD Furnishing explains what qualifies, how to budget, and how procurement works.',
+      'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. Learn what qualifies, budgeting, and procurement.',
   },
 };
 
@@ -38,7 +38,7 @@ const articleSchema = {
   '@id': `${siteUrl}/blog/what-is-ffe-hospitality#article`,
   headline: 'What Is FF&E? A Complete Guide for Hospitality Projects',
   description:
-    'A comprehensive guide to Furniture, Fixtures & Equipment in hospitality — definition, scope, differences from OS&E, procurement process, and budget considerations.',
+    'A comprehensive guide to Furniture, Fixtures & Equipment in hospitality: definition, scope, differences from OS&E, procurement, and budgeting.',
   datePublished: '2026-03-02',
   dateModified: '2026-04-01',
   author: {

@@ -4,16 +4,16 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
+  title: 'Hotel Guestroom Furniture Checklist',
   description:
-    'A complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities — with commercial specification guidance from DMD Furnishing.',
+    'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
   alternates: {
     canonical: `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
   },
   openGraph: {
     title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
     description:
-      'A complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities — with commercial specification guidance from DMD Furnishing.',
+      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
     url: `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
     siteName: 'DMD Furnishing',
     type: 'article',
@@ -29,7 +29,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
     description:
-      'A complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities — with commercial specification guidance.',
+      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
   },
 };
 
@@ -356,7 +356,7 @@ export default function HotelGuestroomChecklistPage() {
                 DMD Furnishing manufactures the full guestroom furniture package — from headboards
                 and bed frames to TV media panels, amenity towers, and vanities.
               </p>
-              <Link href="/products/hotel/guest-room" className={styles.ctaLink}>
+              <Link href="/products/hotel" className={styles.ctaLink}>
                 View hotel guestroom products
               </Link>
             </div>

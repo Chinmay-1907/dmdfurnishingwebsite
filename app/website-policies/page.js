@@ -5,7 +5,7 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'Terms of Use, Privacy & Data Policies',
     description:
-      'Review DMD Furnishing terms of use, privacy policy, disclaimer of warranties, CCPA and GDPR data rights, cookie usage, data security practices, and governing law for Massachusetts.',
+      'Review DMD Furnishing terms of use, privacy policy, and data handling practices. Foxboro, MA commercial furniture manufacturer.',
     path: '/website-policies',
     image: '/DMD_Furnishing_Logo_Embedded.svg',
   });

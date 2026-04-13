@@ -17,11 +17,11 @@ const heroImages = [
 
 const whyDmd = [
   ['One PM, Start to Finish', 'Shop drawings, production, delivery, punch list. One project manager handles every phase. One number to call, not five.'],
-  ['Contract-Grade Build', 'Joinery, frames, and hardware built to BIFMA commercial durability standards. Rated for guest turnover, not a living room.'],
+  ['Contract-Grade Build', 'Joinery, frames, and hardware built to commercial durability standards. Rated for guest turnover, not a living room.'],
   ['Value Engineering on Every Bid', 'We re-spec materials and construction methods to hit your budget without downgrading the surfaces guests see and touch. Standard, not extra.'],
   ['Written Timelines, Named Deliverables', 'Every phase has a week range and a clear deliverable: scope doc, QC report, punch list sign-off. All in writing before we start.'],
   ['Full FF&E Under One Roof', 'Casegoods, seating, upholstery, millwork, and loose furniture, all under one contract. No third-party juggling.'],
-  ['Hospitality-Grade Materials', 'HPL, hardwood veneer, powder-coated steel, Crypton fabric, soft-close hardware. Every material spec\'d for commercial use, not residential.'],
+  ['Hospitality-Grade Materials', 'HPL, hardwood veneer, powder-coated steel, performance fabric, soft-close hardware. Every material spec\'d for commercial use, not residential.'],
 ];
 
 const processSteps = [
@@ -34,7 +34,7 @@ const processSteps = [
 ];
 
 const pageDescription =
-  'Custom hospitality FF&E designed, built, and installed nationwide. Hotels, restaurants, offices: from 20-room refreshes to 500-key rollouts. DMD Furnishing, Foxboro MA.';
+  'Custom hospitality FF&E designed, built, and installed nationwide. Hotels, restaurants, offices: 20-room refreshes to 500-key rollouts. Foxboro, MA.';
 
 export function generateMetadata() {
   return generatePageMetadata({
@@ -122,7 +122,7 @@ export default function HomePage() {
         name: 'How does DMD\'s custom furniture process work?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Every project starts with a free consultation to lock in scope, budget, and timeline. We then manage design specs, manufacturing, delivery, and installation, all under one project manager from first call to final punch list.',
+          text: 'Every project starts with a consultation to lock in scope, budget, and timeline. We then manage design specs, manufacturing, delivery, and installation, all under one project manager from first call to final punch list.',
         },
       },
       {
@@ -138,7 +138,7 @@ export default function HomePage() {
         name: 'How much does custom hospitality furniture cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'It depends on scope, materials, room count, and customization. A 20-room motel refresh and a 300-key hotel renovation have very different budgets. We value-engineer every project to hit your number. Schedule a free call and we\'ll give you a realistic range in 30 minutes.',
+          text: 'It depends on scope, materials, room count, and customization. A 20-room motel refresh and a 300-key hotel renovation have very different budgets. We value-engineer every project to hit your number. Schedule a call and we\'ll give you a realistic range.',
         },
       },
       {
@@ -392,7 +392,7 @@ export default function HomePage() {
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>How does DMD&rsquo;s custom furniture process work?</summary>
-            <p className={styles.faqAnswer}>Every project starts with a free consultation to lock in scope, budget, and timeline. We then manage design specs, manufacturing, delivery, and installation, all under one project manager from first call to final punch list.</p>
+            <p className={styles.faqAnswer}>Every project starts with a consultation to lock in scope, budget, and timeline. We then manage design specs, manufacturing, delivery, and installation, all under one project manager from first call to final punch list.</p>
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>What is value engineering in commercial furniture?</summary>
@@ -400,7 +400,7 @@ export default function HomePage() {
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>How much does custom hospitality furniture cost?</summary>
-            <p className={styles.faqAnswer}>It depends on scope, materials, room count, and customization. A 20-room motel refresh and a 300-key hotel renovation have very different budgets. We value-engineer every project to hit your number. <Link href="/contact#schedule">Schedule a free call</Link> and we&rsquo;ll give you a realistic range in 30 minutes.</p>
+            <p className={styles.faqAnswer}>It depends on scope, materials, room count, and customization. A 20-room motel refresh and a 300-key hotel renovation have very different budgets. We value-engineer every project to hit your number. <Link href="/contact#schedule">Schedule a call</Link> and we&rsquo;ll give you a realistic range.</p>
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>Can DMD handle both small renovations and large-scale hotel projects?</summary>
@@ -418,7 +418,7 @@ export default function HomePage() {
         <div className={`${styles.sectionHeader} ${styles.center}`}>
           <p className={styles.eyebrow}>Next Step</p>
           <h2>Let&rsquo;s talk about your project.</h2>
-          <p>Free 30-minute call. Bring a room count and a target budget. You&rsquo;ll leave with a realistic price range, a lead-time estimate, and a clear list of next steps.</p>
+          <p>Bring a room count and a target budget. You&rsquo;ll leave with a realistic price range, a lead-time estimate, and a clear list of next steps.</p>
         </div>
         <div className={`${styles.ctaRow} ${styles.center}`}>
           <Link href="/contact#schedule" className={styles.primaryCtaLarge}>

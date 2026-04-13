@@ -4,9 +4,9 @@ import JsonLd from '../../components/JsonLd';
 import styles from './commercial-furniture-manufacturing/page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Commercial Furniture Guides — DMD Furnishing',
+  title: 'Commercial Furniture Guides',
   description:
-    'In-depth guides for commercial furniture buyers. Hospitality FF&E procurement, BIFMA construction standards, hotel guestroom casegoods, and value engineering from a Foxboro MA manufacturer.',
+    'In-depth guides for commercial furniture buyers. FF&E procurement, commercial durability standards, hotel casegoods, and value engineering. Foxboro, MA manufacturer.',
   path: '/guides',
   image: '/Images/Our_Products.jpg',
 });
@@ -14,12 +14,12 @@ export const metadata = generatePageMetadata({
 const guides = [
   {
     slug: 'commercial-furniture-manufacturing',
-    title: 'Commercial Furniture Manufacturing — A Complete Buyer Guide',
-    lede: 'What commercial furniture manufacturing is, the standards that matter (BIFMA, NFPA, CAL 117, AWI), material choices, and the manufacturing process from specification to install.',
+    title: 'Commercial Furniture Manufacturing: A Complete Buyer Guide',
+    lede: 'What commercial furniture manufacturing is, the standards that matter, material choices, and the manufacturing process from specification to install.',
   },
   {
     slug: 'hospitality-ffe',
-    title: 'Hospitality FF&E — A Complete Procurement Guide',
+    title: 'Hospitality FF&E: A Complete Procurement Guide',
     lede: 'A practical walkthrough of what hospitality FF&E includes, replacement lifecycles by property tier, brand standards, the procurement process, and the mistakes that blow budgets.',
   },
 ];
@@ -33,7 +33,7 @@ const indexSchema = {
       url: `${siteUrl}/guides`,
       name: 'Commercial Furniture Guides',
       description:
-        'In-depth guides for commercial furniture buyers — hospitality FF&E procurement, construction standards, and value engineering.',
+        'In-depth guides for commercial furniture buyers: hospitality FF&E procurement, construction standards, and value engineering.',
       isPartOf: { '@id': `${siteUrl}/#website` },
       about: { '@id': `${siteUrl}/#organization` },
     },
@@ -63,9 +63,9 @@ export default function GuidesIndexPage() {
           <h1 className={styles.h1}>In-Depth Guides for Commercial Furniture Buyers</h1>
           <p className={styles.lede}>
             Practical guides written for interior designers, hotel general managers, and FF&amp;E
-            procurement teams. Each guide cites the industry standards that matter (BIFMA,
-            NFPA 701, CAL 117-2013, AWI Quality Standards) and walks through the decisions a
-            typical project actually hits.
+            procurement teams. Each guide covers the commercial durability and fire safety
+            standards that matter and walks through the decisions a typical project actually
+            hits.
           </p>
         </div>
       </section>

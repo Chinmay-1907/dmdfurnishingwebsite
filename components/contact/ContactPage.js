@@ -325,10 +325,10 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     <main className="cp-page">
       {/* ── HERO BANNER ── */}
       <section className="cp-hero">
-        <p className="cp-eyebrow">Free Consultation</p>
+        <p className="cp-eyebrow">Get In Touch</p>
         <h1>Let&#39;s Talk About Your Project</h1>
         <p className="cp-hero-sub">
-          Book a free 30-minute call to walk through scope, materials, budgets, and timelines. Or send us a message and we&#39;ll follow up within one business day.
+          Call us to walk through scope, materials, budgets, and timelines. Or send us a message and we&#39;ll follow up within one business day.
         </p>
       </section>
 
@@ -371,18 +371,18 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                       <div className="cp-schedule-icon-wrap">
                         <FaCalendarAlt />
                       </div>
-                      <h2>Book Your Free Consultation</h2>
-                      <p>Pick a time that works for you. We&#39;ll walk through your project scope, materials, budget, and timeline in a focused 30-minute call.</p>
+                      <h2>Book a Consultation</h2>
+                      <p>Pick a time that works for you. We&#39;ll walk through your project scope, materials, budget, and timeline.</p>
                     </div>
 
                     <div className="cp-schedule-benefits">
                       <div className="cp-schedule-benefit">
                         <FaCheckCircle />
-                        <span>No obligation, completely free</span>
+                        <span>No obligation</span>
                       </div>
                       <div className="cp-schedule-benefit">
                         <FaCheckCircle />
-                        <span>30-minute focused session</span>
+                        <span>Focused consultation session</span>
                       </div>
                       <div className="cp-schedule-benefit">
                         <FaCheckCircle />

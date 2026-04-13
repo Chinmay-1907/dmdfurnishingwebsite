@@ -180,7 +180,7 @@ const serviceFaqs = [
   ],
   [
     'What standards do you build to?',
-    'Task and lounge seating is engineered against BIFMA X5.1 and BIFMA X5.4 durability benchmarks. Upholstery fabrics are specified to CAL 117-2013 and NFPA 701 where required by code. Architectural millwork follows AWI Quality Standards. We will note any deviation from these on the spec sheet.',
+    'We build to commercial contract-grade durability standards appropriate for each project type. Specific material, fire safety, and durability requirements are documented on the spec sheet for every project.',
   ],
 ];
 
@@ -195,7 +195,7 @@ const allProjects = getAllProjects();
 const industryDescriptions = {
   hotel: {
     description:
-      'Guestrooms, lobbies, breakfast rooms, and corridors. HPL worktops, upholstered headboards, and BIFMA-rated seating sized for brand standards and five-year refresh cycles.',
+      'Guestrooms, lobbies, breakfast rooms, and corridors. HPL worktops, upholstered headboards, and contract-grade seating sized for brand standards and five-year refresh cycles.',
     highlights: [
       'Guestroom packages: dressers, desks, nightstands, beds, luggage benches',
       'Lobby sofas, lounge chairs, and reception desks',
@@ -215,7 +215,7 @@ const industryDescriptions = {
     description:
       'Non-clinical areas: waiting rooms, family lounges, administrative offices, and cafeteria spaces. Wipeable fabrics and cleanable surfaces. No patient-care clinical furniture.',
     highlights: [
-      'Waiting-room lounge seating with Crypton Health fabric',
+      'Waiting-room lounge seating with performance fabric',
       'Administrative desks and filing casegoods',
       'Cafeteria tables and stacking chairs',
     ],
@@ -396,9 +396,9 @@ const serviceSchema = {
 
 export function generateMetadata() {
   return generatePageMetadata({
-    title: 'Commercial Furniture Services | Design, Manufacturing & Install',
+    title: 'FF&E Services: Design to Install',
     description:
-      'Six commercial furniture services under one team: design consultation, custom manufacturing, FF&E procurement, project management, logistics, and installation. DMD Furnishing, Foxboro MA.',
+      'Six FF&E services under one team: design, manufacturing, procurement, project management, logistics, and installation. DMD Furnishing, Foxboro MA.',
     path: '/services',
     image: '/Images/Our Services.jpg',
   });
@@ -518,7 +518,7 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>Get Started</p>
           <h2>Have a project in mind?</h2>
           <p className={styles.ctaLede}>
-            Free 30-minute call. Bring a room count and a target budget. Leave with a
+            Bring a room count and a target budget. Leave with a
             realistic price range, a lead-time estimate, and a written list of next steps.
           </p>
           <div className={styles.ctaButtons}>

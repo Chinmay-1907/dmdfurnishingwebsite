@@ -4,16 +4,16 @@ import { siteUrl } from '../../lib/metadata';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'FF&E & Commercial Furniture Blog | DMD Furnishing',
+  title: 'FF&E & Furniture Blog',
   description:
-    'Practical FF&E insights for hospitality professionals — from hotel guestroom checklists and material comparisons to procurement timelines and value-engineering strategies.',
+    'Practical FF&E insights for hospitality professionals: guestroom checklists, material comparisons, procurement timelines, and value engineering.',
   alternates: {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: 'FF&E & Commercial Furniture Blog | DMD Furnishing',
+    title: 'FF&E & Furniture Blog | DMD Furnishing',
     description:
-      'Practical FF&E insights for hospitality professionals — from hotel guestroom checklists and material comparisons to procurement timelines and value-engineering strategies.',
+      'Practical FF&E insights for hospitality professionals: guestroom checklists, material comparisons, procurement timelines, and value engineering.',
     url: `${siteUrl}/blog`,
     siteName: 'DMD Furnishing',
     type: 'website',
@@ -27,9 +27,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FF&E & Commercial Furniture Blog | DMD Furnishing',
+    title: 'FF&E & Furniture Blog | DMD Furnishing',
     description:
-      'Practical FF&E insights for hospitality professionals — from hotel guestroom checklists and material comparisons to procurement timelines and value-engineering strategies.',
+      'Practical FF&E insights for hospitality professionals: guestroom checklists, material comparisons, procurement timelines, and value engineering.',
   },
 };
 

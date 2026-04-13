@@ -6,9 +6,9 @@ const products = getAllProductsFlat();
 const filterOptions = getFilterOptions();
 
 export const metadata = generatePageMetadata({
-  title: 'Commercial Furniture Manufacturer | Custom FF&E Catalog',
+  title: 'Commercial Furniture Catalog',
   description:
-    `Commercial furniture manufacturer serving hotel, restaurant, office, healthcare, educational and multi-family projects. Browse ${products.length}+ BIFMA contract-grade products or request custom FF&E.`,
+    `Browse ${products.length}+ commercial furniture products for hotels, restaurants, offices, and healthcare. BIFMA contract-grade FF&E. Request custom specs.`,
   path: '/products',
   image: '/Images/Our_Products.jpg',
 });
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'How do I request a quote for a furniture project?',
     answer:
-      'Send your drawings, BOQ or project brief through our contact page, or book a free 30-minute consultation through the schedule-a-call page. A project manager will review the scope, ask any clarifying questions about quantities, finishes and timeline, then return a detailed quote. The initial consultation is free and carries no obligation.',
+      'Send your drawings, BOQ or project brief through our contact page, or request a consultation through the schedule-a-call page. A project manager will review the scope, ask any clarifying questions about quantities, finishes and timeline, then return a detailed quote.',
   },
 ];
 

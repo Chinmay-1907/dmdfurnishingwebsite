@@ -4,16 +4,16 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'Restaurant Seating: Booth, Chair, or Bar Stool?',
+  title: 'Restaurant Seating Guide',
   description:
-    'Learn when to specify booths, dining chairs, or bar stools for your restaurant. Covers space planning, material durability, outdoor seating, and mix-and-match zone strategies.',
+    'When to specify booths, dining chairs, or bar stools for your restaurant — space planning, material durability, and zone strategies.',
   alternates: {
     canonical: 'https://dmdfurnishing.com/blog/restaurant-seating-guide',
   },
   openGraph: {
-    title: 'Restaurant Seating: Booth, Chair, or Bar Stool?',
+    title: 'Restaurant Seating Guide | DMD Furnishing',
     description:
-      'Learn when to specify booths, dining chairs, or bar stools for your restaurant. Covers space planning, material durability, outdoor seating, and mix-and-match zone strategies.',
+      'When to specify booths, dining chairs, or bar stools for your restaurant — space planning, material durability, and zone strategies.',
     url: 'https://dmdfurnishing.com/blog/restaurant-seating-guide',
     siteName: 'DMD Furnishing',
     type: 'article',
@@ -27,9 +27,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Restaurant Seating: Booth, Chair, or Bar Stool?',
+    title: 'Restaurant Seating Guide | DMD Furnishing',
     description:
-      'Learn when to specify booths, dining chairs, or bar stools for your restaurant. Covers space planning, material durability, outdoor seating, and mix-and-match zone strategies.',
+      'When to specify booths, dining chairs, or bar stools for your restaurant — space planning, material durability, and zone strategies.',
   },
 };
 
@@ -312,8 +312,8 @@ export default function RestaurantSeatingGuide() {
           </p>
           <ul>
             <li>
-              <strong>Upholstery:</strong> Specify a minimum 100,000 double-rub Wyzenbeek rating
-              for seating fabric. For high-spill areas, commercial vinyl or treated performance
+              <strong>Upholstery:</strong> Specify commercial-grade abrasion-rated
+              seating fabric. For high-spill areas, commercial vinyl or treated performance
               fabric with a moisture barrier is preferred.
             </li>
             <li>

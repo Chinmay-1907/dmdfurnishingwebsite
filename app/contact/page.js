@@ -2,9 +2,9 @@ import ContactPage from '../../components/contact/ContactPage';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 
 export const metadata = generatePageMetadata({
-  title: 'Contact Us | Book a Free Consultation',
+  title: 'Contact Us | Request a Consultation',
   description:
-    'Book a free 30-minute consultation with DMD Furnishing or send us a message. Discuss scope, materials, budgets, and timelines for your commercial furniture project. Foxboro, MA, serving clients nationwide.',
+    'Request a consultation with DMD Furnishing. Discuss scope, materials, budgets, and timelines for your commercial furniture project. Foxboro, MA.',
   path: '/contact',
   image: '/Images/Contact_Page.jpg',
 });
@@ -23,26 +23,19 @@ const contactSchema = {
     },
     {
       '@type': 'Service',
-      name: 'Free Hospitality Furniture Consultation',
+      name: 'Hospitality Furniture Consultation',
       url: `${siteUrl}/contact#schedule`,
       description:
-        'Book a free 30-minute consultation with DMD Furnishing to discuss custom FF&E, materials, timelines, and budgets for your commercial project.',
+        'Request a consultation with DMD Furnishing to discuss custom FF&E, materials, timelines, and budgets for your commercial project.',
       provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
       areaServed: 'US',
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-        description: 'Free 30-minute consultation',
-      },
     },
     {
       '@type': 'ScheduleAction',
-      name: 'Book a Free Consultation',
+      name: 'Request a Consultation',
       target: process.env.NEXT_PUBLIC_CALENDLY_URL || `${siteUrl}/contact#schedule`,
       description:
-        'Schedule a free 30-minute consultation with DMD Furnishing to discuss custom FF&E, materials, timelines, and budgets for your commercial project.',
+        'Request a consultation with DMD Furnishing to discuss custom FF&E, materials, timelines, and budgets for your commercial project.',
       provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
     },
     {
