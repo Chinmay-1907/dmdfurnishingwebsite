@@ -46,32 +46,32 @@ const placeMetaOverrides = {
   hotel: {
     title: 'Hotel Furniture & Casegoods',
     description:
-      'BIFMA contract-grade hotel guestroom casegoods, headboards, desks, and lobby seating. Custom manufacturer for boutique and branded hotels.',
+      'Contract-grade hotel guestroom casegoods, headboards, desks, and lobby seating. Custom manufacturer for boutique and branded hotels.',
   },
   restaurant: {
     title: 'Restaurant Furniture & Seating',
     description:
-      'Custom restaurant banquettes, booths, dining chairs, and bar stools. NFPA 701 and CAL 117 compliant. Built for U.S. restaurant operators.',
+      'Custom restaurant banquettes, booths, dining chairs, and bar stools. Fire safety compliant. Built for U.S. restaurant operators.',
   },
   office: {
     title: 'Office Furniture & Workstations',
     description:
-      'BIFMA X5.1 task seating, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
+      'Commercial-grade task seating, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
   },
   hospital: {
     title: 'Healthcare Furniture',
     description:
-      'Bleach-cleanable healthcare furniture for hospitals, clinics, and medical offices. Bariatric seating, patient room casegoods, and Crypton upholstery.',
+      'Bleach-cleanable healthcare furniture for hospitals, clinics, and medical offices. Bariatric seating, patient room casegoods, and performance upholstery.',
   },
   'educational-facilities': {
     title: 'Educational Facility Furniture',
     description:
-      'Classroom seating, dormitory wardrobes, library carrels, and active-learning furniture for K-12 and higher education. BIFMA contract-grade.',
+      'Classroom seating, dormitory wardrobes, library carrels, and active-learning furniture for K-12 and higher education. Contract-grade.',
   },
   residential: {
     title: 'Multi-family Amenity Furniture',
     description:
-      'Commercial furniture for multi-family clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics, BIFMA rated.',
+      'Commercial furniture for multi-family clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics and construction.',
   },
   'lobby-area': {
     title: 'Lobby & Reception Furniture',

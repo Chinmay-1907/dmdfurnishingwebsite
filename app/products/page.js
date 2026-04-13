@@ -8,7 +8,7 @@ const filterOptions = getFilterOptions();
 export const metadata = generatePageMetadata({
   title: 'Commercial Furniture Catalog',
   description:
-    `Browse ${products.length}+ commercial furniture products for hotels, restaurants, offices, and healthcare. BIFMA contract-grade FF&E. Request custom specs.`,
+    `Browse ${products.length}+ commercial furniture products for hotels, restaurants, offices, and healthcare. Contract-grade FF&E. Request custom specs.`,
   path: '/products',
   image: '/Images/Our_Products.jpg',
 });

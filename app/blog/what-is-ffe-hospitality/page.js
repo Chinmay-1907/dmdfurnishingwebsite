@@ -277,7 +277,7 @@ export default function WhatIsFFEPage() {
                 </tr>
                 <tr>
                   <td>Standards body</td>
-                  <td><a href="https://www.bifma.org/" target="_blank" rel="noopener noreferrer">BIFMA</a> — durability and safety standards for contract furniture</td>
+                  <td>Commercial durability and safety standards for contract furniture</td>
                   <td>Brand operating standards and procurement guidelines</td>
                 </tr>
               </tbody>

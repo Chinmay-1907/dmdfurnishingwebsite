@@ -155,7 +155,7 @@ export default function InspirationsPage() {
           <h2>Hospitality and commercial design inspirations to start your next project.</h2>
           <p className={styles.sectionLede}>
             Each board pairs a visual direction with the materials that make it work in a
-            commercial setting. HPL versus real veneer, Crypton versus linen, solid oak
+            commercial setting. HPL versus real veneer, performance fabric versus linen, solid oak
             versus oak-on-substrate. Use them as a starting point, not a fixed catalog.
           </p>
 

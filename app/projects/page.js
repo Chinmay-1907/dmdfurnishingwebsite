@@ -103,7 +103,7 @@ export default function ProjectsPage() {
           <h1>Projects That Speak for Themselves</h1>
           <p className={styles.heroLede}>
             Hotel guestrooms, restaurant dining rooms, lobby refreshes, and multi-property
-            rollouts. Built with BIFMA contract-grade materials and installed on schedule.
+            rollouts. Built with contract-grade commercial materials and installed on schedule.
             Browse the work and see the scope behind every delivery.
           </p>
           <div className={styles.heroActions}>

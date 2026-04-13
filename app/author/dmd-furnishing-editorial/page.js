@@ -63,8 +63,8 @@ const personSchema = {
     'value engineering',
     'FF&E procurement',
     'commercial millwork',
-    'BIFMA contract-grade furniture standards',
-    'NFPA 701 flammability standards',
+    'contract-grade furniture standards',
+    'commercial fire safety standards',
   ],
   sameAs: ['https://www.linkedin.com/company/dmd-usaa/'],
 };
@@ -124,15 +124,10 @@ export default function EditorialTeamPage() {
               that sit inside hospitality and institutional buildings. That includes hotel guestroom
               casegoods, restaurant seating, commercial upholstery, millwork, bariatric and healthcare
               furniture, educational casegoods, and the procurement and installation workflow that ties
-              it all together. We reference tier-one industry standards by name — BIFMA contract-grade
-              testing, NFPA 701 flammability, CAL 117-2013 upholstery, ANSI/BIFMA X5.1 office seating —
-              and cite the{' '}
+              it all together. We reference industry standards for durability, fire safety, and
+              construction quality, and cite the{' '}
               <a href="https://www.ahla.com/" target="_blank" rel="noopener noreferrer">
                 American Hotel &amp; Lodging Association
-              </a>{' '}
-              and{' '}
-              <a href="https://bifma.org/" target="_blank" rel="noopener noreferrer">
-                BIFMA
               </a>{' '}
               where their guidance is relevant.
             </p>

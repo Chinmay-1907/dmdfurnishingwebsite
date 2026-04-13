@@ -253,10 +253,8 @@ export default function FFEProcurementTimeline() {
           </p>
           <p>
             Sample review is a critical step that many projects skip to save time, only to face
-            costly remakes later. Commercial furniture performance standards — including test
-            protocols for durability and structural integrity — are set by{' '}
-            <a href="https://www.bifma.org/" target="_blank" rel="noopener noreferrer">BIFMA</a>,
-            and specifying BIFMA-compliant items simplifies sample evaluation by giving the
+            costly remakes later. Specifying items that meet recognized commercial durability
+            standards simplifies sample evaluation by giving the
             procurement team a defined acceptance benchmark. Requesting physical samples of key items — particularly upholstered
             pieces and surface finishes — before committing to a vendor identifies quality or color
             discrepancies before production begins. Sample approval should be formally documented
