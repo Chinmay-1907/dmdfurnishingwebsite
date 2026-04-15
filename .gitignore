@@ -41,3 +41,7 @@ server*.out.log
 .qwen/
 screenshots/
 hotel-response.html
+
+# Working artifacts (audit screenshots + copy rewrite workspace — not shipped)
+qa/
+copy-review/
