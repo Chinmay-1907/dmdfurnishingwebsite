@@ -197,3 +197,68 @@
     margin-bottom: 16px;
   }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Light theme overrides — footer becomes a warm-white surface.
+   Gradient brand title flattens to solid (gradient-on-text reads cheap on ivory).
+   Gold links demote to dark text + gold underline (decoration-only rule).
+   ────────────────────────────────────────────────────────────── */
+:root[data-theme='light'] .site-footer {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+}
+
+:root[data-theme='light'] .site-footer::before {
+  background: linear-gradient(90deg, transparent, var(--accent-gold-soft), var(--accent-gold), var(--accent-gold-soft), transparent);
+}
+
+:root[data-theme='light'] .footer-top {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+:root[data-theme='light'] .footer-logo h2,
+:root[data-theme='light'] .footer-logo .footer-brand-title {
+  color: var(--text-primary);
+  background: none;
+  -webkit-text-fill-color: var(--text-primary);
+}
+
+:root[data-theme='light'] .footer-logo p,
+:root[data-theme='light'] .footer-policy-link,
+:root[data-theme='light'] .footer-column li,
+:root[data-theme='light'] .footer-column address,
+:root[data-theme='light'] .footer-column a {
+  color: var(--text-secondary);
+}
+
+:root[data-theme='light'] .footer-policy-link:hover,
+:root[data-theme='light'] .footer-column a:hover,
+:root[data-theme='light'] .footer-column a:focus-visible {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-gold);
+}
+
+:root[data-theme='light'] .footer-column h3,
+:root[data-theme='light'] .footer-column .footer-column-title {
+  color: var(--accent-magenta);
+}
+
+:root[data-theme='light'] .footer-bottom::before {
+  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+}
+
+:root[data-theme='light'] .copyright {
+  color: var(--text-muted);
+}
+
+:root[data-theme='light'] .social-icon {
+  border-color: var(--border-strong);
+  color: var(--text-secondary);
+}
+
+:root[data-theme='light'] .social-icon:hover,
+:root[data-theme='light'] .social-icon:focus-visible {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--text-on-accent);
+}

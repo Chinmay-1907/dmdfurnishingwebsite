@@ -26,10 +26,10 @@ function Footer() {
             <div className="footer-column">
               <div className="footer-column-title">Services</div>
               <ul>
-                <li><Link href="/services#design-consultation">Design Consultation (Hospitality)</Link></li>
-                <li><Link href="/services#custom-manufacturing">Custom Furniture Manufacturing</Link></li>
-                <li><Link href="/services#ffe-project-management">FF&amp;E (Furniture &amp; Fixtures) Project Management</Link></li>
-                <li><Link href="/services#installation-setup">Installation &amp; Setup</Link></li>
+                <li><Link href="/services#process">Design Consultation (Hospitality)</Link></li>
+                <li><Link href="/services#process">Custom Furniture Manufacturing</Link></li>
+                <li><Link href="/services#process">FF&amp;E (Furniture &amp; Fixtures) Project Management</Link></li>
+                <li><Link href="/services#process">Installation &amp; Setup</Link></li>
               </ul>
             </div>
             <div className="footer-column">

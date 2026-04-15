@@ -8,7 +8,35 @@
   align-items: center;
   background: transparent;
   z-index: 1000;
-  transition: height var(--transition-base), background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  transition: height var(--transition-base), background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), color var(--transition-base);
+}
+
+/* ── At the top (not scrolled): header floats over hero images, so all text
+      must be off-white regardless of theme. When .compact kicks in and the
+      glassmorphic panel appears, text reverts to the theme's primary color.
+      :not(.menu-open) prevents this from applying inside the mobile drawer
+      where the cream background makes off-white text invisible. ── */
+.site-header:not(.compact):not(.menu-open) .nav-links a,
+.site-header:not(.compact):not(.menu-open) .nav-contact-phone,
+.site-header:not(.compact):not(.menu-open) .hamburger-icon {
+  color: #F3EFE6;
+}
+
+.site-header:not(.compact):not(.menu-open) .hamburger-icon {
+  background: #F3EFE6;
+}
+
+.site-header:not(.compact) .theme-toggle-cycle {
+  color: #F3EFE6;
+  border-color: rgba(243, 239, 230, 0.35);
+  background: rgba(243, 239, 230, 0.08);
+}
+
+.site-header:not(.compact) .theme-toggle-cycle:hover,
+.site-header:not(.compact) .theme-toggle-cycle:focus-visible {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.14);
 }
 
 :root[data-theme='dark'] .site-header {
@@ -17,16 +45,20 @@
 
 .site-header.compact {
   height: var(--header-height-compact);
-  background: rgba(18, 22, 29, 0.95);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 22, 29, 0.72);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
   box-shadow: var(--shadow-soft);
   border-bottom: 1px solid rgba(168, 178, 197, 0.12);
 }
 
-/* Light theme compact override */
-:root:not([data-theme='dark']) .site-header.compact {
-  background: rgba(247, 244, 239, 0.95);
-  border-bottom: 1px solid rgba(67, 70, 80, 0.08);
+/* Light theme compact override — warm-white frosted glass matching dark glassmorphism */
+:root[data-theme='light'] .site-header.compact {
+  background: rgba(255, 252, 245, 0.72);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 2px 18px rgba(40, 30, 20, 0.08);
+  border-bottom: 1px solid rgba(20, 18, 14, 0.08);
 }
 
 .site-header.menu-open {
@@ -132,6 +164,48 @@
   flex-shrink: 0;
 }
 
+/* ── Theme toggle (single circular button that cycles light → system → dark) ── */
+.theme-toggle-cycle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.theme-toggle-cycle:hover,
+.theme-toggle-cycle:focus-visible {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.10);
+  transform: scale(1.05);
+}
+
+:root[data-theme='light'] .theme-toggle-cycle {
+  background: rgba(20, 18, 14, 0.04);
+  border-color: var(--border-subtle);
+}
+
+:root[data-theme='light'] .theme-toggle-cycle:hover,
+:root[data-theme='light'] .theme-toggle-cycle:focus-visible {
+  color: var(--accent-magenta);
+  border-color: var(--accent-gold);
+  background: var(--accent-gold-soft);
+}
+
 .consultation-button {
   display: inline-flex;
   align-items: center;
@@ -162,6 +236,8 @@
 
 .hamburger-menu {
   display: none;
+  position: relative;
+  z-index: 1001;
   width: 48px;
   height: 48px;
   min-width: 48px;
@@ -267,7 +343,10 @@ body.body-no-scroll {
     pointer-events: none;
     z-index: 999;
     justify-content: flex-start;
+    align-items: stretch;
+    overscroll-behavior: contain;
     padding-top: calc(var(--header-current-height, var(--header-height)) + 8px);
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
   }
 
   .main-nav.open {
@@ -350,10 +429,83 @@ body.body-no-scroll {
     letter-spacing: 0.12em;
   }
 
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-    min-width: 48px;
-    min-height: 48px;
+  .theme-toggle-cycle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Light theme overrides — gold-as-text fails contrast on ivory,
+   so swap to magenta/dark-text for active/hover states.
+   ────────────────────────────────────────────────────────────── */
+
+/* Phone + nav links stay off-white in light mode too when floating over hero.
+   !important needed: the @import puts Header.css BEFORE globals.css in the bundle,
+   so the globals light-theme var(--color-text) override wins on equal specificity.
+   :not(.menu-open) ensures this doesn't bleed into the mobile drawer where the
+   background is cream and off-white text would be invisible. */
+:root[data-theme='light'] .site-header:not(.compact):not(.menu-open) .nav-contact-phone,
+:root[data-theme='light'] .site-header:not(.compact):not(.menu-open) .nav-contact-phone span,
+:root[data-theme='light'] .site-header:not(.compact):not(.menu-open) .nav-links a {
+  color: #F3EFE6 !important;
+}
+
+/* Inspirations, project detail pages, and any other light-hero pages — hero bg is light
+   so header needs dark text in the transparent/non-compact state for readability.
+   :root[data-theme='light'] prefix is required here to beat the specificity of the
+   off-white rule above (which uses :root[data-theme='light'] and !important). */
+:root[data-theme='light'] .site-header.light-hero-page:not(.compact) .nav-links a,
+:root[data-theme='light'] .site-header.light-hero-page:not(.compact) .nav-contact-phone,
+:root[data-theme='light'] .site-header.light-hero-page:not(.compact) .nav-contact-phone span,
+:root[data-theme='light'] .site-header.light-hero-page:not(.compact) .hamburger-icon {
+  color: var(--text-primary) !important;
+}
+:root[data-theme='light'] .site-header.light-hero-page:not(.compact) .hamburger-icon {
+  background: var(--text-primary) !important;
+}
+:root[data-theme='light'] .site-header.light-hero-page:not(.compact) .theme-toggle-cycle {
+  color: var(--text-primary) !important;
+  border-color: rgba(20, 18, 14, 0.3) !important;
+  background: rgba(20, 18, 14, 0.05) !important;
+}
+/* Dark mode light-hero-page — keep existing behavior (no theme prefix needed) */
+.site-header.light-hero-page:not(.compact) .nav-links a,
+.site-header.light-hero-page:not(.compact) .nav-contact-phone,
+.site-header.light-hero-page:not(.compact) .hamburger-icon {
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme='light'] .nav-links a:hover,
+:root[data-theme='light'] .nav-links a:focus-visible,
+:root[data-theme='light'] .nav-links a.active {
+  color: var(--accent-magenta);
+  border-bottom-color: var(--accent-gold);
+}
+
+:root[data-theme='light'] .nav-contact-phone:hover,
+:root[data-theme='light'] .nav-contact-phone:focus-visible {
+  color: var(--accent-magenta);
+  background: var(--accent-gold-soft);
+}
+
+:root[data-theme='light'] .consultation-button {
+  color: var(--accent-magenta);
+  border-color: var(--accent-magenta);
+}
+
+:root[data-theme='light'] .consultation-button:hover,
+:root[data-theme='light'] .consultation-button:focus-visible {
+  background: var(--accent-gold);
+  color: var(--text-on-accent);
+  border-color: var(--accent-gold);
+}
+
+@media (max-width: 1024px) {
+  :root[data-theme='light'] .nav-links a:hover,
+  :root[data-theme='light'] .nav-links a:focus-visible,
+  :root[data-theme='light'] .nav-links a.active {
+    background: var(--accent-gold-soft);
+    border-bottom: none;
   }
 }

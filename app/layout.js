@@ -6,6 +6,7 @@ import JsonLd from '../components/JsonLd';
 import ScrollReveal from '../components/ScrollReveal';
 import ScrollToTop from '../components/ScrollToTop';
 import WebVitals from '../components/WebVitals';
+import { ThemeProvider, themeBootScript } from '../components/ThemeProvider';
 import {
   localBusinessSchema,
   organizationSchema,
@@ -68,27 +69,33 @@ export const viewport = { width: 'device-width', initialScale: 1 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dark" className={`${playfair.variable} ${sourceSans.variable} dark-mode`}>
+    <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${sourceSans.variable}`}>
       <head>
+        {/* Anti-FOUC: resolve and apply the theme attribute synchronously,
+            BEFORE first paint. Without this, every visit would briefly show
+            the wrong theme while React hydrates. */}
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <link rel="preload" as="image" href="/Images/Tailored_Guestroom_Collections.jpg" fetchPriority="high" />
       </head>
-      <body className="dark-mode">
-        <WebVitals />
-        <ScrollToTop />
-        <ScrollReveal />
-        <JsonLd data={organizationSchema} />
-        <JsonLd data={localBusinessSchema} />
-        <JsonLd data={websiteSchema} />
-        <div className="site-shell">
-          <a href="#main-content" className="skip-link-global">
-            Skip to main content
-          </a>
-          <Header />
-          <div className="main-content" id="main-content">
-            {children}
+      <body>
+        <ThemeProvider>
+          <WebVitals />
+          <ScrollToTop />
+          <ScrollReveal />
+          <JsonLd data={organizationSchema} />
+          <JsonLd data={localBusinessSchema} />
+          <JsonLd data={websiteSchema} />
+          <div className="site-shell">
+            <a href="#main-content" className="skip-link-global">
+              Skip to main content
+            </a>
+            <Header />
+            <div className="main-content" id="main-content">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

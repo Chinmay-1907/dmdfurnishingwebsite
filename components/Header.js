@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import ProductSearch from './ProductSearch';
+import ThemeToggle from './ThemeToggle';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,9 +45,23 @@ function Header() {
     return isActive ? 'active' : '';
   };
 
+  // Pages where the hero is light-colored (or the light theme overrides the page bg to cream)
+  // — force dark header text so it's readable before scrolling.
+  // Project detail pages (/projects/[id]) use hotel interior photos with a thin overlay,
+  // so white nav text is unreadable there. The listing (/projects exactly) has a dark hero.
+  // Blog and guides pages use hardcoded dark CSS but the light theme overrides the root
+  // background to cream, making white nav text invisible — both the listing pages and all
+  // sub-routes (individual posts and guide slugs) need the same treatment.
+  const isLightHeroPage =
+    pathname === '/contact' ||
+    pathname.startsWith('/inspirations') ||
+    pathname.startsWith('/blog') ||
+    pathname.startsWith('/guides') ||
+    (pathname.startsWith('/projects/') && pathname.length > '/projects/'.length);
+
   return (
     <header
-      className={`site-header${isScrolled ? ' compact' : ''}${menuOpen ? ' menu-open' : ''}`}
+      className={`site-header${isScrolled ? ' compact' : ''}${menuOpen ? ' menu-open' : ''}${isLightHeroPage ? ' light-hero-page' : ''}`}
       style={headerStyle}
     >
       {/* Mobile nav backdrop overlay */}
@@ -104,7 +118,7 @@ function Header() {
           </ul>
         </nav>
         <div className="header-actions">
-          <ProductSearch />
+          <ThemeToggle />
           <Link href="/contact" className="consultation-button" onClick={closeMenu}>
             Book Consultation
           </Link>
