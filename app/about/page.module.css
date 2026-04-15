@@ -507,6 +507,27 @@
               inset 0 1px 0 rgba(255, 240, 200, 0.35);
 }
 
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1.5px solid rgba(201, 169, 110, 0.7);
+  color: var(--page-dark-text);
+  background: rgba(201, 169, 110, 0.1);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.secondaryBtn:hover {
+  background: rgba(201, 169, 110, 0.2);
+  border-color: rgba(201, 169, 110, 1);
+  transform: translateY(-2px);
+}
+
 .ghostBtn {
   display: inline-flex;
   align-items: center;

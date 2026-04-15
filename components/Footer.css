@@ -1,81 +1,146 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DMD Furnishing — Site Footer
+   Aesthetic: Editorial Luxury (soft-skill / high-end agency)
+   Dark base by default. Light-theme overrides at bottom.
+   Gradient language mirrors the homepage CTA:
+     linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Shell ── */
 .site-footer {
   background: #0f1116;
   color: #e7e9ed;
-  padding: 96px 0 32px;
-  border-top: none;
+  padding: 0 0 20px;
   position: relative;
 }
 
-.site-footer::before {
-  content: '';
-  display: block;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 162, 95, 0.3), rgba(201, 162, 95, 0.5), rgba(201, 162, 95, 0.3), transparent);
-}
-
+/* ── Container ── */
 .site-footer .footer-container {
   width: min(1200px, 92vw);
   margin: 0 auto;
 }
 
+/* ── Brand block ── */
+.footer-brand {
+  padding: 32px 0 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  max-width: 600px;
+}
+
+.footer-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-gold, var(--color-gold));
+  margin-bottom: 14px;
+}
+
+.footer-brand-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.12;
+  margin-bottom: 16px;
+  /* Warm gold→white gradient — premium brand anchor */
+  background: linear-gradient(135deg, #f9f9fb 0%, #d7b676 60%, #c9a96e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-brand-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.97rem;
+  line-height: 1.78;
+  color: rgba(231, 233, 237, 0.65);
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* ── CTA strip ── */
+.footer-cta-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+}
+
+.footer-cta-label {
+  font-family: var(--font-sans);
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: rgba(231, 233, 237, 0.82);
+  margin: 0;
+}
+
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  /* Dark text on gradient — meets WCAG AA on this gradient */
+  color: #1a1008;
+  background: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+  padding: 9px 20px 9px 18px;
+  border-radius: 100px;
+  transition: opacity 180ms cubic-bezier(0.33, 1, 0.68, 1),
+              transform 180ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.footer-cta-btn:hover,
+.footer-cta-btn:focus-visible {
+  opacity: 0.86;
+  transform: translateY(-1px);
+  outline: 2px solid rgba(201, 162, 110, 0.5);
+  outline-offset: 2px;
+}
+
+.footer-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.18);
+  font-size: 0.78rem;
+  line-height: 1;
+  transition: transform 180ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.footer-cta-btn:hover .footer-cta-arrow {
+  transform: translate(1px, -1px);
+}
+
+/* ── Nav columns ── */
 .footer-top {
-  display: grid;
-  grid-template-columns: minmax(240px, 1.1fr) minmax(360px, 2fr);
-  gap: 48px;
-  padding-bottom: 48px;
+  padding: 24px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 32px;
+  gap: 24px;
 }
 
-.footer-logo h2,
-.footer-logo .footer-brand-title {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 500;
-  color: #f9f9fb;
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, #f9f9fb, #d7b676);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.footer-logo p {
-  margin: 0 0 15px;
-  font-size: 0.9rem;
-  color: var(--text-on-dark-muted);
-  line-height: 1.7;
-}
-
-.footer-policy-link {
-  font-size: 0.9rem;
-  color: var(--text-on-dark-muted);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
-  border-bottom: 1px solid transparent;
-  transition: color 0.3s, border-color 0.3s;
-}
-
-.footer-policy-link:hover {
-  color: var(--color-gold);
-  border-bottom-color: var(--color-gold);
-}
-
-.footer-column h3,
-.footer-column .footer-column-title {
+.footer-column-title {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.7rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: 24px;
+  font-weight: 600;
+  color: var(--accent-gold, var(--color-gold));
+  margin-bottom: 12px;
 }
 
 .footer-column ul {
@@ -83,182 +148,195 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 12px;
+  gap: 2px;
 }
 
-.footer-column li,
-.footer-column address {
-  color: var(--text-on-dark-muted);
-  line-height: 1.65;
+.footer-column li {
+  color: rgba(231, 233, 237, 0.62);
+  line-height: 1.6;
+  font-size: 0.93rem;
+}
+
+.footer-address-line {
+  font-family: var(--font-sans);
+  font-size: 0.93rem;
+  color: rgba(231, 233, 237, 0.62);
+  line-height: 1.7;
 }
 
 .footer-column a {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: rgba(231, 233, 237, 0.72);
+  font-size: 0.93rem;
+  color: rgba(231, 233, 237, 0.62);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  min-height: 48px;
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  min-height: 32px;
+  transition: color 180ms cubic-bezier(0.33, 1, 0.68, 1),
+              transform 180ms cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .footer-column a:hover,
 .footer-column a:focus-visible {
-  color: var(--color-gold);
+  color: var(--accent-gold, var(--color-gold));
   transform: translateX(4px);
+  outline: none;
 }
 
+/* ── Bottom bar ── */
 .footer-bottom {
+  padding-top: 18px;
+}
+
+/* Gold hairline divider — replaces generic white ::before */
+.footer-bottom-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 162, 110, 0.18) 20%,
+    rgba(201, 162, 110, 0.36) 50%,
+    rgba(201, 162, 110, 0.18) 80%,
+    transparent 100%
+  );
+  margin-bottom: 28px;
+}
+
+.footer-bottom-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 32px;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.footer-bottom::before {
-  content: '';
-  flex: 1 0 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-  margin-bottom: 28px;
-}
-
 .copyright {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
-  color: rgba(231, 233, 237, 0.6);
+  font-size: 0.82rem;
   letter-spacing: 0.04em;
+  color: rgba(231, 233, 237, 0.42);
+  margin: 0;
 }
 
+.footer-policy-link {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: rgba(231, 233, 237, 0.42);
+  text-decoration: none;
+  transition: color 180ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.footer-policy-link:hover,
+.footer-policy-link:focus-visible {
+  color: var(--accent-gold, var(--color-gold));
+  outline: none;
+}
+
+/* ── Social icons ── */
 .social-links {
   display: inline-flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .social-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 48px;
-  min-height: 48px;
+  width: 40px;
+  height: 40px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: rgba(231, 233, 237, 0.82);
+  color: rgba(231, 233, 237, 0.72);
   text-decoration: none;
-  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+  transition: background 200ms cubic-bezier(0.33, 1, 0.68, 1),
+              color 200ms cubic-bezier(0.33, 1, 0.68, 1),
+              border-color 200ms cubic-bezier(0.33, 1, 0.68, 1),
+              transform 200ms cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .social-icon:hover,
 .social-icon:focus-visible {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: #0f1116;
-  transform: translateY(-3px);
+  /* Gold→rose gradient fill on hover */
+  background: linear-gradient(125deg, #c9a96e 0%, #a8326b 100%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-2px);
+  outline: none;
 }
 
+/* ── Responsive ── */
 @media (max-width: 992px) {
-  .site-footer {
-    padding-top: 80px;
+  .footer-brand {
+    padding: 56px 0 40px;
   }
 
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .footer-links {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  .site-footer {
-    padding-top: 60px;
+  .footer-brand {
+    padding: 44px 0 36px;
   }
 
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .footer-cta-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
 
   .footer-links {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .footer-bottom {
+  .footer-bottom-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 24px;
+    gap: 20px;
   }
 
-  .footer-bottom::before {
-    margin-bottom: 16px;
+  .footer-bottom-divider {
+    margin-bottom: 20px;
   }
 }
 
-/* ──────────────────────────────────────────────────────────────
-   Light theme overrides — footer becomes a warm-white surface.
-   Gradient brand title flattens to solid (gradient-on-text reads cheap on ivory).
-   Gold links demote to dark text + gold underline (decoration-only rule).
-   ────────────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════════
+   Light theme overrides
+   The footer stays intentionally DARK in light mode — it functions as
+   a contrast anchor at the bottom of the page (dark-on-light contrast).
+   Only token references that would otherwise break are patched here.
+   ══════════════════════════════════════════════════════════════════════ */
+
 :root[data-theme='light'] .site-footer {
-  background: var(--bg-surface-elevated);
-  color: var(--text-primary);
+  /* Keep the dark shell — intentional design choice */
+  background: #0f1116;
+  color: #e7e9ed;
 }
 
-:root[data-theme='light'] .site-footer::before {
-  background: linear-gradient(90deg, transparent, var(--accent-gold-soft), var(--accent-gold), var(--accent-gold-soft), transparent);
+/* Eyebrow + column titles use the dark-mode gold value on the dark shell */
+:root[data-theme='light'] .footer-eyebrow,
+:root[data-theme='light'] .footer-column-title {
+  color: #d7b676;
 }
 
-:root[data-theme='light'] .footer-top {
-  border-bottom: 1px solid var(--border-subtle);
+/* Brand title: gradient stays — dark bg supports it fine */
+:root[data-theme='light'] .footer-brand-title {
+  background: linear-gradient(135deg, #f9f9fb 0%, #d7b676 60%, #c9a96e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-:root[data-theme='light'] .footer-logo h2,
-:root[data-theme='light'] .footer-logo .footer-brand-title {
-  color: var(--text-primary);
-  background: none;
-  -webkit-text-fill-color: var(--text-primary);
-}
-
-:root[data-theme='light'] .footer-logo p,
-:root[data-theme='light'] .footer-policy-link,
-:root[data-theme='light'] .footer-column li,
-:root[data-theme='light'] .footer-column address,
-:root[data-theme='light'] .footer-column a {
-  color: var(--text-secondary);
-}
-
-:root[data-theme='light'] .footer-policy-link:hover,
+/* Anchor links: keep dark-mode gold on dark shell */
 :root[data-theme='light'] .footer-column a:hover,
-:root[data-theme='light'] .footer-column a:focus-visible {
-  color: var(--text-primary);
-  border-bottom-color: var(--accent-gold);
-}
-
-:root[data-theme='light'] .footer-column h3,
-:root[data-theme='light'] .footer-column .footer-column-title {
-  color: var(--accent-magenta);
-}
-
-:root[data-theme='light'] .footer-bottom::before {
-  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
-}
-
-:root[data-theme='light'] .copyright {
-  color: var(--text-muted);
-}
-
-:root[data-theme='light'] .social-icon {
-  border-color: var(--border-strong);
-  color: var(--text-secondary);
-}
-
-:root[data-theme='light'] .social-icon:hover,
-:root[data-theme='light'] .social-icon:focus-visible {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-  color: var(--text-on-accent);
+:root[data-theme='light'] .footer-column a:focus-visible,
+:root[data-theme='light'] .footer-policy-link:hover,
+:root[data-theme='light'] .footer-policy-link:focus-visible {
+  color: #d7b676;
 }

@@ -195,15 +195,16 @@
 }
 
 :root[data-theme='light'] .theme-toggle-cycle {
-  background: rgba(20, 18, 14, 0.04);
-  border-color: var(--border-subtle);
+  color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.45);
 }
 
 :root[data-theme='light'] .theme-toggle-cycle:hover,
 :root[data-theme='light'] .theme-toggle-cycle:focus-visible {
-  color: var(--accent-magenta);
-  border-color: var(--accent-gold);
-  background: var(--accent-gold-soft);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.18);
 }
 
 .consultation-button {
@@ -490,15 +491,15 @@ body.body-no-scroll {
 }
 
 :root[data-theme='light'] .consultation-button {
-  color: var(--accent-magenta);
-  border-color: var(--accent-magenta);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
 }
 
 :root[data-theme='light'] .consultation-button:hover,
 :root[data-theme='light'] .consultation-button:focus-visible {
-  background: var(--accent-gold);
-  color: var(--text-on-accent);
-  border-color: var(--accent-gold);
+  background: var(--color-gold);
+  color: #121212;
+  border-color: var(--color-gold);
 }
 
 @media (max-width: 1024px) {
