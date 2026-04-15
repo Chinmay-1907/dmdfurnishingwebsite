@@ -77,6 +77,27 @@
   text-overflow: ellipsis;
 }
 
+/* ── Light mode overrides ── */
+:global([data-theme='light']) .card {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(201, 169, 110, 0.2);
+}
+
+:global([data-theme='light']) .card:hover {
+  border-color: rgba(164, 41, 99, 0.3);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(164, 41, 99, 0.08);
+}
+
+:global([data-theme='light']) .label {
+  color: var(--text-muted);
+}
+
+:global([data-theme='light']) .name {
+  color: var(--text-primary);
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .nav {

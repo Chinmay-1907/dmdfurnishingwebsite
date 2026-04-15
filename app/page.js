@@ -16,21 +16,22 @@ const heroImages = [
 ];
 
 const whyDmd = [
-  ['One PM, Start to Finish', 'Shop drawings, production, delivery, punch list. One project manager handles every phase. One number to call, not five.'],
-  ['Contract-Grade Build', 'Joinery, frames, and hardware built to commercial durability standards. Rated for guest turnover, not a living room.'],
-  ['Value Engineering on Every Bid', 'We re-spec materials and construction methods to hit your budget without downgrading the surfaces guests see and touch. Standard, not extra.'],
-  ['Written Timelines, Named Deliverables', 'Every phase has a week range and a clear deliverable: scope doc, QC report, punch list sign-off. All in writing before we start.'],
-  ['Full FF&E Under One Roof', 'Casegoods, seating, upholstery, millwork, and loose furniture, all under one contract. No third-party juggling.'],
-  ['Hospitality-Grade Materials', 'HPL, hardwood veneer, powder-coated steel, performance fabric, soft-close hardware. Every material spec\'d for commercial use, not residential.'],
+  ['In House Design Team', 'Drafters turn designer sketches into shop drawings and cut sheets before anything gets quoted.'],
+  ['Two Manufacturing Paths', 'Foxboro shop for prototypes and fast turn runs. Partner factories for high volume guestroom packages.'],
+  ['One PM from Start to Finish', 'Same project manager from signed PO through punch list. No handoffs, no re explaining.'],
+  ['Value Engineered Line by Line', 'We flex every line of the BOQ to your budget without touching what guests see or touch.'],
+  ['Commercial Material Sourcing', 'HPL, hardwood veneer, performance fabric, and commercial hardware from standing supplier relationships.'],
+  ['Three Point Quality Control', 'Specs confirmed before production. Pieces photographed before shipment. Installers verify on site.'],
 ];
 
 const processSteps = [
-  ['01', 'Scope & Budget', 'Room counts, brand standards, budget targets. You walk away with a written scope doc and a preliminary BOQ.'],
-  ['02', 'Design & Specs', 'Finish samples, shop drawings, and fabric call-outs, all reviewed with your designer or architect before anything gets built.'],
-  ['03', 'Manufacturing', 'Production in our Foxboro, MA shop or overseas partner facility. Your choice based on timeline and budget.'],
-  ['04', 'Quality Control', 'Every piece inspected against the approved spec. Photo report sent to you before anything ships.'],
-  ['05', 'Delivery & Installation', 'Coordinated with your GC. Phased drops, assembly, placement, and protection of existing finishes.'],
-  ['06', 'Punch & Close-Out', 'Final walkthrough, warranty docs, and any touch-ups. All resolved before we leave site.'],
+  ['01', 'Intro Call', 'Short discovery call. We understand the property, brand standards, and timeline before anyone signs anything.'],
+  ['02', 'Budget & Scope', 'Walk the property, count room types, set a realistic budget. Written scope doc and preliminary BOQ.'],
+  ['03', 'Design & 3D', 'Our in house design team models every guestroom and public space in 3D before a piece is built.'],
+  ['04', 'Manufacturing', 'Foxboro shop for prototypes and fast turn runs. Partner factories for high volume guestroom packages.'],
+  ['05', 'Factory QC', 'Every piece inspected against signed spec. Photo documented QC report before anything ships.'],
+  ['06', 'Delivery & Install', 'Phased drops timed with your GC schedule. Assembly, placement, and anchoring room by room.'],
+  ['07', 'Close Out', 'Every punch list item resolved on site. Warranty documentation and final packet handed over.'],
 ];
 
 const pageDescription =
@@ -183,16 +184,16 @@ export default function HomePage() {
         </div>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <p className={styles.eyebrow}>Contract-Grade · Custom-Built · Installed Nationwide</p>
+          <p className={styles.eyebrow}>Custom Hospitality FF&amp;E · Built to Spec · Installed Nationwide</p>
           <h1><span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
           <p className={styles.heroTagline}>Custom FF&amp;E for Hotels, Restaurants &amp; Commercial Spaces</p>
           <p className={styles.lede} data-speakable="lede">
-            Built to your spec in Foxboro, MA and installed on your timeline.
-            Whether it&rsquo;s a 20-room motel refresh or a 500-key hotel rollout.
+            Every piece built to your finish samples, hardware selections, and dimension drawings.<br />
+            From 20 guestrooms to a full property installation, we handle the entire project.
           </p>
           <div className={styles.ctaRow}>
             <Link href="/contact#schedule" className={styles.primaryCta}>
-              Get a Free Project Estimate
+              Request a Project Estimate
             </Link>
           </div>
         </div>
@@ -203,15 +204,15 @@ export default function HomePage() {
         <div className={styles.trustStats}>
           <div className={styles.trustStat}>
             <CountUp end={totalRooms || 285} suffix="+" className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Hotel Rooms Furnished</span>
+            <span className={styles.trustStatLabel}>Rooms Delivered and Installed</span>
           </div>
           <div className={styles.trustStat}>
             <CountUp end={projects.length} suffix="+" className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Projects Completed</span>
+            <span className={styles.trustStatLabel}>Commercial FF&amp;E Projects</span>
           </div>
           <div className={styles.trustStat}>
             <CountUp end={places.length} className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Industries Served</span>
+            <span className={styles.trustStatLabel}>Verticals We Serve</span>
           </div>
           <div className={styles.trustStat}>
             <span className={styles.trustStatNumber}>Nationwide</span>
@@ -222,9 +223,9 @@ export default function HomePage() {
 
       {/* ── 3. Who We Serve — Merged Visual Grid ── */}
       <section className={styles.sectionWide}>
-        <div className={`${styles.sectionHeader} fade-in-up`}>
+        <div className={`${styles.sectionHeader} fade-in-up`} style={{ maxWidth: 'none' }}>
           <p className={styles.eyebrow}>Who We Serve</p>
-          <h2>Hotels, restaurants, offices, healthcare, education. We furnish them all.</h2>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 2.9vw, 2.6rem)' }}>Hotels, restaurants, offices, healthcare, residential.<br />We furnish them all.</h2>
         </div>
         <div className={styles.productGrid}>
           {featuredPlaces.map((place, index) => (
@@ -251,21 +252,16 @@ export default function HomePage() {
         </div>
         <div className={`${styles.ctaRow} ${styles.center}`} style={{ marginTop: 32 }}>
           <Link href="/products" className={styles.secondaryCta}>
-            Browse All {totalProducts} Products
+            Browse All Products
           </Link>
         </div>
       </section>
 
       {/* ── 4. Recent Work ── */}
       <section className={`${styles.sectionWide} ${styles.altSection}`}>
-        <div className={`${styles.projectHeader} fade-in-up`}>
-          <div>
-            <p className={styles.eyebrow}>Recent Work</p>
-            <h2>Real projects. Real spaces. See the work.</h2>
-          </div>
-          <Link href="/projects" className={styles.projectsViewAllInline}>
-            See all {projects.length} projects &rarr;
-          </Link>
+        <div className={`${styles.sectionHeader} fade-in-up`}>
+          <p className={styles.eyebrow}>Installed Projects</p>
+          <h2>Real projects. Real spaces. See the work.</h2>
         </div>
         <div className={styles.projectStrip}>
           {featuredProjects.map((project) => {
@@ -292,13 +288,18 @@ export default function HomePage() {
             );
           })}
         </div>
+        <div className={`${styles.ctaRow} ${styles.center}`} style={{ marginTop: 32 }}>
+          <Link href="/projects" className={styles.secondaryCta}>
+            See All Projects
+          </Link>
+        </div>
       </section>
 
       {/* ── 5. Before & After Slider ── */}
       {beforeAfterProject && (
         <section className={styles.section}>
           <div className={`${styles.sectionHeader} fade-in-up`}>
-            <p className={styles.eyebrow}>Before &amp; After</p>
+            <p className={styles.eyebrow}>The Difference We Make</p>
             <h2>Same space. Completely different experience.</h2>
           </div>
           <div className={`${styles.beforeAfterWrap} fade-in-up`}>
@@ -312,7 +313,6 @@ export default function HomePage() {
           <div className={`${styles.beforeAfterInfo} fade-in-up`}>
             <h3>{beforeAfterProject.name}</h3>
             <span className={styles.beforeAfterDivider} />
-            <p>{beforeAfterProject.specifications?.[0]?.value || beforeAfterProject.category}</p>
             <Link href={`/projects/${beforeAfterProject.slug}`} className={styles.ghostCta} style={{ marginTop: 0 }}>
               See the Full Transformation
             </Link>
@@ -321,22 +321,23 @@ export default function HomePage() {
       )}
 
       {/* ── 6. Why DMD ── */}
-      <section className={`${styles.section} ${styles.altSection}`}>
+      <section className={`${styles.section} ${styles.altSection} ${styles.whySection}`}>
         <div className={`${styles.sectionHeader} fade-in-up`}>
           <p className={styles.eyebrow}>Why DMD</p>
           <h2>Six reasons owners and designers choose DMD.</h2>
         </div>
         <div className={styles.whyGrid}>
-          {whyDmd.map(([title, description]) => (
+          {whyDmd.map(([title, description], index) => (
             <article key={title} className={`${styles.whyCard} fade-in-up`}>
+              <span className={styles.whyCardNumber}>{String(index + 1).padStart(2, '0')}</span>
               <h3>{title}</h3>
               <p>{description}</p>
             </article>
           ))}
         </div>
-        <div className={styles.ctaRow} style={{ marginTop: 32 }}>
+        <div className={`${styles.ctaRow} ${styles.center}`} style={{ marginTop: 32 }}>
           <Link href="/about" className={styles.secondaryCta}>
-            Meet the Team Behind the Build
+            Learn About the DMD Team
           </Link>
         </div>
       </section>
@@ -345,7 +346,7 @@ export default function HomePage() {
       <section className={styles.section}>
         <div className={`${styles.sectionHeader} fade-in-up`}>
           <p className={styles.eyebrow}>How We Work</p>
-          <h2>Your project in six steps, from call to close-out.</h2>
+          <h2>Your project in seven phases, from first call to close out.</h2>
         </div>
         <div className={`${styles.processLayout} fade-in-up`}>
           <div className={styles.processSteps}>
@@ -368,9 +369,9 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <div className={styles.ctaRow} style={{ marginTop: 32 }}>
+        <div className={`${styles.ctaRow} ${styles.center}`} style={{ marginTop: 32 }}>
           <Link href="/services" className={styles.secondaryCta}>
-            Explore All Six Services
+            Explore All Services
           </Link>
         </div>
       </section>

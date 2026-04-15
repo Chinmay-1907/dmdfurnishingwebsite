@@ -1,13 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  GiMagnifyingGlass,
-  GiPencilRuler,
-  GiFactory,
-  GiChecklist,
-  GiCargoShip,
-  GiAutoRepair,
-} from 'react-icons/gi';
 import { getAllPlaces } from '../../lib/catalog';
 import { getAllProjects } from '../../lib/projects';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
@@ -19,129 +11,96 @@ import styles from './page.module.css';
 // Static data: services, process, FAQ
 // ---------------------------------------------------------------------------
 
-const coreServices = [
-  {
-    id: 'design-consultation',
-    title: 'Consultation & Project Discovery',
-    description:
-      'A walkthrough, a room count, a target budget. You leave with a written scope document and a preliminary BOQ you can take to ownership.',
-    Icon: GiMagnifyingGlass,
-    bullets: [
-      'On-site or virtual walkthrough of every room type',
-      'Realistic budget range based on scope and finish level',
-      'Written scope document and preliminary bill of quantities',
-    ],
-  },
-  {
-    id: 'design-support',
-    title: 'Design Support & Specifications',
-    description:
-      'We work next to your architect or designer, turning renderings into shop drawings, finish schedules, and fabric call-outs a factory can actually build from.',
-    Icon: GiPencilRuler,
-    bullets: [
-      'Material and finish selection with physical samples',
-      'Shop drawings and dimensioned layouts for approval',
-      'Spec sheets covering fabric grades, hardware, and finish codes',
-    ],
-  },
-  {
-    id: 'custom-manufacturing',
-    title: 'Manufacturing & Sourcing',
-    description:
-      'Domestic production for short runs, revisions, and time-sensitive jobs. Overseas partners for high-volume guestroom packages where unit cost matters. You pick the mix.',
-    Icon: GiFactory,
-    bullets: [
-      'Custom casegoods, seating, upholstery, and millwork',
-      'Domestic shop for prototypes and fast turns',
-      'Full material samples and optional pre-production prototypes',
-    ],
-  },
-  {
-    id: 'ffe-project-management',
-    title: 'FF&E Project Management',
-    description:
-      'One PM owns the job from signed PO to punch list. They track specs, change orders, vendor lead times, and budget. One weekly status update instead of twenty emails.',
-    Icon: GiChecklist,
-    bullets: [
-      'Spec sheet version control and change-order tracking',
-      'Weekly status reports against the baseline schedule',
-      'Budget tracking with variance flagged before it becomes a problem',
-    ],
-  },
-  {
-    id: 'logistics',
-    title: 'Logistics & Delivery Coordination',
-    description:
-      'Phased deliveries staged around your GC schedule, not the other way around. We warehouse and drop product room by room so your construction sequence never gets blocked.',
-    Icon: GiCargoShip,
-    bullets: [
-      'Warehousing and staging near the project site',
-      'Phased drops by floor, wing, or room type',
-      'Direct coordination with your general contractor',
-    ],
-  },
-  {
-    id: 'installation-setup',
-    title: 'Installation & Close-out',
-    description:
-      'Our crews assemble, place, level, and anchor every piece. We protect existing finishes, verify the piece count against the spec sheet, and hand you a punch list with every item closed.',
-    Icon: GiAutoRepair,
-    bullets: [
-      'Assembly, placement, leveling, and wall anchoring',
-      'Floor and millwork protection during install',
-      'Final walkthrough with warranty documentation packet',
-    ],
-  },
-];
-
 const processSteps = [
   {
     number: '01',
-    title: 'Consultation & Scope',
+    shortLabel: 'Intro Call',
+    title: 'Your First Call, No Commitment Yet',
     description:
-      'Walkthrough of every room type. Room counts, brand standards, and rough budget confirmed. You leave with a written scope document and a preliminary bill of quantities you can show ownership.',
-    timeline: 'Week 0\u20131',
-    deliverable: 'Scope document & preliminary BOQ',
+      'A short call or walkthrough so we can understand the property, the brand standards, and the timeline you are working against. You ask what you need to ask. We confirm whether DMD is the right partner for the job before anyone signs anything.',
+    bullets: [
+      'Virtual or on site walkthrough of the property',
+      'Your brand standards, operational needs, and timeline reviewed',
+      'Honest fit check, we tell you if it is not a match',
+    ],
   },
   {
     number: '02',
-    title: 'Design & Specifications',
+    shortLabel: 'Budget & Scope',
+    title: 'Room Count, Budget Range, Written Scope',
     description:
-      'Finish samples on the table. Fabric swatches, hardware samples, and shop drawings reviewed with your designer or architect. Nothing moves to production until the spec book is signed.',
-    timeline: 'Week 1\u20133',
-    deliverable: 'Approved specifications package',
+      'We walk the property, count room types, and set a realistic budget range grounded in finish level, not industry averages. You leave this phase with a written scope document and a preliminary bill of quantities ready for ownership review.',
+    bullets: [
+      'Every room type counted and confirmed by finish grade',
+      'Realistic budget range tied to actual scope and finish level',
+      'Written scope document and preliminary bill of quantities for ownership',
+    ],
+    deliverable: 'Written scope document with preliminary bill of quantities',
   },
   {
     number: '03',
-    title: 'Manufacturing & Sourcing',
+    shortLabel: 'Design & 3D',
+    title: 'Plan Every Room in 3D Before Anything Is Built',
     description:
-      'Production runs in our Foxboro shop or a partner factory, whichever fits your timeline. Progress photos at key milestones. Sample pieces verified against the signed spec before full production continues.',
-    timeline: 'Week 3\u20138',
-    deliverable: 'QA photos & production milestone reports',
+      'Our in house design team models every guest room and public space in 3D and plans layouts around the way your staff actually runs the property. You review renderings and physical material samples together. The spec book is not closed until you have signed off on every room and every detail.',
+    bullets: [
+      '3D renderings of every guest room and public space',
+      'Layouts planned around circulation, staff access, and daily operations',
+      'Brand standards and ADA requirements factored in from the first rendering',
+    ],
+    deliverable: 'Signed specifications package',
   },
   {
     number: '04',
-    title: 'Pre-Shipment QC',
+    shortLabel: 'Manufacturing',
+    title: 'Production: Foxboro Shop or Partner Factory',
     description:
-      'Every piece inspected against the approved spec sheet: dimensions, finish, hardware, fabric. Photo report sent before containers load. Nothing with a defect leaves the factory.',
-    timeline: 'Week 8\u20139',
-    deliverable: 'QC inspection report with photos',
+      'Our Foxboro shop handles prototypes, short runs, and anything that needs a fast revision cycle. Partner factories overseas handle high volume guestroom packages where unit economics matter. You pick the mix on every project.',
+    bullets: [
+      'Custom casegoods, seating, upholstery, and millwork',
+      'Sample pieces cleared against signed spec before the full run starts',
+      'Progress photos delivered at every production milestone',
+    ],
+    deliverable: 'Progress photos with production milestone reports',
   },
   {
     number: '05',
-    title: 'Delivery & Installation',
+    shortLabel: 'Factory QC',
+    title: 'Every Piece Inspected Before It Ships',
     description:
-      'Phased drops coordinated with your GC so furniture arrives as each space is ready. Assembly, placement, leveling, anchoring, and protection of existing finishes handled room by room.',
-    timeline: 'Week 9\u201311',
-    deliverable: 'Installed furniture, room-by-room',
+      'Dimensions, finish, hardware, and fabric each inspected against the signed spec sheet. Photo documentation compiled into a QC report. Nothing leaves until every item passes.',
+    bullets: [
+      'Dimensions, finish, hardware, and fabric each inspected against spec',
+      'Photo documentation compiled into a written QC report',
+      'Defects resolved before containers load',
+    ],
+    deliverable: 'Photo documented QC inspection report',
   },
   {
     number: '06',
-    title: 'Punch & Close-Out',
+    shortLabel: 'Delivery & Install',
+    title: 'Phased Delivery and On Site Installation',
     description:
-      'Final walkthrough with your team. Punch list items resolved on site. Warranty documentation, care instructions, and as-built piece count delivered in a written close-out packet.',
-    timeline: 'Week 11\u201312',
-    deliverable: 'Warranty packet & project close-out report',
+      'Furniture arrives in phased drops timed with your GC schedule so each space gets furnished as it opens. Assembly, placement, leveling, and anchoring handled room by room with existing finishes protected throughout.',
+    bullets: [
+      'Warehousing and staging near your project site',
+      'Phased drops by floor, wing, or room type, direct with your GC',
+      'Assembly, placement, leveling, and wall anchoring with floor and finish protection',
+    ],
+    deliverable: 'Installed furniture room by room',
+  },
+  {
+    number: '07',
+    shortLabel: 'Close Out',
+    title: 'Every Punch List Item Closed Before We Leave',
+    description:
+      'We walk every room with your team and resolve punch list items on the spot. You leave with warranty documentation, care instructions, and an as built piece count in a written close out packet.',
+    bullets: [
+      'Final walkthrough room by room with your team',
+      'Punch list items resolved on the spot, not logged for later',
+      'Warranty documentation, care instructions, and as built piece count',
+    ],
+    deliverable: 'Close out report and warranty packet handed over at final walkthrough',
   },
 ];
 
@@ -156,19 +115,19 @@ const serviceFaqs = [
   ],
   [
     'What are your lead times?',
-    'Typical lead times run multiple weeks from approved specifications to delivery on site. The exact number depends on scope, finish availability, and whether production runs through our domestic shop or an overseas partner. You get a written timeline at contract signing with dates for sample approval, production start, QC, and install.',
+    'Lead times depend on scope, finish availability, and whether production runs through our Foxboro shop or an overseas partner. Every project gets a written timeline at contract signing with dates for sample approval, production start, QC, and install.',
   ],
   [
     'Can you work with my designer or architect?',
-    'Yes. Most of our projects come in with a design team already engaged. We handle the manufacturing side: shop drawings, material substitution recommendations, and spec-sheet translation so the design intent survives the move from rendering to production line.',
+    'Yes. Most of our projects come in with a design team already engaged. We handle the manufacturing side: shop drawings, material substitution recommendations, and spec sheet translation so the design intent survives the move from rendering to production line.',
   ],
   [
     'Do you handle installation?',
-    'Yes. Our installation teams or vetted local partners assemble, place, level, and anchor every piece. We coordinate directly with your general contractor so deliveries arrive room-ready and installs sequence around the construction schedule, not across it.',
+    'Yes. Our installation teams or vetted local partners assemble, place, level, and anchor every piece. We coordinate directly with your general contractor so deliveries arrive room ready and installs sequence around the construction schedule, not across it.',
   ],
   [
     'What\u2019s the minimum project size?',
-    'A single restaurant dining room, a 10-room motel refresh, or a lobby and breakfast-area update are all inside our normal range. Small jobs get the same PM, the same QC process, and the same written timeline as a multi-property rollout.',
+    'A single restaurant dining room, a small motel refresh, or a lobby and breakfast area update are all inside our normal range. Small jobs get the same PM, the same QC process, and the same written timeline as a multi property rollout.',
   ],
   [
     'Do you provide samples before production?',
@@ -176,7 +135,7 @@ const serviceFaqs = [
   ],
   [
     'What warranty do you offer?',
-    'Warranty terms are documented in writing at project close-out and vary by product category and material. Frame warranties for seating, mechanism warranties for drawer hardware, and finish warranties for casegoods. We stand behind the spec sheet we build to.',
+    'Warranty terms are documented in writing at project close out and vary by product category and material. Frame warranties for seating, mechanism warranties for drawer hardware, and finish warranties for casegoods. We stand behind the spec sheet we build to.',
   ],
   [
     'What standards do you build to?',
@@ -195,16 +154,16 @@ const allProjects = getAllProjects();
 const industryDescriptions = {
   hotel: {
     description:
-      'Guestrooms, lobbies, breakfast rooms, and corridors. HPL worktops, upholstered headboards, and contract-grade seating sized for brand standards and five-year refresh cycles.',
+      'Guestrooms, lobbies, breakfast rooms, and corridors. HPL worktops, upholstered headboards, and contract-grade seating sized for brand standards and the refresh cycle the property runs on.',
     highlights: [
       'Guestroom packages: dressers, desks, nightstands, beds, luggage benches',
       'Lobby sofas, lounge chairs, and reception desks',
-      'Breakfast-area tables, stacking chairs, and booths',
+      'Breakfast area tables, stacking chairs, and booths',
     ],
   },
   restaurant: {
     description:
-      'Dining rooms, bar areas, patios, and quick-service counters. Chairs engineered for ten seatings a night. Tabletops specified to survive hot plates, spills, and daily sanitizing.',
+      'Dining rooms, bar areas, patios, and quick-service counters. Chairs engineered for nightly restaurant service. Tabletops specified to survive hot plates, spills, and daily sanitizing.',
     highlights: [
       'Dining tables, side chairs, and host stations',
       'Bar stools, banquettes, and booth systems',
@@ -329,7 +288,7 @@ const serviceSchemaEntries = [
     slug: 'logistics',
     name: 'Logistics & Delivery Coordination',
     description:
-      'DMD Furnishing sequences deliveries around your construction schedule, not the other way around. The team provides warehousing and staging, phased delivery scheduling, and site-readiness coordination with the general contractor so furniture arrives room-ready when each space is prepared to receive it during commercial project installation.',
+      'DMD Furnishing sequences deliveries around your construction schedule, not the other way around. The team provides warehousing and staging, phased delivery scheduling, and site readiness coordination with the general contractor so furniture arrives room ready when each space is prepared to receive it during commercial project installation.',
     serviceType: 'Installation',
   },
   {
@@ -354,14 +313,14 @@ const serviceSchema = {
     {
       '@type': 'ItemList',
       name: 'DMD Furnishing Services',
-      itemListElement: coreServices.map((service, index) => ({
+      itemListElement: serviceSchemaEntries.map((entry, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         item: {
           '@type': 'Service',
-          name: service.title,
-          description: service.description,
-          url: `${siteUrl}/services#${service.id}`,
+          name: entry.name,
+          description: entry.description,
+          url: `${siteUrl}/services`,
           provider: { '@type': 'Organization', name: 'DMD Furnishing' },
           areaServed: 'US',
         },
@@ -449,42 +408,10 @@ export default function ServicesPage() {
       </section>
 
       <div className={styles.shell}>
-        {/* ── 2. Services Grid ── */}
-        <section id="services-grid" className={styles.section}>
-          <p className={styles.eyebrow}>What We Do</p>
-          <h2>Six services, one contract, one team.</h2>
-          <p className={styles.sectionLede}>
-            Each service below answers a specific question: what gets built, who manages it,
-            how it ships, and who installs it. You can hire us for all six or plug us into
-            the phases where you need the most help.
-          </p>
-          <div className={styles.servicesGrid}>
-            {coreServices.map((service) => (
-              <article key={service.id} id={service.id} className={styles.serviceCard}>
-                <div className={styles.serviceIconWrap}>
-                  <service.Icon className={styles.serviceIcon} />
-                </div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <ul className={styles.serviceBullets}>
-                  {service.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* ── 3. Process Timeline ── */}
+        {/* ── 2. Process Timeline ── */}
         <section id="process" className={styles.section}>
           <p className={styles.eyebrow}>How We Work</p>
-          <h2>Six phases, each with a named deliverable.</h2>
-          <p className={styles.sectionLede}>
-            Every phase has a week range and a document you get at the end of it: scope
-            doc, approved specs, a QC report, a punch list sign-off. If a phase slips, you
-            see it in the weekly status report the same week it happens.
-          </p>
+          <h2>Seven phases, each with a named deliverable.</h2>
           <ProcessTimeline steps={processSteps} />
         </section>
 
@@ -493,7 +420,7 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>Industries We Serve</p>
           <h2>Built for {places.length} commercial environments.</h2>
           <p className={styles.sectionLede}>
-            Each industry has its own failure modes. Hotel dressers take suitcase impact. Restaurant chairs take ten seatings a night. Office workstations take daily keyboard wear. We spec materials and hardware to match.
+            Every commercial space has its own design language. Modern boutique hotels read differently than heritage country clubs. Sleek tech offices need a different palette than warm hospitality lobbies. We tailor materials, finishes, and proportions to the look and feel of the room.
           </p>
           <IndustryTabs industries={industries} />
         </section>
@@ -519,14 +446,11 @@ export default function ServicesPage() {
           <h2>Have a project in mind?</h2>
           <p className={styles.ctaLede}>
             Bring a room count and a target budget. Leave with a
-            realistic price range, a lead-time estimate, and a written list of next steps.
+            realistic price range, a lead time estimate, and a written list of next steps.
           </p>
           <div className={styles.ctaButtons}>
             <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
-            </Link>
-            <Link href="/contact" className={styles.secondaryBtn}>
-              Request a Quote
             </Link>
             <Link href="/projects" className={styles.tertiaryBtn}>
               View Our Projects

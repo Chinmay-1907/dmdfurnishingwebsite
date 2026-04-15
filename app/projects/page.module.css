@@ -60,6 +60,7 @@
   min-height: min(65vh, 480px);
   padding: var(--header-height, 90px) 24px 0;
   overflow: hidden;
+  margin-top: calc(-1 * var(--header-height));
 }
 
 .heroBg {
@@ -94,6 +95,8 @@
   max-width: 16ch;
   font-size: clamp(2.6rem, 5.5vw, 4.8rem);
   line-height: 1;
+  color: #F3EFE6;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
 .heroLede {
@@ -164,15 +167,23 @@
 }
 
 .primaryBtn {
-  color: #111;
-  background: linear-gradient(135deg, #c9a96e, #d4b87e);
+  color: #1a1a1a;
+  background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+  box-shadow: 0 4px 14px rgba(168, 50, 107, 0.22),
+              inset 0 1px 0 rgba(255, 240, 200, 0.25);
+  transition: transform 220ms cubic-bezier(0.33, 1, 0.68, 1),
+              box-shadow 380ms ease,
+              background-position 600ms ease;
 }
 
 .primaryBtn:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 6px 20px rgba(201, 169, 110, 0.3),
-    0 2px 12px rgba(164, 41, 99, 0.15);
+  background-position: 100% 50%;
+  box-shadow: 0 10px 28px rgba(201, 169, 110, 0.35),
+              0 0 22px rgba(168, 50, 107, 0.3),
+              inset 0 1px 0 rgba(255, 240, 200, 0.35);
 }
 
 .secondaryBtn {
@@ -486,4 +497,149 @@
   .section {
     padding: 48px 0;
   }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Light theme overrides — warm paper base, graphite ink.
+   Hero text stays off-white (dark overlay in both themes).
+   Gold remains decorative; magenta is the text-accent for AA.
+   ────────────────────────────────────────────────────────────── */
+:global([data-theme='light']) .page {
+  color: var(--text-primary);
+  background:
+    radial-gradient(ellipse 80% 50% at 15% 8%, rgba(201, 162, 95, 0.10), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 85% 25%, rgba(164, 41, 99, 0.06), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 75% 65%, rgba(201, 162, 95, 0.08), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 10% 80%, rgba(164, 41, 99, 0.05), transparent 45%),
+    linear-gradient(180deg, #F6F2EA 0%, #F1ECE1 50%, #EEE8DC 100%);
+}
+
+:global([data-theme='light']) .eyebrow {
+  background: none;
+  -webkit-text-fill-color: var(--accent-magenta);
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .section {
+  border-bottom: 1px solid rgba(20, 18, 14, 0.08);
+}
+
+:global([data-theme='light']) .sectionLede {
+  color: var(--text-secondary);
+}
+
+/* Hero overlay — softer wash, still dark enough to anchor off-white caption text */
+:global([data-theme='light']) .heroOverlay {
+  background:
+    linear-gradient(90deg, rgba(20, 18, 14, 0.82) 0%, rgba(20, 18, 14, 0.55) 55%, rgba(20, 18, 14, 0.25) 100%),
+    linear-gradient(180deg, rgba(246, 242, 234, 0.05) 0%, rgba(20, 18, 14, 0.6) 100%);
+}
+
+/* Hero text stays off-white — sits on dark overlay in both themes */
+:global([data-theme='light']) .heroLede {
+  color: rgba(244, 240, 230, 0.88);
+}
+
+/* Buttons */
+:global([data-theme='light']) .primaryBtn {
+  color: #1a1a1a;
+  background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+}
+
+:global([data-theme='light']) .primaryBtn:hover {
+  background-position: 100% 50%;
+  box-shadow: 0 10px 28px rgba(201, 169, 110, 0.35),
+              0 0 22px rgba(168, 50, 107, 0.3),
+              inset 0 1px 0 rgba(255, 240, 200, 0.35);
+}
+
+:global([data-theme='light']) .secondaryBtn {
+  color: var(--text-primary);
+  border: 1.5px solid rgba(201, 162, 95, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+:global([data-theme='light']) .secondaryBtn:hover {
+  border-color: var(--accent-magenta);
+  box-shadow: 0 0 16px rgba(164, 41, 99, 0.1);
+}
+
+/* Featured panel — white card with subtle shadow */
+:global([data-theme='light']) .featuredPanel {
+  background: var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.08);
+}
+
+:global([data-theme='light']) .featuredImageWrap {
+  border: 1px solid rgba(20, 18, 14, 0.08);
+}
+
+:global([data-theme='light']) .featuredDesc {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .specPill {
+  background: rgba(201, 162, 95, 0.14);
+}
+
+:global([data-theme='light']) .specPill .specLabel {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .specPill .specVal {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .featuredLink {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .featuredLink:hover {
+  color: #8B1F52;
+}
+
+/* Project cards — overlay keeps dark wash so text stays off-white */
+:global([data-theme='light']) .card {
+  border: 1px solid rgba(20, 18, 14, 0.12);
+  color: #f4f0e6;
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.08);
+}
+
+/* Pin hotel name to off-white — globals.css div rule can override inheritance */
+:global([data-theme='light']) .cardContent h3 {
+  color: #F3EFE6;
+}
+
+:global([data-theme='light']) .card:hover {
+  border-color: rgba(164, 41, 99, 0.3);
+  box-shadow:
+    0 18px 40px rgba(40, 30, 20, 0.18),
+    0 0 30px rgba(164, 41, 99, 0.08);
+}
+
+:global([data-theme='light']) .categoryPill {
+  background: rgba(201, 162, 95, 0.25);
+  color: #f4f0e6;
+}
+
+/* CTA */
+:global([data-theme='light']) .ctaLede {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .ctaContact {
+  color: var(--text-muted);
+}
+
+:global([data-theme='light']) .ctaContact a {
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--accent-gold);
+}
+
+:global([data-theme='light']) .ctaContact a:hover {
+  color: var(--accent-magenta);
+  border-bottom-color: var(--accent-magenta);
 }

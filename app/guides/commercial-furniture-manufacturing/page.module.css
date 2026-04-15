@@ -376,3 +376,179 @@
   color: #e2c98e;
   border-color: #C9A96E !important;
 }
+
+/* ============================================================
+   Light theme overrides — warm paper base, graphite ink.
+   TOC + article body become white surfaces; magenta is the
+   text-accent; gold stays for borders, markers, and button bgs.
+   ============================================================ */
+:global([data-theme='light']) .page {
+  color: var(--text-primary);
+  background: #F6F2EA;
+}
+
+/* Hero */
+:global([data-theme='light']) .hero {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201, 162, 95, 0.14), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(201, 162, 95, 0.08), transparent 40%),
+    linear-gradient(180deg, #F1ECE1, #F6F2EA);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .breadcrumb {
+  color: var(--text-muted);
+}
+
+:global([data-theme='light']) .breadcrumb a {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .breadcrumb a:hover {
+  color: #8B1F52;
+}
+
+:global([data-theme='light']) .eyebrow {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .h1 {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .lede {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .meta {
+  color: var(--text-muted);
+}
+
+:global([data-theme='light']) .meta a {
+  color: var(--accent-magenta);
+  border-bottom: 1px solid rgba(164, 41, 99, 0.35);
+}
+
+:global([data-theme='light']) .meta a:hover {
+  color: #8B1F52;
+  border-bottom-color: #8B1F52;
+}
+
+/* TOC — white card */
+:global([data-theme='light']) .toc {
+  background: var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.06);
+}
+
+:global([data-theme='light']) .tocTitle {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .tocList li {
+  border-bottom: 1px dashed rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .tocList li::before {
+  color: var(--accent-gold-hover);
+}
+
+:global([data-theme='light']) .tocList a {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .tocList a:hover {
+  color: var(--accent-magenta);
+}
+
+/* Article */
+:global([data-theme='light']) .article h2 {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .article h2::after {
+  background: linear-gradient(90deg, var(--accent-gold), rgba(201, 162, 95, 0.3));
+}
+
+:global([data-theme='light']) .article p {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .article p strong {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .article a {
+  color: var(--accent-magenta);
+  border-bottom: 1px solid rgba(164, 41, 99, 0.35);
+}
+
+:global([data-theme='light']) .article a:hover {
+  color: #8B1F52;
+  border-bottom-color: #8B1F52;
+}
+
+:global([data-theme='light']) .article ul,
+:global([data-theme='light']) .article ol {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .article li::marker {
+  color: var(--accent-gold-hover);
+}
+
+/* FAQ */
+:global([data-theme='light']) .faqSection {
+  border-top: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .faqItem {
+  border-bottom: 1px solid rgba(201, 162, 95, 0.22);
+}
+
+:global([data-theme='light']) .faqQuestion {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .faqQuestion::after {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .faqAnswer {
+  color: var(--text-secondary);
+}
+
+/* CTA block — white card with gold trim */
+:global([data-theme='light']) .ctaBlock {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(201, 162, 95, 0.12), transparent 45%),
+    linear-gradient(135deg, var(--bg-surface), var(--bg-surface-muted));
+  border: 1px solid rgba(201, 162, 95, 0.35);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.08);
+}
+
+:global([data-theme='light']) .ctaBlock p {
+  color: var(--text-secondary);
+}
+
+/* Buttons */
+:global([data-theme='light']) .primaryBtn {
+  background: var(--accent-gold);
+  color: var(--text-on-accent) !important;
+}
+
+:global([data-theme='light']) .primaryBtn:hover {
+  background: var(--accent-gold-hover);
+  color: var(--text-on-accent) !important;
+}
+
+:global([data-theme='light']) .secondaryBtn {
+  color: var(--text-primary);
+  border: 1px solid rgba(201, 162, 95, 0.5) !important;
+}
+
+:global([data-theme='light']) .secondaryBtn:hover {
+  background: rgba(201, 162, 95, 0.14);
+  color: var(--accent-magenta);
+  border-color: var(--accent-gold-hover) !important;
+}

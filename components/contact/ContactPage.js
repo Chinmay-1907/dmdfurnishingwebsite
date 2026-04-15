@@ -90,10 +90,10 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     } else if (formData.projectCategory === 'healthcare') {
       if (formData.areaType.length) details.push(`Area Type: ${formData.areaType.join(', ')}`);
     }
-    const baseMessage = `I'm looking at commercial furniture for ${categoryLabel} and would like to set up a call to walk through scope, materials, and lead times for my project.`;
+    const baseMessage = `I am looking at commercial furniture for ${categoryLabel} and would like to set up a call to walk through scope, materials, and lead times for my project.`;
     const detailsText = details.length ? `\n\nProject Details:\n${details.join('\n')}` : '';
     setFormData((current) => {
-      const shouldUpdate = !current.message || current.message.startsWith("I'm looking at commercial furniture for");
+      const shouldUpdate = !current.message || current.message.startsWith('I am looking at commercial furniture for') || current.message.startsWith("I'm looking at commercial furniture for");
       return shouldUpdate ? { ...current, message: `${baseMessage}${detailsText}` } : current;
     });
   }, [categoryLabel, formData.areaType, formData.furnitureNeeded, formData.projectCategory, formData.projectScope, formData.roomCount, formData.roomTypes, formData.restaurantType, formData.seatingCapacity, formData.spaceType, formData.teamSize, step]);
@@ -325,10 +325,12 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     <main className="cp-page">
       {/* ── HERO BANNER ── */}
       <section className="cp-hero">
-        <p className="cp-eyebrow">Get In Touch</p>
-        <h1>Let&#39;s Talk About Your Project</h1>
+        <p className="cp-eyebrow">Contact DMD Furnishing</p>
+        <h1>Talk to a Project Manager, Not a Form Robot.</h1>
         <p className="cp-hero-sub">
-          Call us to walk through scope, materials, budgets, and timelines. Or send us a message and we&#39;ll follow up within one business day.
+          Request a project estimate, book a hospitality furniture consultation, or send a
+          message about scope, materials, budgets, and lead times. A DMD project manager
+          reads every inquiry.
         </p>
       </section>
 
@@ -371,18 +373,18 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                       <div className="cp-schedule-icon-wrap">
                         <FaCalendarAlt />
                       </div>
-                      <h2>Book a Consultation</h2>
-                      <p>Pick a time that works for you. We&#39;ll walk through your project scope, materials, budget, and timeline.</p>
+                      <h2>Book a Hospitality Furniture Consultation</h2>
+                      <p>Pick a time that works for you. We walk through project scope, materials, budget, and lead times on the call.</p>
                     </div>
 
                     <div className="cp-schedule-benefits">
                       <div className="cp-schedule-benefit">
                         <FaCheckCircle />
-                        <span>No obligation</span>
+                        <span>No commitment yet</span>
                       </div>
                       <div className="cp-schedule-benefit">
                         <FaCheckCircle />
-                        <span>Focused consultation session</span>
+                        <span>Focused working session, no sales pitch</span>
                       </div>
                       <div className="cp-schedule-benefit">
                         <FaCheckCircle />
@@ -409,11 +411,11 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 {step === 'success' ? (
                   <div className="cp-success">
                     <div className="cp-success-icon"><FaCheckCircle /></div>
-                    <h2>Request Received</h2>
+                    <h2>Request Received. We Are On It.</h2>
                     <p>
-                      Thanks, your request is in. A DMD project manager will review your scope
-                      and respond within one business day, usually with a short list of clarifying
-                      questions so we can prepare a realistic budget range before the call.
+                      A DMD project manager will review your scope and reply directly,
+                      usually with a short list of clarifying questions so we can prepare a
+                      realistic budget range before the call.
                     </p>
                     <button type="button" className="cp-btn cp-btn-gold" onClick={() => router.push('/')}>
                       Return Home
@@ -422,8 +424,8 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 ) : (
                   <div className="cp-form-card">
                     <div className="cp-form-header">
-                      <h2>Request a Consultation</h2>
-                      <p>Fill out the form and our team will get back to you within one business day.</p>
+                      <h2>Request a Project Estimate</h2>
+                      <p>Tell us about the project. A DMD project manager will reply with the next step, not an autoresponder.</p>
                     </div>
 
                     {/* Step indicators */}
@@ -454,7 +456,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                               {submitStatus === 'sending' ? 'Sending...' : 'Verify Email'}
                             </button>
                           </div>
-                          <p className="cp-helper">We send a one-time code to verify your email. This keeps our inbox clean of spam so a real PM can follow up.</p>
+                          <p className="cp-helper">We send a one time code to confirm your email. Keeps spam out of our inbox so a real PM can follow up with you.</p>
                         </div>
                         {errorMessage && <div className="cp-error">{errorMessage}</div>}
                       </form>
@@ -525,7 +527,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
 
                         <div className="cp-form-actions">
                           <button type="submit" className="cp-btn cp-btn-gold cp-btn-full" disabled={submitStatus === 'sending'}>
-                            {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Consultation'}
+                            {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Project Estimate'}
                           </button>
                         </div>
                         {errorMessage && <div className="cp-error">{errorMessage}</div>}
@@ -540,7 +542,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
           {/* ── INFO COLUMN ── */}
           <div className="cp-info-col">
             <div className="cp-info-card">
-              <h3>Get in Touch</h3>
+              <h3>Reach DMD Furnishing Directly</h3>
               <div className="cp-info-item">
                 <div className="cp-info-icon"><FaMapMarkerAlt /></div>
                 <div>
@@ -578,8 +580,8 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
       {/* ── MAP (pushed well below fold) ── */}
       <section className="cp-map-section">
         <div className="cp-map-heading">
-          <h2>Visit Our Showroom</h2>
-          <p>56 Leonard St Unit 5, Foxboro, MA 02035</p>
+          <h2>Visit the Foxboro Shop and Showroom</h2>
+          <p>56 Leonard St Unit 5, Foxboro, MA 02035. About 30 miles south of Boston.</p>
         </div>
         <div className="cp-map-card">
           <iframe

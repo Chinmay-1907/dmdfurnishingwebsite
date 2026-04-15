@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projects>
   <project id="quality-inn-gainesville" name="Quality Inn - Gainesville, FL" category="Hospitality">
-    <shortDescription>Complete furnishing solution for a hotel renovation, including guest rooms, lobby, and dining areas with custom-designed furniture pieces.</shortDescription>
-    <fullDescription>This comprehensive renovation project for Quality Inn in Gainesville, Florida involved furnishing 60 guest rooms, the main lobby, reception area, and dining facilities. Our team worked closely with the hotel management to create a cohesive design that balanced comfort, durability, and aesthetic appeal. The project was completed efficiently, with minimal disruption to hotel operations.</fullDescription>
+    <shortDescription>Full property FF&amp;E package for a 60 room Quality Inn, covering guestrooms, lobby, reception, and dining area.</shortDescription>
+    <fullDescription>DMD manufactured and installed the complete FF&amp;E package for Quality Inn Gainesville: 60 guestrooms plus the main lobby, reception desk, and dining area. Scope covered custom casegoods, seating, and dining furniture in HPL surfaces and commercial-grade fabrics, tied to an earth tone palette with blue accents. Delivery and install were phased room by room and coordinated with the property's operations team.</fullDescription>
     <completionDate>June 2022</completionDate>
     <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
     <clientName>DMD Furnishing Team</clientName>
@@ -35,20 +35,20 @@
       <spec name="Project Duration" value="10 weeks" />
       <spec name="Total Furniture Pieces" value="580+ pieces" />
       <spec name="Custom Furniture Suite" value="15 custom furniture pieces" />
-      <spec name="Materials Used" value="HPL - MDF, commercial-grade fabrics" />
+      <spec name="Materials Used" value="HPL over MDF, commercial-grade fabrics" />
       <spec name="Color Palette" value="Earth tones with blue accents" />
     </specifications>
     <highlights>
-      <highlight>Custom-designed headboards for all guest rooms</highlight>
-      <highlight>Ergonomic desk setups with integrated power solutions</highlight>
-      <highlight>Modular lobby seating that can be reconfigured for events</highlight>
-      <highlight>Dining furniture designed for heavy use while maintaining elegance</highlight>
-      <highlight>Accessible designs throughout the property</highlight>
+      <highlight>Custom headboards built for every guestroom</highlight>
+      <highlight>Desks with integrated power and cable management at each work surface</highlight>
+      <highlight>Modular lobby seating that reconfigures for events</highlight>
+      <highlight>Dining furniture specified for heavy daily service</highlight>
+      <highlight>ADA accessible layouts across all public spaces</highlight>
     </highlights>
   </project>
   <project id="towne-lyne-motel-ogunquit" name="Towne Lyne Motel - Ogunquit, ME" category="Hospitality">
-    <shortDescription>Custom-designed furniture for a boutique motel, featuring coastal-inspired pieces that blend comfort with local aesthetic elements.</shortDescription>
-    <fullDescription>The Towne Lyne Motel in Ogunquit, Maine underwent a complete transformation to create a boutique experience that celebrates the coastal charm of the region. Our team designed and manufactured custom furniture pieces that incorporate nautical elements while providing modern comfort. The project included 20 guest rooms, a small lobby, and an outdoor lounge area, all designed to create a cohesive, memorable guest experience.</fullDescription>
+    <shortDescription>Coastal boutique refresh for a 20 room Ogunquit motel, with nautical custom casegoods across guestrooms, lobby, and outdoor lounge.</shortDescription>
+    <fullDescription>The Towne Lyne Motel in Ogunquit, Maine moved from standard motel stock to a boutique coastal experience. DMD designed and built custom casegoods, seating, and outdoor lounge pieces using pre-laminated MDF and commercial-grade fabrics in a blue, white, and natural wood palette. Scope covered 20 guestrooms, a small lobby, and an outdoor lounge area, with finishes selected to hold up to seaside humidity and salt air.</fullDescription>
     <completionDate>April 2023</completionDate>
     <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
     <clientName>DMD Furnishing Team</clientName>
@@ -104,15 +104,15 @@
       <spec name="Color Palette" value="Blues, whites, and natural wood tones" />
     </specifications>
     <highlights>
-      <highlight>Custom furniture inspired by coastal motifs</highlight>
-      <highlight>Weather-resistant finishes suitable for seaside conditions</highlight>
-      <highlight>Outdoor lounge seating designed for guest relaxation</highlight>
-      <highlight>Lobby furnishings that blend modern and nautical styles</highlight>
-      <highlight>Coordinated color palette across rooms and shared spaces</highlight>
+      <highlight>Custom casegoods inspired by coastal and nautical motifs</highlight>
+      <highlight>Finishes specified for seaside humidity and salt exposure</highlight>
+      <highlight>Outdoor lounge seating built for year round guest use</highlight>
+      <highlight>Lobby furniture blending modern lines with nautical accents</highlight>
+      <highlight>One unified palette across all rooms and shared spaces</highlight>
     </highlights>
   </project>
   <project id="quality-inn-bangor-maine" name="Quality Inn - Bangor, ME" category="Hospitality">
-    <shortDescription>Guestroom and common area updates in Bangor.</shortDescription>
+    <shortDescription>Full guestroom refresh at a 98 room Quality Inn in Bangor, Maine, with coordinated casegoods and soft seating across every unit.</shortDescription>
     <mainImage src="/Images/Projects/QualityInn - Bangor Maine/IMG_1.png" alt="Quality Inn Bangor project main" />
     <images>
       <image id="1" src="/Images/Projects/QualityInn - Bangor Maine/IMG_5211.jpeg" alt="Quality Inn Bangor project image 1" />
@@ -155,7 +155,7 @@
       <image id="38" src="/Images/Projects/QualityInn - Bangor Maine/PHOTO-2025-03-28-12-45-42.jpg" alt="Quality Inn Bangor project image 38" />
     </images>
 
-    <fullDescription>Guestroom and common area updates in Bangor, ME. This project involved furnishing 98 guest rooms to meet modern standards of comfort and style.</fullDescription>
+    <fullDescription>DMD delivered the full guestroom package for Quality Inn Bangor: 98 rooms in one coordinated scope. Casegoods, beds, seating, and soft goods were built from HPL surfaces over MDF substrates with commercial-grade upholstery fabrics throughout. Production ran through DMD's Foxboro shop and partner factories to hit the property's window, with install phased to maintain guest operations through the refresh.</fullDescription>
     <completionDate>2024</completionDate>
     <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
     <clientName>DMD Furnishing Team</clientName>
@@ -165,11 +165,14 @@
       <spec name="Project Duration" value="12 weeks" />
       <spec name="Total Furniture Pieces" value="Full room package" />
       <spec name="Custom Furniture Suite" value="Included" />
-      <spec name="Materials Used" value="HPL - MDF, commercial-grade fabrics" />
+      <spec name="Materials Used" value="HPL over MDF, commercial-grade fabrics" />
     </specifications>
     <highlights>
-      <highlight>Complete guestroom refresh</highlight>
-      <highlight>Modern durability standards</highlight>
+      <highlight>Full guestroom FF&amp;E package delivered to 98 rooms</highlight>
+      <highlight>HPL surfaces over MDF substrates for daily wear resistance</highlight>
+      <highlight>Commercial-grade fabrics throughout all soft goods</highlight>
+      <highlight>Phased install coordinated with ongoing property operations</highlight>
+      <highlight>Casegoods, beds, seating, and lighting in one coordinated scope</highlight>
     </highlights>
     <beforeImages>
       <image id="b1" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 2.jpg" alt="Quality Inn Bangor before image 1" />
@@ -184,7 +187,7 @@
   </project>
 
   <project id="usa-inn-wells-me" name="USA INN - Wells, ME" category="Hospitality">
-    <shortDescription>Guestroom refresh and improvements in Wells, ME.</shortDescription>
+    <shortDescription>Full guestroom refresh at a 50 room motel in Wells, Maine, replacing dated casegoods and soft goods across every unit.</shortDescription>
     <mainImage src="/Images/Projects/USA INN - Wells, ME/IMG_1.png" alt="USA INN Wells project main" />
     <images>
       <image id="1" src="/Images/Projects/USA INN - Wells, ME/IMG_3973.jpg" alt="USA INN Wells project image 1" />
@@ -196,7 +199,7 @@
       <image id="7" src="/Images/Projects/USA INN - Wells, ME/IMG_3947-300x225.jpg" alt="USA INN Wells project image 7" />
     </images>
 
-    <fullDescription>Guestroom refresh and improvements in Wells, ME. This project involved furnishing 50 guest rooms, ensuring a welcoming environment for guests.</fullDescription>
+    <fullDescription>USA INN in Wells, Maine needed every guestroom brought up to current standard in a compressed seasonal window. DMD manufactured and installed the full room package across 50 guestrooms: casegoods, beds, seating, and coordinated soft goods in pre-laminated MDF and commercial-grade fabrics. Before and after photography from the project is captured in the gallery below.</fullDescription>
     <completionDate>2024</completionDate>
     <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
     <clientName>DMD Furnishing Team</clientName>
@@ -209,8 +212,11 @@
       <spec name="Materials Used" value="Pre-laminated MDF, commercial-grade fabrics" />
     </specifications>
     <highlights>
-      <highlight>Guestroom updates</highlight>
-      <highlight>Enhanced guest comfort</highlight>
+      <highlight>Full room package delivered to 50 guestrooms</highlight>
+      <highlight>Pre-laminated MDF casegoods for moisture tolerance</highlight>
+      <highlight>Commercial-grade fabrics across all soft goods</highlight>
+      <highlight>Install completed inside a compressed seasonal window</highlight>
+      <highlight>Complete visual turnaround documented in before and after photos</highlight>
     </highlights>
     <beforeImages>
       <image id="b1" src="/Images/Projects/USA INN - Wells, ME/Before/3-3-300x200.jpg" alt="USA INN Wells before image 1" />
@@ -226,25 +232,25 @@
     </beforeImages>
   </project>
 
-  <project id="surestay-bw-fredrick-md" name="SureStay by BW - Fredrick, MD" category="Hospitality">
-    <shortDescription>Guestroom refresh and common area updates in Fredrick, MD.</shortDescription>
-    <mainImage src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1.png" alt="SureStay Fredrick project main" />
+  <project id="surestay-bw-fredrick-md" name="SureStay by BW - Frederick, MD" category="Hospitality">
+    <shortDescription>Full guestroom and common area refresh at a 57 room SureStay by Best Western in Frederick, Maryland.</shortDescription>
+    <mainImage src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1.png" alt="SureStay Frederick project main" />
     <images>
-      <image id="2" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_2.png" alt="SureStay Fredrick project image 2" />
-      <image id="3" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_3.png" alt="SureStay Fredrick project image 3" />
-      <image id="4" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_4.png" alt="SureStay Fredrick project image 4" />
-      <image id="5" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_5.png" alt="SureStay Fredrick project image 5" />
-      <image id="6" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1205.jpeg" alt="SureStay Fredrick project image 6" />
-      <image id="7" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1207.jpeg" alt="SureStay Fredrick project image 7" />
-      <image id="8" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1209.jpeg" alt="SureStay Fredrick project image 8" />
-      <image id="9" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1210.jpeg" alt="SureStay Fredrick project image 9" />
-      <image id="10" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1211.jpeg" alt="SureStay Fredrick project image 10" />
-      <image id="11" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-1.png" alt="SureStay Fredrick project image 11" />
-      <image id="12" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-2.png" alt="SureStay Fredrick project image 12" />
-      <image id="13" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-4.png" alt="SureStay Fredrick project image 13" />
+      <image id="2" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_2.png" alt="SureStay Frederick project image 2" />
+      <image id="3" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_3.png" alt="SureStay Frederick project image 3" />
+      <image id="4" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_4.png" alt="SureStay Frederick project image 4" />
+      <image id="5" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_5.png" alt="SureStay Frederick project image 5" />
+      <image id="6" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1205.jpeg" alt="SureStay Frederick project image 6" />
+      <image id="7" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1207.jpeg" alt="SureStay Frederick project image 7" />
+      <image id="8" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1209.jpeg" alt="SureStay Frederick project image 8" />
+      <image id="9" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1210.jpeg" alt="SureStay Frederick project image 9" />
+      <image id="10" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1211.jpeg" alt="SureStay Frederick project image 10" />
+      <image id="11" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-1.png" alt="SureStay Frederick project image 11" />
+      <image id="12" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-2.png" alt="SureStay Frederick project image 12" />
+      <image id="13" src="/Images/Projects/SureStay by BW - Fredrick MD/SSBW-4.png" alt="SureStay Frederick project image 13" />
     </images>
 
-    <fullDescription>Guestroom refresh and common area updates in Fredrick, MD. This project included furnishing 57 guest rooms and common areas.</fullDescription>
+    <fullDescription>DMD delivered the complete FF&amp;E refresh at SureStay by Best Western in Frederick, Maryland. Scope covered 57 guestrooms plus lobby and common area furniture, built from pre-laminated MDF and matched to Best Western brand standards. Install was phased to maintain property operations through the project.</fullDescription>
     <completionDate>2024</completionDate>
     <clientTestimonial>We are family and still support their needs and if have any questions post installation.</clientTestimonial>
     <clientName>DMD Furnishing Team</clientName>
@@ -257,11 +263,14 @@
       <spec name="Materials Used" value="Pre-laminated MDF" />
     </specifications>
     <highlights>
-      <highlight>Common area revitalization</highlight>
-      <highlight>Guest room modernization</highlight>
+      <highlight>Full FF&amp;E refresh across 57 guestrooms and common spaces</highlight>
+      <highlight>Pre-laminated MDF casegoods specified for daily wear</highlight>
+      <highlight>Furniture matched to Best Western brand standards</highlight>
+      <highlight>Lobby and guest areas updated in one coordinated scope</highlight>
+      <highlight>Phased install maintained guest operations through the project</highlight>
     </highlights>
     <beforeImages>
-      <image id="b1" src="/Images/Projects/SureStay by BW - Fredrick MD/Before/SSBW-3 old.png" alt="SureStay Fredrick before image 1" />
+      <image id="b1" src="/Images/Projects/SureStay by BW - Fredrick MD/Before/SSBW-3 old.png" alt="SureStay Frederick before image 1" />
     </beforeImages>
   </project>
 

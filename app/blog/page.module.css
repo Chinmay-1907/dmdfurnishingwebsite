@@ -1209,3 +1209,522 @@ ul.tocList a:hover::before {
     white-space: nowrap;
   }
 }
+
+/* ============================================================
+   Light theme overrides — warm paper base, graphite ink.
+   Blog cards flip to white surfaces; magenta for text-accents;
+   gold retained for borders, bullet-markers, and decorative lines.
+   ============================================================ */
+:global([data-theme='light']) .blogPage {
+  background: #F6F2EA;
+  color: var(--text-primary);
+  background-image:
+    radial-gradient(circle at 85% -5%, rgba(201, 162, 95, 0.1), transparent 45%),
+    radial-gradient(circle at 5% 12%, rgba(201, 162, 95, 0.06), transparent 40%);
+}
+
+:global([data-theme='light']) .blogArticle {
+  background: #F6F2EA;
+  color: var(--text-primary);
+  background-image:
+    radial-gradient(circle at 82% -4%, rgba(201, 162, 95, 0.1), transparent 42%),
+    radial-gradient(circle at 8% 18%, rgba(201, 162, 95, 0.05), transparent 38%);
+}
+
+/* Breadcrumb */
+:global([data-theme='light']) .breadcrumb {
+  color: var(--text-muted);
+}
+
+:global([data-theme='light']) .breadcrumb a {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .breadcrumb a:hover {
+  color: #8B1F52;
+}
+
+/* Index header */
+:global([data-theme='light']) .indexHeader {
+  border-bottom: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .indexTitle {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .indexIntro {
+  color: var(--text-secondary);
+}
+
+/* Blog card — white surface */
+:global([data-theme='light']) .card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.08);
+}
+
+:global([data-theme='light']) .card:hover {
+  border-color: rgba(164, 41, 99, 0.3);
+  box-shadow: 0 18px 40px rgba(40, 30, 20, 0.14);
+}
+
+:global([data-theme='light']) .cardDate {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .cardTitle {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .card:hover .cardTitle {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .cardExcerpt {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .cardReadMore {
+  color: var(--accent-magenta);
+}
+
+/* Article typography */
+:global([data-theme='light']) .articleHeader {
+  border-bottom: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .articleMeta {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .articleTitle {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .articleLead {
+  color: var(--text-secondary);
+}
+
+/* Body content */
+:global([data-theme='light']) .content {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .content h2 {
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .content h2::before {
+  background: linear-gradient(90deg, var(--accent-gold), rgba(201, 162, 95, 0));
+}
+
+:global([data-theme='light']) .content h3 {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .content p {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .content ul,
+:global([data-theme='light']) .content ol {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .content ul li::marker {
+  color: var(--accent-gold-hover);
+}
+
+:global([data-theme='light']) .content ol li::marker {
+  color: var(--accent-gold-hover);
+}
+
+:global([data-theme='light']) .content a {
+  color: var(--accent-magenta);
+  text-decoration-color: rgba(164, 41, 99, 0.4);
+}
+
+:global([data-theme='light']) .content a:hover {
+  color: #8B1F52;
+  text-decoration-color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .content strong {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .content em {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .content code {
+  background: rgba(201, 162, 95, 0.12);
+  border: 1px solid rgba(201, 162, 95, 0.3);
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .content mark {
+  background: rgba(201, 162, 95, 0.22);
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .content hr {
+  border-top: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .content img,
+:global([data-theme='light']) .content figure {
+  border: 1px solid rgba(20, 18, 14, 0.08);
+}
+
+/* Raw table */
+:global([data-theme='light']) .content table {
+  border: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .content thead th {
+  background: rgba(201, 162, 95, 0.14);
+  color: var(--accent-magenta);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.35);
+}
+
+:global([data-theme='light']) .content tbody td {
+  border-bottom: 1px solid rgba(20, 18, 14, 0.06);
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .content tbody tr:nth-child(odd) td {
+  background: rgba(201, 162, 95, 0.04);
+}
+
+:global([data-theme='light']) .content tbody tr:hover td {
+  background: rgba(201, 162, 95, 0.1);
+}
+
+/* Checklist */
+:global([data-theme='light']) .checklist li {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .checklist li::before {
+  color: var(--accent-gold-hover);
+  background: rgba(201, 162, 95, 0.14);
+  border: 1px solid rgba(201, 162, 95, 0.4);
+}
+
+/* Callout */
+:global([data-theme='light']) .callout {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.14), transparent 55%),
+    rgba(201, 162, 95, 0.08);
+  border-left: 3px solid var(--accent-gold-hover);
+  border-top: 1px solid rgba(201, 162, 95, 0.25);
+  border-right: 1px solid rgba(201, 162, 95, 0.18);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.18);
+}
+
+:global([data-theme='light']) .callout p {
+  color: var(--text-primary) !important;
+}
+
+/* FAQ */
+:global([data-theme='light']) .faq {
+  border-top: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .faqTitle {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .faqItem {
+  background: var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+}
+
+:global([data-theme='light']) .faqItem:hover {
+  border-color: rgba(164, 41, 99, 0.3);
+  background: rgba(164, 41, 99, 0.04);
+}
+
+:global([data-theme='light']) .faqQuestion {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .faqQuestion::before {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .faqAnswer {
+  color: var(--text-secondary);
+}
+
+/* Details/summary */
+:global([data-theme='light']) .content details {
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  background: var(--bg-surface);
+}
+
+:global([data-theme='light']) .content details[open] {
+  border-color: rgba(164, 41, 99, 0.3);
+  background: rgba(164, 41, 99, 0.04);
+}
+
+:global([data-theme='light']) .content details summary {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .content details summary::after {
+  color: var(--accent-magenta);
+}
+
+/* CTA block */
+:global([data-theme='light']) .ctaBlock {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.12), transparent 55%),
+    linear-gradient(180deg, var(--bg-surface), var(--bg-surface-muted));
+  border: 1px solid rgba(201, 162, 95, 0.35);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.08);
+}
+
+:global([data-theme='light']) .ctaBlock p {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .ctaLink {
+  color: var(--text-on-accent) !important;
+  background: var(--accent-gold);
+  box-shadow: 0 6px 20px rgba(201, 162, 95, 0.25);
+}
+
+:global([data-theme='light']) .ctaLink:hover {
+  background: var(--accent-gold-hover);
+  color: var(--text-on-accent) !important;
+  box-shadow: 0 10px 28px rgba(201, 162, 95, 0.4);
+}
+
+/* Progress bar — keep gold gradient */
+:global([data-theme='light']) .progressBar {
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-magenta));
+}
+
+/* Comparison table */
+:global([data-theme='light']) .comparisonTable {
+  border: 1px solid rgba(201, 162, 95, 0.35);
+}
+
+:global([data-theme='light']) .comparisonTable thead th {
+  background: rgba(201, 162, 95, 0.14);
+  color: var(--accent-magenta);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.35);
+}
+
+:global([data-theme='light']) .comparisonTable tbody td {
+  border-bottom: 1px solid rgba(20, 18, 14, 0.06);
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .comparisonTable tbody tr:nth-child(odd) td {
+  background: rgba(201, 162, 95, 0.04);
+}
+
+:global([data-theme='light']) .comparisonTable tbody tr:hover td {
+  background: rgba(201, 162, 95, 0.1);
+}
+
+/* Timeline */
+:global([data-theme='light']) .timeline::before {
+  background: linear-gradient(180deg, var(--accent-gold), rgba(201, 162, 95, 0.25));
+}
+
+:global([data-theme='light']) .timelineItem {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.08), transparent 60%),
+    var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.06);
+}
+
+:global([data-theme='light']) .timelineItem:hover {
+  border-color: rgba(164, 41, 99, 0.3);
+}
+
+:global([data-theme='light']) .timelineItem::before {
+  background: var(--accent-gold-hover);
+  border: 2px solid #F6F2EA;
+  box-shadow: 0 0 0 3px rgba(201, 162, 95, 0.25);
+}
+
+:global([data-theme='light']) .timelinePhase {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .timelineTitle {
+  color: var(--text-primary);
+}
+
+/* Pull quote */
+:global([data-theme='light']) .pullQuote {
+  border-left: 4px solid var(--accent-gold-hover);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.12), transparent 60%),
+    rgba(201, 162, 95, 0.06);
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .pullQuote::before {
+  color: rgba(201, 162, 95, 0.6);
+}
+
+/* Stat grid */
+:global([data-theme='light']) .statBox {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(201, 162, 95, 0.1), transparent 65%),
+    var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.06);
+}
+
+:global([data-theme='light']) .statBox:hover {
+  border-color: rgba(164, 41, 99, 0.3);
+}
+
+:global([data-theme='light']) .statNumber {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .statLabel {
+  color: var(--text-muted);
+}
+
+/* Pro tip */
+:global([data-theme='light']) .proTip {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.14), transparent 55%),
+    rgba(201, 162, 95, 0.08);
+  border: 1px solid rgba(201, 162, 95, 0.35);
+}
+
+:global([data-theme='light']) .proTipLabel {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .proTip p {
+  color: var(--text-primary) !important;
+}
+
+/* Table of contents */
+:global([data-theme='light']) .toc {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.08), transparent 55%),
+    var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.06);
+}
+
+:global([data-theme='light']) .toc::before {
+  background: linear-gradient(90deg, rgba(201, 162, 95, 0.5), rgba(201, 162, 95, 0));
+}
+
+:global([data-theme='light']) .tocTitle {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .toc .tocList li,
+:global([data-theme='light']) ol.tocList li,
+:global([data-theme='light']) ul.tocList li {
+  border-bottom: 1px dashed rgba(201, 162, 95, 0.25);
+}
+
+:global([data-theme='light']) .toc .tocList a,
+:global([data-theme='light']) ol.tocList a,
+:global([data-theme='light']) ul.tocList a {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .toc .tocList a::before,
+:global([data-theme='light']) ol.tocList a::before,
+:global([data-theme='light']) ul.tocList a::before {
+  color: rgba(201, 162, 95, 0.75);
+}
+
+:global([data-theme='light']) .toc .tocList a:hover,
+:global([data-theme='light']) ol.tocList a:hover,
+:global([data-theme='light']) ul.tocList a:hover {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .toc .tocList a:hover::before,
+:global([data-theme='light']) ol.tocList a:hover::before,
+:global([data-theme='light']) ul.tocList a:hover::before {
+  color: var(--accent-magenta);
+}
+
+/* Author card */
+:global([data-theme='light']) .authorCard {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 95, 0.08), transparent 55%),
+    var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.06);
+}
+
+:global([data-theme='light']) .authorAvatar {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(201, 162, 95, 0.35), rgba(201, 162, 95, 0.15));
+  border: 1px solid rgba(201, 162, 95, 0.45);
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .authorInfo h4 {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .authorInfo p {
+  color: var(--text-secondary);
+}
+
+/* Blog card image/category/read-time */
+:global([data-theme='light']) .blogCardImage {
+  background: linear-gradient(135deg, rgba(201, 162, 95, 0.2), rgba(201, 162, 95, 0.06));
+}
+
+:global([data-theme='light']) .blogCardCategory {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .blogCardReadTime {
+  color: var(--text-muted);
+}
+
+/* Related resources */
+:global([data-theme='light']) .relatedResources {
+  background:
+    radial-gradient(circle at 80% 0%, rgba(201, 162, 95, 0.1), transparent 50%),
+    linear-gradient(180deg, var(--bg-surface-muted), #E8E2D4);
+  border-top: 1px solid rgba(201, 162, 95, 0.3);
+}
+
+:global([data-theme='light']) .relatedResources h2 {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .resourceCard {
+  background: var(--bg-surface);
+  border: 1px solid rgba(20, 18, 14, 0.08);
+  box-shadow: 0 2px 14px rgba(40, 30, 20, 0.06);
+}
+
+:global([data-theme='light']) .resourceCard:hover {
+  box-shadow: 0 16px 40px rgba(40, 30, 20, 0.14);
+  border-color: rgba(164, 41, 99, 0.3);
+}
+
+:global([data-theme='light']) .resourceCard h3 {
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .resourceCard p {
+  color: var(--text-secondary);
+}

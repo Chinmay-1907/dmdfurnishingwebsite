@@ -3,36 +3,15 @@
 @import '../components/ProductSearch.css';
 @import '../src/styles/Contact.css';
 
+/* ──────────────────────────────────────────────────────────────
+   Base — shared across both themes
+   ────────────────────────────────────────────────────────────── */
 :root {
   --font-serif: 'Playfair Display', 'Times New Roman', serif;
   --font-sans: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
 
-  --color-background: #f7f4ef;
-  --color-surface: #f1ece4;
-  --color-surface-elevated: #ffffff;
-  --color-surface-muted: #e7e0d8;
-  --color-surface-inverse: #1c1f25;
-
-  --color-text: #2c2d31;
-  --color-text-secondary: #56585f;
-  --color-text-muted: #7b7e85;
-
-  --color-border: rgba(67, 70, 80, 0.18);
-  --color-border-strong: rgba(44, 45, 49, 0.3);
-
-  --color-gold: #c9a25f;
-  --color-gold-soft: rgba(201, 162, 95, 0.22);
-  --color-magenta: #a42963;
-
-  --text-on-dark: #ffffff;
-  --text-on-dark-muted: rgba(231, 233, 237, 0.74);
-  --text-on-gold: #1a1a1a;
-
   --header-height: 90px;
   --header-height-compact: 75px;
-
-  --shadow-soft: 0 24px 50px rgba(28, 31, 37, 0.08);
-  --shadow-lift: 0 18px 35px rgba(28, 31, 37, 0.14);
 
   --transition-base: 220ms cubic-bezier(0.33, 1, 0.68, 1);
   --transition-fast: 180ms cubic-bezier(0.33, 1, 0.68, 1);
@@ -40,40 +19,40 @@
   --section-padding: clamp(80px, 10vw, 120px);
 }
 
-:root[data-theme='light'] {
-  --text-primary: #1a1a1a;
-  --text-secondary: #4a4a4a;
-  --text-muted: #6b7280;
-  --heading-color: #111111;
-
-  --color-text: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-}
-
-:root[data-theme='dark'] {
+/* ──────────────────────────────────────────────────────────────
+   DARK THEME — the existing brand voice. Locked to original values.
+   This block defines BOTH the legacy variables (--color-*, --page-dark-*)
+   AND the new token names (--bg-*, --text-*, --accent-*) so refactored
+   files render identically to before.
+   ────────────────────────────────────────────────────────────── */
+:root[data-theme='dark'],
+:root:not([data-theme]) {
   color-scheme: dark;
 
-  --text-primary: #f5f5f5;
-  --text-secondary: #d1d5db;
-  --text-muted: #9ca3af;
-  --heading-color: #ffffff;
-
-  --color-text: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-
+  /* Legacy tokens — DO NOT CHANGE. These render the existing dark mode 1:1. */
   --color-background: #12161d;
   --color-surface: #1a2029;
   --color-surface-elevated: #202834;
   --color-surface-muted: #2a3340;
   --color-surface-inverse: #0d1016;
 
+  --color-text: #f5f5f5;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+
   --color-border: rgba(168, 178, 197, 0.28);
   --color-border-strong: rgba(168, 178, 197, 0.42);
 
   --color-gold: #d7b676;
   --color-gold-soft: rgba(215, 182, 118, 0.25);
+  --color-magenta: #a42963;
+
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: rgba(231, 233, 237, 0.74);
+  --text-on-gold: #1a1a1a;
+
+  --shadow-soft: 0 26px 55px rgba(5, 8, 12, 0.45);
+  --shadow-lift: 0 22px 40px rgba(5, 8, 12, 0.55);
 
   --page-dark-background:
     radial-gradient(circle at top left, rgba(201, 169, 110, 0.14), transparent 28%),
@@ -81,12 +60,116 @@
   --page-dark-panel: rgba(255, 255, 255, 0.05);
   --page-dark-panel-strong: rgba(255, 255, 255, 0.08);
   --page-dark-border: rgba(255, 255, 255, 0.12);
-  --page-dark-text: #f4f0e6;
-  --page-dark-muted: rgba(244, 240, 230, 0.82);
-  --page-dark-soft: rgba(244, 240, 230, 0.68);
+  --page-dark-text: #f8f4ec;
+  --page-dark-muted: rgba(250, 246, 238, 0.94);
+  --page-dark-soft: rgba(250, 246, 238, 0.84);
 
-  --shadow-soft: 0 26px 55px rgba(5, 8, 12, 0.45);
-  --shadow-lift: 0 22px 40px rgba(5, 8, 12, 0.55);
+  /* New token names — point at legacy values so refactored files look identical */
+  --bg-page: var(--color-background);
+  --bg-surface: var(--color-surface);
+  --bg-surface-elevated: var(--color-surface-elevated);
+  --bg-surface-muted: var(--color-surface-muted);
+
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --text-disabled: rgba(255, 255, 255, 0.32);
+  --text-on-accent: var(--text-on-gold);
+  --heading-color: #ffffff;
+
+  --accent-gold: var(--color-gold);
+  --accent-gold-hover: #e6c98a;
+  --accent-gold-soft: var(--color-gold-soft);
+  --accent-magenta: var(--color-magenta);
+  --accent-magenta-soft: rgba(164, 41, 99, 0.16);
+
+  /* Text-as-accent role — gold reads beautifully on dark */
+  --text-accent: var(--color-gold);
+  --text-accent-hover: #f0ca89;
+
+  --border-subtle: var(--color-border);
+  --border-strong: var(--color-border-strong);
+  --shadow-card: var(--shadow-soft);
+
+  --overlay-hero: linear-gradient(180deg, rgba(11, 12, 15, 0.25) 0%, rgba(11, 12, 15, 0.75) 90%);
+  --overlay-card-caption: linear-gradient(180deg, rgba(11, 12, 15, 0) 0%, rgba(11, 12, 15, 0.88) 100%);
+  --page-background: var(--page-dark-background);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   LIGHT THEME — gallery editorial, warm paper + graphite ink.
+   Brand-new design layer. Gold = decoration only (bg/border/fill).
+   All text-on-surface ≥ 4.5:1 WCAG AA.
+   ────────────────────────────────────────────────────────────── */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  /* New tokens — source of truth for light mode */
+  --bg-page: #F6F2EA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-muted: #EEE8DC;
+
+  --text-primary: #141210;
+  --text-secondary: #3A352E;
+  --text-muted: #6B6459;
+  --text-disabled: #A8A196;
+  --text-on-accent: #141210;
+  --heading-color: var(--text-primary);
+
+  --accent-gold: #C9A25F;
+  --accent-gold-hover: #B28A47;
+  --accent-gold-soft: rgba(201, 162, 95, 0.18);
+  --accent-magenta: #A42963;
+  --accent-magenta-soft: rgba(164, 41, 99, 0.10);
+
+  /* Text-as-accent role — gold-as-text fails contrast on ivory; use magenta instead */
+  --text-accent: var(--accent-magenta);
+  --text-accent-hover: #8B1F52;
+
+  --border-subtle: rgba(20, 18, 14, 0.10);
+  --border-strong: rgba(20, 18, 14, 0.22);
+  --shadow-card: 0 2px 14px rgba(40, 30, 20, 0.08);
+  --shadow-lift: 0 18px 40px rgba(40, 30, 20, 0.14);
+
+  --overlay-hero: linear-gradient(180deg, rgba(246, 242, 234, 0.05) 0%, rgba(20, 18, 14, 0.62) 100%);
+  --overlay-card-caption: linear-gradient(180deg, rgba(246, 242, 234, 0) 0%, rgba(20, 18, 14, 0.82) 100%);
+
+  --page-background:
+    radial-gradient(circle at top right, rgba(201, 162, 95, 0.08), transparent 35%),
+    linear-gradient(180deg, #F6F2EA 0%, #F1ECE2 100%);
+
+  /* Legacy aliases — backwards-compat for files not yet refactored.
+     Mapped to the new light-mode tokens so existing var(--color-*) calls
+     resolve to light values automatically. */
+  --color-background: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-surface-elevated: var(--bg-surface-elevated);
+  --color-surface-muted: var(--bg-surface-muted);
+  --color-surface-inverse: #1c1f25;
+  --color-text: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-gold: var(--accent-gold);
+  --color-gold-soft: var(--accent-gold-soft);
+  --color-magenta: var(--accent-magenta);
+  --color-border: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --text-on-dark: #F3EFE6; /* Used on hero caption panels — stays off-white */
+  --text-on-dark-muted: rgba(243, 239, 230, 0.78);
+  --text-on-gold: var(--text-on-accent);
+  --shadow-soft: var(--shadow-card);
+
+  /* Legacy --page-dark-* mapped to the new light tokens.
+     IMPORTANT: components written for "dark page" assumed light text on dark surface.
+     In light mode these aliases flip: dark text on light surface. */
+  --page-dark-background: var(--page-background);
+  --page-dark-panel: var(--bg-surface);
+  --page-dark-panel-strong: var(--bg-surface-muted);
+  --page-dark-border: var(--border-subtle);
+  --page-dark-text: var(--text-primary);
+  --page-dark-muted: var(--text-secondary);
+  --page-dark-soft: var(--text-muted);
 }
 
 html {
@@ -99,9 +182,18 @@ html {
   color: #f4f0e6;
 }
 
+:root[data-theme='light'] ::selection {
+  background: var(--accent-gold-soft);
+  color: var(--text-primary);
+}
+
 :focus-visible {
   outline: 2px solid #c9a96e;
   outline-offset: 2px;
+}
+
+:root[data-theme='light'] :focus-visible {
+  outline-color: var(--accent-gold-hover);
 }
 
 body {
@@ -308,6 +400,16 @@ img {
   background: rgba(201, 169, 110, 0.2);
   color: #c9a96e;
   backdrop-filter: blur(8px);
+}
+
+:root[data-theme='light'] .ba-label-before {
+  background: rgba(20, 18, 14, 0.55);
+  color: #F3EFE6;
+}
+
+:root[data-theme='light'] .ba-label-after {
+  background: rgba(11, 12, 15, 0.55);
+  color: #E6C98A;
 }
 
 @media (prefers-reduced-motion: reduce) {

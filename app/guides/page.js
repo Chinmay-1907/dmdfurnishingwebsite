@@ -4,9 +4,9 @@ import JsonLd from '../../components/JsonLd';
 import styles from './commercial-furniture-manufacturing/page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Commercial Furniture Guides',
+  title: 'Commercial Furniture Buyer Guides',
   description:
-    'In-depth guides for commercial furniture buyers. FF&E procurement, commercial durability standards, hotel casegoods, and value engineering. Foxboro, MA manufacturer.',
+    'In-depth guides for commercial furniture buyers: hospitality FF&E procurement, contract durability standards, hotel casegoods, and value engineering. Foxboro, MA.',
   path: '/guides',
   image: '/Images/Our_Products.jpg',
 });
@@ -14,13 +14,13 @@ export const metadata = generatePageMetadata({
 const guides = [
   {
     slug: 'commercial-furniture-manufacturing',
-    title: 'Commercial Furniture Manufacturing: A Complete Buyer Guide',
-    lede: 'What commercial furniture manufacturing is, the standards that matter, material choices, and the manufacturing process from specification to install.',
+    title: 'Commercial Furniture Manufacturing: A Buyer Guide',
+    lede: 'What commercial furniture manufacturing actually covers, which construction and durability standards matter, how material choices change cost, and how a project moves from specification to install.',
   },
   {
     slug: 'hospitality-ffe',
     title: 'Hospitality FF&E: A Complete Procurement Guide',
-    lede: 'A practical walkthrough of what hospitality FF&E includes, replacement lifecycles by property tier, brand standards, the procurement process, and the mistakes that blow budgets.',
+    lede: 'What hospitality FF&E includes, replacement lifecycles by property tier, how brand standards shape specs, the full procurement process, and the mistakes that blow budgets.',
   },
 ];
 
@@ -31,9 +31,9 @@ const indexSchema = {
       '@type': 'CollectionPage',
       '@id': `${siteUrl}/guides`,
       url: `${siteUrl}/guides`,
-      name: 'Commercial Furniture Guides',
+      name: 'Commercial Furniture Buyer Guides',
       description:
-        'In-depth guides for commercial furniture buyers: hospitality FF&E procurement, construction standards, and value engineering.',
+        'In-depth guides for commercial furniture buyers: hospitality FF&E procurement, contract durability standards, and value engineering.',
       isPartOf: { '@id': `${siteUrl}/#website` },
       about: { '@id': `${siteUrl}/#organization` },
     },
@@ -60,12 +60,11 @@ export default function GuidesIndexPage() {
             <span>Guides</span>
           </nav>
           <p className={styles.eyebrow}>Commercial Furniture Library</p>
-          <h1 className={styles.h1}>In-Depth Guides for Commercial Furniture Buyers</h1>
+          <h1 className={styles.h1}>Commercial Furniture Buyer Guides</h1>
           <p className={styles.lede}>
-            Practical guides written for interior designers, hotel general managers, and FF&amp;E
-            procurement teams. Each guide covers the commercial durability and fire safety
-            standards that matter and walks through the decisions a typical project actually
-            hits.
+            Long-form guides for interior designers, hotel owners, and FF&amp;E procurement teams.
+            Each one walks through the contract durability and fire safety standards that matter,
+            and the real decisions a hospitality project has to make.
           </p>
         </div>
       </section>
@@ -76,7 +75,7 @@ export default function GuidesIndexPage() {
             {guides.map((guide) => (
               <section key={guide.slug} style={{ marginBottom: '2.5rem' }}>
                 <h2 style={{ marginBottom: '0.75rem' }}>
-                  <Link href={`/guides/${guide.slug}`} style={{ color: '#f5f1e8', borderBottom: 'none' }}>
+                  <Link href={`/guides/${guide.slug}`} style={{ borderBottom: 'none' }}>
                     {guide.title}
                   </Link>
                 </h2>

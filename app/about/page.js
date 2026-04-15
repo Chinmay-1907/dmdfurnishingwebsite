@@ -5,20 +5,20 @@ import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 import styles from './page.module.css';
 
 const differentiators = [
-  ['In-House Design Team', 'Our drafters turn designer sketches into shop drawings, cut sheets, and finish schedules a factory can actually build. If a detail will fail in production, we flag it before it gets quoted, not after.'],
-  ['Dual Manufacturing Model', 'Our Foxboro shop handles prototypes, short runs, and anything that needs a fast revision cycle. Partner factories overseas handle high-volume guestroom packages where unit economics matter. You pick the mix on every project.'],
-  ['Dedicated Project Managers', 'One PM owns your job from the signed PO to the punch list. They know your spec book, your GC, and your install sequence, so you never re-explain the project to someone new.'],
-  ['Value Engineering on Every Bid', 'We mark up the BOQ line by line. Swap an exotic veneer for a commercial-grade equivalent, change a drawer box, resize a headboard. Cuts cost without touching what the guest sees or touches.'],
-  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors, so lead times and pricing stay predictable.'],
-  ['Three-Point Quality Control', 'Specs confirmed before production starts. Pieces photographed and inspected before they leave the factory. Installers verify piece count and condition on site before the crate is signed off.'],
+  ['In House Design Team', 'Our drafters turn designer sketches into shop drawings, cut sheets, and finish schedules a factory can actually build. If a detail will fail in production, we flag it before it gets quoted, not after the PO is signed.'],
+  ['Two Manufacturing Paths', 'Our Foxboro shop handles prototypes, short runs, and anything that needs a fast revision cycle. Partner factories overseas handle high volume guestroom packages where unit economics matter. You pick the mix on every project.'],
+  ['One PM From Start to Finish', 'One project manager owns your job from signed PO through punch list. They know your spec book, your GC, and your install sequence, so you never re explain the project to someone new.'],
+  ['Value Engineered Line by Line', 'We mark up the bill of quantities (BOQ) line by line. Swap an exotic veneer for a commercial-grade equivalent, change a drawer box, resize a headboard. Cuts cost without touching what the guest sees or touches.'],
+  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors. Lead times and pricing stay predictable because the supply chain does not change project to project.'],
+  ['Three Point Quality Control', 'Specs confirmed before production starts. Every piece photographed and inspected before it leaves the factory. Installers verify piece count and condition on site before the crate is signed off.'],
 ];
 
 const materials = [
-  { title: 'High-Pressure Laminate (HPL)', desc: 'Best for guestroom desktops, dresser tops, and restaurant tabletops. HPL resists scratching, heat from coffee cups, and moisture rings in ways real wood cannot, which is why it shows up on almost every hospitality spec book.', Icon: GiMaterialsScience },
+  { title: 'High Pressure Laminate (HPL)', desc: 'Best for guestroom desktops, dresser tops, and restaurant tabletops. HPL resists scratching, heat from coffee cups, and moisture rings in ways real wood cannot.', Icon: GiMaterialsScience },
   { title: 'Hardwood Veneer on Stable Substrate', desc: 'Use this when the design calls for real wood grain but a solid hardwood panel would warp. A thin face of walnut, oak, or maple laid over MDF or particleboard gives you the look without the seasonal movement that splits drawer fronts.', Icon: GiWoodBeam },
   { title: 'Solid Hardwood', desc: 'Reserved for chair frames, table legs, bed rails, and anything that takes structural load or needs to be refinished over its life. Oak, maple, ash, and walnut are the usual picks for commercial seating frames.', Icon: GiTreeBranch },
-  { title: 'Powder-Coated Steel & Aluminum', desc: 'Powder-coat finish outlasts wet paint in high-traffic rooms and resists chipping from housekeeping carts. Steel is used for load-bearing chair and bed frames; aluminum where weight matters, like outdoor patio seating.', Icon: GiMetalBar },
-  { title: 'Commercial-Grade Hardware', desc: 'Full-extension ball-bearing drawer slides, soft-close hinges, and cam locks sized for housekeeping key systems. The hardware is what makes guestroom casegoods survive a five-year renovation cycle.', Icon: GiGears },
+  { title: 'Powder-Coated Steel and Aluminum', desc: 'Powder-coat outlasts wet paint in high-traffic rooms and resists chipping from housekeeping carts. Steel goes on load-bearing chair and bed frames; aluminum where weight matters, like outdoor patio seating.', Icon: GiMetalBar },
+  { title: 'Commercial-Grade Hardware', desc: 'Full-extension ball-bearing drawer slides, soft-close hinges, and cam locks sized for housekeeping key systems. The hardware is what makes guestroom casegoods survive renovation cycle after renovation cycle.', Icon: GiGears },
 ];
 
 const values = [
@@ -29,9 +29,9 @@ const values = [
 
 export function generateMetadata() {
   return generatePageMetadata({
-    title: 'About Us | Foxboro MA Manufacturer',
+    title: 'About Us | Foxboro MA Furniture Manufacturer',
     description:
-      'DMD Furnishing is a commercial furniture manufacturer in Foxboro, MA. Custom casegoods, seating, and millwork for hotels, restaurants, and institutional FF&E projects.',
+      'DMD Furnishing is a commercial furniture manufacturer in Foxboro, MA. In house design team, dual manufacturing model, custom FF&E for hotels, restaurants, and offices.',
     path: '/about',
     image: '/Images/About_DMD_Furnishing_Page.jpg',
   });
@@ -39,10 +39,10 @@ export function generateMetadata() {
 
 const aboutFaqs = [
   ['Where is DMD Furnishing located?', 'Our headquarters and drafting office are at 56 Leonard St, Unit 5, Foxboro, MA 02035, about 30 miles south of Boston. Delivery and installation is coordinated to project sites across the United States.'],
-  ['Do you work on small projects?', 'Yes. A single boutique restaurant, a lobby refresh, or a 20-room motel are all inside our normal range. Small projects get the same PM, the same QC process, and the same written timeline as a 200-room rollout.'],
-  ['What industries do you serve?', 'Primary focus is hospitality: hotels, motels, resorts, restaurants, and bars. We also produce FF&E for corporate offices, educational buildings (dormitories, common areas, libraries), and non-clinical healthcare spaces like waiting rooms and administrative offices.'],
-  ['How long does a typical project take?', 'Typical lead times run multiple weeks once specifications are approved. The exact number depends on scope, finish selections, and whether production is domestic or overseas. We give you a written timeline at contract signing and update it at each milestone.'],
-  ['What standards do you build to?', 'We build to commercial contract-grade durability standards appropriate for each project type. Specific material, fire safety, and durability requirements are documented on the spec sheet for every project so nothing is ambiguous.'],
+  ['Do you work on small projects?', 'Yes. A single boutique restaurant, a lobby refresh, or a small motel are all inside our normal range. Small projects get the same PM, the same QC process, and the same written timeline as a full property rollout.'],
+  ['What industries do you serve?', 'Primary focus is hospitality: hotels, motels, resorts, restaurants, and bars. We also produce Furniture, Fixtures and Equipment (FF&E) for corporate offices, educational buildings, and non-clinical healthcare spaces like waiting rooms and administrative offices.'],
+  ['How long does a typical project take?', 'Lead time depends on scope, finish selections, and whether production runs domestic or overseas. We give you a written timeline at contract signing and update it at every milestone, so you always know where your order stands.'],
+  ['What standards do you build to?', 'We build to commercial contract-grade durability appropriate for each project type. Specific material, fire safety, and durability requirements are documented on the spec sheet for every project so nothing is ambiguous.'],
 ];
 
 const aboutSchema = {
@@ -52,9 +52,9 @@ const aboutSchema = {
       '@type': 'AboutPage',
       '@id': `${siteUrl}/about`,
       url: `${siteUrl}/about`,
-      name: 'About DMD Furnishing | Commercial Furniture Manufacturing',
+      name: 'About DMD Furnishing | Commercial Furniture Manufacturer in Foxboro MA',
       description:
-        'DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts, providing custom FF&E for hotels, restaurants, offices, and institutional spaces nationwide.',
+        'DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts, with an in house design team and a dual manufacturing model serving hotels, restaurants, offices, and institutional FF&E projects nationwide.',
       isPartOf: { '@id': `${siteUrl}/#website` },
       about: { '@id': `${siteUrl}/#organization` },
     },
@@ -89,12 +89,13 @@ export default function AboutPage() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>About DMD Furnishing</p>
-          <h1>A Commercial Furniture Manufacturer in Foxboro, Massachusetts.</h1>
+          <h1>Custom Commercial Furniture Manufacturer</h1>
           <p className={styles.heroLede}>
-            DMD Furnishing is a commercial furniture manufacturer based in Foxboro,
-            Massachusetts. We custom-build casegoods, seating, upholstery, and millwork for
-            hotels, restaurants, offices, and institutional projects. Shipped and installed
-            across the United States.
+            DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts.
+            <br />
+            We custom build casegoods, seating, and millwork for hotels, restaurants, offices, and institutional projects.
+            <br />
+            Shipped and installed across the United States.
           </p>
         </div>
       </section>
@@ -106,18 +107,18 @@ export default function AboutPage() {
             <p className={styles.eyebrow}>Our Story</p>
             <h2>Why we started and what drives us.</h2>
             <p>
-              DMD Furnishing was built around one frustration the founders kept hearing from
-              hotel owners and designers: commercial furniture procurement is opaque. Specs
-              get lost between the designer, the factory, and the installer. Delivery dates
-              slip. Samples arrive looking nothing like production.
+              DMD Furnishing was built around one frustration the founders kept hearing
+              from hotel owners and designers: commercial furniture procurement is opaque.
+              Specs get lost between the designer, the factory, and the installer. Delivery
+              dates slip. Samples arrive looking nothing like production.
             </p>
             <p>
               We run the whole chain ourselves. Our drafters write specs the factory can
-              build. Our PMs track every line item. Our installers verify the pieces against
+              build. Our PMs track every line item. Our installers verify pieces against
               the spec sheet before the crate is signed off. No handoffs, no lost details.
             </p>
             <p>
-              The approach works for a 20-room motel refresh and for a multi-property
+              The approach works for a small motel refresh and for a multi property
               franchise rollout. Same process, same single point of contact, same written
               timelines. Scaled to the job.
             </p>
@@ -159,7 +160,7 @@ export default function AboutPage() {
             See Our Full Services
           </Link>
           <Link href="/projects" className={styles.ghostBtn}>
-            View Hotel & Restaurant Furniture Projects
+            View Hotel and Restaurant Projects
           </Link>
         </div>
       </section>
@@ -167,12 +168,13 @@ export default function AboutPage() {
       {/* ── 4. Materials & Craftsmanship ── */}
       <section className={styles.materialsSection}>
         <div className={styles.materialsHeader}>
-          <p className={styles.eyebrow}>Materials &amp; Craftsmanship</p>
+          <p className={styles.eyebrow}>Materials and Craftsmanship</p>
           <h2>What we specify, and why.</h2>
           <p>
-            Commercial furniture fails in predictable places: surfaces scratch, veneers lift,
-            drawer slides bind, fabric wears through at the seat edge. The materials below
-            are the ones we reach for first because they solve those specific failures.
+            Commercial furniture fails in predictable places: surfaces scratch, veneers
+            lift, drawer slides bind, fabric wears through at the seat edge. The materials
+            below are the ones we reach for first because they solve those specific
+            failures.
           </p>
         </div>
         <div className={styles.materialsGrid}>
@@ -192,7 +194,7 @@ export default function AboutPage() {
       <section className={styles.faqSection}>
         <div className={styles.faqHeader}>
           <p className={styles.eyebrow}>Common Questions</p>
-          <h2>What clients ask about our manufacturing operation.</h2>
+          <h2>What buyers ask before signing with us.</h2>
         </div>
         <div className={styles.faqList}>
           {aboutFaqs.map(([question, answer]) => (
@@ -209,15 +211,12 @@ export default function AboutPage() {
         <p className={styles.eyebrow}>Next Step</p>
         <h2>Have a project in mind?</h2>
         <p className={styles.ctaLede}>
-          Bring a room count and a target budget. Leave with a
-          realistic price range, a lead-time estimate, and a clear list of next steps.
+          Bring a room count and a target budget. Leave with a realistic price range, a
+          lead time estimate, and a clear list of next steps.
         </p>
         <div className={styles.ctaButtons}>
           <Link href="/contact#schedule" className={styles.primaryBtn}>
             Schedule a Call
-          </Link>
-          <Link href="/contact" className={styles.secondaryBtn}>
-            Request a Quote
           </Link>
         </div>
         <div className={styles.ctaContact}>

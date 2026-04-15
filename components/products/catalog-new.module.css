@@ -11,7 +11,9 @@
     radial-gradient(circle at 20% 20%, rgba(201, 169, 110, 0.1), transparent 40%),
     linear-gradient(135deg, rgba(18, 22, 29, 0.97), rgba(13, 13, 16, 0.99));
   border-bottom: 1px solid rgba(201, 169, 110, 0.12);
-  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 3vw, 2.5rem);
+  /* Slide under the fixed header so the dark panel reaches the very top */
+  margin-top: calc(-1 * var(--header-height));
+  padding: calc(var(--header-height) + clamp(2.5rem, 6vw, 4.5rem)) clamp(1.25rem, 3vw, 2.5rem) clamp(2.5rem, 6vw, 4.5rem);
 }
 
 .heroInner {
@@ -26,7 +28,7 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.78rem;
-  color: rgba(201, 169, 110, 0.85);
+  color: rgba(215, 182, 118, 0.9);
   font-weight: 600;
 }
 
@@ -34,6 +36,8 @@
   margin: 0;
   font-size: clamp(2.2rem, 4vw, 3.6rem);
   line-height: 1.05;
+  /* Dark gradient bg is always present — keep text crisp white in both themes */
+  color: #F3EFE6;
 }
 
 .heroDescription {
@@ -41,7 +45,7 @@
   max-width: 52ch;
   font-size: 1.05rem;
   line-height: 1.65;
-  color: var(--color-text-muted);
+  color: rgba(243, 239, 230, 0.72);
 }
 
 .heroSearch {
@@ -609,14 +613,23 @@
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
-  background: var(--color-gold);
-  color: #111;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  color: #1a1a1a;
+  background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+  box-shadow: 0 4px 14px rgba(168, 50, 107, 0.22),
+              inset 0 1px 0 rgba(255, 240, 200, 0.25);
+  transition: transform 220ms cubic-bezier(0.33, 1, 0.68, 1),
+              box-shadow 380ms ease,
+              background-position 600ms ease;
 }
 
 .ctaPrimary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(201, 169, 110, 0.3);
+  background-position: 100% 50%;
+  box-shadow: 0 10px 28px rgba(201, 169, 110, 0.35),
+              0 0 22px rgba(168, 50, 107, 0.3),
+              inset 0 1px 0 rgba(255, 240, 200, 0.35);
 }
 
 .ctaSecondary {
@@ -720,5 +733,59 @@
   font-size: 0.85rem;
   color: rgba(201, 169, 110, 0.85);
   font-weight: 500;
+}
+
+/* ─── Light mode overrides for hardcoded-dark surfaces ──────────────────
+   The hero, stat pills, search input, and SpaceNav all have dark
+   backgrounds baked in (not CSS-variable-driven). In light mode the
+   CSS variables resolve to dark ink colours which become invisible on
+   those dark surfaces. Pin these elements to the off-white palette so
+   they stay readable in both themes.
+   ──────────────────────────────────────────────────────────────────── */
+
+/* Hero search input & placeholder */
+:global(:root[data-theme='light']) .heroSearchInput {
+  color: #F3EFE6;
+}
+:global(:root[data-theme='light']) .heroSearchInput::placeholder {
+  color: rgba(243, 239, 230, 0.6);
+}
+
+/* Hero stat pills — count number + label */
+:global(:root[data-theme='light']) .heroStat span {
+  color: rgba(243, 239, 230, 0.75);
+}
+
+/* Product badges — gold on near-transparent gold bg renders as gold on cream */
+:global(:root[data-theme='light']) .productBadge {
+  color: var(--text-secondary);
+  background: rgba(201, 162, 95, 0.18);
+}
+
+/* Filter chevrons — gold on cream */
+:global(:root[data-theme='light']) .filterChevron {
+  color: var(--text-muted);
+}
+
+/* Load more remaining count */
+:global(:root[data-theme='light']) .loadMoreRemaining {
+  color: var(--text-muted);
+}
+
+/* SpaceNav strip — "All" button and inactive space tabs */
+:global(:root[data-theme='light']) .spaceTab {
+  color: rgba(243, 239, 230, 0.65);
+}
+:global(:root[data-theme='light']) .spaceTab:hover {
+  color: #F3EFE6;
+}
+:global(:root[data-theme='light']) .spaceTabActive {
+  color: var(--color-gold);
+}
+:global(:root[data-theme='light']) .spaceTabCount {
+  color: rgba(243, 239, 230, 0.55);
+}
+:global(:root[data-theme='light']) .spaceTabActive .spaceTabCount {
+  color: rgba(201, 169, 110, 0.8);
 }
 

@@ -12,7 +12,7 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'Hospitality Furniture Design Inspirations',
     description:
-      'Hospitality furniture design inspirations from DMD Furnishing. Hotel lobbies, guestroom casegoods, restaurant seating, lounges, and cafe concepts.',
+      'Hotel furniture design ideas, restaurant interior design inspiration, and commercial furniture inspiration gallery from DMD Furnishing. Real rooms, real specs, built to order.',
     path: '/inspirations',
     image: '/Images/Elevated_Restaurant_Seating.jpg',
   });
@@ -30,7 +30,7 @@ function buildSchema(inspirations) {
         '@type': 'CollectionPage',
         name: 'Hospitality Furniture Design Inspirations | DMD Furnishing',
         description:
-          'Browse hospitality furniture design inspirations from DMD Furnishing.',
+          'Hotel furniture design ideas, restaurant interior design inspiration, and commercial furniture inspiration from DMD Furnishing. Each board pairs a visual direction with contract-grade specs.',
         url: `${siteUrl}/inspirations`,
       },
       {
@@ -42,7 +42,7 @@ function buildSchema(inspirations) {
       },
       {
         '@type': 'ItemList',
-        name: 'DMD Furnishing Design Inspirations',
+        name: 'DMD Furnishing Hospitality Furniture Design Inspirations',
         itemListElement: inspirations.map((insp, i) => ({
           '@type': 'ListItem',
           position: i + 1,
@@ -63,13 +63,13 @@ function buildSchema(inspirations) {
 // ---------------------------------------------------------------------------
 
 const highlights = [
-  'Material & finish palettes',
+  'Material and finish palettes',
   'Furniture layout plans',
-  'Hospitality-grade specs',
-  'Adaptable to your brand',
+  'Hospitality grade specs',
+  'Built to your brand',
 ];
 
-// Category → product space slug mapping
+// Category → product space slug mapping (keys drive routing, do not change)
 const categoryToSpace = {
   Hotel: 'hotel',
   Restaurant: 'restaurant',
@@ -110,16 +110,17 @@ export default function InspirationsPage() {
       />
 
       {/* ── 1. Hero Card ── */}
-      <section className={styles.hero} aria-label="Design inspirations">
+      <section className={styles.hero} aria-label="Hospitality furniture design inspirations">
         <div className={styles.heroCard}>
           <div className={styles.heroCardGlow} aria-hidden="true" />
           <div className={styles.heroContent}>
-            <p className={styles.eyebrow}>Design Library</p>
+            <p className={styles.eyebrow}>Hospitality Design Inspirations</p>
             <h1>Design Ideas You Can Build</h1>
             <p className={styles.heroLede}>
-              Material palettes, furniture layouts, and finish directions for hotel guestrooms,
-              restaurant dining rooms, lobbies, and offices. Every concept pairs a visual
-              direction with contract-grade specs our shop can manufacture.
+              Browse real hotel lobbies, guestrooms, restaurants, lounges, and offices,
+              with the furniture, fabrics, and finishes that made each one work. Every board
+              pairs a visual direction with contract-grade specs our shop can manufacture to
+              your floor plan.
             </p>
             <div className={styles.heroPills}>
               {highlights.map((item) => (
@@ -152,11 +153,11 @@ export default function InspirationsPage() {
         {/* ── 2. Gallery ── */}
         <section id="gallery" className={styles.gallerySection}>
           <p className={styles.eyebrow}>Browse Concepts</p>
-          <h2>Hospitality and commercial design inspirations to start your next project.</h2>
+          <h2>Hotel, restaurant, and commercial furniture inspiration.</h2>
           <p className={styles.sectionLede}>
-            Each board pairs a visual direction with the materials that make it work in a
-            commercial setting. HPL versus real veneer, performance fabric versus linen, solid oak
-            versus oak-on-substrate. Use them as a starting point, not a fixed catalog.
+            Each board shows a complete room and the pieces behind it. HPL versus real
+            veneer, performance fabric versus linen, solid oak versus oak on substrate. Start
+            with one you like and we will adapt it to your brand and budget.
           </p>
 
           <div className={styles.gallery}>
@@ -218,18 +219,15 @@ export default function InspirationsPage() {
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
           <p className={styles.eyebrow}>Have a Space in Mind?</p>
-          <h2>Let&rsquo;s bring your vision to life.</h2>
+          <h2>Pick a board. We will build it for your project.</h2>
           <p className={styles.ctaLede}>
-            Pick a board you like and we will adapt it. Different finishes, different
-            fabrics, different dimensions. All tailored to fit your brand standards, your floor plan,
-            and your budget.
+            Send us the board you like and we will adapt it. Different finishes, different
+            fabrics, different dimensions, all tailored to your brand standards, floor plan,
+            and budget.
           </p>
           <div className={styles.ctaButtons}>
             <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
-            </Link>
-            <Link href="/contact" className={styles.secondaryBtn}>
-              Request a Quote
             </Link>
           </div>
           <div className={styles.ctaContact}>

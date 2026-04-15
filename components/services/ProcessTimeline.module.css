@@ -127,9 +127,9 @@
 }
 
 .detailInner {
-  max-width: 620px;
+  max-width: 780px;
   margin: 0 auto;
-  padding: 1.75rem 2rem;
+  padding: 2.25rem 2.5rem;
   border-radius: 24px;
   background:
     radial-gradient(ellipse at top left, rgba(201, 169, 110, 0.08), transparent 60%),
@@ -165,16 +165,45 @@
 
 .detailTitle {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #f4f0e6;
+  line-height: 1.25;
 }
 
 .detailDesc {
   margin: 0 0 1.25rem;
-  font-size: 0.95rem;
-  color: rgba(244, 240, 230, 0.7);
+  font-size: 1rem;
+  color: rgba(244, 240, 230, 0.78);
   line-height: 1.7;
+}
+
+.detailBullets {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.detailBullets li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(244, 240, 230, 0.82);
+}
+
+.detailBullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c9a96e;
+  box-shadow: 0 0 10px rgba(201, 169, 110, 0.4);
 }
 
 .detailMeta {
@@ -243,4 +272,70 @@
     left: 5%;
     right: 5%;
   }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Light theme overrides — keep the gold dots (decoration), but
+   adapt text and panels to read on ivory.
+   ────────────────────────────────────────────────────────────── */
+:global([data-theme='light']) .dot {
+  box-shadow:
+    0 0 0 6px var(--bg-page),
+    0 0 24px rgba(201, 162, 95, 0.30);
+}
+
+:global([data-theme='light']) .step:hover .dot {
+  box-shadow:
+    0 0 0 6px var(--bg-page),
+    0 0 30px rgba(201, 162, 95, 0.45),
+    0 0 60px rgba(201, 162, 95, 0.20);
+}
+
+:global([data-theme='light']) .stepActive .dot {
+  box-shadow:
+    0 0 0 6px var(--bg-page),
+    0 0 40px rgba(201, 162, 95, 0.50),
+    0 0 60px rgba(164, 41, 99, 0.25),
+    0 0 80px rgba(201, 162, 95, 0.20);
+}
+
+:global([data-theme='light']) .label {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .step:hover .label,
+:global([data-theme='light']) .stepActive .label {
+  color: var(--text-primary);
+  text-shadow: none;
+}
+
+:global([data-theme='light']) .detailInner {
+  background:
+    radial-gradient(ellipse at top left, var(--accent-gold-soft), transparent 60%),
+    var(--bg-surface);
+  border: 1px solid var(--accent-magenta-soft);
+  box-shadow: var(--shadow-lift);
+}
+
+:global([data-theme='light']) .detailTitle {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .detailDesc,
+:global([data-theme='light']) .detailBullets li {
+  color: var(--text-secondary);
+}
+
+:global([data-theme='light']) .detailBullets li::before {
+  background: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold-soft);
+}
+
+:global([data-theme='light']) .metaTag {
+  background: var(--accent-magenta-soft);
+  color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .deliverable {
+  color: var(--text-muted);
 }

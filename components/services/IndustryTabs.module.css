@@ -208,3 +208,49 @@
     font-size: 1.25rem;
   }
 }
+
+/* ─── Light theme overrides ─────────────────────────────────────────────── */
+/* The base styles use hardcoded white tones designed for dark mode. In light
+   mode the panel sits over ivory section bg, so white text vanishes. Swap to
+   dark text using the global theme tokens. */
+
+:global(:root[data-theme='light']) .tab {
+  border-color: rgba(20, 18, 14, 0.18);
+  background: rgba(20, 18, 14, 0.04);
+  color: rgba(20, 18, 14, 0.72);
+}
+
+:global(:root[data-theme='light']) .tab:hover {
+  background: rgba(20, 18, 14, 0.08);
+  color: #141210;
+}
+
+:global(:root[data-theme='light']) .panel {
+  background:
+    linear-gradient(135deg, rgba(201, 162, 95, 0.08) 0%, rgba(20, 18, 14, 0.02) 100%);
+  border-color: rgba(201, 162, 95, 0.25);
+}
+
+:global(:root[data-theme='light']) .industryName {
+  color: #141210;
+}
+
+:global(:root[data-theme='light']) .description {
+  color: rgba(58, 53, 46, 0.95);
+}
+
+:global(:root[data-theme='light']) .highlightItem {
+  color: rgba(20, 18, 14, 0.85);
+}
+
+:global(:root[data-theme='light']) .productLink {
+  color: var(--accent-magenta);
+}
+
+:global(:root[data-theme='light']) .productLink:hover {
+  color: #8B1F52;
+}
+
+:global(:root[data-theme='light']) .productCount {
+  color: var(--text-muted);
+}

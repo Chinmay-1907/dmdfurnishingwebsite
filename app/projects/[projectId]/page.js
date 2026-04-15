@@ -251,9 +251,6 @@ export default async function ProjectDetailPage({ params }) {
             <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
             </Link>
-            <Link href="/contact" className={styles.secondaryBtn}>
-              Request a Quote
-            </Link>
           </div>
           <div className={styles.ctaContact}>
             <a href="tel:+16172237781">+1 (617) 223-7781</a>

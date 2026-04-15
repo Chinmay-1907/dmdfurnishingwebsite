@@ -10,9 +10,9 @@ import styles from './page.module.css';
 
 export function generateMetadata() {
   return generatePageMetadata({
-    title: 'Hospitality Furniture Projects',
+    title: 'Hospitality Furniture Projects & Hotel Case Studies',
     description:
-      'Browse DMD Furnishing\u2019s portfolio of commercial furniture installations. Hotels, restaurants, and multi-family properties across the United States.',
+      'Browse DMD Furnishing hotel renovation case studies, restaurant buildouts, and commercial FF&E installations. Real projects, real scopes, real delivered work.',
     path: '/projects',
     image: '/Images/Our_Projects.jpg',
   });
@@ -28,9 +28,9 @@ function buildSchema(projects) {
     '@graph': [
       {
         '@type': 'CollectionPage',
-        name: 'Commercial Furniture Projects | DMD Furnishing',
+        name: 'Hospitality Furniture Projects | DMD Furnishing',
         description:
-          'Browse DMD Furnishing\u2019s portfolio of commercial hospitality furniture installations.',
+          'Hotel renovation case studies, restaurant buildouts, and commercial FF&E installations delivered by DMD Furnishing.',
         url: `${siteUrl}/projects`,
       },
       {
@@ -100,11 +100,12 @@ export default function ProjectsPage() {
         <div className={styles.heroOverlay} aria-hidden="true" />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Project Portfolio</p>
-          <h1>Projects That Speak for Themselves</h1>
+          <h1>The Work That Built DMD</h1>
           <p className={styles.heroLede}>
-            Hotel guestrooms, restaurant dining rooms, lobby refreshes, and multi-property
-            rollouts. Built with contract-grade commercial materials and installed on schedule.
-            Browse the work and see the scope behind every delivery.
+            Hotel guestroom renovations, restaurant dining rooms, lobby refreshes, and multi
+            property rollouts. Every installation is built with contract-grade commercial
+            furniture and the scope is documented end to end. Open any project for the room
+            count, finish palette, and the materials we built it from.
           </p>
           <div className={styles.heroActions}>
             <Link href="/contact#schedule" className={styles.primaryBtn}>
@@ -155,12 +156,11 @@ export default function ProjectsPage() {
 
         {/* ── 3. Project Grid ── */}
         <section id="projects" className={`${styles.section} ${styles.gridSection}`}>
-          <p className={styles.eyebrow}>Browse Work</p>
-          <h2>More hotel furniture installations and commercial build-outs.</h2>
+          <p className={styles.eyebrow}>The Portfolio</p>
+          <h2>More Hotel Renovations and Commercial Buildouts</h2>
           <p className={styles.sectionLede}>
-            Click any project to see the scope, the room or seat count, the finish palette,
-            and the materials we built it from. Everything on this page was custom-made and
-            installed by our team.
+            Each card opens the full case study: the original brief, the production approach,
+            and how it installed on site. Every piece on this page was custom made by our team.
           </p>
           <div className={styles.grid}>
             {rest.map((project) => (
@@ -200,19 +200,15 @@ export default function ProjectsPage() {
         {/* ── 4. CTA ── */}
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
-          <p className={styles.eyebrow}>Ready to Start?</p>
-          <h2>Have a project like one of these?</h2>
+          <p className={styles.eyebrow}>Get Started</p>
+          <h2>Bring Us Your Scope</h2>
           <p className={styles.ctaLede}>
-            Bring a room or seat count and a target budget. Leave
-            with a realistic price range, a lead-time estimate, and a clear list of next
-            steps.
+            Bring a room or seat count and a target budget. Leave with a realistic price
+            range, a lead time window, and a clear list of next steps.
           </p>
           <div className={styles.ctaButtons}>
             <Link href="/contact#schedule" className={styles.primaryBtn}>
               Schedule a Call
-            </Link>
-            <Link href="/contact" className={styles.secondaryBtn}>
-              Request a Quote
             </Link>
           </div>
           <div className={styles.ctaContact}>

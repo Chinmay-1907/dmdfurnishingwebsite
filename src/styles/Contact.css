@@ -806,3 +806,19 @@
   .fade-in-up { animation: none; }
   .cp-btn { transition: none; }
 }
+
+/* ─── Light mode contrast fixes ─── */
+/* Gold (#C9A25F) on white fails WCAG AA (ratio 2.38). Switch eyebrow and
+   info links to magenta (#A42963) which achieves 5.6:1 on white. */
+:root[data-theme='light'] .cp-eyebrow {
+  color: var(--accent-magenta);
+}
+
+:root[data-theme='light'] .cp-info-item a {
+  color: var(--accent-magenta);
+}
+
+:root[data-theme='light'] .cp-info-item a:hover {
+  color: #8B1F52;
+  opacity: 1;
+}

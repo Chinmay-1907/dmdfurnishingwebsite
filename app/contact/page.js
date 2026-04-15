@@ -2,9 +2,9 @@ import ContactPage from '../../components/contact/ContactPage';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 
 export const metadata = generatePageMetadata({
-  title: 'Contact Us | Request a Consultation',
+  title: 'Contact DMD Furnishing | Foxboro MA Manufacturer',
   description:
-    'Request a consultation with DMD Furnishing. Discuss scope, materials, budgets, and timelines for your commercial furniture project. Foxboro, MA.',
+    'Request a project estimate or hospitality furniture consultation with DMD Furnishing in Foxboro, Massachusetts. Talk scope, materials, budgets, and lead times.',
   path: '/contact',
   image: '/Images/Contact_Page.jpg',
 });
@@ -16,9 +16,9 @@ const contactSchema = {
       '@type': 'ContactPage',
       '@id': `${siteUrl}/contact`,
       url: `${siteUrl}/contact`,
-      name: 'Contact DMD Furnishing | Request a Consultation',
+      name: 'Contact DMD Furnishing | Foxboro Massachusetts Furniture Manufacturer',
       description:
-        'Contact DMD Furnishing to request a quote, schedule a free consultation, or start a commercial furniture project for hotels, restaurants, offices, or institutional spaces.',
+        'Contact DMD Furnishing to request a project estimate, book a hospitality furniture consultation, or start a custom FF&E project for hotels, restaurants, offices, or institutional spaces.',
       isPartOf: { '@id': `${siteUrl}/#website` },
     },
     {
@@ -26,16 +26,16 @@ const contactSchema = {
       name: 'Hospitality Furniture Consultation',
       url: `${siteUrl}/contact#schedule`,
       description:
-        'Request a consultation with DMD Furnishing to discuss custom FF&E, materials, timelines, and budgets for your commercial project.',
+        'Book a hospitality furniture consultation with DMD Furnishing to walk through scope, materials, budgets, and lead times for your custom commercial furniture project.',
       provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
       areaServed: 'US',
     },
     {
       '@type': 'ScheduleAction',
-      name: 'Request a Consultation',
+      name: 'Request a Project Estimate',
       target: process.env.NEXT_PUBLIC_CALENDLY_URL || `${siteUrl}/contact#schedule`,
       description:
-        'Request a consultation with DMD Furnishing to discuss custom FF&E, materials, timelines, and budgets for your commercial project.',
+        'Request a project estimate or schedule a call with a DMD Furnishing project manager to walk through custom FF&E scope, materials, and budget.',
       provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
     },
     {

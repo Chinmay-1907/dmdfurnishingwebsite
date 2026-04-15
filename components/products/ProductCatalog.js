@@ -168,7 +168,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
     <main className={styles.catalogPage}>
       <CatalogHero
         title={heroTitle || 'Commercial Furniture Catalog'}
-        description={heroDescription || `${products.length} products across ${filterOptions.spaces.length} environments. Filter, compare, and request a quote.`}
+        description={heroDescription || `Filter, compare, and request a quote on ${products.length} products across ${filterOptions.spaces.length} commercial environments.`}
         stats={stats}
         searchQuery={searchQuery}
         onSearchChange={handleSearchChange}
@@ -257,7 +257,6 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
           <p>Our FF&E project management team can guide your selection from specification through delivery.</p>
           <div className={styles.ctaActions}>
             <Link href="/contact#schedule" className={styles.ctaPrimary}>Schedule a Call</Link>
-            <Link href="/contact" className={styles.ctaSecondary}>Request a Quote</Link>
           </div>
         </div>
       </section>

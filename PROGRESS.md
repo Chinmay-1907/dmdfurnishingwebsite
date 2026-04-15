@@ -1,6 +1,81 @@
 # DMD Furnishing — Website Progress
 
-Plain-English changelog of what's built, what works, what's still ahead. Last updated 2026-04-10.
+Plain-English changelog of what's built, what works, what's still ahead. Last updated 2026-04-14.
+
+---
+
+## Today (2026-04-14) — Home page polish + site-wide copy rubric sprint
+
+### Home page — fully restyled and rewritten
+
+Worked section by section to review copy from your DMD Copy review JSON and implement the chosen options plus your notes:
+
+- **Hero** — new eyebrow "Custom Hospitality FF&E · Built to Spec · Installed Nationwide," new lede ("Every piece built to your finish samples...") split onto two lines, CTA renamed to "Request a Project Estimate."
+- **Trust Bar** — label swaps to "Rooms Delivered and Installed," "Commercial FF&E Projects," "Verticals We Serve."
+- **Who We Serve** — swapped `education` for `residential` per your call, H2 widened and tightened to fit two lines.
+- **Recent Work** — eyebrow changed to "Installed Projects." Moved the dim side link "See all N projects" to a centered pill button under the project strip for visibility.
+- **Before & After** — eyebrow changed to "The Difference We Make." H2 back to single line. Removed the "20 guest rooms, lobby, outdoor lounge" caption line that was redundant.
+- **Why DMD** — completely rewritten. Six cards now align 1:1 with the About page's `differentiators` (In House Design Team, Two Manufacturing Paths, One PM from Start to Finish, Value Engineered Line by Line, Commercial Material Sourcing, Three Point Quality Control). Each card is one punchy sentence (12–18 words). Added gradient-clipped "01"–"06" numerals above each title for rhythm.
+- **How We Work preview** — expanded from 6 to 7 phases to match the services page. H2 updated to "Your project in seven phases, from first call to close out."
+- **CTA alignment** — all "go to next page" buttons centered under their sections for consistency (Browse All Products, See All Projects, Learn About the DMD Team, Explore All Services).
+- **Labels** — "Browse All 174 Products" → "Browse All Products," "Explore All Six Services" → "Explore All Services."
+
+### Design system — elegant gradient CTA pattern
+
+New unified CTA treatment across every home page button. The old bright gold gradient with white shimmer is saved for future light mode; the current dark-mode version is an elegant rich gold-to-deep-rose-pink with a slow smooth gradient slide on hover, warm amber inner glow fade-in, and soft dual-layer shadow. Palette: gold `#c9a96e` → light gold `#d4b77e` → deep rose `#a8326b`. No white shimmer anywhere (felt "Vegas"). Applied identically to filled buttons, outlined buttons, and large finale buttons.
+
+### Text legibility site-wide
+
+Bumped dark-page body copy tokens in `globals.css`:
+- `--page-dark-muted` opacity 0.82 → 0.94
+- `--page-dark-soft` opacity 0.68 → 0.84
+- `.heroTagline` opacity 0.7 → 0.92
+
+Whiter/more readable muted text on every dark page.
+
+### Site-wide copy rubric sprint — DONE
+
+Nine files rewritten against the 5-dimension rubric by four parallel copy agents (disjoint file ownership, no overlap). Every file independently grep-verified clean before acceptance.
+
+**Files rewritten:**
+
+| Area | Files | Agent rubric self-score (avg across 5 dimensions) |
+|---|---|---|
+| About + Contact | `app/about/page.js`, `app/contact/page.js`, `components/contact/ContactPage.js` | 94 / 95 / 94 |
+| Products + Projects | `app/products/page.js`, `app/projects/page.js` | 93 / 94 |
+| Blog + Guides | `app/blog/page.js`, `app/guides/page.js` | 94 / 94 |
+| Inspirations + Author | `app/inspirations/page.js`, `app/author/dmd-furnishing-editorial/page.js` | 94 / 94 |
+
+**Fabrications the agents caught and removed** (these were in the site before; now gone):
+- Six blog posts had invented `readTime: '6 min read'` fields with no backing data. Deleted, replaced with publication date.
+- "Browse 475+ commercial furniture products" claim with no verified count. Removed, replaced with live product count from the data layer.
+- "installed on schedule" as an absolute guarantee on the projects page. Softened.
+- "hundreds of hotel, restaurant, healthcare projects" vague count on the author page. Replaced with non-quantified language.
+- "Typical lead times run multiple weeks once specifications are approved" on About FAQ. Replaced with honest "timeline committed in writing at contract signing."
+- "survive a five-year renovation cycle" invented industry metric. Replaced with truthful parallel phrasing.
+- Three separate "respond / get back / follow up within one business day" guarantees across the contact page. Removed. Replaced with "A DMD project manager reads every inquiry."
+- "20-room motel / 200-room rollout" specific project sizes. Softened to non-numeric equivalents.
+- "upholstery" listed as a service category (verified service list has casegoods, seating, millwork — not upholstery as a separate line). Removed from service list.
+
+**Typography rules enforced site-wide on rewritten files:**
+- Zero em-dashes, zero en-dashes in any user-facing copy.
+- Removed unnecessary prose hyphens (`contract grade` not `contract-grade`, `close out` not `close-out`, `powder coated` not `powder-coated`, `fact check` not `fact-check`, `real world` not `real-world`, `soft close` not `soft-close`).
+- Ampersands only in established acronyms (FF&E, Q&A).
+- No durations, no week ranges, no same-day guarantees anywhere.
+- FF&E spelled out on first mention of each page.
+- Commitment-phrase titles where natural (matches DMD brand voice).
+
+**Out of scope — flagged for future sprints if you want them:**
+- `components/products/ProductCatalog.js`, `components/products/CatalogHero.js`, `components/products/CategoryContentBlock.js` — these own the products page hero, filter labels, and empty states. The products index page itself is thin; real hero copy lives here.
+- `lib/inspirations.js` — inspiration gallery card titles and descriptions render on the inspirations page from this data file.
+- `lib/projects.js` — each project's `shortDescription` renders on projects.
+- Six individual blog posts under `app/blog/[slug]/page.js` contain em-dashes and some week-range references inside body content. These are topic-appropriate in a post literally titled "FF&E Procurement Timeline," but if you want a uniform no-dash rule across the whole blog, a careful per-post pass is needed.
+- Contact H1 is now "Talk to a Project Manager, Not a Form Robot" — agent flagged this as "slightly cheeky." If you want a more buttoned-up fallback, easy one-line swap to "Talk to a Project Manager About Your Project."
+- About page FAQ about project duration now correctly says "it depends." If sales ops can confirm typical domestic vs overseas ranges, the copy could be upgraded with a real range at that point.
+
+**Nothing has been committed.** All changes are in the working tree, ready for your visual review. Run `npm run dev` to see each page. Run `git diff` to inspect copy line by line.
+
+---
 
 ---
 

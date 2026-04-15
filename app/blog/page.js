@@ -4,16 +4,16 @@ import { siteUrl } from '../../lib/metadata';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'FF&E & Furniture Blog',
+  title: 'Commercial FF&E Blog | Hotel Furniture Insights',
   description:
-    'Practical FF&E insights for hospitality professionals: guestroom checklists, material comparisons, procurement timelines, and value engineering.',
+    'Hospitality FF&E articles for hotel, restaurant, and commercial projects: guestroom checklists, casegood materials, value engineering, and procurement timelines.',
   alternates: {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: 'FF&E & Furniture Blog | DMD Furnishing',
+    title: 'Commercial FF&E Blog | DMD Furnishing',
     description:
-      'Practical FF&E insights for hospitality professionals: guestroom checklists, material comparisons, procurement timelines, and value engineering.',
+      'Hospitality FF&E articles for hotel, restaurant, and commercial projects: guestroom checklists, casegood materials, value engineering, and procurement timelines.',
     url: `${siteUrl}/blog`,
     siteName: 'DMD Furnishing',
     type: 'website',
@@ -27,66 +27,60 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FF&E & Furniture Blog | DMD Furnishing',
+    title: 'Commercial FF&E Blog | DMD Furnishing',
     description:
-      'Practical FF&E insights for hospitality professionals: guestroom checklists, material comparisons, procurement timelines, and value engineering.',
+      'Hospitality FF&E articles for hotel, restaurant, and commercial projects: guestroom checklists, casegood materials, value engineering, and procurement timelines.',
   },
 };
 
 const posts = [
   {
     slug: 'what-is-ffe-hospitality',
-    title: 'What Is FF&E? A Complete Guide for Hospitality Projects',
+    title: 'What Is FF&E? The Hospitality Buyer Guide',
     excerpt:
-      'FF&E — Furniture, Fixtures & Equipment — is the backbone of every hospitality fit-out. Learn exactly what qualifies as FF&E, how it differs from OS&E, and why it drives both budget and guest experience.',
+      'FF&E stands for Furniture, Fixtures, and Equipment, and it drives both your budget and the guest experience. See exactly what qualifies, how it differs from OS&E, and where buyers get tripped up.',
     date: 'March 28, 2026',
     category: 'FF&E Guide',
-    readTime: '6 min read',
   },
   {
     slug: 'hotel-guestroom-furniture-checklist',
-    title: 'Hotel Guestroom Furniture Checklist: What Every Room Needs',
+    title: 'Hotel Guestroom Furniture Checklist for Every Room',
     excerpt:
-      'A thorough breakdown of every furniture piece required in a hotel guestroom — from the bed frame and headboard to the desk, luggage bench, and vanity — with guidance on commercial specifications.',
+      'Every piece a commercial guestroom actually needs, from bed frame and headboard to desk, luggage bench, and vanity. Includes the spec notes brand standards expect.',
     date: 'March 28, 2026',
     category: 'Hotel Furniture',
-    readTime: '7 min read',
   },
   {
     slug: 'value-engineering-commercial-furniture',
-    title: 'How to Value-Engineer Commercial Furniture Without Losing Quality',
+    title: 'How to Value Engineer Commercial Furniture the Right Way',
     excerpt:
-      'Value engineering is not just cost-cutting. Discover the strategies procurement teams use to reduce FF&E spend while maintaining durability, aesthetics, and brand standards.',
+      'Value engineering is not the same as cost cutting. See the moves procurement teams use to trim FF&E spend while protecting durability, finish quality, and brand standards.',
     date: 'March 28, 2026',
     category: 'Procurement',
-    readTime: '6 min read',
   },
   {
     slug: 'hpl-veneer-solid-wood-hotel-casegoods',
-    title: 'HPL vs Veneer vs Solid Wood: Choosing the Right Surface for Hotel Casegoods',
+    title: 'HPL vs Veneer vs Solid Wood for Hotel Casegoods',
     excerpt:
-      'Each surface material brings different trade-offs in cost, durability, and appearance. This guide compares HPL, wood veneer, and solid wood specifically for hotel guestroom casegoods.',
+      'Each surface has a different story on cost, durability, and finish. Compare HPL, wood veneer, and solid wood for guestroom casegoods so you can spec with confidence.',
     date: 'March 28, 2026',
     category: 'Materials',
-    readTime: '8 min read',
   },
   {
     slug: 'restaurant-seating-guide',
-    title: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool?',
+    title: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool',
     excerpt:
-      'Seating choice shapes dwell time, table density, and brand atmosphere. Understand when to specify booths, dining chairs, or bar stools based on your concept, layout, and commercial durability needs.',
+      'Seating shapes dwell time, table density, and brand feel. Learn when to spec booths, dining chairs, or bar stools based on concept, layout, and commercial durability needs.',
     date: 'March 28, 2026',
     category: 'Restaurant',
-    readTime: '7 min read',
   },
   {
     slug: 'ffe-procurement-timeline',
-    title: 'FF&E Procurement Timeline: What to Expect from Concept to Install',
+    title: 'FF&E Procurement Timeline from Concept to Install',
     excerpt:
-      'Lead times, approval cycles, and delivery logistics can make or break an opening date. Here is a realistic timeline for FF&E procurement on a commercial hospitality project.',
+      'Lead times, approvals, and delivery logistics can make or break an opening date. Walk through a realistic FF&E schedule for a commercial hospitality project.',
     date: 'March 28, 2026',
     category: 'Hospitality',
-    readTime: '8 min read',
   },
 ];
 
@@ -95,9 +89,9 @@ const collectionSchema = {
   '@type': 'CollectionPage',
   '@id': `${siteUrl}/blog#webpage`,
   url: `${siteUrl}/blog`,
-  name: 'Commercial Furniture & FF&E Blog | DMD Furnishing',
+  name: 'Commercial FF&E Blog | DMD Furnishing',
   description:
-    'Practical FF&E and commercial furniture insights for hospitality professionals.',
+    'Hospitality FF&E articles for hotel, restaurant, and commercial projects.',
   isPartOf: { '@id': `${siteUrl}/#website` },
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -140,11 +134,11 @@ export default function BlogIndexPage() {
       </nav>
 
       <header className={styles.indexHeader}>
-        <h1 className={styles.indexTitle}>Commercial Furniture &amp; FF&amp;E Insights</h1>
+        <h1 className={styles.indexTitle}>Commercial Furniture and FF&amp;E Insights</h1>
         <p className={styles.indexIntro}>
-          Practical guidance for hospitality designers, procurement managers, and owners navigating
-          FF&amp;E specifications, material selection, and project timelines. All articles are written
-          from real commercial furniture manufacturing experience.
+          Straight answers on hospitality FF&amp;E, casegood materials, and procurement timelines,
+          written by the DMD Furnishing team from the factory floor out. Built for designers,
+          owners, and procurement managers who need to spec it right the first time.
         </p>
       </header>
 
@@ -156,30 +150,30 @@ export default function BlogIndexPage() {
             <p className={styles.cardExcerpt}>{post.excerpt}</p>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px' }}>
               <span className={styles.cardReadMore}>Read article →</span>
-              <span className={styles.blogCardReadTime}>{post.readTime}</span>
+              <span className={styles.blogCardReadTime}>{post.date}</span>
             </div>
           </Link>
         ))}
       </div>
 
       <section className={styles.relatedResources}>
-        <h2>Related Resources</h2>
+        <h2>Keep Exploring</h2>
         <div className={styles.resourceGrid}>
           <Link href="/products" className={styles.resourceCard}>
             <h3>Product Catalog</h3>
-            <p>Explore 475+ commercial furniture products for hospitality projects.</p>
+            <p>Browse commercial furniture built for hotels, restaurants, and multifamily.</p>
           </Link>
           <Link href="/services" className={styles.resourceCard}>
             <h3>Our Services</h3>
-            <p>Custom manufacturing, FF&amp;E coordination, and value engineering.</p>
+            <p>Custom manufacturing, FF&amp;E coordination, and value engineering under one roof.</p>
           </Link>
           <Link href="/about" className={styles.resourceCard}>
             <h3>About DMD</h3>
-            <p>Learn about our manufacturing approach and commitment to quality.</p>
+            <p>In-house design team, dual manufacturing, and a seven phase project process.</p>
           </Link>
           <Link href="/contact#schedule" className={styles.resourceCard}>
             <h3>Free Consultation</h3>
-            <p>Speak with a hospitality furniture specialist today.</p>
+            <p>Talk to a hospitality FF&amp;E specialist about your project scope.</p>
           </Link>
         </div>
       </section>
