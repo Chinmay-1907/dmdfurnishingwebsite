@@ -138,8 +138,8 @@ export default function InspirationsPage() {
           </div>
           <div className={styles.heroImageWrap}>
             <Image
-              src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Warmly lit hotel lobby lounge with custom upholstered seating and walnut casegoods"
+              src="/images/Hotel_Guest_Room_Hero.png"
+              alt="Custom walnut casegoods, upholstered headboard, and contract-grade furniture in a tailored hotel guestroom interior"
               fill
               priority
               sizes="(max-width: 720px) 100vw, 50vw"

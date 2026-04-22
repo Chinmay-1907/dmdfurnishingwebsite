@@ -45,3 +45,6 @@ hotel-response.html
 # Working artifacts (audit screenshots + copy rewrite workspace — not shipped)
 qa/
 copy-review/
+
+# Loose debug screenshots at repo root
+/product-detail-*.png

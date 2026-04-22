@@ -1,0 +1,46 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 1.25rem 0 0.25rem 0;
+  color: rgba(244, 240, 230, 0.72);
+  font-size: 0.9rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.breadcrumb a {
+  color: rgba(244, 240, 230, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-gold, #c9a96e);
+}
+
+.sep {
+  opacity: 0.5;
+}
+
+:global([data-theme='light']) .breadcrumb {
+  color: rgba(20, 20, 20, 0.7);
+}
+
+:global([data-theme='light']) .breadcrumb a {
+  color: rgba(20, 20, 20, 0.85);
+}
+
+:global([data-theme='light']) .breadcrumb a:hover {
+  color: var(--accent-magenta);
+}

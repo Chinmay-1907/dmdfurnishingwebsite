@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaLinkedinIn, FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import './Footer.css';
 
 function Footer() {
@@ -14,8 +13,8 @@ function Footer() {
           <span className="footer-eyebrow">Commercial FF&amp;E Manufacturer</span>
           <div className="footer-brand-title">DMD Furnishing</div>
           <p className="footer-brand-tagline">
-            Custom hospitality &amp; commercial furniture, built to specification —
-            from concept through installation.
+            Custom hospitality &amp; commercial furniture, built to specification.
+            From concept through installation.
           </p>
         </div>
 
@@ -37,10 +36,10 @@ function Footer() {
             <div className="footer-column">
               <div className="footer-column-title">Services</div>
               <ul>
-                <li><Link href="/services#process">Design Consultation</Link></li>
-                <li><Link href="/services#process">Custom Manufacturing</Link></li>
-                <li><Link href="/services#process">FF&amp;E Project Management</Link></li>
-                <li><Link href="/services#process">Installation &amp; Setup</Link></li>
+                <li><Link href="/services#design-consultation">Design Consultation</Link></li>
+                <li><Link href="/services#custom-manufacturing">Custom Manufacturing</Link></li>
+                <li><Link href="/services#ffe-project-management">FF&amp;E Project Management</Link></li>
+                <li><Link href="/services#installation-setup">Installation &amp; Setup</Link></li>
               </ul>
             </div>
 
@@ -78,7 +77,7 @@ function Footer() {
                 <FaLinkedinIn size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/dmdfurnishing/"
                 className="social-icon"
                 aria-label="DMD Furnishing on Instagram"
                 target="_blank"
@@ -87,31 +86,13 @@ function Footer() {
                 <FaInstagram size={16} />
               </a>
               <a
-                href="#"
-                className="social-icon"
-                aria-label="DMD Furnishing on X"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaXTwitter size={15} />
-              </a>
-              <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61575451781876"
                 className="social-icon"
                 aria-label="DMD Furnishing on Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFacebookF size={15} />
-              </a>
-              <a
-                href="#"
-                className="social-icon"
-                aria-label="DMD Furnishing on YouTube"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaYoutube size={16} />
               </a>
             </div>
             <Link href="/website-policies" className="footer-policy-link">

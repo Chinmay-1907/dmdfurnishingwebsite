@@ -1,10 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './ProcessTimeline.module.css';
 
 export default function ProcessTimeline({ steps = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    function syncToHash() {
+      const hash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+      if (!hash) return;
+      const idx = steps.findIndex((s) => s.slug === hash);
+      if (idx >= 0) {
+        setActiveIndex(idx);
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    syncToHash();
+    window.addEventListener('hashchange', syncToHash);
+    return () => window.removeEventListener('hashchange', syncToHash);
+  }, [steps]);
 
   const activeStep = steps[activeIndex];
 
@@ -19,12 +35,14 @@ export default function ProcessTimeline({ steps = [] }) {
           return (
             <button
               key={step.number}
+              id={step.slug}
               role="tab"
               className={`${styles.step} ${isActive ? styles.stepActive : ''}`}
               onClick={() => setActiveIndex(index)}
               aria-selected={isActive}
               aria-controls="process-step-detail"
               tabIndex={isActive ? 0 : -1}
+              style={{ scrollMarginTop: '120px' }}
             >
               <span className={styles.dot}>
                 <span>{step.number}</span>

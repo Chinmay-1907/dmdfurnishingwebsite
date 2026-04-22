@@ -16,7 +16,18 @@
   --transition-base: 220ms cubic-bezier(0.33, 1, 0.68, 1);
   --transition-fast: 180ms cubic-bezier(0.33, 1, 0.68, 1);
 
-  --section-padding: clamp(80px, 10vw, 120px);
+  --section-padding: clamp(56px, 5vw, 88px);
+
+  /* Unified type scale — heroes + section heads share the same scale
+     across every page so titles no longer drift between layouts.
+     --hero-h1-home is a touch larger since the home hero is the
+     brand moment; everywhere else uses --hero-h1. */
+  --hero-h1: clamp(2.4rem, 5.2vw, 4rem);
+  --hero-h1-home: clamp(3rem, 7.2vw, 5.4rem);
+  --hero-lede: clamp(1rem, 1.6vw, 1.18rem);
+  --hero-tagline: clamp(1.05rem, 1.9vw, 1.35rem);
+  --section-h2: clamp(1.8rem, 3.6vw, 2.8rem);
+  --section-h2-sub: clamp(1.5rem, 2.8vw, 2rem);
 }
 
 /* ──────────────────────────────────────────────────────────────

@@ -28,7 +28,7 @@ export default function NotFound() {
         margin: '0 auto',
       }}
     >
-      <p style={{ color: 'var(--color-gold, #c9a96e)', fontWeight: 700, letterSpacing: '0.1em', marginBottom: '0.5rem' }}>404</p>
+      <p style={{ color: 'var(--text-accent)', fontWeight: 700, letterSpacing: '0.1em', marginBottom: '0.5rem' }}>404</p>
       <h1 style={{ fontSize: '1.75rem', marginBottom: '1rem' }}>Page Not Found</h1>
       <p style={{ color: 'var(--text-secondary, #b0b0b0)', marginBottom: '2rem', lineHeight: 1.6 }}>
         The page you are looking for does not exist or has been moved. Try one of these links to find what you need.
@@ -38,7 +38,7 @@ export default function NotFound() {
           <Link
             key={href}
             href={href}
-            style={{ color: 'var(--color-gold, #c9a96e)', textDecoration: 'underline', padding: '0.35rem 0' }}
+            style={{ color: 'var(--text-accent)', textDecoration: 'underline', padding: '0.35rem 0' }}
           >
             {label}
           </Link>

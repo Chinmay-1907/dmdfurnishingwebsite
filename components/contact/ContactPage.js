@@ -53,10 +53,26 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     [formData.projectCategory]
   );
 
-  // Activate message tab if URL hash is #message, otherwise default to schedule
+  // Activate message tab if URL hash is #message, otherwise default to schedule.
+  // If a ?product= query is present, seed the message with a product-specific opener
+  // so the form lands ready to send.
   useEffect(() => {
     const hash = window.location.hash;
     if (hash === '#message') setActiveTab('message');
+
+    const params = new URLSearchParams(window.location.search);
+    const productParam = params.get('product');
+    if (productParam) {
+      const productName = productParam.trim();
+      setFormData((current) => (
+        current.message
+          ? current
+          : {
+              ...current,
+              message: `I'd like a quote on: ${productName}.\n\nProject details (rooms, quantity, finish preferences, timeline): `,
+            }
+      ));
+    }
   }, []);
 
   useEffect(() => {
@@ -326,7 +342,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
       {/* ── HERO BANNER ── */}
       <section className="cp-hero">
         <p className="cp-eyebrow">Contact DMD Furnishing</p>
-        <h1>Talk to a Project Manager, Not a Form Robot.</h1>
+        <h1>Talk to a Project Manager.</h1>
         <p className="cp-hero-sub">
           Request a project estimate, book a hospitality furniture consultation, or send a
           message about scope, materials, budgets, and lead times. A DMD project manager
@@ -373,8 +389,8 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                       <div className="cp-schedule-icon-wrap">
                         <FaCalendarAlt />
                       </div>
-                      <h2>Book a Hospitality Furniture Consultation</h2>
-                      <p>Pick a time that works for you. We walk through project scope, materials, budget, and lead times on the call.</p>
+                      <h2>Request a Project Consultation</h2>
+                      <p>On the call we review project scope, materials, 2D technical drawings, 3D design, budget, and lead times.</p>
                     </div>
 
                     <div className="cp-schedule-benefits">
@@ -393,7 +409,12 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                     </div>
 
                     <div className="cp-schedule-cta">
-                      <a href="tel:+16172237781" className="cp-btn cp-btn-gold cp-btn-full">
+                      <a
+                        href="https://wa.me/16172237781"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cp-btn cp-btn-gold cp-btn-full"
+                      >
                         <FaPhone /> Call Now: +1 (617) 223-7781
                       </a>
                     </div>
@@ -424,7 +445,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 ) : (
                   <div className="cp-form-card">
                     <div className="cp-form-header">
-                      <h2>Request a Project Estimate</h2>
+                      <h2>Request a Project Consultation</h2>
                       <p>Tell us about the project. A DMD project manager will reply with the next step, not an autoresponder.</p>
                     </div>
 
@@ -456,7 +477,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                               {submitStatus === 'sending' ? 'Sending...' : 'Verify Email'}
                             </button>
                           </div>
-                          <p className="cp-helper">We send a one time code to confirm your email. Keeps spam out of our inbox so a real PM can follow up with you.</p>
+                          <p className="cp-helper">Email verification. A one time code confirms your address so a project manager can follow up directly.</p>
                         </div>
                         {errorMessage && <div className="cp-error">{errorMessage}</div>}
                       </form>
@@ -527,7 +548,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
 
                         <div className="cp-form-actions">
                           <button type="submit" className="cp-btn cp-btn-gold cp-btn-full" disabled={submitStatus === 'sending'}>
-                            {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Project Estimate'}
+                            {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Project Consultation'}
                           </button>
                         </div>
                         {errorMessage && <div className="cp-error">{errorMessage}</div>}

@@ -15,7 +15,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: min(78vh, 640px);
+  min-height: clamp(320px, 50vh, 420px);
   padding: var(--header-height, 90px) 24px 0;
   overflow: hidden;
   margin-top: calc(-1 * var(--header-height));
@@ -51,7 +51,7 @@
 .heroContent h1 {
   margin: 0;
   max-width: 16ch;
-  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+  font-size: var(--hero-h1);
   line-height: 1;
   color: #F3EFE6;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
@@ -102,7 +102,7 @@
 
 .section h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: var(--section-h2);
   line-height: 1.1;
 }
 
@@ -357,7 +357,7 @@
 
 .ctaSection h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: var(--section-h2);
 }
 
 .ctaLede {

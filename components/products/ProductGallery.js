@@ -29,6 +29,7 @@ export default function ProductGallery({ images, productName }) {
     <section className={styles.gallery} aria-label={`${productName} gallery`}>
       <div className={styles.stage}>
         <Image
+          key={activeImage.src}
           src={activeImage.src}
           alt={activeImage.alt || productName}
           fill

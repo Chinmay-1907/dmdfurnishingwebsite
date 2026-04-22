@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
 import JsonLd from '../../../components/JsonLd';
+import AnswerCallout from '../../../components/AnswerCallout';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
@@ -9,6 +10,10 @@ export const metadata = generatePageMetadata({
     'Hospitality FF&E procurement guide: budgeting, sourcing, manufacturing, delivery, and installation for hotels, restaurants, and commercial spaces.',
   path: '/guides/hospitality-ffe',
   image: '/Images/Tailored_Guestroom_Collections.jpg',
+  type: 'article',
+  publishedTime: '2026-04-10',
+  modifiedTime: '2026-04-10',
+  authors: 'DMD Furnishing Editorial Team',
 });
 
 const sections = [
@@ -18,7 +23,7 @@ const sections = [
   { id: 'standards', title: 'Standards and Brand Requirements' },
   { id: 'process', title: 'The Hospitality FF&E Procurement Process' },
   { id: 'cost-drivers', title: 'What Actually Drives Hotel FF&E Cost' },
-  { id: 'roles', title: 'Who Does What — Owner, Designer, FF&E Vendor' },
+  { id: 'roles', title: 'Who Does What: Owner, Designer, FF&E Vendor' },
   { id: 'common-mistakes', title: 'Common Mistakes That Blow the Budget' },
   { id: 'faqs', title: 'Frequently Asked Questions' },
 ];
@@ -27,7 +32,7 @@ const faqs = [
   {
     question: 'What does FF&E stand for and what is included?',
     answer:
-      'FF&E stands for Furniture, Fixtures, and Equipment. In a hospitality project it covers every movable and semi-movable item that makes a hotel habitable but is not part of the building shell: guestroom casegoods (dressers, desks, nightstands, headboards), seating (chairs, sofas, ottomans, bar stools), case goods for public areas (reception desks, lobby consoles, concierge stations), soft goods (mattresses, bedding, window treatments, rugs), lighting, mirrors, artwork, televisions, and food & beverage equipment in restaurants and breakfast areas. FF&E is distinct from the building envelope (walls, flooring, MEP) and OS&E (operating supplies — linens, china, glassware, amenities).',
+      'FF&E stands for Furniture, Fixtures, and Equipment. In a hospitality project it covers every movable and semi-movable item that makes a hotel habitable but is not part of the building shell: guestroom casegoods (dressers, desks, nightstands, headboards), seating (chairs, sofas, ottomans, bar stools), case goods for public areas (reception desks, lobby consoles, concierge stations), soft goods (mattresses, bedding, window treatments, rugs), lighting, mirrors, artwork, televisions, and food & beverage equipment in restaurants and breakfast areas. FF&E is distinct from the building envelope (walls, flooring, MEP) and OS&E (operating supplies - linens, china, glassware, amenities).',
   },
   {
     question: 'How long does a hotel FF&E package typically last?',
@@ -37,7 +42,7 @@ const faqs = [
   {
     question: 'When should I start the FF&E procurement process?',
     answer:
-      'Vendor engagement should begin during design development — typically 6 to 9 months before the target installation date — not after construction documents are issued. Early engagement lets manufacturers flag lead time risks, value-engineer specifications before they are locked in, and hold production capacity. Waiting until construction documents are complete compresses the fabrication schedule and drives change orders. For detailed timeline guidance, see our FF&E procurement timeline guide.',
+      'Vendor engagement should begin during design development - typically 6 to 9 months before the target installation date - not after construction documents are issued. Early engagement lets manufacturers flag lead time risks, value-engineer specifications before they are locked in, and hold production capacity. Waiting until construction documents are complete compresses the fabrication schedule and drives change orders. For detailed timeline guidance, see our FF&E procurement timeline guide.',
   },
 ];
 
@@ -109,10 +114,15 @@ export default function HospitalityFfeGuide() {
             <span>Hospitality FF&amp;E</span>
           </nav>
           <p className={styles.eyebrow}>Pillar Guide</p>
-          <h1 className={styles.h1}>Hospitality FF&amp;E — A Complete Procurement Guide</h1>
+          <h1 className={styles.h1}>Hospitality FF&amp;E. A Complete Procurement Guide</h1>
+          <AnswerCallout>
+            Hospitality FF&amp;E covers the movable furniture, fixtures, and equipment inside hotels,
+            restaurants, and resorts. Procuring it well means coordinating brand standards, lead
+            times, budgets, and install sequencing across the whole project.
+          </AnswerCallout>
           <p className={`${styles.lede} snippet-bait`} data-speakable="true">
             Hospitality FF&amp;E is the furniture, fixtures, and equipment that make a hotel
-            habitable — guestroom casegoods, seating, public-area furniture, soft goods, lighting,
+            habitable. Guestroom casegoods, seating, public-area furniture, soft goods, lighting,
             and food &amp; beverage equipment. This guide walks owners, general managers, and
             interior designers through what FF&amp;E includes, how lifecycles work, and the
             procurement process from concept through install.
@@ -145,7 +155,7 @@ export default function HospitalityFfeGuide() {
                 covers every movable and semi-movable item that makes a hotel habitable but is not
                 part of the building shell. It sits in its own budget line distinct from the
                 construction package (walls, flooring, MEP, plumbing) and distinct from OS&amp;E
-                (operating supplies — linens, china, glassware, amenities).
+                (operating supplies - linens, china, glassware, amenities).
               </p>
               <p>
                 FF&amp;E is typically 15 to 25 percent of a hotel project&apos;s total capital cost,
@@ -171,33 +181,33 @@ export default function HospitalityFfeGuide() {
               </p>
               <ul>
                 <li>
-                  <strong>Guestroom casegoods</strong> — dressers, nightstands, desks, headboards,
+                  <strong>Guestroom casegoods:</strong> dressers, nightstands, desks, headboards,
                   luggage racks, TV consoles. Typically the largest single line in the package by
                   unit count.
                 </li>
                 <li>
-                  <strong>Guestroom seating</strong> — desk chairs, lounge chairs, ottomans,
+                  <strong>Guestroom seating:</strong> desk chairs, lounge chairs, ottomans,
                   vanity stools. Must meet contract-grade durability specifications and fire
                   safety standards for upholstery.
                 </li>
                 <li>
-                  <strong>Public area seating</strong> — lobby lounge, bar stools, restaurant
+                  <strong>Public area seating:</strong> lobby lounge, bar stools, restaurant
                   chairs, banquettes, booths, breakfast area dining chairs.
                 </li>
                 <li>
-                  <strong>Reception and back-of-house millwork</strong> — custom reception desks,
+                  <strong>Reception and back-of-house millwork:</strong> custom reception desks,
                   concierge stations, luggage storage, housekeeping cabinets.
                 </li>
                 <li>
-                  <strong>Soft goods</strong> — mattresses, box springs, pillows, bedding, window
+                  <strong>Soft goods:</strong> mattresses, box springs, pillows, bedding, window
                   treatments, area rugs, shower curtains.
                 </li>
                 <li>
-                  <strong>Lighting, mirrors, and artwork</strong> — table lamps, floor lamps, vanity
+                  <strong>Lighting, mirrors, and artwork:</strong> table lamps, floor lamps, vanity
                   mirrors, room art, corridor art.
                 </li>
                 <li>
-                  <strong>Food &amp; beverage equipment</strong> — buffet counters, breakfast
+                  <strong>Food &amp; beverage equipment:</strong> buffet counters, breakfast
                   service cabinets, dining tables, bar stools for F&amp;B areas.
                 </li>
               </ul>
@@ -219,23 +229,23 @@ export default function HospitalityFfeGuide() {
               </p>
               <ul>
                 <li>
-                  <strong>Upper-upscale and luxury hotels</strong> — 6 to 8 year casegoods cycles,
+                  <strong>Upper-upscale and luxury hotels:</strong> 6 to 8 year casegoods cycles,
                   4 to 5 year soft seating cycles. Higher guest expectations and premium brand
                   standards drive faster refresh cadence.
                 </li>
                 <li>
-                  <strong>Upscale and upper-midscale</strong> — 7 to 9 year casegoods, 5 to 6 year
+                  <strong>Upscale and upper-midscale:</strong> 7 to 9 year casegoods, 5 to 6 year
                   soft seating. Brand refresh programs from Marriott, Hilton, IHG, and Hyatt
                   typically require soft goods refreshes at five-year intervals even when casegoods
                   are still serviceable.
                 </li>
                 <li>
-                  <strong>Select-service and extended-stay</strong> — 8 to 10 year casegoods, 6 to
+                  <strong>Select-service and extended-stay:</strong> 8 to 10 year casegoods, 6 to
                   7 year soft seating. Lower occupancy intensity and simpler brand standards
                   extend lifecycles.
                 </li>
                 <li>
-                  <strong>Economy and midscale</strong> — 10+ year casegoods are possible when
+                  <strong>Economy and midscale:</strong> 10+ year casegoods are possible when
                   specified contract-grade originally, though many properties under-specify at
                   original install and replace earlier due to premature wear.
                 </li>
@@ -257,24 +267,24 @@ export default function HospitalityFfeGuide() {
               </p>
               <ul>
                 <li>
-                  <strong>Commercial seating durability standards</strong> — load, stability, and
+                  <strong>Commercial seating durability standards:</strong> load, stability, and
                   cycle-count thresholds for task seating, lounge seating, and public-area chairs.
                 </li>
                 <li>
-                  <strong>Desk and table stability standards</strong> — deflection, pull, and
+                  <strong>Desk and table stability standards:</strong> deflection, pull, and
                   stability tests for workstations and conference tables.
                 </li>
                 <li>
-                  <strong>Fire safety standards</strong> — vertical flame propagation for
+                  <strong>Fire safety standards:</strong> vertical flame propagation for
                   upholstery textiles and foam flammability for upholstered furniture. Required
                   in most jurisdictions for hospitality upholstered pieces.
                 </li>
                 <li>
-                  <strong>Architectural woodwork quality standards</strong> — specifications for
+                  <strong>Architectural woodwork quality standards:</strong> specifications for
                   custom reception desks, luggage storage, and built-in millwork.
                 </li>
                 <li>
-                  <strong>Brand and lodging association guidelines</strong> — industry positions
+                  <strong>Brand and lodging association guidelines:</strong> industry positions
                   on guestroom standards and accessibility.
                 </li>
               </ul>
@@ -299,7 +309,7 @@ export default function HospitalityFfeGuide() {
                 <li>
                   <strong>Design development and specification.</strong> Interior designer produces
                   the schematic, selects materials and finishes, and writes the BOQ. This is when
-                  the manufacturer should be engaged — not after construction documents.
+                  the manufacturer should be engaged - not after construction documents.
                 </li>
                 <li>
                   <strong>Vendor selection and RFQ.</strong> BOQs issued to vendors for quotation.
@@ -371,7 +381,7 @@ export default function HospitalityFfeGuide() {
             </section>
 
             <section id="roles">
-              <h2>Who Does What — Owner, Designer, FF&amp;E Vendor</h2>
+              <h2>Who Does What. Owner, Designer, FF&amp;E Vendor</h2>
               <p>
                 Hospitality FF&amp;E involves three primary parties. Role clarity is the biggest
                 lever on project outcomes:
@@ -458,7 +468,7 @@ export default function HospitalityFfeGuide() {
                 <Link href="/contact#schedule" className={styles.primaryBtn}>
                   Schedule a free consultation
                 </Link>
-                <Link href="/contact" className={styles.secondaryBtn}>
+                <Link href="/contact#message" className={styles.secondaryBtn}>
                   Request a quote
                 </Link>
               </div>

@@ -14,6 +14,7 @@ import { placeContent } from '../../../lib/place-content';
 import ProductCatalog from '../../../components/products/ProductCatalog';
 import CategoryContentBlock from '../../../components/products/CategoryContentBlock';
 import ProductDetailPage from '../../../components/products/ProductDetailPage';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 
 /**
  * Single-segment dispatcher at /products/[slug].
@@ -69,9 +70,9 @@ const placeMetaOverrides = {
       'Classroom seating, dormitory wardrobes, library carrels, and active-learning furniture for K-12 and higher education. Contract-grade.',
   },
   residential: {
-    title: 'Multi-family Amenity Furniture',
+    title: 'Multi-Family and Residential Furniture',
     description:
-      'Commercial furniture for multi-family clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics and construction.',
+      'Multi-family and residential furniture for clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics and construction.',
   },
   'lobby-area': {
     title: 'Lobby & Reception Furniture',
@@ -180,17 +181,6 @@ function buildProductStructuredData(product) {
         material:
           product.specifications?.find((spec) => spec.name?.toLowerCase() === 'material')?.value ||
           undefined,
-        offers: {
-          '@type': 'Offer',
-          url: canonicalUrl,
-          availability: 'https://schema.org/InStock',
-          priceSpecification: {
-            '@type': 'PriceSpecification',
-            priceCurrency: 'USD',
-          },
-          description: 'Custom pricing. Contact DMD Furnishing for a project quote.',
-          seller: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
-        },
         additionalProperty:
           product.specifications?.map((spec) => ({
             '@type': 'PropertyValue',
@@ -264,12 +254,23 @@ export default async function ProductsDispatchPage({ params }) {
     const related = getRelatedProducts(slug, 6);
     const schema = buildProductStructuredData(product);
 
+    const primary = product.primary;
+    const productCrumbs = [
+      { label: 'Home', href: '/' },
+      { label: 'Products', href: '/products' },
+      ...(primary?.placeSlug
+        ? [{ label: primary.placeName, href: `/products/${primary.placeSlug}` }]
+        : []),
+      { label: product.name },
+    ];
+
     return (
       <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
+        <Breadcrumbs items={productCrumbs} />
         <ProductDetailPage product={product} relatedProducts={related} />
       </>
     );
@@ -288,6 +289,13 @@ export default async function ProductsDispatchPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Products', href: '/products' },
+          { label: place.name },
+        ]}
       />
       <ProductCatalog
         products={allProducts}

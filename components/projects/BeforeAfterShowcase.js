@@ -4,19 +4,26 @@ import BeforeAfterSlider from '../BeforeAfterSlider';
 import styles from './BeforeAfterShowcase.module.css';
 
 /**
- * Single before/after slider — picks the first pair.
- * @param {{ beforeImages: {url:string, alt:string}[], afterImages: {url:string, alt:string}[], projectName: string }} props
+ * Single before/after slider: caller pre-picks the best before + after image.
+ * If `degradeBefore` is true, the before frame gets a slight quality drop
+ * (blur + desaturation) to visually signal "earlier / lower-fidelity shot."
  */
-export default function BeforeAfterShowcase({ beforeImages, afterImages, projectName }) {
-  if (!beforeImages?.length || !afterImages?.length) return null;
+export default function BeforeAfterShowcase({
+  beforeImage,
+  afterImage,
+  projectName,
+  degradeBefore = false,
+}) {
+  if (!beforeImage || !afterImage) return null;
 
   return (
     <div className={styles.sliderWrap}>
       <BeforeAfterSlider
-        beforeSrc={beforeImages[0].url}
-        afterSrc={afterImages[0].url}
-        beforeAlt={beforeImages[0].alt || `${projectName} before`}
-        afterAlt={afterImages[0].alt || `${projectName} after`}
+        beforeSrc={beforeImage.url}
+        afterSrc={afterImage.url}
+        beforeAlt={beforeImage.alt || `${projectName} before`}
+        afterAlt={afterImage.alt || `${projectName} after`}
+        degradeBefore={degradeBefore}
       />
     </div>
   );

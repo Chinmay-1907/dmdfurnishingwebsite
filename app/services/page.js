@@ -5,6 +5,7 @@ import { getAllProjects } from '../../lib/projects';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 import ProcessTimeline from '../../components/services/ProcessTimeline';
 import IndustryTabs from '../../components/services/IndustryTabs';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import styles from './page.module.css';
 
 // ---------------------------------------------------------------------------
@@ -14,6 +15,7 @@ import styles from './page.module.css';
 const processSteps = [
   {
     number: '01',
+    slug: 'design-consultation',
     shortLabel: 'Intro Call',
     title: 'Your First Call, No Commitment Yet',
     description:
@@ -26,6 +28,7 @@ const processSteps = [
   },
   {
     number: '02',
+    slug: 'ffe-project-management',
     shortLabel: 'Budget & Scope',
     title: 'Room Count, Budget Range, Written Scope',
     description:
@@ -52,6 +55,7 @@ const processSteps = [
   },
   {
     number: '04',
+    slug: 'custom-manufacturing',
     shortLabel: 'Manufacturing',
     title: 'Production: Foxboro Shop or Partner Factory',
     description:
@@ -78,6 +82,7 @@ const processSteps = [
   },
   {
     number: '06',
+    slug: 'installation-setup',
     shortLabel: 'Delivery & Install',
     title: 'Phased Delivery and On Site Installation',
     description:
@@ -190,7 +195,7 @@ const industryDescriptions = {
   },
   residential: {
     description:
-      'Multifamily common rooms, model units, and resident amenity spaces. Residential look, commercial-grade guts. Frames and fabrics sized for shared-use wear.',
+      'Multi-family and residential furniture for common rooms, model units, and resident amenity spaces. Residential look, commercial-grade construction. Frames and fabrics sized for shared-use wear.',
     highlights: [
       'Amenity-room lounge and dining packages',
       'Model-unit casegoods, beds, and accent pieces',
@@ -224,7 +229,7 @@ const tabNames = {
   hotel: 'Hospitality',
   office: 'Office',
   restaurant: 'Restaurant',
-  residential: 'Residential',
+  residential: 'Multi-Family & Residential',
   'educational-facilities': 'Education',
 };
 
@@ -336,15 +341,40 @@ const serviceSchema = {
       areaServed: { '@type': 'Country', name: 'United States' },
     })),
     {
-      '@type': 'FAQPage',
-      mainEntity: serviceFaqs.map(([question, answer]) => ({
-        '@type': 'Question',
-        name: question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: answer,
-        },
+      '@type': 'HowTo',
+      '@id': `${siteUrl}/services#how-to`,
+      name: 'FF&E Procurement and Manufacturing Process',
+      description:
+        'The seven phase DMD Furnishing process for custom commercial furniture, from first call through close out and warranty handover.',
+      totalTime: 'P6M',
+      step: processSteps.map((phase, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: phase.title,
+        text: phase.description,
+        url: `${siteUrl}/services#process`,
       })),
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How does DMD Furnishing\u2019s FF&E process work from first call to close out?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'DMD Furnishing\u2019s FF&E process runs through seven phases from first call to close out. Phase one is a short call or walkthrough to understand the property, brand standards, and timeline. Phase two counts every room type and produces a written scope document with a preliminary bill of quantities. Phase three models every guest room and public space in 3D; the spec book is not closed until the owner signs off on every room and every detail. Phase four is production: the Foxboro shop handles prototypes and short runs, partner factories overseas handle high volume guestroom packages. Phase five inspects dimensions, finish, hardware, and fabric against the signed spec sheet, with photo documentation compiled into a QC report. Phase six phases delivery around the GC schedule and handles assembly, placement, and anchoring room by room. Phase seven resolves punch list items on the spot and hands over warranty documentation, care instructions, and an as built piece count.',
+          },
+        },
+        ...serviceFaqs.map(([question, answer]) => ({
+          '@type': 'Question',
+          name: question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: answer,
+          },
+        })),
+      ],
     },
   ],
 };
@@ -408,17 +438,21 @@ export default function ServicesPage() {
       </section>
 
       <div className={styles.shell}>
+        <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
         {/* ── 2. Process Timeline ── */}
         <section id="process" className={styles.section}>
           <p className={styles.eyebrow}>How We Work</p>
           <h2>Seven phases, each with a named deliverable.</h2>
+          <p className={styles.sectionLede}>
+            TL;DR - intro call, scope and budget, 3D design, production in Foxboro or overseas, factory QC, phased install, punch list close out. Each phase below has a named deliverable so you always know what you are getting.
+          </p>
           <ProcessTimeline steps={processSteps} />
         </section>
 
         {/* ── 4. Industries ── */}
         <section className={styles.section}>
           <p className={styles.eyebrow}>Industries We Serve</p>
-          <h2>Built for {places.length} commercial environments.</h2>
+          <h2>What commercial environments does DMD Furnishing serve?</h2>
           <p className={styles.sectionLede}>
             Every commercial space has its own design language. Modern boutique hotels read differently than heritage country clubs. Sleek tech offices need a different palette than warm hospitality lobbies. We tailor materials, finishes, and proportions to the look and feel of the room.
           </p>
@@ -428,7 +462,7 @@ export default function ServicesPage() {
         {/* ── 5. FAQ (compact, matches homepage style) ── */}
         <section className={styles.section}>
           <p className={styles.eyebrow}>Common Questions</p>
-          <h2>What buyers ask about our services.</h2>
+          <h2>What do buyers ask about our FF&amp;E services?</h2>
           <div className={styles.faqList}>
             {serviceFaqs.map(([question, answer]) => (
               <details key={question} className={styles.faqItem}>
@@ -450,7 +484,7 @@ export default function ServicesPage() {
           </p>
           <div className={styles.ctaButtons}>
             <Link href="/contact#schedule" className={styles.primaryBtn}>
-              Schedule a Call
+              Schedule a Consultation
             </Link>
             <Link href="/projects" className={styles.tertiaryBtn}>
               View Our Projects

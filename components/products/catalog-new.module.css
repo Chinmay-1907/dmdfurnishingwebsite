@@ -8,10 +8,11 @@
 
 .catalogHero {
   background:
-    radial-gradient(circle at 20% 20%, rgba(201, 169, 110, 0.1), transparent 40%),
-    linear-gradient(135deg, rgba(18, 22, 29, 0.97), rgba(13, 13, 16, 0.99));
-  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
-  /* Slide under the fixed header so the dark panel reaches the very top */
+    radial-gradient(circle at 20% 20%, rgba(201, 162, 95, 0.1), transparent 42%),
+    radial-gradient(circle at 85% 15%, rgba(164, 41, 99, 0.05), transparent 40%),
+    linear-gradient(180deg, #F6F2EA 0%, #EFE8DB 100%);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.22);
+  /* Slide under the fixed header so the panel reaches the very top */
   margin-top: calc(-1 * var(--header-height));
   padding: calc(var(--header-height) + clamp(2.5rem, 6vw, 4.5rem)) clamp(1.25rem, 3vw, 2.5rem) clamp(2.5rem, 6vw, 4.5rem);
 }
@@ -34,10 +35,9 @@
 
 .heroTitle {
   margin: 0;
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-size: var(--hero-h1);
   line-height: 1.05;
-  /* Dark gradient bg is always present — keep text crisp white in both themes */
-  color: #F3EFE6;
+  color: #14120E;
 }
 
 .heroDescription {
@@ -45,7 +45,7 @@
   max-width: 52ch;
   font-size: 1.05rem;
   line-height: 1.65;
-  color: rgba(243, 239, 230, 0.72);
+  color: rgba(20, 18, 14, 0.72);
 }
 
 .heroSearch {
@@ -447,6 +447,16 @@
   border-color: rgba(201, 169, 110, 0.4);
 }
 
+.sortSelect option {
+  background: #16181d;
+  color: #f5f2ec;
+}
+
+:global([data-theme='light']) .sortSelect option {
+  background: #ffffff;
+  color: #14120e;
+}
+
 /* ─── Product Grid ───────────────────────────────────────────────────── */
 
 .productGrid {
@@ -483,7 +493,7 @@
 .productImageWrap {
   position: relative;
   aspect-ratio: 1 / 1;
-  background: linear-gradient(135deg, rgba(26, 32, 41, 0.6), rgba(13, 13, 16, 0.8));
+  background: #F6F2EA;
   overflow: hidden;
 }
 
@@ -498,11 +508,11 @@
   transition: opacity 350ms ease;
 }
 
-.productCard:hover .productImage {
+.productCardHasHover:hover .productImage {
   opacity: 0;
 }
 
-.productCard:hover .productImageHover {
+.productCardHasHover:hover .productImageHover {
   opacity: 1;
 }
 
@@ -735,57 +745,199 @@
   font-weight: 500;
 }
 
-/* ─── Light mode overrides for hardcoded-dark surfaces ──────────────────
-   The hero, stat pills, search input, and SpaceNav all have dark
-   backgrounds baked in (not CSS-variable-driven). In light mode the
-   CSS variables resolve to dark ink colours which become invisible on
-   those dark surfaces. Pin these elements to the off-white palette so
-   they stay readable in both themes.
-   ──────────────────────────────────────────────────────────────────── */
+/* ─── Light-theme overrides — full flip to warm paper / graphite palette ─
+   Replaces the previous partial dark-surface patch.
+   Hero + SpaceNav + sidebar + product cards all flip to cream/white.
+   Gold stays for decorative borders/fills; magenta for text accents.
+   ──────────────────────────────────────────────────────────────────────── */
 
-/* Hero search input & placeholder */
-:global(:root[data-theme='light']) .heroSearchInput {
-  color: #F3EFE6;
-}
-:global(:root[data-theme='light']) .heroSearchInput::placeholder {
-  color: rgba(243, 239, 230, 0.6);
+/* ── Hero ── */
+:global([data-theme='light']) .catalogHero {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201, 162, 95, 0.07), transparent 40%),
+    var(--page-background);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Hero stat pills — count number + label */
-:global(:root[data-theme='light']) .heroStat span {
-  color: rgba(243, 239, 230, 0.75);
+:global([data-theme='light']) .heroEyebrow {
+  color: var(--accent-magenta);
 }
 
-/* Product badges — gold on near-transparent gold bg renders as gold on cream */
-:global(:root[data-theme='light']) .productBadge {
+:global([data-theme='light']) .heroTitle {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .heroDescription {
   color: var(--text-secondary);
-  background: rgba(201, 162, 95, 0.18);
 }
 
-/* Filter chevrons — gold on cream */
-:global(:root[data-theme='light']) .filterChevron {
+/* Search input */
+:global([data-theme='light']) .heroSearchInput {
+  border-color: var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+:global([data-theme='light']) .heroSearchInput::placeholder {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .heroSearchInput:focus {
+  border-color: var(--accent-magenta);
+  background: var(--bg-surface);
+}
+
+/* Stat pills */
+:global([data-theme='light']) .heroStat {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+:global([data-theme='light']) .heroStat span {
+  color: var(--text-secondary);
+}
+
+/* ── Space Nav strip ── */
+:global([data-theme='light']) .spaceNav {
+  background: rgba(246, 242, 234, 0.92);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+:global([data-theme='light']) .spaceTab {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .spaceTab:hover {
+  background: rgba(20, 18, 14, 0.04);
+  color: var(--text-primary);
+}
+:global([data-theme='light']) .spaceTabActive {
+  background: var(--accent-gold-soft);
+  border-color: rgba(201, 162, 95, 0.35);
+  color: var(--text-primary);
+}
+:global([data-theme='light']) .spaceTabCount {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .spaceTabActive .spaceTabCount {
+  color: var(--text-secondary);
+}
+
+/* ── Filter sidebar ── */
+:global([data-theme='light']) .filterGroup {
+  border-top: 1px solid var(--border-subtle);
+}
+
+:global([data-theme='light']) .filterGroupHeader {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .filterChevron {
   color: var(--text-muted);
 }
 
-/* Load more remaining count */
-:global(:root[data-theme='light']) .loadMoreRemaining {
+:global([data-theme='light']) .filterCheckbox {
+  border-color: var(--border-strong);
+}
+
+:global([data-theme='light']) .filterOption:hover {
+  background: rgba(20, 18, 14, 0.04);
+}
+
+:global([data-theme='light']) .filterTitle {
   color: var(--text-muted);
 }
 
-/* SpaceNav strip — "All" button and inactive space tabs */
-:global(:root[data-theme='light']) .spaceTab {
-  color: rgba(243, 239, 230, 0.65);
+:global([data-theme='light']) .filterLabel {
+  color: var(--text-secondary);
 }
-:global(:root[data-theme='light']) .spaceTab:hover {
-  color: #F3EFE6;
+
+:global([data-theme='light']) .filterCount {
+  color: var(--text-muted);
 }
-:global(:root[data-theme='light']) .spaceTabActive {
-  color: var(--color-gold);
+
+:global([data-theme='light']) .clearAllBtn {
+  color: var(--accent-magenta);
+  border-color: rgba(164, 41, 99, 0.25);
 }
-:global(:root[data-theme='light']) .spaceTabCount {
-  color: rgba(243, 239, 230, 0.55);
+:global([data-theme='light']) .clearAllBtn:hover {
+  background: var(--accent-magenta-soft);
 }
-:global(:root[data-theme='light']) .spaceTabActive .spaceTabCount {
-  color: rgba(201, 169, 110, 0.8);
+
+/* ── Toolbar ── */
+:global([data-theme='light']) .toolbar {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+:global([data-theme='light']) .mobileFilterBtn {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+  background: var(--bg-surface);
+}
+
+:global([data-theme='light']) .sortSelect {
+  border-color: var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+:global([data-theme='light']) .sortSelect:focus {
+  border-color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .resultCount {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .resultCount strong {
+  color: var(--text-primary);
+}
+
+/* ── Product cards ── */
+:global([data-theme='light']) .productCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+:global([data-theme='light']) .productCard:hover {
+  border-color: rgba(164, 41, 99, 0.30);
+  box-shadow: var(--shadow-lift);
+}
+
+:global([data-theme='light']) .productImageWrap {
+  background: linear-gradient(135deg, rgba(20, 18, 14, 0.04), rgba(20, 18, 14, 0.07));
+}
+
+:global([data-theme='light']) .productBadge {
+  background: var(--accent-gold-soft);
+  color: var(--text-secondary);
+}
+
+/* ── Empty state ── */
+:global([data-theme='light']) .emptyState {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+/* ── Bottom CTA ── */
+:global([data-theme='light']) .catalogCta {
+  border-top: 1px solid var(--border-subtle);
+}
+
+:global([data-theme='light']) .ctaSecondary {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+:global([data-theme='light']) .ctaSecondary:hover {
+  background: rgba(20, 18, 14, 0.04);
+}
+
+/* ── Load more ── */
+:global([data-theme='light']) .loadMoreWrap {
+  border-top-color: var(--border-subtle);
+}
+:global([data-theme='light']) .loadMoreBtn {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+:global([data-theme='light']) .loadMoreBtn:hover {
+  background: rgba(20, 18, 14, 0.04);
+  border-color: var(--accent-magenta);
+}
+:global([data-theme='light']) .loadMoreRemaining {
+  color: var(--text-muted);
 }
 

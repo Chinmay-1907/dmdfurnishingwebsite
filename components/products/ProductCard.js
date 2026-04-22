@@ -8,7 +8,7 @@ export default function ProductCard({ product }) {
   const hasHover = product.hoverImage && product.hoverImage !== product.image;
 
   return (
-    <Link href={product.href} className={styles.productCard}>
+    <Link href={product.href} className={`${styles.productCard} ${hasHover ? styles.productCardHasHover : ''}`}>
       <div className={styles.productImageWrap}>
         <Image
           src={product.image || '/placeholder.png'}

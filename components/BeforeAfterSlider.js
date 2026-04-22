@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useCallback, useRef, useState } from 'react';
 
-export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt }) {
+export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt, degradeBefore = false }) {
   const [position, setPosition] = useState(50);
   const containerRef = useRef(null);
   const isDragging = useRef(false);
@@ -50,7 +50,13 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
           clipPath: `inset(0 ${100 - position}% 0 0)`,
         }}
       >
-        <Image src={beforeSrc} alt={beforeAlt} fill sizes="(max-width: 800px) 100vw, 80vw" style={{ objectFit: 'cover' }} />
+        <Image
+          src={beforeSrc}
+          alt={beforeAlt}
+          fill
+          sizes="(max-width: 800px) 100vw, 80vw"
+          style={{ objectFit: 'cover' }}
+        />
       </div>
 
       {/* Labels */}
@@ -66,13 +72,13 @@ export default function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afte
           left: `${position}%`,
           transform: 'translateX(-50%)',
           width: 3,
-          background: '#c9a96e',
+          background: 'var(--color-gold)',
           zIndex: 4,
           pointerEvents: 'none',
         }}
       />
 
-      {/* Draggable handle — wide hit area for easy grabbing */}
+      {/* Draggable handle: wide hit area for easy grabbing */}
       <div
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}

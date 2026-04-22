@@ -101,7 +101,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
   const filtered = useMemo(() => {
     let result = products;
 
-    // Membership-based filtering — a product shows up in every category it's a member of.
+    // Membership-based filtering. A product shows up in every category it's a member of.
     // Fall back to the primary slug fields if membership arrays aren't present (legacy shape).
     if (activeFilters.spaces.length) {
       result = result.filter((p) => {

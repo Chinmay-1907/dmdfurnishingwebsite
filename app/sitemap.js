@@ -12,8 +12,9 @@
 import { getAllPlaces, getAllProductsFlat } from '../lib/catalog';
 import { getAllProjects } from '../lib/projects';
 import { getAllInspirations } from '../lib/inspirations';
+import { siteUrl } from '../lib/metadata';
 
-const baseUrl = 'https://dmdfurnishing.com';
+const baseUrl = siteUrl;
 
 function abs(imagePath) {
   if (!imagePath) return undefined;

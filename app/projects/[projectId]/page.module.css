@@ -106,7 +106,7 @@
 .heroContent h1 {
   margin: 0;
   max-width: 20ch;
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-size: var(--hero-h1);
   line-height: 1.05;
 }
 
@@ -324,7 +324,7 @@
 
 .componentSection h2 {
   margin: 0;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: var(--section-h2-sub);
   line-height: 1.1;
 }
 
@@ -346,7 +346,7 @@
 
 .ctaSection h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: var(--section-h2);
 }
 
 .ctaLede {

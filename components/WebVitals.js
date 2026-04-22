@@ -4,14 +4,14 @@
  * WebVitals.js
  *
  * Reports Core Web Vitals (LCP, INP, CLS, FCP, TTFB) via Next.js's built-in
- * useReportWebVitals hook. Zero runtime dependency — Next ships the collector.
+ * useReportWebVitals hook. Zero runtime dependency. Next ships the collector.
  *
  * In development: logs to the browser console for debugging.
  * In production: sends to /api/vitals (no-op until the endpoint is added) using
  * sendBeacon so reports don't block navigation. Silently swallows errors so a
  * missing endpoint never breaks the page.
  *
- * Mount once at the root (app/layout.js) — the hook de-dupes itself.
+ * Mount once at the root (app/layout.js). The hook de-dupes itself.
  */
 import { useReportWebVitals } from 'next/web-vitals';
 
@@ -41,7 +41,7 @@ export default function WebVitals() {
         fetch('/api/vitals', { body, method: 'POST', keepalive: true }).catch(() => {});
       }
     } catch {
-      // swallow — reporting is best-effort
+      // swallow. reporting is best-effort
     }
   });
 

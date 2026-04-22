@@ -8,8 +8,8 @@ const differentiators = [
   ['In House Design Team', 'Our drafters turn designer sketches into shop drawings, cut sheets, and finish schedules a factory can actually build. If a detail will fail in production, we flag it before it gets quoted, not after the PO is signed.'],
   ['Two Manufacturing Paths', 'Our Foxboro shop handles prototypes, short runs, and anything that needs a fast revision cycle. Partner factories overseas handle high volume guestroom packages where unit economics matter. You pick the mix on every project.'],
   ['One PM From Start to Finish', 'One project manager owns your job from signed PO through punch list. They know your spec book, your GC, and your install sequence, so you never re explain the project to someone new.'],
-  ['Value Engineered Line by Line', 'We mark up the bill of quantities (BOQ) line by line. Swap an exotic veneer for a commercial-grade equivalent, change a drawer box, resize a headboard. Cuts cost without touching what the guest sees or touches.'],
-  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors. Lead times and pricing stay predictable because the supply chain does not change project to project.'],
+  ['Value Engineered Line by Line', 'We review the bill of quantities (BOQ) line by line to optimize each spec. Swap an exotic veneer for a commercial-grade equivalent, change a drawer box, resize a headboard - tuning materials and construction to your budget without compromising design intent or guest experience.'],
+  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors. Commercial projects demand additional durability, performance standards, and repeatable sourcing for business environments - our supply chain is built around those requirements while still supporting residential references where design intent calls for it.'],
   ['Three Point Quality Control', 'Specs confirmed before production starts. Every piece photographed and inspected before it leaves the factory. Installers verify piece count and condition on site before the crate is signed off.'],
 ];
 
@@ -31,7 +31,7 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'About Us | Foxboro MA Furniture Manufacturer',
     description:
-      'DMD Furnishing is a commercial furniture manufacturer in Foxboro, MA. In house design team, dual manufacturing model, custom FF&E for hotels, restaurants, and offices.',
+      'Commercial furniture manufacturer in Foxboro, MA. In house design team, dual manufacturing model, custom FF&E for hotels, restaurants, and offices.',
     path: '/about',
     image: '/Images/About_DMD_Furnishing_Page.jpg',
   });
@@ -100,12 +100,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 2. Our Story ── */}
+      {/* ── 2. Who We Are ── */}
+      <section className={styles.whoWeAreSection}>
+        <div className={styles.whoWeAreInner}>
+          <p className={styles.eyebrow}>Who We Are</p>
+          <h2>Who we are</h2>
+          <p className={styles.whoWeArePara}>
+            We&rsquo;re DMD Furnishing, a commercial FF&amp;E manufacturer based in Foxboro, Massachusetts, building custom furniture for hotels, restaurants, and multifamily projects from concept through installation.
+          </p>
+        </div>
+      </section>
+
+      {/* ── 3. Our Story ── */}
       <section className={styles.storySection}>
         <div className={styles.storySplit}>
           <div className={styles.storyText}>
             <p className={styles.eyebrow}>Our Story</p>
-            <h2>Why we started and what drives us.</h2>
+            <h2>Why did we start DMD Furnishing?</h2>
             <p>
               DMD Furnishing was built around one frustration the founders kept hearing
               from hotel owners and designers: commercial furniture procurement is opaque.
@@ -144,7 +155,7 @@ export default function AboutPage() {
       <section className={styles.diffSection}>
         <div className={styles.diffHeader}>
           <p className={styles.eyebrow}>How We&apos;re Different</p>
-          <h2>What you get when you work with DMD.</h2>
+          <h2>What do you get when you work with DMD?</h2>
         </div>
         <div className={styles.diffGrid}>
           {differentiators.map(([title, desc], i) => (
@@ -169,7 +180,7 @@ export default function AboutPage() {
       <section className={styles.materialsSection}>
         <div className={styles.materialsHeader}>
           <p className={styles.eyebrow}>Materials and Craftsmanship</p>
-          <h2>What we specify, and why.</h2>
+          <h2>What materials does DMD specify, and why?</h2>
           <p>
             Commercial furniture fails in predictable places: surfaces scratch, veneers
             lift, drawer slides bind, fabric wears through at the seat edge. The materials

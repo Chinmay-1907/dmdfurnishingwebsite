@@ -1,4 +1,5 @@
 import ContactPage from '../../components/contact/ContactPage';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 
 export const metadata = generatePageMetadata({
@@ -26,16 +27,16 @@ const contactSchema = {
       name: 'Hospitality Furniture Consultation',
       url: `${siteUrl}/contact#schedule`,
       description:
-        'Book a hospitality furniture consultation with DMD Furnishing to walk through scope, materials, budgets, and lead times for your custom commercial furniture project.',
+        'Book a hospitality furniture consultation with DMD Furnishing to walk through scope, materials, 2D technical drawings, 3D design, budgets, and lead times for your custom commercial furniture project.',
       provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
       areaServed: 'US',
     },
     {
       '@type': 'ScheduleAction',
-      name: 'Request a Project Estimate',
+      name: 'Request a Project Consultation',
       target: process.env.NEXT_PUBLIC_CALENDLY_URL || `${siteUrl}/contact#schedule`,
       description:
-        'Request a project estimate or schedule a call with a DMD Furnishing project manager to walk through custom FF&E scope, materials, and budget.',
+        'Request a project consultation or schedule a call with a DMD Furnishing project manager to walk through custom FF&E scope, materials, and budget.',
       provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization` },
     },
     {
@@ -58,6 +59,7 @@ export default async function ContactRoute({ searchParams }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
       <ContactPage
         initialCategory={params?.category || ''}
         recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || process.env.REACT_APP_RECAPTCHA_SITE_KEY || ''}

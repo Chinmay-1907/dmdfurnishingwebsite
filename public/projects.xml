@@ -54,6 +54,7 @@
     <clientName>DMD Furnishing Team</clientName>
     <clientPosition></clientPosition>
     <mainImage src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_1.png" alt="Towne Lyne Motel project main" />
+    <featuredAfter src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel refreshed guestroom" />
     <images>
       <image id="1" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3298.jpeg" alt="Towne Lyne Motel project image 1" />
       <image id="2" src="/Images/Projects/Towne Lyne Motel - Ogunquit, ME/IMG_3299.jpeg" alt="Towne Lyne Motel project image 2" />
@@ -174,21 +175,12 @@
       <highlight>Phased install coordinated with ongoing property operations</highlight>
       <highlight>Casegoods, beds, seating, and lighting in one coordinated scope</highlight>
     </highlights>
-    <beforeImages>
-      <image id="b1" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 2.jpg" alt="Quality Inn Bangor before image 1" />
-      <image id="b2" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-37 3.jpg" alt="Quality Inn Bangor before image 2" />
-      <image id="b3" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 3.jpg" alt="Quality Inn Bangor before image 3" />
-      <image id="b4" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 4.jpg" alt="Quality Inn Bangor before image 4" />
-      <image id="b5" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 5.jpg" alt="Quality Inn Bangor before image 5" />
-      <image id="b6" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 6.jpg" alt="Quality Inn Bangor before image 6" />
-      <image id="b7" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 7.jpg" alt="Quality Inn Bangor before image 7" />
-      <image id="b8" src="/Images/Projects/QualityInn - Bangor Maine/Before/PHOTO-2025-03-28-12-45-38 8.jpg" alt="Quality Inn Bangor before image 8" />
-    </beforeImages>
   </project>
 
   <project id="usa-inn-wells-me" name="USA INN - Wells, ME" category="Hospitality">
     <shortDescription>Full guestroom refresh at a 50 room motel in Wells, Maine, replacing dated casegoods and soft goods across every unit.</shortDescription>
     <mainImage src="/Images/Projects/USA INN - Wells, ME/IMG_1.png" alt="USA INN Wells project main" />
+    <featuredAfter src="/Images/Projects/USA INN - Wells, ME/IMG_3986.jpg" alt="USA INN Wells refreshed guestroom" />
     <images>
       <image id="1" src="/Images/Projects/USA INN - Wells, ME/IMG_3973.jpg" alt="USA INN Wells project image 1" />
       <image id="2" src="/Images/Projects/USA INN - Wells, ME/IMG_3986.jpg" alt="USA INN Wells project image 2" />
@@ -235,6 +227,7 @@
   <project id="surestay-bw-fredrick-md" name="SureStay by BW - Frederick, MD" category="Hospitality">
     <shortDescription>Full guestroom and common area refresh at a 57 room SureStay by Best Western in Frederick, Maryland.</shortDescription>
     <mainImage src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_1.png" alt="SureStay Frederick project main" />
+    <featuredAfter src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_2.png" alt="SureStay Frederick refreshed guestroom" />
     <images>
       <image id="2" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_2.png" alt="SureStay Frederick project image 2" />
       <image id="3" src="/Images/Projects/SureStay by BW - Fredrick MD/IMG_3.png" alt="SureStay Frederick project image 3" />

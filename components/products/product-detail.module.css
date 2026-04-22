@@ -1,8 +1,21 @@
 .page {
+  /* Pull .page up by the header height so its dark gradient covers the gap
+     that .main-content's padding-top creates. Without this, the body bg
+     (cream in light mode) shows behind the transparent fixed header, making
+     white nav text invisible before the user scrolls. */
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: var(--header-height);
   background:
     radial-gradient(circle at top left, rgba(201, 169, 110, 0.12), transparent 28rem),
     linear-gradient(180deg, #12161d 0%, #0d0d10 38%, #12161d 100%);
   color: #f4f0e6;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    margin-top: calc(-1 * var(--header-height-compact));
+    padding-top: var(--header-height-compact);
+  }
 }
 
 .shell {
@@ -354,4 +367,108 @@
   .heroCopy {
     padding: 1.5rem;
   }
+}
+
+/* ── Light-theme overrides ────────────────────────────────────────────────
+   Comprehensive flip from hardcoded dark to warm paper/graphite palette.
+   layout tricks (margin-top / padding-top negation) are preserved in .page.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Page shell */
+:global([data-theme='light']) .page {
+  background: var(--page-background);
+  color: var(--text-primary);
+}
+
+/* Breadcrumbs */
+:global([data-theme='light']) .breadcrumbs ol {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .breadcrumbs li:not(:last-child)::after {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .breadcrumbs a {
+  color: var(--accent-magenta);
+}
+
+/* Surface cards — heroCopy, summaryCard, card, specCard, emptyState */
+:global([data-theme='light']) .heroCopy,
+:global([data-theme='light']) .summaryCard,
+:global([data-theme='light']) .card,
+:global([data-theme='light']) .specCard,
+:global([data-theme='light']) .emptyState {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+/* Eyebrow / card label — gold fails contrast on cream; use magenta */
+:global([data-theme='light']) .eyebrow,
+:global([data-theme='light']) .cardLabel {
+  color: var(--accent-magenta);
+}
+
+/* Body copy */
+:global([data-theme='light']) .description,
+:global([data-theme='light']) .card p,
+:global([data-theme='light']) .specCard p,
+:global([data-theme='light']) .sectionHeader p:last-child {
+  color: var(--text-secondary);
+}
+
+/* Summary grid */
+:global([data-theme='light']) .summaryGrid dt {
+  color: var(--text-muted);
+}
+:global([data-theme='light']) .summaryGrid dd {
+  color: var(--text-primary);
+}
+
+/* Tags */
+:global([data-theme='light']) .tag {
+  background: var(--accent-gold-soft);
+  color: var(--accent-magenta);
+}
+
+/* Actions */
+:global([data-theme='light']) .primaryAction {
+  color: var(--text-on-accent);
+}
+:global([data-theme='light']) .secondaryAction {
+  background: var(--accent-magenta-soft);
+  color: var(--accent-magenta);
+}
+:global([data-theme='light']) .inlineLink {
+  color: var(--accent-magenta);
+}
+
+/* Related section divider */
+:global([data-theme='light']) .relatedSection {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Related CTA panel */
+:global([data-theme='light']) .relatedCta {
+  background: var(--bg-surface-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Ghost action button */
+:global([data-theme='light']) .ghostAction {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+/* Related product cards */
+:global([data-theme='light']) .relatedCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+:global([data-theme='light']) .relatedCard:hover {
+  border-color: rgba(164, 41, 99, 0.30);
+}
+
+/* Related image placeholder */
+:global([data-theme='light']) .relatedImageWrap {
+  background: rgba(20, 18, 14, 0.04);
 }

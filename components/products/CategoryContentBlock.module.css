@@ -5,12 +5,20 @@
  * ───────────────────────────────────────────────────────────────────── */
 
 .block {
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 80% 0%, rgba(201, 162, 95, 0.08), transparent 45%),
+    linear-gradient(180deg, #F6F2EA 0%, #EFE8DB 100%);
+  border-top: 1px solid rgba(201, 162, 95, 0.22);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2.5rem);
+}
+
+:global([data-theme='dark']) .block {
   color: var(--color-text);
   background:
     radial-gradient(circle at 80% 0%, rgba(201, 169, 110, 0.08), transparent 45%),
     linear-gradient(180deg, rgba(13, 13, 16, 0.98), rgba(18, 22, 29, 0.96));
   border-top: 1px solid rgba(201, 169, 110, 0.12);
-  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2.5rem);
 }
 
 .inner {
@@ -30,15 +38,19 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.74rem;
-  color: rgba(201, 169, 110, 0.85);
+  color: var(--accent-magenta);
   font-weight: 600;
+}
+
+:global([data-theme='dark']) .eyebrow {
+  color: rgba(201, 169, 110, 0.85);
 }
 
 .title {
   margin: 0;
   font-size: clamp(1.6rem, 2.6vw, 2.2rem);
   line-height: 1.15;
-  color: var(--color-text);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -46,7 +58,7 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--color-text-muted);
+  color: var(--text-secondary);
   max-width: 72ch;
 }
 
@@ -63,13 +75,22 @@
 
 .guideItem {
   padding: 1.25rem 1.4rem 1.35rem;
-  border: 1px solid rgba(201, 169, 110, 0.14);
+  border: 1px solid rgba(20, 18, 14, 0.10);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.015);
+  background: #FFFFFF;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .guideItem:hover {
+  border-color: rgba(164, 41, 99, 0.32);
+  background: rgba(201, 162, 95, 0.06);
+}
+
+:global([data-theme='dark']) .guideItem {
+  border: 1px solid rgba(201, 169, 110, 0.14);
+  background: rgba(255, 255, 255, 0.015);
+}
+:global([data-theme='dark']) .guideItem:hover {
   border-color: rgba(201, 169, 110, 0.32);
   background: rgba(201, 169, 110, 0.04);
 }
@@ -79,15 +100,61 @@
   font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: rgba(201, 169, 110, 0.95);
+  color: var(--accent-magenta);
   margin: 0 0 0.5rem;
+}
+
+:global([data-theme='dark']) .guideTitle {
+  color: rgba(201, 169, 110, 0.95);
 }
 
 .guideText {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.6;
-  color: var(--color-text-muted);
+  color: var(--text-secondary);
+}
+
+/* ─── Materials split (copy + image) ───────────────────────────────── */
+
+.materialsSplit {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.materialsCopy {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.materialsImage {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 18, 14, 0.10);
+  background: #F6F2EA;
+  box-shadow: 0 12px 40px rgba(40, 30, 20, 0.08);
+}
+
+.materialsImage img {
+  object-fit: cover;
+}
+
+:global([data-theme='dark']) .materialsImage {
+  border-color: rgba(201, 169, 110, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 800px) {
+  .materialsSplit {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
 
 /* ─── Materials paragraph ──────────────────────────────────────────── */
@@ -96,7 +163,7 @@
   margin: 0.75rem 0 0;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--color-text-muted);
+  color: var(--text-secondary);
   max-width: 72ch;
 }
 
@@ -109,14 +176,23 @@
 }
 
 .faqItem {
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(20, 18, 14, 0.10);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.018);
+  background: #FFFFFF;
   padding: 1rem 1.4rem;
   transition: border-color 0.3s ease;
 }
 
 .faqItem[open] {
+  border-color: rgba(164, 41, 99, 0.28);
+  background: rgba(164, 41, 99, 0.04);
+}
+
+:global([data-theme='dark']) .faqItem {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.018);
+}
+:global([data-theme='dark']) .faqItem[open] {
   border-color: rgba(201, 169, 110, 0.28);
   background: rgba(201, 169, 110, 0.025);
 }
@@ -125,7 +201,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 0.98rem;
-  color: var(--color-text);
+  color: var(--text-primary);
   list-style: none;
   padding-right: 1.5rem;
   position: relative;
@@ -155,7 +231,7 @@
   margin: 0.75rem 0 0;
   font-size: 0.94rem;
   line-height: 1.7;
-  color: var(--color-text-muted);
+  color: var(--text-secondary);
   max-width: 72ch;
 }
 

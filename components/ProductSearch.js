@@ -206,7 +206,7 @@ export default function ProductSearch() {
 
   return (
     <div className={`header-search${searchExpanded ? ' expanded' : ''}`} role="search">
-      {/* Toggle button — visible when search is collapsed */}
+      {/* Toggle button: visible when search is collapsed */}
       {!searchExpanded && (
         <button
           type="button"
@@ -218,7 +218,7 @@ export default function ProductSearch() {
         </button>
       )}
 
-      {/* Search form — visible when search is expanded */}
+      {/* Search form: visible when search is expanded */}
       {searchExpanded && (
         <form className="search-form" onSubmit={handleSubmit}>
           <input

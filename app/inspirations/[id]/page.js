@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllInspirations, getInspirationById } from '../../../lib/inspirations';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 import styles from './page.module.css';
 
 // ---------------------------------------------------------------------------
@@ -119,11 +120,14 @@ export default async function InspirationDetailPage({ params }) {
 
       <div className={styles.shell}>
         {/* ── 2. Breadcrumb ── */}
-        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-          <Link href="/inspirations">All Inspirations</Link>
-          <span aria-hidden="true">/</span>
-          <span>{insp.title}</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Inspirations', href: '/inspirations' },
+            { label: insp.title },
+          ]}
+        />
+
 
         {/* ── 3. Overview ── */}
         <div className={styles.overviewPanel}>

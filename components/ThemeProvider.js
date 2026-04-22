@@ -61,7 +61,7 @@ export function ThemeProvider({ children }) {
     try {
       localStorage.setItem(STORAGE_KEY, next);
     } catch {
-      /* localStorage unavailable — toggle still works for the session */
+      /* localStorage unavailable. Toggle still works for the session */
     }
     const resolved = next === 'system' ? resolveSystem() : next;
     setResolvedTheme(resolved);

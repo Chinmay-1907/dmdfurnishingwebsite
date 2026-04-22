@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './CategoryContentBlock.module.css';
 
 /**
@@ -8,7 +9,7 @@ import styles from './CategoryContentBlock.module.css';
  * pages. Content comes from lib/place-content.js keyed by place slug.
  *
  * Style matches catalog-new.module.css (dark + cream gold accent). Does not
- * compete with the CatalogHero — it sits after the catalog and reads as
+ * compete with the CatalogHero. It sits after the catalog and reads as
  * supporting educational content for AI search and buyer research.
  */
 export default function CategoryContentBlock({ placeName, content }) {
@@ -48,10 +49,21 @@ export default function CategoryContentBlock({ placeName, content }) {
         )}
 
         {hasMaterials && (
-          <div className={styles.section}>
-            <p className={styles.eyebrow}>Materials &amp; Construction</p>
-            <h2 className={styles.title}>What We Build It From</h2>
-            <p className={styles.materialsText}>{materials}</p>
+          <div className={`${styles.section} ${styles.materialsSplit}`}>
+            <div className={styles.materialsCopy}>
+              <p className={styles.eyebrow}>Materials &amp; Construction</p>
+              <h2 className={styles.title}>What We Build It From</h2>
+              <p className={styles.materialsText}>{materials}</p>
+            </div>
+            <div className={styles.materialsImage}>
+              {/* TODO: replace src with /images/materials-macro-placeholder.jpg once banana generates macro cross-section oak + HPL + brass on ivory bg */}
+              <Image
+                src="/placeholder.png"
+                alt="Macro cross-section of commercial furniture materials: hardwood veneer, HPL, and brass hardware"
+                fill
+                sizes="(max-width: 800px) 100vw, 45vw"
+              />
+            </div>
           </div>
         )}
 

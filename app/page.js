@@ -16,11 +16,11 @@ const heroImages = [
 ];
 
 const whyDmd = [
-  ['In House Design Team', 'Drafters turn designer sketches into shop drawings and cut sheets before anything gets quoted.'],
-  ['Two Manufacturing Paths', 'Foxboro shop for prototypes and fast turn runs. Partner factories for high volume guestroom packages.'],
-  ['One PM from Start to Finish', 'Same project manager from signed PO through punch list. No handoffs, no re explaining.'],
-  ['Value Engineered Line by Line', 'We flex every line of the BOQ to your budget without touching what guests see or touch.'],
-  ['Commercial Material Sourcing', 'HPL, hardwood veneer, performance fabric, and commercial hardware from standing supplier relationships.'],
+  ['In House Design Team', 'Our drafters turn designer sketches into shop drawings and cut sheets before anything hits the quote.'],
+  ['Dual Manufacturing', 'Foxboro shop for prototypes and fast turn runs. Partner factories for high volume hotel guestroom packages.'],
+  ['One PM Start to Finish', 'Same project manager from signed PO through punch list. No handoffs. No re-explaining the spec.'],
+  ['We Fit Your Budget', 'Show us the number. We rework the BOQ line by line, swap materials, adjust construction, and keep the look the designer drew.'],
+  ['Contract-Grade Materials', 'HPL, hardwood veneer, performance fabric, commercial hardware. Same suppliers we have used for years, so specs repeat.'],
   ['Three Point Quality Control', 'Specs confirmed before production. Pieces photographed before shipment. Installers verify on site.'],
 ];
 
@@ -193,7 +193,7 @@ export default function HomePage() {
           </p>
           <div className={styles.ctaRow}>
             <Link href="/contact#schedule" className={styles.primaryCta}>
-              Request a Project Estimate
+              Request a Project Consultation
             </Link>
           </div>
         </div>
@@ -243,9 +243,6 @@ export default function HomePage() {
               <div className={styles.productCardOverlay} />
               <div className={styles.productCardBody}>
                 <h3>{place.name}</h3>
-                <p className={styles.productCardCount}>
-                  {place.furnitureTypes.length} furniture {place.furnitureTypes.length === 1 ? 'type' : 'types'}
-                </p>
               </div>
             </Link>
           ))}
@@ -324,7 +321,7 @@ export default function HomePage() {
       <section className={`${styles.section} ${styles.altSection} ${styles.whySection}`}>
         <div className={`${styles.sectionHeader} fade-in-up`}>
           <p className={styles.eyebrow}>Why DMD</p>
-          <h2>Six reasons owners and designers choose DMD.</h2>
+          <h2>Six reasons hotel and restaurant teams pick our Foxboro MA shop for custom FF&amp;E.</h2>
         </div>
         <div className={styles.whyGrid}>
           {whyDmd.map(([title, description], index) => (
@@ -348,7 +345,7 @@ export default function HomePage() {
           <p className={styles.eyebrow}>How We Work</p>
           <h2>Your project in seven phases, from first call to close out.</h2>
         </div>
-        <div className={`${styles.processLayout} fade-in-up`}>
+        <div className={`${styles.processLayout} ${styles.processLayoutSingle} fade-in-up`}>
           <div className={styles.processSteps}>
             {processSteps.map(([num, title, desc]) => (
               <div key={num} className={styles.processStep}>
@@ -359,14 +356,6 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className={styles.imagePanel}>
-            <Image
-              src="/Images/Our Services.jpg"
-              alt="DMD Furnishing project coordination and manufacturing"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
           </div>
         </div>
         <div className={`${styles.ctaRow} ${styles.center}`} style={{ marginTop: 32 }}>

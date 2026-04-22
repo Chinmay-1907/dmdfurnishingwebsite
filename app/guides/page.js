@@ -6,7 +6,7 @@ import styles from './commercial-furniture-manufacturing/page.module.css';
 export const metadata = generatePageMetadata({
   title: 'Commercial Furniture Buyer Guides',
   description:
-    'In-depth guides for commercial furniture buyers: hospitality FF&E procurement, contract durability standards, hotel casegoods, and value engineering. Foxboro, MA.',
+    'Buyer guides for commercial furniture: hospitality FF&E procurement, contract durability, hotel casegoods, and value engineering. Foxboro, MA.',
   path: '/guides',
   image: '/Images/Our_Products.jpg',
 });

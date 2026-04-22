@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllProjects, getProjectById } from '../../../lib/projects';
+import { getAllProjects, getProjectById, pickBestImage } from '../../../lib/projects';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
 import BeforeAfterShowcase from '../../../components/projects/BeforeAfterShowcase';
 import ProjectGallery from '../../../components/projects/ProjectGallery';
 import ProjectNav from '../../../components/projects/ProjectNav';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 import styles from './page.module.css';
 
 // ---------------------------------------------------------------------------
@@ -110,9 +111,21 @@ export default async function ProjectDetailPage({ params }) {
 
   const allProjects = getAllProjects();
   const galleryImages = Array.isArray(project.images) ? project.images : [];
-  const beforeImages = Array.isArray(project.beforeImages) ? project.beforeImages : [];
+  const beforeImagesRaw = Array.isArray(project.beforeImages) ? project.beforeImages : [];
   const pageUrl = `${siteUrl}/projects/${project.id}`;
   const schema = buildSchema(project, pageUrl);
+
+  // Slider only renders when real before images exist.
+  // "After" uses <featuredAfter> override if present — otherwise picks the
+  // largest gallery file. We deliberately skip mainImage because it's usually
+  // the exterior hero shot, not the furniture installation we want to showcase.
+  const hasRealBefore = beforeImagesRaw.length > 0;
+  const bestAfter = hasRealBefore
+    ? (project.featuredAfter || pickBestImage(galleryImages))
+    : null;
+  const bestBefore = hasRealBefore ? pickBestImage(beforeImagesRaw) : null;
+  const showSlider = hasRealBefore && bestAfter && bestBefore;
+  const beforeImages = beforeImagesRaw;
 
   return (
     <main className={styles.page}>
@@ -149,13 +162,42 @@ export default async function ProjectDetailPage({ params }) {
 
       <div className={styles.shell}>
         {/* ── 2. Breadcrumb ── */}
-        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-          <Link href="/projects">All Projects</Link>
-          <span aria-hidden="true">/</span>
-          <span>{project.name}</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Projects', href: '/projects' },
+            { label: project.name },
+          ]}
+        />
 
-        {/* ── 3. Overview Panel ── */}
+
+        {/* ── 3. Gallery (images first) ── */}
+        {galleryImages.length > 0 && (
+          <section className={styles.componentSection}>
+            <p className={styles.eyebrow}>Gallery</p>
+            <h2>Installation Photography</h2>
+            <div style={{ marginTop: '1.25rem' }}>
+              <ProjectGallery images={galleryImages} projectName={project.name} />
+            </div>
+          </section>
+        )}
+
+        {/* ── 4. Before/After ── */}
+        {showSlider && (
+          <section className={styles.componentSection}>
+            <p className={styles.eyebrow}>Transformation</p>
+            <h2>Before &amp; After</h2>
+            <div style={{ marginTop: '1.25rem' }}>
+              <BeforeAfterShowcase
+                beforeImage={bestBefore}
+                afterImage={bestAfter}
+                projectName={project.name}
+              />
+            </div>
+          </section>
+        )}
+
+        {/* ── 5. Overview Panel ── */}
         <div className={styles.overviewPanel}>
           {/* Description */}
           {project.fullDescription && (
@@ -208,32 +250,6 @@ export default async function ProjectDetailPage({ params }) {
             </div>
           )}
         </div>
-
-        {/* ── 4. Before/After ── */}
-        {beforeImages.length > 0 && galleryImages.length > 0 && (
-          <section className={styles.componentSection}>
-            <p className={styles.eyebrow}>Transformation</p>
-            <h2>Before &amp; After</h2>
-            <div style={{ marginTop: '1.25rem' }}>
-              <BeforeAfterShowcase
-                beforeImages={beforeImages}
-                afterImages={galleryImages}
-                projectName={project.name}
-              />
-            </div>
-          </section>
-        )}
-
-        {/* ── 5. Gallery ── */}
-        {galleryImages.length > 0 && (
-          <section className={styles.componentSection}>
-            <p className={styles.eyebrow}>Gallery</p>
-            <h2>Installation Photography</h2>
-            <div style={{ marginTop: '1.25rem' }}>
-              <ProjectGallery images={galleryImages} projectName={project.name} />
-            </div>
-          </section>
-        )}
 
         {/* ── 6. Project Navigation ── */}
         <ProjectNav currentId={project.id} projects={allProjects} />

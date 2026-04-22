@@ -38,6 +38,9 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
   const primaryFtName = primary?.furnitureTypeName || '';
   const primaryPlaceHref = primary?.placeSlug ? `/products/${primary.placeSlug}` : '/products';
 
+  // Pre-fill the contact form with this product so the message lands ready to send.
+  const quoteHref = `/contact?product=${encodeURIComponent(product.name)}#message`;
+
   return (
     <main className={styles.page}>
       <section className={styles.shell}>
@@ -91,7 +94,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
               <Link href="/contact#schedule" className={styles.primaryAction}>
                 Schedule a free consultation
               </Link>
-              <Link href="/contact" className={styles.secondaryAction}>
+              <Link href={quoteHref} className={styles.secondaryAction}>
                 Request a quote
               </Link>
             </div>
@@ -144,7 +147,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
                 your project scope. Reach out when you need help aligning this product with a room
                 package or property standard.
               </p>
-              <Link href="/contact" className={styles.inlineLink}>
+              <Link href={quoteHref} className={styles.inlineLink}>
                 Talk to the team
               </Link>
             </section>

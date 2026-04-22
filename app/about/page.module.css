@@ -10,10 +10,10 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: clamp(320px, 50vh, 420px);
   display: grid;
   align-items: center;
-  padding: 140px 24px 80px;
+  padding: 140px 24px 60px;
   margin-top: -90px;
   background:
     linear-gradient(90deg, rgba(13, 13, 16, 0.85), rgba(13, 13, 16, 0.4)),
@@ -43,7 +43,7 @@
 
 .heroContent h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-size: var(--hero-h1);
   line-height: 1.05;
   color: #F3EFE6;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
@@ -52,10 +52,39 @@
 .heroLede {
   max-width: 56rem;
   margin: 20px 0 0;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: var(--hero-lede);
   line-height: 1.8;
   color: rgba(244, 240, 230, 0.92);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Who We Are intro ─────────────────────────────────────────────────── */
+
+.whoWeAreSection {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: calc(var(--section-padding) * 0.75) 0 calc(var(--section-padding) * 0.25);
+}
+
+.whoWeAreInner {
+  max-width: 54rem;
+}
+
+.whoWeAreInner h2 {
+  margin: 0 0 16px;
+  font-size: var(--section-h2);
+  line-height: 1.05;
+}
+
+.whoWeArePara {
+  margin: 0;
+  color: var(--page-dark-muted);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+:global([data-theme='light']) .whoWeArePara {
+  color: var(--text-secondary);
 }
 
 /* ─── Shared Section Sizing ────────────────────────────────────────────── */
@@ -90,7 +119,7 @@
 
 .storyText h2 {
   margin: 0 0 20px;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--section-h2);
   line-height: 1.05;
 }
 
@@ -136,7 +165,7 @@
 
 .storyImage img {
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   transition: transform 0.6s ease;
 }
 
@@ -153,7 +182,7 @@
 
 .diffHeader h2 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--section-h2);
   line-height: 1.05;
 }
 
@@ -194,6 +223,16 @@
   color: #c9a96e;
 }
 
+.diffCard h3,
+.materialCard h3 {
+  transition: color 0.35s ease;
+}
+
+.diffCard:hover h3,
+.materialCard:hover h3 {
+  color: #f0ca89;
+}
+
 .diffCard h3 {
   margin: 0 0 8px;
   font-size: 1.1rem;
@@ -226,7 +265,7 @@
 
 .materialsHeader h2 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--section-h2);
   line-height: 1.05;
 }
 
@@ -343,7 +382,7 @@
 
 .faqHeader h2 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--section-h2);
   line-height: 1.05;
 }
 
@@ -434,7 +473,7 @@
 
 .ctaSection h2 {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: var(--section-h2);
   line-height: 1.05;
 }
 
@@ -654,6 +693,16 @@
 
 :global([data-theme='light']) .diffCard:hover .diffNumber {
   color: var(--accent-magenta);
+}
+
+:global([data-theme='light']) .diffCard:hover h3 {
+  color: var(--accent-magenta);
+  transition: color 0.35s ease;
+}
+
+:global([data-theme='light']) .materialCard:hover h3 {
+  color: var(--accent-magenta);
+  transition: color 0.35s ease;
 }
 /* Note: accent-magenta (#A42963) on white bg = ratio 5.6:1, passes WCAG AA */
 
