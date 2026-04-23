@@ -8,13 +8,15 @@
 
 /* ─── Hero ─────────────────────────────────────────────────────────────── */
 
+/* Hero — standardized to match services/projects reference */
 .hero {
   position: relative;
-  min-height: clamp(320px, 50vh, 420px);
-  display: grid;
-  align-items: center;
-  padding: 140px 24px 60px;
-  margin-top: -90px;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(420px, 58vh, 524px);
+  padding: var(--header-height, 90px) 24px 0;
+  overflow: hidden;
+  margin-top: calc(-1 * var(--header-height));
   background:
     linear-gradient(90deg, rgba(13, 13, 16, 0.85), rgba(13, 13, 16, 0.4)),
     url('/Images/About_DMD_Furnishing_Page.jpg') center/cover no-repeat;
@@ -23,14 +25,18 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(13, 13, 16, 0.1), rgba(13, 13, 16, 0.85));
+  background:
+    linear-gradient(90deg, rgba(13, 15, 20, 0.92) 0%, rgba(13, 15, 20, 0.6) 50%, rgba(13, 15, 20, 0.3) 100%),
+    linear-gradient(180deg, rgba(13, 15, 20, 0.2) 0%, rgba(13, 15, 20, 0.7) 100%);
+  z-index: 1;
 }
 
 .heroContent {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(1120px, 100%);
   margin: 0 auto;
+  padding: 3rem 0 3.5rem;
 }
 
 .eyebrow {
@@ -43,48 +49,20 @@
 
 .heroContent h1 {
   margin: 0;
+  max-width: 16ch;
   font-size: var(--hero-h1);
-  line-height: 1.05;
+  line-height: 1;
   color: #F3EFE6;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
 .heroLede {
-  max-width: 56rem;
-  margin: 20px 0 0;
-  font-size: var(--hero-lede);
-  line-height: 1.8;
+  max-width: 58rem;
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: rgba(244, 240, 230, 0.92);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* ─── Who We Are intro ─────────────────────────────────────────────────── */
-
-.whoWeAreSection {
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: calc(var(--section-padding) * 0.75) 0 calc(var(--section-padding) * 0.25);
-}
-
-.whoWeAreInner {
-  max-width: 54rem;
-}
-
-.whoWeAreInner h2 {
-  margin: 0 0 16px;
-  font-size: var(--section-h2);
-  line-height: 1.05;
-}
-
-.whoWeArePara {
-  margin: 0;
-  color: var(--page-dark-muted);
-  font-size: 1.08rem;
-  line-height: 1.8;
-}
-
-:global([data-theme='light']) .whoWeArePara {
-  color: var(--text-secondary);
 }
 
 /* ─── Shared Section Sizing ────────────────────────────────────────────── */

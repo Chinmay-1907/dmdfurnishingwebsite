@@ -446,34 +446,35 @@
   box-shadow: 0 0 16px rgba(164, 41, 99, 0.1);
 }
 
-/* Hero — overlay keeps dark wash so hero text stays readable off-white */
+/* Hero — warm cream base with soft overlay so dark text reads on warm photo */
 :global([data-theme='light']) .hero {
-  background-color: #141210;
+  background-color: #F6F2EA;
 }
 
 :global([data-theme='light']) .heroOverlay {
-  background: linear-gradient(180deg, rgba(20, 18, 14, 0.15) 0%, rgba(20, 18, 14, 0.78) 65%, #F6F2EA 100%);
+  background: linear-gradient(180deg, rgba(246, 242, 234, 0.55) 0%, rgba(246, 242, 234, 0.7) 65%, #F6F2EA 100%);
 }
 
-/* h1 sits on the dark overlay — keep it off-white in light mode */
+/* h1 — dark ink in light mode */
 :global([data-theme='light']) .heroContent h1 {
-  color: #f4f0e6;
+  color: var(--text-primary);
+  text-shadow: none;
 }
 
 :global([data-theme='light']) .categoryPill {
-  background: linear-gradient(135deg, rgba(201, 162, 95, 0.3), rgba(164, 41, 99, 0.15));
-  color: #f4f0e6;
+  background: linear-gradient(135deg, rgba(201, 162, 95, 0.22), rgba(164, 41, 99, 0.12));
+  color: var(--accent-magenta);
 }
 
 :global([data-theme='light']) .heroDate {
-  color: rgba(244, 240, 230, 0.78);
+  color: var(--text-secondary);
 }
 
 :global([data-theme='light']) .heroDesc {
-  color: rgba(244, 240, 230, 0.88);
+  color: var(--text-secondary);
 }
 
-/* Breadcrumb — sits on the hero overlay area, keep light-on-dark */
+/* Breadcrumb — sits on the cream area, dark ink */
 :global([data-theme='light']) .breadcrumb {
   color: var(--text-secondary);
 }

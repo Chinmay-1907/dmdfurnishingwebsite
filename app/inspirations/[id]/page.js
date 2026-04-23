@@ -112,9 +112,9 @@ export default async function InspirationDetailPage({ params }) {
       >
         <div className={styles.heroOverlay} aria-hidden="true" />
         <div className={styles.heroContent}>
-          <span className={styles.categoryPill}>{insp.category}</span>
-          <h1>{insp.title}</h1>
-          <p className={styles.heroDesc}>{insp.description}</p>
+          <span className={styles.categoryPill} style={{ color: '#F3EFE6' }}>{insp.category}</span>
+          <h1 style={{ color: '#F3EFE6' }}>{insp.title}</h1>
+          <p className={styles.heroDesc} style={{ color: 'rgba(243,239,230,0.92)' }}>{insp.description}</p>
         </div>
       </section>
 

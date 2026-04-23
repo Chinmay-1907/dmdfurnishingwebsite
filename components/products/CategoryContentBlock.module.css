@@ -188,6 +188,25 @@
   background: rgba(164, 41, 99, 0.04);
 }
 
+/* Explicit light-mode lock — prevents any inherited dark surface from showing through */
+:global([data-theme='light']) .faqItem {
+  background: #FFFFFF;
+  border: 1px solid rgba(20, 18, 14, 0.10);
+}
+
+:global([data-theme='light']) .faqItem[open] {
+  background: rgba(164, 41, 99, 0.04);
+  border-color: rgba(164, 41, 99, 0.28);
+}
+
+:global([data-theme='light']) .faqSummary {
+  color: var(--text-primary);
+}
+
+:global([data-theme='light']) .faqAnswer {
+  color: var(--text-secondary);
+}
+
 :global([data-theme='dark']) .faqItem {
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(255, 255, 255, 0.018);

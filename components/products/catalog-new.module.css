@@ -5,12 +5,16 @@
 }
 
 /* ─── Hero ────────────────────────────────────────────────────────────── */
+/* Default is now the LIGHT-MODE treatment. Dark-mode pre-round-2 palette is
+   restored via [data-theme='dark'] overrides further down this file. */
 
 .catalogHero {
   background:
-    radial-gradient(circle at 20% 20%, rgba(201, 162, 95, 0.1), transparent 42%),
-    radial-gradient(circle at 85% 15%, rgba(164, 41, 99, 0.05), transparent 40%),
-    linear-gradient(180deg, #F6F2EA 0%, #EFE8DB 100%);
+    radial-gradient(ellipse 80% 50% at 15% 8%, rgba(201, 162, 95, 0.10), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 85% 25%, rgba(164, 41, 99, 0.06), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 75% 65%, rgba(201, 162, 95, 0.08), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 10% 80%, rgba(164, 41, 99, 0.05), transparent 45%),
+    linear-gradient(180deg, #F6F2EA 0%, #F1ECE1 50%, #EEE8DC 100%);
   border-bottom: 1px solid rgba(201, 162, 95, 0.22);
   /* Slide under the fixed header so the panel reaches the very top */
   margin-top: calc(-1 * var(--header-height));
@@ -754,8 +758,11 @@
 /* ── Hero ── */
 :global([data-theme='light']) .catalogHero {
   background:
-    radial-gradient(circle at 20% 20%, rgba(201, 162, 95, 0.07), transparent 40%),
-    var(--page-background);
+    radial-gradient(ellipse 80% 50% at 15% 8%, rgba(201, 162, 95, 0.10), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 85% 25%, rgba(164, 41, 99, 0.06), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 75% 65%, rgba(201, 162, 95, 0.08), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 10% 80%, rgba(164, 41, 99, 0.05), transparent 45%),
+    linear-gradient(180deg, #F6F2EA 0%, #F1ECE1 50%, #EEE8DC 100%);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -941,3 +948,174 @@
   color: var(--text-muted);
 }
 
+/* ─── Dark-theme restoration — values from pre-round-2 (commit 487bf3b) ──
+   The round-2 light-mode rework moved the dark palette out of defaults.
+   These rules put it back for [data-theme='dark'] exactly as it was before.
+   ──────────────────────────────────────────────────────────────────────── */
+
+:global([data-theme='dark']) .catalogHero {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201, 169, 110, 0.1), transparent 40%),
+    linear-gradient(135deg, rgba(18, 22, 29, 0.97), rgba(13, 13, 16, 0.99));
+  border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+}
+
+:global([data-theme='dark']) .heroEyebrow {
+  color: rgba(215, 182, 118, 0.9);
+}
+
+:global([data-theme='dark']) .heroTitle {
+  color: #F3EFE6;
+}
+
+:global([data-theme='dark']) .heroDescription {
+  color: rgba(243, 239, 230, 0.72);
+}
+
+:global([data-theme='dark']) .heroSearchInput {
+  border: 1.5px solid rgba(201, 169, 110, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+}
+:global([data-theme='dark']) .heroSearchInput::placeholder {
+  color: rgba(243, 239, 230, 0.6);
+}
+:global([data-theme='dark']) .heroSearchInput:focus {
+  border-color: rgba(201, 169, 110, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+:global([data-theme='dark']) .heroStat {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+}
+:global([data-theme='dark']) .heroStat span {
+  color: rgba(243, 239, 230, 0.75);
+}
+
+:global([data-theme='dark']) .spaceNav {
+  background: rgba(18, 22, 29, 0.92);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+}
+:global([data-theme='dark']) .spaceTab {
+  color: rgba(243, 239, 230, 0.65);
+}
+:global([data-theme='dark']) .spaceTab:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #F3EFE6;
+}
+:global([data-theme='dark']) .spaceTabActive {
+  background: rgba(201, 169, 110, 0.12);
+  border-color: rgba(201, 169, 110, 0.3);
+  color: var(--color-gold);
+}
+:global([data-theme='dark']) .spaceTabCount {
+  color: rgba(243, 239, 230, 0.55);
+}
+:global([data-theme='dark']) .spaceTabActive .spaceTabCount {
+  color: rgba(201, 169, 110, 0.8);
+}
+
+:global([data-theme='dark']) .filterGroup {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+:global([data-theme='dark']) .filterGroupHeader {
+  color: var(--color-text);
+}
+:global([data-theme='dark']) .filterChevron {
+  color: rgba(201, 169, 110, 0.8);
+}
+:global([data-theme='dark']) .filterCheckbox {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+:global([data-theme='dark']) .filterOption:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+:global([data-theme='dark']) .filterTitle {
+  color: var(--color-text-muted);
+}
+:global([data-theme='dark']) .filterLabel {
+  color: var(--color-text-secondary);
+}
+:global([data-theme='dark']) .filterCount {
+  color: var(--color-text-muted);
+}
+:global([data-theme='dark']) .clearAllBtn {
+  color: var(--color-gold);
+  border-color: rgba(201, 169, 110, 0.25);
+}
+:global([data-theme='dark']) .clearAllBtn:hover {
+  background: rgba(201, 169, 110, 0.1);
+}
+
+:global([data-theme='dark']) .toolbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+:global([data-theme='dark']) .mobileFilterBtn {
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  background: transparent;
+  color: var(--color-text);
+}
+:global([data-theme='dark']) .sortSelect {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+}
+:global([data-theme='dark']) .sortSelect:focus {
+  border-color: rgba(201, 169, 110, 0.4);
+}
+:global([data-theme='dark']) .resultCount {
+  color: var(--color-text-muted);
+}
+:global([data-theme='dark']) .resultCount strong {
+  color: var(--color-text);
+}
+
+:global([data-theme='dark']) .productCard {
+  background: var(--color-surface-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+:global([data-theme='dark']) .productCard:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(201, 169, 110, 0.06);
+}
+:global([data-theme='dark']) .productImageWrap {
+  background: linear-gradient(135deg, rgba(26, 32, 41, 0.6), rgba(13, 13, 16, 0.8));
+}
+:global([data-theme='dark']) .productBadge {
+  background: rgba(201, 169, 110, 0.1);
+  color: var(--color-gold);
+}
+
+:global([data-theme='dark']) .emptyState {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(201, 169, 110, 0.15);
+}
+
+:global([data-theme='dark']) .catalogCta {
+  border-top: 1px solid rgba(201, 169, 110, 0.1);
+}
+:global([data-theme='dark']) .ctaSecondary {
+  border: 1.5px solid rgba(201, 169, 110, 0.4);
+  color: var(--color-text);
+}
+:global([data-theme='dark']) .ctaSecondary:hover {
+  background: rgba(201, 169, 110, 0.08);
+}
+
+:global([data-theme='dark']) .loadMoreWrap {
+  border-top: 1px dashed rgba(201, 169, 110, 0.2);
+}
+:global([data-theme='dark']) .loadMoreBtn {
+  border: 1.5px solid rgba(201, 169, 110, 0.45);
+  color: var(--color-text);
+}
+:global([data-theme='dark']) .loadMoreBtn:hover {
+  background: rgba(201, 169, 110, 0.1);
+  border-color: var(--color-gold);
+}
+:global([data-theme='dark']) .loadMoreRemaining {
+  color: rgba(201, 169, 110, 0.85);
+}

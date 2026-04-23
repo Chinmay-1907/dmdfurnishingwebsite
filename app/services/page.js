@@ -17,13 +17,13 @@ const processSteps = [
     number: '01',
     slug: 'design-consultation',
     shortLabel: 'Intro Call',
-    title: 'Your First Call, No Commitment Yet',
+    title: 'Intro Call to See If We Fit',
     description:
-      'A short call or walkthrough so we can understand the property, the brand standards, and the timeline you are working against. You ask what you need to ask. We confirm whether DMD is the right partner for the job before anyone signs anything.',
+      'A 30 minute consultation, on the phone or walking the property. We want the brand standards, the room count, and the date the GC needs furniture on site. Bring your questions. If your hospitality FF&E job is not something our shop is built for, we will tell you on this call and point you somewhere that is.',
     bullets: [
-      'Virtual or on site walkthrough of the property',
-      'Your brand standards, operational needs, and timeline reviewed',
-      'Honest fit check, we tell you if it is not a match',
+      'Virtual or on site walkthrough of the hotel, restaurant, or commercial property',
+      'Brand standards, operational needs, and GC timeline reviewed',
+      'Straight answer on fit before anyone signs paperwork',
     ],
   },
   {

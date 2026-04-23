@@ -115,6 +115,13 @@ export default async function ProjectDetailPage({ params }) {
   const pageUrl = `${siteUrl}/projects/${project.id}`;
   const schema = buildSchema(project, pageUrl);
 
+  // Projects whose source images are small (<800px wide). For these, cap the
+  // gallery render width so the image isn't upscaled and pixelated. Discovered
+  // via image audit: SureStay SSBW-* files are 720x480; Quality Inn Bangor
+  // PHOTO-2025-* files are 2048x1536 (tighter than the 6720px IMG_* set).
+  const lowResProjects = new Set(['surestay-bw-fredrick-md', 'quality-inn-bangor-maine']);
+  const galleryMaxWidth = lowResProjects.has(project.id) ? 720 : null;
+
   // Slider only renders when real before images exist.
   // "After" uses <featuredAfter> override if present — otherwise picks the
   // largest gallery file. We deliberately skip mainImage because it's usually
@@ -176,7 +183,13 @@ export default async function ProjectDetailPage({ params }) {
           <section className={styles.componentSection}>
             <p className={styles.eyebrow}>Gallery</p>
             <h2>Installation Photography</h2>
-            <div style={{ marginTop: '1.25rem' }}>
+            <div
+              style={
+                galleryMaxWidth
+                  ? { marginTop: '1.25rem', maxWidth: `${galleryMaxWidth}px`, marginLeft: 'auto', marginRight: 'auto' }
+                  : { marginTop: '1.25rem' }
+              }
+            >
               <ProjectGallery images={galleryImages} projectName={project.name} />
             </div>
           </section>
@@ -187,7 +200,13 @@ export default async function ProjectDetailPage({ params }) {
           <section className={styles.componentSection}>
             <p className={styles.eyebrow}>Transformation</p>
             <h2>Before &amp; After</h2>
-            <div style={{ marginTop: '1.25rem' }}>
+            <div
+              style={
+                galleryMaxWidth
+                  ? { marginTop: '1.25rem', maxWidth: `${galleryMaxWidth}px`, marginLeft: 'auto', marginRight: 'auto' }
+                  : { marginTop: '1.25rem' }
+              }
+            >
               <BeforeAfterShowcase
                 beforeImage={bestBefore}
                 afterImage={bestAfter}

@@ -54,7 +54,7 @@ function Header() {
   // sub-routes (individual posts and guide slugs) need the same treatment.
   const isLightHeroPage =
     pathname === '/contact' ||
-    pathname.startsWith('/inspirations') ||
+    pathname === '/inspirations' ||
     pathname.startsWith('/blog') ||
     pathname.startsWith('/guides') ||
     pathname.startsWith('/products') || // product pages flip to light in light mode. Nav text must go dark at top too

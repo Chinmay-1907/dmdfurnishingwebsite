@@ -9,7 +9,7 @@ const differentiators = [
   ['Two Manufacturing Paths', 'Our Foxboro shop handles prototypes, short runs, and anything that needs a fast revision cycle. Partner factories overseas handle high volume guestroom packages where unit economics matter. You pick the mix on every project.'],
   ['One PM From Start to Finish', 'One project manager owns your job from signed PO through punch list. They know your spec book, your GC, and your install sequence, so you never re explain the project to someone new.'],
   ['Value Engineered Line by Line', 'We review the bill of quantities (BOQ) line by line to optimize each spec. Swap an exotic veneer for a commercial-grade equivalent, change a drawer box, resize a headboard - tuning materials and construction to your budget without compromising design intent or guest experience.'],
-  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors. Commercial projects demand additional durability, performance standards, and repeatable sourcing for business environments - our supply chain is built around those requirements while still supporting residential references where design intent calls for it.'],
+  ['Commercial Material Sourcing', 'Standing relationships with HPL suppliers, hardwood veneer mills, performance fabric weavers, and commercial hardware distributors. Lead times and pricing stay predictable because the supply chain does not change project to project.'],
   ['Three Point Quality Control', 'Specs confirmed before production starts. Every piece photographed and inspected before it leaves the factory. Installers verify piece count and condition on site before the crate is signed off.'],
 ];
 
@@ -91,22 +91,7 @@ export default function AboutPage() {
           <p className={styles.eyebrow}>About DMD Furnishing</p>
           <h1>Custom Commercial Furniture Manufacturer</h1>
           <p className={styles.heroLede}>
-            DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts.
-            <br />
-            We custom build casegoods, seating, and millwork for hotels, restaurants, offices, and institutional projects.
-            <br />
-            Shipped and installed across the United States.
-          </p>
-        </div>
-      </section>
-
-      {/* ── 2. Who We Are ── */}
-      <section className={styles.whoWeAreSection}>
-        <div className={styles.whoWeAreInner}>
-          <p className={styles.eyebrow}>Who We Are</p>
-          <h2>Who we are</h2>
-          <p className={styles.whoWeArePara}>
-            We&rsquo;re DMD Furnishing, a commercial FF&amp;E manufacturer based in Foxboro, Massachusetts, building custom furniture for hotels, restaurants, and multifamily projects from concept through installation.
+            DMD Furnishing is a commercial furniture manufacturer based in Foxboro, Massachusetts. We custom build casegoods, seating, and millwork for hotels, restaurants, offices, and institutional projects. Shipped and installed across the United States.
           </p>
         </div>
       </section>

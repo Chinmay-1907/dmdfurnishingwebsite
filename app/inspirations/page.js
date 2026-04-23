@@ -14,7 +14,7 @@ export function generateMetadata() {
     description:
       'Hotel furniture design ideas, restaurant interior design inspiration, and commercial furniture inspiration gallery from DMD Furnishing. Real rooms, real specs, built to order.',
     path: '/inspirations',
-    image: '/Images/Elevated_Restaurant_Seating.jpg',
+    image: '/images/inspirations/modern-minimalist/hero.webp',
   });
 }
 
@@ -138,8 +138,8 @@ export default function InspirationsPage() {
           </div>
           <div className={styles.heroImageWrap}>
             <Image
-              src="/images/Hotel_Guest_Room_Hero.png"
-              alt="Custom walnut casegoods, upholstered headboard, and contract-grade furniture in a tailored hotel guestroom interior"
+              src="/images/inspirations/modern-minimalist/hero.webp"
+              alt="Quiet oak and cream guestroom interior with low platform bed, ivory linens, and a single matte bronze pendant — a Modern Minimalist DMD Furnishing concept"
               fill
               priority
               sizes="(max-width: 720px) 100vw, 50vw"
