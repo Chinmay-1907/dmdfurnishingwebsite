@@ -378,7 +378,7 @@ export default function RestaurantSeatingGuide() {
               Explore the full dining area product range including chairs, booths, and bar stools
               for commercial restaurant projects.
             </p>
-            <Link href="/products/restaurant/dining-area" className={styles.ctaLink}>
+            <Link href="/products/restaurant" className={styles.ctaLink}>
               View Dining Area Products
             </Link>
           </div>
