@@ -586,6 +586,8 @@
 
   .storyImage {
     min-height: 300px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .diffGrid {

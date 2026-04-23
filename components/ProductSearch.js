@@ -68,20 +68,19 @@ export default function ProductSearch() {
             type: 'category',
             title: `${placeName} - ${furnitureName}`,
             meta: placeName,
-            path: `/products/${placeSlug}/${furnitureSlug}`,
+            path: `/products/${placeSlug}`,
             image: normalizeImagePath(furnitureType.getAttribute('image')),
           });
 
           Array.from(furnitureType.querySelectorAll('subcategory')).forEach((subcategory) => {
             const subcategoryId = subcategory.getAttribute('id') || '';
             const subcategoryName = subcategory.getAttribute('name') || subcategoryId;
-            const subcategorySlug = toSlug(subcategoryId);
 
             results.push({
               type: 'subcategory',
               title: `${placeName} - ${furnitureName} - ${subcategoryName}`,
               meta: furnitureName,
-              path: `/products/${placeSlug}/${furnitureSlug}/${subcategorySlug}`,
+              path: `/products/${placeSlug}`,
               image: normalizeImagePath(subcategory.getAttribute('image')),
             });
 
@@ -99,7 +98,7 @@ export default function ProductSearch() {
                 type: 'product',
                 title: productName,
                 meta: `${placeName} - ${furnitureName} - ${subcategoryName}`,
-                path: `/products/${placeSlug}/${furnitureSlug}/${subcategorySlug}/${productSlug}`,
+                path: `/products/${productSlug}`,
                 image: normalizeImagePath(product.getAttribute('image')),
                 tokens: `${placeName} ${furnitureName} ${subcategoryName} ${productName} ${productId} ${tags}`.toLowerCase(),
               });
