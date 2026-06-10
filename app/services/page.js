@@ -341,21 +341,6 @@ const serviceSchema = {
       areaServed: { '@type': 'Country', name: 'United States' },
     })),
     {
-      '@type': 'HowTo',
-      '@id': `${siteUrl}/services#how-to`,
-      name: 'FF&E Procurement and Manufacturing Process',
-      description:
-        'The seven phase DMD Furnishing process for custom commercial furniture, from first call through close out and warranty handover.',
-      totalTime: 'P6M',
-      step: processSteps.map((phase, index) => ({
-        '@type': 'HowToStep',
-        position: index + 1,
-        name: phase.title,
-        text: phase.description,
-        url: `${siteUrl}/services#process`,
-      })),
-    },
-    {
       '@type': 'FAQPage',
       mainEntity: [
         {

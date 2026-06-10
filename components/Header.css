@@ -321,6 +321,17 @@ body.body-no-scroll {
 }
 
 @media (max-width: 1024px) {
+  /* min(96vw, calc(100% - 32px)) guarantees ≥16px side insets on narrow
+     screens; the desktop-only -24px optical pull on .header-branding would
+     otherwise push the hamburger a third off the left edge. */
+  .header-container {
+    width: min(96vw, calc(100% - 32px));
+  }
+
+  .header-branding {
+    margin-left: 0;
+  }
+
   .hamburger-menu {
     display: inline-flex;
   }
@@ -513,4 +524,27 @@ body.body-no-scroll {
     background: var(--accent-gold-soft);
     border-bottom: none;
   }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   404 pages — no dark hero, just the plain page background (cream
+   in light theme), so the floating header needs the same dark-text
+   treatment as light-hero pages. The Header can't detect a 404 from
+   the pathname, so app/not-found.js tags <html> with .route-not-found.
+   Must stay AFTER the light-theme off-white rules (equal specificity,
+   later wins). var(--text-primary) keeps dark theme light-on-dark.
+   ────────────────────────────────────────────────────────────── */
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .nav-links a,
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .nav-contact-phone,
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .nav-contact-phone span,
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .hamburger-icon {
+  color: var(--text-primary) !important;
+}
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .hamburger-icon {
+  background: var(--text-primary) !important;
+}
+:root[data-theme='light'].route-not-found .site-header:not(.compact) .theme-toggle-cycle {
+  color: var(--text-primary) !important;
+  border-color: rgba(20, 18, 14, 0.3) !important;
+  background: rgba(20, 18, 14, 0.05) !important;
 }

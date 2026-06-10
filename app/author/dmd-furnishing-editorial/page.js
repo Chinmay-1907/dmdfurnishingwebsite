@@ -6,9 +6,9 @@ import styles from './page.module.css';
 export const metadata = generatePageMetadata({
   title: 'DMD Furnishing Editorial Team',
   description:
-    'The DMD Furnishing editorial team. Hospitality FF&E specialists and commercial furniture manufacturing authors writing practical guides on casegoods, seating, value engineering, and procurement.',
+    'Meet the DMD Furnishing editorial team: hospitality FF&E specialists writing practical guides on casegoods, seating, and procurement.',
   path: '/author/dmd-furnishing-editorial',
-  image: '/DMD_Furnishing_Logo_Embedded.svg',
+  image: '/Images/og-default.jpg',
 });
 
 const articles = [
@@ -38,22 +38,15 @@ const articles = [
   },
 ];
 
-const personSchema = {
+const editorialTeamSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
+  '@type': 'Organization',
   '@id': `${siteUrl}/author/dmd-furnishing-editorial#person`,
   name: 'DMD Furnishing Editorial Team',
   url: `${siteUrl}/author/dmd-furnishing-editorial`,
-  jobTitle: 'Hospitality FF&E Specialists and Commercial Furniture Manufacturing Authors',
   description:
     'The DMD Furnishing editorial team. Hospitality FF&E specialists and commercial furniture manufacturing authors writing practical guides for procurement managers, interior designers, hospitality developers, and general contractors. Topics include hotel casegoods, restaurant seating, upholstery, value engineering, and the FF&E procurement workflow.',
   image: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-  worksFor: {
-    '@type': 'Organization',
-    '@id': `${siteUrl}/#organization`,
-    name: 'DMD Furnishing',
-    url: siteUrl,
-  },
   knowsAbout: [
     'hospitality FF&E',
     'commercial furniture manufacturing',
@@ -77,6 +70,8 @@ const profilePageSchema = {
   '@id': `${siteUrl}/author/dmd-furnishing-editorial#profilepage`,
   url: `${siteUrl}/author/dmd-furnishing-editorial`,
   name: 'DMD Furnishing Editorial Team',
+  dateCreated: '2026-03-01',
+  dateModified: '2026-06-10',
   description:
     'Profile of the DMD Furnishing editorial team. Hospitality FF&E specialists and commercial furniture manufacturing authors.',
   mainEntity: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
@@ -94,7 +89,7 @@ const profilePageSchema = {
 export default function EditorialTeamPage() {
   return (
     <main className={styles.page}>
-      <JsonLd data={personSchema} />
+      <JsonLd data={editorialTeamSchema} />
       <JsonLd data={profilePageSchema} />
 
       <section className={styles.hero}>

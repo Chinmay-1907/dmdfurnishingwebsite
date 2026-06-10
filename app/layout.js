@@ -13,16 +13,19 @@ import {
   websiteSchema,
 } from '../lib/metadata';
 
+// Weights trimmed to what the CSS actually uses (audit 2026-06):
+// Playfair 400 had a single user (.pullQuote, remapped to 500);
+// Source Sans 300 only styled FAQ "+" glyphs (remapped to 400).
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '600', '700'],
   display: 'swap',
   variable: '--font-serif',
 });
 
 const sourceSans = Source_Sans_3({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-sans',
 });
@@ -35,9 +38,11 @@ export const metadata = {
   },
   description:
     'Custom hospitality furniture designed, manufactured, and installed by DMD Furnishing in Foxboro, MA. FF&E for hotels, restaurants, and offices nationwide.',
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     siteName: 'DMD Furnishing',
+    locale: 'en_US',
     images: [
       {
         url: '/Images/Tailored_Guestroom_Collections.jpg',
@@ -75,7 +80,6 @@ export default function RootLayout({ children }) {
             BEFORE first paint. Without this, every visit would briefly show
             the wrong theme while React hydrates. */}
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-        <link rel="preload" as="image" href="/Images/Tailored_Guestroom_Collections.jpg" fetchPriority="high" />
       </head>
       <body>
         <ThemeProvider>

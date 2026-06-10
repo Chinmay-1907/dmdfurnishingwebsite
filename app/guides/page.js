@@ -16,11 +16,39 @@ const guides = [
     slug: 'commercial-furniture-manufacturing',
     title: 'Commercial Furniture Manufacturing: A Buyer Guide',
     lede: 'What commercial furniture manufacturing actually covers, which construction and durability standards matter, how material choices change cost, and how a project moves from specification to install.',
+    posts: [
+      {
+        slug: 'hpl-veneer-solid-wood-hotel-casegoods',
+        title: 'HPL vs Veneer vs Solid Wood for Hotel Casegoods',
+      },
+      {
+        slug: 'value-engineering-commercial-furniture',
+        title: 'How to Value Engineer Commercial Furniture the Right Way',
+      },
+    ],
   },
   {
     slug: 'hospitality-ffe',
     title: 'Hospitality FF&E: A Complete Procurement Guide',
     lede: 'What hospitality FF&E includes, replacement lifecycles by property tier, how brand standards shape specs, the full procurement process, and the mistakes that blow budgets.',
+    posts: [
+      {
+        slug: 'what-is-ffe-hospitality',
+        title: 'What Is FF&E? The Hospitality Buyer Guide',
+      },
+      {
+        slug: 'hotel-guestroom-furniture-checklist',
+        title: 'Hotel Guestroom Furniture Checklist for Every Room',
+      },
+      {
+        slug: 'ffe-procurement-timeline',
+        title: 'FF&E Procurement Timeline from Concept to Install',
+      },
+      {
+        slug: 'restaurant-seating-guide',
+        title: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool',
+      },
+    ],
   },
 ];
 
@@ -72,6 +100,36 @@ export default function GuidesIndexPage() {
       <section className={styles.bodyWrap}>
         <div className={styles.bodyInner} style={{ gridTemplateColumns: '1fr' }}>
           <article className={styles.article} style={{ maxWidth: '880px', margin: '0 auto' }}>
+            <section style={{ marginBottom: '2.5rem' }}>
+              <p>
+                Buying commercial furniture is a different discipline from buying residential
+                furniture. The pieces may look similar in a rendering, but the budget lines,
+                performance standards, lead times, and approval workflows behind a hotel or
+                restaurant fit-out have far more in common with construction procurement than
+                with retail shopping. A guestroom casegood package has to reconcile brand
+                standards, fire safety and durability requirements, a fixed opening date, and a
+                budget set months before the first purchase order. The decisions that determine
+                whether all of that holds together are made early, during design development,
+                not at the loading dock.
+              </p>
+              <p>
+                These guides exist to make those decisions easier. They are written for the
+                people who actually carry FF&amp;E responsibility on a project: owners and
+                developers approving budgets, interior designers writing specifications, and
+                procurement managers holding the schedule. Each guide walks the full decision
+                path, covering what to specify, which standards to cite, where the real costs hide, and
+                how the procurement process unfolds from bill of quantities through factory
+                quality control and installation. Everything draws on what we see daily as a
+                commercial furniture manufacturer serving hospitality projects across the
+                United States.
+              </p>
+              <p>
+                Start with the pillar guide closest to your current question, then use the
+                supporting articles under each one to go deeper on specific decisions like
+                surface materials, value engineering, seating selection, and procurement
+                scheduling.
+              </p>
+            </section>
             {guides.map((guide) => (
               <section key={guide.slug} style={{ marginBottom: '2.5rem' }}>
                 <h2 style={{ marginBottom: '0.75rem' }}>
@@ -83,6 +141,16 @@ export default function GuidesIndexPage() {
                 <p>
                   <Link href={`/guides/${guide.slug}`}>Read the full guide →</Link>
                 </p>
+                <p style={{ marginBottom: '0.5rem' }}>
+                  <strong>Supporting articles:</strong>
+                </p>
+                <ul>
+                  {guide.posts.map((post) => (
+                    <li key={post.slug}>
+                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    </li>
+                  ))}
+                </ul>
               </section>
             ))}
           </article>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   getAllPlaces,
@@ -15,6 +16,7 @@ import ProductCatalog from '../../../components/products/ProductCatalog';
 import CategoryContentBlock from '../../../components/products/CategoryContentBlock';
 import ProductDetailPage from '../../../components/products/ProductDetailPage';
 import Breadcrumbs from '../../../components/Breadcrumbs';
+import styles from '../../../components/products/catalog-new.module.css';
 
 /**
  * Single-segment dispatcher at /products/[slug].
@@ -46,36 +48,43 @@ export const dynamicParams = false;
 const placeMetaOverrides = {
   hotel: {
     title: 'Hotel Furniture & Casegoods',
+    h1: 'Hotel Furniture & Casegoods',
     description:
       'Contract-grade hotel guestroom casegoods, headboards, desks, and lobby seating. Custom manufacturer for boutique and branded hotels.',
   },
   restaurant: {
     title: 'Restaurant Furniture & Seating',
+    h1: 'Restaurant Furniture & Seating',
     description:
       'Custom restaurant banquettes, booths, dining chairs, and bar stools. Fire safety compliant. Built for U.S. restaurant operators.',
   },
   office: {
     title: 'Office Furniture & Workstations',
+    h1: 'Office Furniture & Workstations',
     description:
       'Commercial-grade task seating, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
   },
   hospital: {
     title: 'Healthcare Furniture',
+    h1: 'Healthcare Furniture',
     description:
       'Bleach-cleanable healthcare furniture for hospitals, clinics, and medical offices. Bariatric seating, patient room casegoods, and performance upholstery.',
   },
   'educational-facilities': {
     title: 'Educational Facility Furniture',
+    h1: 'Educational Facility Furniture',
     description:
       'Classroom seating, dormitory wardrobes, library carrels, and active-learning furniture for K-12 and higher education. Contract-grade.',
   },
   residential: {
     title: 'Multi-Family and Residential Furniture',
+    h1: 'Multi-Family and Residential Furniture',
     description:
       'Multi-family and residential furniture for clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics and construction.',
   },
   'lobby-area': {
     title: 'Lobby & Reception Furniture',
+    h1: 'Lobby & Reception Furniture',
     description:
       'Custom reception desks, lounge seating, and feature tables for hotel, corporate, healthcare, and multi-family lobbies. ADA coordinated.',
   },
@@ -96,7 +105,9 @@ export async function generateMetadata({ params }) {
     }
     const primary = product.primary;
     return generatePageMetadata({
-      title: product.name,
+      title: primary?.subcategoryName
+        ? `${product.name} | Commercial ${primary.subcategoryName}`
+        : product.name,
       description:
         product.description ||
         `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`,
@@ -218,7 +229,7 @@ function buildPlaceStructuredData(place, content, placeProducts) {
         mainEntity: {
           '@type': 'ItemList',
           numberOfItems: placeProducts.length,
-          itemListElement: placeProducts.slice(0, 20).map((product, idx) => ({
+          itemListElement: placeProducts.map((product, idx) => ({
             '@type': 'ListItem',
             position: idx + 1,
             url: `${siteUrl}/products/${product.slug}`,
@@ -283,6 +294,18 @@ export default async function ProductsDispatchPage({ params }) {
   const placeProducts = allProducts.filter((p) => p.placeSlugs.includes(place.slug));
   const content = placeContent[place.slug];
   const schema = buildPlaceStructuredData(place, content, placeProducts);
+  const override = placeMetaOverrides[place.slug];
+
+  // Group this place's products by furniture type for the server-rendered
+  // crawlable index, so every product page keeps a static inbound link.
+  const typeMap = new Map();
+  for (const product of [...placeProducts].sort((a, b) => a.name.localeCompare(b.name))) {
+    const membership = product.memberships?.find((m) => m.placeSlug === place.slug);
+    const typeName = membership?.furnitureTypeName || product.furnitureTypeName || 'General';
+    if (!typeMap.has(typeName)) typeMap.set(typeName, []);
+    typeMap.get(typeName).push(product);
+  }
+  const placeIndex = [...typeMap.entries()].map(([typeName, items]) => ({ typeName, items }));
 
   return (
     <>
@@ -298,16 +321,40 @@ export default async function ProductsDispatchPage({ params }) {
         ]}
       />
       <ProductCatalog
-        products={allProducts}
+        products={placeProducts}
         filterOptions={filterOptions}
         initialFilters={{ space: place.slug }}
-        heroTitle={`${place.name} Furniture`}
+        heroTitle={override?.h1 || `${place.name} Furniture`}
         heroDescription={
           place.description ||
           `Browse all ${placeProducts.length} furniture products designed for ${place.name.toLowerCase()} environments.`
         }
       />
       <CategoryContentBlock placeName={place.name} content={content} />
+
+      {/* Server-rendered crawlable index of every product in this place */}
+      <section className={styles.crawlIndex} aria-label={`Full ${place.name} product index`}>
+        <div className={styles.crawlIndexInner}>
+          <h2>Browse all {place.name} products A&ndash;Z</h2>
+          <p className={styles.crawlIndexLede}>
+            Every {place.name.toLowerCase()} product, grouped by furniture type.
+          </p>
+          {placeIndex.map((group) => (
+            <details key={group.typeName} className={styles.crawlGroup}>
+              <summary>{group.typeName}</summary>
+              <div className={styles.crawlType}>
+                <ul className={styles.crawlLinks}>
+                  {group.items.map((product) => (
+                    <li key={product.slug}>
+                      <Link href={product.href}>{product.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
     </>
   );
 }

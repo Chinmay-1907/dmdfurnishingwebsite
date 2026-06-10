@@ -18,6 +18,8 @@ export function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = false;
+
 // ---------------------------------------------------------------------------
 // Metadata
 // ---------------------------------------------------------------------------
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }) {
 
   const description = project.shortDescription || project.fullDescription || 'Project details';
   return generatePageMetadata({
-    title: project.name,
+    title: `${project.name} | Hotel Furniture Installation`,
     description,
     path: `/projects/${project.id}`,
     image: project.mainImage || '/Images/Our_Projects.jpg',
@@ -65,7 +67,8 @@ function buildSchema(project, pageUrl) {
       description: project.shortDescription || project.fullDescription || '',
       image: imageUrl,
       url: pageUrl,
-      datePublished: project.completionDate || '2024-01-01',
+      ...(project.completionDate ? { datePublished: project.completionDate } : {}),
+      author: { '@id': `${siteUrl}/#organization` },
       publisher: { '@type': 'Organization', name: 'DMD Furnishing', '@id': `${siteUrl}/#organization` },
       about: { '@type': 'LocalBusiness', '@id': `${siteUrl}/#localbusiness` },
     },
@@ -83,16 +86,6 @@ function buildSchema(project, pageUrl) {
         contentUrl: img.url.startsWith('http') ? img.url : `${siteUrl}${img.url}`,
         name: img.alt || project.name,
       })),
-    });
-  }
-
-  // Review schema
-  if (project.clientTestimonial && project.clientName !== 'DMD Furnishing Team') {
-    graph.push({
-      '@type': 'Review',
-      reviewBody: project.clientTestimonial,
-      author: { '@type': 'Person', name: project.clientName },
-      itemReviewed: { '@type': 'LocalBusiness', '@id': `${siteUrl}/#localbusiness` },
     });
   }
 

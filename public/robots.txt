@@ -5,7 +5,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/static/chunks/
 
 # Explicitly allow AI crawlers
 User-agent: GPTBot

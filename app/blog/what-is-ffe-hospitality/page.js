@@ -39,24 +39,14 @@ export const metadata = {
 };
 
 const articleSchema = {
-  '@type': 'Article',
+  '@type': 'BlogPosting',
   '@id': `${siteUrl}/blog/what-is-ffe-hospitality#article`,
   headline: 'What Is FF&E? A Complete Guide for Hospitality Projects',
   description:
     'A comprehensive guide to Furniture, Fixtures & Equipment in hospitality: definition, scope, differences from OS&E, procurement, and budgeting.',
   datePublished: '2026-03-02',
   dateModified: '2026-04-01',
-  author: {
-    '@type': 'Person',
-    name: 'DMD Furnishing Editorial Team',
-    jobTitle: 'Commercial Furniture Specialists',
-    url: `${siteUrl}/about`,
-    worksFor: {
-      '@type': 'Organization',
-      name: 'DMD Furnishing',
-      '@id': `${siteUrl}/#organization`,
-    },
-  },
+  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
@@ -153,7 +143,11 @@ export default function WhatIsFFEPage() {
 
       <article className={styles.container}>
           <header className={styles.articleHeader}>
-            <p className={styles.articleMeta}>April 1, 2026 &nbsp;·&nbsp; Hospitality FF&amp;E</p>
+            <p className={styles.articleMeta}>
+              Published <time dateTime="2026-03-02">March 2, 2026</time> &nbsp;·&nbsp; Updated{' '}
+              <time dateTime="2026-04-01">April 1, 2026</time> &nbsp;·&nbsp; By{' '}
+              <Link href="/author/dmd-furnishing-editorial">DMD Furnishing Editorial Team</Link>
+            </p>
             <h1 className={styles.articleTitle}>
               What Is FF&amp;E? A Complete Guide for Hospitality Projects
             </h1>
@@ -193,7 +187,9 @@ export default function WhatIsFFEPage() {
               that groups together all furnishings and equipment that can be moved without altering
               the building structure. The distinction matters because FF&amp;E is generally depreciated
               differently than real property, and it is managed under a separate procurement track from
-              base building construction.
+              base building construction. For the full buying process from budgeting through
+              installation, see our{' '}
+              <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>.
             </p>
             <p>
               For a hotel, FF&amp;E encompasses everything from the guestroom headboard and desk chair

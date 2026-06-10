@@ -1,11 +1,17 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './catalog-new.module.css';
 
 export default function SpaceNav({ spaces, activeSpace, onSpaceChange }) {
   const scrollRef = useRef(null);
   const activeRef = useRef(null);
+  const pathname = usePathname();
+  // On place pages (/products/hotel etc.) tabs are real links so crawlers can
+  // follow them. On /products they stay buttons driving the client-side filter.
+  const linkMode = Boolean(pathname && pathname !== '/products');
 
   useEffect(() => {
     if (activeRef.current && scrollRef.current) {
@@ -19,24 +25,47 @@ export default function SpaceNav({ spaces, activeSpace, onSpaceChange }) {
   return (
     <nav className={styles.spaceNav} aria-label="Filter by space">
       <div className={styles.spaceNavScroll} ref={scrollRef}>
-        <button
-          className={`${styles.spaceTab} ${!activeSpace ? styles.spaceTabActive : ''}`}
-          onClick={() => onSpaceChange(null)}
-          ref={!activeSpace ? activeRef : null}
-        >
-          All
-        </button>
-        {spaces.map((space) => (
-          <button
-            key={space.slug}
-            className={`${styles.spaceTab} ${activeSpace === space.slug ? styles.spaceTabActive : ''}`}
-            onClick={() => onSpaceChange(space.slug === activeSpace ? null : space.slug)}
-            ref={activeSpace === space.slug ? activeRef : null}
+        {linkMode ? (
+          <Link
+            href="/products"
+            className={`${styles.spaceTab} ${!activeSpace ? styles.spaceTabActive : ''}`}
+            ref={!activeSpace ? activeRef : null}
           >
-            {space.name}
-            <span className={styles.spaceTabCount}>{space.count}</span>
+            All
+          </Link>
+        ) : (
+          <button
+            className={`${styles.spaceTab} ${!activeSpace ? styles.spaceTabActive : ''}`}
+            onClick={() => onSpaceChange(null)}
+            ref={!activeSpace ? activeRef : null}
+          >
+            All
           </button>
-        ))}
+        )}
+        {spaces.map((space) =>
+          linkMode ? (
+            <Link
+              key={space.slug}
+              href={`/products/${space.slug}`}
+              className={`${styles.spaceTab} ${activeSpace === space.slug ? styles.spaceTabActive : ''}`}
+              aria-current={activeSpace === space.slug ? 'page' : undefined}
+              ref={activeSpace === space.slug ? activeRef : null}
+            >
+              {space.name}
+              <span className={styles.spaceTabCount}>{space.count}</span>
+            </Link>
+          ) : (
+            <button
+              key={space.slug}
+              className={`${styles.spaceTab} ${activeSpace === space.slug ? styles.spaceTabActive : ''}`}
+              onClick={() => onSpaceChange(space.slug === activeSpace ? null : space.slug)}
+              ref={activeSpace === space.slug ? activeRef : null}
+            >
+              {space.name}
+              <span className={styles.spaceTabCount}>{space.count}</span>
+            </button>
+          )
+        )}
       </div>
     </nav>
   );

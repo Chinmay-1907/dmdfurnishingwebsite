@@ -7,7 +7,7 @@ export function generateMetadata() {
     description:
       'Review DMD Furnishing terms of use, privacy policy, and data handling practices. Foxboro, MA commercial furniture manufacturer.',
     path: '/website-policies',
-    image: '/DMD_Furnishing_Logo_Embedded.svg',
+    image: '/Images/og-default.jpg',
   });
 }
 

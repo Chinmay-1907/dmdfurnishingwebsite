@@ -42,22 +42,12 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'BlogPosting',
       '@id': `${siteUrl}/blog/restaurant-seating-guide#article`,
       headline: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool?',
       datePublished: '2026-03-20',
       dateModified: '2026-03-31',
-      author: {
-        '@type': 'Person',
-        name: 'DMD Furnishing Editorial Team',
-        jobTitle: 'Commercial Furniture Specialists',
-        url: `${siteUrl}/about`,
-        worksFor: {
-          '@type': 'Organization',
-          name: 'DMD Furnishing',
-          '@id': `${siteUrl}/#organization`,
-        },
-      },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
@@ -152,8 +142,13 @@ export default function RestaurantSeatingGuide() {
       <article className={styles.container}>
         <header className={styles.articleHeader}>
           <div className={styles.articleMeta}>
-            <time dateTime="2026-03-31">March 31, 2026</time>
-            <span> · DMD Furnishing</span>
+            <span>
+              Published <time dateTime="2026-03-20">March 20, 2026</time> · Updated{' '}
+              <time dateTime="2026-03-31">March 31, 2026</time>
+            </span>
+            <span>
+              {' '}· By <Link href="/author/dmd-furnishing-editorial">DMD Furnishing Editorial Team</Link>
+            </span>
           </div>
           <h1 className={styles.articleTitle}>
             Restaurant Seating Guide: Booth, Chair, or Bar Stool?
@@ -177,6 +172,9 @@ export default function RestaurantSeatingGuide() {
               Booths maximize comfort and privacy for casual and family dining. Dining chairs offer
               the most flexibility for repositioning and event use. Bar stools define the counter
               and high-top zone. Most successful restaurant layouts use all three in distinct areas.
+              Seating is also just one line in a wider furniture package — our{' '}
+              <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>{' '}
+              covers how the full scope comes together.
             </p>
           </div>
 
@@ -318,7 +316,11 @@ export default function RestaurantSeatingGuide() {
             Commercial restaurant seating takes significantly more abuse than residential furniture.
             A busy restaurant may turn a seat 300 to 400 times per week. Specifying
             contract-grade materials from the outset avoids early failures and costly mid-life
-            replacements.
+            replacements. If budget pressure forces trade-offs, our guide to{' '}
+            <Link href="/blog/value-engineering-commercial-furniture">
+              value engineering commercial furniture
+            </Link>{' '}
+            shows where to save without sacrificing durability.
           </p>
           <ul>
             <li>
@@ -371,6 +373,10 @@ export default function RestaurantSeatingGuide() {
             Zone separation can be reinforced through flooring material transitions, ceiling height
             changes, partial walls or banquettes, and lighting level differences, all of which
             complement the seating choice to create distinct atmospheres within one space.
+            Fixed booths and custom banquettes carry the longest lead times of any seating
+            format, so place them early in the{' '}
+            <Link href="/blog/ffe-procurement-timeline">FF&amp;E procurement timeline</Link>{' '}
+            to protect the opening date.
           </p>
 
           <div className={styles.ctaBlock}>

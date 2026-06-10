@@ -1174,7 +1174,7 @@
 			</subcategory>
 		</furnitureType>
 	</place>
-	<place id="office" name="Office" description="Office furniture collection" image="/Images/Office/Office.jpg">
+	<place id="office" name="Office" description="Office furniture collection" image="/Images/Office/office.jpg">
 		<furnitureType id="Seating" name="Seating" description="Seating for Office" image="/Images/Office/Seating/Office Seating.jpg">
 			<subcategory id="Ergonomic Chair" name="Ergonomic Chair" description="Ergonomic Chair in Seating" image="/Images/Office/Seating/Ergonomic Chair/Ergonomic Chair.jpg">
 				<product id="Adjustable Ergonomic Chair" name="Adjustable Ergonomic Chair" description="Adjustable Ergonomic Chair product for Ergonomic Chair" image="/Images/Office/Seating/Ergonomic Chair/Adjustable Ergonomic Chair/adjustable ergonomic chair.png" tags="adjustable,ergonomic,chair">
@@ -1755,12 +1755,12 @@
 						<spec name="Finish" value="Textured polypropylene; powder-coated metal frame" />
 					</specifications>
 				</product>
-				<product id="Classroom Plastic Chair" name="Classroom Plastic Chair" description="Molded polypropylene classroom chair in ergonomic student sizes (K-12 and university). Stackable for easy storage and reconfiguration between classes." image="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" tags="plastic,chair,classroom,school">
+				<product id="Classroom Plastic Chair" name="Classroom Plastic Chair" description="Molded polypropylene classroom chair in ergonomic student sizes (K-12 and university). Stackable for easy storage and reconfiguration between classes." image="/Images/School/Classroom/Chairs/Plastic Chair/Plastic Chair 2.png" tags="plastic,chair,classroom,school">
 					<images>
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 1.png" alt="Plastic Chair - plastic chair" />
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 2.png" alt="Plastic Chair - plastic chair" />
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 3.png" alt="Plastic Chair - plastic chair" />
-						<image src="/Images/School/Classroom/Chairs/Plastic Chair/plastic chair 4.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/Plastic Chair 1.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/Plastic Chair 2.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/Plastic Chair 3.png" alt="Plastic Chair - plastic chair" />
+						<image src="/Images/School/Classroom/Chairs/Plastic Chair/Plastic Chair 4.png" alt="Plastic Chair - plastic chair" />
 					</images>
 					<specifications>
 						<spec name="Width" value="18-20&quot; (Customizable)" />

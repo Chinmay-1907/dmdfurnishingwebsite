@@ -6,14 +6,14 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'FF&E Procurement Timeline',
+  title: 'FF&E Procurement Timeline for Hotels',
   description:
     'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
   alternates: {
     canonical: 'https://dmdfurnishing.com/blog/ffe-procurement-timeline',
   },
   openGraph: {
-    title: 'FF&E Procurement Timeline | DMD Furnishing',
+    title: 'FF&E Procurement Timeline for Hotels | DMD Furnishing',
     description:
       'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
     url: 'https://dmdfurnishing.com/blog/ffe-procurement-timeline',
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FF&E Procurement Timeline | DMD Furnishing',
+    title: 'FF&E Procurement Timeline for Hotels | DMD Furnishing',
     description:
       'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
   },
@@ -42,22 +42,12 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'BlogPosting',
       '@id': `${siteUrl}/blog/ffe-procurement-timeline#article`,
       headline: 'FF&E Procurement Timeline: What to Expect from Concept to Install',
       datePublished: '2026-03-25',
       dateModified: '2026-04-02',
-      author: {
-        '@type': 'Person',
-        name: 'DMD Furnishing Editorial Team',
-        jobTitle: 'Commercial Furniture Specialists',
-        url: `${siteUrl}/about`,
-        worksFor: {
-          '@type': 'Organization',
-          name: 'DMD Furnishing',
-          '@id': `${siteUrl}/#organization`,
-        },
-      },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
@@ -135,51 +125,6 @@ const articleSchema = {
         },
       ],
     },
-    {
-      '@type': 'HowTo',
-      '@id': `${siteUrl}/blog/ffe-procurement-timeline#howto`,
-      name: 'How to Plan an FF&E Procurement Timeline',
-      description:
-        'A five-phase FF&E procurement timeline covering design, bidding, manufacturing, QC, and installation for commercial hospitality projects.',
-      totalTime: 'P120D',
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Design and Specification',
-          text: 'Develop design intent drawings for each space, confirm furniture dimensions against architectural drawings, select materials and finishes, and produce a complete Bill of Quantities listing every item, quantity, and specification. Identify long-lead items that may require early ordering. Vague specifications at this stage generate clarification rounds later.',
-          url: `${siteUrl}/blog/ffe-procurement-timeline#phase-1-design-and-specification`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Bidding and Vendor Selection',
-          text: 'Issue an RFQ to qualified vendors with 10 to 14 days to respond. Evaluate price, lead time, sample quality, and vendor track record. Request physical samples of key upholstered pieces and finishes, formally document sample approvals with signed sign-off sheets, then negotiate contracts and issue purchase orders.',
-          url: `${siteUrl}/blog/ffe-procurement-timeline#phase-2-bidding-and-vendor-selection`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Manufacturing and Production',
-          text: 'Once POs are issued and deposits paid, production runs 6 to 10 weeks for standard catalog items, 10 to 14 weeks for custom items in standard materials, and 14 to 20 weeks for highly custom pieces. Maintain weekly status updates with each vendor, return shop drawing approvals promptly, and formally approve any substitutions in writing.',
-          url: `${siteUrl}/blog/ffe-procurement-timeline#phase-3-manufacturing-and-production`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Quality Control and Shipping',
-          text: 'Conduct a pre-shipment QC inspection: a physical factory visit for large orders or photographic documentation against the sample standard for smaller ones. Coordinate freight forwarding decisions including container consolidation, packaging, customs documentation, and staging warehouse arrangements if the site is not ready to receive.',
-          url: `${siteUrl}/blog/ffe-procurement-timeline#phase-4-quality-control-and-shipping`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Delivery and Installation',
-          text: 'Phase delivery by floor or building section to match the construction handover schedule. Use a staging area to organize items by room type before installation. Coordinate installers with the general contractor once flooring, painting, and millwork are complete, then generate a furniture punch list and track it to closure before final payment and owner walkthrough.',
-          url: `${siteUrl}/blog/ffe-procurement-timeline#phase-5-delivery-and-installation`,
-        },
-      ],
-    },
   ],
 };
 
@@ -197,8 +142,13 @@ export default function FFEProcurementTimeline() {
       <article className={styles.container}>
         <header className={styles.articleHeader}>
           <div className={styles.articleMeta}>
-            <time dateTime="2026-04-02">April 2, 2026</time>
-            <span> · DMD Furnishing</span>
+            <span>
+              Published <time dateTime="2026-03-25">March 25, 2026</time> · Updated{' '}
+              <time dateTime="2026-04-02">April 2, 2026</time>
+            </span>
+            <span>
+              {' '}· By <Link href="/author/dmd-furnishing-editorial">DMD Furnishing Editorial Team</Link>
+            </span>
           </div>
           <h1 className={styles.articleTitle}>
             FF&amp;E Procurement Timeline: What to Expect from Concept to Install
@@ -222,7 +172,9 @@ export default function FFEProcurementTimeline() {
               24 weeks from design concept to final installation. Custom or high-volume projects
               with complex specifications sit closer to 24 weeks; smaller scopes with standard
               product selections can complete in 16 weeks if approvals move quickly. Budget
-              additional time for international shipping or port congestion.
+              additional time for international shipping or port congestion. For the full
+              procurement picture beyond scheduling, see our{' '}
+              <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>.
             </p>
           </div>
 
@@ -243,7 +195,10 @@ export default function FFEProcurementTimeline() {
             coordination across all specified pieces. The quality of work done in this phase
             directly determines how smoothly the rest of the process runs. Vague or incomplete
             specifications at this stage generate clarification rounds that consume time later
-            during bidding and manufacturing.
+            during bidding and manufacturing. If you are still defining the scope itself, our
+            guide to <Link href="/blog/what-is-ffe-hospitality">what FF&amp;E means in hospitality</Link>{' '}
+            and our <Link href="/blog/hotel-guestroom-furniture-checklist">hotel guestroom furniture checklist</Link>{' '}
+            are useful starting points for building a complete BOQ.
           </p>
           <ul>
             <li>Develop design intent drawings for each room type or space</li>

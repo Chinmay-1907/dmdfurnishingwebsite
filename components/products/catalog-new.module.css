@@ -157,6 +157,7 @@
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
   transition: all 180ms ease;
 }
 
@@ -1118,4 +1119,117 @@
 }
 :global([data-theme='dark']) .loadMoreRemaining {
   color: rgba(201, 169, 110, 0.85);
+}
+
+/* ─── Crawlable A–Z Catalog Index (server-rendered) ──────────────────── */
+
+.crawlIndex {
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.crawlIndexInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.crawlIndexInner h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.crawlIndexLede {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.crawlGroup {
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.crawlGroup:last-child {
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.crawlGroup summary {
+  padding: 0.9rem 0;
+  font-weight: 700;
+  font-size: 1.02rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.crawlType {
+  padding: 0 0 0.9rem;
+}
+
+.crawlType h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.crawlLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.1rem;
+}
+
+.crawlLinks a {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.crawlLinks a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* ─── Visible Catalog FAQ ────────────────────────────────────────────── */
+
+.catalogFaq {
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.catalogFaqInner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.catalogFaqInner h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.catalogFaqItem {
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.catalogFaqItem:last-child {
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.catalogFaqItem summary {
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.catalogFaqItem p {
+  margin: 0;
+  padding: 0 0 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
 }

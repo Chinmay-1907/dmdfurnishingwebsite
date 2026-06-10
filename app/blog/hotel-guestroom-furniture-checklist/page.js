@@ -39,24 +39,14 @@ export const metadata = {
 };
 
 const articleSchema = {
-  '@type': 'Article',
+  '@type': 'BlogPosting',
   '@id': `${siteUrl}/blog/hotel-guestroom-furniture-checklist#article`,
   headline: 'Hotel Guestroom Furniture Checklist: What Every Room Needs',
   description:
     'A thorough breakdown of every furniture piece required in a hotel guestroom, from headboard and bed frame to desk, luggage bench, and vanity, with commercial specification guidance.',
   datePublished: '2026-03-08',
   dateModified: '2026-03-29',
-  author: {
-    '@type': 'Person',
-    name: 'DMD Furnishing Editorial Team',
-    jobTitle: 'Commercial Furniture Specialists',
-    url: `${siteUrl}/about`,
-    worksFor: {
-      '@type': 'Organization',
-      name: 'DMD Furnishing',
-      '@id': `${siteUrl}/#organization`,
-    },
-  },
+  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
@@ -153,7 +143,11 @@ export default function HotelGuestroomChecklistPage() {
 
       <article className={styles.container}>
           <header className={styles.articleHeader}>
-            <p className={styles.articleMeta}>March 29, 2026 &nbsp;·&nbsp; Hotel Furniture</p>
+            <p className={styles.articleMeta}>
+              Published <time dateTime="2026-03-08">March 8, 2026</time> &nbsp;·&nbsp; Updated{' '}
+              <time dateTime="2026-03-29">March 29, 2026</time> &nbsp;·&nbsp; By{' '}
+              <Link href="/author/dmd-furnishing-editorial">DMD Furnishing Editorial Team</Link>
+            </p>
             <h1 className={styles.articleTitle}>
               Hotel Guestroom Furniture Checklist: What Every Room Needs
             </h1>
@@ -219,7 +213,9 @@ export default function HotelGuestroomChecklistPage() {
               The checklist also serves as a procurement tool. Each line item requires a quantity
               count, a specification sheet, and a lead time estimate. Starting the furniture
               procurement process with an incomplete checklist is one of the most common causes of
-              rushed orders and substitutions that compromise the design intent.
+              rushed orders and substitutions that compromise the design intent. For how the
+              checklist feeds into budgeting, vendor selection, and installation, see our{' '}
+              <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>.
             </p>
 
             <h2 id="bed-components">What Bed Components Belong in a Hotel Guestroom?</h2>

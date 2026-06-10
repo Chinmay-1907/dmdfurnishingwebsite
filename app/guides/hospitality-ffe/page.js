@@ -5,7 +5,7 @@ import AnswerCallout from '../../../components/AnswerCallout';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Hospitality FF&E Guide',
+  title: 'Hospitality FF&E Procurement Guide',
   description:
     'Hospitality FF&E procurement guide: budgeting, sourcing, manufacturing, delivery, and installation for hotels, restaurants, and commercial spaces.',
   path: '/guides/hospitality-ffe',
@@ -43,6 +43,17 @@ const faqs = [
     question: 'When should I start the FF&E procurement process?',
     answer:
       'Vendor engagement should begin during design development - typically 6 to 9 months before the target installation date - not after construction documents are issued. Early engagement lets manufacturers flag lead time risks, value-engineer specifications before they are locked in, and hold production capacity. Waiting until construction documents are complete compresses the fabrication schedule and drives change orders. For detailed timeline guidance, see our FF&E procurement timeline guide.',
+    answerJsx: (
+      <>
+        Vendor engagement should begin during design development - typically 6 to 9 months before
+        the target installation date - not after construction documents are issued. Early
+        engagement lets manufacturers flag lead time risks, value-engineer specifications before
+        they are locked in, and hold production capacity. Waiting until construction documents are
+        complete compresses the fabrication schedule and drives change orders. For detailed
+        timeline guidance, see our{' '}
+        <Link href="/blog/ffe-procurement-timeline">FF&amp;E procurement timeline guide</Link>.
+      </>
+    ),
   },
 ];
 
@@ -444,6 +455,13 @@ export default function HospitalityFfeGuide() {
                 specifying clear performance requirements. If you&apos;d like help reviewing an existing
                 FF&amp;E specification, <Link href="/contact">contact our team</Link>.
               </p>
+              <p>
+                <strong>Related guide:</strong> curious how the furniture itself gets built? Our{' '}
+                <Link href="/guides/commercial-furniture-manufacturing">
+                  commercial furniture manufacturing guide
+                </Link>{' '}
+                covers construction standards, materials, and factory quality control.
+              </p>
             </section>
 
             <section id="faqs" className={styles.faqSection}>
@@ -451,7 +469,7 @@ export default function HospitalityFfeGuide() {
               {faqs.map((faq) => (
                 <details key={faq.question} className={styles.faqItem}>
                   <summary className={styles.faqQuestion}>{faq.question}</summary>
-                  <p className={styles.faqAnswer}>{faq.answer}</p>
+                  <p className={styles.faqAnswer}>{faq.answerJsx || faq.answer}</p>
                 </details>
               ))}
             </section>

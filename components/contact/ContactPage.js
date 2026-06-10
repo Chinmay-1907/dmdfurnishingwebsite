@@ -10,6 +10,7 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaCalendarAlt,
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 const PROJECT_CATEGORIES = [
@@ -410,12 +411,18 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
 
                     <div className="cp-schedule-cta">
                       <a
-                        href="https://wa.me/16172237781"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="tel:+16172237781"
                         className="cp-btn cp-btn-gold cp-btn-full"
                       >
                         <FaPhone /> Call Now: +1 (617) 223-7781
+                      </a>
+                      <a
+                        href="https://wa.me/16172237781"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cp-btn cp-btn-outline-dark cp-btn-full"
+                      >
+                        <FaWhatsapp /> WhatsApp
                       </a>
                     </div>
 

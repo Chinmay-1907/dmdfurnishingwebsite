@@ -3,7 +3,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { generatePageMetadata, siteUrl } from '../../lib/metadata';
 
 export const metadata = generatePageMetadata({
-  title: 'Contact DMD Furnishing | Foxboro MA Manufacturer',
+  title: 'Contact Us | Foxboro MA Furniture Manufacturer',
   description:
     'Request a project estimate or hospitality furniture consultation with DMD Furnishing in Foxboro, Massachusetts. Talk scope, materials, budgets, and lead times.',
   path: '/contact',

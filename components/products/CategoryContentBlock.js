@@ -56,10 +56,9 @@ export default function CategoryContentBlock({ placeName, content }) {
               <p className={styles.materialsText}>{materials}</p>
             </div>
             <div className={styles.materialsImage}>
-              {/* TODO: replace src with /images/materials-macro-placeholder.jpg once banana generates macro cross-section oak + HPL + brass on ivory bg */}
               <Image
-                src="/placeholder.png"
-                alt="Macro cross-section of commercial furniture materials: hardwood veneer, HPL, and brass hardware"
+                src="/Images/materials-macro.jpg"
+                alt="Commercial furniture construction detail: hardwood veneer casegoods with brass hardware"
                 fill
                 sizes="(max-width: 800px) 100vw, 45vw"
               />

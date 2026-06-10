@@ -14,6 +14,8 @@ export function generateStaticParams() {
   return getAllInspirations().map((insp) => ({ id: insp.id }));
 }
 
+export const dynamicParams = false;
+
 // ---------------------------------------------------------------------------
 // Metadata
 // ---------------------------------------------------------------------------
@@ -68,7 +70,7 @@ function buildSchema(insp, pageUrl) {
         '@id': pageUrl,
         name: insp.title,
         description: insp.description,
-        image: insp.image,
+        image: insp.image.startsWith('http') ? insp.image : `${siteUrl}${insp.image}`,
         url: pageUrl,
         creator: { '@type': 'Organization', name: 'DMD Furnishing', '@id': `${siteUrl}/#organization` },
         genre: insp.category || 'Hospitality Furniture Design',

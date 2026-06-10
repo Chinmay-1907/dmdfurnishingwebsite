@@ -407,7 +407,7 @@
   flex-shrink: 0;
   font-family: var(--font-sans);
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400; /* 300 dropped from the font load; lightest kept weight */
   color: rgba(201, 169, 110, 0.8);
   transition: transform 0.25s ease, color 0.25s ease;
 }

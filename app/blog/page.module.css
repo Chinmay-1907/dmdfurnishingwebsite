@@ -761,7 +761,7 @@
   line-height: 1.6;
   color: rgba(244, 240, 230, 0.92);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500; /* Playfair 400 dropped from the font load; nearest kept weight */
 }
 
 .pullQuote::before {
