@@ -222,8 +222,8 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
           {filtered.length > 0 ? (
             <>
               <div className={styles.productGrid}>
-                {visibleProducts.map((product) => (
-                  <ProductCard key={product.slug} product={product} />
+                {visibleProducts.map((product, index) => (
+                  <ProductCard key={product.slug} product={product} priority={index < 3} />
                 ))}
               </div>
               {hasMore && (

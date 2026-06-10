@@ -219,8 +219,8 @@ export default async function FurnitureTypePage({ params }) {
         <section style={{ width: 'min(1200px, 92vw)', margin: '0 auto', padding: '2.5rem 0 3rem' }}>
           <h2 className="sr-only">{title} products</h2>
           <div className={styles.productGrid}>
-            {products.map((product) => (
-              <ProductCard key={product.slug} product={product} />
+            {products.map((product, index) => (
+              <ProductCard key={product.slug} product={product} priority={index < 3} />
             ))}
           </div>
         </section>

@@ -44,11 +44,24 @@ function scan(d) {
 ['app', 'components', 'lib', 'public'].forEach((d) => scan(path.join(root, d)));
 
 let miss = 0;
+let nonAscii = 0;
 for (const [ref, src] of refs) {
   if (!real.has('public/' + ref)) {
     miss++;
     console.log('MISS|' + ref + '|' + src);
   }
+  // Next's image optimizer 400s on non-ASCII path bytes (en-dash filenames
+  // shipped broken even though the file existed). Flag refs AND files.
+  if (/[^\x20-\x7E]/.test(ref)) {
+    nonAscii++;
+    console.log('NON-ASCII|' + ref + '|' + src);
+  }
 }
-console.log('total unique refs:', refs.size, 'missing:', miss);
-process.exit(miss ? 1 : 0);
+for (const f of real) {
+  if (f.startsWith('public/Images/') && /[^\x20-\x7E]/.test(f)) {
+    nonAscii++;
+    console.log('NON-ASCII-FILE|' + f);
+  }
+}
+console.log('total unique refs:', refs.size, 'missing:', miss, 'non-ascii:', nonAscii);
+process.exit(miss || nonAscii ? 1 : 0);

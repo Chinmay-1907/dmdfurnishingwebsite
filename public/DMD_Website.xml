@@ -1455,18 +1455,18 @@
 					</specifications>
 				</product>
 			</subcategory>
-			<subcategory id="Bookshelves" name="Bookshelves" description="Bookshelves in Office" image="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf – Espresso MDF.png">
-				<product id="DMD Bookshelf Collection" name="DMD Bookshelf Collection" description="Modular bookshelf and display units for office storage" image="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf – Espresso MDF.png" tags="bookshelf,storage,display,cabinet">
+			<subcategory id="Bookshelves" name="Bookshelves" description="Bookshelves in Office" image="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf - Espresso MDF.png">
+				<product id="DMD Bookshelf Collection" name="DMD Bookshelf Collection" description="Modular bookshelf and display units for office storage" image="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf - Espresso MDF.png" tags="bookshelf,storage,display,cabinet">
 					<images>
 						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD narrow Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD Narrow Display Cabinet – Natural Oak MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf – Espresso MDF.png" alt="DMD Bookshelf Collection - DMD Alto Cabinet Shelf – Espresso MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD ConceptStack Library Wall – Honey Ash MDF.png" alt="DMD Bookshelf Collection - DMD ConceptStack Library Wall – Honey Ash MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Elemental Archive Shelf – Warm Oak MDF.png" alt="DMD Bookshelf Collection - DMD Elemental Archive Shelf – Warm Oak MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD GridForm Organizer – Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD GridForm Organizer – Natural Oak MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Indigo Vault Shelf – Matte Blue MDF.png" alt="DMD Bookshelf Collection - DMD Indigo Vault Shelf – Matte Blue MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD StudioCore Display Shelf – Deep Blue MDF.png" alt="DMD Bookshelf Collection - DMD StudioCore Display Shelf – Deep Blue MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TerraGrid Storage Wall – Light Walnut MDF.png" alt="DMD Bookshelf Collection - DMD TerraGrid Storage Wall – Light Walnut MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TwinVault Display Cabinet – Golden Maple MDF.png" alt="DMD Bookshelf Collection - DMD TwinVault Display Cabinet – Golden Maple MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf - Espresso MDF.png" alt="DMD Bookshelf Collection - DMD Alto Cabinet Shelf – Espresso MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD ConceptStack Library Wall - Honey Ash MDF.png" alt="DMD Bookshelf Collection - DMD ConceptStack Library Wall – Honey Ash MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Elemental Archive Shelf - Warm Oak MDF.png" alt="DMD Bookshelf Collection - DMD Elemental Archive Shelf – Warm Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD GridForm Organizer - Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD GridForm Organizer – Natural Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Indigo Vault Shelf - Matte Blue MDF.png" alt="DMD Bookshelf Collection - DMD Indigo Vault Shelf – Matte Blue MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD StudioCore Display Shelf - Deep Blue MDF.png" alt="DMD Bookshelf Collection - DMD StudioCore Display Shelf – Deep Blue MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TerraGrid Storage Wall - Light Walnut MDF.png" alt="DMD Bookshelf Collection - DMD TerraGrid Storage Wall – Light Walnut MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TwinVault Display Cabinet - Golden Maple MDF.png" alt="DMD Bookshelf Collection - DMD TwinVault Display Cabinet – Golden Maple MDF" />
 					</images>
 					<specifications>
 						<spec name="Width" value="24-84&quot; (Customizable)" />
@@ -2593,14 +2593,14 @@
                     <images>
                         <image src="/Images/Residential/Home Office/Bookcase/Tall Bookcase/tall bookcase.png" alt="Tall Bookcase - home office" />
 						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD narrow Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD Narrow Display Cabinet – Natural Oak MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf – Espresso MDF.png" alt="DMD Bookshelf Collection - DMD Alto Cabinet Shelf – Espresso MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD ConceptStack Library Wall – Honey Ash MDF.png" alt="DMD Bookshelf Collection - DMD ConceptStack Library Wall – Honey Ash MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Elemental Archive Shelf – Warm Oak MDF.png" alt="DMD Bookshelf Collection - DMD Elemental Archive Shelf – Warm Oak MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD GridForm Organizer – Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD GridForm Organizer – Natural Oak MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Indigo Vault Shelf – Matte Blue MDF.png" alt="DMD Bookshelf Collection - DMD Indigo Vault Shelf – Matte Blue MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD StudioCore Display Shelf – Deep Blue MDF.png" alt="DMD Bookshelf Collection - DMD StudioCore Display Shelf – Deep Blue MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TerraGrid Storage Wall – Light Walnut MDF.png" alt="DMD Bookshelf Collection - DMD TerraGrid Storage Wall – Light Walnut MDF" />
-						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TwinVault Display Cabinet – Golden Maple MDF.png" alt="DMD Bookshelf Collection - DMD TwinVault Display Cabinet – Golden Maple MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Alto Cabinet Shelf - Espresso MDF.png" alt="DMD Bookshelf Collection - DMD Alto Cabinet Shelf – Espresso MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD ConceptStack Library Wall - Honey Ash MDF.png" alt="DMD Bookshelf Collection - DMD ConceptStack Library Wall – Honey Ash MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Elemental Archive Shelf - Warm Oak MDF.png" alt="DMD Bookshelf Collection - DMD Elemental Archive Shelf – Warm Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD GridForm Organizer - Natural Oak MDF.png" alt="DMD Bookshelf Collection - DMD GridForm Organizer – Natural Oak MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD Indigo Vault Shelf - Matte Blue MDF.png" alt="DMD Bookshelf Collection - DMD Indigo Vault Shelf – Matte Blue MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD StudioCore Display Shelf - Deep Blue MDF.png" alt="DMD Bookshelf Collection - DMD StudioCore Display Shelf – Deep Blue MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TerraGrid Storage Wall - Light Walnut MDF.png" alt="DMD Bookshelf Collection - DMD TerraGrid Storage Wall – Light Walnut MDF" />
+						<image src="/Images/Office/Storage and Organization/DMD Bookshelf Collection/DMD TwinVault Display Cabinet - Golden Maple MDF.png" alt="DMD Bookshelf Collection - DMD TwinVault Display Cabinet – Golden Maple MDF" />
                     </images>
                     <specifications>
                         <spec name="Width" value="30-36&quot; (Customizable)" />

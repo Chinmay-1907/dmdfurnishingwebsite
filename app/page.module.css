@@ -65,6 +65,15 @@
   animation: heroFade 28s infinite;
 }
 
+/* First slide is the static base layer: visible from first paint (it is the
+   page's LCP image — the old 1.4s fade-from-black delayed LCP). The later
+   slides crossfade ABOVE it in DOM order, and when the cycle wraps, slide 4
+   fades out to reveal this one again, so the rotation still reads correctly. */
+.heroImage:first-child {
+  animation: none;
+  opacity: 1;
+}
+
 .heroContent {
   position: relative;
   z-index: 1;
