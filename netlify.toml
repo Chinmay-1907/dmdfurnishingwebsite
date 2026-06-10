@@ -13,7 +13,7 @@
   status = 301
   force = false
 
-# Intermediate 2-segment and 3-segment category URLs are no longer valid routes
+# Intermediate 3-segment category URLs are no longer valid routes
 # (the old [...slug] page only handled 4-segment anyway). Redirect them up to the
 # closest place listing so any external links don't 404.
 [[redirects]]
@@ -22,9 +22,50 @@
   status = 301
   force = false
 
+# 2-segment: /products/{place}/{type} pages with >= 3 products are REAL routes
+# again (June 2026 mid-tier landing pages). force = false means this redirect
+# only fires for pairs below the gate, which fall back to the place listing.
+# Do not set force = true — it would shadow the live type pages.
 [[redirects]]
   from = "/products/:place/:ft"
   to = "/products/:place"
+  status = 301
+  force = false
+
+# Inspirations moved from numeric ids to descriptive slugs (June 2026).
+[[redirects]]
+  from = "/inspirations/1"
+  to = "/inspirations/modern-minimalist"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/inspirations/2"
+  to = "/inspirations/warm-hospitality"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/inspirations/3"
+  to = "/inspirations/classic-luxury"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/inspirations/4"
+  to = "/inspirations/resort-coastal"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/inspirations/5"
+  to = "/inspirations/executive-workplace"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/inspirations/6"
+  to = "/inspirations/multi-family-comfort"
   status = 301
   force = false
 

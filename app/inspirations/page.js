@@ -50,7 +50,7 @@ function buildSchema(inspirations) {
             '@type': 'CreativeWork',
             name: insp.title,
             description: insp.description,
-            url: `${siteUrl}/inspirations/${insp.id}`,
+            url: `${siteUrl}/inspirations/${insp.slug}`,
           },
         })),
       },
@@ -192,7 +192,7 @@ export default function InspirationsPage() {
                         <p className={styles.cardDesc}>{insp.description}</p>
                         <div className={styles.cardFooter}>
                           <Link
-                            href={`/inspirations/${insp.id}`}
+                            href={`/inspirations/${insp.slug}`}
                             className={styles.cardLink}
                           >
                             View Concept <span>&rarr;</span>

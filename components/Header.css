@@ -16,15 +16,18 @@
       glassmorphic panel appears, text reverts to the theme's primary color.
       :not(.menu-open) prevents this from applying inside the mobile drawer
       where the cream background makes off-white text invisible. ── */
-/* Subtle top scrim so the off-white nav text has real contrast over bright
-   hero photos (also satisfies WCAG contrast checks that blend to page bg).
+/* Solid translucent scrim so the off-white nav text has real contrast over
+   bright hero photos. Must stay a plain background-color (NOT a gradient):
+   axe/Lighthouse can't evaluate gradients and falls back to blending with the
+   white page background, failing the contrast audit. 0.62 black blended over
+   white computes to ~4.9:1 against #F3EFE6, which passes even that worst case.
    Excluded on light-hero pages and the 404, where nav text is dark. */
 .site-header:not(.compact):not(.menu-open):not(.light-hero-page) {
-  background: linear-gradient(to bottom, rgba(10, 10, 12, 0.62), rgba(10, 10, 12, 0.28) 72%, transparent);
+  background-color: rgba(10, 10, 12, 0.62);
 }
 
 :root.route-not-found .site-header:not(.compact):not(.menu-open) {
-  background: transparent;
+  background-color: transparent;
 }
 
 .site-header:not(.compact):not(.menu-open) .nav-links a,

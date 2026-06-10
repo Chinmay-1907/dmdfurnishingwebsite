@@ -84,7 +84,7 @@ export default function sitemap() {
 
   // --- Inspiration detail pages ---
   for (const insp of inspirations) {
-    entries.push({ url: `${baseUrl}/inspirations/${insp.id}`, lastModified: LAST_BUILD });
+    entries.push({ url: `${baseUrl}/inspirations/${insp.slug}`, lastModified: LAST_BUILD });
   }
 
   // --- Place listing pages (1 per place) ---

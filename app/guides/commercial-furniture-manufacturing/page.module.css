@@ -358,14 +358,16 @@
   border-bottom: none !important;
 }
 
+/* color needs !important: `.article a` outranks `.primaryBtn` (0-1-1 vs 0-1-0)
+   and would paint the button text with the in-article link color. */
 .primaryBtn {
   background: #C9A96E;
-  color: #0d0d10;
+  color: #0d0d10 !important;
 }
 
 .primaryBtn:hover {
   background: #e2c98e;
-  color: #0d0d10;
+  color: #0d0d10 !important;
 }
 
 .secondaryBtn {

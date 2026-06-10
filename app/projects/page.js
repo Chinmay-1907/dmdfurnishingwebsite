@@ -43,16 +43,14 @@ function buildSchema(projects) {
       {
         '@type': 'ItemList',
         name: 'DMD Furnishing Project Portfolio',
+        numberOfItems: projects.length,
+        // Google's carousel pattern: ListItem carries position + url only;
+        // the linked detail page owns the full entity markup.
         itemListElement: projects.map((p, i) => ({
           '@type': 'ListItem',
           position: i + 1,
-          item: {
-            '@type': 'Article',
-            name: p.name,
-            description: p.shortDescription,
-            url: `${siteUrl}/projects/${p.id}`,
-            image: p.mainImage?.startsWith('http') ? p.mainImage : `${siteUrl}${p.mainImage}`,
-          },
+          name: p.name,
+          url: `${siteUrl}/projects/${p.slug || p.id}`,
         })),
       },
     ],

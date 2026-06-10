@@ -64,6 +64,16 @@ const indexSchema = {
         'In-depth guides for commercial furniture buyers: hospitality FF&E procurement, contract durability standards, and value engineering.',
       isPartOf: { '@id': `${siteUrl}/#website` },
       about: { '@id': `${siteUrl}/#organization` },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: guides.length,
+        itemListElement: guides.map((g, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: g.title,
+          url: `${siteUrl}/guides/${g.slug}`,
+        })),
+      },
     },
     {
       '@type': 'BreadcrumbList',

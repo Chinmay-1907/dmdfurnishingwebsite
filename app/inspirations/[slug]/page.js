@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllInspirations, getInspirationById } from '../../../lib/inspirations';
+import { getAllInspirations, getInspirationBySlug } from '../../../lib/inspirations';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import styles from './page.module.css';
@@ -11,7 +11,7 @@ import styles from './page.module.css';
 // ---------------------------------------------------------------------------
 
 export function generateStaticParams() {
-  return getAllInspirations().map((insp) => ({ id: insp.id }));
+  return getAllInspirations().map((insp) => ({ slug: insp.slug }));
 }
 
 export const dynamicParams = false;
@@ -21,8 +21,8 @@ export const dynamicParams = false;
 // ---------------------------------------------------------------------------
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
-  const insp = getInspirationById(id);
+  const { slug } = await params;
+  const insp = getInspirationBySlug(slug);
 
   if (!insp) {
     return { title: 'Inspiration Not Found', robots: { index: false, follow: false } };
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   return generatePageMetadata({
     title: insp.title,
     description: insp.description,
-    path: `/inspirations/${insp.id}`,
+    path: `/inspirations/${insp.slug}`,
     image: insp.image,
     type: 'article',
   });
@@ -84,8 +84,8 @@ function buildSchema(insp, pageUrl) {
 // ---------------------------------------------------------------------------
 
 export default async function InspirationDetailPage({ params }) {
-  const { id } = await params;
-  const insp = getInspirationById(id);
+  const { slug } = await params;
+  const insp = getInspirationBySlug(slug);
 
   if (!insp) notFound();
 
@@ -96,7 +96,7 @@ export default async function InspirationDetailPage({ params }) {
   const prev = allInspirations[prevIndex];
   const next = allInspirations[nextIndex];
 
-  const pageUrl = `${siteUrl}/inspirations/${insp.id}`;
+  const pageUrl = `${siteUrl}/inspirations/${insp.slug}`;
   const schema = buildSchema(insp, pageUrl);
   const space = categoryToSpace[insp.category];
 
@@ -194,14 +194,14 @@ export default async function InspirationDetailPage({ params }) {
         {/* ── 6. Prev/Next Navigation ── */}
         {allInspirations.length > 1 && (
           <nav className={styles.nav} aria-label="Inspiration navigation">
-            <Link href={`/inspirations/${prev.id}`} className={styles.navCard}>
+            <Link href={`/inspirations/${prev.slug}`} className={styles.navCard}>
               <span className={styles.navArrow}>&larr;</span>
               <div className={styles.navInfo}>
                 <span className={styles.navLabel}>Previous</span>
                 <span className={styles.navName}>{prev.title}</span>
               </div>
             </Link>
-            <Link href={`/inspirations/${next.id}`} className={`${styles.navCard} ${styles.navCardNext}`}>
+            <Link href={`/inspirations/${next.slug}`} className={`${styles.navCard} ${styles.navCardNext}`}>
               <div className={styles.navInfo} style={{ textAlign: 'right' }}>
                 <span className={styles.navLabel}>Next</span>
                 <span className={styles.navName}>{next.title}</span>
