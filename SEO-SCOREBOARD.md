@@ -4,31 +4,37 @@ Goal: every category ≥95. Max 25 iterations. Baseline = iteration 0 (commit 83
 
 ## Lighthouse (mobile, prod build :3006) — Perf/SEO/A11y/BP per iteration
 
-| Page | I0 | I2 | I3 | I4 | I5 |
-|---|---|---|---|---|---|
-| home | 63/100/95/93 | 79/100/95/96 | 75/100/96/100 | 80/100/96/100 | **80/100/100/100** |
-| products | 69/100/95/96 | 90/100/95/100 | 90/100/100/100 | 82/100/100/100 | **91/100/100/100** |
-| place-hotel | err*/100/95/96 | 89/100/95/100 | 73/100/100/100 | 85/100/100/100 | **85/100/100/100** |
-| type-page (new I3) | — | — | 78/100/100/100 | 93/100/100/100 | **94/100/100/100** |
-| product-detail | 68/100/96/96 | 88/100/96/100 | 81/100/100/100 | 88/100/100/100 | **93/100/100/100** |
-| services | 73/100/97/96 | 88/100/97/100 | 93/100/97/100 | 90/100/97/100 | **93/100/100/100** |
-| about | 73/100/96/96 | 84/100/96/100 | 93/100/96/100 | 93/100/96/100 | **92/100/100/100** |
-| contact | 66/92/96/96 | 96/92†/96/100 | 96/100/100/100 | 92/100/100/100 | **96/100/100/100** |
-| blog | 74/100/96/96 | 87/100/96/100 | 95/100/100/100 | 95/100/100/100 | **95/100/100/100** |
-| blog-post | 66/100/96/96 | 86/100/96/100 | 75/100/100/100 | 94/100/100/100 | **81/100/100/100** |
-| guide | 71/100/96/96 | 83/100/96/100 | 93/100/96/100 | 89/100/100/100 | **94/100/100/100** |
-| projects | 73/100/96/96 | 94/100/96/100 | 71/100/96/100 | 94/100/96/100 | **94/100/100/100** |
-| inspirations | 68/100/96/96 | 90/100/96/100 | 81/100/100/100 | 93/100/100/100 | **94/100/100/100** |
+| Page | I0 | I2 | I3 | I4 | I5 | I6 | I7 |
+|---|---|---|---|---|---|---|---|
+| home | 63/100/95/93 | 79/100/95/96 | 75/100/96/100 | 80/100/96/100 | 80/100/100/100 | 80/100/100/100 | **80/100/100/100** |
+| products | 69/100/95/96 | 90/100/95/100 | 90/100/100/100 | 82/100/100/100 | 91/100/100/100 | 83/100/100/100 | **90/100/100/100** |
+| place-hotel | err*/100/95/96 | 89/100/95/100 | 73/100/100/100 | 85/100/100/100 | 85/100/100/100 | 82/100/100/100 | **90/100/100/100** |
+| type-page (new I3) | — | — | 78/100/100/100 | 93/100/100/100 | 94/100/100/100 | 83/100/100/100 | **93/100/100/100** |
+| product-detail | 68/100/96/96 | 88/100/96/100 | 81/100/100/100 | 88/100/100/100 | 93/100/100/100 | 92/100/100/100 | **93/100/100/100** |
+| services | 73/100/97/96 | 88/100/97/100 | 93/100/97/100 | 90/100/97/100 | 93/100/100/100 | 91/100/100/100 | **94/100/100/100** |
+| about | 73/100/96/96 | 84/100/96/100 | 93/100/96/100 | 93/100/96/100 | 92/100/100/100 | 77/100/100/100 | **92/100/100/100** |
+| contact | 66/92/96/96 | 96/92†/96/100 | 96/100/100/100 | 92/100/100/100 | 96/100/100/100 | 93/100/100/100 | **98/100/100/100** |
+| blog | 74/100/96/96 | 87/100/96/100 | 95/100/100/100 | 95/100/100/100 | 95/100/100/100 | 95/100/100/100 | **95/100/100/100** |
+| blog-post | 66/100/96/96 | 86/100/96/100 | 75/100/100/100 | 94/100/100/100 | 81/100/100/100 | 85/100/100/100 | **94/100/100/100** |
+| guide | 71/100/96/96 | 83/100/96/100 | 93/100/96/100 | 89/100/100/100 | 94/100/100/100 | 93/100/100/100 | **87/100/100/100** |
+| projects | 73/100/96/96 | 94/100/96/100 | 71/100/96/100 | 94/100/96/100 | 94/100/100/100 | 91/100/100/100 | **94/100/100/100** |
+| inspirations | 68/100/96/96 | 90/100/96/100 | 81/100/100/100 | 93/100/100/100 | 94/100/100/100 | 94/100/100/100 | **94/100/100/100** |
 
 I1 omitted (contaminated by concurrent agent builds — treat as floor). I3 perf
 partially contaminated by concurrent edits during the run; I4/I5 ran clean.
 
-**As of I5: SEO 100, A11y 100, Best Practices 100 on all 13 pages.**
-Perf 80–96; remaining gap is Lighthouse's simulated slow-4G LCP — observed
-(unthrottled) LCP is 0.3–1.5s on every page. Dominant simulated terms: RTT
-chains to render-blocking CSS (~30KB, already small) and hydration payload.
-Blog-post 94→81 between I4/I5 with no related change = local run noise (±8
-observed across the loop; same machine, throttled CPU).
+**As of I5 (held through I6/I7): SEO 100, A11y 100, Best Practices 100 on all
+13 pages.** Perf 80–98; remaining gap is Lighthouse's simulated slow-4G LCP —
+observed (unthrottled) LCP is 0.3–1.5s on every page. Dominant simulated
+terms: RTT chains to render-blocking CSS (~30KB, already small) and hydration
+payload. Run noise dominates the residual: about swung 92→77→92 and blog-post
+94→81→85→94 across I4–I7 with zero perf-affecting changes between runs (±8–15
+on the same machine). **Perf STALL logged per loop rule:** every code-level
+lever shipped (static orbs, optional fonts, LCP priorities, static first hero
+slide, en-dash 400s, critters tried+reverted); residual <95 on some pages is
+simulation floor + run variance, not an unaddressed regression. Home is the
+one consistent 80 — its simulated LCP is the full-bleed hero photo itself;
+shrinking it further means degrading the hero art, declined on design grounds.
 
 *place-hotel "err" = NO_LCP — root-caused in iteration 2: SpaceNav smooth-scrolled
 the tab strip on mount, suppressing Chrome's LCP reporting (fixed; hotel mobile 0→82).
@@ -125,3 +131,8 @@ short image card, photo follows specs scroll; static <960px); 14 raw
 Reviewed + consciously kept: gold left-border cards ×15, footer gold-foil
 gradient text ×9, header height transition ×4 (deliberate brand patterns;
 impeccable warnings, zero criticals).
+I7 re-audit confirms no regression: SEO/A11y/BP 100 ×13 held; perf 80–98
+(about 77→92, contact 93→98, blog-post 85→94 — variance, see note above;
+guide 93→87 same). Perf stall formally logged; loop's remaining open items
+are content-quality backlog (blog in-body/OG images, XML alt rewrites), not
+Lighthouse categories.
