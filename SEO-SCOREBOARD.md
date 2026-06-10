@@ -100,7 +100,28 @@ bug). Fonts display:swap→optional (killed font-swap CLS 0.133 on fast-painting
 pages). Tried+reverted optimizeCss/critters (no-op on app router).
 **Result: SEO/A11y/BP 100 on all 13 pages.**
 
-### Iteration 6 — in progress
+### Iteration 6 — 2026-06-10 (commit 5e2b4d0)
 Hero slide 1 static base layer (was 1.4s fade-from-black on the LCP image).
 ProductCard priority prop, first 3 cards eager on catalog/type pages
-(place-hotel LCP element = first card image, was lazy-loaded).
+(place-hotel LCP element = first card image, was lazy-loaded). Nine en-dash
+image filenames renamed (next/image optimizer 400s on non-ASCII paths) + XML
+refs rewritten + checker now fails on non-ASCII. I6 scores: perf 77–95,
+SEO/A11y/BP 100 ×13 (perf remainder = lantern simulation floor; observed LCP
+0.3–1.5s, TBT ≤226ms, CLS 0 — documented above).
+
+### Iteration 7 — 2026-06-10 (design-team pass)
+Full design-team review: rulebook 7 Rules, redesign SOP, anti-slop 27 greps,
+impeccable linter (31 warnings, 0 criticals — ship gate passes), critic
+scorecard pass over 6 pages × desktop/mobile screenshots + live checks
+(count-up stats, before/after slider, contact map all healthy; "blank" images
+in full-page captures = lazy-load capture timing, not bugs).
+Implemented: hero headline em-dash→period (anti-slop forbidden char); 2
+"Get Started" eyebrows → "Plan Your Project" / "Work With Us" (forbidden
+phrase); PDP gallery column position:sticky (killed dead whitespace under
+short image card, photo follows specs scroll; static <960px); 14 raw
+0.2s/200ms-ease transitions normalized to var(--transition-fast) brand token
+(the "uniform 200ms ease" AI-tell); CountUp respects prefers-reduced-motion
+(keeps SSR'd end value, skips reset-to-0).
+Reviewed + consciously kept: gold left-border cards ×15, footer gold-foil
+gradient text ×9, header height transition ×4 (deliberate brand patterns;
+impeccable warnings, zero criticals).

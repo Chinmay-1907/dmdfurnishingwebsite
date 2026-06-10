@@ -406,7 +406,7 @@
 .ctaContact a {
   color: rgba(244, 240, 230, 0.7);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .ctaContact a:hover {

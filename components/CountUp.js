@@ -13,6 +13,9 @@ export default function CountUp({ end, suffix = '', duration = 2000, className }
     const el = ref.current;
     if (!el) return;
 
+    // Reduced-motion users keep the SSR'd end value — no reset, no count-up
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     // On first client mount, reset to 0 so the animation has somewhere to count from
     if (!hasMounted.current) {
       hasMounted.current = true;

@@ -461,7 +461,7 @@ export default function ServicesPage() {
         {/* ── 6. CTA ── */}
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
-          <p className={styles.eyebrow}>Get Started</p>
+          <p className={styles.eyebrow}>Plan Your Project</p>
           <h2>Have a project in mind?</h2>
           <p className={styles.ctaLede}>
             Bring a room count and a target budget. Leave with a

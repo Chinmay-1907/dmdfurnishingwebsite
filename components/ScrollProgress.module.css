@@ -45,7 +45,7 @@
   cursor: pointer;
   mix-blend-mode: difference;
   color: var(--text-on-dark);
-  transition: transform 0.2s ease;
+  transition: transform var(--transition-fast);
 }
 
 .scrollCircleContainer:hover {

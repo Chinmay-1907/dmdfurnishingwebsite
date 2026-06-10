@@ -432,7 +432,7 @@
 .ctaContact a {
   color: rgba(244, 240, 230, 0.85);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .ctaContact a:hover {

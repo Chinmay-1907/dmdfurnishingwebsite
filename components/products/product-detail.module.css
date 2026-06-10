@@ -193,6 +193,13 @@
   align-items: start;
 }
 
+/* The gallery column is much shorter than the copy column; sticky keeps the
+   product photo in view (and kills the dead whitespace) while specs scroll. */
+.contentGrid > :first-child {
+  position: sticky;
+  top: calc(var(--header-height-compact, 75px) + 1.5rem);
+}
+
 .contentColumn {
   display: grid;
   gap: 1rem;
@@ -347,6 +354,10 @@
   .hero,
   .contentGrid {
     grid-template-columns: 1fr;
+  }
+
+  .contentGrid > :first-child {
+    position: static;
   }
 }
 

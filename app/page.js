@@ -190,7 +190,7 @@ export default function HomePage() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Custom Hospitality FF&amp;E · Built to Spec · Installed Nationwide</p>
-          <h1>Custom Hospitality Furniture &mdash; <span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
+          <h1>Custom Hospitality Furniture. <span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
           <p className={styles.heroTagline}>Custom FF&amp;E for Hotels, Restaurants &amp; Commercial Spaces</p>
           <p className={styles.lede} data-speakable="lede">
             Every piece built to your finish samples, hardware selections, and dimension drawings.<br />

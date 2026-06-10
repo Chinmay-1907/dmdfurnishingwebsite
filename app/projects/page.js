@@ -198,7 +198,7 @@ export default function ProjectsPage() {
         {/* ── 4. CTA ── */}
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
-          <p className={styles.eyebrow}>Get Started</p>
+          <p className={styles.eyebrow}>Work With Us</p>
           <h2>Bring Us Your Scope</h2>
           <p className={styles.ctaLede}>
             Bring a room or seat count and a target budget. Leave with a realistic price

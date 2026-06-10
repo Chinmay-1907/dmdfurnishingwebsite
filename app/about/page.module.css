@@ -374,7 +374,7 @@
 .faqItem {
   border-top: 1px solid var(--page-dark-border);
   border-left: 3px solid rgba(201, 169, 110, 0.2);
-  transition: border-color 0.2s ease;
+  transition: border-color var(--transition-fast);
 }
 
 .faqItem:last-child {
@@ -398,7 +398,7 @@
   cursor: pointer;
   list-style: none;
   user-select: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .faqQuestion::-webkit-details-marker {
@@ -486,7 +486,7 @@
   color: var(--page-dark-muted);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .ctaContact a:hover {
