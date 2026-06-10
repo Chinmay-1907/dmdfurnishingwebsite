@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -218,6 +219,20 @@ export default function HotelGuestroomChecklistPage() {
               <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>.
             </p>
 
+            <figure>
+              <Image
+                src="/Images/Tailored_Guestroom_Collections.jpg"
+                alt="Complete hotel guestroom furniture collection: bed with channel-stitched headboard, nightstand, dresser, desk, and lounge seating"
+                width={1408}
+                height={768}
+                sizes="(max-width: 760px) 100vw, 720px"
+              />
+              <figcaption>
+                A keyed room is a checklist made physical: every piece in this set is a separate
+                line item with its own spec sheet and lead time.
+              </figcaption>
+            </figure>
+
             <h2 id="bed-components">What Bed Components Belong in a Hotel Guestroom?</h2>
             <p>
               Every hotel bed breaks down into three separately specified FF&amp;E line items: the headboard, the bed frame, and the mattress foundation. Each carries its own manufacturer, lead time, and quality spec, and the headboard in particular is often the signature design element of the entire room. Order it early.
@@ -257,6 +272,20 @@ export default function HotelGuestroomChecklistPage() {
               substrate) with HPL or veneer faces, and commercial-grade hardware rated for
               heavy-cycle use.
             </p>
+
+            <figure>
+              <Image
+                src="/Images/Our_Products.jpg"
+                alt="Hotel suite casegoods with matched finishes: wardrobe, nightstand, TV media panel, and display shelving"
+                width={1408}
+                height={768}
+                sizes="(max-width: 760px) 100vw, 720px"
+              />
+              <figcaption>
+                Casegoods are the largest block on the checklist, and finishes must match across
+                every piece in the room.
+              </figcaption>
+            </figure>
 
             <h3>Night Stand</h3>
             <p>

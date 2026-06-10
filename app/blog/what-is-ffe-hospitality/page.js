@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -198,6 +199,20 @@ export default function WhatIsFFEPage() {
               wall or floor, it likely qualifies as FF&amp;E.
             </p>
 
+            <figure>
+              <Image
+                src="/Images/Hotel_Guest_Room_Hero.png"
+                alt="Hotel guestroom furnished with custom FF&E: upholstered headboard, casegoods, lounge seating, and decorative lighting"
+                width={2000}
+                height={1116}
+                sizes="(max-width: 760px) 100vw, 720px"
+              />
+              <figcaption>
+                A keyed guestroom is mostly FF&amp;E: the headboard, casegoods, seating, and
+                decorative lighting all arrive on the furniture budget, not the construction budget.
+              </figcaption>
+            </figure>
+
             <h2 id="what-is-included">What Is Included in FF&amp;E?</h2>
             <p>
               FF&amp;E includes guestroom casegoods, seating, tables, decorative lighting, window treatments, artwork, televisions, minibars, safes, and commercial kitchen or fitness equipment. Anything movable that the owner specifies and installs, as opposed to built by the general contractor, generally qualifies; each category is tracked as its own budget sub-line.
@@ -315,6 +330,20 @@ export default function WhatIsFFEPage() {
               long-term asset value of the property. It is not simply a design decision. It is a
               capital investment that performs for 7 to 12 years.
             </blockquote>
+
+            <figure>
+              <Image
+                src="/Images/Modern_Social_Lounges.jpg"
+                alt="Hotel lobby social lounge with commercial-grade modular seating and occasional tables"
+                width={1408}
+                height={768}
+                sizes="(max-width: 760px) 100vw, 720px"
+              />
+              <figcaption>
+                Public-area FF&amp;E like lobby lounge seating takes the hardest daily wear, so
+                specification quality shows here first.
+              </figcaption>
+            </figure>
             <p>
               From a commercial perspective, FF&amp;E also represents a substantial portion of a
               hotel development budget. Inadequate procurement planning, including late decisions, missed

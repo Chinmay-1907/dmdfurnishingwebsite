@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -180,6 +181,21 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             At the same time, the surface material is one of the most visible quality
             signals a guest perceives when they enter a room.
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Our_Projects.jpg"
+              alt="Hotel guestroom with light oak casegoods: wardrobe, dresser with mirror, and minibar unit"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Casegood surfaces dominate a guestroom's visual field: wardrobe, dresser, and minibar
+              fronts all read as one finish system, and the guest cannot tell from across the room
+              whether it is HPL, veneer, or solid wood.
+            </figcaption>
+          </figure>
           <p>
             Selecting the right surface is therefore both a durability decision and a
             brand positioning decision. Understanding how each of the three primary
@@ -391,6 +407,20 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             can sustain. The following guidance reflects how these materials are
             practically applied across the hospitality market:
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Tailored_Guestroom_Collections.jpg"
+              alt="Hotel guestroom casegoods with coordinated surface finishes across headboard, nightstand, and desk"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Whatever the tier, the rule holds: one surface system, specified once, applied
+              consistently across every casegood in the room.
+            </figcaption>
+          </figure>
 
           <h3>Economy and Limited-Service Hotels</h3>
           <p>

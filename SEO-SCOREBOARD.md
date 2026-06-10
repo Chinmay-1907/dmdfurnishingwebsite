@@ -136,3 +136,18 @@ I7 re-audit confirms no regression: SEO/A11y/BP 100 ×13 held; perf 80–98
 guide 93→87 same). Perf stall formally logged; loop's remaining open items
 are content-quality backlog (blog in-body/OG images, XML alt rewrites), not
 Lighthouse categories.
+
+### Iteration 8 — 2026-06-10 (blog in-body images)
+All 6 blog posts were text-only walls. Each now has 2 contextual figures
+from existing site photography (12 total): descriptive alts, captions that
+add information, real width/height (zero CLS), lazy below-fold. New
+figure/figcaption styles in blog CSS (figure = bordered card, both themes).
+Image checker 719 refs / 0 missing / 0 non-ascii. Addresses image-seo +
+content-quality backlog lines. Honesty pass: inspected every candidate image
+before writing alts — materials-macro.jpg is a showroom not a macro,
+services-hero.png duplicates Hotel_Guest_Room_Hero.png pixel-for-pixel,
+"Premium Collections" is seating not casegoods; slots reassigned, all 12
+alts/captions describe actual photo content. Remaining backlog: per-post OG images via
+sharp (needs art direction call), DMD_Website.xml / projects.xml alt-quality
+rewrites (586-product XML — bulk content task), project id/slug
+standardization, BlogPosting schema image arrays (nice-to-have).

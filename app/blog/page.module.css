@@ -359,6 +359,27 @@
   border: 1px solid rgba(201, 169, 110, 0.12);
 }
 
+/* Figure is the bordered card; the image inside loses its own border */
+.content figure {
+  overflow: hidden;
+}
+
+.content figure img {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+}
+
+.content figcaption {
+  padding: 0.65rem 1.1rem;
+  font-family: var(--font-sans, 'Source Sans 3', Arial, sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(244, 240, 230, 0.55);
+}
+
 /* Raw <table> inside article content — scrolls on mobile */
 .content table {
   width: 100%;
@@ -1377,6 +1398,14 @@ ul.tocList a:hover::before {
 :global([data-theme='light']) .content img,
 :global([data-theme='light']) .content figure {
   border: 1px solid rgba(20, 18, 14, 0.08);
+}
+
+:global([data-theme='light']) .content figure img {
+  border: none;
+}
+
+:global([data-theme='light']) .content figcaption {
+  color: rgba(20, 18, 14, 0.6);
 }
 
 /* Raw table */

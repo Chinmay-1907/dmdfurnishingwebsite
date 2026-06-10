@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -221,6 +222,20 @@ export default function ValueEngineeringCommercialFurniture() {
             breaks down each material in detail.
           </p>
 
+          <figure>
+            <Image
+              src="/Images/materials-macro.jpg"
+              alt="Commercial furniture showroom with seating collections in a range of upholstery grades and finishes"
+              width={1200}
+              height={1000}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Upholstery grade, frame species, and surface faces are the substitution levers:
+              invisible from across the room, decisive on the budget line.
+            </figcaption>
+          </figure>
+
           <h3>HPL (High-Pressure Laminate) as a Base Specification</h3>
           <p>
             HPL over an MDF carcass is the workhorse of commercial furniture. It resists
@@ -373,6 +388,20 @@ export default function ValueEngineeringCommercialFurniture() {
             development, rather than after the specification is fixed, produces better
             outcomes than unilateral cost-cutting by the procurement team.
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Our_Products.jpg"
+              alt="Hotel suite furnished with a full range of commercial furniture: bed, casegoods, lounge seating, and dining set"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Manufacturers see cost levers a spec sheet hides: standard sizes, existing tooling,
+              and material runs already in production.
+            </figcaption>
+          </figure>
           <p>
             A structured BOQ review with the manufacturer typically covers: material
             grade and source, construction method, hardware specification, finish

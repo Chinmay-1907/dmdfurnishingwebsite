@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -195,6 +196,21 @@ export default function RestaurantSeatingGuide() {
             environment. Vinyl is the easier maintenance choice for food-service settings where
             spills are frequent.
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Elevated_Restaurant_Seating.jpg"
+              alt="Restaurant dining room with upholstered booths and contract-grade dining chairs"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Booths anchor the perimeter while chairs keep the floor plan flexible, the most
+              common mixed-seating layout in full-service dining.
+            </figcaption>
+          </figure>
+
           <p>
             Booths work best along perimeter walls and in sectioned dining rooms where the layout
             does not need to flex. They are less suitable for event-capable spaces that need to be
@@ -331,6 +347,20 @@ export default function RestaurantSeatingGuide() {
             hardwoods are popular for premium outdoor aesthetics but require periodic oiling to
             maintain appearance.
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Outdoor.jpg"
+              alt="Outdoor restaurant patio seating specified for weather exposure"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Outdoor spec is its own discipline: UV-stable finishes, drainable cushions, and
+              frames that survive temperature cycling.
+            </figcaption>
+          </figure>
           <p>
             Seat surfaces for outdoor dining chairs and bar stools should be either all-weather
             woven (synthetic resin wicker), slatted wood, perforated metal, or solution-dyed

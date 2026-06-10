@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -189,6 +190,20 @@ export default function FFEProcurementTimeline() {
             <a href="https://www.cmaanet.org/" target="_blank" rel="noopener noreferrer">CMAA</a>{' '}
             (Construction Management Association of America).
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Premium Collections.jpg"
+              alt="Commercial furniture showroom with sofas, lounge chairs, dining sets, and bar seating on display"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Phase 1 locks the look: seating styles, finishes, and upholstery grades are selected
+              and documented in the Bill of Quantities before any vendor is engaged.
+            </figcaption>
+          </figure>
           <p>
             This phase includes space planning to confirm furniture sizes and clearances fit the
             floor plan, material selection for surfaces, frames, and upholstery, and finish
@@ -326,6 +341,20 @@ export default function FFEProcurementTimeline() {
             chaos of furniture for floors 10 through 15 blocking the lobby when only floors 1
             through 5 are ready.
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Our_Projects.jpg"
+              alt="Fully furnished hotel guestroom after FF&E installation: bed, sofa, casegoods, and minibar unit"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Phase 5 ends with installed, inspected rooms and a closed punch list, ready for the
+              property's opening schedule.
+            </figcaption>
+          </figure>
           <p>
             Installation itself requires coordination between the FF&amp;E installer, the
             general contractor, and the site superintendent. Flooring, painting, and millwork
