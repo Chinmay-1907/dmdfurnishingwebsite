@@ -22,8 +22,6 @@ export default function ProcessTimeline({ steps = [] }) {
     return () => window.removeEventListener('hashchange', syncToHash);
   }, [steps]);
 
-  const activeStep = steps[activeIndex];
-
   return (
     <div className={styles.timeline}>
       {/* Horizontal dot strip */}
@@ -40,7 +38,7 @@ export default function ProcessTimeline({ steps = [] }) {
               className={`${styles.step} ${isActive ? styles.stepActive : ''}`}
               onClick={() => setActiveIndex(index)}
               aria-selected={isActive}
-              aria-controls="process-step-detail"
+              aria-controls={`process-step-detail-${step.slug}`}
               tabIndex={isActive ? 0 : -1}
               style={{ scrollMarginTop: '120px' }}
             >
@@ -53,42 +51,47 @@ export default function ProcessTimeline({ steps = [] }) {
         })}
       </div>
 
-      {/* Always-open detail panel */}
-      {activeStep && (
-        <div
-          id="process-step-detail"
-          role="tabpanel"
-          className={styles.detail}
-          key={activeIndex}
-        >
-          <div className={styles.detailInner}>
-            <div className={styles.detailHeader}>
-              <span className={styles.detailNumber}>{activeStep.number}</span>
-              <h3 className={styles.detailTitle}>{activeStep.title}</h3>
-            </div>
-            <p className={styles.detailDesc}>{activeStep.description}</p>
-            {activeStep.bullets && activeStep.bullets.length > 0 && (
-              <ul className={styles.detailBullets}>
-                {activeStep.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            )}
-            {(activeStep.timeline || activeStep.deliverable) && (
-              <div className={styles.detailMeta}>
-                {activeStep.timeline && (
-                  <span className={styles.metaTag}>{activeStep.timeline}</span>
-                )}
-                {activeStep.deliverable && (
-                  <span className={styles.deliverable}>
-                    Deliverable: {activeStep.deliverable}
-                  </span>
-                )}
+      {/* Detail panels — ALL steps rendered in the DOM so crawlers and AI agents
+          can read every phase's description; inactive ones are CSS-hidden. */}
+      {steps.map((step, index) => {
+        const isActive = activeIndex === index;
+        return (
+          <div
+            key={step.number}
+            id={`process-step-detail-${step.slug}`}
+            role="tabpanel"
+            className={`${styles.detail} ${isActive ? styles.detailActive : ''}`}
+            hidden={!isActive}
+          >
+            <div className={styles.detailInner}>
+              <div className={styles.detailHeader}>
+                <span className={styles.detailNumber}>{step.number}</span>
+                <h3 className={styles.detailTitle}>{step.title}</h3>
               </div>
-            )}
+              <p className={styles.detailDesc}>{step.description}</p>
+              {step.bullets && step.bullets.length > 0 && (
+                <ul className={styles.detailBullets}>
+                  {step.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+              {(step.timeline || step.deliverable) && (
+                <div className={styles.detailMeta}>
+                  {step.timeline && (
+                    <span className={styles.metaTag}>{step.timeline}</span>
+                  )}
+                  {step.deliverable && (
+                    <span className={styles.deliverable}>
+                      Deliverable: {step.deliverable}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })}
 
     </div>
   );

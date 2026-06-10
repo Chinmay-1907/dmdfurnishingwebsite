@@ -130,30 +130,31 @@ export default function GuidesIndexPage() {
                 scheduling.
               </p>
             </section>
+          </article>
+
+          {/* Pillar guides as typographic cards (matches blog index card language) */}
+          <div className={styles.guideCardGrid}>
             {guides.map((guide) => (
-              <section key={guide.slug} style={{ marginBottom: '2.5rem' }}>
-                <h2 style={{ marginBottom: '0.75rem' }}>
-                  <Link href={`/guides/${guide.slug}`} style={{ borderBottom: 'none' }}>
-                    {guide.title}
-                  </Link>
+              <article key={guide.slug} className={styles.guideCard}>
+                <p className={styles.guideCardEyebrow}>Pillar Guide</p>
+                <h2 className={styles.guideCardTitle}>
+                  <Link href={`/guides/${guide.slug}`}>{guide.title}</Link>
                 </h2>
-                <p>{guide.lede}</p>
-                <p>
-                  <Link href={`/guides/${guide.slug}`}>Read the full guide →</Link>
-                </p>
-                <p style={{ marginBottom: '0.5rem' }}>
-                  <strong>Supporting articles:</strong>
-                </p>
-                <ul>
+                <p className={styles.guideCardLede}>{guide.lede}</p>
+                <p className={styles.guideCardLinksLabel}>Supporting articles</p>
+                <ul className={styles.guideCardLinks}>
                   {guide.posts.map((post) => (
                     <li key={post.slug}>
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </li>
                   ))}
                 </ul>
-              </section>
+                <Link href={`/guides/${guide.slug}`} className={styles.guideCardCta}>
+                  Read the full guide
+                </Link>
+              </article>
             ))}
-          </article>
+          </div>
         </div>
       </section>
     </main>

@@ -649,7 +649,7 @@
 		</furnitureType>
 		<furnitureType id="Guest Room" name="Guest Room" description="Guest Room for Hotel" image="/Images/Hotel/Guest Room/Guest Room.jpg">
 			<subcategory id="Head Board" name="Head Board" description="Head Board in Guest Room" image="/Images/Hotel/Guest Room/Head Board/Head Board.png">
-				<product id="Full XL MDF Head Board" name="Full XL Head Board" description="Full XL MDF headboard with durable edge-banded construction" image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
+				<product id="Full XL MDF Head Board" name="Full XL Head Board" description="Wall-mounted Full XL headboard panel built from edge-banded MDF with laminate or wood veneer facing, sized for the Full XL mattress programs common in select-service and extended-stay properties. The sealed, moisture-resistant face stands up to daily housekeeping contact, and concealed cleat mounting keeps the panel rigid against the wall. Finish patterns are matched to your brand prototype or designer sample, and width and height can be adjusted to suit connected wallguard runs or double-bedded room layouts." image="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" tags="full-xl,headboard">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Full XL Head Board/Full XL Head Board.png" alt="Full XL Head Board - Full XL Head Board" />
 					</images>
@@ -661,7 +661,7 @@
 						<spec name="Finish" value="Laminate/Veneer; Edge-banded MDF" />
 					</specifications>
 				</product>
-				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King MDF headboard unit with wallguard" image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" tags="king,headboard - MDF/Wood">
+				<product id="King MDF Headboard Unit" name="King MDF Headboard Unit" description="King headboard unit in edge-banded MDF with an integrated laminate wallguard, engineered for hotel guestrooms where the bed wall takes constant contact from pillows, luggage, and housekeeping carts. The wallguard extends the protected surface beyond the mattress line so painted walls stay unscuffed between renovation cycles. Laminate or veneer faces are color-matched to the casegoods package, and the unit installs on concealed mounting cleats with templated dimensions for fast, repeatable room-by-room fit-out." image="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" tags="king,headboard - MDF/Wood">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Driftmark.jpg" alt="King Head Board - DMD Driftmark"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/King MDF Headboard Unit/DMD Stratus.jpg" alt="King Head Board - DMD Stratus"/>
@@ -678,7 +678,7 @@
 						<spec name="Finish" value="Laminate/Veneer; Edge-banded MDF, color-match available" />
 					</specifications>
 					</product>
-				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="King upholstered headboard with integrated wallguard" image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD main.jpg" tags="king,headboard - Upholstered">
+				<product id="King Upholstered Headboard Unit" name="King Upholstered Headboard Unit" description="Upholstered king headboard with integrated wallguard, combining a padded face in fabric, polyurethane, or leather over commercial-grade foam with accent panels that protect the surrounding wall. Built on an engineered-wood frame sized for standard hotel king mattress programs, it delivers the soft, residential look guests expect in full-service and boutique properties while holding up to commercial cleaning. Upholstery is specified from contract-rated fabrics, and stitch patterns, panel divisions, and accent finishes follow your designer scheme." image="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD main.jpg" tags="king,headboard - Upholstered">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Aura.jpg" alt="King Head Board - King DMD Aura"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/King Upholstered Headboard Unit/King DMD Axis.jpg" alt="King Head Board - King DMD Axis"/>
@@ -698,7 +698,7 @@
 						<spec name="Finish" value="Fabric/PU/leather upholstery; stained/laminate accents" />
 					</specifications>
 				</product>
-				<product id="Queen Head Board" name="Queen Head Board" description="Queen headboard with optional upholstery and laminate/veneer finish" image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" tags="queen,head,board">
+				<product id="Queen Head Board" name="Queen Head Board" description="Queen headboard panel for hotel guestrooms, available as a clean laminate or veneer face or with an upholstered insert over commercial-grade foam. Built on an edge-banded MDF core that resists chipping and moisture at the edges where headboards fail first, it mounts on concealed wall cleats for a rigid, rattle-free installation. Widths follow standard queen mattress programs and can be extended for double-queen rooms, with finishes matched to the nightstands and casegoods in the same package." image="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" tags="queen,head,board">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Aura.jpg" alt="Queen Head Board - DMD Aura"/>
 						<image src="/Images/Hotel/Guest Room/Head Board/Queen Head Board/DMD Axis.jpg" alt="Queen Head Board - DMD Axis"/>
@@ -723,7 +723,7 @@
 				</product>
 			</subcategory>
 			<subcategory id="Night Stand" name="Night Stand" description="Night Stand in Guest Room" image="/Images/Hotel/Guest Room/Night Stand/Night Stand.jpg">
-				<product id="Double Drawer Night Stand" name="Double Drawer Night Stand" description="Two-drawer night stand with ample storage" image="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" tags="double,drawer,night,stand">
+				<product id="Double Drawer Night Stand" name="Double Drawer Night Stand" description="Two-drawer guestroom nightstand offering enclosed bedside storage for properties that favor a cleaner presentation. Both drawers run on full-extension, soft-close commercial slides, and the laminate or veneer carcass uses edge-banded, moisture-sealed construction that withstands nightly cleaning. Sized to standard hotel bed-wall dimensions and finished to match the room casegoods program, with hardware drawn from contract-rated lines. Designers can specify two-tone finishes, integrated power, or custom pulls to suit the brand standard." image="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" tags="double,drawer,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Double Drawer Night Stand/Double Drawer Night Stand.png" alt="Double Drawer Night Stand - Double Drawer Night Stand" />
 					</images>
@@ -735,7 +735,7 @@
 						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
-				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open shelf night stand for quick access" image="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" tags="open,shelf,night,stand">
+				<product id="Open Shelf Night Stand" name="Open Shelf Night Stand" description="Open-shelf nightstand built for hotels that want bedside storage guests can see and housekeeping can clean in seconds. The drawerless design removes the most common service failure point in guestroom casegoods, leaving a sealed laminate or veneer shell with an edge-banded shelf rated for daily use. A favored choice for select-service and extended-stay programs prioritizing durability and quick room turns, it matches DMD headboards and bed frames for a coordinated guestroom package." image="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" tags="open,shelf,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Night Stand.png" alt="Open Shelf Night Stand - Open Shelf Night Stand" />
 						<image src="/Images/Hotel/Guest Room/Night Stand/Open Shelf Night Stand/Open Shelf Floating Night Stand.png" alt="Open Shelf Night Stand - Open Shelf Night Stand" />
@@ -749,7 +749,7 @@
 						<spec name="Finish" value="Laminate/Veneer; Matte lacquer; Brushed metal hardware" />
 					</specifications>
 				</product>
-				<product id="Single Drawer Night Stand" name="Single Drawer Night Stand" description="Single-drawer night stand with lower shelf" image="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" tags="single,drawer,night,stand">
+				<product id="Single Drawer Night Stand" name="Single Drawer Night Stand" description="Guestroom nightstand with a single soft-close drawer and an open lower shelf, built on an edge-banded MDF or plywood carcass faced in laminate or veneer. The drawer runs on full-extension commercial slides rated for years of nightly use, and the open shelf keeps guest items visible at checkout. Compact dimensions suit standard bed-wall layouts, with finishes and brushed-metal hardware matched to the headboard and casegoods package, and tops available in scratch-resistant HPL." image="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" tags="single,drawer,night,stand">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand (2).png" alt="Single Drawer Night Stand - single drawer night stand (2)" />
 						<image src="/Images/Hotel/Guest Room/Night Stand/Single Drawer Night Stand/single drawer night stand.png" alt="Single Drawer Night Stand - single drawer night stand" />
@@ -765,7 +765,7 @@
 				</product>
 			</subcategory>
 			<subcategory id="Bed Frame" name="Bed Frame" description="Bed Frame in Guest Room" image="/Images/Hotel/Guest Room/Bed Frame/Bed Frame.jpg">
-				<product id="Full XL Bed Frame - Metal" name="Full XL Bed Frame - Metal" description="Full XL Bed Frame - Metal product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 2.png" tags="full,xl,bed,frame,metal">
+				<product id="Full XL Bed Frame - Metal" name="Full XL Bed Frame - Metal" description="Full XL steel platform frame sized for the mattress programs used in extended-stay, dormitory, and double-bedded hotel rooms. Welded construction with a powder-coated finish handles institutional use, and the platform supports the mattress directly with no box spring. Three platform heights cover low-profile looks, standard housekeeping clearance, and under-bed luggage storage. A practical workhorse for properties standardizing on Full XL across large room counts, shipped knock-down for efficient freight." image="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 2.png" tags="full,xl,bed,frame,metal">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 2.png" alt="Full XL Bed Frame - Metal - Bed Base Model 2" />
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Full XL Bed Frame - Metal/Bed Base Model 3.png" alt="Full XL Bed Frame - Metal - Bed Base Model 3" />
@@ -778,7 +778,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="King Bed Frame - Metal" name="King Bed Frame - Metal" description="King Bed Frame - Metal product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 3.png" tags="king,bed,frame,metal">
+				<product id="King Bed Frame - Metal" name="King Bed Frame - Metal" description="Welded steel platform bed frame for hotel king mattress programs, engineered to carry commercial loads night after night without squeaks or racking. The powder-coated frame is offered in three platform heights to suit low-profile designs, standard housekeeping clearance, or under-bed luggage storage, and it supports the mattress directly with no box spring required. Powder-coat color is specified to your standard, and frames ship knock-down for efficient freight and fast room-by-room assembly." image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 3.png" tags="king,bed,frame,metal">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 3.png" alt="King Bed Frame - Metal - Bed Base Model 3" />
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - Metal/Bed Base Model 2.png" alt="King Bed Frame - Metal - Bed Base Model 2" />
@@ -791,7 +791,7 @@
 						<spec name="Finish" value="Powder coating color - to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="King Bed Frame - MDF" name="King Bed Frame - MDF" description="King Bed Frame - MDF product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - MDF/DMD Axis.jpg" tags="king,bed,frame,mdf">
+				<product id="King Bed Frame - MDF" name="King Bed Frame - MDF" description="King platform bed frame in edge-banded MDF panel construction, finished in laminate or veneer to match the guestroom casegoods package. Panel sides conceal the under-bed zone for a clean, built-in look that designers favor in renovated rooms, while the engineered core carries commercial loads without flexing. Offered in multiple platform heights, with matte or gloss finish options and color-matching to your approved sample. Pairs with DMD headboard units and nightstands for a coordinated bed wall." image="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - MDF/DMD Axis.jpg" tags="king,bed,frame,mdf">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - MDF/DMD Axis.jpg" alt="King Bed Frame - MDF - DMD Axis" />
 						<image src="/Images/Hotel/Guest Room/Bed Frame/King Bed Frame - MDF/DMD Bloc.jpg" alt="King Bed Frame - MDF - DMD Bloc" />
@@ -809,7 +809,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Queen Bed Frame - Metal" name="Queen Bed Frame - Metal" description="Queen Bed Frame - Metal product for Bed Frame" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 3.png" tags="queen,bed,frame,metal">
+				<product id="Queen Bed Frame - Metal" name="Queen Bed Frame - Metal" description="Queen-size welded steel bed frame built for the nightly duty cycle of hotel and multi-family use. The platform design eliminates the box spring, holding the mattress on a rigid powder-coated frame offered in three heights for housekeeping clearance or under-bed storage. Steel construction shrugs off the vacuum and luggage impacts that loosen residential frames, and the powder-coat finish is color-matched to your specification. Ships knock-down with hardware packed per room for phased installations." image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 3.png" tags="queen,bed,frame,metal">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 3.png" alt="Queen Bed Frame - Metal - Bed Base Model 3" />
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - Metal/Bed Base Model 2.png" alt="Queen Bed Frame - Metal - Bed Base Model 2" />
@@ -822,7 +822,7 @@
 						<spec name="Finish" value="Powder coating color - to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Queen Bed Frame - MDF" name="Queen Bed Frame - MDF" description="Queen bed frame with durable MDF construction" image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" tags="queen,bed,frame,mdf">
+				<product id="Queen Bed Frame - MDF" name="Queen Bed Frame - MDF" description="Queen platform bed frame built from edge-banded MDF with laminate or veneer faces, designed to read as architectural millwork rather than exposed hardware. The panel construction hides the under-bed cavity, resists moisture at the sealed edges, and carries commercial mattress loads without a box spring. Multiple platform heights accommodate housekeeping or storage requirements, and finishes are color-matched to the room casegoods so the bed wall installs as one coordinated composition." image="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" tags="queen,bed,frame,mdf">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Axis.jpg" alt="Queen Bed Frame - MDF - DMD Axis" />
 						<image src="/Images/Hotel/Guest Room/Bed Frame/Queen Bed Frame - MDF/DMD Bloc.jpg" alt="Queen Bed Frame - MDF - DMD Bloc" />
@@ -930,7 +930,7 @@
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
 			<subcategory id="TV Media Panel" name="TV Media Panel" description="Guest room TV Media Panel for hospitality environments" image="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 1.png">
-				<product id="TV Media Panel 1" name="TV Media Panel 1" description="Durable guest room TV Media Panel with 2 color HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 1.png" tags="vanity,hotel,guest room,customizable">
+				<product id="TV Media Panel 1" name="TV Media Panel 1" description="Wall-mounted guestroom TV media panel faced in two-tone HPL, providing a finished backdrop for the television while routing cabling out of sight. The slim panel uses a plywood or MDF core with moisture-sealed, edge-banded perimeters, and mounts flush to the wall for housekeeping-friendly cleaning with no console required beneath. Two-color laminate layouts let designers carry an accent finish across the room, and widths scale from compact double-queen walls to full king elevations." image="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 1.png" tags="vanity,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color 2.png" alt="TV Media Panel 1" />
 						<image src="/Images/Hotel/Guest Room/TV Media Panel/TV Media Panel - 2 color.png" alt="TV Media Panel 2" />
@@ -948,7 +948,7 @@
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
 			<subcategory id="Amenity Tower" name="Amenity Tower" description="Guest room Amenity Tower for hospitality environments" image="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png">
-				<product id="Amenity Tower" name="Amenity Tower" description="Durable guest room Amenity Tower with HPL surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png" tags="Amenity Tower,hotel,guest room,customizable">
+				<product id="Amenity Tower" name="Amenity Tower" description="Vertical guestroom amenity tower combining open and closed storage for minibar, coffee station, luggage, and hanging space in one compact footprint. Built on a plywood or MDF carcass with an HPL working surface and edge-banded, moisture-sealed construction throughout, it consolidates functions that previously needed a dresser, closet, and console. A staple of modern select-service prototypes where guestroom square footage is tight, with heights, compartments, and finishes configured to your room design." image="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png" tags="Amenity Tower,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower.png" alt="Amenity Tower" />
 						<image src="/Images/Hotel/Guest Room/Amenity Tower/Amenity Tower - 2.png" alt="Amenity Tower" />
@@ -966,7 +966,7 @@
 			<!-- SEO related changes: ensure descriptive alt texts for product images and consistent naming.
 			     Next expand: include price/availability for richer Product schema and microdata. -->
 			<subcategory id="Luggage Bench" name="Luggage Bench" description="Guest room Luggage Bench for hospitality environments" image="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png">
-				<product id="Luggage Bench" name="Luggage Bench" description="Durable guest room Luggage Bench HPL Top surface. Custom sizes, finishes, and hardware available." image="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png" tags="Luggage Bench,hotel,guest room,customizable">
+				<product id="Luggage Bench" name="Luggage Bench" description="Guestroom luggage bench with a scratch-resistant HPL top that takes the daily impact of suitcases without showing wear. Built on a plywood or MDF base with moisture-sealed, edge-banded construction, it replaces folding luggage racks with a fixed piece that reads as furniture and survives like equipment. Bench height and width follow standard guestroom layouts, and the laminate finish is matched to the desk and casegoods so the room installs as one coordinated package." image="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png" tags="Luggage Bench,hotel,guest room,customizable">
 					<images>
 						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 1.png" alt="Luggage Bench" />
 						<image src="/Images/Hotel/Guest Room/Luggage Bench/Luggage Bench 2.png" alt="Luggage Bench" />
@@ -1482,7 +1482,7 @@
 	<place id="restaurant" name="Restaurant" description="Restaurant furniture collection" image="/Images/Restaurant/Restaurant.png">
 		<furnitureType id="Dining Area" name="Dining Area" description="Dining Area for Restaurant" image="/Images/Restaurant/Dining Area/Dinnig Area.jpg">
 			<subcategory id="Bar Stools" name="Bar Stools" description="Bar Stools in Dining Area" image="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png">
-				<product id="High Bar Stool" name="High Bar Stool" description="High Bar Stool product for Bar Stools" image="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png" tags="high,bar,stool">
+				<product id="High Bar Stool" name="High Bar Stool" description="Bar-height stool built for the hardest duty cycle in restaurant seating: constant mounting, dismounting, dragging, and footrest wear. Frames are welded steel or reinforced hardwood with a wear-plated footrest at the contact point where finishes fail first, and seats are specified in wood, polypropylene, or upholstered contract vinyl to match the front-of-house scheme. Sized for standard bar-height counters, with seat heights confirmed against your bar elevation before production so guests sit comfortably." image="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png" tags="high,bar,stool">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Bar Stools/High Bar Stool/high bar stool.png" alt="High Bar Stool - high bar stool" />
 					</images>
@@ -1520,7 +1520,7 @@
 				</product>
 			</subcategory>
 			<subcategory id="Booths" name="Booths" description="Booths in Dining Area" image="/Images/Restaurant/Dining Area/Booths/Corner Booth/corner booth.png">
-				<product id="Corner Booth" name="Corner Booth" description="Corner Booth product for Booths" image="/Images/Restaurant/Dining Area/Booths/Corner Booth/corner booth.png" tags="corner,booth">
+				<product id="Corner Booth" name="Corner Booth" description="L-shaped corner booth that converts dead corner square footage into high-demand seating. Built on a kiln-dried hardwood frame with reinforced corner construction, commercial-grade foam, and upholstery rated for public assembly, it follows your floor plan dimensions rather than forcing the plan around stock sizes. Corner units anchor dining room layouts in restaurants, cafés, and hotel dining outlets, and DMD fabricates them from measured drawings to the seat height and depth standards your operator specifies." image="/Images/Restaurant/Dining Area/Booths/Corner Booth/corner booth.png" tags="corner,booth">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Booths/Corner Booth/corner booth.png" alt="Corner Booth - corner booth" />
 					</images>
@@ -1532,7 +1532,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Double Booth" name="Double Booth" description="Double Booth product for Booths" image="/Images/Restaurant/Dining Area/Booths/Double Booth/double booth.png" tags="double,booth">
+				<product id="Double Booth" name="Double Booth" description="Double-sided restaurant booth serving two tables from one shared back, the most space-efficient seating format in commercial dining. The kiln-dried hardwood frame is engineered for slide-in use from both sides, with commercial high-density foam and public-assembly-rated upholstery that survives grease, wine, and daily sanitizing. Back height options balance privacy against sightlines, and dimensions are coordinated with the floor plan so aisle clearances and table reach work for servers and guests alike." image="/Images/Restaurant/Dining Area/Booths/Double Booth/double booth.png" tags="double,booth">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Booths/Double Booth/double booth.png" alt="Double Booth - double booth" />
 					</images>
@@ -1544,7 +1544,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Single Booth" name="Single Booth" description="Single Booth product for Booths" image="/Images/Restaurant/Dining Area/Booths/Single Booth/single booth.png" tags="single,booth">
+				<product id="Single Booth" name="Single Booth" description="Single-sided restaurant booth built on a kiln-dried hardwood frame with commercial-grade high-density foam and upholstery rated for public assembly use. Designed to run along walls and partitions where it maximizes covers per square foot, the booth takes spilled food, daily sanitizing, and constant slide-in seating without breaking down. Seat height, depth, and back angle are specified with the operator to suit the service style, and vinyl or polyurethane upholstery handles bleach-based cleaning protocols." image="/Images/Restaurant/Dining Area/Booths/Single Booth/single booth.png" tags="single,booth">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Booths/Single Booth/single booth.png" alt="Single Booth - single booth" />
 					</images>
@@ -1585,7 +1585,7 @@
 						<spec name="Finish" value="Custom-Built to Your Specifications" />
 					</specifications>
 				</product>
-				<product id="Wooden Chair" name="Wooden Chair" description="Wooden Chair product for Dining Chairs" image="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,chair">
+				<product id="Wooden Chair" name="Wooden Chair" description="Solid wood restaurant dining chair built with reinforced commercial joinery, using corner blocks and glued mortise joints rather than the stapled connections that fail in daily service. The hardwood frame takes continuous turnover, dragging, and stacking abuse while keeping the warm, classic look operators want in full-service dining rooms. Stain colors are matched to your interior scheme, and an upholstered seat pad in contract-grade vinyl or fabric can be added for comfort-led concepts." image="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" tags="wooden,chair">
 					<images>
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-BL001.png" alt="Wooden restaurant dining chair DC-BL001" />
 						<image src="/Images/Restaurant/Dining Area/Dining Chairs/Wooden Chair/DMD-DinningChair - DC-WOOD1.jpg" alt="Wooden restaurant dining chair DC-WOOD1" />

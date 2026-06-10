@@ -353,9 +353,11 @@
 
 /* ─── FAQ ──────────────────────────────────────────────────────────────── */
 
+/* Header + accordion share one centered 860px column so the section no longer
+   leaves ~25% dead space on the right of the 1120px container. */
 .faqHeader {
-  max-width: 44rem;
-  margin-bottom: 28px;
+  max-width: 860px;
+  margin: 0 auto 28px;
 }
 
 .faqHeader h2 {
@@ -366,6 +368,7 @@
 
 .faqList {
   max-width: 860px;
+  margin: 0 auto;
 }
 
 .faqItem {

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ProductGallery from './ProductGallery';
+import { getProductCopy } from '../../lib/product-copy';
 import styles from './product-detail.module.css';
 
 function buildGalleryImages(product) {
@@ -41,6 +42,10 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
 
   // Pre-fill the contact form with this product so the message lands ready to send.
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}#message`;
+
+  // Furniture-type-specific copy blocks (construction/materials + specification
+  // context) so the 174 detail pages stop rendering identical boilerplate.
+  const detailCopy = getProductCopy(primary);
 
   return (
     <main className={styles.page}>
@@ -117,23 +122,15 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
 
           <div className={styles.contentColumn}>
             <section className={styles.card}>
-              <p className={styles.cardLabel}>Product Summary</p>
-              <h2>Designed for commercial use</h2>
-              <p>
-                This piece sits within the {primarySubName.toLowerCase()} range for{' '}
-                {primaryPlaceName.toLowerCase()} environments. Use the listed specifications and
-                imagery as the starting point for material, finish, and dimensional discussions.
-              </p>
+              <p className={styles.cardLabel}>Construction &amp; Materials</p>
+              <h2>{detailCopy.materials.heading}</h2>
+              <p>{detailCopy.materials.body}</p>
             </section>
 
             <section className={styles.card}>
-              <p className={styles.cardLabel}>Project Support</p>
-              <h2>Need a variant or specification review?</h2>
-              <p>
-                DMD Furnishing can adapt dimensions, materials, finishes, and quantities to fit
-                your project scope. Reach out when you need help aligning this product with a room
-                package or property standard.
-              </p>
+              <p className={styles.cardLabel}>Specification Notes</p>
+              <h2>{detailCopy.specification.heading}</h2>
+              <p>{detailCopy.specification.body}</p>
               <Link href={quoteHref} className={styles.inlineLink}>
                 Talk to the team
               </Link>

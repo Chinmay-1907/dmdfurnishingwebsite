@@ -8,6 +8,7 @@ import styles from './catalog-new.module.css';
 export default function SpaceNav({ spaces, activeSpace, onSpaceChange }) {
   const scrollRef = useRef(null);
   const activeRef = useRef(null);
+  const mountedRef = useRef(false);
   const pathname = usePathname();
   // On place pages (/products/hotel etc.) tabs are real links so crawlers can
   // follow them. On /products they stay buttons driving the client-side filter.
@@ -18,7 +19,14 @@ export default function SpaceNav({ spaces, activeSpace, onSpaceChange }) {
       const container = scrollRef.current;
       const active = activeRef.current;
       const left = active.offsetLeft - container.offsetWidth / 2 + active.offsetWidth / 2;
-      container.scrollTo({ left, behavior: 'smooth' });
+      // Instant on mount: a smooth animated scroll here suppresses Chrome's
+      // LCP reporting for the whole page load. Smooth only on user-driven changes.
+      if (mountedRef.current) {
+        container.scrollTo({ left, behavior: 'smooth' });
+      } else {
+        container.scrollLeft = left;
+        mountedRef.current = true;
+      }
     }
   }, [activeSpace]);
 

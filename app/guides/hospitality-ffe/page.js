@@ -95,7 +95,7 @@ const pillarSchema = {
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.snippet-bait', '[data-speakable="true"]'],
+        cssSelector: ['[data-speakable]'],
       },
     },
     {
@@ -469,7 +469,7 @@ export default function HospitalityFfeGuide() {
               {faqs.map((faq) => (
                 <details key={faq.question} className={styles.faqItem}>
                   <summary className={styles.faqQuestion}>{faq.question}</summary>
-                  <p className={styles.faqAnswer}>{faq.answerJsx || faq.answer}</p>
+                  <p className={styles.faqAnswer} data-speakable="answer">{faq.answerJsx || faq.answer}</p>
                 </details>
               ))}
             </section>

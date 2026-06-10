@@ -429,7 +429,7 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>How We Work</p>
           <h2>Seven phases, each with a named deliverable.</h2>
           <p className={styles.sectionLede}>
-            TL;DR - intro call, scope and budget, 3D design, production in Foxboro or overseas, factory QC, phased install, punch list close out. Each phase below has a named deliverable so you always know what you are getting.
+            In short: intro call, scope and budget, 3D design, production in Foxboro or overseas, factory QC, phased install, punch list close out. Each phase below has a named deliverable so you always know what you are getting.
           </p>
           <ProcessTimeline steps={processSteps} />
         </section>

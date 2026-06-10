@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -73,6 +74,9 @@ export const metadata = {
 export const viewport = { width: 'device-width', initialScale: 1 };
 
 export default function RootLayout({ children }) {
+  // Plausible analytics activates only when NEXT_PUBLIC_PLAUSIBLE_DOMAIN is set.
+  const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+
   return (
     <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${sourceSans.variable}`}>
       <head>
@@ -82,6 +86,14 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
       </head>
       <body>
+        {plausibleDomain && (
+          <Script
+            defer
+            data-domain={plausibleDomain}
+            src="https://plausible.io/js/script.js"
+            strategy="afterInteractive"
+          />
+        )}
         <ThemeProvider>
           <WebVitals />
           <ScrollToTop />

@@ -50,7 +50,7 @@ const articleSchema = {
       author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+        cssSelector: ['[data-speakable]'],
       },
       publisher: {
         '@type': 'Organization',
@@ -158,7 +158,7 @@ export default function FFEProcurementTimeline() {
             manufacturing, QC, delivery, and install, typically spanning every phase from design
             through final project close out.
           </AnswerCallout>
-          <p className={styles.articleLead}>
+          <p className={styles.articleLead} data-speakable="lede">
             Lead times, approval cycles, and logistics coordination can make or break an opening
             date. Here is a realistic timeline for FF&amp;E procurement on a commercial hospitality
             project, with guidance on where delays most commonly occur.
@@ -414,7 +414,7 @@ export default function FFEProcurementTimeline() {
               <p className={styles.faqQuestion}>
                 How long does FF&amp;E procurement take for a hotel renovation?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 A full hotel renovation FF&amp;E procurement typically runs 16 to 24 weeks from
                 design completion to installation. Projects with highly custom items or international
                 sourcing should budget 24 weeks or more. Starting vendor engagement earlier than
@@ -426,7 +426,7 @@ export default function FFEProcurementTimeline() {
               <p className={styles.faqQuestion}>
                 What causes the most delays in FF&amp;E projects?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Late design decisions, slow internal approval cycles, and site not being ready for
                 furniture delivery are the three most common causes of schedule overruns. All three
                 are preventable with clear process discipline: freeze specs before ordering, set
@@ -439,7 +439,7 @@ export default function FFEProcurementTimeline() {
               <p className={styles.faqQuestion}>
                 When should I start FF&amp;E procurement relative to the construction schedule?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Begin the design and specification phase at least 24 weeks before your target
                 furniture installation date. If the construction schedule is 12 months, FF&amp;E
                 procurement should be underway by month three or four at the latest. Waiting until
@@ -452,7 +452,7 @@ export default function FFEProcurementTimeline() {
               <p className={styles.faqQuestion}>
                 Do I need a pre-shipment QC inspection for every FF&amp;E order?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Physical factory inspections are recommended for large orders, first-time vendors,
                 and highly custom items where finish or dimensional accuracy is critical. For
                 smaller reorders from a proven vendor, photographic QC documentation against an

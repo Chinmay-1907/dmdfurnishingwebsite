@@ -212,8 +212,8 @@ export default function HomePage() {
             <span className={styles.trustStatLabel}>Rooms Delivered and Installed</span>
           </div>
           <div className={styles.trustStat}>
-            <CountUp end={projects.length} suffix="+" className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Commercial FF&amp;E Projects</span>
+            <span className={styles.trustStatNumber}>Multi-State</span>
+            <span className={styles.trustStatLabel}>Full-Property Installs &mdash; FL &middot; ME &middot; MD &middot; MA</span>
           </div>
           <div className={styles.trustStat}>
             <CountUp end={places.length} className={styles.trustStatNumber} />

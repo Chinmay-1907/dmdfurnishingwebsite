@@ -52,7 +52,7 @@ const articleSchema = {
       author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+        cssSelector: ['[data-speakable]'],
       },
       publisher: {
         '@type': 'Organization',
@@ -160,7 +160,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             surface options for hotel casegoods, each trading cost, durability, authentic grain,
             and repairability differently.
           </AnswerCallout>
-          <p className={styles.articleLead}>
+          <p className={styles.articleLead} data-speakable="lede">
             The short answer: use HPL on high-traffic surfaces in economy and limited-service
             properties, introduce veneer accents at midscale and upscale tiers, and reserve
             solid wood for premium detail work in luxury and boutique hotels. The longer
@@ -480,7 +480,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 Is HPL suitable for luxury hotel casegoods?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 HPL is suitable for functional surfaces in luxury hotels (vanity tops,
                 desk writing surfaces, and secondary panel backs) where durability
                 matters more than natural material perception. On guest-facing visual
@@ -493,7 +493,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 Can wood veneer handle hotel bathroom moisture conditions?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Not reliably without additional protection. Standard veneer is susceptible
                 to delamination and raised grain in sustained moisture environments.
                 Bathroom vanity surfaces should be specified in HPL or a sealed stone
@@ -506,7 +506,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 What does "Laminate/Veneer; edge-banded MDF" mean in a furniture specification?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 This describes a mixed construction: the carcass is MDF (medium-density
                 fiberboard) for dimensional stability, edges are finished with banded
                 laminate for durability and a clean profile, and primary visual surfaces
@@ -520,7 +520,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 How does surface material affect hotel furniture lead times?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 HPL is the fastest: it is manufactured to consistent specifications and
                 stocked in standard finishes. Veneer adds lead time for species selection,
                 face matching, and panel sequencing. Solid wood has the longest lead time

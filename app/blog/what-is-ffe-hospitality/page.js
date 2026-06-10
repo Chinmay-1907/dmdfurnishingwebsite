@@ -49,7 +49,7 @@ const articleSchema = {
   author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
   speakable: {
     '@type': 'SpeakableSpecification',
-    cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+    cssSelector: ['[data-speakable]'],
   },
   publisher: {
     '@type': 'Organization',
@@ -114,7 +114,7 @@ const faqSchema = {
       name: 'How much of a hotel project budget goes to FF&E?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FF&E allocation varies considerably depending on property type, brand standards, and market segment. Budget is best established early with input from your FF&E consultant and manufacturer, since lead times and specification decisions directly affect overall project cost.',
+        text: 'FF&E typically represents 15 to 25 percent of total construction costs for a hospitality project, with the exact share varying by property type, brand standards, and market segment. Budget is best established early with input from your FF&E consultant and manufacturer, since lead times and specification decisions directly affect overall project cost.',
       },
     },
     {
@@ -156,7 +156,7 @@ export default function WhatIsFFEPage() {
               and fixtures that outfit a commercial hospitality building and are procured separately
               from the base construction.
             </AnswerCallout>
-            <p className={styles.articleLead}>
+            <p className={styles.articleLead} data-speakable="lede">
               FF&amp;E (Furniture, Fixtures &amp; Equipment) refers to every movable, non-structural
               element specified and installed during a hospitality fit-out. It covers the beds, seating,
               casegoods, light fixtures, and equipment that define a guest&rsquo;s physical experience,
@@ -424,7 +424,7 @@ export default function WhatIsFFEPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What does FF&amp;E stand for?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   FF&amp;E stands for Furniture, Fixtures &amp; Equipment. In construction and
                   hospitality development, it refers to movable items that are not permanently
                   attached to a building, including beds, chairs, desks, light fixtures, and
@@ -434,7 +434,7 @@ export default function WhatIsFFEPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What is the difference between FF&amp;E and OS&amp;E?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   FF&amp;E covers the large, durable furniture and equipment items (beds, desks,
                   seating, millwork). OS&amp;E: Operating Supplies &amp; Equipment covers smaller
                   consumable or operational items like linens, kitchenware, hangers, and guest
@@ -444,8 +444,9 @@ export default function WhatIsFFEPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>How much of a hotel project budget goes to FF&amp;E?</p>
-                <p className={styles.faqAnswer}>
-                  FF&amp;E allocation varies considerably depending on property type, brand standards,
+                <p className={styles.faqAnswer} data-speakable="answer">
+                  FF&amp;E typically represents 15 to 25 percent of total construction costs for a
+                  hospitality project, with the exact share varying by property type, brand standards,
                   and market segment. Budget is best established early with input from your FF&amp;E
                   consultant and manufacturer, since lead times and specification decisions directly
                   affect overall project cost.
@@ -454,7 +455,7 @@ export default function WhatIsFFEPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>When should FF&amp;E procurement begin on a hotel project?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   FF&amp;E procurement should begin early in the design development phase. Start
                   well before construction reaches finish-out. Custom commercial furniture typically
                   requires 10-16 weeks from approved shop drawings to delivery. Initiating

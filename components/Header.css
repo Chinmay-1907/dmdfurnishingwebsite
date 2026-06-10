@@ -425,6 +425,39 @@ body.body-no-scroll {
     width: 100%;
     text-align: center;
   }
+
+  /* Drawer CTA — same gold gradient pill as the desktop .consultation-button.
+     High-specificity selector + !important on color: the drawer link otherwise
+     inherits the .nav-links a / light-hero-page text rules (some !important),
+     which would leave it as plain menu text. */
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn {
+    justify-content: center;
+    min-height: 48px;
+    margin-bottom: 0;
+    padding: 12px 22px;
+    border-radius: 999px;
+    color: #1a1a1a !important;
+    background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+    background-size: 220% 220%;
+    background-position: 0% 50%;
+    font-size: 0.88rem;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(168, 50, 107, 0.22),
+                inset 0 1px 0 rgba(255, 240, 200, 0.25);
+    transition: background-position 600ms ease, box-shadow 380ms ease;
+  }
+
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn:hover,
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn:focus-visible,
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn.active {
+    color: #1a1a1a !important;
+    background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+    background-position: 100% 50%;
+    box-shadow: 0 10px 28px rgba(201, 169, 110, 0.3),
+                0 0 22px rgba(168, 50, 107, 0.28);
+  }
 }
 
 @media (max-width: 768px) {

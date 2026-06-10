@@ -49,7 +49,7 @@ const articleSchema = {
   author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
   speakable: {
     '@type': 'SpeakableSpecification',
-    cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+    cssSelector: ['[data-speakable]'],
   },
   publisher: {
     '@type': 'Organization',
@@ -156,7 +156,7 @@ export default function HotelGuestroomChecklistPage() {
               goods, lighting, and fixtures required to outfit one room at the brand standard, from
               the bed and headboard to the luggage bench and in room seating.
             </AnswerCallout>
-            <p className={styles.articleLead}>
+            <p className={styles.articleLead} data-speakable="lede">
               Every hotel guestroom requires a defined set of furniture pieces to meet brand
               standards, pass franchisor inspection, and deliver the guest experience the property
               promises. This checklist covers every major casegood, seating, and specialty piece,
@@ -411,7 +411,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What furniture is standard in a hotel guestroom?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   A standard hotel guestroom typically includes a bed frame, headboard, two
                   nightstands, a dresser or wardrobe, a desk with desk chair, a luggage bench,
                   and a TV media panel. Higher-tier properties may also include a lounge chair,
@@ -421,7 +421,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What is a hotel amenity tower?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   An amenity tower is a vertical storage unit typically located in the guestroom
                   or entry area. It houses the minibar, safe, and storage for guest belongings,
                   often integrated with the TV media panel or positioned as a standalone casegood.
@@ -431,7 +431,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What materials are used for hotel guestroom casegoods?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   Hotel guestroom casegoods are most commonly constructed from MDF or engineered
                   wood substrates with either HPL (High-Pressure Laminate) or wood veneer faces.
                   HPL offers excellent scratch resistance and consistent color at lower cost. Veneer
@@ -442,7 +442,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>How does a luggage bench differ from a luggage rack?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   A luggage bench is an upholstered, casegood-style piece that provides a firm,
                   padded surface for suitcases and doubles as seating at the foot of the bed. It
                   integrates with the room design and often includes built-in storage below. A

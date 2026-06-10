@@ -50,7 +50,7 @@ const articleSchema = {
       author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+        cssSelector: ['[data-speakable]'],
       },
       publisher: {
         '@type': 'Organization',
@@ -158,7 +158,7 @@ export default function RestaurantSeatingGuide() {
             banquette, each chosen for service model, table turnover rate, and ergonomic fit for
             the length of the meal.
           </AnswerCallout>
-          <p className={styles.articleLead}>
+          <p className={styles.articleLead} data-speakable="lede">
             Seating choice shapes dwell time, table density, and brand atmosphere. Here is a
             practical breakdown of when to specify booths, dining chairs, or bar stools, and how
             to mix them effectively across zones.
@@ -178,7 +178,7 @@ export default function RestaurantSeatingGuide() {
             </p>
           </div>
 
-          <h2>Booth Seating: Privacy, Comfort, and Space Efficiency</h2>
+          <h2>When Should a Restaurant Choose Booth Seating?</h2>
           <p>
             Booths are a defining element of casual dining, family restaurants, and diner-style
             concepts. Their enclosed form creates a sense of privacy that encourages guests to
@@ -201,7 +201,7 @@ export default function RestaurantSeatingGuide() {
             reconfigured, because booths are fixed to the floor or wall and cannot be moved.
           </p>
 
-          <h2>Dining Chairs: Versatility and Style Range</h2>
+          <h2>When Are Dining Chairs the Right Choice?</h2>
           <p>
             Dining chairs are the most versatile restaurant seating option. They can be rearranged
             to accommodate parties of different sizes, pushed against walls to open floor space for
@@ -234,7 +234,7 @@ export default function RestaurantSeatingGuide() {
             </Link>
           </div>
 
-          <h2>Bar Stools: Counter Service and High-Top Zones</h2>
+          <h2>When Should You Specify Bar Stools?</h2>
           <p>
             Bar stools define the energy of a counter or high-top zone. They draw guests closer
             to the action, whether that is an open kitchen, a full bar, or a window counter
@@ -256,7 +256,68 @@ export default function RestaurantSeatingGuide() {
             calls for guests to face the counter only or also turn to face the room.
           </p>
 
-          <h2>Outdoor Seating: Weather Resistance and Material Selection</h2>
+          <h2>Booth vs. Chair vs. Bar Stool: How Do the Three Compare?</h2>
+          <p>
+            The table below summarizes how the three core seating types trade off against each
+            other across the factors that matter most to operators: floor density, cost,
+            durability, and table-turnover speed.
+          </p>
+
+          <table className={styles.comparisonTable}>
+            <thead>
+              <tr>
+                {[
+                  'Seating type',
+                  'Capacity per sq ft',
+                  'Relative cost per seat',
+                  'Durability',
+                  'Table-turnover speed',
+                  'Best for',
+                ].map((h) => (
+                  <th key={h}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                [
+                  'Booth',
+                  'Highest — back-to-back rows eliminate aisle space behind seats',
+                  'Highest — custom frames, upholstery, and fixed installation',
+                  'Excellent with contract-grade vinyl and HPL caps',
+                  'Slowest — privacy encourages guests to linger',
+                  'Casual and family dining along perimeter walls',
+                ],
+                [
+                  'Dining chair',
+                  'Moderate — each seat needs pull-out clearance and aisle space',
+                  'Moderate — but higher replacement and maintenance over time',
+                  'Good to excellent, depending on frame material',
+                  'Moderate — standard full-service pacing',
+                  'Flexible main dining floors and event-capable spaces',
+                ],
+                [
+                  'Bar stool',
+                  'High — dense spacing at counters and high-tops',
+                  'Lowest — simpler frames, minimal upholstery',
+                  'Good — check footrail and swivel wear points',
+                  'Fastest — casual tempo drives quicker covers',
+                  'Bar counters, open kitchens, and window rails',
+                ],
+              ].map(([type, capacity, cost, durability, turnover, bestFor]) => (
+                <tr key={type}>
+                  <td>{type}</td>
+                  <td>{capacity}</td>
+                  <td>{cost}</td>
+                  <td>{durability}</td>
+                  <td>{turnover}</td>
+                  <td>{bestFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <h2>How Should You Specify Outdoor Restaurant Seating?</h2>
           <p>
             Patio and terrace dining introduces material requirements that differ significantly
             from interior seating. Every component (frame, seat surface, hardware) must
@@ -284,7 +345,7 @@ export default function RestaurantSeatingGuide() {
             wind and breakage risk.
           </p>
 
-          <h2>Space Planning: Aisle Width, Table Spacing, and ADA Compliance</h2>
+          <h2>How Do You Plan Aisle Width, Table Spacing, and ADA Compliance?</h2>
           <p>
             Restaurant layout directly affects revenue per square foot, guest comfort, and code
             compliance. The{' '}
@@ -311,7 +372,7 @@ export default function RestaurantSeatingGuide() {
             nature of the business.
           </p>
 
-          <h2>Material Durability for High-Traffic Environments</h2>
+          <h2>Which Materials Hold Up in High-Traffic Environments?</h2>
           <p>
             Commercial restaurant seating takes significantly more abuse than residential furniture.
             A busy restaurant may turn a seat 300 to 400 times per week. Specifying
@@ -344,7 +405,7 @@ export default function RestaurantSeatingGuide() {
             </li>
           </ul>
 
-          <h2>Mix-and-Match Zone Strategies</h2>
+          <h2>How Do You Mix Seating Types Across Dining Zones?</h2>
           <p>
             Most successful full-service restaurants use multiple seating types organized into
             distinct zones rather than a single seating type throughout. A common configuration
@@ -396,7 +457,7 @@ export default function RestaurantSeatingGuide() {
               <p className={styles.faqQuestion}>
                 How do I decide between booths and dining chairs for a new restaurant?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Start with your concept and layout flexibility needs. If your floor plan is fixed
                 and the concept is casual or family dining, booths along perimeter walls maximize
                 comfort and density. If you need to reconfigure for events or private dining, dining
@@ -408,7 +469,7 @@ export default function RestaurantSeatingGuide() {
               <p className={styles.faqQuestion}>
                 What seat height should I specify for bar stools?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Match the stool height to the counter or bar surface: counter-height stools with
                 24 to 26-inch seat heights pair with 34 to 36-inch counters, while bar-height
                 stools with 28 to 30-inch seat heights pair with 40 to 42-inch bar tops. Always
@@ -420,7 +481,7 @@ export default function RestaurantSeatingGuide() {
               <p className={styles.faqQuestion}>
                 What materials hold up best for outdoor restaurant seating?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Powder-coated aluminum frames with all-weather woven seats or perforated metal
                 surfaces are the most durable and lowest-maintenance option for outdoor commercial
                 seating. Avoid standard interior upholstery outdoors; it degrades quickly under
@@ -433,7 +494,7 @@ export default function RestaurantSeatingGuide() {
               <p className={styles.faqQuestion}>
                 How many seats can I fit per square foot in a restaurant?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 A common benchmark for casual dining is 15 to 18 square feet of total dining
                 room area per seat, which accounts for table space, chair clearance, and
                 circulation aisles. Fine dining concepts typically allocate more space per seat.

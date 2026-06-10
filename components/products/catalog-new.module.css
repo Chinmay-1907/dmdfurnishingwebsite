@@ -502,6 +502,15 @@
   overflow: hidden;
 }
 
+/* Belt-and-braces: every image inside the tile fills the square and crops
+   (covers) rather than letterboxing, even if a future image is rendered
+   without the .productImage class or next/image's fill inline styles. */
+.productImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .productImage {
   object-fit: cover;
   transition: opacity 350ms ease;

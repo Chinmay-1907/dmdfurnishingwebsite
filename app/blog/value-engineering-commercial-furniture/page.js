@@ -50,7 +50,7 @@ const articleSchema = {
       author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+        cssSelector: ['[data-speakable]'],
       },
       publisher: {
         '@type': 'Organization',
@@ -158,7 +158,7 @@ export default function ValueEngineeringCommercialFurniture() {
             specifications to cut cost while preserving the guest facing look, feel, and
             commercial-grade durability of every piece.
           </AnswerCallout>
-          <p className={styles.articleLead}>
+          <p className={styles.articleLead} data-speakable="lede">
             Value engineering in commercial furniture means systematically reviewing material
             choices, construction methods, and specifications to reduce cost while preserving
             the performance, safety, and aesthetic standards the project demands. Done
@@ -411,7 +411,7 @@ export default function ValueEngineeringCommercialFurniture() {
               <p className={styles.faqQuestion}>
                 What is the difference between value engineering and cost-cutting in furniture?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Value engineering is a structured review that matches specification to
                 actual performance requirements, eliminating cost where it does not add
                 function or perceived value. Cost-cutting is indiscriminate reduction.
@@ -424,7 +424,7 @@ export default function ValueEngineeringCommercialFurniture() {
               <p className={styles.faqQuestion}>
                 When in a project is value engineering most effective?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 VE delivers the most options when introduced at design development, before
                 shop drawings are issued. At that stage, material substitutions, construction
                 changes, and dimension adjustments can be made without disrupting approvals
@@ -437,7 +437,7 @@ export default function ValueEngineeringCommercialFurniture() {
               <p className={styles.faqQuestion}>
                 Can HPL replace veneer in hotel casegoods without guests noticing?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 In many applications, yes. Modern HPL prints credibly replicate wood
                 grain on horizontal surfaces and secondary panels. The substitution is
                 most detectable on large vertical surfaces at close range. A targeted
@@ -450,7 +450,7 @@ export default function ValueEngineeringCommercialFurniture() {
               <p className={styles.faqQuestion}>
                 Does value engineering affect furniture warranties?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 It depends on what is changed. Substituting materials with equivalent or
                 higher performance ratings typically preserves warranty coverage. Replacing
                 specified structural components with lower-rated alternatives may void

@@ -101,7 +101,8 @@ export default function BlogIndexPage() {
             <h2 className={styles.cardTitle}>{post.title}</h2>
             <p className={styles.cardExcerpt}>{post.excerpt}</p>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px' }}>
-              <span className={styles.cardReadMore}>Read article →</span>
+              {/* Arrow comes from .cardReadMore::after (animated on hover) — no text arrow */}
+              <span className={styles.cardReadMore}>Read article</span>
               <time className={styles.blogCardReadTime} dateTime={post.isoDate}>{post.date}</time>
             </div>
           </Link>
