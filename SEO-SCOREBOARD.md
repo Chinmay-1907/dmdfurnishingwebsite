@@ -188,3 +188,21 @@ GSC grant, Plausible env, Bing token, IndexNow webhook, DataForSEO, GBP,
 Wikidata, named founder Person, aggregateRating (no real reviews). Backlog
 (content builds): 5 vertical spokes, comparison/RFP pages, type-page content
 blocks, PDP prose de-dup, WebP source re-encode, sticky TOC.
+
+### Iteration 11 - 2026-06-10 (5 vertical spoke articles via marketing team)
+Closed the audit's biggest content gap (item 11 + 21-adjacent): 5 vertical
+spoke articles written by cmo-writer-blog agents, gated by routing-enforcer
+(ROUTE_OK) and cmo-qa (scored panel). New posts: office-furniture-commercial-
+projects, healthcare-furniture-guide, student-housing-furniture-guide,
+multifamily-ffe-guide, hotel-lobby-furniture-guide (each ~1.7-2k words,
+answer-first H2s, TOC, FAQ + FAQPage schema matching visible text, soft CTA).
+QA round 1: 2 pass (91.1/91.2), 3 hard-stop rejects fixed surgically (office
+H8 CTA label + 9-10wk positioning inversion + 2 P6 trims; healthcare H5
+unsupported compliance claim cut in 3 spots; lobby H5 catalog claim cut +
+og/meta description aligned + CTA moved to house position). All pass post-fix.
+Cluster loop now bidirectional for all 7 verticals: placeRelatedGuides leads
+with each new spoke; every spoke links its hub 2-3x. Imagery = 15 visible
+ImagePromptBox slots (new component) with paste-ready SOTA prompts, collected
+in IMAGE-PROMPTS.md for external generation (CEO + image model; Codex cannot
+make images). Build clean 245 pages (was 240), leak gate pass, 11 spot-checks
+pass on rendered build.
