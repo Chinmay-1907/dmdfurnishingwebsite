@@ -52,3 +52,7 @@ copy-review/
 ruvector.db
 .playwright-mcp/
 .git-commit-msg.txt
+
+agentdb.rvf
+agentdb.rvf.lock
+.git-commit-msg.txt
