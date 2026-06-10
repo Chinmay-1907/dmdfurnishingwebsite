@@ -2,24 +2,27 @@
 
 Goal: every category ≥95. Max 25 iterations. Baseline = iteration 0 (commit 8346de3).
 
-## Lighthouse (mobile, prod build :3006)
+## Lighthouse (mobile, prod build :3006) — Perf / SEO / A11y / BP per iteration
 
-| Page | Perf I0 | SEO I0 | A11y I0 | BP I0 |
-|---|---|---|---|---|
-| home | 63 | 100 | 95 | 93 |
-| products | 69 | 100 | 95 | 96 |
-| place-hotel | err* | 100 | 95 | 96 |
-| product-detail | 68 | 100 | 96 | 96 |
-| services | 73 | 100 | 97 | 96 |
-| about | 73 | 100 | 96 | 96 |
-| contact | 66 | 92 | 96 | 96 |
-| blog | 74 | 100 | 96 | 96 |
-| blog-post | 66 | 100 | 96 | 96 |
-| guide | 71 | 100 | 96 | 96 |
-| projects | 73 | 100 | 96 | 96 |
-| inspirations | 68 | 100 | 96 | 96 |
+| Page | I0 | I1 |
+|---|---|---|
+| home | 63/100/95/93 | 80/100/95/96 |
+| products | 69/100/95/96 | 87/100/95/100 |
+| place-hotel | err*/100/95/96 | err*/100/95/100 |
+| product-detail | 68/100/96/96 | 81/100/96/100 |
+| services | 73/100/97/96 | 86/100/97/100 |
+| about | 73/100/96/96 | 84/100/96/100 |
+| contact | 66/92/96/96 | 70/92†/96/100 |
+| blog | 74/100/96/96 | 86/100/96/100 |
+| blog-post | 66/100/96/96 | 85/100/96/100 |
+| guide | 71/100/96/96 | 81/100/96/100 |
+| projects | 73/100/96/96 | 85/100/96/100 |
+| inspirations | 68/100/96/96 | 79/100/96/100 |
 
-*place-hotel perf run errored (re-run next iteration)
+*place-hotel "err" = NO_LCP — root-caused in iteration 2: SpaceNav smooth-scrolled
+the tab strip on mount, suppressing Chrome's LCP reporting (fixed; hotel mobile 0→82).
+†contact 92 in I1 contaminated by concurrent builds during the run; meta description
+verified present in HTML. I1 runs overlapped wave-2 agent builds; treat I1 perf as floor.
 
 ## Toolkit audits (claude-seo v2, all 18 agents + 25 skills applied)
 

@@ -307,6 +307,17 @@ export default async function ProductsDispatchPage({ params }) {
   }
   const placeIndex = [...typeMap.entries()].map(([typeName, items]) => ({ typeName, items }));
 
+  // Mid-tier type pages that exist for this place (same >= 3 gate as the route)
+  const typePages = place.furnitureTypes
+    .map((ft) => ({
+      slug: ft.slug,
+      count: ft.subcategories.reduce((n, s) => n + s.products.length, 0),
+      title: /-/.test(ft.name)
+        ? ft.slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+        : ft.name,
+    }))
+    .filter((tp) => tp.count >= 3);
+
   return (
     <>
       <script
@@ -331,6 +342,24 @@ export default async function ProductsDispatchPage({ params }) {
         }
       />
       <CategoryContentBlock placeName={place.name} content={content} />
+
+      {/* Mid-tier furniture-type landing pages for this place (>= 3 products each) */}
+      {typePages.length > 0 && (
+        <section className={styles.crawlIndex} aria-label={`${place.name} furniture by type`}>
+          <div className={styles.crawlIndexInner}>
+            <h2>Browse {place.name.toLowerCase()} furniture by type</h2>
+            <ul className={styles.crawlLinks}>
+              {typePages.map((tp) => (
+                <li key={tp.slug}>
+                  <Link href={`/products/${place.slug}/${tp.slug}`}>
+                    {tp.title} ({tp.count})
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Server-rendered crawlable index of every product in this place */}
       <section className={styles.crawlIndex} aria-label={`Full ${place.name} product index`}>

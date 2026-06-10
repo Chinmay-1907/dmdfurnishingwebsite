@@ -241,9 +241,10 @@ export default function HomePage() {
             >
               <Image
                 src={place.image}
-                alt={place.name}
+                alt=""
                 fill
                 sizes={index === 0 ? '(max-width: 800px) 100vw, 66vw' : '(max-width: 800px) 100vw, 33vw'}
+                style={{ objectFit: 'cover' }}
               />
               <div className={styles.productCardOverlay} />
               <div className={styles.productCardBody}>

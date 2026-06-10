@@ -96,6 +96,20 @@ export default function sitemap() {
     });
   }
 
+  // --- Furniture-type mid-tier pages (only pairs with >= 3 products) ---
+  for (const place of places) {
+    for (const ft of place.furnitureTypes) {
+      const count = ft.subcategories.reduce((n, s) => n + s.products.length, 0);
+      if (count >= 3) {
+        entries.push({
+          url: `${baseUrl}/products/${place.slug}/${ft.slug}`,
+          lastModified: LAST_BUILD,
+          images: ft.image ? [abs(ft.image)] : undefined,
+        });
+      }
+    }
+  }
+
   // --- Flat product detail pages (1 per unique product) ---
   for (const product of products) {
     entries.push({

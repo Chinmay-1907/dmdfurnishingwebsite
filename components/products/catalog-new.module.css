@@ -810,6 +810,10 @@
 :global([data-theme='light']) .heroStat span {
   color: var(--text-secondary);
 }
+/* Gold on white fails WCAG 4.5:1 at this size — darker gold in light theme */
+:global([data-theme='light']) .heroStat strong {
+  color: #8a6a2f;
+}
 
 /* ── Space Nav strip ── */
 :global([data-theme='light']) .spaceNav {

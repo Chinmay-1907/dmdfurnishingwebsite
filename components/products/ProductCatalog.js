@@ -191,6 +191,8 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
         />
 
         <div className={styles.gridArea}>
+          {/* h1 lives in the hero; product card names are h3 — this keeps heading order sequential */}
+          <h2 className="sr-only">Product results</h2>
           <div className={styles.toolbar}>
             <div className={styles.toolbarLeft}>
               <button

@@ -69,6 +69,15 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     if (hash === '#message') setActiveTab('message');
 
     const params = new URLSearchParams(window.location.search);
+    // ?category= prefill is read client-side; reading searchParams on the
+    // server forced the whole route dynamic and pushed metadata into <body>.
+    const categoryParam = params.get('category');
+    if (categoryParam && PROJECT_CATEGORIES.some((c) => c.id === categoryParam)) {
+      setFormData((current) => (
+        current.projectCategory ? current : { ...current, projectCategory: categoryParam }
+      ));
+    }
+
     const productParam = params.get('product');
     if (productParam) {
       const productName = productParam.trim();

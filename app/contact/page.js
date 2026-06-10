@@ -49,9 +49,7 @@ const contactSchema = {
   ],
 };
 
-export default async function ContactRoute({ searchParams }) {
-  const params = await searchParams;
-
+export default function ContactRoute() {
   /* To enable Calendly, set NEXT_PUBLIC_CALENDLY_URL in your .env.local
      e.g. NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/your-name/30min */
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || '';
@@ -61,7 +59,6 @@ export default async function ContactRoute({ searchParams }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
       <ContactPage
-        initialCategory={params?.category || ''}
         recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || process.env.REACT_APP_RECAPTCHA_SITE_KEY || ''}
         calendlyUrl={calendlyUrl}
       />

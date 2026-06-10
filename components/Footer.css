@@ -1,12 +1,12 @@
-/* ═══════════════════════════════════════════════════════════════════
-   DMD Furnishing — Site Footer
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   DMD Furnishing â€” Site Footer
    Aesthetic: Editorial Luxury (soft-skill / high-end agency)
    Dark base by default. Light-theme overrides at bottom.
    Gradient language mirrors the homepage CTA:
      linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%)
-   ═══════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Shell ── */
+/* â”€â”€ Shell â”€â”€ */
 .site-footer {
   background: #0f1116;
   color: #e7e9ed;
@@ -14,13 +14,13 @@
   position: relative;
 }
 
-/* ── Container ── */
+/* â”€â”€ Container â”€â”€ */
 .site-footer .footer-container {
   width: min(1200px, 92vw);
   margin: 0 auto;
 }
 
-/* ── Brand block ── */
+/* â”€â”€ Brand block â”€â”€ */
 .footer-brand {
   padding: 32px 0 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -44,7 +44,7 @@
   font-weight: 500;
   line-height: 1.12;
   margin-bottom: 16px;
-  /* Warm gold→white gradient — premium brand anchor */
+  /* Warm goldâ†’white gradient â€” premium brand anchor */
   background: linear-gradient(135deg, #f9f9fb 0%, #d7b676 60%, #c9a96e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -60,7 +60,7 @@
   margin: 0;
 }
 
-/* ── CTA strip ── */
+/* â”€â”€ CTA strip â”€â”€ */
 .footer-cta-strip {
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   text-decoration: none;
-  /* Dark text on gradient — meets WCAG AA on this gradient */
+  /* Dark text on gradient â€” meets WCAG AA on this gradient */
   color: #1a1008;
   background: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
   padding: 9px 20px 9px 18px;
@@ -121,7 +121,7 @@
   transform: translate(1px, -1px);
 }
 
-/* ── Nav columns ── */
+/* â”€â”€ Nav columns â”€â”€ */
 .footer-top {
   padding: 24px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -183,12 +183,12 @@
   outline: none;
 }
 
-/* ── Bottom bar ── */
+/* â”€â”€ Bottom bar â”€â”€ */
 .footer-bottom {
   padding-top: 18px;
 }
 
-/* Gold hairline divider — replaces generic white ::before */
+/* Gold hairline divider â€” replaces generic white ::before */
 .footer-bottom-divider {
   height: 1px;
   background: linear-gradient(
@@ -214,7 +214,7 @@
   font-family: var(--font-sans);
   font-size: 0.82rem;
   letter-spacing: 0.04em;
-  color: rgba(231, 233, 237, 0.42);
+  color: rgba(231, 233, 237, 0.65);
   margin: 0;
 }
 
@@ -222,7 +222,7 @@
   font-family: var(--font-sans);
   font-size: 0.82rem;
   letter-spacing: 0.04em;
-  color: rgba(231, 233, 237, 0.42);
+  color: rgba(231, 233, 237, 0.65);
   text-decoration: none;
   transition: color 180ms cubic-bezier(0.33, 1, 0.68, 1);
 }
@@ -233,7 +233,7 @@
   outline: none;
 }
 
-/* ── Social icons ── */
+/* â”€â”€ Social icons â”€â”€ */
 .social-links {
   display: inline-flex;
   gap: 10px;
@@ -259,7 +259,7 @@
 
 .social-icon:hover,
 .social-icon:focus-visible {
-  /* Gold→rose gradient fill on hover */
+  /* Goldâ†’rose gradient fill on hover */
   background: linear-gradient(125deg, #c9a96e 0%, #a8326b 100%);
   border-color: transparent;
   color: #ffffff;
@@ -267,7 +267,7 @@
   outline: none;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 992px) {
   .footer-brand {
     padding: 56px 0 40px;
@@ -306,15 +306,15 @@
   }
 }
 
-/* ══════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    Light theme overrides
-   The footer stays intentionally DARK in light mode — it functions as
+   The footer stays intentionally DARK in light mode â€” it functions as
    a contrast anchor at the bottom of the page (dark-on-light contrast).
    Only token references that would otherwise break are patched here.
-   ══════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 :root[data-theme='light'] .site-footer {
-  /* Keep the dark shell — intentional design choice */
+  /* Keep the dark shell â€” intentional design choice */
   background: #0f1116;
   color: #e7e9ed;
 }
@@ -325,7 +325,7 @@
   color: #d7b676;
 }
 
-/* Brand title: gradient stays — dark bg supports it fine */
+/* Brand title: gradient stays â€” dark bg supports it fine */
 :root[data-theme='light'] .footer-brand-title {
   background: linear-gradient(135deg, #f9f9fb 0%, #d7b676 60%, #c9a96e 100%);
   -webkit-background-clip: text;
