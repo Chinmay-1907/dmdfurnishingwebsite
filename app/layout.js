@@ -17,17 +17,23 @@ import {
 // Weights trimmed to what the CSS actually uses (audit 2026-06):
 // Playfair 400 had a single user (.pullQuote, remapped to 500);
 // Source Sans 300 only styled FAQ "+" glyphs (remapped to 400).
+// display: 'optional' (not 'swap'): both fonts are self-hosted and preloaded,
+// so they normally win the race against first paint. When they lose (cold
+// cache, slow network), 'swap' repainted the page mid-load — that reflow was
+// the recurring 0.13 CLS on fast-painting pages and re-triggered LCP. With
+// 'optional' the metric-adjusted fallback simply keeps the page for that
+// visit; the brand font appears from cache on the next navigation.
 const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['500', '600', '700'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-serif',
 });
 
 const sourceSans = Source_Sans_3({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-sans',
 });
 
