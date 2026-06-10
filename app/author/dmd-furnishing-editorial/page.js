@@ -41,7 +41,7 @@ const articles = [
 const editorialTeamSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': `${siteUrl}/author/dmd-furnishing-editorial#person`,
+  '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team`,
   name: 'DMD Furnishing Editorial Team',
   url: `${siteUrl}/author/dmd-furnishing-editorial`,
   description:
@@ -62,6 +62,7 @@ const editorialTeamSchema = {
     'commercial fire safety standards',
   ],
   sameAs: ['https://www.linkedin.com/company/dmd-usaa/'],
+  parentOrganization: { '@id': `${siteUrl}/#organization` },
 };
 
 const profilePageSchema = {
@@ -74,7 +75,7 @@ const profilePageSchema = {
   dateModified: '2026-06-10',
   description:
     'Profile of the DMD Furnishing editorial team. Hospitality FF&E specialists and commercial furniture manufacturing authors.',
-  mainEntity: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+  mainEntity: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
   isPartOf: { '@id': `${siteUrl}/#website` },
   breadcrumb: {
     '@type': 'BreadcrumbList',

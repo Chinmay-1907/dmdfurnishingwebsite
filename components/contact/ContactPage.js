@@ -467,7 +467,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                     </div>
 
                     <p className="cp-schedule-note">
-                      <FaClock /> Mon to Fri 9 AM to 6 PM ET &nbsp;|&nbsp; Sat to Sun 10 AM to 4 PM ET (by appointment)
+                      <FaClock /> Mon to Fri 9 AM to 6 PM ET (showroom visits by appointment)
                     </p>
                   </div>
                 )}
@@ -605,7 +605,16 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 <div className="cp-info-icon"><FaMapMarkerAlt /></div>
                 <div>
                   <strong>Address</strong>
-                  <p>56 Leonard St Unit 5<br />Foxboro, MA 02035</p>
+                  <p>
+                    56 Leonard St Unit 5<br />Foxboro, MA 02035<br />
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=56+Leonard+St+Unit+5,+Foxboro,+MA+02035"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get directions
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="cp-info-item">
@@ -626,7 +635,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 <div className="cp-info-icon"><FaClock /></div>
                 <div>
                   <strong>Showroom Hours</strong>
-                  <p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: 10:00 AM - 4:00 PM<br /><em>(By Appointment Only)</em></p>
+                  <p>Mon - Fri: 9:00 AM - 6:00 PM<br /><em>(By Appointment Only)</em></p>
                 </div>
               </div>
             </div>

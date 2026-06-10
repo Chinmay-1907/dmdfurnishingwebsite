@@ -50,7 +50,13 @@ function Footer() {
               <address style={{ fontStyle: 'normal' }}>
                 <ul>
                   <li className="footer-address-line">
-                    56 Leonard St Unit 5<br />Foxboro, MA 02035
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=56+Leonard+St+Unit+5,+Foxboro,+MA+02035"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      56 Leonard St Unit 5<br />Foxboro, MA 02035
+                    </a>
                   </li>
                   <li><a href="tel:+16172237781">+1 (617) 223-7781</a></li>
                   <li><a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a></li>

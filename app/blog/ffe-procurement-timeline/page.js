@@ -9,23 +9,24 @@ import styles from '../page.module.css';
 export const metadata = {
   title: 'FF&E Procurement Timeline for Hotels',
   description:
-    'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
+    'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus practical tips for avoiding costly delays.',
   alternates: {
-    canonical: 'https://dmdfurnishing.com/blog/ffe-procurement-timeline',
+    canonical: `${siteUrl}/blog/ffe-procurement-timeline`,
   },
   openGraph: {
     title: 'FF&E Procurement Timeline for Hotels | DMD Furnishing',
     description:
-      'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
-    url: 'https://dmdfurnishing.com/blog/ffe-procurement-timeline',
+      'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus practical tips for avoiding costly delays.',
+    url: `${siteUrl}/blog/ffe-procurement-timeline`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-25',
     modifiedTime: '2026-04-02',
     authors: ['DMD Furnishing Editorial Team'],
     images: [
       {
-        url: 'https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg',
+        url: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
         width: 1200,
         height: 630,
       },
@@ -35,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'FF&E Procurement Timeline for Hotels | DMD Furnishing',
     description:
-      'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus tips on avoiding delays.',
+      'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus practical tips for avoiding costly delays.',
   },
 };
 
@@ -46,22 +47,16 @@ const articleSchema = {
       '@type': 'BlogPosting',
       '@id': `${siteUrl}/blog/ffe-procurement-timeline#article`,
       headline: 'FF&E Procurement Timeline: What to Expect from Concept to Install',
+      description:
+        'A realistic FF&E procurement timeline covering five phases from design and spec to delivery and installation, plus practical tips for avoiding costly delays.',
       datePublished: '2026-03-25',
       dateModified: '2026-04-02',
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['[data-speakable]'],
       },
-      publisher: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-        },
-      },
+      publisher: { '@id': `${siteUrl}/#organization` },
       mainEntityOfPage: `${siteUrl}/blog/ffe-procurement-timeline`,
       image: [
         `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
@@ -183,7 +178,20 @@ export default function FFEProcurementTimeline() {
             </p>
           </div>
 
-          <h2>Phase 1: Design and Specification (Weeks 1-4)</h2>
+          <nav className={styles.toc} aria-label="Table of contents">
+            <p className={styles.tocTitle}>In This Article</p>
+            <ol className={styles.tocList}>
+              <li><a href="#phase-1">Phase 1: Design and Specification</a></li>
+              <li><a href="#phase-2">Phase 2: Bidding and Vendor Selection</a></li>
+              <li><a href="#phase-3">Phase 3: Manufacturing and Production</a></li>
+              <li><a href="#phase-4">Phase 4: Quality Control and Shipping</a></li>
+              <li><a href="#phase-5">Phase 5: Delivery and Installation</a></li>
+              <li><a href="#staying-on-schedule">Tips for Staying on Schedule</a></li>
+              <li><a href="#common-delays">Common Delays and How to Avoid Them</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="phase-1">Phase 1: Design and Specification (Weeks 1-4)</h2>
           <p>
             The procurement process begins before any vendor is contacted. The design team
             (whether an interior designer, FF&amp;E consultant, or owner&apos;s representative)
@@ -227,7 +235,7 @@ export default function FFEProcurementTimeline() {
             <li>Identify long-lead items that may require early ordering</li>
           </ul>
 
-          <h2>Phase 2: Bidding and Vendor Selection (Weeks 4-8)</h2>
+          <h2 id="phase-2">Phase 2: Bidding and Vendor Selection (Weeks 4-8)</h2>
           <p>
             With a complete BOQ in hand, the procurement team issues a Request for Quotation
             (RFQ) to qualified furniture vendors. A well-run RFQ process gives vendors 10 to
@@ -262,7 +270,7 @@ export default function FFEProcurementTimeline() {
             </Link>
           </div>
 
-          <h2>Phase 3: Manufacturing and Production (Weeks 8-18)</h2>
+          <h2 id="phase-3">Phase 3: Manufacturing and Production (Weeks 8-18)</h2>
           <p>
             Once purchase orders are issued and deposits paid, manufacturing begins. Lead times
             vary considerably based on product type, level of customization, and the vendor&apos;s
@@ -297,7 +305,7 @@ export default function FFEProcurementTimeline() {
             delivery.
           </p>
 
-          <h2>Phase 4: Quality Control and Shipping (Weeks 18-20)</h2>
+          <h2 id="phase-4">Phase 4: Quality Control and Shipping (Weeks 18-20)</h2>
           <p>
             Pre-shipment quality control (QC) inspection is the last opportunity to catch defects,
             finish inconsistencies, or dimensional errors before furniture leaves the factory. For
@@ -332,7 +340,7 @@ export default function FFEProcurementTimeline() {
             </li>
           </ul>
 
-          <h2>Phase 5: Delivery and Installation (Weeks 20-24)</h2>
+          <h2 id="phase-5">Phase 5: Delivery and Installation (Weeks 20-24)</h2>
           <p>
             Delivery coordination is often the most logistically complex phase of FF&amp;E
             procurement. On large hospitality projects, furniture arrival is typically phased by
@@ -371,7 +379,7 @@ export default function FFEProcurementTimeline() {
             procurement contract and triggers the warranty period for commercial items.
           </p>
 
-          <h2>Tips for Staying on Schedule</h2>
+          <h2 id="staying-on-schedule">Tips for Staying on Schedule</h2>
           <ul>
             <li>
               <strong>Engage vendors early.</strong> Issue RFQs before the BOQ is fully finalized
@@ -401,7 +409,7 @@ export default function FFEProcurementTimeline() {
             </li>
           </ul>
 
-          <h2>Common Delays and How to Avoid Them</h2>
+          <h2 id="common-delays">Common Delays and How to Avoid Them</h2>
           <p>
             The most frequent causes of FF&amp;E schedule overruns in commercial hospitality
             projects are:

@@ -46,6 +46,22 @@ export async function generateMetadata({ params }) {
 // Schema
 // ---------------------------------------------------------------------------
 
+// projects.xml stores completionDate as display text ("June 2022", "2024").
+// Schema.org needs ISO 8601, so map month-year to YYYY-MM and pass years through.
+const MONTH_NUM = {
+  january: '01', february: '02', march: '03', april: '04', may: '05', june: '06',
+  july: '07', august: '08', september: '09', october: '10', november: '11', december: '12',
+};
+
+function toIsoDate(text) {
+  if (!text) return undefined;
+  const t = String(text).trim();
+  if (/^\d{4}(-\d{2}){0,2}$/.test(t)) return t;
+  const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(t);
+  if (m && MONTH_NUM[m[1].toLowerCase()]) return `${m[2]}-${MONTH_NUM[m[1].toLowerCase()]}`;
+  return undefined;
+}
+
 function buildSchema(project, pageUrl) {
   const imageUrl = project.mainImage?.startsWith('http')
     ? project.mainImage
@@ -67,7 +83,12 @@ function buildSchema(project, pageUrl) {
       description: project.shortDescription || project.fullDescription || '',
       image: imageUrl,
       url: pageUrl,
-      ...(project.completionDate ? { datePublished: project.completionDate } : {}),
+      ...(toIsoDate(project.completionDate)
+        ? {
+            datePublished: toIsoDate(project.completionDate),
+            dateModified: toIsoDate(project.completionDate),
+          }
+        : {}),
       author: { '@id': `${siteUrl}/#organization` },
       publisher: { '@type': 'Organization', name: 'DMD Furnishing', '@id': `${siteUrl}/#organization` },
       about: { '@type': 'LocalBusiness', '@id': `${siteUrl}/#localbusiness` },

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './CategoryContentBlock.module.css';
 
 /**
@@ -12,15 +13,16 @@ import styles from './CategoryContentBlock.module.css';
  * compete with the CatalogHero. It sits after the catalog and reads as
  * supporting educational content for AI search and buyer research.
  */
-export default function CategoryContentBlock({ placeName, content }) {
-  if (!content) return null;
+export default function CategoryContentBlock({ placeName, content, relatedGuides }) {
+  if (!content && !(Array.isArray(relatedGuides) && relatedGuides.length > 0)) return null;
 
-  const { buyingGuide, materials, faqs } = content;
+  const { buyingGuide, materials, faqs } = content || {};
   const hasGuide = Array.isArray(buyingGuide) && buyingGuide.length > 0;
   const hasMaterials = typeof materials === 'string' && materials.trim().length > 0;
   const hasFaqs = Array.isArray(faqs) && faqs.length > 0;
+  const hasRelated = Array.isArray(relatedGuides) && relatedGuides.length > 0;
 
-  if (!hasGuide && !hasMaterials && !hasFaqs) return null;
+  if (!hasGuide && !hasMaterials && !hasFaqs && !hasRelated) return null;
 
   return (
     <section
@@ -78,6 +80,23 @@ export default function CategoryContentBlock({ placeName, content }) {
                 </details>
               ))}
             </div>
+          </div>
+        )}
+
+        {hasRelated && (
+          <div className={styles.section}>
+            <p className={styles.eyebrow}>Related Guides</p>
+            <h2 className={styles.title}>Plan Your {placeName} Project</h2>
+            <ul className={styles.guideGrid}>
+              {relatedGuides.map((guide) => (
+                <li key={guide.href}>
+                  <Link href={guide.href} className={styles.relatedLink} prefetch={false}>
+                    <span className={styles.guideTitle}>{guide.title}</span>
+                    <p className={styles.guideText}>{guide.blurb}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>

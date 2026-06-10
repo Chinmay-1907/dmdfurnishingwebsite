@@ -9,23 +9,24 @@ import styles from '../page.module.css';
 export const metadata = {
   title: 'Restaurant Seating Guide',
   description:
-    'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, material durability, and zone strategies.',
+    'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, durability by material, zone strategies, and code compliance basics.',
   alternates: {
-    canonical: 'https://dmdfurnishing.com/blog/restaurant-seating-guide',
+    canonical: `${siteUrl}/blog/restaurant-seating-guide`,
   },
   openGraph: {
     title: 'Restaurant Seating Guide | DMD Furnishing',
     description:
-      'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, material durability, and zone strategies.',
-    url: 'https://dmdfurnishing.com/blog/restaurant-seating-guide',
+      'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, durability by material, zone strategies, and code compliance basics.',
+    url: `${siteUrl}/blog/restaurant-seating-guide`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-20',
     modifiedTime: '2026-03-31',
     authors: ['DMD Furnishing Editorial Team'],
     images: [
       {
-        url: 'https://dmdfurnishing.com/Images/Elevated_Restaurant_Seating.jpg',
+        url: `${siteUrl}/Images/Elevated_Restaurant_Seating.jpg`,
         width: 1200,
         height: 630,
       },
@@ -35,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Restaurant Seating Guide | DMD Furnishing',
     description:
-      'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, material durability, and zone strategies.',
+      'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, durability by material, zone strategies, and code compliance basics.',
   },
 };
 
@@ -46,22 +47,16 @@ const articleSchema = {
       '@type': 'BlogPosting',
       '@id': `${siteUrl}/blog/restaurant-seating-guide#article`,
       headline: 'Restaurant Seating Guide: Booth, Chair, or Bar Stool?',
+      description:
+        'When to specify booths, dining chairs, or bar stools for your restaurant: space planning, durability by material, zone strategies, and code compliance basics.',
       datePublished: '2026-03-20',
       dateModified: '2026-03-31',
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['[data-speakable]'],
       },
-      publisher: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-        },
-      },
+      publisher: { '@id': `${siteUrl}/#organization` },
       mainEntityOfPage: `${siteUrl}/blog/restaurant-seating-guide`,
       image: [
         `${siteUrl}/Images/Elevated_Restaurant_Seating.jpg`,
@@ -182,7 +177,21 @@ export default function RestaurantSeatingGuide() {
             </p>
           </div>
 
-          <h2>When Should a Restaurant Choose Booth Seating?</h2>
+          <nav className={styles.toc} aria-label="Table of contents">
+            <p className={styles.tocTitle}>In This Article</p>
+            <ol className={styles.tocList}>
+              <li><a href="#booth-seating">When Should a Restaurant Choose Booth Seating?</a></li>
+              <li><a href="#dining-chairs">When Are Dining Chairs the Right Choice?</a></li>
+              <li><a href="#bar-stools">When Should You Specify Bar Stools?</a></li>
+              <li><a href="#comparison">Booth vs. Chair vs. Bar Stool Compared</a></li>
+              <li><a href="#outdoor-seating">Specifying Outdoor Restaurant Seating</a></li>
+              <li><a href="#space-planning">Aisle Width, Table Spacing, and ADA</a></li>
+              <li><a href="#materials">Materials for High-Traffic Environments</a></li>
+              <li><a href="#mixing-zones">Mixing Seating Types Across Zones</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="booth-seating">When Should a Restaurant Choose Booth Seating?</h2>
           <p>
             Booths are a defining element of casual dining, family restaurants, and diner-style
             concepts. Their enclosed form creates a sense of privacy that encourages guests to
@@ -195,8 +204,9 @@ export default function RestaurantSeatingGuide() {
             Commercially, booths are typically built with a solid wood or plywood frame, upholstered
             seat and back panels, and a laminate or HPL-faced side and top cap. The upholstery
             grade matters significantly for durability: contract-grade vinyl or commercial fabric
-            rated for 100,000+ double rubs will outlast consumer-grade materials in a high-turn
-            environment. Vinyl is the easier maintenance choice for food-service settings where
+            rated for 100,000+ double rubs (Wyzenbeek abrasion test, per the Association for
+            Contract Textiles heavy-duty guideline) will outlast consumer-grade materials in a
+            high-turn environment. Vinyl is the easier maintenance choice for food-service settings where
             spills are frequent.
           </p>
 
@@ -220,7 +230,7 @@ export default function RestaurantSeatingGuide() {
             reconfigured, because booths are fixed to the floor or wall and cannot be moved.
           </p>
 
-          <h2>When Are Dining Chairs the Right Choice?</h2>
+          <h2 id="dining-chairs">When Are Dining Chairs the Right Choice?</h2>
           <p>
             Dining chairs are the most versatile restaurant seating option. They can be rearranged
             to accommodate parties of different sizes, pushed against walls to open floor space for
@@ -253,7 +263,7 @@ export default function RestaurantSeatingGuide() {
             </Link>
           </div>
 
-          <h2>When Should You Specify Bar Stools?</h2>
+          <h2 id="bar-stools">When Should You Specify Bar Stools?</h2>
           <p>
             Bar stools define the energy of a counter or high-top zone. They draw guests closer
             to the action, whether that is an open kitchen, a full bar, or a window counter
@@ -275,7 +285,7 @@ export default function RestaurantSeatingGuide() {
             calls for guests to face the counter only or also turn to face the room.
           </p>
 
-          <h2>Booth vs. Chair vs. Bar Stool: How Do the Three Compare?</h2>
+          <h2 id="comparison">Booth vs. Chair vs. Bar Stool: How Do the Three Compare?</h2>
           <p>
             The table below summarizes how the three core seating types trade off against each
             other across the factors that matter most to operators: floor density, cost,
@@ -336,7 +346,7 @@ export default function RestaurantSeatingGuide() {
             </tbody>
           </table>
 
-          <h2>How Should You Specify Outdoor Restaurant Seating?</h2>
+          <h2 id="outdoor-seating">How Should You Specify Outdoor Restaurant Seating?</h2>
           <p>
             Patio and terrace dining introduces material requirements that differ significantly
             from interior seating. Every component (frame, seat surface, hardware) must
@@ -378,7 +388,7 @@ export default function RestaurantSeatingGuide() {
             wind and breakage risk.
           </p>
 
-          <h2>How Do You Plan Aisle Width, Table Spacing, and ADA Compliance?</h2>
+          <h2 id="space-planning">How Do You Plan Aisle Width, Table Spacing, and ADA Compliance?</h2>
           <p>
             Restaurant layout directly affects revenue per square foot, guest comfort, and code
             compliance. The{' '}
@@ -405,7 +415,7 @@ export default function RestaurantSeatingGuide() {
             nature of the business.
           </p>
 
-          <h2>Which Materials Hold Up in High-Traffic Environments?</h2>
+          <h2 id="materials">Which Materials Hold Up in High-Traffic Environments?</h2>
           <p>
             Commercial restaurant seating takes significantly more abuse than residential furniture.
             A busy restaurant may turn a seat 300 to 400 times per week. Specifying
@@ -438,7 +448,7 @@ export default function RestaurantSeatingGuide() {
             </li>
           </ul>
 
-          <h2>How Do You Mix Seating Types Across Dining Zones?</h2>
+          <h2 id="mixing-zones">How Do You Mix Seating Types Across Dining Zones?</h2>
           <p>
             Most successful full-service restaurants use multiple seating types organized into
             distinct zones rather than a single seating type throughout. A common configuration

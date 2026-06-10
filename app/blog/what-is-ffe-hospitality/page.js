@@ -9,17 +9,18 @@ import styles from '../page.module.css';
 export const metadata = {
   title: 'What Is FF&E in Hospitality?',
   description:
-    'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. Learn what qualifies, budgeting, and procurement.',
+    'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. See what qualifies, budget ranges, and procurement steps.',
   alternates: {
     canonical: `${siteUrl}/blog/what-is-ffe-hospitality`,
   },
   openGraph: {
     title: 'What Is FF&E in Hospitality? | DMD Furnishing',
     description:
-      'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. Learn what qualifies, budgeting, and procurement.',
+      'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. See what qualifies, budget ranges, and procurement steps.',
     url: `${siteUrl}/blog/what-is-ffe-hospitality`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-02',
     modifiedTime: '2026-04-01',
     authors: ['DMD Furnishing Editorial Team'],
@@ -35,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'What Is FF&E in Hospitality? | DMD Furnishing',
     description:
-      'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. Learn what qualifies, budgeting, and procurement.',
+      'FF&E (Furniture, Fixtures & Equipment) defines every movable element in a hotel or restaurant fit-out. See what qualifies, budget ranges, and procurement steps.',
   },
 };
 
@@ -47,19 +48,12 @@ const articleSchema = {
     'A comprehensive guide to Furniture, Fixtures & Equipment in hospitality: definition, scope, differences from OS&E, procurement, and budgeting.',
   datePublished: '2026-03-02',
   dateModified: '2026-04-01',
-  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['[data-speakable]'],
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'DMD Furnishing',
-    logo: {
-      '@type': 'ImageObject',
-      url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-    },
-  },
+  publisher: { '@id': `${siteUrl}/#organization` },
   image: [
     `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
     `${siteUrl}/Images/Hotel_Guest_Room_Hero.png`,
@@ -119,7 +113,7 @@ const faqSchema = {
       name: 'How much of a hotel project budget goes to FF&E?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FF&E typically represents 15 to 25 percent of total construction costs for a hospitality project, with the exact share varying by property type, brand standards, and market segment. Budget is best established early with input from your FF&E consultant and manufacturer, since lead times and specification decisions directly affect overall project cost.',
+        text: 'In DMD Furnishing\'s project experience, FF&E typically represents 15 to 25 percent of total construction costs for a hospitality project, with the exact share varying by property type, brand standards, and market segment. Budget is best established early with input from your FF&E consultant and manufacturer, since lead times and specification decisions directly affect overall project cost.',
       },
     },
     {
@@ -412,7 +406,7 @@ export default function WhatIsFFEPage() {
               Material choices have a dramatic impact on budget. HPL-faced casegoods, for example,
               are significantly less expensive than matched wood veneer while delivering comparable
               commercial durability. Publications like{' '}
-              <a href="https://www.hospitalitydesign.com/" target="_blank" rel="noopener">Hospitality Design</a>{' '}
+              <a href="https://www.hospitalitydesign.com/" target="_blank" rel="noopener noreferrer">Hospitality Design</a>{' '}
               regularly document how leading operators navigate these trade-offs across different
               property tiers. Understanding the performance characteristics of each material
               allows owners and designers to make value-driven choices without compromising the
@@ -478,9 +472,13 @@ export default function WhatIsFFEPage() {
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>How much of a hotel project budget goes to FF&amp;E?</p>
                 <p className={styles.faqAnswer} data-speakable="answer">
-                  FF&amp;E typically represents 15 to 25 percent of total construction costs for a
-                  hospitality project, with the exact share varying by property type, brand standards,
-                  and market segment. Budget is best established early with input from your FF&amp;E
+                  In our project experience, FF&amp;E typically represents 15 to 25 percent of total
+                  construction costs for a hospitality project, with the exact share varying by
+                  property type, brand standards, and market segment. For benchmark per-room cost
+                  data, see the{' '}
+                  <a href="https://www.hvs.com/article/10219-hvs-us-hotel-development-cost-survey-2025" target="_blank" rel="noopener noreferrer">
+                    HVS U.S. Hotel Development Cost Survey
+                  </a>. Budget is best established early with input from your FF&amp;E
                   consultant and manufacturer, since lead times and specification decisions directly
                   affect overall project cost.
                 </p>

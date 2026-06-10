@@ -9,17 +9,18 @@ import styles from '../page.module.css';
 export const metadata = {
   title: 'Hotel Guestroom Furniture Checklist',
   description:
-    'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
+    'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities, plus spec guidance for every piece.',
   alternates: {
     canonical: `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
   },
   openGraph: {
     title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
     description:
-      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
+      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities, plus spec guidance for every piece.',
     url: `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-08',
     modifiedTime: '2026-03-29',
     authors: ['DMD Furnishing Editorial Team'],
@@ -35,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
     description:
-      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
+      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities, plus spec guidance for every piece.',
   },
 };
 
@@ -47,19 +48,12 @@ const articleSchema = {
     'A thorough breakdown of every furniture piece required in a hotel guestroom, from headboard and bed frame to desk, luggage bench, and vanity, with commercial specification guidance.',
   datePublished: '2026-03-08',
   dateModified: '2026-03-29',
-  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['[data-speakable]'],
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'DMD Furnishing',
-    logo: {
-      '@type': 'ImageObject',
-      url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-    },
-  },
+  publisher: { '@id': `${siteUrl}/#organization` },
   image: [
     `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
     `${siteUrl}/Images/Our_Products.jpg`,
@@ -247,7 +241,8 @@ export default function HotelGuestroomChecklistPage() {
 
             <h3>Headboard</h3>
             <p>
-              The headboard is the most visible design element in the guestroom. It is typically
+              The <Link href="/products/headboard">headboard</Link> is the most visible design
+              element in the guestroom. It is typically
               upholstered in a commercial-grade fabric or faux leather with a high rub-count
               rating appropriate for hospitality use. Headboards may be wall-mounted, attached to
               the bed frame, or freestanding. Size and configuration vary based on the bed type
@@ -257,7 +252,8 @@ export default function HotelGuestroomChecklistPage() {
 
             <h3>Bed Frame</h3>
             <p>
-              Commercial hotel bed frames are engineered for repetitive loading well above residential
+              Commercial hotel <Link href="/products/king-bed-frame">bed frames</Link> are
+              engineered for repetitive loading well above residential
               standards. They are typically constructed from powder-coated steel or solid wood and
               designed to accommodate commercial innerspring or hybrid mattress foundations.
               Bed frames in hospitality environments must resist racking, maintain alignment over

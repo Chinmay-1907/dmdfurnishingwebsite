@@ -9,23 +9,24 @@ import styles from '../page.module.css';
 export const metadata = {
   title: 'Value Engineering Commercial Furniture',
   description:
-    'How to value-engineer commercial furniture: smart material and construction choices that cut costs while protecting quality and compliance.',
+    'How to value-engineer commercial furniture: smart material and construction choices that cut project costs while protecting durability, quality, and compliance.',
   alternates: {
-    canonical: 'https://dmdfurnishing.com/blog/value-engineering-commercial-furniture',
+    canonical: `${siteUrl}/blog/value-engineering-commercial-furniture`,
   },
   openGraph: {
     title: 'Value Engineering Commercial Furniture | DMD Furnishing',
     description:
-      'How to value-engineer commercial furniture: smart material and construction choices that cut costs while protecting quality and compliance.',
-    url: 'https://dmdfurnishing.com/blog/value-engineering-commercial-furniture',
+      'How to value-engineer commercial furniture: smart material and construction choices that cut project costs while protecting durability, quality, and compliance.',
+    url: `${siteUrl}/blog/value-engineering-commercial-furniture`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-12',
     modifiedTime: '2026-03-26',
     authors: ['DMD Furnishing Editorial Team'],
     images: [
       {
-        url: 'https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg',
+        url: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
         width: 1200,
         height: 630,
       },
@@ -35,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Value Engineering Commercial Furniture | DMD Furnishing',
     description:
-      'How to value-engineer commercial furniture: smart material and construction choices that cut costs while protecting quality and compliance.',
+      'How to value-engineer commercial furniture: smart material and construction choices that cut project costs while protecting durability, quality, and compliance.',
   },
 };
 
@@ -46,22 +47,16 @@ const articleSchema = {
       '@type': 'BlogPosting',
       '@id': `${siteUrl}/blog/value-engineering-commercial-furniture#article`,
       headline: 'How to Value-Engineer Commercial Furniture Without Losing Quality',
+      description:
+        'How to value-engineer commercial furniture: smart material and construction choices that cut project costs while protecting durability, quality, and compliance.',
       datePublished: '2026-03-12',
       dateModified: '2026-03-26',
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['[data-speakable]'],
       },
-      publisher: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-        },
-      },
+      publisher: { '@id': `${siteUrl}/#organization` },
       mainEntityOfPage: `${siteUrl}/blog/value-engineering-commercial-furniture`,
       image: [
         `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
@@ -498,8 +493,8 @@ export default function ValueEngineeringCommercialFurniture() {
         <div className={styles.authorCard}>
           <div className={styles.authorAvatar}>D</div>
           <div className={styles.authorInfo}>
-            <h4>DMD Furnishing</h4>
-            <p>Commercial furniture manufacturer specializing in hospitality FF&amp;E. Based in Foxboro, MA, serving hotels, restaurants, and institutional clients nationwide.</p>
+            <strong>DMD Furnishing Editorial Team</strong>
+            <span>Commercial furniture manufacturer specializing in hospitality FF&amp;E, based in Foxboro, MA.</span>
           </div>
         </div>
       </article>

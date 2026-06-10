@@ -11,7 +11,7 @@ import {
   isProductSlug,
 } from '../../../lib/catalog';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
-import { placeContent } from '../../../lib/place-content';
+import { placeContent, placeRelatedGuides } from '../../../lib/place-content';
 import ProductCatalog from '../../../components/products/ProductCatalog';
 import CategoryContentBlock from '../../../components/products/CategoryContentBlock';
 import ProductDetailPage from '../../../components/products/ProductDetailPage';
@@ -47,26 +47,26 @@ export const dynamicParams = false;
 // --- Per-category metadata overrides (vertical-specific primary keywords) ---
 const placeMetaOverrides = {
   hotel: {
-    title: 'Hotel Furniture & Casegoods',
-    h1: 'Hotel Furniture & Casegoods',
+    title: 'Hotel Furniture & Casegoods Manufacturer',
+    h1: 'Hotel Furniture & Casegoods Manufacturer',
     description:
       'Contract-grade hotel guestroom casegoods, headboards, desks, and lobby seating. Custom manufacturer for boutique and branded hotels.',
   },
   restaurant: {
-    title: 'Restaurant Furniture & Seating',
-    h1: 'Restaurant Furniture & Seating',
+    title: 'Restaurant Furniture & Seating Manufacturer',
+    h1: 'Restaurant Furniture & Seating Manufacturer',
     description:
-      'Custom restaurant banquettes, booths, dining chairs, and bar stools. Fire safety compliant. Built for U.S. restaurant operators.',
+      'Custom restaurant banquettes, booths, dining chairs, and bar stools. CAL TB 117-2013 and NFPA 701 compliant materials. Built for U.S. restaurant operators.',
   },
   office: {
-    title: 'Office Furniture & Workstations',
-    h1: 'Office Furniture & Workstations',
+    title: 'Commercial Office Furniture Manufacturer',
+    h1: 'Commercial Office Furniture Manufacturer',
     description:
-      'Commercial-grade task seating, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
+      'Commercial-grade task seating built to ANSI/BIFMA X5.1, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
   },
   hospital: {
-    title: 'Healthcare Furniture',
-    h1: 'Healthcare Furniture',
+    title: 'Healthcare Furniture Manufacturer',
+    h1: 'Healthcare Furniture Manufacturer',
     description:
       'Bleach-cleanable healthcare furniture for hospitals, clinics, and medical offices. Bariatric seating, patient room casegoods, and performance upholstery.',
   },
@@ -104,13 +104,20 @@ export async function generateMetadata({ params }) {
       });
     }
     const primary = product.primary;
+    // Short catalog descriptions leave the meta description under ~130 chars;
+    // pad toward the 150-160 sweet spot with the manufacturer CTA.
+    const baseDescription =
+      product.description ||
+      `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`;
+    const fullDescription =
+      baseDescription.length < 120
+        ? `${baseDescription.replace(/\.?\s*$/, '.')} Custom-built by DMD Furnishing in Foxboro, MA — request specs and a quote.`
+        : baseDescription;
     return generatePageMetadata({
       title: primary?.subcategoryName
         ? `${product.name} | Commercial ${primary.subcategoryName}`
         : product.name,
-      description:
-        product.description ||
-        `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`,
+      description: fullDescription,
       path: `/products/${slug}`,
       image: product.image,
     });
@@ -149,7 +156,9 @@ function buildProductStructuredData(product) {
       : [{ src: product.image || '/placeholder.png', alt: product.name }]
   )
     .filter((image) => image?.src)
-    .map((image) => (image.src.startsWith('http') ? image.src : `${siteUrl}${image.src}`));
+    // encodeURI: image filenames contain raw spaces, which break the URLs
+    // crawlers extract from JSON-LD.
+    .map((image) => encodeURI(image.src.startsWith('http') ? image.src : `${siteUrl}${image.src}`));
 
   return {
     '@context': 'https://schema.org',
@@ -181,7 +190,11 @@ function buildProductStructuredData(product) {
           product.description ||
           `${product.name}, commercial-grade furniture for ${primary?.placeName?.toLowerCase() || 'commercial'} environments.`,
         image: productImages,
-        sku: product.id || product.slug,
+        // Custom-manufactured B2B furniture has no GTIN; the slug is the
+        // stable catalog identifier, and DMD is the manufacturer, so it
+        // doubles as the MPN.
+        sku: product.slug || product.id,
+        mpn: product.slug || product.id,
         brand: { '@type': 'Organization', name: 'DMD Furnishing' },
         category: primary?.subcategoryName || 'Commercial Furniture',
         manufacturer: {
@@ -341,7 +354,7 @@ export default async function ProductsDispatchPage({ params }) {
           `Browse all ${placeProducts.length} furniture products designed for ${place.name.toLowerCase()} environments.`
         }
       />
-      <CategoryContentBlock placeName={place.name} content={content} />
+      <CategoryContentBlock placeName={place.name} content={content} relatedGuides={placeRelatedGuides[place.slug]} />
 
       {/* Mid-tier furniture-type landing pages for this place (>= 3 products each) */}
       {typePages.length > 0 && (

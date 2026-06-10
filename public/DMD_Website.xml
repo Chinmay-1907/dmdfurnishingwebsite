@@ -2102,11 +2102,8 @@
 			<subcategory id="Lecture Desks" name="Lecture Desks" description="Student desks for lecture halls" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png">
 				<product id="Attached Desk-Chair" name="Attached Desk-Chair" description="Integrated desk-chair unit with polypropylene seat and laminate work surface" image="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" tags="attached,desk-chair">
 					<images>
-						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" alt="Attached Desk-Chair - attached desk-chair" />
-						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair 2.png" alt="Attached Desk-Chair - attached desk-chair" />
-						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 1.png" alt="Ergonomic Student Chair - ergonomic student chair" />
-						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 2.png" alt="Ergonomic Student Chair - ergonomic student chair" />
-						<image src="/Images/School/Classroom/Chairs/Ergonomic Student Chair/ergonomic student chair 3.png" alt="Ergonomic Student Chair - ergonomic student chair" />
+						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair.png" alt="Attached desk-chair unit with laminate work surface for lecture halls" />
+						<image src="/Images/University/Lecture Hall/Lecture Desks/Attached Desk-Chair/attached desk-chair 2.png" alt="Attached desk-chair with polypropylene seat, side view" />
 					</images>
 					<specifications>
 						<spec name="Width" value="18-20&quot; (Seat width)" />
@@ -2342,12 +2339,7 @@
                 </product>
                 <product id="Queen Bed Frame" name="Queen Bed Frame" description="Queen-size bed frame with optional headboard" image="/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png" tags="bed,queen,frame">
                     <images>
-                        <image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png" alt="King Bed Frame - bedroom" />
-						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png" alt="King Bed Frame - bedroom" />
-						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 3.png" alt="King Bed Frame - bedroom" />
-						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 4.png" alt="King Bed Frame - bedroom" />
-						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 5.png" alt="King Bed Frame - bedroom" />
-						<image src="/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 6.png" alt="King Bed Frame - bedroom" />						
+                        <image src="/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png" alt="Queen Bed Frame - bedroom" />
                     </images>
                     <specifications>
                         <spec name="Width" value="60&quot; (Queen)" />
@@ -2438,6 +2430,7 @@
             <subcategory id="Dining Table" name="Dining Table" description="Dining tables" image="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table SS1.jpg">
 				<product id="Dining Table" name="Dining Table" description="Rectangular dining table" image="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" tags="dining table,extendable">
                     <images>
+                        <image src="/Images/Residential/Dining Room/Dining Table/Extendable Dining Table/extendable dining table.png" alt="Extendable rectangular dining table for residential dining rooms" />
                         <image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table SS1.jpg" alt="2-Seater Table - 2-Seater Table SS1" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/2-Seater Table/2-Seater Table Tapper Center.jpg" alt="2-Seater Table - 2-Seater Table Tapper Center" />
 						<image src="/Images/Hotel/Breakfast Area/Dining Tables/4-Seater Table/4-Seater Table SS1.jpg" alt="4-Seater Table - 4-Seater Table SS1" />
@@ -2575,6 +2568,7 @@
             <subcategory id="Office Chair" name="Office Chair" description="Seating for the home office" image="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png">
                 <product id="Ergonomic Office Chair" name="Ergonomic Office Chair" description="Adjustable ergonomic chair with lumbar support" image="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png" tags="office chair,ergonomic">
                     <images>
+                        <image src="/Images/Residential/Home Office/Office Chair/Ergonomic Office Chair/ergonomic office chair.png" alt="Ergonomic office chair with lumbar support for home offices" />
                         <image src="/Images/Office/Seating/Ergonomic Chair/Adjustable Ergonomic Chair/adjustable ergonomic chair.png" alt="Adjustable Ergonomic Chair - adjustable ergonomic chair" />
 						<image src="/Images/Office/Seating/Ergonomic Chair/Fabric Ergonomic Chair/Fabric Ergonomic Chair.png" alt="Fabric Ergonomic Chair - Fabric Ergonomic Chair" />
 						<image src="/Images/Office/Seating/Ergonomic Chair/Mesh Ergonomic Chair/mesh ergonomic chair.png" alt="Mesh Ergonomic Chair - mesh ergonomic chair" />
@@ -2617,6 +2611,7 @@
             <subcategory id="Bunk Bed" name="Bunk Bed" description="Space-efficient bunk beds" image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png">
                 <product id="Kids Twin Bunk Bed" name="Kids Twin Bunk Bed" description="Twin-size bunk bed for children's rooms and multi-family family-unit bedrooms. Full-length guard rails and built-in ladder; sturdy hardwood or steel frame options." image="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" tags="bunk bed,twin,kids,residential">
                     <images>
+                        <image src="/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png" alt="Twin bunk bed with guard rails and ladder for kids rooms" />
                         <image src="/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png" alt="Full Bunk Bed - full bunk bed" />
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png" alt="Twin Bunk Bed - twin bunk bed" />
 						<image src="/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png" alt="Twin XL Bunk Bed - Twin XL Bunk Bed" />

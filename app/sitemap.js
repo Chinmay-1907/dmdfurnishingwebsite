@@ -20,9 +20,28 @@ const baseUrl = siteUrl;
 // Fallback lastModified for pages without a real source date.
 const LAST_BUILD = '2026-06-10';
 
+// projects.xml stores completionDate as display text ("June 2022", "2024").
+// Sitemap lastmod must be ISO 8601 (YYYY or YYYY-MM both valid).
+const MONTH_NUM = {
+  january: '01', february: '02', march: '03', april: '04', may: '05', june: '06',
+  july: '07', august: '08', september: '09', october: '10', november: '11', december: '12',
+};
+
+function isoFromCompletionDate(text) {
+  if (!text) return undefined;
+  const t = String(text).trim();
+  if (/^\d{4}(-\d{2}){0,2}$/.test(t)) return t;
+  const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(t);
+  if (m && MONTH_NUM[m[1].toLowerCase()]) return `${m[2]}-${MONTH_NUM[m[1].toLowerCase()]}`;
+  return undefined;
+}
+
+// Image filenames contain raw spaces ("/Images/Our Services.jpg") — without
+// encodeURI Google Images gets a 0-byte response for ~half the catalog.
 function abs(imagePath) {
   if (!imagePath) return undefined;
-  return imagePath.startsWith('http') ? imagePath : `${baseUrl}${imagePath}`;
+  const url = imagePath.startsWith('http') ? imagePath : `${baseUrl}${imagePath}`;
+  return encodeURI(url);
 }
 
 export default function sitemap() {
@@ -38,19 +57,19 @@ export default function sitemap() {
   entries.push({
     url: `${baseUrl}/`,
     lastModified: LAST_BUILD,
-    images: [`${baseUrl}/Images/Tailored_Guestroom_Collections.jpg`],
+    images: [abs('/Images/Tailored_Guestroom_Collections.jpg')],
   });
   entries.push({
     url: `${baseUrl}/products`,
     lastModified: LAST_BUILD,
-    images: [`${baseUrl}/Images/Our_Products.jpg`],
+    images: [abs('/Images/Our_Products.jpg')],
   });
   entries.push({ url: `${baseUrl}/projects`, lastModified: LAST_BUILD });
-  entries.push({ url: `${baseUrl}/about`, lastModified: LAST_BUILD, images: [`${baseUrl}/Images/About_DMD_Furnishing_Page.jpg`] });
+  entries.push({ url: `${baseUrl}/about`, lastModified: LAST_BUILD, images: [abs('/Images/About_DMD_Furnishing_Page.jpg')] });
   entries.push({
     url: `${baseUrl}/services`,
     lastModified: LAST_BUILD,
-    images: [`${baseUrl}/Images/Our Services.jpg`],
+    images: [abs('/Images/Our Services.jpg')],
   });
   entries.push({ url: `${baseUrl}/contact`, lastModified: LAST_BUILD });
   entries.push({ url: `${baseUrl}/inspirations`, lastModified: LAST_BUILD });
@@ -65,12 +84,12 @@ export default function sitemap() {
   entries.push({
     url: `${baseUrl}/guides/commercial-furniture-manufacturing`,
     lastModified: LAST_BUILD,
-    images: [`${baseUrl}/Images/Our_Products.jpg`],
+    images: [abs('/Images/Our_Products.jpg')],
   });
   entries.push({
     url: `${baseUrl}/guides/hospitality-ffe`,
     lastModified: LAST_BUILD,
-    images: [`${baseUrl}/Images/Tailored_Guestroom_Collections.jpg`],
+    images: [abs('/Images/Tailored_Guestroom_Collections.jpg')],
   });
 
   // --- Blog ---
@@ -121,7 +140,10 @@ export default function sitemap() {
 
   // --- Project detail pages ---
   for (const project of projects) {
-    entries.push({ url: `${baseUrl}/projects/${project.slug}`, lastModified: LAST_BUILD });
+    entries.push({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified: isoFromCompletionDate(project.completionDate) || LAST_BUILD,
+    });
   }
 
   return entries;

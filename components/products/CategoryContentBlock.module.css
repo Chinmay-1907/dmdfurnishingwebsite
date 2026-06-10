@@ -254,6 +254,33 @@
   max-width: 72ch;
 }
 
+/* ─── Related guides (cluster backlinks) ───────────────────────────── */
+
+.relatedLink {
+  display: block;
+  height: 100%;
+  padding: 1.25rem 1.4rem 1.35rem;
+  border: 1px solid rgba(20, 18, 14, 0.10);
+  border-radius: 14px;
+  background: #FFFFFF;
+  text-decoration: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.relatedLink:hover {
+  border-color: rgba(164, 41, 99, 0.32);
+  background: rgba(201, 162, 95, 0.06);
+}
+
+:global([data-theme='dark']) .relatedLink {
+  border: 1px solid rgba(201, 169, 110, 0.14);
+  background: rgba(255, 255, 255, 0.015);
+}
+:global([data-theme='dark']) .relatedLink:hover {
+  border-color: rgba(201, 169, 110, 0.32);
+  background: rgba(201, 169, 110, 0.04);
+}
+
 @media (max-width: 640px) {
   .block {
     padding: 2.25rem 1.1rem 2.5rem;

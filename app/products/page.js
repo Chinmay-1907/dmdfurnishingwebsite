@@ -8,9 +8,9 @@ const products = getAllProductsFlat();
 const filterOptions = getFilterOptions();
 
 export const metadata = generatePageMetadata({
-  title: 'Commercial Furniture Catalog',
+  title: 'Commercial Furniture Manufacturer | Product Catalog',
   description:
-    `Browse ${products.length}+ contract-grade hospitality casegoods, seating, tables, and custom hotel furniture. Request specs, finishes, and a project quote.`,
+    `Commercial furniture manufacturer catalog: ${products.length}+ contract-grade hospitality casegoods, seating, tables, and custom hotel furniture. Request specs, finishes, and a project quote.`,
   path: '/products',
   image: '/Images/Our_Products.jpg',
 });
@@ -65,8 +65,8 @@ const productsSchema = {
       '@type': 'CollectionPage',
       '@id': `${siteUrl}/products`,
       url: `${siteUrl}/products`,
-      name: 'Commercial Furniture Catalog',
-      description: `Browse ${products.length}+ hospitality casegoods, seating, tables, and custom hotel furniture across hotel, restaurant, office, healthcare, education, and residential scopes.`,
+      name: 'Commercial Furniture Manufacturer | Product Catalog',
+      description: `Commercial furniture manufacturer catalog: ${products.length}+ hospitality casegoods, seating, tables, and custom hotel furniture across hotel, restaurant, office, healthcare, education, and residential scopes.`,
       isPartOf: { '@id': `${siteUrl}/#website` },
       provider: { '@id': `${siteUrl}/#organization` },
     },

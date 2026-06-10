@@ -85,7 +85,7 @@ const pillarSchema = {
       datePublished: '2026-04-10',
       dateModified: '2026-04-10',
       image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       publisher: { '@id': `${siteUrl}/#organization` },
       about: [
         { '@type': 'Thing', name: 'hospitality FF&E' },
@@ -169,10 +169,15 @@ export default function HospitalityFfeGuide() {
                 (operating supplies - linens, china, glassware, amenities).
               </p>
               <p>
-                FF&amp;E is typically 15 to 25 percent of a hotel project&apos;s total capital cost,
-                depending on property tier and brand standards. It is the line item most likely to
-                be delayed, re-scoped, or value-engineered because it is the last package ordered
-                and the first visible to guests at opening.
+                In our project experience, FF&amp;E typically represents 15 to 25 percent of a hotel
+                project&apos;s total construction costs, depending on property tier and brand
+                standards; the{' '}
+                <a href="https://www.hvs.com/article/10219-hvs-us-hotel-development-cost-survey-2025" target="_blank" rel="noopener noreferrer">
+                  HVS U.S. Hotel Development Cost Survey
+                </a>{' '}
+                is the standard industry benchmark for per-room development cost data. FF&amp;E is
+                the line item most likely to be delayed, re-scoped, or value-engineered because it
+                is the last package ordered and the first visible to guests at opening.
               </p>
               <p>
                 For a buyer-focused walkthrough of what FF&amp;E is versus other hotel budget
@@ -236,7 +241,9 @@ export default function HospitalityFfeGuide() {
               <h2>Hotel FF&amp;E Lifecycles and Replacement Cycles</h2>
               <p>
                 Hospitality FF&amp;E replacement cycles vary by property tier, brand requirements,
-                and occupancy patterns. The typical bands:
+                and occupancy patterns. The bands below are general guidance drawn from our own
+                project experience — actual cycles depend on occupancy intensity and the specific
+                brand&apos;s current standards:
               </p>
               <ul>
                 <li>
@@ -246,9 +253,9 @@ export default function HospitalityFfeGuide() {
                 </li>
                 <li>
                   <strong>Upscale and upper-midscale:</strong> 7 to 9 year casegoods, 5 to 6 year
-                  soft seating. Brand refresh programs from Marriott, Hilton, IHG, and Hyatt
-                  typically require soft goods refreshes at five-year intervals even when casegoods
-                  are still serviceable.
+                  soft seating. Major-flag refresh programs commonly call for soft-goods refreshes
+                  on roughly five-year cycles even when casegoods are still serviceable — always
+                  confirm against the brand&apos;s current PIP standards.
                 </li>
                 <li>
                   <strong>Select-service and extended-stay:</strong> 8 to 10 year casegoods, 6 to
@@ -359,10 +366,10 @@ export default function HospitalityFfeGuide() {
               </p>
               <ul>
                 <li>
-                  <strong>Property tier and brand standards.</strong> A Marriott Autograph
-                  guestroom package costs roughly double a Fairfield Inn package because of finish
-                  quality requirements, not because of furniture quantity. Brand PIP documents are
-                  the single largest cost driver.
+                  <strong>Property tier and brand standards.</strong> In our quoting experience, an
+                  upper-tier soft-brand guestroom package can cost on the order of twice an
+                  economy-tier package because of finish quality requirements, not because of
+                  furniture quantity. Brand PIP documents are the single largest cost driver.
                 </li>
                 <li>
                   <strong>Custom content vs standard catalog.</strong> Every custom specification

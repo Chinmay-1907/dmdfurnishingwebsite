@@ -151,3 +151,40 @@ alts/captions describe actual photo content. Remaining backlog: per-post OG imag
 sharp (needs art direction call), DMD_Website.xml / projects.xml alt-quality
 rewrites (586-product XML — bulk content task), project id/slug
 standardization, BlogPosting schema image arrays (nice-to-have).
+
+### Iteration 10 - 2026-06-10 (audit-fable fix-down: all 54 audits addressed)
+Worked the full audit-fable deliverable (31 agent + 23 skill audits, INDEX
+P0/P1/P2 fix list) one by one. All 5 P0 bugs fixed: sitemap image URLs now
+encodeURI (191 raw-space locs -> 0), queen-bed-frame wrong King gallery
+fixed in DMD_Website.xml, geo coords corrected to 56 Leonard St
+(42.0582,-71.2421), stale scripts/generate-sitemap.js deleted (+npm script),
+project Article.datePublished now ISO 8601 (toIsoDate helper, +dateModified).
+P1: author entity @id/type mismatch resolved (#person -> #editorial-team,
+Organization + parentOrganization, 10 refs across 9 files); FF&E 15-25% stat
+voiced as first-party experience + HVS survey benchmark link (3 surfaces,
+unified wording -- HVS does not publish the % so no fabricated citation);
+public/_headers deleted (next.config.js single source); /products title
+restored to "Commercial Furniture Manufacturer | Product Catalog" (+desc,
+schema, H1); 4 vertical titles got "Manufacturer" + named standards (CAL TB
+117-2013, NFPA 701, ANSI/BIFMA X5.1); cluster loop closed -- Related Guides
+blocks on all 7 product hubs (placeRelatedGuides in place-content.js);
+/api/vitals now logs structured JSON lines (was discarding).
+P2/walk: og:locale + lengthened meta descriptions on all 6 posts; jump-link
+TOCs added to the 3 long posts; blog publisher -> @id ref (6 posts);
+4 missing BlogPosting descriptions added; hardcoded URLs -> siteUrl;
+sku/mpn = slug on Product schema; project sitemap lastmod from real
+completion dates; homepage title now carries brand suffix; homepage tile
+alts (7); robots.txt: catalog XML disallowed + 4 more AI bots explicit;
+alternateName [DMD, DMD USA]; localBusiness areaServed (US/MA/New England);
+contact weekend-hours contradiction removed; Get-directions links (contact +
+footer); guide red claims reframed as experience (brand intervals, 2x cost
+ratio); 100k double-rubs cited (Wyzenbeek/ACT); || 285 fallback removed;
+gallery sweep: 3 more products got own photos first (attached desk-chair
+wrong-gallery bug fixed); OG + product JSON-LD images encodeURI; PDP meta
+descriptions padded to 150+; 2 deep links blog -> PDPs; content-leak
+prebuild gate (scripts/check-content-leaks.js); brief-template.md.
+Build clean 240 pages, all spot-checks pass. Parked (accounts/credentials):
+GSC grant, Plausible env, Bing token, IndexNow webhook, DataForSEO, GBP,
+Wikidata, named founder Person, aggregateRating (no real reviews). Backlog
+(content builds): 5 vertical spokes, comparison/RFP pages, type-page content
+blocks, PDP prose de-dup, WebP source re-encode, sticky TOC.

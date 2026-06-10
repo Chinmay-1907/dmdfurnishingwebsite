@@ -167,7 +167,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
   return (
     <main className={styles.catalogPage}>
       <CatalogHero
-        title={heroTitle || 'Commercial Furniture Catalog'}
+        title={heroTitle || 'Commercial Furniture, Direct From the Manufacturer'}
         description={heroDescription || `Filter, compare, and request a quote on ${products.length} products across ${filterOptions.spaces.length} commercial environments.`}
         stats={stats}
         searchQuery={searchQuery}

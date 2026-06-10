@@ -85,7 +85,7 @@ const pillarSchema = {
       datePublished: '2026-04-10',
       dateModified: '2026-04-10',
       image: `${siteUrl}/Images/Our_Products.jpg`,
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       publisher: { '@id': `${siteUrl}/#organization` },
       about: [
         { '@type': 'Thing', name: 'commercial furniture manufacturing' },
