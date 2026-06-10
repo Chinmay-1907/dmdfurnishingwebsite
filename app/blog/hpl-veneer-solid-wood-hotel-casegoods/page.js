@@ -65,7 +65,10 @@ const articleSchema = {
         },
       },
       mainEntityOfPage: `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`,
-      image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+      image: [
+        `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+        `${siteUrl}/Images/Our_Projects.jpg`,
+      ],
     },
     {
       '@type': 'BreadcrumbList',

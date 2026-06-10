@@ -60,7 +60,11 @@ const articleSchema = {
       url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
     },
   },
-  image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+  image: [
+    `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+    `${siteUrl}/Images/Hotel_Guest_Room_Hero.png`,
+    `${siteUrl}/Images/Modern_Social_Lounges.jpg`,
+  ],
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${siteUrl}/blog/what-is-ffe-hospitality`,

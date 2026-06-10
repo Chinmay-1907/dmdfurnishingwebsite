@@ -60,7 +60,10 @@ const articleSchema = {
       url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
     },
   },
-  image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+  image: [
+    `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+    `${siteUrl}/Images/Our_Products.jpg`,
+  ],
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,

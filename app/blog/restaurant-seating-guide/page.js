@@ -63,7 +63,10 @@ const articleSchema = {
         },
       },
       mainEntityOfPage: `${siteUrl}/blog/restaurant-seating-guide`,
-      image: `${siteUrl}/Images/Elevated_Restaurant_Seating.jpg`,
+      image: [
+        `${siteUrl}/Images/Elevated_Restaurant_Seating.jpg`,
+        `${siteUrl}/Images/Outdoor.jpg`,
+      ],
     },
     {
       '@type': 'BreadcrumbList',

@@ -63,7 +63,11 @@ const articleSchema = {
         },
       },
       mainEntityOfPage: `${siteUrl}/blog/value-engineering-commercial-furniture`,
-      image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+      image: [
+        `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+        `${siteUrl}/Images/materials-macro.jpg`,
+        `${siteUrl}/Images/Our_Products.jpg`,
+      ],
     },
     {
       '@type': 'BreadcrumbList',

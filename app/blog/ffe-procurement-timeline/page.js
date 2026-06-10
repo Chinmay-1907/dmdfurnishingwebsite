@@ -63,7 +63,11 @@ const articleSchema = {
         },
       },
       mainEntityOfPage: `${siteUrl}/blog/ffe-procurement-timeline`,
-      image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+      image: [
+        `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+        `${siteUrl}/Images/Premium%20Collections.jpg`,
+        `${siteUrl}/Images/Our_Projects.jpg`,
+      ],
     },
     {
       '@type': 'BreadcrumbList',
