@@ -5,7 +5,7 @@ import AnswerCallout from '../../../components/AnswerCallout';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Furniture Manufacturing Guide',
+  title: 'Commercial Furniture Manufacturing Guide',
   description:
     'Commercial furniture manufacturing guide for hospitality, corporate, and institutional buyers. Commercial durability and fire safety standards. Foxboro, MA.',
   path: '/guides/commercial-furniture-manufacturing',
@@ -43,6 +43,17 @@ const faqs = [
     question: 'How long does custom commercial furniture manufacturing take?',
     answer:
       'Lead times vary with scope, custom content, and material availability. A typical project runs through six phases: specification and sample approval, sourcing and purchase orders, fabrication, quality control, finishing and packaging, then logistics and installation. Starting vendor engagement during the design development phase, not after construction documents are issued, is the single most effective way to protect an opening date. For detailed timeline guidance, see our FF&E procurement timeline guide.',
+    answerJsx: (
+      <>
+        Lead times vary with scope, custom content, and material availability. A typical project
+        runs through six phases: specification and sample approval, sourcing and purchase orders,
+        fabrication, quality control, finishing and packaging, then logistics and installation.
+        Starting vendor engagement during the design development phase, not after construction
+        documents are issued, is the single most effective way to protect an opening date. For
+        detailed timeline guidance, see our{' '}
+        <Link href="/blog/ffe-procurement-timeline">FF&amp;E procurement timeline guide</Link>.
+      </>
+    ),
   },
 ];
 
@@ -74,7 +85,7 @@ const pillarSchema = {
       datePublished: '2026-04-10',
       dateModified: '2026-04-10',
       image: `${siteUrl}/Images/Our_Products.jpg`,
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       publisher: { '@id': `${siteUrl}/#organization` },
       about: [
         { '@type': 'Thing', name: 'commercial furniture manufacturing' },
@@ -84,7 +95,7 @@ const pillarSchema = {
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.snippet-bait', '[data-speakable="true"]'],
+        cssSelector: ['[data-speakable]'],
       },
     },
     {
@@ -440,6 +451,11 @@ export default function CommercialFurnitureManufacturingGuide() {
                 </Link>
                 .
               </p>
+              <p>
+                <strong>Related guide:</strong> sourcing for a hotel or restaurant project? Our{' '}
+                <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>{' '}
+                covers budgets, lifecycles, brand standards, and the full buying process.
+              </p>
             </section>
 
             <section id="faqs" className={styles.faqSection}>
@@ -447,7 +463,7 @@ export default function CommercialFurnitureManufacturingGuide() {
               {faqs.map((faq) => (
                 <details key={faq.question} className={styles.faqItem}>
                   <summary className={styles.faqQuestion}>{faq.question}</summary>
-                  <p className={styles.faqAnswer}>{faq.answer}</p>
+                  <p className={styles.faqAnswer} data-speakable="answer">{faq.answerJsx || faq.answer}</p>
                 </details>
               ))}
             </section>

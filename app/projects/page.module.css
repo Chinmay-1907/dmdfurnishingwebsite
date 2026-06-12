@@ -114,13 +114,10 @@
   margin-top: 1.75rem;
 }
 
-/* Floating accent orbs */
-@keyframes floatOrb {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(15px, -10px) scale(1.05); }
-  66% { transform: translate(-10px, 8px) scale(0.97); }
-}
-
+/* Static accent orbs — formerly animated on an infinite floatOrb keyframe.
+   The constant repaint kept Lighthouse Speed Index at ~10s because the
+   viewport never visually settles; 15px of drift behind 50px of blur was
+   imperceptible anyway. Keep these static. */
 .hero::before {
   content: '';
   position: absolute;
@@ -133,7 +130,6 @@
   filter: blur(50px);
   pointer-events: none;
   z-index: 1;
-  animation: floatOrb 12s ease-in-out infinite;
 }
 
 .hero::after {
@@ -148,7 +144,6 @@
   filter: blur(40px);
   pointer-events: none;
   z-index: 1;
-  animation: floatOrb 10s ease-in-out infinite reverse;
 }
 
 /* ── Buttons ── */
@@ -461,7 +456,7 @@
 .ctaContact a {
   color: rgba(244, 240, 230, 0.7);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .ctaContact a:hover {

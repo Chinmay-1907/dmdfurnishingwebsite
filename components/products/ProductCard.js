@@ -4,7 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './catalog-new.module.css';
 
-export default function ProductCard({ product }) {
+// priority: set on the first row of an above-the-fold grid. Hardcoded lazy
+// loading meant the first visible card image was the page's LCP element but
+// was never preloaded.
+export default function ProductCard({ product, priority = false }) {
   const hasHover = product.hoverImage && product.hoverImage !== product.image;
 
   return (
@@ -16,7 +19,8 @@ export default function ProductCard({ product }) {
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
           className={styles.productImage}
-          loading="lazy"
+          priority={priority}
+          loading={priority ? undefined : 'lazy'}
         />
         {hasHover && (
           <Image

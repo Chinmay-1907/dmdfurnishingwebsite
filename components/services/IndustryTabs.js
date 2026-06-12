@@ -10,11 +10,11 @@ export default function IndustryTabs({ industries }) {
     industries && industries.length > 0 ? industries[0].slug : null
   );
 
-  const activeIndustry = industries
-    ? industries.find((ind) => ind.slug === activeSlug) || industries[0]
-    : null;
-
   if (!industries || industries.length === 0) return null;
+
+  const resolvedSlug = industries.some((ind) => ind.slug === activeSlug)
+    ? activeSlug
+    : industries[0].slug;
 
   return (
     <div className={styles.wrapper}>
@@ -25,10 +25,10 @@ export default function IndustryTabs({ industries }) {
             <button
               key={industry.slug}
               className={`${styles.tab} ${
-                activeSlug === industry.slug ? styles.tabActive : ''
+                resolvedSlug === industry.slug ? styles.tabActive : ''
               }`}
               onClick={() => setActiveSlug(industry.slug)}
-              aria-pressed={activeSlug === industry.slug}
+              aria-pressed={resolvedSlug === industry.slug}
             >
               {industry.name}
             </button>
@@ -36,51 +36,59 @@ export default function IndustryTabs({ industries }) {
         </div>
       </nav>
 
-      {/* Content panel */}
-      {activeIndustry && (
-        <div className={styles.panel} key={activeIndustry.slug}>
-          <div className={styles.grid}>
-            {/* Image */}
-            <div className={styles.imageWrapper}>
-              <Image
-                src={activeIndustry.image}
-                alt={activeIndustry.name}
-                fill
-                sizes="(max-width: 720px) 100vw, 50vw"
-                className={styles.image}
-              />
-            </div>
+      {/* Content panels — ALL rendered in the DOM so crawlers and AI agents can
+          read every vertical's description; inactive ones are CSS-hidden. */}
+      {industries.map((industry) => {
+        const isActive = industry.slug === resolvedSlug;
+        return (
+          <div
+            key={industry.slug}
+            className={`${styles.panel} ${isActive ? styles.panelActive : ''}`}
+            hidden={!isActive}
+          >
+            <div className={styles.grid}>
+              {/* Image */}
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={industry.image}
+                  alt={industry.name}
+                  fill
+                  sizes="(max-width: 720px) 100vw, 50vw"
+                  className={styles.image}
+                />
+              </div>
 
-            {/* Text content */}
-            <div className={styles.content}>
-              <h3 className={styles.industryName}>{activeIndustry.fullName || activeIndustry.name}</h3>
-              <p className={styles.description}>{activeIndustry.description}</p>
+              {/* Text content */}
+              <div className={styles.content}>
+                <h3 className={styles.industryName}>{industry.fullName || industry.name}</h3>
+                <p className={styles.description}>{industry.description}</p>
 
-              {activeIndustry.highlights && activeIndustry.highlights.length > 0 && (
-                <ul className={styles.highlights}>
-                  {activeIndustry.highlights.map((item, index) => (
-                    <li key={index} className={styles.highlightItem}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                {industry.highlights && industry.highlights.length > 0 && (
+                  <ul className={styles.highlights}>
+                    {industry.highlights.map((item, index) => (
+                      <li key={index} className={styles.highlightItem}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-              {activeIndustry.productLink && (
-                <Link href={activeIndustry.productLink} className={styles.productLink}>
-                  View Products
-                  {activeIndustry.productCount != null && (
-                    <span className={styles.productCount}>
-                      {' '}({activeIndustry.productCount})
-                    </span>
-                  )}
-                  <span className={styles.arrow} aria-hidden="true">&#8594;</span>
-                </Link>
-              )}
+                {industry.productLink && (
+                  <Link href={industry.productLink} className={styles.productLink}>
+                    View Products
+                    {industry.productCount != null && (
+                      <span className={styles.productCount}>
+                        {' '}({industry.productCount})
+                      </span>
+                    )}
+                    <span className={styles.arrow} aria-hidden="true">&#8594;</span>
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        );
+      })}
     </div>
   );
 }

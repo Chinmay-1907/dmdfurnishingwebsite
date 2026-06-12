@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -6,26 +7,27 @@ import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
 export const metadata = {
-  title: 'HPL vs Veneer vs Solid Wood',
+  title: 'HPL vs Veneer vs Solid Wood Casegoods',
   description:
-    'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, and best fit by hotel tier.',
+    'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, refinishing, and the best fit for each hotel tier.',
   alternates: {
     canonical:
-      'https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods',
+      `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`,
   },
   openGraph: {
-    title: 'HPL vs Veneer vs Solid Wood | DMD Furnishing',
+    title: 'HPL vs Veneer vs Solid Wood Casegoods | DMD Furnishing',
     description:
-      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, and best fit by hotel tier.',
-    url: 'https://dmdfurnishing.com/blog/hpl-veneer-solid-wood-hotel-casegoods',
+      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, refinishing, and the best fit for each hotel tier.',
+    url: `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-16',
     modifiedTime: '2026-03-22',
     authors: ['DMD Furnishing Editorial Team'],
     images: [
       {
-        url: 'https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg',
+        url: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
         width: 1200,
         height: 630,
       },
@@ -33,9 +35,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HPL vs Veneer vs Solid Wood | DMD Furnishing',
+    title: 'HPL vs Veneer vs Solid Wood Casegoods | DMD Furnishing',
     description:
-      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, and best fit by hotel tier.',
+      'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, refinishing, and the best fit for each hotel tier.',
   },
 };
 
@@ -43,38 +45,25 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'BlogPosting',
       '@id': `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods#article`,
       headline:
         'HPL vs Veneer vs Solid Wood: Choosing the Right Surface for Hotel Casegoods',
+      description:
+        'Compare HPL, wood veneer, and solid wood for hotel casegood surfaces: durability, cost, moisture resistance, refinishing, and the best fit for each hotel tier.',
       datePublished: '2026-03-16',
       dateModified: '2026-03-22',
-      author: {
-        '@type': 'Person',
-        name: 'DMD Furnishing Editorial Team',
-        jobTitle: 'Commercial Furniture Specialists',
-        url: `${siteUrl}/about`,
-        worksFor: {
-          '@type': 'Organization',
-          name: 'DMD Furnishing',
-          '@id': `${siteUrl}/#organization`,
-        },
-      },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+        cssSelector: ['[data-speakable]'],
       },
-      publisher: {
-        '@type': 'Organization',
-        name: 'DMD Furnishing',
-        url: siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-        },
-      },
+      publisher: { '@id': `${siteUrl}/#organization` },
       mainEntityOfPage: `${siteUrl}/blog/hpl-veneer-solid-wood-hotel-casegoods`,
-      image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+      image: [
+        `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+        `${siteUrl}/Images/Our_Projects.jpg`,
+      ],
     },
     {
       '@type': 'BreadcrumbList',
@@ -156,9 +145,11 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
       <article className={styles.container}>
         <header className={styles.articleHeader}>
           <p className={styles.articleMeta}>
-            <time dateTime="2026-03-22">March 22, 2026</time>
+            Published <time dateTime="2026-03-16">March 16, 2026</time>
             {' · '}
-            DMD Furnishing
+            Updated <time dateTime="2026-03-22">March 22, 2026</time>
+            {' · '}
+            By <Link href="/author/dmd-furnishing-editorial">DMD Furnishing Editorial Team</Link>
           </p>
           <h1 className={styles.articleTitle}>
             HPL vs Veneer vs Solid Wood: Choosing the Right Surface for Hotel Casegoods
@@ -168,7 +159,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             surface options for hotel casegoods, each trading cost, durability, authentic grain,
             and repairability differently.
           </AnswerCallout>
-          <p className={styles.articleLead}>
+          <p className={styles.articleLead} data-speakable="lede">
             The short answer: use HPL on high-traffic surfaces in economy and limited-service
             properties, introduce veneer accents at midscale and upscale tiers, and reserve
             solid wood for premium detail work in luxury and boutique hotels. The longer
@@ -178,7 +169,19 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
         </header>
 
         <div className={styles.content}>
-          <h2>Why Surface Selection Matters for Hotel Casegoods</h2>
+          <nav className={styles.toc} aria-label="Table of contents">
+            <p className={styles.tocTitle}>In This Article</p>
+            <ol className={styles.tocList}>
+              <li><a href="#why-it-matters">Why Surface Selection Matters</a></li>
+              <li><a href="#hpl">HPL (High-Pressure Laminate)</a></li>
+              <li><a href="#wood-veneer">Wood Veneer</a></li>
+              <li><a href="#solid-wood">Solid Wood</a></li>
+              <li><a href="#comparison">Side-by-Side Comparison</a></li>
+              <li><a href="#by-hotel-tier">Recommendation by Hotel Tier</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="why-it-matters">Why Surface Selection Matters for Hotel Casegoods</h2>
           <p>
             Hotel casegoods (headboards, night stands, bed frames, desks, TV media
             panels, amenity towers, luggage benches, and vanities) see sustained daily
@@ -188,21 +191,40 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             At the same time, the surface material is one of the most visible quality
             signals a guest perceives when they enter a room.
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Our_Projects.jpg"
+              alt="Hotel guestroom with light oak casegoods: wardrobe, dresser with mirror, and minibar unit"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Casegood surfaces dominate a guestroom's visual field: wardrobe, dresser, and minibar
+              fronts all read as one finish system, and the guest cannot tell from across the room
+              whether it is HPL, veneer, or solid wood.
+            </figcaption>
+          </figure>
           <p>
             Selecting the right surface is therefore both a durability decision and a
             brand positioning decision. Understanding how each of the three primary
             options performs in practice is the starting point for any hotel casegood
-            specification.
+            specification. For how these material choices fit into the wider build
+            process, from construction standards to factory QC, see our{' '}
+            <Link href="/guides/commercial-furniture-manufacturing">
+              commercial furniture manufacturing guide
+            </Link>.
           </p>
 
-          <h2>HPL (High-Pressure Laminate)</h2>
+          <h2 id="hpl">HPL (High-Pressure Laminate)</h2>
           <p>
             High-Pressure Laminate is manufactured by bonding layers of resin-impregnated
             paper under high heat and pressure. The result is a dense, hard surface that
             resists scratches, abrasion, most cleaning chemicals, and moisture (critical
             for hotel environments). HPL is specified at desk tops, night stand
-            tops, vanity surfaces, and TV media panels across a wide range of commercial
-            projects from healthcare to hospitality precisely because it performs
+            tops, vanity surfaces, and TV media panels across commercial projects from
+            healthcare to hospitality precisely because it performs
             predictably over time.
           </p>
 
@@ -243,9 +265,13 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             surface applied to an MDF substrate with edge-banded details. This
             construction is used across desk surfaces, night stand tops, TV media panel
             facings, and luggage bench tops where durability requirements are highest.
+            For the full roster of pieces these surfaces appear on, see our{' '}
+            <Link href="/blog/hotel-guestroom-furniture-checklist">
+              hotel guestroom furniture checklist
+            </Link>.
           </p>
 
-          <h2>Wood Veneer</h2>
+          <h2 id="wood-veneer">Wood Veneer</h2>
           <p>
             Wood veneer is a thin slice of real wood, typically 0.5 mm to 3 mm thick,
             bonded to a substrate, usually MDF. It delivers the natural grain, warmth,
@@ -306,7 +332,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             material appearance where it delivers the most brand value.
           </p>
 
-          <h2>Solid Wood</h2>
+          <h2 id="solid-wood">Solid Wood</h2>
           <p>
             Solid wood refers to lumber cut directly from timber with no added lamination
             layer. It is the most premium specification and carries the most distinctive
@@ -348,7 +374,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             </li>
           </ul>
 
-          <h2>Side-by-Side Comparison</h2>
+          <h2 id="comparison">Side-by-Side Comparison</h2>
 
           <table className={styles.comparisonTable}>
               <thead>
@@ -384,13 +410,27 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               </tbody>
             </table>
 
-          <h2>Practical Recommendation by Hotel Tier</h2>
+          <h2 id="by-hotel-tier">Practical Recommendation by Hotel Tier</h2>
           <p>
             Surface material selection should align with the property's brand tier,
             average daily rate, and the level of housekeeping intensity the operation
             can sustain. The following guidance reflects how these materials are
             practically applied across the hospitality market:
           </p>
+
+          <figure>
+            <Image
+              src="/Images/Tailored_Guestroom_Collections.jpg"
+              alt="Hotel guestroom casegoods with coordinated surface finishes across headboard, nightstand, and desk"
+              width={1408}
+              height={768}
+              sizes="(max-width: 760px) 100vw, 720px"
+            />
+            <figcaption>
+              Whatever the tier, the rule holds: one surface system, specified once, applied
+              consistently across every casegood in the room.
+            </figcaption>
+          </figure>
 
           <h3>Economy and Limited-Service Hotels</h3>
           <p>
@@ -411,7 +451,12 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
             a desk or credenza signals quality without specifying it throughout. The
             specification typically reads as Laminate/Veneer on guest-facing surfaces
             and straight laminate on functional surfaces, an efficient allocation of
-            material budget toward visible impact.
+            material budget toward visible impact. That targeted approach is the core
+            move in{' '}
+            <Link href="/blog/value-engineering-commercial-furniture">
+              value engineering commercial furniture
+            </Link>{' '}
+            without losing design intent.
           </p>
 
           <h3>Upscale and Upper-Upscale Hotels</h3>
@@ -475,7 +520,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 Is HPL suitable for luxury hotel casegoods?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 HPL is suitable for functional surfaces in luxury hotels (vanity tops,
                 desk writing surfaces, and secondary panel backs) where durability
                 matters more than natural material perception. On guest-facing visual
@@ -488,7 +533,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 Can wood veneer handle hotel bathroom moisture conditions?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 Not reliably without additional protection. Standard veneer is susceptible
                 to delamination and raised grain in sustained moisture environments.
                 Bathroom vanity surfaces should be specified in HPL or a sealed stone
@@ -501,7 +546,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 What does "Laminate/Veneer; edge-banded MDF" mean in a furniture specification?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 This describes a mixed construction: the carcass is MDF (medium-density
                 fiberboard) for dimensional stability, edges are finished with banded
                 laminate for durability and a clean profile, and primary visual surfaces
@@ -515,7 +560,7 @@ export default function HplVeneerSolidWoodHotelCasegoods() {
               <p className={styles.faqQuestion}>
                 How does surface material affect hotel furniture lead times?
               </p>
-              <p className={styles.faqAnswer}>
+              <p className={styles.faqAnswer} data-speakable="answer">
                 HPL is the fastest: it is manufactured to consistent specifications and
                 stocked in standard finishes. Veneer adds lead time for species selection,
                 face matching, and panel sequencing. Solid wood has the longest lead time

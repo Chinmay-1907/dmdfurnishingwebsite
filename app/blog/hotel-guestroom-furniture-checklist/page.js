@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
@@ -8,17 +9,18 @@ import styles from '../page.module.css';
 export const metadata = {
   title: 'Hotel Guestroom Furniture Checklist',
   description:
-    'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
+    'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities, plus spec guidance for every piece.',
   alternates: {
     canonical: `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
   },
   openGraph: {
     title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
     description:
-      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
+      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities, plus spec guidance for every piece.',
     url: `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
     siteName: 'DMD Furnishing',
     type: 'article',
+    locale: 'en_US',
     publishedTime: '2026-03-08',
     modifiedTime: '2026-03-29',
     authors: ['DMD Furnishing Editorial Team'],
@@ -34,42 +36,28 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Hotel Guestroom Furniture Checklist | DMD Furnishing',
     description:
-      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities with specification guidance.',
+      'Complete hotel guestroom furniture checklist covering casegoods, seating, bed components, TV media panels, and vanities, plus spec guidance for every piece.',
   },
 };
 
 const articleSchema = {
-  '@type': 'Article',
+  '@type': 'BlogPosting',
   '@id': `${siteUrl}/blog/hotel-guestroom-furniture-checklist#article`,
   headline: 'Hotel Guestroom Furniture Checklist: What Every Room Needs',
   description:
     'A thorough breakdown of every furniture piece required in a hotel guestroom, from headboard and bed frame to desk, luggage bench, and vanity, with commercial specification guidance.',
   datePublished: '2026-03-08',
   dateModified: '2026-03-29',
-  author: {
-    '@type': 'Person',
-    name: 'DMD Furnishing Editorial Team',
-    jobTitle: 'Commercial Furniture Specialists',
-    url: `${siteUrl}/about`,
-    worksFor: {
-      '@type': 'Organization',
-      name: 'DMD Furnishing',
-      '@id': `${siteUrl}/#organization`,
-    },
-  },
+  author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
   speakable: {
     '@type': 'SpeakableSpecification',
-    cssSelector: ['.articleLead', '.faqAnswer', 'h1', 'h2'],
+    cssSelector: ['[data-speakable]'],
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'DMD Furnishing',
-    logo: {
-      '@type': 'ImageObject',
-      url: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
-    },
-  },
-  image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+  publisher: { '@id': `${siteUrl}/#organization` },
+  image: [
+    `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
+    `${siteUrl}/Images/Our_Products.jpg`,
+  ],
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${siteUrl}/blog/hotel-guestroom-furniture-checklist`,
@@ -153,7 +141,11 @@ export default function HotelGuestroomChecklistPage() {
 
       <article className={styles.container}>
           <header className={styles.articleHeader}>
-            <p className={styles.articleMeta}>March 29, 2026 &nbsp;·&nbsp; Hotel Furniture</p>
+            <p className={styles.articleMeta}>
+              Published <time dateTime="2026-03-08">March 8, 2026</time> &nbsp;·&nbsp; Updated{' '}
+              <time dateTime="2026-03-29">March 29, 2026</time> &nbsp;·&nbsp; By{' '}
+              <Link href="/author/dmd-furnishing-editorial">DMD Furnishing Editorial Team</Link>
+            </p>
             <h1 className={styles.articleTitle}>
               Hotel Guestroom Furniture Checklist: What Every Room Needs
             </h1>
@@ -162,7 +154,7 @@ export default function HotelGuestroomChecklistPage() {
               goods, lighting, and fixtures required to outfit one room at the brand standard, from
               the bed and headboard to the luggage bench and in room seating.
             </AnswerCallout>
-            <p className={styles.articleLead}>
+            <p className={styles.articleLead} data-speakable="lede">
               Every hotel guestroom requires a defined set of furniture pieces to meet brand
               standards, pass franchisor inspection, and deliver the guest experience the property
               promises. This checklist covers every major casegood, seating, and specialty piece,
@@ -219,8 +211,24 @@ export default function HotelGuestroomChecklistPage() {
               The checklist also serves as a procurement tool. Each line item requires a quantity
               count, a specification sheet, and a lead time estimate. Starting the furniture
               procurement process with an incomplete checklist is one of the most common causes of
-              rushed orders and substitutions that compromise the design intent.
+              rushed orders and substitutions that compromise the design intent. For how the
+              checklist feeds into budgeting, vendor selection, and installation, see our{' '}
+              <Link href="/guides/hospitality-ffe">hospitality FF&amp;E procurement guide</Link>.
             </p>
+
+            <figure>
+              <Image
+                src="/Images/Tailored_Guestroom_Collections.jpg"
+                alt="Complete hotel guestroom furniture collection: bed with channel-stitched headboard, nightstand, dresser, desk, and lounge seating"
+                width={1408}
+                height={768}
+                sizes="(max-width: 760px) 100vw, 720px"
+              />
+              <figcaption>
+                A keyed room is a checklist made physical: every piece in this set is a separate
+                line item with its own spec sheet and lead time.
+              </figcaption>
+            </figure>
 
             <h2 id="bed-components">What Bed Components Belong in a Hotel Guestroom?</h2>
             <p>
@@ -233,7 +241,8 @@ export default function HotelGuestroomChecklistPage() {
 
             <h3>Headboard</h3>
             <p>
-              The headboard is the most visible design element in the guestroom. It is typically
+              The <Link href="/products/headboard">headboard</Link> is the most visible design
+              element in the guestroom. It is typically
               upholstered in a commercial-grade fabric or faux leather with a high rub-count
               rating appropriate for hospitality use. Headboards may be wall-mounted, attached to
               the bed frame, or freestanding. Size and configuration vary based on the bed type
@@ -243,7 +252,8 @@ export default function HotelGuestroomChecklistPage() {
 
             <h3>Bed Frame</h3>
             <p>
-              Commercial hotel bed frames are engineered for repetitive loading well above residential
+              Commercial hotel <Link href="/products/king-bed-frame">bed frames</Link> are
+              engineered for repetitive loading well above residential
               standards. They are typically constructed from powder-coated steel or solid wood and
               designed to accommodate commercial innerspring or hybrid mattress foundations.
               Bed frames in hospitality environments must resist racking, maintain alignment over
@@ -261,6 +271,20 @@ export default function HotelGuestroomChecklistPage() {
               substrate) with HPL or veneer faces, and commercial-grade hardware rated for
               heavy-cycle use.
             </p>
+
+            <figure>
+              <Image
+                src="/Images/Our_Products.jpg"
+                alt="Hotel suite casegoods with matched finishes: wardrobe, nightstand, TV media panel, and display shelving"
+                width={1408}
+                height={768}
+                sizes="(max-width: 760px) 100vw, 720px"
+              />
+              <figcaption>
+                Casegoods are the largest block on the checklist, and finishes must match across
+                every piece in the room.
+              </figcaption>
+            </figure>
 
             <h3>Night Stand</h3>
             <p>
@@ -415,7 +439,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What furniture is standard in a hotel guestroom?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   A standard hotel guestroom typically includes a bed frame, headboard, two
                   nightstands, a dresser or wardrobe, a desk with desk chair, a luggage bench,
                   and a TV media panel. Higher-tier properties may also include a lounge chair,
@@ -425,7 +449,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What is a hotel amenity tower?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   An amenity tower is a vertical storage unit typically located in the guestroom
                   or entry area. It houses the minibar, safe, and storage for guest belongings,
                   often integrated with the TV media panel or positioned as a standalone casegood.
@@ -435,7 +459,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>What materials are used for hotel guestroom casegoods?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   Hotel guestroom casegoods are most commonly constructed from MDF or engineered
                   wood substrates with either HPL (High-Pressure Laminate) or wood veneer faces.
                   HPL offers excellent scratch resistance and consistent color at lower cost. Veneer
@@ -446,7 +470,7 @@ export default function HotelGuestroomChecklistPage() {
 
               <div className={styles.faqItem}>
                 <p className={styles.faqQuestion}>How does a luggage bench differ from a luggage rack?</p>
-                <p className={styles.faqAnswer}>
+                <p className={styles.faqAnswer} data-speakable="answer">
                   A luggage bench is an upholstered, casegood-style piece that provides a firm,
                   padded surface for suitcases and doubles as seating at the foot of the bed. It
                   integrates with the room design and often includes built-in storage below. A

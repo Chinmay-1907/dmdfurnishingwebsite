@@ -68,6 +68,15 @@
   border: 1px solid rgba(201, 169, 110, 0.12);
   border-radius: 22px;
   padding: 2rem 2.25rem;
+}
+
+/* Inactive panels stay in the DOM (crawlable) but are visually hidden */
+.panel[hidden] {
+  display: none;
+}
+
+/* Fade-in runs each time a panel becomes the active one */
+.panelActive {
   animation: fadeIn 280ms ease both;
 }
 

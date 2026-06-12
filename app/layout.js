@@ -14,17 +14,26 @@ import {
   websiteSchema,
 } from '../lib/metadata';
 
+// Weights trimmed to what the CSS actually uses (audit 2026-06):
+// Playfair 400 had a single user (.pullQuote, remapped to 500);
+// Source Sans 300 only styled FAQ "+" glyphs (remapped to 400).
+// display: 'optional' (not 'swap'): both fonts are self-hosted and preloaded,
+// so they normally win the race against first paint. When they lose (cold
+// cache, slow network), 'swap' repainted the page mid-load — that reflow was
+// the recurring 0.13 CLS on fast-painting pages and re-triggered LCP. With
+// 'optional' the metric-adjusted fallback simply keeps the page for that
+// visit; the brand font appears from cache on the next navigation.
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
+  weight: ['500', '600', '700'],
+  display: 'optional',
   variable: '--font-serif',
 });
 
 const sourceSans = Source_Sans_3({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  display: 'optional',
   variable: '--font-sans',
 });
 
@@ -36,9 +45,11 @@ export const metadata = {
   },
   description:
     'Custom hospitality furniture designed, manufactured, and installed by DMD Furnishing in Foxboro, MA. FF&E for hotels, restaurants, and offices nationwide.',
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     siteName: 'DMD Furnishing',
+    locale: 'en_US',
     images: [
       {
         url: '/Images/Tailored_Guestroom_Collections.jpg',
@@ -69,6 +80,9 @@ export const metadata = {
 export const viewport = { width: 'device-width', initialScale: 1 };
 
 export default function RootLayout({ children }) {
+  // Plausible analytics activates only when NEXT_PUBLIC_PLAUSIBLE_DOMAIN is set.
+  const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+
   return (
     <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${sourceSans.variable}`}>
       <head>
@@ -76,7 +90,6 @@ export default function RootLayout({ children }) {
             BEFORE first paint. Without this, every visit would briefly show
             the wrong theme while React hydrates. */}
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-        <link rel="preload" as="image" href="/Images/Tailored_Guestroom_Collections.jpg" fetchPriority="high" />
         {/* Google Analytics 4 — property "DMD Furnishing" (530010585), stream G-DMF712ECDR */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DMF712ECDR"
@@ -92,6 +105,14 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body>
+        {plausibleDomain && (
+          <Script
+            defer
+            data-domain={plausibleDomain}
+            src="https://plausible.io/js/script.js"
+            strategy="afterInteractive"
+          />
+        )}
         <ThemeProvider>
           <WebVitals />
           <ScrollToTop />

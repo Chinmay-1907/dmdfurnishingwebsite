@@ -4,7 +4,7 @@ import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import CountUp from '../components/CountUp';
 import JsonLd from '../components/JsonLd';
 import { getAllPlaces } from '../lib/catalog';
-import { generatePageMetadata } from '../lib/metadata';
+import { generatePageMetadata, siteUrl } from '../lib/metadata';
 import { getAllProjects } from '../lib/projects';
 import styles from './page.module.css';
 
@@ -38,12 +38,18 @@ const pageDescription =
   'Custom hospitality FF&E designed, built, and installed nationwide. Hotels, restaurants, offices: 20-room refreshes to 500-key rollouts. Foxboro, MA.';
 
 export function generateMetadata() {
-  return generatePageMetadata({
+  const metadata = generatePageMetadata({
     title: 'Hospitality Furniture Manufacturer | Custom FF&E',
     description: pageDescription,
     path: '/',
     image: '/Images/Tailored_Guestroom_Collections.jpg',
   });
+  // The layout title template only applies to child segments, so the root
+  // page must spell the brand suffix out itself.
+  return {
+    ...metadata,
+    title: { absolute: 'Hospitality Furniture Manufacturer | Custom FF&E | DMD Furnishing' },
+  };
 }
 
 export default function HomePage() {
@@ -67,7 +73,7 @@ export default function HomePage() {
     if (b.slug === 'hotel') return 1;
     return 0;
   });
-  const featuredPlaces = hotelFirst.slice(0, 6);
+  const featuredPlaces = hotelFirst.slice(0, 7);
 
   const beforeAfterProject = projects.find((p) => p.beforeImages && p.beforeImages.length > 0);
 
@@ -83,13 +89,13 @@ export default function HomePage() {
     '@type': 'WebPage',
     '@id': 'https://dmdfurnishing.com/#webpage',
     url: 'https://dmdfurnishing.com/',
-    name: 'Custom Hospitality Furniture & Commercial FF&E | DMD Furnishing',
+    name: 'Hospitality Furniture Manufacturer | Custom FF&E',
     description: pageDescription,
     isPartOf: { '@id': 'https://dmdfurnishing.com/#website' },
     about: { '@id': 'https://dmdfurnishing.com/#organization' },
     primaryImageOfPage: {
       '@type': 'ImageObject',
-      url: 'https://dmdfurnishing.com/Images/Tailored_Guestroom_Collections.jpg',
+      url: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
     },
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -107,7 +113,7 @@ export default function HomePage() {
         name: 'What is FF&E and why does it matter for hospitality projects?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'FF&E stands for Furniture, Fixtures & Equipment: the movable items in a commercial space such as beds, desks, chairs, lighting, and accessories that are not permanently attached to the structure. For hotels, restaurants, and offices, FF&E typically represents 15 to 25 percent of total construction costs and directly shapes guest experience and brand consistency.',
+          text: 'FF&E stands for Furniture, Fixtures & Equipment: the movable items in a commercial space such as beds, desks, chairs, lighting, and accessories that are not permanently attached to the structure. In DMD Furnishing\'s project experience, FF&E typically represents 15 to 25 percent of total construction costs for hotels, restaurants, and offices, and directly shapes guest experience and brand consistency.',
         },
       },
       {
@@ -185,7 +191,7 @@ export default function HomePage() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Custom Hospitality FF&amp;E · Built to Spec · Installed Nationwide</p>
-          <h1><span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
+          <h1>Custom Hospitality Furniture. <span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
           <p className={styles.heroTagline}>Custom FF&amp;E for Hotels, Restaurants &amp; Commercial Spaces</p>
           <p className={styles.lede} data-speakable="lede">
             Every piece built to your finish samples, hardware selections, and dimension drawings.<br />
@@ -202,13 +208,17 @@ export default function HomePage() {
       {/* ── 2. Trust Bar — Animated Stats ── */}
       <div className={styles.trustBar}>
         <div className={styles.trustStats}>
+          {/* No hardcoded fallback: show the counter only when the number is
+              actually derived from project data ("we do not invent statistics"). */}
+          {totalRooms > 0 && (
+            <div className={styles.trustStat}>
+              <CountUp end={totalRooms} suffix="+" className={styles.trustStatNumber} />
+              <span className={styles.trustStatLabel}>Rooms Delivered and Installed</span>
+            </div>
+          )}
           <div className={styles.trustStat}>
-            <CountUp end={totalRooms || 285} suffix="+" className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Rooms Delivered and Installed</span>
-          </div>
-          <div className={styles.trustStat}>
-            <CountUp end={projects.length} suffix="+" className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Commercial FF&amp;E Projects</span>
+            <span className={styles.trustStatNumber}>Multi-State</span>
+            <span className={styles.trustStatLabel}>Full-Property Installs &mdash; FL &middot; ME &middot; MD &middot; MA</span>
           </div>
           <div className={styles.trustStat}>
             <CountUp end={places.length} className={styles.trustStatNumber} />
@@ -232,13 +242,14 @@ export default function HomePage() {
             <Link
               key={place.slug}
               href={`/products/${place.slug}`}
-              className={`${styles.productCard} ${index === 0 ? styles.productGridFeature : ''} fade-in-up`}
+              className={`${styles.productCard} ${index === 0 ? styles.productGridFeature : ''} ${index === 6 ? styles.productGridWide : ''} fade-in-up`}
             >
               <Image
                 src={place.image}
-                alt={place.name}
+                alt={`${place.name} commercial furniture collection by DMD Furnishing`}
                 fill
                 sizes={index === 0 ? '(max-width: 800px) 100vw, 66vw' : '(max-width: 800px) 100vw, 33vw'}
+                style={{ objectFit: 'cover' }}
               />
               <div className={styles.productCardOverlay} />
               <div className={styles.productCardBody}>
@@ -374,7 +385,7 @@ export default function HomePage() {
         <div className={`${styles.faqList} fade-in-up`} data-speakable="faq">
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>What is FF&amp;E and why does it matter for hospitality projects?</summary>
-            <p className={styles.faqAnswer}>FF&amp;E stands for Furniture, Fixtures &amp; Equipment: the movable items in a commercial space such as beds, desks, chairs, lighting, and accessories that are not permanently attached to the structure. For hotels, restaurants, and offices, FF&amp;E typically represents 15 to 25 percent of total construction costs and directly shapes guest experience and brand consistency. The{' '}<a href="https://www.ahla.com/" target="_blank" rel="noopener noreferrer">American Hotel &amp; Lodging Association (AHLA)</a>{' '}offers industry guidance on hospitality standards and capital planning.</p>
+            <p className={styles.faqAnswer}><Link href="/blog/what-is-ffe-hospitality">FF&amp;E</Link> stands for Furniture, Fixtures &amp; Equipment: the movable items in a commercial space such as beds, desks, chairs, lighting, and accessories that are not permanently attached to the structure. In DMD Furnishing&apos;s project experience, FF&amp;E typically represents 15 to 25 percent of total construction costs for hotels, restaurants, and offices, and directly shapes guest experience and brand consistency. The{' '}<a href="https://www.ahla.com/" target="_blank" rel="noopener noreferrer">American Hotel &amp; Lodging Association (AHLA)</a>{' '}offers industry guidance on hospitality standards and capital planning.</p>
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>What types of commercial spaces does DMD Furnishing serve?</summary>
@@ -386,7 +397,7 @@ export default function HomePage() {
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>What is value engineering in commercial furniture?</summary>
-            <p className={styles.faqAnswer}>Value engineering means analyzing materials, construction methods, and design details to cut cost without sacrificing quality or visual intent. At DMD, it&rsquo;s standard on every bid. We find where smarter material choices and manufacturing methods can hit your budget while keeping the design intact.</p>
+            <p className={styles.faqAnswer}><Link href="/blog/value-engineering-commercial-furniture">Value engineering</Link> means analyzing materials, construction methods, and design details to cut cost without sacrificing quality or visual intent. At DMD, it&rsquo;s standard on every bid. We find where smarter material choices and manufacturing methods can hit your budget while keeping the design intact.</p>
           </details>
           <details className={styles.faqItem}>
             <summary className={styles.faqQuestion}>How much does custom hospitality furniture cost?</summary>
@@ -403,7 +414,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 9. Final CTA ── */}
+      {/* ── 9. Buyer Guides ── */}
+      <section className={styles.section}>
+        <div className={`${styles.sectionHeader} fade-in-up`}>
+          <p className={styles.eyebrow}>Buyer Guides</p>
+          <h2>Deep-dive guides for FF&amp;E buyers and project teams.</h2>
+        </div>
+        <div className={styles.guideGrid}>
+          <Link href="/guides/hospitality-ffe" className={`${styles.guideCard} fade-in-up`}>
+            <h3>Hospitality FF&amp;E: A Complete Procurement Guide</h3>
+            <p>What FF&amp;E covers, how hotel budgets break down, brand standards, and how procurement runs from spec to install.</p>
+            <span className={styles.guideCardCta}>Read the guide &rarr;</span>
+          </Link>
+          <Link href="/guides/commercial-furniture-manufacturing" className={`${styles.guideCard} fade-in-up`}>
+            <h3>Commercial Furniture Manufacturing: A Buyer Guide</h3>
+            <p>Materials, construction standards, quality control, and value engineering behind contract-grade furniture.</p>
+            <span className={styles.guideCardCta}>Read the guide &rarr;</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ── 10. Final CTA ── */}
       <section className={`${styles.section} ${styles.finalCta} fade-in-up`}>
         <div className={`${styles.sectionHeader} ${styles.center}`}>
           <p className={styles.eyebrow}>Next Step</p>

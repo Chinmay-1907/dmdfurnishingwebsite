@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   getAllPlaces,
@@ -10,11 +11,12 @@ import {
   isProductSlug,
 } from '../../../lib/catalog';
 import { generatePageMetadata, siteUrl } from '../../../lib/metadata';
-import { placeContent } from '../../../lib/place-content';
+import { placeContent, placeRelatedGuides } from '../../../lib/place-content';
 import ProductCatalog from '../../../components/products/ProductCatalog';
 import CategoryContentBlock from '../../../components/products/CategoryContentBlock';
 import ProductDetailPage from '../../../components/products/ProductDetailPage';
 import Breadcrumbs from '../../../components/Breadcrumbs';
+import styles from '../../../components/products/catalog-new.module.css';
 
 /**
  * Single-segment dispatcher at /products/[slug].
@@ -45,37 +47,44 @@ export const dynamicParams = false;
 // --- Per-category metadata overrides (vertical-specific primary keywords) ---
 const placeMetaOverrides = {
   hotel: {
-    title: 'Hotel Furniture & Casegoods',
+    title: 'Hotel Furniture & Casegoods Manufacturer',
+    h1: 'Hotel Furniture & Casegoods Manufacturer',
     description:
       'Contract-grade hotel guestroom casegoods, headboards, desks, and lobby seating. Custom manufacturer for boutique and branded hotels.',
   },
   restaurant: {
-    title: 'Restaurant Furniture & Seating',
+    title: 'Restaurant Furniture & Seating Manufacturer',
+    h1: 'Restaurant Furniture & Seating Manufacturer',
     description:
-      'Custom restaurant banquettes, booths, dining chairs, and bar stools. Fire safety compliant. Built for U.S. restaurant operators.',
+      'Custom restaurant banquettes, booths, dining chairs, and bar stools. CAL TB 117-2013 and NFPA 701 compliant materials. Built for U.S. restaurant operators.',
   },
   office: {
-    title: 'Office Furniture & Workstations',
+    title: 'Commercial Office Furniture Manufacturer',
+    h1: 'Commercial Office Furniture Manufacturer',
     description:
-      'Commercial-grade task seating, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
+      'Commercial-grade task seating built to ANSI/BIFMA X5.1, height-adjustable workstations, conference tables, and collaboration lounge for corporate fit-outs and coworking.',
   },
   hospital: {
-    title: 'Healthcare Furniture',
+    title: 'Healthcare Furniture Manufacturer',
+    h1: 'Healthcare Furniture Manufacturer',
     description:
       'Bleach-cleanable healthcare furniture for hospitals, clinics, and medical offices. Bariatric seating, patient room casegoods, and performance upholstery.',
   },
   'educational-facilities': {
     title: 'Educational Facility Furniture',
+    h1: 'Educational Facility Furniture',
     description:
       'Classroom seating, dormitory wardrobes, library carrels, and active-learning furniture for K-12 and higher education. Contract-grade.',
   },
   residential: {
     title: 'Multi-Family and Residential Furniture',
+    h1: 'Multi-Family and Residential Furniture',
     description:
       'Multi-family and residential furniture for clubhouses, leasing offices, amenity lounges, and student housing. Contract-grade fabrics and construction.',
   },
   'lobby-area': {
     title: 'Lobby & Reception Furniture',
+    h1: 'Lobby & Reception Furniture',
     description:
       'Custom reception desks, lounge seating, and feature tables for hotel, corporate, healthcare, and multi-family lobbies. ADA coordinated.',
   },
@@ -95,11 +104,20 @@ export async function generateMetadata({ params }) {
       });
     }
     const primary = product.primary;
+    // Short catalog descriptions leave the meta description under ~130 chars;
+    // pad toward the 150-160 sweet spot with the manufacturer CTA.
+    const baseDescription =
+      product.description ||
+      `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`;
+    const fullDescription =
+      baseDescription.length < 120
+        ? `${baseDescription.replace(/\.?\s*$/, '.')} Custom-built by DMD Furnishing in Foxboro, MA — request specs and a quote.`
+        : baseDescription;
     return generatePageMetadata({
-      title: product.name,
-      description:
-        product.description ||
-        `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`,
+      title: primary?.subcategoryName
+        ? `${product.name} | Commercial ${primary.subcategoryName}`
+        : product.name,
+      description: fullDescription,
       path: `/products/${slug}`,
       image: product.image,
     });
@@ -138,7 +156,9 @@ function buildProductStructuredData(product) {
       : [{ src: product.image || '/placeholder.png', alt: product.name }]
   )
     .filter((image) => image?.src)
-    .map((image) => (image.src.startsWith('http') ? image.src : `${siteUrl}${image.src}`));
+    // encodeURI: image filenames contain raw spaces, which break the URLs
+    // crawlers extract from JSON-LD.
+    .map((image) => encodeURI(image.src.startsWith('http') ? image.src : `${siteUrl}${image.src}`));
 
   return {
     '@context': 'https://schema.org',
@@ -170,7 +190,11 @@ function buildProductStructuredData(product) {
           product.description ||
           `${product.name}, commercial-grade furniture for ${primary?.placeName?.toLowerCase() || 'commercial'} environments.`,
         image: productImages,
-        sku: product.id || product.slug,
+        // Custom-manufactured B2B furniture has no GTIN; the slug is the
+        // stable catalog identifier, and DMD is the manufacturer, so it
+        // doubles as the MPN.
+        sku: product.slug || product.id,
+        mpn: product.slug || product.id,
         brand: { '@type': 'Organization', name: 'DMD Furnishing' },
         category: primary?.subcategoryName || 'Commercial Furniture',
         manufacturer: {
@@ -218,7 +242,7 @@ function buildPlaceStructuredData(place, content, placeProducts) {
         mainEntity: {
           '@type': 'ItemList',
           numberOfItems: placeProducts.length,
-          itemListElement: placeProducts.slice(0, 20).map((product, idx) => ({
+          itemListElement: placeProducts.map((product, idx) => ({
             '@type': 'ListItem',
             position: idx + 1,
             url: `${siteUrl}/products/${product.slug}`,
@@ -283,6 +307,29 @@ export default async function ProductsDispatchPage({ params }) {
   const placeProducts = allProducts.filter((p) => p.placeSlugs.includes(place.slug));
   const content = placeContent[place.slug];
   const schema = buildPlaceStructuredData(place, content, placeProducts);
+  const override = placeMetaOverrides[place.slug];
+
+  // Group this place's products by furniture type for the server-rendered
+  // crawlable index, so every product page keeps a static inbound link.
+  const typeMap = new Map();
+  for (const product of [...placeProducts].sort((a, b) => a.name.localeCompare(b.name))) {
+    const membership = product.memberships?.find((m) => m.placeSlug === place.slug);
+    const typeName = membership?.furnitureTypeName || product.furnitureTypeName || 'General';
+    if (!typeMap.has(typeName)) typeMap.set(typeName, []);
+    typeMap.get(typeName).push(product);
+  }
+  const placeIndex = [...typeMap.entries()].map(([typeName, items]) => ({ typeName, items }));
+
+  // Mid-tier type pages that exist for this place (same >= 3 gate as the route)
+  const typePages = place.furnitureTypes
+    .map((ft) => ({
+      slug: ft.slug,
+      count: ft.subcategories.reduce((n, s) => n + s.products.length, 0),
+      title: /-/.test(ft.name)
+        ? ft.slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+        : ft.name,
+    }))
+    .filter((tp) => tp.count >= 3);
 
   return (
     <>
@@ -298,16 +345,58 @@ export default async function ProductsDispatchPage({ params }) {
         ]}
       />
       <ProductCatalog
-        products={allProducts}
+        products={placeProducts}
         filterOptions={filterOptions}
         initialFilters={{ space: place.slug }}
-        heroTitle={`${place.name} Furniture`}
+        heroTitle={override?.h1 || `${place.name} Furniture`}
         heroDescription={
           place.description ||
           `Browse all ${placeProducts.length} furniture products designed for ${place.name.toLowerCase()} environments.`
         }
       />
-      <CategoryContentBlock placeName={place.name} content={content} />
+      <CategoryContentBlock placeName={place.name} content={content} relatedGuides={placeRelatedGuides[place.slug]} />
+
+      {/* Mid-tier furniture-type landing pages for this place (>= 3 products each) */}
+      {typePages.length > 0 && (
+        <section className={styles.crawlIndex} aria-label={`${place.name} furniture by type`}>
+          <div className={styles.crawlIndexInner}>
+            <h2>Browse {place.name.toLowerCase()} furniture by type</h2>
+            <ul className={styles.crawlLinks}>
+              {typePages.map((tp) => (
+                <li key={tp.slug}>
+                  <Link href={`/products/${place.slug}/${tp.slug}`}>
+                    {tp.title} ({tp.count})
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Server-rendered crawlable index of every product in this place */}
+      <section className={styles.crawlIndex} aria-label={`Full ${place.name} product index`}>
+        <div className={styles.crawlIndexInner}>
+          <h2>Browse all {place.name} products A&ndash;Z</h2>
+          <p className={styles.crawlIndexLede}>
+            Every {place.name.toLowerCase()} product, grouped by furniture type.
+          </p>
+          {placeIndex.map((group) => (
+            <details key={group.typeName} className={styles.crawlGroup}>
+              <summary>{group.typeName}</summary>
+              <div className={styles.crawlType}>
+                <ul className={styles.crawlLinks}>
+                  {group.items.map((product) => (
+                    <li key={product.slug}>
+                      <Link href={product.href}>{product.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
     </>
   );
 }

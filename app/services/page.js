@@ -341,21 +341,6 @@ const serviceSchema = {
       areaServed: { '@type': 'Country', name: 'United States' },
     })),
     {
-      '@type': 'HowTo',
-      '@id': `${siteUrl}/services#how-to`,
-      name: 'FF&E Procurement and Manufacturing Process',
-      description:
-        'The seven phase DMD Furnishing process for custom commercial furniture, from first call through close out and warranty handover.',
-      totalTime: 'P6M',
-      step: processSteps.map((phase, index) => ({
-        '@type': 'HowToStep',
-        position: index + 1,
-        name: phase.title,
-        text: phase.description,
-        url: `${siteUrl}/services#process`,
-      })),
-    },
-    {
       '@type': 'FAQPage',
       mainEntity: [
         {
@@ -444,7 +429,7 @@ export default function ServicesPage() {
           <p className={styles.eyebrow}>How We Work</p>
           <h2>Seven phases, each with a named deliverable.</h2>
           <p className={styles.sectionLede}>
-            TL;DR - intro call, scope and budget, 3D design, production in Foxboro or overseas, factory QC, phased install, punch list close out. Each phase below has a named deliverable so you always know what you are getting.
+            In short: intro call, scope and budget, 3D design, production in Foxboro or overseas, factory QC, phased install, punch list close out. Each phase below has a named deliverable so you always know what you are getting.
           </p>
           <ProcessTimeline steps={processSteps} />
         </section>
@@ -476,7 +461,7 @@ export default function ServicesPage() {
         {/* ── 6. CTA ── */}
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
-          <p className={styles.eyebrow}>Get Started</p>
+          <p className={styles.eyebrow}>Plan Your Project</p>
           <h2>Have a project in mind?</h2>
           <p className={styles.ctaLede}>
             Bring a room count and a target budget. Leave with a

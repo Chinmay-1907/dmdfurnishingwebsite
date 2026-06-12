@@ -16,6 +16,20 @@
       glassmorphic panel appears, text reverts to the theme's primary color.
       :not(.menu-open) prevents this from applying inside the mobile drawer
       where the cream background makes off-white text invisible. ── */
+/* Solid translucent scrim so the off-white nav text has real contrast over
+   bright hero photos. Must stay a plain background-color (NOT a gradient):
+   axe/Lighthouse can't evaluate gradients and falls back to blending with the
+   white page background, failing the contrast audit. 0.62 black blended over
+   white computes to ~4.9:1 against #F3EFE6, which passes even that worst case.
+   Excluded on light-hero pages and the 404, where nav text is dark. */
+.site-header:not(.compact):not(.menu-open):not(.light-hero-page) {
+  background-color: rgba(10, 10, 12, 0.62);
+}
+
+:root.route-not-found .site-header:not(.compact):not(.menu-open) {
+  background-color: transparent;
+}
+
 .site-header:not(.compact):not(.menu-open) .nav-links a,
 .site-header:not(.compact):not(.menu-open) .nav-contact-phone,
 .site-header:not(.compact):not(.menu-open) .hamburger-icon {
@@ -321,6 +335,17 @@ body.body-no-scroll {
 }
 
 @media (max-width: 1024px) {
+  /* min(96vw, calc(100% - 32px)) guarantees ≥16px side insets on narrow
+     screens; the desktop-only -24px optical pull on .header-branding would
+     otherwise push the hamburger a third off the left edge. */
+  .header-container {
+    width: min(96vw, calc(100% - 32px));
+  }
+
+  .header-branding {
+    margin-left: 0;
+  }
+
   .hamburger-menu {
     display: inline-flex;
   }
@@ -335,7 +360,12 @@ body.body-no-scroll {
     pointer-events: auto;
   }
 
-  /* Slide-in drawer from right */
+  /* Slide-in drawer from right.
+     visibility:hidden when closed is load-bearing: pointer-events alone
+     leaves the off-screen links keyboard-focusable and axe-testable (they
+     failed contrast against the drawer surface they're never seen on).
+     The 0s visibility transition is delayed until the slide-out ends so
+     the close animation stays visible. */
   .main-nav {
     position: fixed;
     top: 0;
@@ -347,7 +377,8 @@ body.body-no-scroll {
     box-shadow: var(--shadow-lift);
     transform: translateX(100%);
     overflow-y: auto;
-    transition: transform var(--transition-base);
+    visibility: hidden;
+    transition: transform var(--transition-base), visibility 0s var(--transition-base);
     pointer-events: none;
     z-index: 999;
     justify-content: flex-start;
@@ -359,6 +390,8 @@ body.body-no-scroll {
 
   .main-nav.open {
     transform: translateX(0);
+    visibility: visible;
+    transition: transform var(--transition-base), visibility 0s;
     pointer-events: auto;
   }
 
@@ -413,6 +446,39 @@ body.body-no-scroll {
   .nav-consultation-mobile .btn {
     width: 100%;
     text-align: center;
+  }
+
+  /* Drawer CTA — same gold gradient pill as the desktop .consultation-button.
+     High-specificity selector + !important on color: the drawer link otherwise
+     inherits the .nav-links a / light-hero-page text rules (some !important),
+     which would leave it as plain menu text. */
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn {
+    justify-content: center;
+    min-height: 48px;
+    margin-bottom: 0;
+    padding: 12px 22px;
+    border-radius: 999px;
+    color: #1a1a1a !important;
+    background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+    background-size: 220% 220%;
+    background-position: 0% 50%;
+    font-size: 0.88rem;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(168, 50, 107, 0.22),
+                inset 0 1px 0 rgba(255, 240, 200, 0.25);
+    transition: background-position 600ms ease, box-shadow 380ms ease;
+  }
+
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn:hover,
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn:focus-visible,
+  .site-header .main-nav .nav-links li.nav-consultation-mobile a.btn.active {
+    color: #1a1a1a !important;
+    background-image: linear-gradient(125deg, #c9a96e 0%, #d4b77e 45%, #a8326b 100%);
+    background-position: 100% 50%;
+    box-shadow: 0 10px 28px rgba(201, 169, 110, 0.3),
+                0 0 22px rgba(168, 50, 107, 0.28);
   }
 }
 
@@ -513,4 +579,27 @@ body.body-no-scroll {
     background: var(--accent-gold-soft);
     border-bottom: none;
   }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   404 pages — no dark hero, just the plain page background (cream
+   in light theme), so the floating header needs the same dark-text
+   treatment as light-hero pages. The Header can't detect a 404 from
+   the pathname, so app/not-found.js tags <html> with .route-not-found.
+   Must stay AFTER the light-theme off-white rules (equal specificity,
+   later wins). var(--text-primary) keeps dark theme light-on-dark.
+   ────────────────────────────────────────────────────────────── */
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .nav-links a,
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .nav-contact-phone,
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .nav-contact-phone span,
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .hamburger-icon {
+  color: var(--text-primary) !important;
+}
+:root.route-not-found .site-header:not(.compact):not(.menu-open) .hamburger-icon {
+  background: var(--text-primary) !important;
+}
+:root[data-theme='light'].route-not-found .site-header:not(.compact) .theme-toggle-cycle {
+  color: var(--text-primary) !important;
+  border-color: rgba(20, 18, 14, 0.3) !important;
+  background: rgba(20, 18, 14, 0.05) !important;
 }

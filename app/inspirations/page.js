@@ -12,9 +12,9 @@ export function generateMetadata() {
   return generatePageMetadata({
     title: 'Hospitality Furniture Design Inspirations',
     description:
-      'Hotel furniture design ideas, restaurant interior design inspiration, and commercial furniture inspiration gallery from DMD Furnishing. Real rooms, real specs, built to order.',
+      'Hotel furniture design ideas, restaurant interiors, and commercial furniture inspiration from DMD Furnishing. Real rooms, real specs, built to order.',
     path: '/inspirations',
-    image: '/images/inspirations/modern-minimalist/hero.webp',
+    image: '/Images/inspirations/modern-minimalist/hero.webp',
   });
 }
 
@@ -50,7 +50,7 @@ function buildSchema(inspirations) {
             '@type': 'CreativeWork',
             name: insp.title,
             description: insp.description,
-            url: `${siteUrl}/inspirations/${insp.id}`,
+            url: `${siteUrl}/inspirations/${insp.slug}`,
           },
         })),
       },
@@ -138,7 +138,7 @@ export default function InspirationsPage() {
           </div>
           <div className={styles.heroImageWrap}>
             <Image
-              src="/images/inspirations/modern-minimalist/hero.webp"
+              src="/Images/inspirations/modern-minimalist/hero.webp"
               alt="Quiet oak and cream guestroom interior with low platform bed, ivory linens, and a single matte bronze pendant — a Modern Minimalist DMD Furnishing concept"
               fill
               priority
@@ -192,7 +192,7 @@ export default function InspirationsPage() {
                         <p className={styles.cardDesc}>{insp.description}</p>
                         <div className={styles.cardFooter}>
                           <Link
-                            href={`/inspirations/${insp.id}`}
+                            href={`/inspirations/${insp.slug}`}
                             className={styles.cardLink}
                           >
                             View Concept <span>&rarr;</span>

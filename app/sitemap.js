@@ -12,13 +12,36 @@
 import { getAllPlaces, getAllProductsFlat } from '../lib/catalog';
 import { getAllProjects } from '../lib/projects';
 import { getAllInspirations } from '../lib/inspirations';
+import { getAllBlogPosts } from '../lib/blog-posts';
 import { siteUrl } from '../lib/metadata';
 
 const baseUrl = siteUrl;
 
+// Fallback lastModified for pages without a real source date.
+const LAST_BUILD = '2026-06-10';
+
+// projects.xml stores completionDate as display text ("June 2022", "2024").
+// Sitemap lastmod must be ISO 8601 (YYYY or YYYY-MM both valid).
+const MONTH_NUM = {
+  january: '01', february: '02', march: '03', april: '04', may: '05', june: '06',
+  july: '07', august: '08', september: '09', october: '10', november: '11', december: '12',
+};
+
+function isoFromCompletionDate(text) {
+  if (!text) return undefined;
+  const t = String(text).trim();
+  if (/^\d{4}(-\d{2}){0,2}$/.test(t)) return t;
+  const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(t);
+  if (m && MONTH_NUM[m[1].toLowerCase()]) return `${m[2]}-${MONTH_NUM[m[1].toLowerCase()]}`;
+  return undefined;
+}
+
+// Image filenames contain raw spaces ("/Images/Our Services.jpg") — without
+// encodeURI Google Images gets a 0-byte response for ~half the catalog.
 function abs(imagePath) {
   if (!imagePath) return undefined;
-  return imagePath.startsWith('http') ? imagePath : `${baseUrl}${imagePath}`;
+  const url = imagePath.startsWith('http') ? imagePath : `${baseUrl}${imagePath}`;
+  return encodeURI(url);
 }
 
 export default function sitemap() {
@@ -26,109 +49,101 @@ export default function sitemap() {
   const products = getAllProductsFlat();
   const projects = getAllProjects();
   const inspirations = getAllInspirations();
+  const blogPosts = getAllBlogPosts();
 
   const entries = [];
 
   // --- Static pages ---
   entries.push({
     url: `${baseUrl}/`,
-    lastModified: '2026-04-10',
-    changeFrequency: 'weekly',
-    priority: 1.0,
-    images: [`${baseUrl}/Images/Tailored_Guestroom_Collections.jpg`],
+    lastModified: LAST_BUILD,
+    images: [abs('/Images/Tailored_Guestroom_Collections.jpg')],
   });
   entries.push({
     url: `${baseUrl}/products`,
-    lastModified: '2026-04-10',
-    changeFrequency: 'weekly',
-    priority: 0.95,
-    images: [`${baseUrl}/Images/Our_Products.jpg`],
+    lastModified: LAST_BUILD,
+    images: [abs('/Images/Our_Products.jpg')],
   });
-  entries.push({ url: `${baseUrl}/projects`, lastModified: '2026-04-10', changeFrequency: 'monthly', priority: 0.8 });
-  entries.push({ url: `${baseUrl}/about`, lastModified: '2026-04-10', changeFrequency: 'monthly', priority: 0.75, images: [`${baseUrl}/Images/About_DMD_Furnishing_Page.jpg`] });
+  entries.push({ url: `${baseUrl}/projects`, lastModified: LAST_BUILD });
+  entries.push({ url: `${baseUrl}/about`, lastModified: LAST_BUILD, images: [abs('/Images/About_DMD_Furnishing_Page.jpg')] });
   entries.push({
     url: `${baseUrl}/services`,
-    lastModified: '2026-04-10',
-    changeFrequency: 'monthly',
-    priority: 0.8,
-    images: [`${baseUrl}/Images/Our Services.jpg`],
+    lastModified: LAST_BUILD,
+    images: [abs('/Images/Our Services.jpg')],
   });
-  entries.push({ url: `${baseUrl}/contact`, lastModified: '2026-04-12', changeFrequency: 'monthly', priority: 0.7 });
-  entries.push({ url: `${baseUrl}/inspirations`, lastModified: '2026-04-10', changeFrequency: 'monthly', priority: 0.5 });
-  entries.push({ url: `${baseUrl}/website-policies`, lastModified: '2026-04-10', changeFrequency: 'yearly', priority: 0.3 });
-  entries.push({ url: `${baseUrl}/author/dmd-furnishing-editorial`, lastModified: '2026-04-10', changeFrequency: 'monthly', priority: 0.6 });
+  entries.push({ url: `${baseUrl}/contact`, lastModified: LAST_BUILD });
+  entries.push({ url: `${baseUrl}/inspirations`, lastModified: LAST_BUILD });
+  entries.push({ url: `${baseUrl}/website-policies`, lastModified: LAST_BUILD });
+  entries.push({ url: `${baseUrl}/author/dmd-furnishing-editorial`, lastModified: LAST_BUILD });
 
   // --- Pillar guides (topical cluster heads) ---
   entries.push({
     url: `${baseUrl}/guides`,
-    lastModified: '2026-04-10',
-    changeFrequency: 'monthly',
-    priority: 0.8,
+    lastModified: LAST_BUILD,
   });
   entries.push({
     url: `${baseUrl}/guides/commercial-furniture-manufacturing`,
-    lastModified: '2026-04-10',
-    changeFrequency: 'monthly',
-    priority: 0.85,
-    images: [`${baseUrl}/Images/Our_Products.jpg`],
+    lastModified: LAST_BUILD,
+    images: [abs('/Images/Our_Products.jpg')],
   });
   entries.push({
     url: `${baseUrl}/guides/hospitality-ffe`,
-    lastModified: '2026-04-10',
-    changeFrequency: 'monthly',
-    priority: 0.85,
-    images: [`${baseUrl}/Images/Tailored_Guestroom_Collections.jpg`],
+    lastModified: LAST_BUILD,
+    images: [abs('/Images/Tailored_Guestroom_Collections.jpg')],
   });
 
   // --- Blog ---
-  entries.push({ url: `${baseUrl}/blog`, lastModified: '2026-04-10', changeFrequency: 'weekly', priority: 0.85 });
-  const blogPosts = [
-    { slug: 'what-is-ffe-hospitality', lastModified: '2026-04-01' },
-    { slug: 'hotel-guestroom-furniture-checklist', lastModified: '2026-03-29' },
-    { slug: 'value-engineering-commercial-furniture', lastModified: '2026-03-26' },
-    { slug: 'hpl-veneer-solid-wood-hotel-casegoods', lastModified: '2026-03-22' },
-    { slug: 'restaurant-seating-guide', lastModified: '2026-03-31' },
-    { slug: 'ffe-procurement-timeline', lastModified: '2026-04-02' },
-  ];
+  entries.push({ url: `${baseUrl}/blog`, lastModified: LAST_BUILD });
   for (const post of blogPosts) {
     entries.push({
       url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: post.lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.75,
+      lastModified: post.isoDate,
     });
   }
 
   // --- Inspiration detail pages ---
   for (const insp of inspirations) {
-    entries.push({ url: `${baseUrl}/inspirations/${insp.id}`, lastModified: '2026-04-10', changeFrequency: 'monthly', priority: 0.5 });
+    entries.push({ url: `${baseUrl}/inspirations/${insp.slug}`, lastModified: LAST_BUILD });
   }
 
   // --- Place listing pages (1 per place) ---
   for (const place of places) {
     entries.push({
       url: `${baseUrl}/products/${place.slug}`,
-      lastModified: '2026-04-10',
-      changeFrequency: 'monthly',
-      priority: 0.85,
+      lastModified: LAST_BUILD,
       images: place.image ? [abs(place.image)] : undefined,
     });
+  }
+
+  // --- Furniture-type mid-tier pages (only pairs with >= 3 products) ---
+  for (const place of places) {
+    for (const ft of place.furnitureTypes) {
+      const count = ft.subcategories.reduce((n, s) => n + s.products.length, 0);
+      if (count >= 3) {
+        entries.push({
+          url: `${baseUrl}/products/${place.slug}/${ft.slug}`,
+          lastModified: LAST_BUILD,
+          images: ft.image ? [abs(ft.image)] : undefined,
+        });
+      }
+    }
   }
 
   // --- Flat product detail pages (1 per unique product) ---
   for (const product of products) {
     entries.push({
       url: `${baseUrl}/products/${product.slug}`,
-      lastModified: '2026-04-10',
-      changeFrequency: 'monthly',
-      priority: 0.6,
+      lastModified: LAST_BUILD,
       images: product.image ? [abs(product.image)] : undefined,
     });
   }
 
   // --- Project detail pages ---
   for (const project of projects) {
-    entries.push({ url: `${baseUrl}/projects/${project.slug}`, lastModified: '2026-04-10', changeFrequency: 'monthly', priority: 0.7 });
+    entries.push({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified: isoFromCompletionDate(project.completionDate) || LAST_BUILD,
+    });
   }
 
   return entries;

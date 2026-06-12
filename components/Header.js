@@ -52,9 +52,14 @@ function Header() {
   // Blog and guides pages use hardcoded dark CSS but the light theme overrides the root
   // background to cream, making white nav text invisible. Both the listing pages and all
   // sub-routes (individual posts and guide slugs) need the same treatment.
+  // Website-policies and author pages have dark heroes, but their content starts BELOW
+  // the header, so the floating nav sits on the plain page background (cream in light
+  // mode) — it needs the same dark-text treatment, not white-over-hero text.
   const isLightHeroPage =
     pathname === '/contact' ||
     pathname === '/inspirations' ||
+    pathname === '/website-policies' ||
+    pathname.startsWith('/author') ||
     pathname.startsWith('/blog') ||
     pathname.startsWith('/guides') ||
     pathname.startsWith('/products') || // product pages flip to light in light mode. Nav text must go dark at top too
@@ -87,11 +92,11 @@ function Header() {
           </button>
           <Link href="/">
             <Image
-              src="/DMD_Furnishing_Logo_Embedded.svg"
+              src="/Images/logo.png"
               alt="DMD Furnishing Logo"
               className="logo-image"
-              width={180}
-              height={60}
+              width={72}
+              height={72}
               priority
             />
           </Link>

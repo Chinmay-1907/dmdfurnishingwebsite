@@ -6,10 +6,10 @@ import {
   FaCheckCircle,
   FaClock,
   FaEnvelope,
-  FaLock,
   FaMapMarkerAlt,
   FaPhone,
   FaCalendarAlt,
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 const PROJECT_CATEGORIES = [
@@ -22,15 +22,23 @@ const PROJECT_CATEGORIES = [
   { id: 'other', label: 'Other / Not Sure Yet' },
 ];
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '', calendlyUrl = '' }) {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('schedule');
-  const [step, setStep] = useState('email');
+  // Conversion-first flow: the full form is visible immediately ('form'),
+  // the email code is a quick confirmation step AFTER submit ('otp'),
+  // then 'success'. No gating before the buyer can type.
+  const [step, setStep] = useState('form');
   const [submitStatus, setSubmitStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [infoMessage, setInfoMessage] = useState('');
   const [email, setEmail] = useState('');
   const [otpCode, setOtpCode] = useState('');
   const [verificationToken, setVerificationToken] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const [mapLoaded, setMapLoaded] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -61,6 +69,15 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     if (hash === '#message') setActiveTab('message');
 
     const params = new URLSearchParams(window.location.search);
+    // ?category= prefill is read client-side; reading searchParams on the
+    // server forced the whole route dynamic and pushed metadata into <body>.
+    const categoryParam = params.get('category');
+    if (categoryParam && PROJECT_CATEGORIES.some((c) => c.id === categoryParam)) {
+      setFormData((current) => (
+        current.projectCategory ? current : { ...current, projectCategory: categoryParam }
+      ));
+    }
+
     const productParam = params.get('product');
     if (productParam) {
       const productName = productParam.trim();
@@ -88,7 +105,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
   }, [recaptchaSiteKey]);
 
   useEffect(() => {
-    if (step !== 'details' || !formData.projectCategory) return;
+    if (step !== 'form' || !formData.projectCategory) return;
     const details = [];
     if (formData.projectCategory === 'hotel') {
       if (formData.roomCount) details.push(`Approximate Number of Rooms: ${formData.roomCount}`);
@@ -135,58 +152,82 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     });
   }
 
-  async function handleRequestOtp(event) {
-    event.preventDefault();
-    if (submitStatus === 'sending') return;
+  // Requests the 6-digit email code. Called on form submit AND by "Resend Code".
+  // The full lead details ride along so the backend's content checks run up front.
+  async function requestOtp() {
+    if (submitStatus === 'sending') return false;
     setSubmitStatus('sending');
     setErrorMessage('');
+    setInfoMessage('');
     try {
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Please enter a valid email address.');
+      if (!email || !EMAIL_PATTERN.test(email)) throw new Error('Please enter a valid email address.');
+      const phoneDigits = formData.phone.replace(/[^0-9]/g, '');
+      if (phoneDigits.length < 7 || phoneDigits.length > 15) throw new Error('Please enter a valid phone number.');
       const recaptchaToken = await getRecaptchaToken('request_otp');
       const response = await fetch('/api/request-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, subject: 'Consultation Verification', recaptchaToken }),
+        body: JSON.stringify({
+          email,
+          name: formData.name,
+          company: formData.company,
+          phone: formData.phone,
+          project: formData.projectCategory,
+          message: formData.message,
+          honeypot,
+          subject: 'Consultation Verification',
+          recaptchaToken,
+        }),
       });
       const json = await response.json().catch(() => ({}));
       if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Failed to send verification code.');
       setVerificationToken(json.token || '');
+      setOtpCode('');
       setStep('otp');
       setSubmitStatus('idle');
+      return true;
     } catch (error) {
       setErrorMessage(error.message);
       setSubmitStatus('error');
+      return false;
     }
   }
 
-  async function handleVerifyOtp(event) {
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    await requestOtp();
+  }
+
+  async function handleResendCode() {
+    const sent = await requestOtp();
+    if (sent) setInfoMessage('A new code is on its way to your inbox.');
+  }
+
+  function handleEditDetails() {
+    setStep('form');
+    setOtpCode('');
+    setErrorMessage('');
+    setInfoMessage('');
+    setSubmitStatus('idle');
+  }
+
+  // Single click completes the submission: verify the code, then send the message.
+  async function handleVerifyAndSend(event) {
     event.preventDefault();
     if (submitStatus === 'sending') return;
     setSubmitStatus('sending');
     setErrorMessage('');
+    setInfoMessage('');
     try {
-      const recaptchaToken = await getRecaptchaToken('verify_otp');
-      const response = await fetch('/api/verify-otp', {
+      const verifyToken = await getRecaptchaToken('verify_otp');
+      const verifyResponse = await fetch('/api/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, code: otpCode, token: verificationToken, recaptchaToken }),
+        body: JSON.stringify({ email, code: otpCode, token: verificationToken, recaptchaToken: verifyToken }),
       });
-      const json = await response.json().catch(() => ({}));
-      if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Invalid verification code.');
-      setStep('details');
-      setSubmitStatus('idle');
-    } catch (error) {
-      setErrorMessage(error.message);
-      setSubmitStatus('error');
-    }
-  }
+      const verifyJson = await verifyResponse.json().catch(() => ({}));
+      if (!verifyResponse.ok || (verifyJson?.success !== true && verifyJson?.success !== 'true')) throw new Error(verifyJson?.error || 'Invalid verification code.');
 
-  async function handleFinalSubmit(event) {
-    event.preventDefault();
-    if (submitStatus === 'sending') return;
-    setSubmitStatus('sending');
-    setErrorMessage('');
-    try {
       const recaptchaToken = await getRecaptchaToken('submit_consultation');
       const payload = {
         name: formData.name, company: formData.company, email, phone: formData.phone,
@@ -410,17 +451,23 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
 
                     <div className="cp-schedule-cta">
                       <a
-                        href="https://wa.me/16172237781"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="tel:+16172237781"
                         className="cp-btn cp-btn-gold cp-btn-full"
                       >
                         <FaPhone /> Call Now: +1 (617) 223-7781
                       </a>
+                      <a
+                        href="https://wa.me/16172237781"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cp-btn cp-btn-outline-dark cp-btn-full"
+                      >
+                        <FaWhatsapp /> WhatsApp
+                      </a>
                     </div>
 
                     <p className="cp-schedule-note">
-                      <FaClock /> Mon to Fri 9 AM to 6 PM ET &nbsp;|&nbsp; Sat to Sun 10 AM to 4 PM ET (by appointment)
+                      <FaClock /> Mon to Fri 9 AM to 6 PM ET (showroom visits by appointment)
                     </p>
                   </div>
                 )}
@@ -445,88 +492,32 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 ) : (
                   <div className="cp-form-card">
                     <div className="cp-form-header">
-                      <h2>Request a Project Consultation</h2>
+                      <h2>Send a Message</h2>
                       <p>Tell us about the project. A DMD project manager will reply with the next step, not an autoresponder.</p>
                     </div>
 
-                    {/* Step indicators */}
-                    <div className="cp-steps">
-                      <div className={`cp-step ${step === 'email' ? 'active' : ''} ${step === 'otp' || step === 'details' ? 'done' : ''}`}>
-                        <span className="cp-step-num">1</span>
-                        <span className="cp-step-label">Verify Email</span>
-                      </div>
-                      <div className="cp-step-line" />
-                      <div className={`cp-step ${step === 'otp' ? 'active' : ''} ${step === 'details' ? 'done' : ''}`}>
-                        <span className="cp-step-num">2</span>
-                        <span className="cp-step-label">Enter Code</span>
-                      </div>
-                      <div className="cp-step-line" />
-                      <div className={`cp-step ${step === 'details' ? 'active' : ''}`}>
-                        <span className="cp-step-num">3</span>
-                        <span className="cp-step-label">Project Details</span>
-                      </div>
-                    </div>
-
-                    {step === 'email' && (
-                      <form onSubmit={handleRequestOtp} className="fade-in-up" method="POST">
-                        <div className="cp-field">
-                          <label htmlFor="email">Email Address <span className="cp-req">*</span></label>
-                          <div className="cp-input-action">
-                            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" required />
-                            <button type="submit" className="cp-btn-verify" disabled={submitStatus === 'sending'}>
-                              {submitStatus === 'sending' ? 'Sending...' : 'Verify Email'}
-                            </button>
-                          </div>
-                          <p className="cp-helper">Email verification. A one time code confirms your address so a project manager can follow up directly.</p>
-                        </div>
-                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
-                      </form>
-                    )}
-
-                    {step === 'otp' && (
-                      <form onSubmit={handleVerifyOtp} className="fade-in-up" method="POST">
-                        <div className="cp-field">
-                          <label>Email Address</label>
-                          <div className="cp-input-locked">
-                            <input type="email" value={email} disabled />
-                            <FaLock className="cp-lock-icon" />
-                          </div>
-                        </div>
-                        <div className="cp-field">
-                          <label htmlFor="otp">Verification Code <span className="cp-req">*</span></label>
-                          <input type="text" id="otp" name="otp" value={otpCode} onChange={(e) => setOtpCode(e.target.value)} placeholder="Enter 6-digit code" maxLength={6} required />
-                          <p className="cp-helper">Check your email for the verification code.</p>
-                        </div>
-                        <div className="cp-form-actions">
-                          <button type="submit" className="cp-btn cp-btn-gold" disabled={submitStatus === 'sending'}>
-                            {submitStatus === 'sending' ? 'Verifying...' : 'Verify Code'}
-                          </button>
-                          <button type="button" className="cp-btn-text" onClick={() => setStep('email')}>Change Email</button>
-                        </div>
-                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
-                      </form>
-                    )}
-
-                    {step === 'details' && (
-                      <form onSubmit={handleFinalSubmit} className="fade-in-up" method="POST">
-                        <div className="cp-verified">
-                          <FaCheckCircle /> Email Verified: <strong>{email}</strong>
-                        </div>
-
+                    {step === 'form' && (
+                      <form onSubmit={handleFormSubmit} className="fade-in-up" method="POST">
                         <div className="cp-row">
                           <div className="cp-field">
                             <label htmlFor="name">Full Name <span className="cp-req">*</span></label>
                             <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} required />
                           </div>
                           <div className="cp-field">
-                            <label htmlFor="company">Company Name</label>
-                            <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} />
+                            <label htmlFor="email">Email Address <span className="cp-req">*</span></label>
+                            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" required />
                           </div>
                         </div>
 
-                        <div className="cp-field">
-                          <label htmlFor="phone">Phone Number</label>
-                          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="+1 (555) 000-0000" />
+                        <div className="cp-row">
+                          <div className="cp-field">
+                            <label htmlFor="company">Company Name</label>
+                            <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} />
+                          </div>
+                          <div className="cp-field">
+                            <label htmlFor="phone">Phone Number <span className="cp-req">*</span></label>
+                            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="+1 (555) 000-0000" required />
+                          </div>
                         </div>
 
                         <div className="cp-field">
@@ -546,11 +537,57 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                           <textarea id="message" name="message" rows="3" value={formData.message} onChange={handleInputChange} required />
                         </div>
 
+                        {/* Honeypot: hidden from people, filled only by bots. Backend rejects when set. */}
+                        <div className="cp-hp" aria-hidden="true">
+                          <label htmlFor="cp-website">Website</label>
+                          <input type="text" id="cp-website" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                        </div>
+
                         <div className="cp-form-actions">
                           <button type="submit" className="cp-btn cp-btn-gold cp-btn-full" disabled={submitStatus === 'sending'}>
-                            {submitStatus === 'sending' ? 'Submitting Request...' : 'Request Project Consultation'}
+                            {submitStatus === 'sending' ? 'Sending...' : 'Send Message'}
                           </button>
                         </div>
+                        <p className="cp-helper">
+                          We will email you a quick 6-digit code to confirm your address before your message is sent.
+                        </p>
+                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
+                      </form>
+                    )}
+
+                    {step === 'otp' && (
+                      <form onSubmit={handleVerifyAndSend} className="cp-otp-panel fade-in-up" method="POST">
+                        <p className="cp-otp-text">
+                          <FaEnvelope /> We emailed a 6-digit code to <strong>{email}</strong> — enter it to send your message.
+                        </p>
+                        <div className="cp-field">
+                          <label htmlFor="otp">Verification Code <span className="cp-req">*</span></label>
+                          <input
+                            type="text"
+                            id="otp"
+                            name="otp"
+                            className="cp-otp-input"
+                            value={otpCode}
+                            onChange={(e) => setOtpCode(e.target.value)}
+                            placeholder="000000"
+                            maxLength={6}
+                            inputMode="numeric"
+                            autoComplete="one-time-code"
+                            required
+                          />
+                        </div>
+                        <div className="cp-form-actions">
+                          <button type="submit" className="cp-btn cp-btn-gold" disabled={submitStatus === 'sending'}>
+                            {submitStatus === 'sending' ? 'Verifying & Sending...' : 'Verify & Send Message'}
+                          </button>
+                          <button type="button" className="cp-btn-text" onClick={handleResendCode} disabled={submitStatus === 'sending'}>
+                            Resend Code
+                          </button>
+                          <button type="button" className="cp-btn-text" onClick={handleEditDetails} disabled={submitStatus === 'sending'}>
+                            Edit Details
+                          </button>
+                        </div>
+                        {infoMessage && <div className="cp-info-note">{infoMessage}</div>}
                         {errorMessage && <div className="cp-error">{errorMessage}</div>}
                       </form>
                     )}
@@ -568,7 +605,16 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 <div className="cp-info-icon"><FaMapMarkerAlt /></div>
                 <div>
                   <strong>Address</strong>
-                  <p>56 Leonard St Unit 5<br />Foxboro, MA 02035</p>
+                  <p>
+                    56 Leonard St Unit 5<br />Foxboro, MA 02035<br />
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=56+Leonard+St+Unit+5,+Foxboro,+MA+02035"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get directions
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="cp-info-item">
@@ -589,7 +635,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                 <div className="cp-info-icon"><FaClock /></div>
                 <div>
                   <strong>Showroom Hours</strong>
-                  <p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat - Sun: 10:00 AM - 4:00 PM<br /><em>(By Appointment Only)</em></p>
+                  <p>Mon - Fri: 9:00 AM - 6:00 PM<br /><em>(By Appointment Only)</em></p>
                 </div>
               </div>
             </div>
@@ -605,6 +651,14 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
           <p>56 Leonard St Unit 5, Foxboro, MA 02035. About 30 miles south of Boston.</p>
         </div>
         <div className="cp-map-card">
+          {/* Shimmer placeholder shown until the lazy iframe finishes loading,
+              so the card never sits as a blank white box. */}
+          {!mapLoaded && (
+            <div className="cp-map-skeleton" aria-hidden="true">
+              <FaMapMarkerAlt />
+              <span>Loading map…</span>
+            </div>
+          )}
           <iframe
             title="DMD Furnishing showroom location, 56 Leonard St, Foxboro, MA"
             src="https://www.google.com/maps?q=56+Leonard+St+Unit+5,+Foxboro,+MA+02035&output=embed"
@@ -613,6 +667,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
+            onLoad={() => setMapLoaded(true)}
           />
         </div>
       </section>

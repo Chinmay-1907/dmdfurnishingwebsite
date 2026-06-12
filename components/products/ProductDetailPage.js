@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ProductGallery from './ProductGallery';
+import { getProductCopy } from '../../lib/product-copy';
 import styles from './product-detail.module.css';
 
 function buildGalleryImages(product) {
@@ -20,8 +21,7 @@ function buildGalleryImages(product) {
  * ProductDetailPage
  *
  * Accepts a FLAT product record (with memberships[] and primary). Renders:
- *   - Breadcrumb using primary membership
- *   - Hero, specs, gallery, related
+ *   - Hero, specs, gallery, related (breadcrumb is rendered by the page route)
  *   - "Also appears in" badges for all additional memberships so users see every
  *     context this product is built for (hotel lobby, hotel guestroom, restaurant, etc.)
  */
@@ -30,7 +30,6 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
   const otherMemberships = (product.memberships || []).filter((m) => m !== primary);
 
   const galleryImages = buildGalleryImages(product);
-  const productTags = product.tags?.filter(Boolean) || [];
   const specifications = product.specifications?.filter((spec) => spec.name && spec.value) || [];
 
   const primaryPlaceName = primary?.placeName || 'Commercial Spaces';
@@ -38,22 +37,19 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
   const primaryFtName = primary?.furnitureTypeName || '';
   const primaryPlaceHref = primary?.placeSlug ? `/products/${primary.placeSlug}` : '/products';
 
+  // Meaningful context chips instead of the product name split into words
+  const productTags = [...new Set([primarySubName, primaryFtName, primaryPlaceName].filter(Boolean))];
+
   // Pre-fill the contact form with this product so the message lands ready to send.
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}#message`;
+
+  // Furniture-type-specific copy blocks (construction/materials + specification
+  // context) so the 174 detail pages stop rendering identical boilerplate.
+  const detailCopy = getProductCopy(primary);
 
   return (
     <main className={styles.page}>
       <section className={styles.shell}>
-        <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
-          <ol>
-            <li><Link href="/products">Products</Link></li>
-            {primary?.placeSlug ? (
-              <li><Link href={primaryPlaceHref}>{primaryPlaceName}</Link></li>
-            ) : null}
-            <li><span aria-current="page">{product.name}</span></li>
-          </ol>
-        </nav>
-
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Product Detail</p>
@@ -117,10 +113,6 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
                 <dt>Subcategory</dt>
                 <dd>{primarySubName}</dd>
               </div>
-              <div>
-                <dt>Specifications</dt>
-                <dd>{specifications.length || 'Not listed'}</dd>
-              </div>
             </dl>
           </aside>
         </section>
@@ -130,23 +122,15 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
 
           <div className={styles.contentColumn}>
             <section className={styles.card}>
-              <p className={styles.cardLabel}>Product Summary</p>
-              <h2>Designed for commercial use</h2>
-              <p>
-                This piece sits within the {primarySubName.toLowerCase()} range for{' '}
-                {primaryPlaceName.toLowerCase()} environments. Use the listed specifications and
-                imagery as the starting point for material, finish, and dimensional discussions.
-              </p>
+              <p className={styles.cardLabel}>Construction &amp; Materials</p>
+              <h2>{detailCopy.materials.heading}</h2>
+              <p>{detailCopy.materials.body}</p>
             </section>
 
             <section className={styles.card}>
-              <p className={styles.cardLabel}>Project Support</p>
-              <h2>Need a variant or specification review?</h2>
-              <p>
-                DMD Furnishing can adapt dimensions, materials, finishes, and quantities to fit
-                your project scope. Reach out when you need help aligning this product with a room
-                package or property standard.
-              </p>
+              <p className={styles.cardLabel}>Specification Notes</p>
+              <h2>{detailCopy.specification.heading}</h2>
+              <p>{detailCopy.specification.body}</p>
               <Link href={quoteHref} className={styles.inlineLink}>
                 Talk to the team
               </Link>
@@ -175,7 +159,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
             </div>
           ) : (
             <div className={styles.emptyState}>
-              <p>No specifications are listed for this product yet.</p>
+              <p>Specifications provided with quote &mdash; built to your project&rsquo;s requirements.</p>
             </div>
           )}
         </section>

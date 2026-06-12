@@ -307,7 +307,7 @@
   cursor: pointer;
   list-style: none;
   user-select: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .faqQuestion::-webkit-details-marker {
@@ -319,7 +319,7 @@
   flex-shrink: 0;
   font-family: var(--font-sans);
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400; /* 300 dropped from the font load; lightest kept weight */
   color: rgba(201, 169, 110, 0.5);
   transition: transform 0.25s ease, color 0.25s ease;
 }
@@ -388,7 +388,7 @@
 .ctaContact a {
   color: rgba(244, 240, 230, 0.7);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
 }
 
 .ctaContact a:hover {

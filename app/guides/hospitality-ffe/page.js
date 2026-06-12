@@ -5,7 +5,7 @@ import AnswerCallout from '../../../components/AnswerCallout';
 import styles from './page.module.css';
 
 export const metadata = generatePageMetadata({
-  title: 'Hospitality FF&E Guide',
+  title: 'Hospitality FF&E Procurement Guide',
   description:
     'Hospitality FF&E procurement guide: budgeting, sourcing, manufacturing, delivery, and installation for hotels, restaurants, and commercial spaces.',
   path: '/guides/hospitality-ffe',
@@ -43,6 +43,17 @@ const faqs = [
     question: 'When should I start the FF&E procurement process?',
     answer:
       'Vendor engagement should begin during design development - typically 6 to 9 months before the target installation date - not after construction documents are issued. Early engagement lets manufacturers flag lead time risks, value-engineer specifications before they are locked in, and hold production capacity. Waiting until construction documents are complete compresses the fabrication schedule and drives change orders. For detailed timeline guidance, see our FF&E procurement timeline guide.',
+    answerJsx: (
+      <>
+        Vendor engagement should begin during design development - typically 6 to 9 months before
+        the target installation date - not after construction documents are issued. Early
+        engagement lets manufacturers flag lead time risks, value-engineer specifications before
+        they are locked in, and hold production capacity. Waiting until construction documents are
+        complete compresses the fabrication schedule and drives change orders. For detailed
+        timeline guidance, see our{' '}
+        <Link href="/blog/ffe-procurement-timeline">FF&amp;E procurement timeline guide</Link>.
+      </>
+    ),
   },
 ];
 
@@ -74,7 +85,7 @@ const pillarSchema = {
       datePublished: '2026-04-10',
       dateModified: '2026-04-10',
       image: `${siteUrl}/Images/Tailored_Guestroom_Collections.jpg`,
-      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#person` },
+      author: { '@id': `${siteUrl}/author/dmd-furnishing-editorial#editorial-team` },
       publisher: { '@id': `${siteUrl}/#organization` },
       about: [
         { '@type': 'Thing', name: 'hospitality FF&E' },
@@ -84,7 +95,7 @@ const pillarSchema = {
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.snippet-bait', '[data-speakable="true"]'],
+        cssSelector: ['[data-speakable]'],
       },
     },
     {
@@ -158,10 +169,15 @@ export default function HospitalityFfeGuide() {
                 (operating supplies - linens, china, glassware, amenities).
               </p>
               <p>
-                FF&amp;E is typically 15 to 25 percent of a hotel project&apos;s total capital cost,
-                depending on property tier and brand standards. It is the line item most likely to
-                be delayed, re-scoped, or value-engineered because it is the last package ordered
-                and the first visible to guests at opening.
+                In our project experience, FF&amp;E typically represents 15 to 25 percent of a hotel
+                project&apos;s total construction costs, depending on property tier and brand
+                standards; the{' '}
+                <a href="https://www.hvs.com/article/10219-hvs-us-hotel-development-cost-survey-2025" target="_blank" rel="noopener noreferrer">
+                  HVS U.S. Hotel Development Cost Survey
+                </a>{' '}
+                is the standard industry benchmark for per-room development cost data. FF&amp;E is
+                the line item most likely to be delayed, re-scoped, or value-engineered because it
+                is the last package ordered and the first visible to guests at opening.
               </p>
               <p>
                 For a buyer-focused walkthrough of what FF&amp;E is versus other hotel budget
@@ -225,7 +241,9 @@ export default function HospitalityFfeGuide() {
               <h2>Hotel FF&amp;E Lifecycles and Replacement Cycles</h2>
               <p>
                 Hospitality FF&amp;E replacement cycles vary by property tier, brand requirements,
-                and occupancy patterns. The typical bands:
+                and occupancy patterns. The bands below are general guidance drawn from our own
+                project experience — actual cycles depend on occupancy intensity and the specific
+                brand&apos;s current standards:
               </p>
               <ul>
                 <li>
@@ -235,9 +253,9 @@ export default function HospitalityFfeGuide() {
                 </li>
                 <li>
                   <strong>Upscale and upper-midscale:</strong> 7 to 9 year casegoods, 5 to 6 year
-                  soft seating. Brand refresh programs from Marriott, Hilton, IHG, and Hyatt
-                  typically require soft goods refreshes at five-year intervals even when casegoods
-                  are still serviceable.
+                  soft seating. Major-flag refresh programs commonly call for soft-goods refreshes
+                  on roughly five-year cycles even when casegoods are still serviceable — always
+                  confirm against the brand&apos;s current PIP standards.
                 </li>
                 <li>
                   <strong>Select-service and extended-stay:</strong> 8 to 10 year casegoods, 6 to
@@ -348,10 +366,10 @@ export default function HospitalityFfeGuide() {
               </p>
               <ul>
                 <li>
-                  <strong>Property tier and brand standards.</strong> A Marriott Autograph
-                  guestroom package costs roughly double a Fairfield Inn package because of finish
-                  quality requirements, not because of furniture quantity. Brand PIP documents are
-                  the single largest cost driver.
+                  <strong>Property tier and brand standards.</strong> In our quoting experience, an
+                  upper-tier soft-brand guestroom package can cost on the order of twice an
+                  economy-tier package because of finish quality requirements, not because of
+                  furniture quantity. Brand PIP documents are the single largest cost driver.
                 </li>
                 <li>
                   <strong>Custom content vs standard catalog.</strong> Every custom specification
@@ -444,6 +462,13 @@ export default function HospitalityFfeGuide() {
                 specifying clear performance requirements. If you&apos;d like help reviewing an existing
                 FF&amp;E specification, <Link href="/contact">contact our team</Link>.
               </p>
+              <p>
+                <strong>Related guide:</strong> curious how the furniture itself gets built? Our{' '}
+                <Link href="/guides/commercial-furniture-manufacturing">
+                  commercial furniture manufacturing guide
+                </Link>{' '}
+                covers construction standards, materials, and factory quality control.
+              </p>
             </section>
 
             <section id="faqs" className={styles.faqSection}>
@@ -451,7 +476,7 @@ export default function HospitalityFfeGuide() {
               {faqs.map((faq) => (
                 <details key={faq.question} className={styles.faqItem}>
                   <summary className={styles.faqQuestion}>{faq.question}</summary>
-                  <p className={styles.faqAnswer}>{faq.answer}</p>
+                  <p className={styles.faqAnswer} data-speakable="answer">{faq.answerJsx || faq.answer}</p>
                 </details>
               ))}
             </section>

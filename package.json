@@ -18,9 +18,9 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
+    "prebuild": "node scripts/check-content-leaks.js",
     "build": "next build",
     "lint": "next lint",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:residential": "node scripts/generate-residential-images.js",
     "generate:residential:ai": "node scripts/generate-photorealistic-residential.js",
     "optimize:living-room": "node scripts/optimize-living-room-images.js"

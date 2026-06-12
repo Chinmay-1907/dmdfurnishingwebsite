@@ -43,16 +43,14 @@ function buildSchema(projects) {
       {
         '@type': 'ItemList',
         name: 'DMD Furnishing Project Portfolio',
+        numberOfItems: projects.length,
+        // Google's carousel pattern: ListItem carries position + url only;
+        // the linked detail page owns the full entity markup.
         itemListElement: projects.map((p, i) => ({
           '@type': 'ListItem',
           position: i + 1,
-          item: {
-            '@type': 'Article',
-            name: p.name,
-            description: p.shortDescription,
-            url: `${siteUrl}/projects/${p.id}`,
-            image: p.mainImage?.startsWith('http') ? p.mainImage : `${siteUrl}${p.mainImage}`,
-          },
+          name: p.name,
+          url: `${siteUrl}/projects/${p.slug || p.id}`,
         })),
       },
     ],
@@ -200,7 +198,7 @@ export default function ProjectsPage() {
         {/* ── 4. CTA ── */}
         <section className={styles.ctaSection}>
           <div className={styles.ctaLine} />
-          <p className={styles.eyebrow}>Get Started</p>
+          <p className={styles.eyebrow}>Work With Us</p>
           <h2>Bring Us Your Scope</h2>
           <p className={styles.ctaLede}>
             Bring a room or seat count and a target budget. Leave with a realistic price

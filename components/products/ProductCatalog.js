@@ -167,7 +167,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
   return (
     <main className={styles.catalogPage}>
       <CatalogHero
-        title={heroTitle || 'Commercial Furniture Catalog'}
+        title={heroTitle || 'Commercial Furniture, Direct From the Manufacturer'}
         description={heroDescription || `Filter, compare, and request a quote on ${products.length} products across ${filterOptions.spaces.length} commercial environments.`}
         stats={stats}
         searchQuery={searchQuery}
@@ -191,6 +191,8 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
         />
 
         <div className={styles.gridArea}>
+          {/* h1 lives in the hero; product card names are h3 — this keeps heading order sequential */}
+          <h2 className="sr-only">Product results</h2>
           <div className={styles.toolbar}>
             <div className={styles.toolbarLeft}>
               <button
@@ -220,8 +222,8 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
           {filtered.length > 0 ? (
             <>
               <div className={styles.productGrid}>
-                {visibleProducts.map((product) => (
-                  <ProductCard key={product.slug} product={product} />
+                {visibleProducts.map((product, index) => (
+                  <ProductCard key={product.slug} product={product} priority={index < 3} />
                 ))}
               </div>
               {hasMore && (

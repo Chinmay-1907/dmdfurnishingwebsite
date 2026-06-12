@@ -5,7 +5,7 @@ import { getAllBlogPosts } from '../../lib/blog-posts';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Commercial FF&E Blog | Hotel Furniture Insights',
+  title: 'Commercial FF&E Blog',
   description:
     'Hospitality FF&E articles: hotel guestroom checklists, casegood materials, restaurant seating, value engineering, and procurement timelines.',
   alternates: {
@@ -101,8 +101,9 @@ export default function BlogIndexPage() {
             <h2 className={styles.cardTitle}>{post.title}</h2>
             <p className={styles.cardExcerpt}>{post.excerpt}</p>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px' }}>
-              <span className={styles.cardReadMore}>Read article →</span>
-              <span className={styles.blogCardReadTime}>{post.date}</span>
+              {/* Arrow comes from .cardReadMore::after (animated on hover) — no text arrow */}
+              <span className={styles.cardReadMore}>Read article</span>
+              <time className={styles.blogCardReadTime} dateTime={post.isoDate}>{post.date}</time>
             </div>
           </Link>
         ))}
@@ -111,6 +112,14 @@ export default function BlogIndexPage() {
       <section className={styles.relatedResources}>
         <h2>Keep Exploring</h2>
         <div className={styles.resourceGrid}>
+          <Link href="/guides/hospitality-ffe" className={styles.resourceCard}>
+            <h3>Hospitality FF&amp;E Guide</h3>
+            <p>The complete pillar guide to FF&amp;E scope, lifecycles, brand standards, and procurement.</p>
+          </Link>
+          <Link href="/guides/commercial-furniture-manufacturing" className={styles.resourceCard}>
+            <h3>Manufacturing Guide</h3>
+            <p>How contract-grade commercial furniture is specified, built, and quality controlled.</p>
+          </Link>
           <Link href="/products" className={styles.resourceCard}>
             <h3>Product Catalog</h3>
             <p>Browse commercial furniture built for hotels, restaurants, and multifamily.</p>

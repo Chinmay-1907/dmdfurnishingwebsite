@@ -1,11 +1,10 @@
+'use client';
+
+import { useEffect } from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Page Not Found',
-  robots: { index: false, follow: false },
-};
-
 const quickLinks = [
+  { href: '/', label: 'Return to Home' },
   { href: '/products', label: 'Browse Commercial Furniture' },
   { href: '/services', label: 'Our Services' },
   { href: '/projects', label: 'Recent Projects' },
@@ -14,6 +13,14 @@ const quickLinks = [
 ];
 
 export default function NotFound() {
+  // 404s render on the plain page background (no dark hero), so the fixed
+  // header needs its dark-text variant. The Header can't detect a 404 from
+  // the pathname, so flag the route here; Header.css keys off this class.
+  useEffect(() => {
+    document.documentElement.classList.add('route-not-found');
+    return () => document.documentElement.classList.remove('route-not-found');
+  }, []);
+
   return (
     <div
       style={{

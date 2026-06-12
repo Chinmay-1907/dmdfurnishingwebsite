@@ -5,7 +5,9 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/static/chunks/
+# Raw catalog/project data files — not sitemaps, keep out of search indexes
+Disallow: /DMD_Website.xml
+Disallow: /projects.xml
 
 # Explicitly allow AI crawlers
 User-agent: GPTBot
@@ -33,6 +35,18 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: FacebookBot
 Allow: /
 
 # Sitemap
