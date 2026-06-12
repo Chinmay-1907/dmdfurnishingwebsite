@@ -2,7 +2,7 @@ import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
-import ImagePromptBox from '../../../components/blog/ImagePromptBox';
+import Image from 'next/image';
 import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
@@ -206,11 +206,15 @@ export default function MultifamilyFfeGuide() {
             accidentally downgrading the wrong one.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Modern multifamily apartment lobby with contract-grade lounge seating in dark charcoal and brass accent tones"
-            prompt={'Commercial interior photography of a contemporary multifamily residential lobby. Lounge seating cluster with dark charcoal upholstered sofas and armchairs, brass-gold metal side tables and lamp bases, polished concrete floor, floor-to-ceiling windows with diffused natural light. Muted palette anchored in deep charcoal #12161D with brass-gold #D7B676 accents. Clean lines, no clutter, no people, no text or logos. Shot at eye level with a 35mm lens equivalent, shallow depth of field drawing focus to the seating arrangement. Soft fill lighting from left, warm ambient from pendant fixtures above.'}
-          />
+          <figure>
+            <Image
+              src="/Images/blog/multifamily-lobby.png"
+              alt="Modern multifamily apartment lobby with contract-grade lounge seating in dark charcoal and brass accent tones"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="model-units">Model Units: Furniture That Sells the Lease</h2>
           <p>
@@ -328,11 +332,15 @@ export default function MultifamilyFfeGuide() {
             detail on contract-grade specifications for public-facing spaces.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Multifamily coworking lounge with contract-grade task seating and wood communal tables, dark charcoal and brass palette"
-            prompt={'Commercial interior photography of a multifamily resident coworking lounge. Long communal wood table with dark stained finish, contract-grade upholstered task chairs in deep charcoal fabric, brass-gold pendant lights hanging above the table, exposed concrete ceiling, large frosted glass windows providing diffused daylight. Muted warm palette anchored by dark charcoal #12161D with brass-gold #D7B676 accents in the light fixtures and chair legs. No people, no text, no logos. Shot from a three-quarter angle at standing eye level, 24mm equivalent lens, moderate depth of field. Clean, editorial, residential feel with commercial quality signals.'}
-          />
+          <figure>
+            <Image
+              src="/Images/blog/multifamily-coworking.png"
+              alt="Multifamily coworking lounge with contract-grade task seating and wood communal tables, dark charcoal and brass palette"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="package-purchasing">Package Purchasing vs. Piecemeal</h2>
           <p>
@@ -404,11 +412,15 @@ export default function MultifamilyFfeGuide() {
             developer&apos;s team to manage the logistics directly.
           </p>
 
-          <ImagePromptBox
-            aspect="4:3"
-            alt="Fully furnished multifamily apartment bedroom with dark charcoal upholstered platform bed and brass hardware dressers"
-            prompt={'Commercial interior photography of a furnished multifamily apartment bedroom. Platform bed with dark charcoal upholstered headboard and white bedding, pair of nightstands in natural wood with brass-gold hardware, warm pendant bedside lamps, light gray walls, wide-plank wood-look LVT flooring. Muted residential palette with dark charcoal #12161D and brass-gold #D7B676 hardware accents. Natural window light from the right, warm fill from bedside lamps. No people, no text, no logos. Shot from the foot of the bed at seated eye level, 35mm equivalent lens, slightly shallow depth of field. Clean and calm, ready-to-lease feel.'}
-          />
+          <figure>
+            <Image
+              src="/Images/blog/multifamily-bedroom.png"
+              alt="Fully furnished multifamily apartment bedroom with dark charcoal upholstered platform bed and brass hardware dressers"
+              width={1600}
+              height={1200}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="refresh-cycles">Refresh Cycles and SKU Standardization</h2>
           <p>

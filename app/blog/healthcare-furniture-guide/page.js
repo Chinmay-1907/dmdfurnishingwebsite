@@ -2,7 +2,7 @@ import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
-import ImagePromptBox from '../../../components/blog/ImagePromptBox';
+import Image from 'next/image';
 import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
@@ -246,11 +246,15 @@ export default function HealthcareFurnitureGuide() {
             waiting to happen.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Healthcare waiting area with cleanable upholstered seating and open-base chair frames on polished concrete floor"
-            prompt={'Commercial interior photography of a modern healthcare waiting area. Clean, minimal composition. Upholstered seating in muted warm grey fabric with sealed vinyl-wrapped edges. Open cantilever-leg chair frames in brushed dark steel. Polished concrete floor. Indirect overhead lighting, no harsh shadows. Muted palette with dark charcoal #12161D accents in the frame finish and brass-gold #D7B676 in a reception desk trim detail visible in the background. No people, no text, no logos. Shot at eye level with a 35mm equivalent lens, slight depth of field toward rear wall.'}
-          />
+          <figure>
+            <Image
+              src="/Images/blog/healthcare-waiting-area.png"
+              alt="Healthcare waiting area with cleanable upholstered seating and open-base chair frames on polished concrete floor"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="cleanability-specs">
             Cleanability Specs: What to Look For in Surfaces and Construction
@@ -330,11 +334,15 @@ export default function HealthcareFurnitureGuide() {
             pre-design phase and carry those requirements through to the furniture specification.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Healthcare patient room casegoods including bedside cabinet and wall-mounted shelving in HPL finish with sealed edges"
-            prompt={'Commercial interior photography of a clean healthcare patient room. Custom bedside cabinet and small wardrobe unit in HPL finish, medium warm grey with visible sealed PVC edge banding on all panel edges. Wall-mounted shelving in matching finish. Polished vinyl floor. Soft diffused window light from the left. Muted palette, dark charcoal #12161D visible in the bed frame metal detail. Brass-gold #D7B676 as a thin accent strip on the cabinet door pull. No people, no text, no logos, no medical equipment. Wide-angle 24mm equivalent lens, full room in frame, slightly elevated camera position.'}
-          />
+          <figure>
+            <Image
+              src="/Images/blog/healthcare-patient-room.png"
+              alt="Healthcare patient room casegoods including bedside cabinet and wall-mounted shelving in HPL finish with sealed edges"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="bariatric-seating">
             Weight-Rated and Bariatric Seating: Why It Belongs in Every Healthcare Spec
@@ -435,11 +443,15 @@ export default function HealthcareFurnitureGuide() {
             enough for standard cleaning equipment to reach beneath.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Healthcare staff break room with durable commercial furniture on open leg bases, easy-clean surfaces throughout"
-            prompt={'Commercial interior photography of a modern healthcare staff break room. Round table with HPL top in warm white and slim powder-coated steel legs in dark charcoal #12161D. Chairs with open cantilever sled bases in matching dark steel, upholstered seat pads in muted warm greige vinyl. Compact kitchenette visible in background with sealed laminate cabinet fronts. Overhead LED panel light, clean and even. Muted palette, brass-gold #D7B676 accent visible on a single pendant light fixture above the table. No people, no text, no logos. Shot at standing eye level with a 35mm lens, slight wide crop to show full table setting.'}
-          />
+          <figure>
+            <Image
+              src="/Images/blog/healthcare-break-room.png"
+              alt="Healthcare staff break room with durable commercial furniture on open leg bases, easy-clean surfaces throughout"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="sourcing-healthcare-furniture">
             Sourcing and Specifying Healthcare Furniture

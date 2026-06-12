@@ -2,7 +2,7 @@ import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
-import ImagePromptBox from '../../../components/blog/ImagePromptBox';
+import Image from 'next/image';
 import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
@@ -224,13 +224,15 @@ export default function HotelLobbyFurnitureGuide() {
             looks on a floor plan.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Hotel lobby seating area with lounge sofas, club chairs, and brass accent tables in warm ambient lighting"
-            prompt={
-              'Commercial interior photography of a boutique hotel lobby, wide establishing shot, warm ambient lighting from recessed downlights and table lamps, dark charcoal upholstered lounge sofas and club chairs arranged in a conversational grouping, brass-gold side tables and accent legs, stone flooring, no people, no text or logos, muted palette anchored by deep charcoal #12161D with brass-gold #D7B676 hardware accents, shot on Canon EF 24-70mm f/2.8 at f/4, shallow depth of field on midground, photorealistic, professional editorial quality'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/lobby-seating-area.png"
+              alt="Hotel lobby seating area with lounge sofas, club chairs, and brass accent tables in warm ambient lighting"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="zoning">Zoning the Lobby Floor Plan</h2>
           <p>
@@ -338,13 +340,15 @@ export default function HotelLobbyFurnitureGuide() {
             lifecycle.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Close-up detail of contract-grade upholstered lobby chair showing fabric texture, brass nail head trim, and solid hardwood leg"
-            prompt={
-              'Commercial product photography, tight detail shot of a contract-grade upholstered lounge chair arm and leg joint, dark charcoal performance fabric with visible weave texture, polished brass-gold #D7B676 nail head trim along the arm seam, solid dark walnut hardwood tapered leg on stone floor, dramatic side lighting from window, no people, no text or logos, shallow depth of field, Canon EF 100mm macro f/2.8, editorial quality, muted background with charcoal #12161D and warm brass tones'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/lobby-chair-detail.png"
+              alt="Close-up detail of contract-grade upholstered lobby chair showing fabric texture, brass nail head trim, and solid hardwood leg"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="traffic-flow">Traffic Flow and Clearances</h2>
           <p>
@@ -455,13 +459,15 @@ export default function HotelLobbyFurnitureGuide() {
             seating.
           </p>
 
-          <ImagePromptBox
-            aspect="4:3"
-            alt="Hotel lobby statement lounge corner with dark sofa, brass floor lamp, and stone side table at dusk"
-            prompt={
-              'Architectural interior photography of a hotel lobby statement corner at dusk, wide-angle shot, deep charcoal #12161D velvet two-seat lounge sofa as focal point, tall brass-gold #D7B676 arc floor lamp casting warm pool of light, honed stone side table, large format floor tiles in warm grey, floor-to-ceiling window with dusk city view out of focus in background, no people, no visible text or logos, muted palette with dark charcoal and warm brass accents, shot on Sony A7R IV with 16-35mm f/2.8 at f/3.5, photorealistic, luxury hospitality editorial quality'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/lobby-statement-corner.png"
+              alt="Hotel lobby statement lounge corner with dark sofa, brass floor lamp, and stone side table at dusk"
+              width={1600}
+              height={1200}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <p>
             The full lobby package, seating, tables, lighting, and accent pieces, works best when

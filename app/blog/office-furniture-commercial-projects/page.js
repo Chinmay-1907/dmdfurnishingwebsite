@@ -2,7 +2,7 @@ import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
-import ImagePromptBox from '../../../components/blog/ImagePromptBox';
+import Image from 'next/image';
 import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
@@ -228,13 +228,15 @@ export default function OfficeFurnitureCommercialProjects() {
             process from the first conversation.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Commercial open-plan office fit-out showing task seating, work surfaces, and conference zone in a dark charcoal and brass-accented palette"
-            prompt={
-              'Commercial interior photography of a modern open-plan office fit-out, wide-angle 24mm lens, natural light from floor-to-ceiling windows supplemented by warm pendant lighting, dark charcoal #12161D structural columns and ceiling details, brass-gold #D7B676 accent hardware on workstation dividers and light fixtures, rows of task chairs at clean-line work surfaces in matte warm-grey laminate, conference zone visible in background with rectangular table and upholstered seating, no people, no text or logos in frame, muted palette with high-end commercial interior photography quality'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/office-open-plan.png"
+              alt="Commercial open-plan office fit-out showing task seating, work surfaces, and conference zone in a dark charcoal and brass-accented palette"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="durability-standards">Durability Standards: What ANSI/BIFMA X5.1 Means</h2>
           <p>
@@ -310,13 +312,15 @@ export default function OfficeFurnitureCommercialProjects() {
             including task seating, conference, lounge, and reception.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Commercial office conference room with rectangular wood-veneer table, upholstered meeting chairs, and brass hardware details"
-            prompt={
-              'Commercial interior photography of a mid-size corporate conference room, 35mm lens, soft diffused overhead lighting with warm tone, rectangular conference table in dark walnut veneer with clean architectural profile, eight high-back upholstered meeting chairs in charcoal fabric, brass-gold #D7B676 hardware on credenza in background, walls in matte dark charcoal #12161D with subtle textured panel finish, no people, no text or logos in frame, architectural photography quality, muted sophisticated palette'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/office-conference-room.png"
+              alt="Commercial office conference room with rectangular wood-veneer table, upholstered meeting chairs, and brass hardware details"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="work-surfaces">Choosing Work Surface Materials</h2>
           <p>
@@ -383,13 +387,15 @@ export default function OfficeFurnitureCommercialProjects() {
             for eight weeks. It also means faster resolution when something arrives wrong.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Commercial office reception area with upholstered lounge seating and a dark-finished reception desk with brass hardware accents"
-            prompt={
-              'Commercial interior photography of a modern corporate reception area, wide shot, 28mm lens, combination of ambient and warm accent lighting, dark reception desk in charcoal-black laminate with brass-gold #D7B676 metal surround trim, two upholstered lounge chairs in soft warm grey fabric with low-profile bases, polished concrete floor with large-format tile transition, wall treatment in textured dark plaster finish #12161D, architectural plants in matte black planters, no people, no text or logos in frame, high-end commercial interior photography quality'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/office-reception.png"
+              alt="Commercial office reception area with upholstered lounge seating and a dark-finished reception desk with brass hardware accents"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="single-vendor">Why Single-Vendor Coordination Beats Split POs</h2>
           <p>

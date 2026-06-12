@@ -2,7 +2,7 @@ import Link from 'next/link';
 import JsonLd from '../../../components/JsonLd';
 import AnswerCallout from '../../../components/AnswerCallout';
 import RelatedPosts from '../../../components/blog/RelatedPosts';
-import ImagePromptBox from '../../../components/blog/ImagePromptBox';
+import Image from 'next/image';
 import { siteUrl } from '../../../lib/metadata';
 import styles from '../page.module.css';
 
@@ -228,13 +228,15 @@ export default function StudentHousingFurnitureGuide() {
             supposed to last until year ten.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Furnished student dormitory room with loftable bed, integrated desk, and wardrobe in dark wood casegoods"
-            prompt={
-              'Commercial interior photography of a furnished university dormitory single room. Loftable bed frame in dark charcoal wood finish raised to mid-loft position, under-bed clearance visible and clear. Integrated student desk with open shelving above it mounted to wall beside the wardrobe. Wardrobe in matching dark wood panel casegoods with metal hardware. Clean institutional room, neutral concrete-look walls, warm morning window light from one side. No people. No text or logos. Camera: 35mm equivalent, slightly raised angle, muted palette, dark charcoal #12161D wood tones with brass-gold #D7B676 metal pulls as accent. Photo realistic, architectural photography style.'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/student-dorm-room.png"
+              alt="Furnished student dormitory room with loftable bed, integrated desk, and wardrobe in dark wood casegoods"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="construction-details">Construction Details That Survive</h2>
           <p>
@@ -347,13 +349,15 @@ export default function StudentHousingFurnitureGuide() {
             the pace of wear is faster.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="Student housing wardrobe and desk casegood unit in dark wood finish with brass hardware, clean dormitory setting"
-            prompt={
-              'Commercial interior photography of a student housing casegood wall unit. Full-height wardrobe on the left with open door showing hanging space and top shelf, dark charcoal #12161D wood veneer panel finish, brass-gold #D7B676 metal pull hardware. Integrated student desk to the right with overhead open shelf and grommet cutout. Clean institutional room, neutral wall, natural daylight from camera-left window. No people. No text, logos, or posters visible. Camera: 50mm equivalent, straight-on angle, product photography clarity. Photo realistic, architectural furniture photography, muted palette.'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/student-casegood-unit.png"
+              alt="Student housing wardrobe and desk casegood unit in dark wood finish with brass hardware, clean dormitory setting"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="common-room">Common-Room and Lounge Seating</h2>
           <p>
@@ -413,13 +417,15 @@ export default function StudentHousingFurnitureGuide() {
             Northeast, where many large university housing portfolios are concentrated.
           </p>
 
-          <ImagePromptBox
-            aspect="16:9"
-            alt="University residence hall corridor during summer furniture installation, casegoods stacked and ready for room placement"
-            prompt={
-              'Commercial photography of a university residence hall corridor during a summer furniture installation. Dark charcoal #12161D wood-finish wardrobe casegoods stacked flat-pack on a hand truck in a clean institutional hallway, polished concrete floor, fluorescent overhead lighting with warm supplemental light from open room doorways. No people. No text or logos. Camera: 28mm wide, slightly angled perspective down the corridor. Muted palette with brass-gold #D7B676 metal hardware visible on the casegoods edges. Documentary-style commercial photography, sharp focus, realistic lighting.'
-            }
-          />
+          <figure>
+            <Image
+              src="/Images/blog/student-corridor-install.png"
+              alt="University residence hall corridor during summer furniture installation, casegoods stacked and ready for room placement"
+              width={1920}
+              height={1080}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </figure>
 
           <h2 id="purchasing-patterns">Institutional Purchasing Patterns</h2>
           <p>
