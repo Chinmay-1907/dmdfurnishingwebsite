@@ -46,7 +46,7 @@ const editorialTeamSchema = {
   url: `${siteUrl}/author/dmd-furnishing-editorial`,
   description:
     'The DMD Furnishing editorial team. Hospitality FF&E specialists and commercial furniture manufacturing authors writing practical guides for procurement managers, interior designers, hospitality developers, and general contractors. Topics include hotel casegoods, restaurant seating, upholstery, value engineering, and the FF&E procurement workflow.',
-  image: `${siteUrl}/DMD_Furnishing_Logo_Embedded.svg`,
+  image: `${siteUrl}/Images/logo.png`,
   knowsAbout: [
     'hospitality FF&E',
     'commercial furniture manufacturing',
