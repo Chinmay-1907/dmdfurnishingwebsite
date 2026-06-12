@@ -202,7 +202,7 @@ export default function WhatIsFFEPage() {
                 src="/Images/Hotel_Guest_Room_Hero.png"
                 alt="Hotel guestroom furnished with custom FF&E: upholstered headboard, casegoods, lounge seating, and decorative lighting"
                 width={2000}
-                height={1116}
+                height={1016}
                 sizes="(max-width: 760px) 100vw, 720px"
               />
               <figcaption>

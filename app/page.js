@@ -191,7 +191,7 @@ export default function HomePage() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Custom Hospitality FF&amp;E · Built to Spec · Installed Nationwide</p>
-          <h1>Custom Hospitality Furniture. <span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
+          <h1><span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
           <p className={styles.heroTagline}>Custom FF&amp;E for Hotels, Restaurants &amp; Commercial Spaces</p>
           <p className={styles.lede} data-speakable="lede">
             Every piece built to your finish samples, hardware selections, and dimension drawings.<br />
@@ -217,12 +217,12 @@ export default function HomePage() {
             </div>
           )}
           <div className={styles.trustStat}>
-            <span className={styles.trustStatNumber}>Multi-State</span>
-            <span className={styles.trustStatLabel}>Full-Property Installs &mdash; FL &middot; ME &middot; MD &middot; MA</span>
+            <span className={styles.trustStatNumber}>4 States</span>
+            <span className={styles.trustStatLabel}>Full-Property Installs in FL &middot; ME &middot; MD &middot; MA</span>
           </div>
           <div className={styles.trustStat}>
-            <CountUp end={places.length} className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Verticals We Serve</span>
+            <CountUp end={places.length} suffix=" Sectors" className={styles.trustStatNumber} />
+            <span className={styles.trustStatLabel}>Hotels to Healthcare</span>
           </div>
           <div className={styles.trustStat}>
             <span className={styles.trustStatNumber}>Nationwide</span>
