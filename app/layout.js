@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -61,7 +62,7 @@ export const metadata = {
     }),
   },
   other: {
-    'theme-color': '#000000',
+    'theme-color': '#ffffff',
   },
 };
 
@@ -76,6 +77,19 @@ export default function RootLayout({ children }) {
             the wrong theme while React hydrates. */}
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <link rel="preload" as="image" href="/Images/Tailored_Guestroom_Collections.jpg" fetchPriority="high" />
+        {/* Google Analytics 4 — property "DMD Furnishing" (530010585), stream G-DMF712ECDR */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DMF712ECDR"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DMF712ECDR');
+          `}
+        </Script>
       </head>
       <body>
         <ThemeProvider>
