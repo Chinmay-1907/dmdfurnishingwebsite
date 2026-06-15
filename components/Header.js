@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import ThemeToggle from './ThemeToggle';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -124,7 +123,6 @@ function Header() {
           </ul>
         </nav>
         <div className="header-actions">
-          <ThemeToggle />
           <Link href="/contact" className="consultation-button" onClick={closeMenu}>
             Book Consultation
           </Link>

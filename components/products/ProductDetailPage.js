@@ -47,6 +47,19 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
   // context) so the 174 detail pages stop rendering identical boilerplate.
   const detailCopy = getProductCopy(primary);
 
+  // Price tier badge (replaces dollar pricing). Inquire = no price on record.
+  const TIER_COLORS = {
+    Essentials: '#3a7d44',
+    Classic: '#2f6f9f',
+    Premium: '#6b4e9a',
+    Luxury: '#a8842c',
+    Custom: '#1f5c52',
+    Inquire: '#6b6b6b',
+  };
+  const TIER_LABELS = { Inquire: 'Contact for Pricing', Custom: 'Custom Made' };
+  const tierLabel = product.tier ? (TIER_LABELS[product.tier] || `${product.tier} Tier`) : '';
+  const tierColor = TIER_COLORS[product.tier] || '#6b6b6b';
+
   return (
     <main className={styles.page}>
       <section className={styles.shell}>
@@ -54,6 +67,23 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Product Detail</p>
             <h1>{product.name}</h1>
+            {tierLabel ? (
+              <span
+                style={{
+                  display: 'inline-block',
+                  marginBottom: '0.75rem',
+                  padding: '0.3rem 0.85rem',
+                  borderRadius: '999px',
+                  fontSize: '0.78rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.03em',
+                  color: '#fff',
+                  background: tierColor,
+                }}
+              >
+                {tierLabel}
+              </span>
+            ) : null}
             <p className={styles.description}>
               {product.description ||
                 `Commercial-grade ${primarySubName.toLowerCase()} built for ${primaryPlaceName.toLowerCase()} environments.`}
@@ -99,6 +129,12 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
           <aside className={styles.summaryCard}>
             <p className={styles.cardLabel}>Product Context</p>
             <dl className={styles.summaryGrid}>
+              {tierLabel ? (
+                <div>
+                  <dt>Price Tier</dt>
+                  <dd>{tierLabel}</dd>
+                </div>
+              ) : null}
               <div>
                 <dt>Primary Space</dt>
                 <dd>{primaryPlaceName}</dd>
@@ -217,6 +253,19 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
             </div>
           </div>
         </section>
+
+        {product.sku ? (
+          <p
+            style={{
+              marginTop: '2rem',
+              fontSize: '0.7rem',
+              color: '#b8b8b8',
+              letterSpacing: '0.02em',
+            }}
+          >
+            Ref: {product.sku}
+          </p>
+        ) : null}
       </section>
     </main>
   );

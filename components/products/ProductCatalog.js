@@ -16,6 +16,7 @@ function getInitialFilters(initialFilters) {
       spaces: initialFilters?.space ? [initialFilters.space] : [],
       furnitureTypes: initialFilters?.furnitureType ? [initialFilters.furnitureType] : [],
       subcategories: initialFilters?.subcategory ? [initialFilters.subcategory] : [],
+      tiers: [],
     };
   }
   const params = new URLSearchParams(window.location.search);
@@ -26,6 +27,7 @@ function getInitialFilters(initialFilters) {
       (initialFilters?.furnitureType ? [initialFilters.furnitureType] : []),
     subcategories: params.get('sub')?.split(',').filter(Boolean) ||
       (initialFilters?.subcategory ? [initialFilters.subcategory] : []),
+    tiers: params.get('tier')?.split(',').filter(Boolean) || [],
   };
 }
 
@@ -50,6 +52,7 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
     if (filters.spaces.length) params.set('space', filters.spaces.join(','));
     if (filters.furnitureTypes.length) params.set('type', filters.furnitureTypes.join(','));
     if (filters.subcategories.length) params.set('sub', filters.subcategories.join(','));
+    if (filters.tiers?.length) params.set('tier', filters.tiers.join(','));
     if (query) params.set('q', query);
     const qs = params.toString();
     const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
@@ -77,17 +80,20 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
   }, [searchQuery, syncUrl]);
 
   const handleSpaceChange = useCallback((slug) => {
-    const updated = {
-      spaces: slug ? [slug] : [],
-      furnitureTypes: [],
-      subcategories: [],
-    };
-    setActiveFilters(updated);
-    syncUrl(updated, searchQuery);
+    setActiveFilters((prev) => {
+      const updated = {
+        spaces: slug ? [slug] : [],
+        furnitureTypes: [],
+        subcategories: [],
+        tiers: prev.tiers || [],
+      };
+      syncUrl(updated, searchQuery);
+      return updated;
+    });
   }, [searchQuery, syncUrl]);
 
   const handleClearAll = useCallback(() => {
-    const cleared = { spaces: [], furnitureTypes: [], subcategories: [] };
+    const cleared = { spaces: [], furnitureTypes: [], subcategories: [], tiers: [] };
     setActiveFilters(cleared);
     setSearchQuery('');
     syncUrl(cleared, '');
@@ -120,6 +126,9 @@ export default function ProductCatalog({ products, filterOptions, initialFilters
         const subs = p.subcategoryKeys?.length ? p.subcategoryKeys : [p.subcategoryKey].filter(Boolean);
         return activeFilters.subcategories.some((f) => subs.includes(f));
       });
+    }
+    if (activeFilters.tiers?.length) {
+      result = result.filter((p) => activeFilters.tiers.includes(p.tier));
     }
 
     if (searchQuery.trim()) {

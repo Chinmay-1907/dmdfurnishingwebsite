@@ -58,3 +58,13 @@ agentdb.rvf.lock
 .git-commit-msg.txt
 
 lh-reports/
+
+# FOA supplier import scratch — large (398M), FOA-branded, not shipped
+.staging-foa/
+
+# DMD_Website.xml local backups
+public/DMD_Website.xml.bak
+public/DMD_Website.xml.bak*
+
+# scratch / scratch html
+cat.html

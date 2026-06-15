@@ -28,7 +28,14 @@ function FilterGroup({ title, options, selected, onToggle, defaultOpen = false }
                   onChange={() => onToggle(id)}
                   className={styles.filterCheckbox}
                 />
-                <span className={styles.filterLabel}>{opt.name}</span>
+                <span className={styles.filterLabel}>
+                  {opt.name}
+                  {opt.range ? (
+                    <span style={{ fontSize: '0.7rem', color: '#9a9a9a', marginLeft: '0.35rem' }}>
+                      {opt.range}
+                    </span>
+                  ) : null}
+                </span>
                 <span className={styles.filterCount}>{opt.count}</span>
               </label>
             );
@@ -47,7 +54,7 @@ export default function CatalogFilters({
   mobileOpen,
   onMobileClose,
 }) {
-  const { spaces, furnitureTypes, subcategories } = filterOptions;
+  const { spaces, furnitureTypes, subcategories, tiers = [] } = filterOptions;
 
   const visibleTypes = activeFilters.spaces.length
     ? furnitureTypes.filter((ft) => activeFilters.spaces.includes(ft.placeSlug))
@@ -67,7 +74,8 @@ export default function CatalogFilters({
   const hasActiveFilters =
     activeFilters.spaces.length > 0 ||
     activeFilters.furnitureTypes.length > 0 ||
-    activeFilters.subcategories.length > 0;
+    activeFilters.subcategories.length > 0 ||
+    (activeFilters.tiers?.length || 0) > 0;
 
   const content = (
     <>
@@ -104,6 +112,16 @@ export default function CatalogFilters({
           options={visibleSubs}
           selected={activeFilters.subcategories}
           onToggle={(slug) => onFilterChange('subcategories', slug)}
+        />
+      )}
+
+      {tiers.length > 0 && (
+        <FilterGroup
+          title="Price Tier"
+          options={tiers}
+          selected={activeFilters.tiers || []}
+          onToggle={(slug) => onFilterChange('tiers', slug)}
+          defaultOpen
         />
       )}
     </>
