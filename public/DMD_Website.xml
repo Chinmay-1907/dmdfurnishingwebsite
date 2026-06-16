@@ -2386,29 +2386,6 @@
     <spec name="Detail" value="Pillows Included" />
   </specifications>
 </product>
-<!-- BEGIN residential-catalog importtransitional-graphite-loveseat -->
-<product id="Transitional Graphite Loveseat" name="Transitional Graphite Loveseat" description="Transitional loveseat in Graphite. Rolled Arms." tags="loveseat,living room,sofa" sku="DELGADA-49989" tier="Classic" image="/Images/residential-catalog/transitional-graphite-loveseat/img_1.webp">
-  <images>
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_1.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_2.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_3.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_4.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_5.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_6.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_7.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_8.webp" alt="Transitional Graphite Loveseat" />
-    <image src="/Images/residential-catalog/transitional-graphite-loveseat/img_9.webp" alt="Transitional Graphite Loveseat" />
-  </images>
-  <specifications>
-    <spec name="Style" value="Transitional" />
-    <spec name="Color" value="Graphite" />
-    <spec name="Materials" value="Chenille, Solid Wood, Others" />
-    <spec name="Detail" value="Rolled Arms" />
-    <spec name="Detail" value="Tapered Wood Feet" />
-    <spec name="Detail" value="Welt Trim" />
-    <spec name="Detail" value="Pillows Included" />
-  </specifications>
-</product>
 <!-- BEGIN residential-catalog importtransitional-silver-loveseat -->
 <product id="Transitional Silver Loveseat" name="Transitional Silver Loveseat" description="Transitional loveseat in Silver. Individual Nailhead Trim." tags="loveseat,living room,sofa" sku="ELICIA-49211" tier="Premium" image="/Images/residential-catalog/transitional-silver-loveseat/img_1.webp">
   <images>
@@ -5611,29 +5588,6 @@
     <spec name="Detail" value="Tapered Legs" />
   </specifications>
 </product>
-<!-- BEGIN residential-catalog importtransitional-light-gray-sofa-enea -->
-<product id="Transitional Light Gray Sofa (Enea)" name="Transitional Light Gray Sofa (Enea)" description="Transitional sofa in Light Gray. Warm Walnut Tone Wood Trim." tags="sofa,living room,sofa" sku="ENEA-55886" tier="Classic" image="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_1.webp">
-  <images>
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_1.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_2.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_3.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_4.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_5.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_6.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_7.webp" alt="Transitional Light Gray Sofa (Enea)" />
-    <image src="/Images/residential-catalog/transitional-light-gray-sofa-enea/img_8.webp" alt="Transitional Light Gray Sofa (Enea)" />
-  </images>
-  <specifications>
-    <spec name="Style" value="Transitional" />
-    <spec name="Color" value="Light Gray" />
-    <spec name="Materials" value="Chenille, Faux Fur, Wood" />
-    <spec name="Detail" value="Warm Walnut Tone Wood Trim" />
-    <spec name="Detail" value="Soft Track Arm" />
-    <spec name="Detail" value="Pocket Coil Spring" />
-    <spec name="Detail" value="Slightly Tapered Leg" />
-    <spec name="Detail" value="Throw Pillows Included" />
-  </specifications>
-</product>
 <!-- BEGIN residential-catalog importtraditional-dark-cherrybrown-sofa-ensenada -->
 <product id="Traditional Dark Cherry/Brown Sofa (Ensenada)" name="Traditional Dark Cherry/Brown Sofa (Ensenada)" description="Traditional sofa in Dark Cherry/Brown. Button Tufted Back." tags="sofa,living room,sofa" sku="ENSENADA-52204" tier="Premium" image="/Images/residential-catalog/traditional-dark-cherrybrown-sofa-ensenada/img_1.webp">
   <images>
@@ -6889,23 +6843,6 @@
     <spec name="Detail" value="Throw Pillows Included" />
   </specifications>
 </product>
-<!-- BEGIN residential-catalog importtransitional-espressogray-accent-chair -->
-<product id="Transitional Espresso/Gray Accent Chair" name="Transitional Espresso/Gray Accent Chair" description="Transitional accent chair in Espresso/Gray. Straight-Leg Table Base." tags="accent chair,living room,lounge chair" sku="WORLAND-56284" tier="Essentials" image="/Images/residential-catalog/transitional-espressogray-accent-chair/img_1.webp">
-  <images>
-    <image src="/Images/residential-catalog/transitional-espressogray-accent-chair/img_1.webp" alt="Transitional Espresso/Gray Accent Chair" />
-    <image src="/Images/residential-catalog/transitional-espressogray-accent-chair/img_2.webp" alt="Transitional Espresso/Gray Accent Chair" />
-    <image src="/Images/residential-catalog/transitional-espressogray-accent-chair/img_3.webp" alt="Transitional Espresso/Gray Accent Chair" />
-  </images>
-  <specifications>
-    <spec name="Style" value="Transitional" />
-    <spec name="Color" value="Espresso/Gray" />
-    <spec name="Materials" value="Solid Rubberwood, Rubberwood Veneer, Fabric, Foam, Engineered Wood" />
-    <spec name="Detail" value="Straight-Leg Table Base" />
-    <spec name="Detail" value="Upholstered Dining Chairs" />
-    <spec name="Detail" value="High Back Chair Silhouette" />
-    <spec name="Detail" value="Padded Seat and Back" />
-  </specifications>
-</product>
 <!-- BEGIN residential-catalog importtransitional-medium-oakgray-accent-chair -->
 <product id="Transitional Medium Oak/Gray Accent Chair" name="Transitional Medium Oak/Gray Accent Chair" description="Transitional accent chair in Medium Oak/Gray. Straight-Leg Table Base." tags="accent chair,living room,lounge chair" sku="WORLAND-56285" tier="Essentials" image="/Images/residential-catalog/transitional-medium-oakgray-accent-chair/img_1.webp">
   <images>
@@ -7631,48 +7568,6 @@
     <spec name="Detail" value="Ball Bearing Glides" />
     <spec name="Detail" value="Felt-lined Top Drawer" />
     <spec name="Detail" value="Mattress Ready" />
-  </specifications>
-</product>
-<!-- BEGIN residential-catalog importcontemporary-silver-queen-bedroom-set-brachium -->
-<product id="Contemporary Silver Queen Bedroom Set (Brachium)" name="Contemporary Silver Queen Bedroom Set (Brachium)" description="Contemporary bedroom set in Silver. Queen Bed + NS +Dresser + Mirror." tags="bedroom set,bedroom,bed frame" sku="BRACHIUM-55098" tier="Inquire" image="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium/img_1.webp">
-  <images>
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium/img_1.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium)" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium/img_2.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium)" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium/img_3.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium)" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium/img_4.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium)" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium/img_5.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium)" />
-  </images>
-  <specifications>
-    <spec name="Style" value="Contemporary" />
-    <spec name="Color" value="Silver" />
-    <spec name="Materials" value="Mirror, Leatherette, Solid Wood, Wood Veneer, Others" />
-    <spec name="Detail" value="Button Tufted Headboard" />
-    <spec name="Detail" value="LED Light Trim on Headboard &amp; Mirror" />
-    <spec name="Detail" value="Crocodile-Textured Detail" />
-    <spec name="Detail" value="Felt-lined Top Drawers" />
-    <spec name="Detail" value="Mirror Trim" />
-    <spec name="Detail" value="Foundation Required" />
-  </specifications>
-</product>
-<!-- BEGIN residential-catalog importcontemporary-silver-queen-bedroom-set-brachium-2 -->
-<product id="Contemporary Silver Queen Bedroom Set (Brachium) 2" name="Contemporary Silver Queen Bedroom Set (Brachium) 2" description="Contemporary bedroom set in Silver. Queen Bed + NS + Dresser + Mirror + Chest." tags="bedroom set,bedroom,bed frame" sku="BRACHIUM-55099" tier="Inquire" image="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium-2/img_1.webp">
-  <images>
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium-2/img_1.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium) 2" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium-2/img_2.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium) 2" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium-2/img_3.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium) 2" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium-2/img_4.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium) 2" />
-    <image src="/Images/residential-catalog/contemporary-silver-queen-bedroom-set-brachium-2/img_5.webp" alt="Contemporary Silver Queen Bedroom Set (Brachium) 2" />
-  </images>
-  <specifications>
-    <spec name="Style" value="Contemporary" />
-    <spec name="Color" value="Silver" />
-    <spec name="Materials" value="Mirror, Leatherette, Solid Wood, Wood Veneer, Others" />
-    <spec name="Detail" value="Button Tufted Headboard" />
-    <spec name="Detail" value="LED Light Trim on Headboard &amp; Mirror" />
-    <spec name="Detail" value="Crocodile-Textured Detail" />
-    <spec name="Detail" value="Felt-lined Top Drawers" />
-    <spec name="Detail" value="Mirror Trim" />
-    <spec name="Detail" value="Foundation Required" />
   </specifications>
 </product>
 <!-- BEGIN residential-catalog importtransitional-brown-cherry-queen-bedroom-set -->
