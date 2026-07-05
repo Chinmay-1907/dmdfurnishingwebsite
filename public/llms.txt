@@ -36,6 +36,7 @@ DMD Furnishing is a B2B commercial furniture manufacturer specializing in hospit
 - Schedule Consultation: https://dmdfurnishing.com/contact
 - Design Inspirations: https://dmdfurnishing.com/inspirations
 - Blog: https://dmdfurnishing.com/blog
+- Guides: https://dmdfurnishing.com/guides
 
 ## Product Category Pages
 - Hotel Furniture: https://dmdfurnishing.com/products/hotel
