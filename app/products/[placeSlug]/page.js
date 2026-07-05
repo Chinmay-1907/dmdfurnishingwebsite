@@ -211,6 +211,25 @@ function buildProductStructuredData(product) {
             name: spec.name,
             value: spec.value,
           })) || [],
+        // Quote-based B2B pricing: no fixed price exists, so we say so honestly
+        // via InvoicePrice rather than omitting offers (which fails Google's
+        // rich-result eligibility check) or inventing a fake price.
+        offers: {
+          '@type': 'Offer',
+          url: canonicalUrl,
+          priceCurrency: 'USD',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceType: 'https://schema.org/InvoicePrice',
+            eligibleQuantity: {
+              '@type': 'QuantitativeValue',
+              description: 'Custom quote based on quantity, finish, and specifications',
+            },
+          },
+          availability: 'https://schema.org/InStock',
+          itemCondition: 'https://schema.org/NewCondition',
+          seller: { '@id': `${siteUrl}/#organization` },
+        },
       },
     ],
   };
