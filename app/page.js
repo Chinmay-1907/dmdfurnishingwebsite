@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import CountUp from '../components/CountUp';
+import HeroCarousel from '../components/HeroCarousel';
 import JsonLd from '../components/JsonLd';
 import { getAllPlaces } from '../lib/catalog';
 import { generatePageMetadata, siteUrl } from '../lib/metadata';
@@ -175,18 +176,11 @@ export default function HomePage() {
       {/* ── 1. Hero ── */}
       <section className={styles.hero}>
         <div className={styles.heroMedia} aria-hidden="true">
-          {heroImages.map((img, index) => (
-            <Image
-              key={img.src}
-              src={img.src}
-              alt={img.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
-              priority={index === 0}
-              style={{ animationDelay: `${index * 7}s` }}
-              className={styles.heroImage}
-            />
-          ))}
+          <HeroCarousel
+            images={heroImages}
+            imageClassName={styles.heroImage}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
+          />
         </div>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
