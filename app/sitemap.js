@@ -98,6 +98,7 @@ export default function sitemap() {
     entries.push({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: post.isoDate,
+      images: post.image ? [abs(post.image)] : undefined,
     });
   }
 
@@ -139,10 +140,16 @@ export default function sitemap() {
   }
 
   // --- Project detail pages ---
+  // findings-images-programmatic.md P1: project galleries are the site's best
+  // raw material (real before/after photos) but had zero image-sitemap
+  // coverage. Include mainImage + every gallery image, deduped.
   for (const project of projects) {
+    const galleryUrls = Array.isArray(project.images) ? project.images.map((img) => img.url) : [];
+    const uniqueImageUrls = [...new Set([project.mainImage, ...galleryUrls].filter(Boolean))];
     entries.push({
       url: `${baseUrl}/projects/${project.slug}`,
       lastModified: isoFromCompletionDate(project.completionDate) || LAST_BUILD,
+      images: uniqueImageUrls.length ? uniqueImageUrls.map(abs) : undefined,
     });
   }
 
