@@ -32,6 +32,9 @@ export default function ProductCard({ product, priority = false }) {
           className={styles.productImage}
           priority={priority}
           loading={priority ? undefined : 'lazy'}
+          // Grid thumbs at card size don't need q=75 default; 62 is visually
+          // identical here and cuts ~30-40% of bytes (findings-performance.md P2).
+          quality={62}
         />
         {hasHover && (
           <Image
@@ -41,6 +44,7 @@ export default function ProductCard({ product, priority = false }) {
             sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
             className={styles.productImageHover}
             loading="lazy"
+            quality={62}
           />
         )}
       </div>
