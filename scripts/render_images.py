@@ -47,6 +47,15 @@ QUOTA_RE = re.compile(r"\b(rate limit|usage limit|quota exceeded|limit reached|t
 
 FIELD_LINE_RE = re.compile(r"^-\s*([a-zA-Z_]+):\s*(.*)$")
 
+# The prompt file carries its own shot_type -> aspect guidance in a
+# "## Suggested aspect ratios" section, as bullet lines like:
+#   - white_seamless_hero, three_quarter_angle, ...: square 1:1
+#   - full_room_scene, wide_establishing, ...: landscape 3:2
+# We parse THAT table (per file) rather than hardcode a mapping here.
+ASPECT_HEADING_RE = re.compile(r"^##.*aspect ratio", re.I)
+ASPECT_BULLET_RE = re.compile(r"^-\s*(.+?):\s*((?:square|landscape|portrait)\s+\d+:\d+)\s*$", re.I)
+ASPECT_VALUE_RE = re.compile(r"([a-zA-Z]+)\s+(\d+:\d+)")
+
 
 # --------------------------------------------------------------------------
 # Parsing
@@ -63,6 +72,7 @@ class ImageBlock:
     negative: str
     product_group: Optional[str]
     consistency_profile: Optional[str]
+    aspect_hint: Optional[str]  # e.g. "square 1:1" / "landscape 3:2", from the file's own table
     source_file: str
 
 
@@ -70,6 +80,32 @@ class ImageBlock:
 class ParseResult:
     blocks: list = field(default_factory=list)
     warnings: list = field(default_factory=list)
+
+
+def parse_aspect_table(lines: list) -> dict:
+    """Parse the file's own "## Suggested aspect ratios" section.
+
+    Returns {shot_type: "square 1:1" | "landscape 3:2" | ...}. Empty dict
+    if the file has no such section (callers then default to square).
+    """
+    table: dict[str, str] = {}
+    in_section = False
+    for line in lines:
+        stripped = line.strip()
+        if ASPECT_HEADING_RE.match(stripped):
+            in_section = True
+            continue
+        if in_section:
+            if stripped.startswith("#") or stripped == "---":
+                break
+            m = ASPECT_BULLET_RE.match(stripped)
+            if m:
+                shot_list, aspect = m.group(1), " ".join(m.group(2).split())
+                for shot in shot_list.split(","):
+                    shot = shot.strip()
+                    if shot:
+                        table[shot] = aspect
+    return table
 
 
 def parse_file(path: Path) -> ParseResult:
@@ -103,6 +139,7 @@ def parse_file(path: Path) -> ParseResult:
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
     n = len(lines)
+    aspect_table = parse_aspect_table(lines)
     i = 0
     current_product: Optional[str] = None
     current_consistency: Optional[str] = None
@@ -186,6 +223,7 @@ def parse_file(path: Path) -> ParseResult:
                     negative=negative_text,
                     product_group=current_product,
                     consistency_profile=current_consistency,
+                    aspect_hint=aspect_table.get(fields.get("shot_type", "")),
                     source_file=str(path),
                 )
             )
@@ -285,7 +323,15 @@ def compose_prompt(block: ImageBlock) -> str:
     parts = [block.prompt]
     if negative_line:
         parts.append(f"Avoid: {negative_line}")
-    parts.append("Render a single square (1:1 aspect ratio) image at high resolution.")
+    # Aspect comes from the prompt file's own "Suggested aspect ratios"
+    # table via block.aspect_hint; shot types the table doesn't cover
+    # default to square.
+    m = ASPECT_VALUE_RE.match(block.aspect_hint or "")
+    if m:
+        orientation, ratio = m.group(1).lower(), m.group(2)
+    else:
+        orientation, ratio = "square", "1:1"
+    parts.append(f"Render a single {orientation} ({ratio} aspect ratio) image at high resolution.")
     return "\n\n".join(parts)
 
 
@@ -439,6 +485,8 @@ def main() -> int:
                               "Default: closet_image_prompts.md then codex_image_prompts.md, whichever exist.")
     parser.add_argument("--limit", type=int, default=None, help="Max number of renders to perform this run")
     parser.add_argument("--dry-run", action="store_true", help="Parse and report pending counts, zero renders")
+    parser.add_argument("--show", metavar="IMAGE_ID", default=None,
+                         help="Print the fully composed Codex prompt for one image_id and exit (no render)")
     parser.add_argument("--repo-root", type=str, default=None, help="Repo root (default: repo containing this script)")
     args = parser.parse_args()
 
@@ -462,6 +510,19 @@ def main() -> int:
         all_blocks.extend(result.blocks)
         all_warnings.extend(result.warnings)
         per_file_counts[str(f)] = len(result.blocks)
+
+    if args.show:
+        for b in all_blocks:
+            if b.image_id == args.show:
+                print(f"# image_id:    {b.image_id}")
+                print(f"# shot_type:   {b.shot_type}")
+                print(f"# aspect_hint: {b.aspect_hint or '(none in file -> defaults to square 1:1)'}")
+                print(f"# output_path: {b.output_path}")
+                print()
+                print(compose_prompt(b))
+                return 0
+        print(f"image_id not found in parsed blocks: {args.show}")
+        return 1
 
     csv_path = repo_root / "generation_log.csv"
     last_status = load_last_status(csv_path)

@@ -42,6 +42,9 @@ Other flags:
   then `codex_image_prompts.md`, whichever exist at the repo root.
 - `--repo-root <path>` — override the repo root (default: the repo that
   contains `scripts/render_images.py`).
+- `--show <image_id>` — print the fully composed Codex prompt for one
+  block (including its aspect-ratio instruction) and exit. No render,
+  no quota spent. Handy for spot-checking before a batch.
 
 ## Where images land
 
@@ -119,11 +122,12 @@ off.
 ## Design notes
 
 - The composed Codex prompt is: the block's `PROMPT:` text, then
-  `Avoid: <NEGATIVE line>`, then a fixed instruction to render a square,
-  high-resolution image. The prompt file's own per-shot-type aspect-ratio
-  table (some shots suggest 3:2 landscape) is **not** currently honored —
-  everything is requested square. If landscape shots start looking
-  cropped/wrong, that's the first thing to revisit.
+  `Avoid: <NEGATIVE line>`, then an aspect-ratio instruction. The aspect
+  is looked up per shot_type in the prompt file's OWN "Suggested aspect
+  ratios" table (in the current file: hero/detail/spec shots -> square
+  1:1, room/environment shots -> landscape 3:2). A shot_type the table
+  doesn't list — or a prompt file with no such table — defaults to
+  square. Use `--show <image_id>` to see the exact composed prompt.
 - `MIN_OUTPUT_BYTES` (20 KB) is a cheap sanity check, not a quality check.
   It catches truly broken/blank renders, nothing more.
 - `codex exec` is called with `stdin=DEVNULL` and an 8-minute timeout per
