@@ -90,6 +90,38 @@ const placeMetaOverrides = {
   },
 };
 
+// findings-technical.md P2: ~1/3 of sampled products had meta descriptions as
+// short as 36 chars. Pads the real catalog description toward the 140-155
+// char target (spec + material + use case, per the audit's fix note) using
+// only structured data already on the record -- no invented facts. Grows the
+// tail sentence word-by-word so it lands inside the window instead of jumping
+// straight from "too short" to "too long" in one clause.
+function composeProductMetaDescription(rawDescription, subcategoryName, placeName) {
+  const MIN_LEN = 140;
+  const MAX_LEN = 155;
+  const base = (rawDescription || '').trim().replace(/\.?\s*$/, '.');
+  if (base.length >= MIN_LEN) return base;
+
+  const subcategory = subcategoryName ? subcategoryName.toLowerCase() : 'furniture';
+  const place = placeName ? `${placeName.toLowerCase()} environments` : 'commercial spaces';
+  const tailWords =
+    `Commercial-grade ${subcategory}, built for ${place}, with custom sizes, finishes, and hardware options. Request specs and a project quote from DMD Furnishing in Foxboro, Massachusetts.`.split(
+      ' '
+    );
+
+  let result = base;
+  let built = '';
+  for (const word of tailWords) {
+    const candidateBuilt = built ? `${built} ${word}` : word;
+    const candidate = `${base} ${candidateBuilt}`;
+    if (candidate.length > MAX_LEN) break;
+    built = candidateBuilt;
+    result = candidate;
+    if (result.length >= MIN_LEN) break;
+  }
+  return result;
+}
+
 export async function generateMetadata({ params }) {
   const { placeSlug: slug } = await params;
 
@@ -104,15 +136,14 @@ export async function generateMetadata({ params }) {
       });
     }
     const primary = product.primary;
-    // Short catalog descriptions leave the meta description under ~130 chars;
-    // pad toward the 150-160 sweet spot with the manufacturer CTA.
     const baseDescription =
       product.description ||
       `${product.name}, commercial-grade ${primary?.subcategoryName?.toLowerCase() || 'furniture'} built for ${primary?.placeName?.toLowerCase() || 'commercial spaces'}.`;
-    const fullDescription =
-      baseDescription.length < 120
-        ? `${baseDescription.replace(/\.?\s*$/, '.')} Custom-built by DMD Furnishing in Foxboro, MA — request specs and a quote.`
-        : baseDescription;
+    const fullDescription = composeProductMetaDescription(
+      baseDescription,
+      primary?.subcategoryName,
+      primary?.placeName
+    );
     return generatePageMetadata({
       title: primary?.subcategoryName
         ? `${product.name} | Commercial ${primary.subcategoryName}`
