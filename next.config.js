@@ -11,6 +11,11 @@ const nextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
+    // 75 = Next.js default (unset quality prop). 62 = grid thumbnail quality
+    // (findings-performance.md P2, ~30-40% smaller, visually identical at
+    // card size). Any quality value passed to next/image MUST be listed
+    // here or Next.js rejects it.
+    qualities: [62, 75],
   },
   async redirects() {
     return [

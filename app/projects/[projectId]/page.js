@@ -63,9 +63,12 @@ function toIsoDate(text) {
 }
 
 function buildSchema(project, pageUrl) {
-  const imageUrl = project.mainImage?.startsWith('http')
-    ? project.mainImage
-    : `${siteUrl}${project.mainImage}`;
+  // Project image filenames come from camera-dump uploads and contain raw
+  // spaces (e.g. "PHOTO-2025-03-28-12-45-39 2.jpg"). encodeURI keeps JSON-LD
+  // image URLs spec-clean, matching the same fix applied to Product schema.
+  const imageUrl = encodeURI(
+    project.mainImage?.startsWith('http') ? project.mainImage : `${siteUrl}${project.mainImage}`
+  );
 
   const graph = [
     {
@@ -104,7 +107,7 @@ function buildSchema(project, pageUrl) {
       about: { '@type': 'Article', '@id': pageUrl },
       image: galleryImages.map((img) => ({
         '@type': 'ImageObject',
-        contentUrl: img.url.startsWith('http') ? img.url : `${siteUrl}${img.url}`,
+        contentUrl: encodeURI(img.url.startsWith('http') ? img.url : `${siteUrl}${img.url}`),
         name: img.alt || project.name,
       })),
     });
