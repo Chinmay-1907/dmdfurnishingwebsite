@@ -375,7 +375,16 @@ def convert_to_webp(png_path: Path, webp_path: Path, repo_root: Path) -> tuple[b
 
 
 def render_one(block: ImageBlock, repo_root: Path) -> RenderResult:
-    out_path = repo_root / block.output_path
+    out_path = (repo_root / block.output_path).resolve()
+    # Safety: a prompt file's output_path is untrusted input. Never let a
+    # traversing path (../../..) write outside the repo's public/ tree.
+    public_root = (repo_root / "public").resolve()
+    if not out_path.is_relative_to(public_root):
+        return RenderResult(
+            status="FAIL",
+            note=f"output_path escapes public/: {block.output_path}",
+            codex_session="",
+        )
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     full_prompt = compose_prompt(block)
@@ -426,6 +435,9 @@ def render_one(block: ImageBlock, repo_root: Path) -> RenderResult:
     if is_webp:
         ok, note = convert_to_webp(move_target, out_path, repo_root)
         if not ok:
+            # Don't leave an orphaned .png (or a half-written .webp) behind on failure.
+            move_target.unlink(missing_ok=True)
+            out_path.unlink(missing_ok=True)
             return RenderResult(status="FAIL", note=note or "webp conversion failed", codex_session=session_id,
                                  quota_detected=quota_detected)
 
