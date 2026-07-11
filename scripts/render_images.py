@@ -388,9 +388,15 @@ def _resolve_codex_base() -> list:
         p = Path(shim)
         if p.suffix.lower() == ".exe":
             return [str(p)]
-        js = p.resolve().parent / "node_modules" / "@openai" / "codex" / "bin" / "codex.js"
-        if node and js.exists():
-            return [node, str(js)]
+        # The package tree sits under a `node_modules/` that lives EITHER next to
+        # the shim (npm global prefix: AppData\Roaming\npm\codex) OR one level up
+        # from it (local install: node_modules\.bin\codex). Try both layouts and
+        # use whichever codex.js actually exists — self-heals across reinstalls.
+        base = p.resolve().parent
+        for nm_root in (base, base.parent):
+            js = nm_root / "node_modules" / "@openai" / "codex" / "bin" / "codex.js"
+            if node and js.exists():
+                return [node, str(js)]
     return ["codex"]
 
 
