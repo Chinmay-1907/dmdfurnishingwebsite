@@ -47,9 +47,22 @@ function shortPlaceName(place) {
   return SHORT_PLACE[place.slug] || place.name;
 }
 
+// Curated title/description for specific (place, type) pages whose head query
+// the auto-formula phrases poorly. Keyed by `${place.slug}/${ft.slug}`. Honest,
+// generic copy only — no invented specs.
+const TYPE_OVERRIDES = {
+  'residential/closets': {
+    title: 'Indoor Walk-In Closets',
+    description:
+      'Custom indoor walk-in closets and dressing-room systems for residential projects: modular layouts, island storage, soft-close hardware, made to order by DMD Furnishing.',
+  },
+};
+
 // "Hotel" + "Hotel Seating" -> "Hotel Seating"; "Lobby" + "Lobby Furniture"
 // -> "Lobby Furniture"; appends "Furniture" unless the name already implies it.
 function pageTitle(place, ft) {
+  const override = TYPE_OVERRIDES[`${place.slug}/${ft.slug}`];
+  if (override?.title) return override.title;
   const placeTokens = shortPlaceName(place).split(/\s+/);
   const typeTokens = typeDisplayName(ft)
     .split(/\s+/)
@@ -87,6 +100,8 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 function pageDescription(place, ft, products) {
+  const override = TYPE_OVERRIDES[`${place.slug}/${ft.slug}`];
+  if (override?.description) return override.description;
   const subs = [...new Set(products.map((p) => {
     const m = p.memberships.find(
       (x) => x.placeSlug === place.slug && x.furnitureTypeSlug === ft.slug
