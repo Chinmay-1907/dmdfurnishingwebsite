@@ -14482,5 +14482,105 @@
                 </product>
             </subcategory>
         </furnitureType>
+
+        <furnitureType id="Closets" name="Closets" description="Custom walk-in closet systems for primary suites, condos, and amenity model units" image="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 1.png">
+            <subcategory id="Walk-In Closets" name="Walk-In Closets" description="Modular walk-in closet and dressing-room systems" image="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 1.png">
+                <product id="Modular Walk-In Closet System (L-Shaped)" name="Modular Walk-In Closet System (L-Shaped)" description="Modular L-shaped walk-in closet system built from HPL laminate panel components on an engineered-wood carcass, combining hanging rods, adjustable shelving, and drawer banks along two connecting walls. The L-shaped footprint is built for primary suite closets in multi-family units where a corner layout captures more usable storage than a single straight run. Soft-close drawer slides and an adjustable shelf-pin system let the layout be reconfigured after installation as a resident's storage needs change." image="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 1.png" tags="closet,walk-in closet,wardrobe,residential,modular" tier="Custom">
+                    <images>
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 1.png" alt="Modular L-shaped walk-in closet system, hanging rods and shelving on a seamless studio background" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 2.png" alt="Modular L-shaped walk-in closet system shown at a three-quarter angle" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 3.png" alt="Modular L-shaped walk-in closet system installed in a condo primary suite" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 4.png" alt="Modular L-shaped walk-in closet system in a multi-family model unit bedroom" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 5.png" alt="Close-up of soft-close drawer slide and hanging rod hardware on the modular closet system" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Modular Walk-In Closet System L-Shaped/modular walk-in closet system l-shaped 6.png" alt="Laminate finish swatch options for the modular L-shaped walk-in closet system" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="72-144&quot; per wall run (Modular, Customizable)" />
+                        <spec name="Depth" value="14-24&quot; (Customizable)" />
+                        <spec name="Height" value="84-96&quot; (Customizable, floor to shelf-top)" />
+                        <spec name="Configuration" value="L-shaped two-wall run; hanging rods, adjustable shelving, drawer banks" />
+                        <spec name="Material" value="HPL laminate panels on engineered-wood (MDF/particleboard) carcass; powder-coated steel support brackets" />
+                        <spec name="Hardware" value="Full-extension soft-close drawer slides; adjustable shelf-pin system" />
+                        <spec name="Finish" value="Laminate finish selected from standard color and woodgrain palette" />
+                    </specifications>
+                </product>
+                <product id="Boutique Walk-In Wardrobe with Center Island" name="Boutique Walk-In Wardrobe with Center Island" description="Boutique-style walk-in wardrobe built around a freestanding center island with drawer storage and a hard-surface folding top, flanked by perimeter hanging and shelving runs. Suited to larger primary suites and amenity model units where the closet functions as a dressing room as much as storage. Modular panel construction allows the island footprint and the perimeter run lengths to be adjusted to the room." image="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 1.png" tags="closet,walk-in closet,wardrobe,island,residential,dressing room" tier="Custom">
+                    <images>
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 1.png" alt="Boutique walk-in wardrobe with center island on a seamless studio background" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 2.png" alt="Boutique walk-in wardrobe with center island shown at a three-quarter angle" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 3.png" alt="Boutique walk-in wardrobe with center island installed in a condo primary suite" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 4.png" alt="Boutique walk-in wardrobe with center island in a dressing-room setting" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 5.png" alt="Close-up of the center island's soft-close drawer hardware" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Boutique Walk-In Wardrobe with Center Island/boutique walk-in wardrobe with center island 6.png" alt="Center island drawer shown open, demonstrating storage capacity of the boutique wardrobe" />
+                    </images>
+                    <specifications>
+                        <spec name="Room Footprint" value="10-14 ft (Customizable layout)" />
+                        <spec name="Island Dimensions" value="48-60&quot;W x 24-30&quot;D x 34-36&quot;H (Customizable)" />
+                        <spec name="Height" value="84-96&quot; perimeter run (Customizable)" />
+                        <spec name="Configuration" value="Perimeter hanging and shelving with a freestanding center island" />
+                        <spec name="Material" value="HPL laminate cabinetry on engineered-wood carcass; laminate or solid-surface island top" />
+                        <spec name="Hardware" value="Full-extension soft-close drawer slides; soft-close cabinet hinges" />
+                        <spec name="Finish" value="Laminate finish selected from standard color and woodgrain palette; island top in matching or contrast laminate" />
+                    </specifications>
+                </product>
+                <product id="Floor-to-Ceiling Walk-In Closet (Double-Sided)" name="Floor-to-Ceiling Walk-In Closet (Double-Sided)" description="Floor-to-ceiling walk-in closet with storage built along both opposing walls, maximizing hanging and shelf capacity in a narrow-footprint room. Panel components run full room height on a powder-coated steel support frame, with adjustable shelving and hanging rods on both sides of the walkway. Built for multi-family units and townhomes where a single-loaded closet would leave storage capacity on the table." image="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 1.png" tags="closet,walk-in closet,double-sided,residential,floor-to-ceiling" tier="Custom">
+                    <images>
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 1.png" alt="Floor-to-ceiling double-sided walk-in closet on a seamless studio background" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 2.png" alt="Floor-to-ceiling double-sided walk-in closet shown at a three-quarter angle" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 3.png" alt="Floor-to-ceiling double-sided walk-in closet installed in a condo primary suite" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 4.png" alt="Floor-to-ceiling double-sided walk-in closet in a townhome bedroom setting" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 5.png" alt="Close-up of the reinforced hanging rod bracket and shelf-pin hardware" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Floor-to-Ceiling Walk-In Closet Double-Sided/floor-to-ceiling walk-in closet double-sided 6.png" alt="Laminate finish swatch options for the floor-to-ceiling double-sided closet system" />
+                    </images>
+                    <specifications>
+                        <spec name="Walkway Clearance" value="6-8 ft (Customizable)" />
+                        <spec name="Wall Run Length" value="8-12 ft per side (Customizable)" />
+                        <spec name="Height" value="Floor-to-ceiling, up to 108&quot; (Customizable to ceiling height)" />
+                        <spec name="Configuration" value="Double-sided; hanging rods and adjustable shelving on both walls" />
+                        <spec name="Material" value="HPL laminate panels on engineered-wood carcass; powder-coated steel vertical supports" />
+                        <spec name="Hardware" value="Adjustable shelf-pin system; reinforced hanging rod brackets" />
+                        <spec name="Finish" value="Laminate finish selected from standard color and woodgrain palette" />
+                    </specifications>
+                </product>
+                <product id="Compact Walk-In Closet System for Condos" name="Compact Walk-In Closet System for Condos" description="Compact walk-in closet system engineered for the smaller footprints common in condominium and urban multi-family units, fitting a functional single-loaded storage run into a tight walk-in envelope. Combines double-hang and single-hang rod zones with a shelf tower, sized to clear standard condo closet door swings and walkway minimums. Panel components use a reduced depth compared to the full-size system without dropping to wire-shelving quality." image="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 1.png" tags="closet,walk-in closet,compact,condo,residential" tier="Custom">
+                    <images>
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 1.png" alt="Compact walk-in closet system for condos on a seamless studio background" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 2.png" alt="Compact walk-in closet system for condos shown at a three-quarter angle" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 3.png" alt="Compact walk-in closet system installed in a condo primary suite" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 4.png" alt="Compact walk-in closet system in a small multi-family unit bedroom" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 5.png" alt="Close-up of the reduced-depth hanging rod bracket and shelf hardware" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Compact Walk-In Closet System for Condos/compact walk-in closet system for condos 6.png" alt="Compact walk-in closet system door open, showing double-hang and shelf tower storage zones" />
+                    </images>
+                    <specifications>
+                        <spec name="Width" value="48-72&quot; single-wall run (Customizable)" />
+                        <spec name="Depth" value="12-16&quot; (Reduced-depth condo profile)" />
+                        <spec name="Height" value="84-90&quot; (Customizable)" />
+                        <spec name="Configuration" value="Single-loaded run; double-hang, single-hang, and shelf tower zones" />
+                        <spec name="Material" value="HPL laminate panels on engineered-wood carcass" />
+                        <spec name="Hardware" value="Adjustable shelf-pin system; reinforced hanging rod brackets" />
+                        <spec name="Finish" value="Laminate finish selected from standard color and woodgrain palette" />
+                    </specifications>
+                </product>
+                <product id="Luxury Dressing Room Suite with Vanity" name="Luxury Dressing Room Suite with Vanity" description="Full dressing-room suite pairing a walk-in closet run with an integrated seated vanity station, built as one coordinated millwork package rather than separate pieces. The vanity module includes a laminate or solid-surface top, an upholstered bench seat, and task-lighting provisions, positioned to anchor the room while hanging and shelf storage wraps the remaining walls. Specified for premium multi-family primary suites, model units, and amenity-adjacent residences where the closet doubles as a finishing room." image="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 1.png" tags="closet,walk-in closet,dressing room,vanity,residential,luxury" tier="Custom">
+                    <images>
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 1.png" alt="Luxury dressing room suite with vanity on a seamless studio background" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 2.png" alt="Luxury dressing room suite with vanity shown at a three-quarter angle" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 3.png" alt="Luxury dressing room suite with vanity installed in a condo primary suite" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 4.png" alt="Luxury dressing room suite with vanity in a boutique dressing-room setting" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 5.png" alt="Close-up of the vanity module's soft-close cabinet hardware" />
+                        <image src="/Images/Residential/Closets/Walk-In Closets/Luxury Dressing Room Suite with Vanity/luxury dressing room suite with vanity 6.png" alt="Laminate and upholstery finish swatch options for the luxury dressing room suite" />
+                    </images>
+                    <specifications>
+                        <spec name="Room Footprint" value="10-16 ft (Customizable layout)" />
+                        <spec name="Vanity Dimensions" value="42-54&quot;W x 20-22&quot;D x 30&quot; counter height (Customizable)" />
+                        <spec name="Height" value="84-96&quot; perimeter storage run (Customizable)" />
+                        <spec name="Configuration" value="Perimeter hanging and shelving with an integrated seated vanity module" />
+                        <spec name="Material" value="HPL laminate cabinetry on engineered-wood carcass; laminate or solid-surface vanity top; commercial-grade bench upholstery" />
+                        <spec name="Hardware" value="Full-extension soft-close drawer slides; soft-close cabinet hinges" />
+                        <spec name="Finish" value="Laminate finish selected from standard color and woodgrain palette; bench upholstery in performance fabric" />
+                    </specifications>
+                </product>
+            </subcategory>
+        </furnitureType>
     </place>
 </places>
