@@ -374,6 +374,29 @@ def convert_to_webp(png_path: Path, webp_path: Path, repo_root: Path) -> tuple[b
         return False, f"sharp fallback exception: {e}"
 
 
+def _resolve_codex_base() -> list:
+    """Base argv to launch Codex, subprocess-safe on Windows.
+
+    npm installs `codex` as a shell shim (codex / codex.cmd) whose only job is
+    to run `node <pkg>/bin/codex.js "$@"`. Python's subprocess can't reliably
+    launch the .cmd / extension-less shim, so resolve the JS entrypoint and
+    call node directly. Falls back to a bare `codex` where it's a real binary.
+    """
+    shim = shutil.which("codex")
+    node = shutil.which("node")
+    if shim:
+        p = Path(shim)
+        if p.suffix.lower() == ".exe":
+            return [str(p)]
+        js = p.resolve().parent / "node_modules" / "@openai" / "codex" / "bin" / "codex.js"
+        if node and js.exists():
+            return [node, str(js)]
+    return ["codex"]
+
+
+CODEX_BASE = _resolve_codex_base()
+
+
 def render_one(block: ImageBlock, repo_root: Path) -> RenderResult:
     out_path = (repo_root / block.output_path).resolve()
     # Safety: a prompt file's output_path is untrusted input. Never let a
@@ -393,7 +416,7 @@ def render_one(block: ImageBlock, repo_root: Path) -> RenderResult:
 
     try:
         proc = subprocess.run(
-            ["codex", "exec", "--skip-git-repo-check", "--sandbox", "workspace-write", full_prompt],
+            [*CODEX_BASE, "exec", "--skip-git-repo-check", "--sandbox", "workspace-write", full_prompt],
             stdin=subprocess.DEVNULL,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
@@ -404,7 +427,7 @@ def render_one(block: ImageBlock, repo_root: Path) -> RenderResult:
     except subprocess.TimeoutExpired:
         return RenderResult(status="FAIL", note="codex exec timed out after 8 min", codex_session="")
     except FileNotFoundError:
-        return RenderResult(status="FAIL", note="codex CLI not found on PATH", codex_session="")
+        return RenderResult(status="FAIL", note=f"codex/node not found (tried: {' '.join(CODEX_BASE)})", codex_session="")
     except Exception as e:  # noqa: BLE001 - never let one bad render crash the run
         return RenderResult(status="FAIL", note=f"subprocess error: {e}", codex_session="")
 
