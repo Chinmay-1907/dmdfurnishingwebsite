@@ -99,11 +99,18 @@ disk, not committed" until you pick A / B / C.** Closets I commit + ship now reg
 - **Runner:** `scripts/render_images.py` — resumable, one image at a time, light on
   the machine. Skips anything already done (file exists **or** logged `OK` in
   `generation_log.csv`). Stops itself gracefully when the daily image quota trips.
-- **Re-run each day** (quota resets) until all done:
+- **⚠️ Run it in YOUR terminal, not an agent session.** Driving this long,
+  quota-gated render from a Claude/agent background process is unreliable — the
+  session keeps killing the process (Codex image-gen is heavy/unstable headless).
+  50 images rendered fine that way before it died; the rest must run locally where
+  nothing kills it. **Nothing is ever lost** — just re-run; it resumes.
+- **Easiest:** double-click **`scripts/render-daily.bat`** each day until done.
+- **Or by hand**, re-run each day (quota resets) until all done:
   ```
   python scripts/render_images.py --file closet_image_prompts.md      # 30 closets
   python scripts/render_images.py --file codex_image_prompts.md       # 930 backlog
   ```
+- **Progress so far:** 30/30 closets ✅ committed · ~20/930 backlog rendered to disk.
 - **Prompt files** live at repo root: `closet_image_prompts.md` (30),
   `codex_image_prompts.md` (930). One `##` block = one image.
 - **Codex gotcha (already fixed):** Codex's own shell can't save files in this
