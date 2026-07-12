@@ -57,61 +57,77 @@ export default function sitemap() {
   entries.push({
     url: `${baseUrl}/`,
     lastModified: LAST_BUILD,
+    changeFrequency: 'weekly',
+    priority: 1.0,
     images: [abs('/Images/Tailored_Guestroom_Collections.jpg')],
   });
   entries.push({
     url: `${baseUrl}/products`,
     lastModified: LAST_BUILD,
+    changeFrequency: 'weekly',
+    priority: 0.9,
     images: [abs('/Images/Our_Products.jpg')],
   });
-  entries.push({ url: `${baseUrl}/projects`, lastModified: LAST_BUILD });
-  entries.push({ url: `${baseUrl}/about`, lastModified: LAST_BUILD, images: [abs('/Images/About_DMD_Furnishing_Page.jpg')] });
+  entries.push({ url: `${baseUrl}/projects`, lastModified: LAST_BUILD, changeFrequency: 'monthly', priority: 0.7 });
+  entries.push({ url: `${baseUrl}/about`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.6, images: [abs('/Images/About_DMD_Furnishing_Page.jpg')] });
   entries.push({
     url: `${baseUrl}/services`,
     lastModified: LAST_BUILD,
+    changeFrequency: 'yearly',
+    priority: 0.7,
     images: [abs('/Images/Our Services.jpg')],
   });
-  entries.push({ url: `${baseUrl}/contact`, lastModified: LAST_BUILD });
-  entries.push({ url: `${baseUrl}/inspirations`, lastModified: LAST_BUILD });
-  entries.push({ url: `${baseUrl}/website-policies`, lastModified: LAST_BUILD });
-  entries.push({ url: `${baseUrl}/author/dmd-furnishing-editorial`, lastModified: LAST_BUILD });
+  entries.push({ url: `${baseUrl}/contact`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.5 });
+  entries.push({ url: `${baseUrl}/inspirations`, lastModified: LAST_BUILD, changeFrequency: 'monthly', priority: 0.6 });
+  entries.push({ url: `${baseUrl}/website-policies`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.3 });
+  entries.push({ url: `${baseUrl}/author/dmd-furnishing-editorial`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.5 });
 
   // --- Pillar guides (topical cluster heads) ---
   entries.push({
     url: `${baseUrl}/guides`,
     lastModified: LAST_BUILD,
+    changeFrequency: 'monthly',
+    priority: 0.7,
   });
   entries.push({
     url: `${baseUrl}/guides/commercial-furniture-manufacturing`,
     lastModified: LAST_BUILD,
+    changeFrequency: 'monthly',
+    priority: 0.8,
     images: [abs('/Images/Our_Products.jpg')],
   });
   entries.push({
     url: `${baseUrl}/guides/hospitality-ffe`,
     lastModified: LAST_BUILD,
+    changeFrequency: 'monthly',
+    priority: 0.8,
     images: [abs('/Images/Tailored_Guestroom_Collections.jpg')],
   });
 
   // --- Blog ---
-  entries.push({ url: `${baseUrl}/blog`, lastModified: LAST_BUILD });
+  entries.push({ url: `${baseUrl}/blog`, lastModified: LAST_BUILD, changeFrequency: 'weekly', priority: 0.7 });
   for (const post of blogPosts) {
     entries.push({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: post.isoDate,
+      changeFrequency: 'monthly',
+      priority: 0.6,
       images: post.image ? [abs(post.image)] : undefined,
     });
   }
 
   // --- Inspiration detail pages ---
   for (const insp of inspirations) {
-    entries.push({ url: `${baseUrl}/inspirations/${insp.slug}`, lastModified: LAST_BUILD });
+    entries.push({ url: `${baseUrl}/inspirations/${insp.slug}`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.5 });
   }
 
-  // --- Place listing pages (1 per place) ---
+  // --- Place listing pages (1 per place) — top-tier hubs, above SKU pages ---
   for (const place of places) {
     entries.push({
       url: `${baseUrl}/products/${place.slug}`,
       lastModified: LAST_BUILD,
+      changeFrequency: 'weekly',
+      priority: 0.8,
       images: place.image ? [abs(place.image)] : undefined,
     });
   }
@@ -124,17 +140,21 @@ export default function sitemap() {
         entries.push({
           url: `${baseUrl}/products/${place.slug}/${ft.slug}`,
           lastModified: LAST_BUILD,
+          changeFrequency: 'weekly',
+          priority: 0.7,
           images: ft.image ? [abs(ft.image)] : undefined,
         });
       }
     }
   }
 
-  // --- Flat product detail pages (1 per unique product) ---
+  // --- Flat product detail pages (1 per unique product) — leaf SKU tier ---
   for (const product of products) {
     entries.push({
       url: `${baseUrl}/products/${product.slug}`,
       lastModified: LAST_BUILD,
+      changeFrequency: 'monthly',
+      priority: 0.6,
       images: product.image ? [abs(product.image)] : undefined,
     });
   }
@@ -149,6 +169,8 @@ export default function sitemap() {
     entries.push({
       url: `${baseUrl}/projects/${project.slug}`,
       lastModified: isoFromCompletionDate(project.completionDate) || LAST_BUILD,
+      changeFrequency: 'monthly',
+      priority: 0.6,
       images: uniqueImageUrls.length ? uniqueImageUrls.map(abs) : undefined,
     });
   }
