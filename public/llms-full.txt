@@ -141,9 +141,10 @@ FF&E stands for Furniture, Fixtures & Equipment: the movable items in a
 commercial space (beds, desks, chairs, lighting, drapery, accessories) that
 are not permanently attached to the building structure. FF&E is distinct
 from OS&E (Operating Supplies and Equipment) such as linens, tableware, and
-consumables; FF&E is a durable capital item that depreciates over a
-renovation cycle, while OS&E is a consumable that gets expensed and
-reordered. For the full procurement process, budget drivers, and timeline,
+operating equipment. FF&E is generally treated as a durable capital item,
+while OS&E items are replenished or replaced through operations; accounting
+treatment depends on the operator's applicable policy.
+For the full procurement process, budget drivers, and timeline,
 see the hospitality FF&E procurement guide: https://dmdfurnishing.com/guides/hospitality-ffe.
 Industry coverage: American Hotel & Lodging Association (https://www.ahla.com/).
 
