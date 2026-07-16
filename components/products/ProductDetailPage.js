@@ -45,7 +45,7 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
 
   // Furniture-type-specific copy blocks (construction/materials + specification
   // context) so the 174 detail pages stop rendering identical boilerplate.
-  const detailCopy = getProductCopy(primary);
+  const detailCopy = getProductCopy(primary, product);
 
   // Price tier badge (replaces dollar pricing). Inquire = no price on record.
   const TIER_COLORS = {
