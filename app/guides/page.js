@@ -34,7 +34,7 @@ const guides = [
     posts: [
       {
         slug: 'what-is-ffe-hospitality',
-        title: 'What Is FF&E? The Hospitality Buyer Guide',
+        title: 'What Is FF&E? Meaning, Examples, and FF&E vs OS&E',
       },
       {
         slug: 'hotel-guestroom-furniture-checklist',

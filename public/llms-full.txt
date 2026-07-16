@@ -134,16 +134,17 @@ Content is written and reviewed by the DMD Furnishing editorial team —
 project managers, shop floor leads, procurement coordinators, and installers.
 See https://dmdfurnishing.com/author/dmd-furnishing-editorial
 
-## What Is FF&E? A Complete Guide for Hospitality Projects
+## What Is FF&E? Meaning, Examples, and FF&E vs OS&E
 source: https://dmdfurnishing.com/blog/what-is-ffe-hospitality
 
-FF&E stands for Furniture, Fixtures & Equipment — the movable items in a
+FF&E stands for Furniture, Fixtures & Equipment: the movable items in a
 commercial space (beds, desks, chairs, lighting, drapery, accessories) that
-are not permanently attached to the building structure. In hospitality and
-commercial construction, FF&E is typically specified separately from shell
-and core, procured from dedicated manufacturers, and installed as a distinct
-phase at the end of the build schedule. FF&E is also distinct from OS&E
-(Operating Supplies and Equipment) such as linens, tableware, and consumables.
+are not permanently attached to the building structure. FF&E is distinct
+from OS&E (Operating Supplies and Equipment) such as linens, tableware, and
+consumables; FF&E is a durable capital item that depreciates over a
+renovation cycle, while OS&E is a consumable that gets expensed and
+reordered. For the full procurement process, budget drivers, and timeline,
+see the hospitality FF&E procurement guide: https://dmdfurnishing.com/guides/hospitality-ffe.
 Industry coverage: American Hotel & Lodging Association (https://www.ahla.com/).
 
 ## Hotel Guestroom Furniture Checklist
