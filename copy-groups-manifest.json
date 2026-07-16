@@ -1,0 +1,2137 @@
+{
+  "generatedBy": "scripts/make_copy_group_manifest.py",
+  "source": "public/DMD_Website.xml",
+  "summary": {
+    "totalProducts": 760,
+    "totalDistinctSubcategories": 67,
+    "currentCopyGroupCount": 15,
+    "subcategoriesByCurrentGroup": {
+      "loungeSeating": 6,
+      "tables": 5,
+      "bedFrames": 3,
+      "casegoods": 13,
+      "diningSeating": 6,
+      "desks": 3,
+      "closets": 1,
+      "shelving": 2,
+      "taskSeating": 3,
+      "headboards": 2,
+      "receptionMillwork": 4,
+      "healthcare": 3,
+      "education": 7,
+      "outdoor": 6,
+      "publicSeating": 3
+    },
+    "productsByCurrentGroup": {
+      "loungeSeating": 241,
+      "tables": 153,
+      "bedFrames": 123,
+      "casegoods": 134,
+      "diningSeating": 16,
+      "desks": 11,
+      "closets": 5,
+      "shelving": 5,
+      "taskSeating": 8,
+      "headboards": 5,
+      "receptionMillwork": 13,
+      "healthcare": 9,
+      "education": 18,
+      "outdoor": 10,
+      "publicSeating": 9
+    },
+    "biggestSubcategories": [
+      {
+        "subcategoryName": "Sofa",
+        "productCount": 182
+      },
+      {
+        "subcategoryName": "Dining Table",
+        "productCount": 139
+      },
+      {
+        "subcategoryName": "Bed Frame",
+        "productCount": 119
+      },
+      {
+        "subcategoryName": "Nightstand",
+        "productCount": 96
+      },
+      {
+        "subcategoryName": "Lounge Chair",
+        "productCount": 46
+      },
+      {
+        "subcategoryName": "TV Unit",
+        "productCount": 16
+      },
+      {
+        "subcategoryName": "Vanities",
+        "productCount": 8
+      },
+      {
+        "subcategoryName": "Dining Chairs",
+        "productCount": 6
+      },
+      {
+        "subcategoryName": "Dining Tables",
+        "productCount": 6
+      },
+      {
+        "subcategoryName": "Desk",
+        "productCount": 5
+      }
+    ],
+    "note": "One product (Medical Recliner, Hospital > Patient Room > Recliner Chair) is commented out in the XML with <!-- --> but is still counted here because lib/catalog.js's parser has no comment-awareness and treats it as live -- same behavior the real site has today. Not fixed by this script."
+  },
+  "subcategories": [
+    {
+      "subcategoryName": "Sofa",
+      "productCount": 182,
+      "currentCopyGroup": "loungeSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Living Room"
+      ],
+      "sampleProductNames": [
+        "Classic Sofa",
+        "Residential Sectional Sofa",
+        "Traditional Black/Off-White Loveseat"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "182/182"
+        },
+        "color": {
+          "usable": true,
+          "coverage": "180/182"
+        }
+      },
+      "descriptionCoverage": "182/182"
+    },
+    {
+      "subcategoryName": "Dining Table",
+      "productCount": 139,
+      "currentCopyGroup": "tables",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dining Room"
+      ],
+      "sampleProductNames": [
+        "Dining Table",
+        "Transitional Brown/Beige Dining Set",
+        "Contemporary White/Black Dining Set"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "139/139"
+        },
+        "color": {
+          "usable": true,
+          "coverage": "138/139"
+        }
+      },
+      "descriptionCoverage": "139/139"
+    },
+    {
+      "subcategoryName": "Bed Frame",
+      "productCount": 119,
+      "currentCopyGroup": "bedFrames",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel",
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Bedroom",
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Full XL Bed Frame - Metal",
+        "King Bed Frame - Metal",
+        "King Bed Frame - MDF"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "119/119"
+        },
+        "color": {
+          "usable": true,
+          "coverage": "112/119"
+        }
+      },
+      "descriptionCoverage": "119/119"
+    },
+    {
+      "subcategoryName": "Nightstand",
+      "productCount": 96,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Bedroom"
+      ],
+      "sampleProductNames": [
+        "Single Drawer Nightstand",
+        "Contemporary Light Gray Nightstand",
+        "Contemporary Light Gray Nightstand (Aldridge)"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "96/96"
+        },
+        "color": {
+          "usable": true,
+          "coverage": "95/96"
+        }
+      },
+      "descriptionCoverage": "96/96"
+    },
+    {
+      "subcategoryName": "Lounge Chair",
+      "productCount": 46,
+      "currentCopyGroup": "loungeSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital",
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Living Room",
+        "Patient Room"
+      ],
+      "sampleProductNames": [
+        "Upholstered Lounge Chair",
+        "Contoured Lounge Chair",
+        "Compact Lounge Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "46/46"
+        },
+        "color": {
+          "usable": true,
+          "coverage": "41/46"
+        }
+      },
+      "descriptionCoverage": "46/46"
+    },
+    {
+      "subcategoryName": "TV Unit",
+      "productCount": 16,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Living Room"
+      ],
+      "sampleProductNames": [
+        "Media Console",
+        "Contemporary White TV Console",
+        "Contemporary Black TV Console"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "16/16"
+        },
+        "color": {
+          "usable": true,
+          "coverage": "15/16"
+        }
+      },
+      "descriptionCoverage": "16/16"
+    },
+    {
+      "subcategoryName": "Vanities",
+      "productCount": 8,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Vanity 1",
+        "Vanity 2",
+        "Vanity 3"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "8/8"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/8"
+        }
+      },
+      "descriptionCoverage": "8/8"
+    },
+    {
+      "subcategoryName": "Dining Chairs",
+      "productCount": 6,
+      "currentCopyGroup": "diningSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel",
+        "Restaurant"
+      ],
+      "furnitureTypesUsedIn": [
+        "Breakfast Area",
+        "Dining Area"
+      ],
+      "sampleProductNames": [
+        "Metal Dining Chair",
+        "Upholstered Dining Chair",
+        "Wooden Dining Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "6/6"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/6"
+        }
+      },
+      "descriptionCoverage": "6/6"
+    },
+    {
+      "subcategoryName": "Dining Tables",
+      "productCount": 6,
+      "currentCopyGroup": "tables",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel",
+        "Restaurant"
+      ],
+      "furnitureTypesUsedIn": [
+        "Breakfast Area",
+        "Dining Area"
+      ],
+      "sampleProductNames": [
+        "2-Seater Table",
+        "4-Seater Table",
+        "6-Seater Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "6/6"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/6"
+        }
+      },
+      "descriptionCoverage": "6/6"
+    },
+    {
+      "subcategoryName": "Desk",
+      "productCount": 5,
+      "currentCopyGroup": "desks",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel",
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room",
+        "Home Office"
+      ],
+      "sampleProductNames": [
+        "Executive Desk",
+        "Workstation Desk",
+        "Writing Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "5/5"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/5"
+        }
+      },
+      "descriptionCoverage": "5/5"
+    },
+    {
+      "subcategoryName": "Walk-In Closets",
+      "productCount": 5,
+      "currentCopyGroup": "closets",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Closets"
+      ],
+      "sampleProductNames": [
+        "Modular Walk-In Closet System (L-Shaped)",
+        "Boutique Walk-In Wardrobe with Center Island",
+        "Floor-to-Ceiling Walk-In Closet (Double-Sided)"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "5/5"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/5"
+        }
+      },
+      "descriptionCoverage": "5/5"
+    },
+    {
+      "subcategoryName": "Arm Chair",
+      "productCount": 4,
+      "currentCopyGroup": "loungeSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "hotel-seating"
+      ],
+      "sampleProductNames": [
+        "Nova Blue Arm Chair",
+        "Nova Green Arm Chair",
+        "Sunset Orange Arm Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "4/4"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/4"
+        }
+      },
+      "descriptionCoverage": "4/4"
+    },
+    {
+      "subcategoryName": "Bookshelves",
+      "productCount": 4,
+      "currentCopyGroup": "shelving",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office",
+        "School"
+      ],
+      "furnitureTypesUsedIn": [
+        "Library",
+        "Storage and Organization"
+      ],
+      "sampleProductNames": [
+        "DMD Bookshelf Collection",
+        "Medium Bookshelf",
+        "Short Bookshelf"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "4/4"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/4"
+        }
+      },
+      "descriptionCoverage": "4/4"
+    },
+    {
+      "subcategoryName": "Ergonomic Chair",
+      "productCount": 4,
+      "currentCopyGroup": "taskSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office"
+      ],
+      "furnitureTypesUsedIn": [
+        "Seating"
+      ],
+      "sampleProductNames": [
+        "Adjustable Ergonomic Chair",
+        "Fabric Ergonomic Chair",
+        "Mesh Ergonomic Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "4/4"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/4"
+        }
+      },
+      "descriptionCoverage": "4/4"
+    },
+    {
+      "subcategoryName": "Executive Desk",
+      "productCount": 4,
+      "currentCopyGroup": "desks",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office"
+      ],
+      "furnitureTypesUsedIn": [
+        "Workstations"
+      ],
+      "sampleProductNames": [
+        "L-Shaped Executive Desk",
+        "L-Shaped Executive Desk 2",
+        "Straight Executive Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "4/4"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/4"
+        }
+      },
+      "descriptionCoverage": "4/4"
+    },
+    {
+      "subcategoryName": "Head Board",
+      "productCount": 4,
+      "currentCopyGroup": "headboards",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Full XL Head Board",
+        "King MDF Headboard Unit",
+        "King Upholstered Headboard Unit"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "4/4"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/4"
+        }
+      },
+      "descriptionCoverage": "4/4"
+    },
+    {
+      "subcategoryName": "Reception Desk",
+      "productCount": 4,
+      "currentCopyGroup": "receptionMillwork",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital",
+        "Lobby Area"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lobby Furniture",
+        "Waiting Area"
+      ],
+      "sampleProductNames": [
+        "Curved Desk",
+        "Glass Top Desk",
+        "Straight Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "4/4"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/4"
+        }
+      },
+      "descriptionCoverage": "4/4"
+    },
+    {
+      "subcategoryName": "Accent Chairs",
+      "productCount": 3,
+      "currentCopyGroup": "loungeSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Lobby Area"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lobby Furniture"
+      ],
+      "sampleProductNames": [
+        "Metal Accent Chair",
+        "Upholstered Accent Chair",
+        "Wooden Accent Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Bar Stools",
+      "productCount": 3,
+      "currentCopyGroup": "diningSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Restaurant"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dining Area"
+      ],
+      "sampleProductNames": [
+        "High Bar Stool",
+        "Medium Bar Stool",
+        "Swivel Bar Stool"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Bedside Cabinet",
+      "productCount": 3,
+      "currentCopyGroup": "healthcare",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital"
+      ],
+      "furnitureTypesUsedIn": [
+        "Patient Room"
+      ],
+      "sampleProductNames": [
+        "Double Drawer Cabinet",
+        "Lockable Cabinet",
+        "Single Drawer Cabinet"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Booths",
+      "productCount": 3,
+      "currentCopyGroup": "diningSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Restaurant"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dining Area"
+      ],
+      "sampleProductNames": [
+        "Corner Booth",
+        "Double Booth",
+        "Single Booth"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Buffet Counter",
+      "productCount": 3,
+      "currentCopyGroup": "receptionMillwork",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Breakfast Area"
+      ],
+      "sampleProductNames": [
+        "Cold Buffet Counter",
+        "Hot Buffet Counter",
+        "Mixed Buffet Counter"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Bunk Beds",
+      "productCount": 3,
+      "currentCopyGroup": "bedFrames",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "University"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dormitory"
+      ],
+      "sampleProductNames": [
+        "Full Bunk Bed",
+        "Dormitory Twin Bunk Bed",
+        "Twin XL Bunk Bed"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Chairs",
+      "productCount": 3,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "School"
+      ],
+      "furnitureTypesUsedIn": [
+        "Classroom"
+      ],
+      "sampleProductNames": [
+        "Ergonomic Student Chair",
+        "Classroom Plastic Chair",
+        "Desk-Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Coffee Tables",
+      "productCount": 3,
+      "currentCopyGroup": "tables",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Lobby Area"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lobby Furniture"
+      ],
+      "sampleProductNames": [
+        "Glass Top Coffee Table",
+        "Round Coffee Table",
+        "Square Coffee Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Executive Chair",
+      "productCount": 3,
+      "currentCopyGroup": "taskSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office"
+      ],
+      "furnitureTypesUsedIn": [
+        "Seating"
+      ],
+      "sampleProductNames": [
+        "High-Back Executive Chair",
+        "Leather Executive Chair",
+        "Mid-Back Executive Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Food Service Cabinets",
+      "productCount": 3,
+      "currentCopyGroup": "receptionMillwork",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Breakfast Area"
+      ],
+      "sampleProductNames": [
+        "Dry Storage Cabinet",
+        "Heated Cabinet",
+        "Refrigerated Cabinet"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Lobby Sofa",
+      "productCount": 3,
+      "currentCopyGroup": "loungeSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Lobby Area"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lobby Furniture"
+      ],
+      "sampleProductNames": [
+        "2-Seater Sofa",
+        "3-Seater Sofa",
+        "Sectional Sofa"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Magazine Table",
+      "productCount": 3,
+      "currentCopyGroup": "tables",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital"
+      ],
+      "furnitureTypesUsedIn": [
+        "Waiting Area"
+      ],
+      "sampleProductNames": [
+        "Glass Table",
+        "Metal Table",
+        "Wooden Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Night Stand",
+      "productCount": 3,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Double Drawer Night Stand",
+        "Open Shelf Night Stand",
+        "Single Drawer Night Stand"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Outdoor Chairs",
+      "productCount": 3,
+      "currentCopyGroup": "outdoor",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Restaurant"
+      ],
+      "furnitureTypesUsedIn": [
+        "Outdoor Seating"
+      ],
+      "sampleProductNames": [
+        "Metal Chair",
+        "Outdoor Plastic Chair",
+        "Wicker Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Overbed Table",
+      "productCount": 3,
+      "currentCopyGroup": "healthcare",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital"
+      ],
+      "furnitureTypesUsedIn": [
+        "Patient Room"
+      ],
+      "sampleProductNames": [
+        "Adjustable Overbed Table",
+        "Fixed Overbed Table",
+        "Rolling Overbed Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Patio Tables",
+      "productCount": 3,
+      "currentCopyGroup": "outdoor",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Restaurant"
+      ],
+      "furnitureTypesUsedIn": [
+        "Outdoor Seating"
+      ],
+      "sampleProductNames": [
+        "Glass Patio Table",
+        "Round Patio Table",
+        "Square Patio Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Podium",
+      "productCount": 3,
+      "currentCopyGroup": "receptionMillwork",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "University"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lecture Hall"
+      ],
+      "sampleProductNames": [
+        "Metal Podium",
+        "Smart Podium",
+        "Wooden Podium"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Reading Chairs",
+      "productCount": 3,
+      "currentCopyGroup": "loungeSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "School"
+      ],
+      "furnitureTypesUsedIn": [
+        "Library"
+      ],
+      "sampleProductNames": [
+        "Library Reading Armchair",
+        "Bean Bag",
+        "Library Upholstered Reading Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Recliner Chair",
+      "productCount": 3,
+      "currentCopyGroup": "healthcare",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital"
+      ],
+      "furnitureTypesUsedIn": [
+        "Patient Room"
+      ],
+      "sampleProductNames": [
+        "Electric Recliner",
+        "Manual Recliner",
+        "Medical Recliner"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Student Desks",
+      "productCount": 3,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "School"
+      ],
+      "furnitureTypesUsedIn": [
+        "Classroom"
+      ],
+      "sampleProductNames": [
+        "Adjustable Height Desk",
+        "Double Desk",
+        "Single Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Study Desks",
+      "productCount": 3,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "University"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dormitory"
+      ],
+      "sampleProductNames": [
+        "Double Study Desk",
+        "Single Study Desk",
+        "Wall-Mounted Study Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Study Tables",
+      "productCount": 3,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "School"
+      ],
+      "furnitureTypesUsedIn": [
+        "Library"
+      ],
+      "sampleProductNames": [
+        "Carrel Desk",
+        "Group Study Table",
+        "Single Study Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Teacher Desk",
+      "productCount": 3,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "School"
+      ],
+      "furnitureTypesUsedIn": [
+        "Classroom"
+      ],
+      "sampleProductNames": [
+        "Metal Teacher Desk",
+        "Portable Teacher Desk",
+        "Wooden Teacher Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Tiered Seating",
+      "productCount": 3,
+      "currentCopyGroup": "publicSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "University"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lecture Hall"
+      ],
+      "sampleProductNames": [
+        "Cushioned Seating",
+        "Fixed Seating",
+        "Movable Seating"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Visitor Chairs",
+      "productCount": 3,
+      "currentCopyGroup": "publicSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office"
+      ],
+      "furnitureTypesUsedIn": [
+        "Seating"
+      ],
+      "sampleProductNames": [
+        "Padded Visitor Chair",
+        "Plastic Visitor Chair",
+        "Stackable Visitor Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Waiting Chairs",
+      "productCount": 3,
+      "currentCopyGroup": "publicSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hospital"
+      ],
+      "furnitureTypesUsedIn": [
+        "Waiting Area"
+      ],
+      "sampleProductNames": [
+        "Linked Waiting Chair",
+        "Plastic Waiting Chair",
+        "Upholstered Waiting Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Wardrobes",
+      "productCount": 3,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "University"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dormitory"
+      ],
+      "sampleProductNames": [
+        "2-Door Wardrobe",
+        "3-Door Wardrobe",
+        "Dormitory Sliding Door Wardrobe"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "3/3"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/3"
+        }
+      },
+      "descriptionCoverage": "3/3"
+    },
+    {
+      "subcategoryName": "Coffee Table",
+      "productCount": 2,
+      "currentCopyGroup": "tables",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Living Room"
+      ],
+      "sampleProductNames": [
+        "Glass Coffee Table",
+        "Wood Coffee Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "2/2"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/2"
+        }
+      },
+      "descriptionCoverage": "2/2"
+    },
+    {
+      "subcategoryName": "Dining Chair",
+      "productCount": 2,
+      "currentCopyGroup": "diningSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dining Room"
+      ],
+      "sampleProductNames": [
+        "Residential Upholstered Dining Chair",
+        "Residential Wooden Dining Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "2/2"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/2"
+        }
+      },
+      "descriptionCoverage": "2/2"
+    },
+    {
+      "subcategoryName": "Lecture Desks",
+      "productCount": 2,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "University"
+      ],
+      "furnitureTypesUsedIn": [
+        "Lecture Hall"
+      ],
+      "sampleProductNames": [
+        "Attached Desk-Chair",
+        "Fixed Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "2/2"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/2"
+        }
+      },
+      "descriptionCoverage": "2/2"
+    },
+    {
+      "subcategoryName": "Writing Desk",
+      "productCount": 2,
+      "currentCopyGroup": "desks",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office"
+      ],
+      "furnitureTypesUsedIn": [
+        "Workstations"
+      ],
+      "sampleProductNames": [
+        "Writing Desk - Metal Leg",
+        "Writing Desk - MDF Leg"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "2/2"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/2"
+        }
+      },
+      "descriptionCoverage": "2/2"
+    },
+    {
+      "subcategoryName": "Amenity Tower",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Amenity Tower"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Bar Stool",
+      "productCount": 1,
+      "currentCopyGroup": "diningSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dining Room"
+      ],
+      "sampleProductNames": [
+        "Counter Height Stool"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Bookcase",
+      "productCount": 1,
+      "currentCopyGroup": "shelving",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Home Office"
+      ],
+      "sampleProductNames": [
+        "Tall Bookcase"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Bunk Bed",
+      "productCount": 1,
+      "currentCopyGroup": "bedFrames",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Kids Room"
+      ],
+      "sampleProductNames": [
+        "Kids Twin Bunk Bed"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Chair",
+      "productCount": 1,
+      "currentCopyGroup": "diningSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Dresser",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Bedroom"
+      ],
+      "sampleProductNames": [
+        "Six Drawer Dresser"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Headboards",
+      "productCount": 1,
+      "currentCopyGroup": "headboards",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Bedroom"
+      ],
+      "sampleProductNames": [
+        "Headboard"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Luggage Bench",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "Luggage Bench"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Office Chair",
+      "productCount": 1,
+      "currentCopyGroup": "taskSeating",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Home Office"
+      ],
+      "sampleProductNames": [
+        "Ergonomic Office Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Outdoor Dining Set",
+      "productCount": 1,
+      "currentCopyGroup": "outdoor",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Outdoor"
+      ],
+      "sampleProductNames": [
+        "Outdoor Dining Set"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Outdoor Lounge Chair",
+      "productCount": 1,
+      "currentCopyGroup": "outdoor",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Outdoor"
+      ],
+      "sampleProductNames": [
+        "Outdoor Lounge Chair"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Outdoor Side Table",
+      "productCount": 1,
+      "currentCopyGroup": "outdoor",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Outdoor"
+      ],
+      "sampleProductNames": [
+        "Outdoor Side Table"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Outdoor Sofa",
+      "productCount": 1,
+      "currentCopyGroup": "outdoor",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Outdoor"
+      ],
+      "sampleProductNames": [
+        "Patio Sofa"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Sideboard",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Dining Room"
+      ],
+      "sampleProductNames": [
+        "Buffet Cabinet"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Storage Cabinets",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Office"
+      ],
+      "furnitureTypesUsedIn": [
+        "Storage and Organization"
+      ],
+      "sampleProductNames": [
+        "DMD SoftClose Modular Cabinet"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Study Desk",
+      "productCount": 1,
+      "currentCopyGroup": "education",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Kids Room"
+      ],
+      "sampleProductNames": [
+        "Kids Study Desk"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "TV Media Panel",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Hotel"
+      ],
+      "furnitureTypesUsedIn": [
+        "Guest Room"
+      ],
+      "sampleProductNames": [
+        "TV Media Panel 1"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Toy Storage",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Kids Room"
+      ],
+      "sampleProductNames": [
+        "Cubbies Storage"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    },
+    {
+      "subcategoryName": "Wardrobe",
+      "productCount": 1,
+      "currentCopyGroup": "casegoods",
+      "copyGroupMatchType": "exact",
+      "placesUsedIn": [
+        "Residential"
+      ],
+      "furnitureTypesUsedIn": [
+        "Bedroom"
+      ],
+      "sampleProductNames": [
+        "Residential Sliding Door Wardrobe"
+      ],
+      "varsAvailable": {
+        "name": true,
+        "subcategory": true,
+        "place": true,
+        "material": {
+          "usable": true,
+          "coverage": "1/1"
+        },
+        "color": {
+          "usable": false,
+          "coverage": "0/1"
+        }
+      },
+      "descriptionCoverage": "1/1"
+    }
+  ]
+}
