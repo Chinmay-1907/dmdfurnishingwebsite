@@ -95,6 +95,11 @@ specific product renders:
   rail to front apron to floor stretcher," but the piece is only described with "Four
   solid turned legs," no stretcher. Either add a stretcher to the spec or drop the
   reference.
+- **Leather products get generic "natural fabric drape" wording** (e.g.
+  `executive-office-chair_white_seamless_hero`) — the material clause treats leather as
+  fabric. Refinement: add a leather branch to `scripts/patch_hero_prompts.py` ("supple
+  leather grain, subtle creasing, controlled leather specular response") and re-run.
+  Cosmetic, not blocking any render.
 
 ---
 
