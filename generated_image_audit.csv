@@ -1,0 +1,1233 @@
+product_ref,filename_or_slot,shot_type,verdict,reason,target_set_position,sector,assigned_tier
+Adjustable Overbed Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight catalog hero of the table on white.,1,Hospital,long-tail
+Adjustable Overbed Table,adjustable overbed table.png,three_quarter_angle,KEEP,"Sharp photoreal three-quarter on white; shows U-base, casters, crank clearly.",2,Hospital,long-tail
+Adjustable Overbed Table,slot:dimension_diagram,dimension_diagram,MISSING,Buyer needs height-range and footprint dimensions to spec.,3,Hospital,long-tail
+Compact Lounge Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No upright catalog hero of the seated chair.,1,Hospital,considered
+Compact Lounge Chair,slot:dimension_diagram,dimension_diagram,MISSING,"Procurement needs seat width, depth, height specs.",2,Hospital,considered
+Compact Lounge Chair,slot:material_swatch_row,material_swatch_row,MISSING,No wipe-clean upholstery finish options shown.,3,Hospital,considered
+Compact Lounge Chair,slot:full_room_scene,full_room_scene,MISSING,No patient-room context to sell placement.,4,Hospital,considered
+Compact Lounge Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No upright three-quarter angle of the chair.,5,Hospital,considered
+Compact Lounge Chair,slot:hardware_detail,hardware_detail,MISSING,No close-up of recline handle or caster hardware.,6,Hospital,considered
+Compact Lounge Chair,Image_fx (8).png,functional_transformation,KEEP,"Photoreal reclined view shows footrest, tray, side pocket, release handle.",7,Hospital,considered
+Contoured Lounge Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No crisp catalog hero on white.,1,Hospital,standard
+Contoured Lounge Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat dimensions for procurement.,2,Hospital,standard
+Contoured Lounge Chair,slot:full_room_scene,full_room_scene,MISSING,No patient-room context shown.,3,Hospital,standard
+Contoured Lounge Chair,Gemini_Generated_Image_peox7dpeox7dpeox.png,three_quarter_angle,REDO,"Low-res, soft, CGI-ish; too small to spec, weak detail and lighting.",4,Hospital,standard
+Contoured Lounge Chair,slot:texture_macro,texture_macro,MISSING,No easy-clean upholstery texture close-up.,5,Hospital,standard
+Curved Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front-facing catalog hero of the desk.,1,Hospital,considered
+Curved Desk,slot:dimension_diagram,dimension_diagram,MISSING,"Reception desk needs length, counter height, depth specs.",2,Hospital,considered
+Curved Desk,Curved Desk 2.jpg,color_finish_grid,KEEP,Clean grey-finish variant on white; useful second-colour spec option.,3,Hospital,considered
+Curved Desk,slot:full_room_scene,full_room_scene,MISSING,No waiting-area context to show scale and fit.,4,Hospital,considered
+Curved Desk,Curved Desk.jpg,three_quarter_angle,KEEP,Sharp photoreal beech desk on white; transaction counter and curve clear.,5,Hospital,considered
+Curved Desk,slot:hardware_detail,hardware_detail,MISSING,No close-up of counter edge or integrated storage.,6,Hospital,considered
+Double Drawer Cabinet,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front catalog hero of the cabinet.,1,Hospital,long-tail
+Double Drawer Cabinet,double drawer cabinet.png,three_quarter_angle,REDO,Visible AI sparkle watermark bottom-right; rustic knotty wood off-brand for clinical.,2,Hospital,long-tail
+Double Drawer Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,"Bedside cabinet needs height, width, depth dimensions.",3,Hospital,long-tail
+Electric Recliner,slot:white_seamless_hero,white_seamless_hero,MISSING,No upright catalog hero on white.,1,Hospital,flagship
+Electric Recliner,slot:dimension_diagram,dimension_diagram,MISSING,Recliner needs upright and reclined footprint dimensions.,2,Hospital,flagship
+Electric Recliner,slot:material_swatch_row,material_swatch_row,MISSING,No wipe-clean upholstery colour options shown.,3,Hospital,flagship
+Electric Recliner,slot:wide_establishing,wide_establishing,MISSING,No wide hero establishing the chair in a suite.,4,Hospital,flagship
+Electric Recliner,slot:full_room_scene,full_room_scene,MISSING,No patient-room context to sell placement.,5,Hospital,flagship
+Electric Recliner,slot:three_quarter_angle,three_quarter_angle,MISSING,No upright three-quarter view of the chair.,6,Hospital,flagship
+Electric Recliner,slot:side_profile,side_profile,MISSING,No side profile to show recline depth and back angle.,7,Hospital,flagship
+Electric Recliner,slot:hardware_detail,hardware_detail,MISSING,No close-up of power control or optional casters.,8,Hospital,flagship
+Electric Recliner,electric recliner.png,functional_transformation,KEEP,"Photoreal reclined pose shows footrest, power button, cord; mechanism legible.",9,Hospital,flagship
+Electric Recliner,slot:footprint_plan,footprint_plan,MISSING,No top-down footprint for room planning.,10,Hospital,flagship
+Fixed Overbed Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front catalog hero of correct overbed design.,1,Hospital,long-tail
+Fixed Overbed Table,Fixed Overbed Table.png,three_quarter_angle,REDO,Visible AI sparkle watermark; pedestal cafe base not a true overbed table.,2,Hospital,long-tail
+Fixed Overbed Table,slot:dimension_diagram,dimension_diagram,MISSING,Fixed-height table needs height and top dimensions.,3,Hospital,long-tail
+Glass Table,glass table 3.png,white_seamless_hero,KEEP,"Sharp two-tier glass-and-chrome on white; clean hero, photoreal.",1,Hospital,standard
+Glass Table,slot:dimension_diagram,dimension_diagram,MISSING,"Magazine table needs length, width, height dimensions.",2,Hospital,standard
+Glass Table,slot:full_room_scene,full_room_scene,MISSING,No waiting-area context to show scale and use.,3,Hospital,standard
+Glass Table,glass table 1.png,single_prop_styling,REDO,Magazine covers show garbled AI gibberish text; reads as fake.,4,Hospital,standard
+Glass Table,glass table.png,three_quarter_angle,KEEP,"Clean chrome-and-glass on white; sharp, photoreal, spec-able.",4,Hospital,standard
+Glass Table,glass table 2.png,single_prop_styling,REDO,Real third-party magazine logos and faces; off-brand and rights risk.,4,Hospital,standard
+Glass Table,slot:texture_macro,texture_macro,MISSING,No close-up of tempered glass edge or chrome finish.,5,Hospital,standard
+Glass Top Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero on seamless white,1,Hospital,considered
+Glass Top Desk,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need counter width/height dimensions,2,Hospital,considered
+Glass Top Desk,slot:material_swatch_row,material_swatch_row,MISSING,No laminate finish options shown,3,Hospital,considered
+Glass Top Desk,slot:full_room_scene,full_room_scene,MISSING,No reception-in-context shot,4,Hospital,considered
+Glass Top Desk,Glass Top.jpg,three_quarter_angle,KEEP,Sharp photoreal three-quarter; glass top and laminate body spec clearly,5,Hospital,considered
+Glass Top Desk,slot:hardware_detail,hardware_detail,MISSING,No glass bracket/transaction-top detail,6,Hospital,considered
+Glass Top Desk,slot:functional_transformation,functional_transformation,MISSING,No accessible/ADA transaction shelf view,7,Hospital,considered
+Linked Waiting Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on single-bank hero,1,Hospital,standard
+Linked Waiting Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat pitch/bank-length dimensions,2,Hospital,standard
+Linked Waiting Chair,slot:full_room_scene,full_room_scene,MISSING,No waiting-area context shot,3,Hospital,standard
+Linked Waiting Chair,linked waiting chair.png,three_quarter_angle,KEEP,Photoreal beam-link three-seat; frame and shared rail read clearly,4,Hospital,standard
+Linked Waiting Chair,slot:texture_macro,texture_macro,MISSING,No upholstery weave close-up,5,Hospital,standard
+Lockable Cabinet,Lockable Cabinet.png,white_seamless_hero,KEEP,"Clean doors-open hero; locks and shelves visible, photoreal",1,Hospital,standard
+Lockable Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,No height/width/depth dimensions for spec,2,Hospital,standard
+Lockable Cabinet,slot:full_room_scene,full_room_scene,MISSING,No bedside-in-room context,3,Hospital,standard
+Lockable Cabinet,slot:three_quarter_angle,three_quarter_angle,MISSING,No closed-door angled form view,4,Hospital,standard
+Lockable Cabinet,slot:texture_macro,texture_macro,MISSING,No easy-clean surface close-up,5,Hospital,standard
+Manual Recliner,slot:white_seamless_hero,white_seamless_hero,MISSING,No upright front hero on white,1,Hospital,flagship
+Manual Recliner,slot:dimension_diagram,dimension_diagram,MISSING,No reclined/upright footprint dimensions,2,Hospital,flagship
+Manual Recliner,slot:material_swatch_row,material_swatch_row,MISSING,No wipe-clean upholstery options,3,Hospital,flagship
+Manual Recliner,slot:wide_establishing,wide_establishing,MISSING,No patient-room establishing shot,4,Hospital,flagship
+Manual Recliner,slot:full_room_scene,full_room_scene,MISSING,No in-room styled scene,5,Hospital,flagship
+Manual Recliner,slot:three_quarter_angle,three_quarter_angle,MISSING,No upright three-quarter form view,6,Hospital,flagship
+Manual Recliner,slot:side_profile,side_profile,MISSING,No pure side profile,7,Hospital,flagship
+Manual Recliner,slot:hardware_detail,hardware_detail,MISSING,No close-up of release lever mechanism,8,Hospital,flagship
+Manual Recliner,manual recliner.png,functional_transformation,KEEP,Photoreal reclined pose shows lever and footrest extension clearly,9,Hospital,flagship
+Manual Recliner,slot:footprint_plan,footprint_plan,MISSING,No top-down clearance footprint,10,Hospital,flagship
+Medical Recliner,slot:white_seamless_hero,white_seamless_hero,MISSING,No upright front hero on white,1,Hospital,flagship
+Medical Recliner,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions across positions,2,Hospital,flagship
+Medical Recliner,slot:material_swatch_row,material_swatch_row,MISSING,No wipe-clean vinyl color options,3,Hospital,flagship
+Medical Recliner,slot:wide_establishing,wide_establishing,MISSING,No clinical-room establishing shot,4,Hospital,flagship
+Medical Recliner,slot:full_room_scene,full_room_scene,MISSING,No in-room context scene,5,Hospital,flagship
+Medical Recliner,slot:three_quarter_angle,three_quarter_angle,MISSING,No upright three-quarter form view,6,Hospital,flagship
+Medical Recliner,slot:side_profile,side_profile,MISSING,No drop-arm side profile view,7,Hospital,flagship
+Medical Recliner,slot:hardware_detail,hardware_detail,MISSING,No close-up of control pad/drop-arm,8,Hospital,flagship
+Medical Recliner,medical recliner.png,functional_transformation,KEEP,"Reclined with control pad, casters, side pocket; photoreal clinical realism",9,Hospital,flagship
+Medical Recliner,slot:footprint_plan,footprint_plan,MISSING,No top-down transfer-clearance plan,10,Hospital,flagship
+Metal Table,Metal Table.png,white_seamless_hero,KEEP,"Clean brushed-metal table hero, sharp, photoreal, no defects",1,Hospital,standard
+Metal Table,slot:dimension_diagram,dimension_diagram,MISSING,No top/height dimensions for spec,2,Hospital,standard
+Metal Table,Metal Table 3.png,single_prop_styling,REDO,Garbled fake magazine-cover text artifacts; wrong credenza product,3,Hospital,standard
+Metal Table,Metal Table 4.png,single_prop_styling,REDO,"Garbled in-image text on covers; wrong credenza, prop clutter",3,Hospital,standard
+Metal Table,Metal Table 6.png,single_prop_styling,REDO,"Garbled cover text artifacts; wrong product, dreamy prop styling",3,Hospital,standard
+Metal Table,slot:full_room_scene,full_room_scene,MISSING,No clean waiting-area context for correct product,3,Hospital,standard
+Metal Table,Metal Table 1.png,three_quarter_angle,KEEP,Open-frame metal table three-quarter; slatted shelf reads clearly,4,Hospital,standard
+Metal Table,Metal Table 2.png,three_quarter_angle,REDO,Near-duplicate of Table 1 but with extra mid-shelf; redundant variant,4,Hospital,standard
+Metal Table,Metal Table 5.png,three_quarter_angle,REDO,"Wrong product: magazine credenza, not the metal side table",4,Hospital,standard
+Metal Table,slot:texture_macro,texture_macro,MISSING,No brushed-metal surface close-up,5,Hospital,standard
+Plastic Waiting Chair,plastic waiting chair.png,white_seamless_hero,KEEP,Clean front hero on white; molded shell and chrome legs sharp,1,Hospital,standard
+Plastic Waiting Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat height/width dimensions,2,Hospital,standard
+Plastic Waiting Chair,slot:full_room_scene,full_room_scene,MISSING,No waiting-area context shot,3,Hospital,standard
+Plastic Waiting Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view of shell and frame,4,Hospital,standard
+Plastic Waiting Chair,slot:texture_macro,texture_macro,MISSING,No molded-shell/frame finish close-up,5,Hospital,standard
+Rolling Overbed Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight hero on seamless white,1,Hospital,long-tail
+Rolling Overbed Table,Rolling Overbed Table.png,three_quarter_angle,KEEP,"Photoreal three-quarter; HPL top, tilt lever, locking casters all read",2,Hospital,long-tail
+Rolling Overbed Table,slot:dimension_diagram,dimension_diagram,MISSING,No height-range/top dimensions for spec,3,Hospital,long-tail
+Single Drawer Cabinet,single drawer cabinet.png,white_seamless_hero,KEEP,"Clean photoreal hero, true wood grain, spec-able on white.",1,Hospital,long-tail
+Single Drawer Cabinet,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing drawer depth and side panel.,2,Hospital,long-tail
+Single Drawer Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need measured drawing for bedside footprint fit.,3,Hospital,long-tail
+Straight Desk,Straight Desk.jpg,white_seamless_hero,KEEP,"Sharp photoreal reception desk on white, transaction counter clear.",1,Hospital,standard
+Straight Desk,slot:dimension_diagram,dimension_diagram,MISSING,Reception desk needs measured plan for lobby fit-out.,2,Hospital,standard
+Straight Desk,slot:full_room_scene,full_room_scene,MISSING,No in-context waiting-area scene to sell scale.,3,Hospital,standard
+Straight Desk,slot:three_quarter_angle,three_quarter_angle,MISSING,Need front-staff-side angle showing counter and knee space.,4,Hospital,standard
+Straight Desk,slot:texture_macro,texture_macro,MISSING,No close-up of laminate finish for durability spec.,5,Hospital,standard
+Upholstered Lounge Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No crisp high-res hero of the lounge chair.,1,Hospital,considered
+Upholstered Lounge Chair,slot:dimension_diagram,dimension_diagram,MISSING,Patient-room seating needs measured footprint.,2,Hospital,considered
+Upholstered Lounge Chair,slot:material_swatch_row,material_swatch_row,MISSING,Wipe-clean upholstery options must be shown for healthcare.,3,Hospital,considered
+Upholstered Lounge Chair,slot:full_room_scene,full_room_scene,MISSING,No in-room patient context to sell comfort role.,4,Hospital,considered
+Upholstered Lounge Chair,Gemini_Generated_Image_963a3z963a3z963a.png,three_quarter_angle,REDO,"Low-res, soft, flat CGI lighting; not sharp spec-able render.",5,Hospital,considered
+Upholstered Lounge Chair,slot:hardware_detail,hardware_detail,MISSING,No close-up of seam/leg joint for durability proof.,6,Hospital,considered
+Upholstered Lounge Chair,slot:functional_transformation,functional_transformation,MISSING,No view of backrest support feature in use.,7,Hospital,considered
+Upholstered Waiting Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,Need straight-on hero; current is angled view.,1,Hospital,standard
+Upholstered Waiting Chair,slot:dimension_diagram,dimension_diagram,MISSING,Waiting-area seating needs measured footprint for layout.,2,Hospital,standard
+Upholstered Waiting Chair,slot:full_room_scene,full_room_scene,MISSING,No waiting-area context shot to sell scale.,3,Hospital,standard
+Upholstered Waiting Chair,upholstered waiting chair.png,three_quarter_angle,KEEP,"Sharp photoreal chair on white, clean seams, spec-able.",4,Hospital,standard
+Upholstered Waiting Chair,slot:texture_macro,texture_macro,MISSING,No fabric close-up for durability and cleanability.,5,Hospital,standard
+Wooden Table,Wooden Table.png,white_seamless_hero,KEEP,"Clean photoreal wood table on white, matches side-table brief.",1,Hospital,long-tail
+Wooden Table,Wooden Table 4.png,single_prop_styling,REDO,"Wrong product shape (magazine rack), heavy props, off-brief.",2,Hospital,long-tail
+Wooden Table,Wooden Table 2.png,single_prop_styling,REDO,Magazine-rack shape not side table; garbled book text artifacts.,2,Hospital,long-tail
+Wooden Table,Wooden Table 3.png,single_prop_styling,REDO,"Wrong shape, warped magazine text, prop-heavy, not spec-able.",2,Hospital,long-tail
+Wooden Table,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean angled view of the actual side table.,2,Hospital,long-tail
+Wooden Table,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need measured drawing for waiting-area fit.,3,Hospital,long-tail
+2-Seater Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean white-seamless hero; only room scenes and CGI.,1,Hotel,standard
+2-Seater Table,slot:dimension_diagram,dimension_diagram,MISSING,Two-top dining table needs measured plan for layout density.,2,Hotel,standard
+2-Seater Table,2-Seater Table.jpg,full_room_scene,KEEP,"Photoreal styled dining scene, sharp, sells hotel breakfast context.",3,Hotel,standard
+2-Seater Table,2-Seater Table - M1.jpg,second_environment,KEEP,"Clean photoreal room scene, walnut top reads well, spec-able.",3,Hotel,standard
+2-Seater Table,2-Seater Table 1.jpg,second_environment,REDO,"Dreamy blown-out backlight, hazy luxury-bokeh, not sharp realism.",3,Hotel,standard
+2-Seater Table,2-Seater Table M2.jpg,second_environment,KEEP,"Sharp photoreal styled scene, clear table geometry and finish.",3,Hotel,standard
+2-Seater Table,2-Seater Table Tapper Center.jpg,second_environment,KEEP,Sharp scene highlighting tapered pedestal base variant.,3,Hotel,standard
+2-Seater Table,2-Seater Table SS1.jpg,three_quarter_angle,KEEP,"Clean product-focused angle, chrome legs and top clearly shown.",4,Hotel,standard
+2-Seater Table,2-Seater Table - T Leg - HPL-MDF.png,side_profile,REDO,"Flat low-res navy CGI render, off-brand color, not photoreal.",4,Hotel,standard
+2-Seater Table,2-Seater Table - HPL - MDF.png,three_quarter_angle,REDO,"Flat CGI navy render, off-brand color, no realism, not spec-able.",4,Hotel,standard
+2-Seater Table,slot:texture_macro,texture_macro,MISSING,No close-up of HPL top finish for durability spec.,5,Hotel,standard
+4-Seater Table,4-Seater Table - T Leg - HPL-MDF.png,white_seamless_hero,REDO,"Tiny low-res blue CGI render, off-brand, not spec-able",1,Hotel,standard
+4-Seater Table,4-Seater Table - HPL - MDF.png,white_seamless_hero,REDO,"Blue CGI panel-leg render, off-brand color, not photoreal",1,Hotel,standard
+4-Seater Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean photoreal white-background hero of the table,1,Hotel,standard
+4-Seater Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured dimension drawing for buyer spec sheet,2,Hotel,standard
+4-Seater Table,4-Seater Table M1.jpg,full_room_scene,KEEP,"Photoreal walnut table, styled dining room, sells the look",3,Hotel,standard
+4-Seater Table,4-Seater Table M2.jpg,three_quarter_angle,KEEP,"Sharp oak top, square base, set table, clean realism",4,Hotel,standard
+4-Seater Table,4-Seater Table SS1.jpg,three_quarter_angle,KEEP,"Clean three-quarter hero, sharp grain, spec-able geometry",4,Hotel,standard
+4-Seater Table,slot:texture_macro,texture_macro,MISSING,No close-up of top finish or grain texture,5,Hotel,standard
+6-Seater Table,6-seater table.png,white_seamless_hero,REDO,"Soft low-res set render, muddy, not sharp spec hero",1,Hotel,standard
+6-Seater Table,6-Seater Table - T Leg - HPL-MDF.png,white_seamless_hero,REDO,"Tiny low-res blue CGI render, off-brand, not spec-able",1,Hotel,standard
+6-Seater Table,6-Seater Table - HPL - MDF.png,white_seamless_hero,REDO,"Blue CGI panel-leg render, off-brand color, not photoreal",1,Hotel,standard
+6-Seater Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No sharp photoreal white-background hero of the table,1,Hotel,standard
+6-Seater Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured dimension drawing for buyer spec sheet,2,Hotel,standard
+6-Seater Table,6-Seater Table - M3S.jpg,full_room_scene,KEEP,"Sharp X-base walnut in styled room, sells the piece",3,Hotel,standard
+6-Seater Table,6-Seater Table M2.jpg,full_room_scene,KEEP,"Sharp oak table, sunny room, clean realism, no people",3,Hotel,standard
+6-Seater Table,6-Seater Table SS1.jpg,full_room_scene,KEEP,"Wide establishing scene, set table, sharp, sells context",3,Hotel,standard
+6-Seater Table,6-Seater Table Wood.jpg,full_room_scene,KEEP,"Photoreal wood X-trestle in classic room, on-brand",3,Hotel,standard
+6-Seater Table,6-Seater Table Wood2.jpg,full_room_scene,KEEP,"Sharp X-trestle, dark room, patterned rug, photoreal",3,Hotel,standard
+6-Seater Table,6-Seater Table M1.jpg,three_quarter_angle,KEEP,"Sharp three-quarter, metal base, photoreal, spec-able",4,Hotel,standard
+6-Seater Table,slot:texture_macro,texture_macro,MISSING,No close-up of top finish or grain texture,5,Hotel,standard
+AC-New Collection,DMD Strukt.jpg,white_seamless_hero,KEEP,"Clean tufted-back trio on white, sharp, sells the silhouette",1,Hotel,considered
+AC-New Collection,Warm terracott Upholstered Accent Chair 360 return 1.jpg,dimension_diagram,REDO,"Garbled gibberish dimension text, unreadable measurements, fails spec use",2,Hotel,considered
+AC-New Collection,DMD Formo.jpg,color_story_flatlay,KEEP,"Four-color lineup, photoreal, clean white, reads as finish range",3,Hotel,considered
+AC-New Collection,DMD Linea.jpg,color_finish_grid,KEEP,"Sharp multi-finish row, shows upholstery and leg options clearly",3,Hotel,considered
+AC-New Collection,DMD Modulo.jpg,color_finish_grid,KEEP,"Photoreal four-finish range, metal-leg variant, buyer-spec ready",3,Hotel,considered
+AC-New Collection,DMD Vanta.jpg,color_finish_grid,KEEP,"Crisp four-color wire-leg range, photoreal, finish options clear",3,Hotel,considered
+AC-New Collection,Soft blush_peac Upholstered Accent Chair 360 return.jpg,three_quarter_angle,KEEP,"Four-view turntable grid, photoreal blush, shows full geometry",5,Hotel,considered
+AC-New Collection,Soft Yellow Upholstered Accent Chair 4.jpg,three_quarter_angle,REDO,"Muddy grey backdrop, flat gradient lighting, not crisp white seamless",5,Hotel,considered
+AC-New Collection,Warm Gray and taupes Upholstered Accent Chair 360 return 6.jpg,three_quarter_angle,KEEP,"Five-view swivel grid, photoreal taupe, brass base reads well",5,Hotel,considered
+AC-New Collection,slot:hardware_detail,hardware_detail,MISSING,"No close-up of leg joint, base swivel, or stitching hardware",6,Hotel,considered
+AC-New Collection,slot:functional_transformation,functional_transformation,MISSING,No swivel-action or stacking demonstration shot present,7,Hotel,considered
+Amenity Tower,slot:white_seamless_hero,white_seamless_hero,MISSING,No photoreal front hero showing finished tower on white,1,Hotel,considered
+Amenity Tower,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for tight-footprint planning,2,Hotel,considered
+Amenity Tower,slot:material_swatch_row,material_swatch_row,MISSING,No HPL finish options shown for room-design matching,3,Hotel,considered
+Amenity Tower,slot:full_room_scene,full_room_scene,MISSING,No in-guestroom context proving compact storage value,4,Hotel,considered
+Amenity Tower,Amenity Tower.png,three_quarter_angle,REDO,"Raw CGI render, flat lighting, dark void interiors, not photoreal",5,Hotel,considered
+Amenity Tower,Amenity Tower - 2.png,three_quarter_angle,REDO,"Grey 3D mockup, soft edges, no realism, compartments unclear",5,Hotel,considered
+Amenity Tower,slot:hardware_detail,hardware_detail,MISSING,"No close-up of edge-banding, hanging rail, or minibar fit",6,Hotel,considered
+Amenity Tower,slot:functional_transformation,functional_transformation,MISSING,"No shot of loaded compartments (luggage, coffee, hanging)",7,Hotel,considered
+Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-front hero shot of the chair on white,1,Hotel,standard
+Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for desk-clearance planning,2,Hotel,standard
+Chair,slot:full_room_scene,full_room_scene,MISSING,No guestroom-desk context shot for the chair,3,Hotel,standard
+Chair,Chair-2.png,side_profile,KEEP,"Photoreal high-back task chair on white, clean, mechanism visible",4,Hotel,standard
+Chair,Chair-3.png,three_quarter_angle,KEEP,"Sharp three-quarter executive chair on white, sells comfort and build",4,Hotel,standard
+Chair,slot:texture_macro,texture_macro,MISSING,No leather-grain close-up to convey contract durability,5,Hotel,standard
+Cold Buffet Counter,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean isolated hero of the counter unit on white,1,Hotel,considered
+Cold Buffet Counter,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for buffet-line layout planning,2,Hotel,considered
+Cold Buffet Counter,slot:material_swatch_row,material_swatch_row,MISSING,No wood and stone-top finish options shown,3,Hotel,considered
+Cold Buffet Counter,Cold Buffet Counter.jpg,full_room_scene,KEEP,"Real photo, fully merchandised buffet in situ, sells service capacity",4,Hotel,considered
+Cold Buffet Counter,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean angled product view of the bare counter,5,Hotel,considered
+Cold Buffet Counter,slot:hardware_detail,hardware_detail,MISSING,No close-up of cold wells or refrigeration controls,6,Hotel,considered
+Cold Buffet Counter,slot:functional_transformation,functional_transformation,MISSING,No modular configuration or cold-well module shot,7,Hotel,considered
+Double Drawer Night Stand,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero of the nightstand on white,1,Hotel,long-tail
+Double Drawer Night Stand,Double Drawer Night Stand.png,three_quarter_angle,REDO,"Visible sparkle watermark bottom-right, off-brand stock artifact",2,Hotel,long-tail
+Double Drawer Night Stand,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for bed-wall fit planning,3,Hotel,long-tail
+Dry Storage Cabinet,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero of the cabinet run on white,1,Hotel,considered
+Dry Storage Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for back-of-house layout planning,2,Hotel,considered
+Dry Storage Cabinet,slot:material_swatch_row,material_swatch_row,MISSING,No finish and laminate options shown for brand matching,3,Hotel,considered
+Dry Storage Cabinet,slot:full_room_scene,full_room_scene,MISSING,No breakfast-service-area context shot of the cabinets,4,Hotel,considered
+Dry Storage Cabinet,Food Service Cabinets 1.jpg,three_quarter_angle,KEEP,"Photoreal navy cabinet wall, open shelves staged, reads spec-able",5,Hotel,considered
+Dry Storage Cabinet,slot:hardware_detail,hardware_detail,MISSING,"No close-up of door slides, hinges, or shelf brackets",6,Hotel,considered
+Dry Storage Cabinet,slot:functional_transformation,functional_transformation,MISSING,No open-vs-closed or loaded-shelf demonstration shot,7,Hotel,considered
+Executive Desk,DMD Luma Executive Desk.jpg,white_seamless_hero,KEEP,"Sharp front hero, shows power and cable tray clearly.",1,Hotel,considered
+Executive Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for procurement specs.,2,Hotel,considered
+Executive Desk,slot:material_swatch_row,material_swatch_row,MISSING,No finish/laminate options shown for buyer selection.,3,Hotel,considered
+Executive Desk,DMD Bracket Executive Desk.jpg,single_prop_styling,REDO,"Fake glowing laptop screen, ad-agency clutter, not operator-real.",4,Hotel,considered
+Executive Desk,DMD Echo Executive Desk.jpg,single_prop_styling,REDO,"Fake laptop glow, over-styled props, reads CGI not real.",4,Hotel,considered
+Executive Desk,DMD Forma Executive Desk.jpg,single_prop_styling,REDO,"Fake glowing screen, dreamy prop styling, not sharp realism.",4,Hotel,considered
+Executive Desk,slot:full_room_scene,full_room_scene,MISSING,No real guest-room context; only fake-prop shots.,4,Hotel,considered
+Executive Desk,DMD Axis Executive Desk.jpg,three_quarter_angle,KEEP,"Clean angle, LED edge and pedestal read spec-able.",5,Hotel,considered
+Executive Desk,DMD Grid Executive Desk.jpg,three_quarter_angle,KEEP,"Clean angle, keyboard tray and rear power visible.",5,Hotel,considered
+Executive Desk,DMD Nexus Executive Desk.jpg,three_quarter_angle,KEEP,"Twin pedestals, task lamp, power strip read clearly.",5,Hotel,considered
+Executive Desk,DMD Strata Executive Desk.jpg,three_quarter_angle,KEEP,"Sharp angle, grommets and rear power well shown.",5,Hotel,considered
+Executive Desk,DMD Vault Executive Desk.jpg,three_quarter_angle,KEEP,"Clean angle, cable management ring and LED visible.",5,Hotel,considered
+Executive Desk,DMD Core Executive Desk.jpg,back_view,KEEP,"Shows rear power, grommets, cable access for installers.",6,Hotel,considered
+Executive Desk,DMD Modulo Executive Desk.jpg,hardware_detail,KEEP,"Ring-pull and power shelf legible, useful spec detail.",6,Hotel,considered
+Executive Desk,DMD Terra Executive Desk.jpg,back_view,KEEP,Front-back hybrid showing cable runs and power for buyers.,6,Hotel,considered
+Executive Desk,slot:functional_transformation,functional_transformation,MISSING,No view of keyboard tray or cable access in use.,7,Hotel,considered
+Full XL Bed Frame - Metal,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean photoreal hero of the platform frame.,1,Hotel,standard
+Full XL Bed Frame - Metal,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing or platform-height options.,2,Hotel,standard
+Full XL Bed Frame - Metal,slot:full_room_scene,full_room_scene,MISSING,No mattress-on-frame room context for buyer.,3,Hotel,standard
+Full XL Bed Frame - Metal,Bed Base Model 2.png,three_quarter_angle,REDO,"Tiny low-res CGI thumbnail, no scale, not photoreal.",4,Hotel,standard
+Full XL Bed Frame - Metal,Bed Base Model 3.png,three_quarter_angle,REDO,"Small flat CGI render, no context, not spec-able.",4,Hotel,standard
+Full XL Bed Frame - Metal,slot:texture_macro,texture_macro,MISSING,No close-up of weld and powder-coat finish.,5,Hotel,standard
+Full XL Head Board,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero of wall-mounted panel.,1,Hotel,long-tail
+Full XL Head Board,Full XL Head Board.png,three_quarter_angle,REDO,"Dreamy bokeh CGI, watermark logo, freestanding not wall-mount.",2,Hotel,long-tail
+Full XL Head Board,slot:dimension_diagram,dimension_diagram,MISSING,No width/height drawing for room layouts.,3,Hotel,long-tail
+Heated Cabinet,Food Service Cabinets 2.jpg,white_seamless_hero,REDO,"Generic cabinet run, no heating evident, wrong product shown.",1,Hotel,standard
+Heated Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for buffet line planning.,2,Hotel,standard
+Heated Cabinet,slot:full_room_scene,full_room_scene,MISSING,No breakfast-area context showing hot holding use.,3,Hotel,standard
+Heated Cabinet,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view of actual heated holding cabinet.,4,Hotel,standard
+Heated Cabinet,slot:texture_macro,texture_macro,MISSING,No detail of heated wells or controls.,5,Hotel,standard
+Hot Buffet Counter,Buffet Counter - Deep Navy 1.jpg,white_seamless_hero,KEEP,"Clean isolated navy unit on white, sharp, sells form",1,Hotel,flagship
+Hot Buffet Counter,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need footprint and height,2,Hotel,flagship
+Hot Buffet Counter,Buffet Counter - Warm Walnet.jpg,color_finish_grid,KEEP,"Light walnut finish variant, isolated, supports finish choice",3,Hotel,flagship
+Hot Buffet Counter,Buffet Counter - Deep Navy.jpg,wide_establishing,KEEP,"Navy unit in full restaurant context, sharp, no people",4,Hotel,flagship
+Hot Buffet Counter,Hot Buffet Counter.jpg,full_room_scene,KEEP,"Walnut unit in styled breakfast area, sharp, on-site realism",5,Hotel,flagship
+Hot Buffet Counter,Buffet Counter - Mappel Walnet.jpg,three_quarter_angle,KEEP,"Walnut three-quarter on white, sharp, shows wells and plates",6,Hotel,flagship
+Hot Buffet Counter,slot:side_profile,side_profile,MISSING,No clean side view of counter depth and base,7,Hotel,flagship
+Hot Buffet Counter,slot:hardware_detail,hardware_detail,MISSING,"No close-up of heated wells, glass guard, or vents",8,Hotel,flagship
+Hot Buffet Counter,slot:functional_transformation,functional_transformation,MISSING,No view of insulated wells in use or plate storage,9,Hotel,flagship
+Hot Buffet Counter,slot:footprint_plan,footprint_plan,MISSING,No top-down plan for layout planning,10,Hotel,flagship
+King Bed Frame - MDF,DMD Axis.jpg,white_seamless_hero,KEEP,"Clean platform on white showing slats, sharp, spec-able",1,Hotel,standard
+King Bed Frame - MDF,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing of king platform footprint and height,2,Hotel,standard
+King Bed Frame - MDF,slot:full_room_scene,full_room_scene,MISSING,No styled guestroom showing frame with mattress in context,3,Hotel,standard
+King Bed Frame - MDF,DMD Bloc.jpg,three_quarter_angle,KEEP,"Walnut frame three-quarter, clean, shows panel construction",4,Hotel,standard
+King Bed Frame - MDF,DMD Vault.jpg,three_quarter_angle,KEEP,"Walnut frame with deck, sharp, shows load surface",4,Hotel,standard
+King Bed Frame - MDF,DMD Core.jpg,color_finish_grid,KEEP,"Gray finish variant on white, sharp, supports finish choice",5,Hotel,standard
+King Bed Frame - MDF,DMD Crate.jpg,side_profile,KEEP,"Light walnut frame, clean panel sides, sharp",5,Hotel,standard
+King Bed Frame - MDF,DMD Terra.jpg,color_finish_grid,KEEP,"Gray frame with deck panel, clean finish variant",5,Hotel,standard
+King Bed Frame - MDF,Bed Base.png,top_down,REDO,"Tiny low-res dark CGI tile, not spec-able, off-brand",5,Hotel,standard
+King Bed Frame - MDF,slot:texture_macro,texture_macro,MISSING,No close-up of laminate grain or edge-band quality,5,Hotel,standard
+King Bed Frame - Metal,Bed Base Model 2.png,top_down,REDO,"Tiny dark CGI render, low-res, soft, off-brand realism",1,Hotel,standard
+King Bed Frame - Metal,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean isolated hero of welded steel platform frame,1,Hotel,standard
+King Bed Frame - Metal,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing of platform heights and footprint,2,Hotel,standard
+King Bed Frame - Metal,slot:full_room_scene,full_room_scene,MISSING,No guestroom scene showing frame with mattress,3,Hotel,standard
+King Bed Frame - Metal,Bed Base Model 3.png,three_quarter_angle,REDO,"Small dark low-res CGI, no context, not spec-able commercial frame",4,Hotel,standard
+King Bed Frame - Metal,slot:three_quarter_angle,three_quarter_angle,MISSING,No proper three-quarter showing weld and powder-coat finish,4,Hotel,standard
+King Bed Frame - Metal,slot:texture_macro,texture_macro,MISSING,"No close-up of welds, powder-coat, or knock-down hardware",5,Hotel,standard
+King MDF Headboard Unit,DMD Stratus.jpg,white_seamless_hero,KEEP,"Clean isolated headboard with floating nightstands and LED, sharp",1,Hotel,considered
+King MDF Headboard Unit,slot:dimension_diagram,dimension_diagram,MISSING,"No dimensioned drawing of headboard width, height, wallguard",2,Hotel,considered
+King MDF Headboard Unit,slot:material_swatch_row,material_swatch_row,MISSING,No laminate or veneer swatch row for casegoods matching,3,Hotel,considered
+King MDF Headboard Unit,DMD Driftmark.jpg,full_room_scene,KEEP,"Headboard wall in styled guestroom, sharp, no people",4,Hotel,considered
+King MDF Headboard Unit,DMD Shoreline.jpg,second_environment,KEEP,"Lighter finish guestroom scene, sharp, shows LED reveal",4,Hotel,considered
+King MDF Headboard Unit,DMD Tidefall.jpg,second_environment,KEEP,"Styled bed wall scene, sharp, shows integrated lighting",4,Hotel,considered
+King MDF Headboard Unit,DMD Seabrook.jpg,three_quarter_angle,KEEP,Angled room view showing wallguard extension and nightstands,5,Hotel,considered
+King MDF Headboard Unit,slot:hardware_detail,hardware_detail,MISSING,No close-up of concealed mounting cleats or LED channel,6,Hotel,considered
+King MDF Headboard Unit,slot:functional_transformation,functional_transformation,MISSING,No view of integrated nightstand drawers open or wallguard detail,7,Hotel,considered
+King Upholstered Headboard Unit,King DMD main.jpg,white_seamless_hero,KEEP,"Clean front hero on white, shows full headboard-plus-nightstand unit sharply.",1,Hotel,considered
+King Upholstered Headboard Unit,King DMD Regency Curve.png,white_seamless_hero,REDO,"Different tufted wingback design, mismatches modern unit; soft low-res.",1,Hotel,considered
+King Upholstered Headboard Unit,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; hotel buyers need king-width and height specs.,2,Hotel,considered
+King Upholstered Headboard Unit,slot:material_swatch_row,material_swatch_row,MISSING,No contract-fabric/leather options row for designer scheme matching.,3,Hotel,considered
+King Upholstered Headboard Unit,King DMD Aura.jpg,full_room_scene,REDO,"Dreamy bokeh pendant lighting, residential mood, not sharp operator realism.",4,Hotel,considered
+King Upholstered Headboard Unit,King DMD Element.jpg,full_room_scene,KEEP,"Clean bright room scene shows headboard in context, sharp and on-brand.",4,Hotel,considered
+King Upholstered Headboard Unit,King DMD Prestige.jpg,full_room_scene,KEEP,"Sharp front studio scene, full unit with lamps reads as coordinated package.",4,Hotel,considered
+King Upholstered Headboard Unit,King DMD Axis.jpg,three_quarter_angle,KEEP,"Sharp symmetric studio view, full unit with nightstands reads spec-able.",5,Hotel,considered
+King Upholstered Headboard Unit,King DMD Nova.jpg,three_quarter_angle,REDO,"Warm dreamy lighting and glow bulbs, residential not contract realism.",5,Hotel,considered
+King Upholstered Headboard Unit,King DMD Regency Straight.png,three_quarter_angle,REDO,"Different tufted design, off-product; soft, dull lighting, not spec realism.",5,Hotel,considered
+King Upholstered Headboard Unit,King DMD Solis.jpg,three_quarter_angle,KEEP,"Sharp angled studio view, full unit with nightstands, clean and on-brand.",5,Hotel,considered
+King Upholstered Headboard Unit,slot:hardware_detail,hardware_detail,MISSING,"No close-up of stitching, accent inlays, or wallguard build.",6,Hotel,considered
+King Upholstered Headboard Unit,slot:functional_transformation,functional_transformation,MISSING,No view of integrated nightstand/wallguard function detail.,7,Hotel,considered
+Luggage Bench,Luggage Bench 4.png,white_seamless_hero,KEEP,"Clean front hero, shows plywood edge and slatted strap top sharply.",1,Hotel,long-tail
+Luggage Bench,Luggage Bench 5.png,white_seamless_hero,KEEP,"Sharp front hero, HPL top with luggage straps, edge-banded plywood clear.",1,Hotel,long-tail
+Luggage Bench,Luggage Bench 1.png,side_profile,REDO,"Residential blue cushion, off-spec; product is HPL-top luggage bench.",2,Hotel,long-tail
+Luggage Bench,Luggage Bench 2.png,low_hero_angle,REDO,"Reads as low coffee table, ambiguous as luggage bench; cramped crop.",2,Hotel,long-tail
+Luggage Bench,Luggage Bench 3.png,three_quarter_angle,KEEP,"Clean angled studio shot, clearly an HPL-top luggage bench, spec-able.",2,Hotel,long-tail
+Luggage Bench,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need bench height and width to lay out rooms.,3,Hotel,long-tail
+Metal Dining Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean single front hero of the actual metal-frame dining chair.,1,Hotel,standard
+Metal Dining Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need seat height and footprint for layouts.,2,Hotel,standard
+Metal Dining Chair,slot:full_room_scene,full_room_scene,MISSING,No breakfast-area context showing the chair at a dining table.,3,Hotel,standard
+Metal Dining Chair,Dusty Blue Upholstered Accent Chair 3.jpg,three_quarter_angle,REDO,"Shows wood-leg lounge chair, not a metal dining chair; wrong product.",4,Hotel,standard
+Metal Dining Chair,Image_fx (80).jpg,three_quarter_angle,REDO,"Multi-view grid of wood-leg armchair, not metal dining chair; off-spec.",4,Hotel,standard
+Metal Dining Chair,Orange Upholstered Accent Chair 2.jpg,three_quarter_angle,REDO,"Wood-leg lounge chair multi-view, not metal dining chair; wrong product.",4,Hotel,standard
+Metal Dining Chair,slot:texture_macro,texture_macro,MISSING,No close-up of upholstery and metal frame finish.,5,Hotel,standard
+Mixed Buffet Counter,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean studio hero isolating the counter fixture for spec review.,1,Hotel,flagship
+Mixed Buffet Counter,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; flagship F&B fixture needs full dimensioned spec.,2,Hotel,flagship
+Mixed Buffet Counter,slot:material_swatch_row,material_swatch_row,MISSING,No wood/stone finish options row for designer specification.,3,Hotel,flagship
+Mixed Buffet Counter,Mixed Buffet Counter 2.jpg,wide_establishing,KEEP,"Wide sharp view of full L-island, hot/cold layout and storage visible.",4,Hotel,flagship
+Mixed Buffet Counter,Mixed Buffet Counter.jpg,full_room_scene,KEEP,"Sharp realistic buffet island, shows wood casework, sneeze guard, plate cubbies.",5,Hotel,flagship
+Mixed Buffet Counter,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean isolated angled hero of the counter on neutral ground.,6,Hotel,flagship
+Mixed Buffet Counter,slot:side_profile,side_profile,MISSING,No side elevation showing counter depth and sneeze-guard projection.,7,Hotel,flagship
+Mixed Buffet Counter,slot:hardware_detail,hardware_detail,MISSING,"No close-up of glass guard mounts, lighting, or stone edge.",8,Hotel,flagship
+Mixed Buffet Counter,slot:functional_transformation,functional_transformation,MISSING,No view of hot/cold service-section function or under-counter storage.,9,Hotel,flagship
+Mixed Buffet Counter,slot:footprint_plan,footprint_plan,MISSING,No top-down footprint; buyers need island plan for breakfast-room layout.,10,Hotel,flagship
+Nova Blue Arm Chair,AC001-BL-nova-blue - Frount View.png,white_seamless_hero,KEEP,"Clean photoreal front hero, true blue, sharp, sells spec.",1,Hotel,standard
+Nova Blue Arm Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,"Have hero, but no dimension or room or macro coverage.",1,Hotel,standard
+Nova Blue Arm Chair,slot:dimension_diagram,dimension_diagram,MISSING,No spec dimensions; buyers need width/depth/seat height.,2,Hotel,standard
+Nova Blue Arm Chair,slot:full_room_scene,full_room_scene,MISSING,No in-context lobby/suite scene for scale and fit.,3,Hotel,standard
+Nova Blue Arm Chair,AC001-BL-nova-blue - ISO View.png,three_quarter_angle,KEEP,"Sharp 3/4 showing arms, seat depth, leg splay clearly.",4,Hotel,standard
+Nova Blue Arm Chair,AC001-BL-nova-blue - Side View.png,side_profile,KEEP,"Clean side profile, accurate proportions; extra over base set.",4,Hotel,standard
+Nova Blue Arm Chair,AC001-BL-nova-blue - Back View.png,back_view,KEEP,Clean back view confirms upholstery wrap; supplementary spec angle.,4,Hotel,standard
+Nova Blue Arm Chair,slot:texture_macro,texture_macro,MISSING,No fabric close-up to prove performance weave.,5,Hotel,standard
+Nova Green Arm Chair,AC01-GR-nova-Green-Front-View.png,white_seamless_hero,KEEP,"Clean photoreal front hero, true green, sharp, spec-able.",1,Hotel,standard
+Nova Green Arm Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; procurement needs width/depth/seat height.,2,Hotel,standard
+Nova Green Arm Chair,slot:full_room_scene,full_room_scene,MISSING,No lobby/suite context to show scale and fit.,3,Hotel,standard
+Nova Green Arm Chair,AC01-GR-nova-green-ISO View.png,three_quarter_angle,REDO,"Soft, dreamy lighting and mismatched gray backdrop; off-brand vs set.",4,Hotel,standard
+Nova Green Arm Chair,AC01-GR-nova-Green-Side-View.png,side_profile,KEEP,"Clean side profile, accurate proportions; supplementary angle.",4,Hotel,standard
+Nova Green Arm Chair,AC01-GR-nova-Green-Top-View.png,top_down,KEEP,Clean top-down shows seat well; minor supporting spec view.,4,Hotel,standard
+Nova Green Arm Chair,slot:texture_macro,texture_macro,MISSING,No fabric macro to prove performance weave durability.,5,Hotel,standard
+Open Shelf Night Stand,Open Shelf Floating Night Stand.png,white_seamless_hero,REDO,"Flat thin cutout, wrong proportions, no depth, not spec-able.",1,Hotel,long-tail
+Open Shelf Night Stand,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean seamless hero; existing front shot is unusable.,1,Hotel,long-tail
+Open Shelf Night Stand,Open Shelf Night Stand.png,three_quarter_angle,REDO,AI sparkle watermark and paint-smear graphic in frame; off-brand.,2,Hotel,long-tail
+Open Shelf Night Stand,slot:three_quarter_angle,three_quarter_angle,MISSING,Existing 3/4 carries watermark; needs clean replacement.,2,Hotel,long-tail
+Open Shelf Night Stand,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; bedside fit and shelf height unknown.,3,Hotel,long-tail
+Queen Bed Frame - MDF,DMD Core.jpg,three_quarter_angle,KEEP,"Sharp 3/4 with slat platform, light-oak finish; spec-able hero angle.",1,Hotel,considered
+Queen Bed Frame - MDF,Bed Base.png,low_hero_angle,REDO,"Dark muddy low-res panel render, recessed top reads off-product.",1,Hotel,considered
+Queen Bed Frame - MDF,slot:white_seamless_hero,white_seamless_hero,MISSING,Have angled renders but no straight seamless hero on white.,1,Hotel,considered
+Queen Bed Frame - MDF,slot:dimension_diagram,dimension_diagram,MISSING,No platform-height or footprint dimensions for housekeeping clearance.,2,Hotel,considered
+Queen Bed Frame - MDF,DMD Bloc.jpg,color_finish_grid,KEEP,Clean walnut finish variant; supports finish/material range.,3,Hotel,considered
+Queen Bed Frame - MDF,DMD Crate.jpg,color_finish_grid,KEEP,Medium-oak finish variant render; builds material/finish row.,3,Hotel,considered
+Queen Bed Frame - MDF,DMD Terra.jpg,color_finish_grid,KEEP,Gray-oak finish with solid deck; finish-range supporting view.,3,Hotel,considered
+Queen Bed Frame - MDF,DMD Vault.jpg,color_finish_grid,KEEP,"Dark-walnut finish, solid deck; rounds out finish options.",3,Hotel,considered
+Queen Bed Frame - MDF,slot:full_room_scene,full_room_scene,MISSING,No dressed guestroom showing bed-wall composition in context.,4,Hotel,considered
+Queen Bed Frame - MDF,DMD Axis.jpg,three_quarter_angle,KEEP,"Sharp 3/4 platform render, slat deck visible, true gray-oak finish.",5,Hotel,considered
+Queen Bed Frame - MDF,slot:hardware_detail,hardware_detail,MISSING,No edge-band/joint detail proving sealed moisture-resistant construction.,6,Hotel,considered
+Queen Bed Frame - MDF,slot:functional_transformation,functional_transformation,MISSING,No height-option or under-bed clearance demonstration.,7,Hotel,considered
+Queen Bed Frame - Metal,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean lit hero showing welded steel powder-coat frame.,1,Hotel,standard
+Queen Bed Frame - Metal,slot:dimension_diagram,dimension_diagram,MISSING,No three-height clearance or footprint dimensions for spec.,2,Hotel,standard
+Queen Bed Frame - Metal,slot:full_room_scene,full_room_scene,MISSING,No guestroom context showing under-bed storage and finish.,3,Hotel,standard
+Queen Bed Frame - Metal,Bed Base Model 3.png,three_quarter_angle,REDO,"Dark muddy plastic-looking render, flat lighting, no powder-coat read.",4,Hotel,standard
+Queen Bed Frame - Metal,Bed Base Model 2.png,three_quarter_angle,REDO,"Low-contrast black slab, no steel realism, not spec-able.",4,Hotel,standard
+Queen Bed Frame - Metal,slot:texture_macro,texture_macro,MISSING,No weld/powder-coat macro proving durability claim.,5,Hotel,standard
+Queen Head Board,slot:white_seamless_hero,white_seamless_hero,MISSING,No isolated panel hero; buyer cannot see product alone.,1,Hotel,considered
+Queen Head Board,slot:dimension_diagram,dimension_diagram,MISSING,No widths or heights shown for mattress-program matching.,2,Hotel,considered
+Queen Head Board,slot:material_swatch_row,material_swatch_row,MISSING,"Laminate, veneer, upholstered finish options not shown.",3,Hotel,considered
+Queen Head Board,DMD Aura.jpg,full_room_scene,KEEP,"Photoreal twin-room scene shows panel in context, well lit.",4,Hotel,considered
+Queen Head Board,DMD Axis.jpg,full_room_scene,KEEP,"Clean front room scene, panel reads clearly, on-brand.",4,Hotel,considered
+Queen Head Board,DMD Drift.jpg,full_room_scene,REDO,"Near-duplicate room scene, no spec value beyond Aura.",4,Hotel,considered
+Queen Head Board,DMD Edge.jpg,full_room_scene,REDO,Robot-vacuum prop under bed distracts from headboard spec.,4,Hotel,considered
+Queen Head Board,DMD Halo.jpg,full_room_scene,REDO,"Redundant angled room scene, duplicates earlier context shots.",4,Hotel,considered
+Queen Head Board,DMD Haven.jpg,full_room_scene,REDO,"Robot vacuum visible, near-duplicate of other scenes.",4,Hotel,considered
+Queen Head Board,DMD Mesa.jpg,full_room_scene,REDO,Robot-vacuum prop and duplicate framing dilute spec value.,4,Hotel,considered
+Queen Head Board,DMD Nest.jpg,full_room_scene,REDO,"Another duplicate room scene, no new buyer information.",4,Hotel,considered
+Queen Head Board,DMD Solace.jpg,full_room_scene,REDO,"Robot vacuums under both beds, distracting non-product props.",4,Hotel,considered
+Queen Head Board,DMD TwinGlow.jpg,full_room_scene,REDO,"Robot vacuums and duplicate scene, no spec detail.",4,Hotel,considered
+Queen Head Board,DMD Studio.jpg,second_environment,KEEP,Angled three-quarter view shows panel depth and mounting.,5,Hotel,considered
+Queen Head Board,DMD Vault.jpg,three_quarter_angle,KEEP,Angled view reveals panel edge and floating nightstand cleanly.,5,Hotel,considered
+Queen Head Board,slot:hardware_detail,hardware_detail,MISSING,Concealed cleat mount and edge-banding not documented.,6,Hotel,considered
+Queen Head Board,slot:functional_transformation,functional_transformation,MISSING,Double-queen extension capability not demonstrated.,7,Hotel,considered
+Refrigerated Cabinet,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean seamless hero of the cabinet alone.,1,Hotel,standard
+Refrigerated Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,"No length, depth, height for buffet-line planning.",2,Hotel,standard
+Refrigerated Cabinet,slot:full_room_scene,full_room_scene,MISSING,No breakfast-area context showing service flow.,3,Hotel,standard
+Refrigerated Cabinet,Food Service Cabinets 3.jpg,three_quarter_angle,KEEP,"Photoreal angled view shows wells, glass guard, finish; sells unit.",4,Hotel,standard
+Refrigerated Cabinet,slot:texture_macro,texture_macro,MISSING,Stainless and laminate finish texture not shown close-up.,5,Hotel,standard
+Single Drawer Night Stand,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean watermark-free hero on white seamless.,1,Hotel,long-tail
+Single Drawer Night Stand,single drawer night stand.png,three_quarter_angle,REDO,Sparkle watermark graphic in corner; no open lower shelf shown.,2,Hotel,long-tail
+Single Drawer Night Stand,single drawer night stand (2).png,three_quarter_angle,REDO,In-image star watermark; lacks open shelf from spec.,2,Hotel,long-tail
+Single Drawer Night Stand,Nightstand.png,three_quarter_angle,REDO,"Wrong product: dark metal-frame unit, off-brand, low-res.",2,Hotel,long-tail
+Single Drawer Night Stand,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions for bed-wall layout planning.,3,Hotel,long-tail
+Sunset Orange Arm Chair,AC01-OR - nova-Sunset-Orange - Frount View.png,white_seamless_hero,KEEP,"Clean front hero, accurate Sunset Orange, photoreal, no people.",1,Hotel,standard
+Sunset Orange Arm Chair,AC01-OR-nova-Sunset-Orange-Top-view.png,top_down,KEEP,"Top-down shows seat footprint, useful for layout spacing.",2,Hotel,standard
+Sunset Orange Arm Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured dimensions for guestroom and lobby spacing.,2,Hotel,standard
+Sunset Orange Arm Chair,slot:full_room_scene,full_room_scene,MISSING,No lobby or lounge context showing accent chair in palette.,3,Hotel,standard
+Sunset Orange Arm Chair,AC01-OR - nova-Sunset-Orange - ISO View.png,three_quarter_angle,KEEP,"Sharp three-quarter shows form, arms, tapered legs.",4,Hotel,standard
+Sunset Orange Arm Chair,AC01-OR-nova-Sunset-Orange-Side-view.png,side_profile,KEEP,Clean profile shows seat depth and back rake for comfort.,4,Hotel,standard
+Sunset Orange Arm Chair,slot:texture_macro,texture_macro,MISSING,Upholstery weave and durability finish not shown close-up.,5,Hotel,standard
+TV Media Panel 1,TV Media Panel - 2 color 2.png,white_seamless_hero,KEEP,"Clean front hero, two-tone laminate clear, spec-able backdrop.",1,Hotel,long-tail
+TV Media Panel 1,TV Media Panel - 2 color 1.png,three_quarter_angle,KEEP,Photoreal angled two-tone HPL panel with TV; sells finish layout.,2,Hotel,long-tail
+TV Media Panel 1,TV Media Panel - 2 color.png,three_quarter_angle,KEEP,"Sharp angled view, dark accent finish reads well on wall.",2,Hotel,long-tail
+TV Media Panel 1,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for width/height scaling to king walls.,3,Hotel,long-tail
+Upholstered Dining Chair,Soft Yellow Upholstered Accent Chair 4.jpg,white_seamless_hero,KEEP,Crisp front-and-multi hero on seamless; spec-able silhouette.,1,Hotel,considered
+Upholstered Dining Chair,Warm terracott Upholstered Accent Chair 360 return 1.jpg,dimension_diagram,REDO,Dimension labels are garbled gibberish text; unusable for spec.,2,Hotel,considered
+Upholstered Dining Chair,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery color/fabric grid for designer specification.,3,Hotel,considered
+Upholstered Dining Chair,slot:full_room_scene,full_room_scene,MISSING,No breakfast-area context showing chair in use.,4,Hotel,considered
+Upholstered Dining Chair,Soft blush_peac Upholstered Accent Chair 360 return.jpg,three_quarter_angle,KEEP,"Photoreal blush 360 grid, brass base sharp, prop staging clean.",5,Hotel,considered
+Upholstered Dining Chair,Warm Gray and taupes Upholstered Accent Chair 360 return 6.jpg,three_quarter_angle,KEEP,"Clean taupe 360 set on white, swivel base reads true.",5,Hotel,considered
+Upholstered Dining Chair,slot:hardware_detail,hardware_detail,MISSING,No close-up of brass base/leg caps for quality proof.,6,Hotel,considered
+Upholstered Dining Chair,slot:functional_transformation,functional_transformation,MISSING,No swivel-action demonstration of the rotating base.,7,Hotel,considered
+Vanity 1,Vanitie 1.png,white_seamless_hero,REDO,In-image sparkle watermark bottom-right; remove mark for clean hero.,1,Hotel,standard
+Vanity 1,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for vanity width/height sizing.,2,Hotel,standard
+Vanity 1,slot:full_room_scene,full_room_scene,MISSING,No bathroom context showing vanity installed.,3,Hotel,standard
+Vanity 1,Vanitie 1.1.png,three_quarter_angle,REDO,Low-res soft thumbnail with sparkle mark; too small to spec.,4,Hotel,standard
+Vanity 1,slot:texture_macro,texture_macro,MISSING,No close-up of HPL surface or marble top finish.,5,Hotel,standard
+Vanity 2,Vanitie 2.png,white_seamless_hero,KEEP,"Photoreal front hero, stone top and black frame spec clearly.",1,Hotel,standard
+Vanity 2,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for vanity sizing across rooms.,2,Hotel,standard
+Vanity 2,slot:full_room_scene,full_room_scene,MISSING,No installed bathroom context for buyer.,3,Hotel,standard
+Vanity 2,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and side profile.,4,Hotel,standard
+Vanity 2,Vanitie 2.1.png,top_down,REDO,Awkward steep top-down with sparkle mark; not a target shot.,5,Hotel,standard
+Vanity 3,Vanitie 3.png,white_seamless_hero,REDO,In-image sparkle watermark bottom-right mars clean front hero.,1,Hotel,standard
+Vanity 3,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing the console vanity.,2,Hotel,standard
+Vanity 3,slot:full_room_scene,full_room_scene,MISSING,No installed bathroom context for the buyer.,3,Hotel,standard
+Vanity 3,Vanitie 3.1.png,three_quarter_angle,REDO,Low-res soft thumbnail with sparkle mark; not spec-able.,4,Hotel,standard
+Vanity 3,slot:texture_macro,texture_macro,MISSING,No close-up of HPL top or frame finish.,5,Hotel,standard
+Vanity 4,Vanitie 4.png,white_seamless_hero,REDO,In-image sparkle watermark bottom-right on otherwise clean hero.,1,Hotel,standard
+Vanity 4,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for vanity dimensions.,2,Hotel,standard
+Vanity 4,slot:full_room_scene,full_room_scene,MISSING,No installed bathroom context.,3,Hotel,standard
+Vanity 4,slot:three_quarter_angle,three_quarter_angle,MISSING,No eye-level angled view showing depth and fluted front.,4,Hotel,standard
+Vanity 4,Vanitie 4.1.png,top_down,REDO,"Steep top-down thumbnail, not a target shot; too small.",5,Hotel,standard
+Vanity 5,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero of the oak-and-stone vanity.,1,Hotel,standard
+Vanity 5,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing.,2,Hotel,standard
+Vanity 5,slot:full_room_scene,full_room_scene,MISSING,No installed bathroom context.,3,Hotel,standard
+Vanity 5,Vanitie 5.png,three_quarter_angle,REDO,Tiny low-res thumbnail; too soft and small to spec.,4,Hotel,standard
+Vanity 5,slot:texture_macro,texture_macro,MISSING,No close-up of oak grain or stone top.,5,Hotel,standard
+Vanity 6,Vanitie 6.png,white_seamless_hero,KEEP,"Photoreal front hero; oak body, marble top, black legs spec clearly.",1,Hotel,standard
+Vanity 6,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for vanity sizing.,2,Hotel,standard
+Vanity 6,slot:full_room_scene,full_room_scene,MISSING,No installed bathroom context for buyer.,3,Hotel,standard
+Vanity 6,slot:three_quarter_angle,three_quarter_angle,MISSING,No eye-level angled view showing depth and side.,4,Hotel,standard
+Vanity 6,Vanitie 6.1.png,top_down,REDO,Steep top-down thumbnail with sparkle mark; not a target shot.,5,Hotel,standard
+Vanity 7,Vanitie 7.png,three_quarter_angle,KEEP,"Sharp photoreal vanity, oak plus black frame, brass tap, sells.",1,Hotel,standard
+Vanity 7,slot:dimension_diagram,dimension_diagram,MISSING,No spec dimensions for procurement sizing.,2,Hotel,standard
+Vanity 7,slot:full_room_scene,full_room_scene,MISSING,No installed guest-bath context shot.,3,Hotel,standard
+Vanity 7,slot:texture_macro,texture_macro,MISSING,No HPL surface close-up for durability proof.,5,Hotel,standard
+Vanity 8,Vanitie 8.png,white_seamless_hero,REDO,Sparkle watermark artifact bottom-right corner mars the hero.,1,Hotel,standard
+Vanity 8,slot:dimension_diagram,dimension_diagram,MISSING,No spec dimensions for procurement sizing.,2,Hotel,standard
+Vanity 8,slot:full_room_scene,full_room_scene,MISSING,No installed guest-bath context shot.,3,Hotel,standard
+Vanity 8,slot:three_quarter_angle,three_quarter_angle,MISSING,Only a clean front view exists; no angled view.,4,Hotel,standard
+Vanity 8,slot:texture_macro,texture_macro,MISSING,No stone-top or HPL macro for finish proof.,5,Hotel,standard
+Wooden Dining Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero on white seamless.,1,Hotel,standard
+Wooden Dining Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height or width spec for procurement.,2,Hotel,standard
+Wooden Dining Chair,DMD-DinningChair - DC-WOOD1.jpg,full_room_scene,REDO,"Dreamy bokeh trio, wrong product (lounge armchair), inconsistent.",3,Hotel,standard
+Wooden Dining Chair,DMD-DinningChair - DC-BL001.png,three_quarter_angle,KEEP,"Sharp photoreal blue dining chair, solid-wood legs, spec-able.",4,Hotel,standard
+Wooden Dining Chair,slot:texture_macro,texture_macro,MISSING,No upholstery weave close-up for durability.,5,Hotel,standard
+Workstation Desk,Workstation Desk 1.jpg,white_seamless_hero,KEEP,"Clean wide three-quarter, oak top, X-leg, sharp hero.",1,Hotel,standard
+Workstation Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured desk dimensions for procurement layout.,2,Hotel,standard
+Workstation Desk,slot:full_room_scene,full_room_scene,MISSING,No installed guest-room work-area context shot.,3,Hotel,standard
+Workstation Desk,DMD Axis Workstation Desk.jpg,three_quarter_angle,KEEP,Sharp angled view shows cable port and powder-coat leg.,4,Hotel,standard
+Workstation Desk,DMD Bracket Workstation Desk.jpg,side_profile,KEEP,"Clean straight-on view, reads X-leg silhouette clearly.",4,Hotel,standard
+Workstation Desk,DMD Core Workstation Desk.jpg,three_quarter_angle,REDO,"Top edge cropped off, partial product framing weakens spec read.",4,Hotel,standard
+Workstation Desk,DMD Echo Workstation Desk.jpg,three_quarter_angle,REDO,"In-image text 1.57 watermark on panel, off-brand mark.",4,Hotel,standard
+Workstation Desk,DMD Forma Workstation Desk.jpg,three_quarter_angle,KEEP,"Clean angle, panel-end plus cable port, light-wood finish.",4,Hotel,standard
+Workstation Desk,DMD Grid Workstation Desk.jpg,three_quarter_angle,REDO,"Top edge cropped, partial framing cuts product off.",4,Hotel,standard
+Workstation Desk,DMD Luma Workstation Desk.jpg,three_quarter_angle,KEEP,"Clean angle with raised hutch and port, walnut finish.",4,Hotel,standard
+Workstation Desk,DMD Modulo Workstation Desk.jpg,three_quarter_angle,KEEP,"Sharp angle, knotty-oak panel end, clean seamless ground.",4,Hotel,standard
+Workstation Desk,DMD Strata Workstation Desk.jpg,three_quarter_angle,REDO,"Top edge cropped off, framing cuts the desktop.",4,Hotel,standard
+Workstation Desk,DMD Terra Workstation Desk.jpg,three_quarter_angle,KEEP,"Clean angle, light wood, cable port, spec-able finish.",4,Hotel,standard
+Workstation Desk,slot:texture_macro,texture_macro,MISSING,No wood-grain or powder-coat macro for finish proof.,5,Hotel,standard
+Writing Desk,Writing Desk Cross Leg One side.jpg,three_quarter_angle,KEEP,"Clean photoreal 3/4 hero on light seamless, sharp, spec-able",1,Hotel,standard
+Writing Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need width/depth/height to spec,2,Hotel,standard
+Writing Desk,slot:full_room_scene,full_room_scene,MISSING,No in-guestroom context showing desk in real placement,3,Hotel,standard
+Writing Desk,DMD Grid Writing Desk.jpg,three_quarter_angle,REDO,Phone/headphone props plus green charge graphic clutter the spec read,4,Hotel,standard
+Writing Desk,DMD Luma Writing Desk.jpg,three_quarter_angle,KEEP,"Clean photoreal 3/4 angle, sharp, no clutter, sells finish",4,Hotel,standard
+Writing Desk,DMD Strata Writing Desk.jpg,single_prop_styling,REDO,"Plant, headphones, phone, green charge graphic; off-brand prop clutter",4,Hotel,standard
+Writing Desk,DMD Vault Writing Desk.jpg,three_quarter_angle,REDO,"Phone, headphones, green charge icon clutter; not clean spec shot",4,Hotel,standard
+Writing Desk,DMD Core Writing Desk.jpg,three_quarter_angle,REDO,Phone/headphone props plus green charge graphic distract from desk,4,Hotel,standard
+Writing Desk,DMD Axis Writing Desk.jpg,three_quarter_angle,REDO,"Cluttered with phone, cables, headphones, green charge graphic",4,Hotel,standard
+Writing Desk,DMD Forma Writing Desk.jpg,three_quarter_angle,REDO,"Mat, phone, headphones, green charge icon clutter the spec read",4,Hotel,standard
+Writing Desk,slot:texture_macro,texture_macro,MISSING,No close-up of wood grain or powder-coat finish quality,5,Hotel,standard
+2-Seater Sofa,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean single-product hero on white to anchor the listing,1,Lobby Area,considered
+2-Seater Sofa,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers cannot confirm footprint or seat height,2,Lobby Area,considered
+2-Seater Sofa,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery swatch row showing commercial fabric options,3,Lobby Area,considered
+2-Seater Sofa,Orang-Blue.jpg,full_room_scene,KEEP,Photoreal two sofas in room; shows color options and scale,4,Lobby Area,considered
+2-Seater Sofa,Orange-Gray.jpg,second_environment,REDO,Two-tone merge reads as one half-painted sofa; confusing for spec,4,Lobby Area,considered
+2-Seater Sofa,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean single-sofa 3/4 angle showing frame and arms,5,Lobby Area,considered
+2-Seater Sofa,slot:hardware_detail,hardware_detail,MISSING,No leg or frame detail proving commercial-grade build,6,Lobby Area,considered
+2-Seater Sofa,slot:functional_transformation,functional_transformation,MISSING,No seat/cushion detail or feature shot for the buyer,7,Lobby Area,considered
+3-Seater Sofa,Sofa-8.png,white_seamless_hero,KEEP,"Clean photoreal curved sectional on white, sharp, spec-able",1,Lobby Area,considered
+3-Seater Sofa,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need length and footprint to spec,2,Lobby Area,considered
+3-Seater Sofa,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery swatch row showing commercial fabric choices,3,Lobby Area,considered
+3-Seater Sofa,Sofa-5.jpg,full_room_scene,REDO,Blue/green two-tone split reads as one half-painted sofa; confusing,4,Lobby Area,considered
+3-Seater Sofa,slot:full_room_scene,full_room_scene,MISSING,No clean lobby context; existing two-tone scene rejected,4,Lobby Area,considered
+3-Seater Sofa,Sofa-6.png,three_quarter_angle,REDO,Low-res soft thumbnail; not sharp enough to spec,5,Lobby Area,considered
+3-Seater Sofa,Sofa-7.png,three_quarter_angle,REDO,Low-res soft thumbnail; too small and blurry to sell,5,Lobby Area,considered
+3-Seater Sofa,Sofa-9.png,three_quarter_angle,KEEP,"Clean photoreal velvet chaise on white, sharp 3/4 angle",5,Lobby Area,considered
+3-Seater Sofa,slot:hardware_detail,hardware_detail,MISSING,No leg or frame detail proving commercial-grade durability,6,Lobby Area,considered
+3-Seater Sofa,slot:functional_transformation,functional_transformation,MISSING,No cushion or no-sag spring detail for the buyer,7,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table Natural Wood Stare Style.jpg,three_quarter_angle,KEEP,"Clean white hero, star base + glass clearly shown to buyer",1,Lobby Area,considered
+Glass Top Coffee Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front white-seamless hero; angles only,1,Lobby Area,considered
+Glass Top Coffee Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for procurement spec sizing,2,Lobby Area,considered
+Glass Top Coffee Table,slot:material_swatch_row,material_swatch_row,MISSING,No wood-finish swatch row for buyer selection,3,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table X Box Legs.jpg,vignette,REDO,"Garbled fake text on book spines, styled prop scene off-brand",4,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table Natural Wood Butterfly.jpg,three_quarter_angle,KEEP,"Sharp white-seamless side hero, live-edge walnut base reads spec-able",5,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table Natural Wood X style.jpg,three_quarter_angle,REDO,"Dreamy gray gradient bokeh studio look, not sharp on-site realism",5,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table Natural Wood.jpg,three_quarter_angle,KEEP,"Crisp white hero, double-glass star base variant clear",5,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table Rectangle Legs.jpg,side_profile,KEEP,"Clean white-seamless profile, X-cross base height readable",5,Lobby Area,considered
+Glass Top Coffee Table,Glass Top Coffee Table Wide H.jpg,three_quarter_angle,REDO,"Warped melted legs through glass, floating cut-off reflection artifact",5,Lobby Area,considered
+Glass Top Coffee Table,slot:hardware_detail,hardware_detail,MISSING,No close-up of glass clamps/standoff hardware,6,Lobby Area,considered
+Glass Top Coffee Table,slot:functional_transformation,functional_transformation,MISSING,No base-style comparison showing the variant range,7,Lobby Area,considered
+Metal Accent Chair,Dusty Blue Upholstered Accent Chair 3.jpg,white_seamless_hero,KEEP,"Sharp multi-view white hero, front/side/back, brass tips visible",1,Lobby Area,standard
+Metal Accent Chair,Orange Upholstered Accent Chair 2.jpg,white_seamless_hero,KEEP,"Crisp orange multi-angle spec sheet, all sides clear",1,Lobby Area,standard
+Metal Accent Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for seat height/footprint spec,2,Lobby Area,standard
+Metal Accent Chair,slot:full_room_scene,full_room_scene,MISSING,No lobby scene showing chair in real context,3,Lobby Area,standard
+Metal Accent Chair,Image_fx (80).jpg,three_quarter_angle,REDO,"Flat gray CGI render, soft muddy lighting, not photoreal",4,Lobby Area,standard
+Metal Accent Chair,slot:texture_macro,texture_macro,MISSING,No upholstery weave close-up for durability check,5,Lobby Area,standard
+Reception Desk Collections,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean straight-on hero of single desk variant,1,Lobby Area,flagship
+Reception Desk Collections,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for counter height/length spec,2,Lobby Area,flagship
+Reception Desk Collections,slot:material_swatch_row,material_swatch_row,MISSING,No wood/marble finish swatches for buyer selection,3,Lobby Area,flagship
+Reception Desk Collections,slot:wide_establishing,wide_establishing,MISSING,No clean wide lobby establishing shot in context,4,Lobby Area,flagship
+Reception Desk Collections,Recepction Desk1.jpg,full_room_scene,REDO,"Garbled 'Receptios' signage text, soft tilted CGI perspective",5,Lobby Area,flagship
+Reception Desk Collections,slot:full_room_scene,full_room_scene,MISSING,Only room scene present is defective with bad text,5,Lobby Area,flagship
+Reception Desk Collections,Curved Reception Desk.jpg,three_quarter_angle,KEEP,"Clean white hero, marble top + LED reveal + walnut clear",6,Lobby Area,flagship
+Reception Desk Collections,slot:side_profile,side_profile,MISSING,No straight profile showing depth and base reveal,7,Lobby Area,flagship
+Reception Desk Collections,slot:hardware_detail,hardware_detail,MISSING,No close-up of LED reveal/metal base/ADA ledge,8,Lobby Area,flagship
+Reception Desk Collections,L-Shaped Reception Desk.jpg,three_quarter_angle,KEEP,"Sharp white hero, L-config and transaction ledge readable",9,Lobby Area,flagship
+Reception Desk Collections,slot:footprint_plan,footprint_plan,MISSING,No top-down plan for lobby layout planning,10,Lobby Area,flagship
+Round Coffee Table,Round Coffee Table - Round Base.jpg,three_quarter_angle,KEEP,"Clean white hero, disc pedestal base and inlay top clear",1,Lobby Area,standard
+Round Coffee Table,Round Coffee Table one sylinder.jpg,three_quarter_angle,KEEP,"Crisp white hero, cylinder pedestal variant readable",1,Lobby Area,standard
+Round Coffee Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for diameter/height spec,2,Lobby Area,standard
+Round Coffee Table,slot:full_room_scene,full_room_scene,MISSING,No lobby seating-area scene showing table in context,3,Lobby Area,standard
+Round Coffee Table,Round Coffee Table Modern 1.jpg,three_quarter_angle,REDO,"Muddy gray studio gradient, soft not sharp operator realism",4,Lobby Area,standard
+Round Coffee Table,Round Coffee Table Modern 2.jpg,three_quarter_angle,KEEP,"Sharp white hero, slim metal X-base variant clearly shown",4,Lobby Area,standard
+Round Coffee Table,slot:texture_macro,texture_macro,MISSING,No top-surface wood/edge close-up for finish check,5,Lobby Area,standard
+Sectional Sofa,Sofa-3.png,white_seamless_hero,KEEP,"Clean navy curved sectional on white, photoreal hero.",1,Lobby Area,flagship
+Sectional Sofa,Sofa-5.png,white_seamless_hero,REDO,Visible watermark/logo text across the sofa center.,1,Lobby Area,flagship
+Sectional Sofa,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned line drawing for procurement sizing.,2,Lobby Area,flagship
+Sectional Sofa,slot:material_swatch_row,material_swatch_row,MISSING,No commercial-fabric/finish options row for buyers.,3,Lobby Area,flagship
+Sectional Sofa,slot:wide_establishing,wide_establishing,MISSING,No wide lobby establishing shot at scale.,4,Lobby Area,flagship
+Sectional Sofa,10.jpg,full_room_scene,REDO,"Two mismatched-color sofas; reads as two products, generic stock room.",5,Lobby Area,flagship
+Sectional Sofa,Sofa-1.png,three_quarter_angle,KEEP,"Green channel-tufted sectional, sharp three-quarter on white.",6,Lobby Area,flagship
+Sectional Sofa,Sofa-2.png,three_quarter_angle,REDO,"Terracotta sectional too small and soft, not spec-able.",6,Lobby Area,flagship
+Sectional Sofa,Sofa-4.png,side_profile,KEEP,"Green sectional, clean side-angle on white, photoreal.",7,Lobby Area,flagship
+Sectional Sofa,slot:hardware_detail,hardware_detail,MISSING,No leg/frame hardware close-up for durability proof.,8,Lobby Area,flagship
+Sectional Sofa,slot:functional_transformation,functional_transformation,MISSING,No modular reconfiguration shown for layout flexibility.,9,Lobby Area,flagship
+Sectional Sofa,slot:footprint_plan,footprint_plan,MISSING,No top-down footprint for floor planning.,10,Lobby Area,flagship
+Square Coffee Table,Square Coffee Table Cross Legs X style.jpg,white_seamless_hero,KEEP,"Dark walnut X-base, sharp three-quarter on white.",1,Lobby Area,standard
+Square Coffee Table,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for table sizing.,2,Lobby Area,standard
+Square Coffee Table,Square Coffee Table Cross Wood Legs.jpg,full_room_scene,REDO,"Muddy dark-paneled room, dramatic spotlight, weak context.",3,Lobby Area,standard
+Square Coffee Table,slot:full_room_scene,full_room_scene,MISSING,No clean hotel-lobby in-context scene.,3,Lobby Area,standard
+Square Coffee Table,Square Coffee Table Cross Wood Legs 2.jpg,three_quarter_angle,KEEP,"Light walnut X-base, sharp, shows finish option.",4,Lobby Area,standard
+Square Coffee Table,Square Coffee Table Plus Sign.jpg,three_quarter_angle,KEEP,"Walnut grid base, sharp three-quarter on white.",4,Lobby Area,standard
+Square Coffee Table,Square Coffee Table Waterfall Legs.jpg,three_quarter_angle,KEEP,"Dark waterfall-base table, clean photoreal on white.",4,Lobby Area,standard
+Square Coffee Table,slot:texture_macro,texture_macro,MISSING,No wood-grain macro for finish quality.,5,Lobby Area,standard
+Upholstered Accent Chair,Soft blush_peac Upholstered Accent Chair 360 return.jpg,white_seamless_hero,KEEP,"Blush chair multi-angle, photoreal, swivel base clear.",1,Lobby Area,considered
+Upholstered Accent Chair,Warm terracott Upholstered Accent Chair 360 return 1.jpg,dimension_diagram,REDO,Garbled gibberish dimension text overlaid on image.,2,Lobby Area,considered
+Upholstered Accent Chair,slot:dimension_diagram,dimension_diagram,MISSING,No clean dimensioned drawing for sizing.,2,Lobby Area,considered
+Upholstered Accent Chair,Warm Gray and taupes Upholstered Accent Chair 360 return 6.jpg,material_swatch_row,KEEP,"Taupe chair multi-view, clean, shows finish option.",3,Lobby Area,considered
+Upholstered Accent Chair,slot:full_room_scene,full_room_scene,MISSING,No hotel-lobby in-context lifestyle scene.,4,Lobby Area,considered
+Upholstered Accent Chair,Soft Yellow Upholstered Accent Chair 4.jpg,three_quarter_angle,KEEP,"Yellow chair four-view, sharp, shows tapered legs.",5,Lobby Area,considered
+Upholstered Accent Chair,slot:hardware_detail,hardware_detail,MISSING,No swivel-base/foot close-up for build quality.,6,Lobby Area,considered
+Upholstered Accent Chair,slot:functional_transformation,functional_transformation,MISSING,No swivel-action demonstration for the buyer.,7,Lobby Area,considered
+Wooden Accent Chair,DMD-DinningChair - DC-BL001.png,white_seamless_hero,REDO,"Blue chair too small, soft, CGI-looking, not spec-able.",1,Lobby Area,standard
+Wooden Accent Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No sharp single-chair hero on clean white.,1,Lobby Area,standard
+Wooden Accent Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for sizing.,2,Lobby Area,standard
+Wooden Accent Chair,slot:full_room_scene,full_room_scene,MISSING,No hotel in-context lifestyle scene.,3,Lobby Area,standard
+Wooden Accent Chair,DMD-DinningChair - DC-WOOD1.jpg,three_quarter_angle,KEEP,"Wood-frame chairs three-up, sharp, photoreal on beige.",4,Lobby Area,standard
+Wooden Accent Chair,slot:texture_macro,texture_macro,MISSING,No wood-joinery or fabric macro for quality.,5,Lobby Area,standard
+Adjustable Ergonomic Chair,adjustable ergonomic chair.png,white_seamless_hero,KEEP,"Black mesh task chair, sharp photoreal three-quarter on white.",1,Office,standard
+Adjustable Ergonomic Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing with adjustment ranges.,2,Office,standard
+Adjustable Ergonomic Chair,slot:full_room_scene,full_room_scene,MISSING,No hotel back-office in-context scene.,3,Office,standard
+Adjustable Ergonomic Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No second angle showing back/lumbar support.,4,Office,standard
+Adjustable Ergonomic Chair,slot:texture_macro,texture_macro,MISSING,No mesh/control-lever macro for durability proof.,5,Office,standard
+Conference Room Chairs,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean isolated white-background single-chair hero exists.,1,Office,considered
+Conference Room Chairs,slot:dimension_diagram,dimension_diagram,MISSING,No measured dimension diagram for procurement sizing.,2,Office,considered
+Conference Room Chairs,slot:material_swatch_row,material_swatch_row,MISSING,No fabric or mesh finish options row shown.,3,Office,considered
+Conference Room Chairs,DMD Axis Conference Chair.png,full_room_scene,REDO,"Two-panel composite, not a single spec-able hero shot.",4,Office,considered
+Conference Room Chairs,DMD CoreSync Meeting Chair.png,full_room_scene,REDO,"Small soft split image, low resolution, weak detail.",4,Office,considered
+Conference Room Chairs,DMD Elevate Executive Chair.png,full_room_scene,KEEP,"Photoreal boardroom scene, clean light, sells the chair.",4,Office,considered
+Conference Room Chairs,DMD Zenith Boardroom Chair.png,full_room_scene,KEEP,"Photoreal boardroom with clear hero chair, sells well.",4,Office,considered
+Conference Room Chairs,DMD AeroMesh Boardroom Chair.png,three_quarter_angle,REDO,"Tiny low-res multi-view montage, soft and unspecable.",5,Office,considered
+Conference Room Chairs,DMD FlowGrid Mesh Chair.png,three_quarter_angle,REDO,"Two-panel composite, not a clean isolated hero.",5,Office,considered
+Conference Room Chairs,DMD Modus High-Back Chair.png,three_quarter_angle,REDO,"Composite room-plus-hero panel, not single spec shot.",5,Office,considered
+Conference Room Chairs,DMD Skyline Director Chair.png,three_quarter_angle,REDO,"Two-panel composite layout, no clean standalone hero.",5,Office,considered
+Conference Room Chairs,DMD StratEdge Conference Chair.png,three_quarter_angle,REDO,"Composite split image, not a single clean hero.",5,Office,considered
+Conference Room Chairs,DMD UrbanForm Executive Chair.png,low_hero_angle,REDO,"Dreamy golden-flare bokeh, not sharp operator realism.",5,Office,considered
+Conference Room Chairs,DMD VibeMesh Conference Chair.png,three_quarter_angle,REDO,"Tiny multi-view montage, low-res, not spec-able.",5,Office,considered
+Conference Room Chairs,slot:hardware_detail,hardware_detail,MISSING,"No close-up of base, casters, or arm hardware.",6,Office,considered
+Conference Room Chairs,slot:functional_transformation,functional_transformation,MISSING,"No tilt, recline, or adjustment mechanism shown.",7,Office,considered
+DMD Bookshelf Collection,DMD narrow Natural Oak MDF.png,white_seamless_hero,KEEP,"Crisp front hero, lit shelves, natural oak shows true.",1,Office,standard
+DMD Bookshelf Collection,DMD ConceptStack Library Wall - Honey Ash MDF.png,white_seamless_hero,KEEP,"Sharp straight-on white-bg hero, finish and grid clear.",1,Office,standard
+DMD Bookshelf Collection,slot:dimension_diagram,dimension_diagram,MISSING,No measured dimension diagram for shelf sizing.,2,Office,standard
+DMD Bookshelf Collection,slot:full_room_scene,full_room_scene,MISSING,No styled office room scene showing shelf in context.,3,Office,standard
+DMD Bookshelf Collection,DMD Alto Cabinet Shelf - Espresso MDF.png,three_quarter_angle,KEEP,"Clean white-bg angled shelf, espresso finish reads sharp.",4,Office,standard
+DMD Bookshelf Collection,DMD Elemental Archive Shelf - Warm Oak MDF.png,three_quarter_angle,KEEP,"Clean angled white-bg shot, warm oak and joinery clear.",4,Office,standard
+DMD Bookshelf Collection,DMD GridForm Organizer - Natural Oak MDF.png,three_quarter_angle,KEEP,"Sharp angled cube grid on white, finish reads true.",4,Office,standard
+DMD Bookshelf Collection,DMD Indigo Vault Shelf - Matte Blue MDF.png,three_quarter_angle,KEEP,"Clean angled shot, matte blue finish on-brand and sharp.",4,Office,standard
+DMD Bookshelf Collection,DMD StudioCore Display Shelf - Deep Blue MDF.png,three_quarter_angle,KEEP,"Crisp angled white-bg, deep blue finish reads accurately.",4,Office,standard
+DMD Bookshelf Collection,DMD TerraGrid Storage Wall - Light Walnut MDF.png,three_quarter_angle,KEEP,"Sharp angled white-bg, light walnut grain shows clearly.",4,Office,standard
+DMD Bookshelf Collection,DMD TwinVault Display Cabinet - Golden Maple MDF.png,three_quarter_angle,KEEP,"Clean angled hero, golden maple finish and joinery clear.",4,Office,standard
+DMD Bookshelf Collection,slot:texture_macro,texture_macro,MISSING,No close-up of MDF grain or edge finish texture.,5,Office,standard
+DMD SoftClose Modular Cabinet,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean single-unit hero on seamless white.,1,Office,considered
+DMD SoftClose Modular Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need footprint specs.,2,Office,considered
+DMD SoftClose Modular Cabinet,slot:material_swatch_row,material_swatch_row,MISSING,No finish options row for procurement choice.,3,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 5.png,full_room_scene,REDO,Garbled book-spine text artifacts break realism.,4,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 7.png,full_room_scene,REDO,"Distorted book-spine text; CGI-ish, not spec-grade.",4,Office,considered
+DMD SoftClose Modular Cabinet,slot:full_room_scene,full_room_scene,MISSING,All room scenes ruined by text artifacts.,4,Office,considered
+DMD SoftClose Modular Cabinet,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean single-cabinet three-quarter studio shot.,5,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 2.png,hardware_detail,KEEP,"Sharp soft-close rail callout, photoreal, sells the mechanism.",6,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 4.png,hardware_detail,REDO,"Tiny, low-res, soft; unspec-able for a buyer.",6,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 3.png,functional_transformation,KEEP,"Dual soft-close detail in office, photoreal, feature clear.",7,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 6.png,functional_transformation,REDO,Warped drawer labels and gibberish text artifacts.,7,Office,considered
+DMD SoftClose Modular Cabinet,DMD SoftClose Modular Cabinet 8.png,functional_transformation,REDO,Gibberish folder labels and book text artifacts.,7,Office,considered
+Fabric Ergonomic Chair,Fabric Ergonomic Chair.png,white_seamless_hero,KEEP,"Photoreal three-quarter on white, no people, spec-clean.",1,Office,standard
+Fabric Ergonomic Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for desk-fit decisions.,2,Office,standard
+Fabric Ergonomic Chair,slot:full_room_scene,full_room_scene,MISSING,No in-context office scene for the chair.,3,Office,standard
+Fabric Ergonomic Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,Only one angle; need second studio angle.,4,Office,standard
+Fabric Ergonomic Chair,slot:texture_macro,texture_macro,MISSING,No close-up of fabric/mesh weave quality.,5,Office,standard
+High-Back Executive Chair,High-Back Executive Chair.png,white_seamless_hero,KEEP,"Clean three-quarter leather chair on white, photoreal.",1,Office,standard
+High-Back Executive Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for seat-height specs.,2,Office,standard
+High-Back Executive Chair,slot:full_room_scene,full_room_scene,MISSING,No executive-office context shot.,3,Office,standard
+High-Back Executive Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,Only one angle; need front or back too.,4,Office,standard
+High-Back Executive Chair,slot:texture_macro,texture_macro,MISSING,No leather grain close-up for quality proof.,5,Office,standard
+L-Shaped Executive Desk,L-Shaped Executive Desk with LED Lights 1.jpg,white_seamless_hero,KEEP,"Clean desk on white, three-quarter, photoreal, spec-able.",1,Office,considered
+L-Shaped Executive Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; L-desks need footprint specs.,2,Office,considered
+L-Shaped Executive Desk,slot:material_swatch_row,material_swatch_row,MISSING,No finish options for procurement selection.,3,Office,considered
+L-Shaped Executive Desk,L-Shaped Executive Desk with LED Lights.jpg,full_room_scene,KEEP,"Desk plus hutch styled, LED glow shown, photoreal.",4,Office,considered
+L-Shaped Executive Desk,slot:three_quarter_angle,three_quarter_angle,MISSING,No second clean studio angle of desk.,5,Office,considered
+L-Shaped Executive Desk,slot:hardware_detail,hardware_detail,MISSING,"No close-up of drawers, cable cutouts, LED.",6,Office,considered
+L-Shaped Executive Desk,slot:functional_transformation,functional_transformation,MISSING,No open-drawer or cable-routing feature shot.,7,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk 2.jpg,white_seamless_hero,KEEP,"Sharp walnut workstation on white, photoreal, spec-clean.",1,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk 2 - Top View.png,top_down,REDO,Tiny low-res thumbnail; no usable detail.,2,Office,considered
+L-Shaped Executive Desk 2,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; only low-res top thumbnail.,2,Office,considered
+L-Shaped Executive Desk 2,slot:material_swatch_row,material_swatch_row,MISSING,No finish options for procurement selection.,3,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk Dark Wood.jpg,full_room_scene,KEEP,"Styled desk with chair and props, photoreal, in-use.",4,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk 2 - Front View.png,three_quarter_angle,REDO,"Tiny thumbnail, soft and low-res, unusable.",5,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk 2 - Side View.png,side_profile,REDO,Tiny low-res thumbnail; no spec detail visible.,5,Office,considered
+L-Shaped Executive Desk 2,slot:three_quarter_angle,three_quarter_angle,MISSING,Only low-res angle thumbnails; need clean studio angle.,5,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk 2 - Cable Managment.png,hardware_detail,REDO,Low-res with in-image callout labels; not spec-grade.,6,Office,considered
+L-Shaped Executive Desk 2,slot:hardware_detail,hardware_detail,MISSING,Cable shot is low-res with labels; need clean macro.,6,Office,considered
+L-Shaped Executive Desk 2,L-Shaped Executive Desk 2 - Storage Details.png,functional_transformation,REDO,Tiny low-res; open drawer barely readable.,7,Office,considered
+L-Shaped Executive Desk 2,slot:functional_transformation,functional_transformation,MISSING,Storage shot too small; need clear open-drawer shot.,7,Office,considered
+Leather Executive Chair,leather executive chair.png,white_seamless_hero,KEEP,"Clean three-quarter on white, photoreal, no people.",1,Office,standard
+Leather Executive Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for seat dimensions.,2,Office,standard
+Leather Executive Chair,slot:full_room_scene,full_room_scene,MISSING,No executive-office context shot.,3,Office,standard
+Leather Executive Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,Only one angle; need front or side view.,4,Office,standard
+Leather Executive Chair,slot:texture_macro,texture_macro,MISSING,No leather grain and stitch close-up.,5,Office,standard
+Mesh Ergonomic Chair,mesh ergonomic chair.png,white_seamless_hero,KEEP,"Clean front view on white, photoreal, spec-clean.",1,Office,standard
+Mesh Ergonomic Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for adjustment ranges.,2,Office,standard
+Mesh Ergonomic Chair,slot:full_room_scene,full_room_scene,MISSING,No in-context workstation scene.,3,Office,standard
+Mesh Ergonomic Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,Only front view; need angled studio shot.,4,Office,standard
+Mesh Ergonomic Chair,slot:texture_macro,texture_macro,MISSING,No mesh-weave close-up for breathability proof.,5,Office,standard
+Mid-Back Executive Chair,Mid-Back Executive Chair.png,white_seamless_hero,KEEP,"Sharp photoreal black leather chair, clean white seamless, spec-able.",1,Office,standard
+Mid-Back Executive Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for procurement sizing.,2,Office,standard
+Mid-Back Executive Chair,slot:full_room_scene,full_room_scene,MISSING,No office context showing chair in use.,3,Office,standard
+Mid-Back Executive Chair,Mid-Back Executive Chair 2.jpg,three_quarter_angle,KEEP,"Crisp front and side fabric variant, shows back and arms.",4,Office,standard
+Mid-Back Executive Chair,slot:texture_macro,texture_macro,MISSING,No close-up of leather grain or stitching.,5,Office,standard
+Padded Visitor Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean white seamless hero of the chair.,1,Office,long-tail
+Padded Visitor Chair,padded visitor chair.png,three_quarter_angle,REDO,"Dreamy grey-on-grey vignette, muddy flat light, not crisp seamless.",2,Office,long-tail
+Padded Visitor Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for sizing.,3,Office,long-tail
+Plastic Visitor Chair,plastic visitor chair.png,white_seamless_hero,KEEP,"Sharp blue shell on chrome legs, clean white, spec-able.",1,Office,long-tail
+Plastic Visitor Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No secondary angle of the chair.,2,Office,long-tail
+Plastic Visitor Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for sizing.,3,Office,long-tail
+Stackable Visitor Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No single-chair clean white seamless hero.,1,Office,long-tail
+Stackable Visitor Chair,Stackable Visitor Chair.png,stacking_nesting,KEEP,"Shows 4-high stack, proves stacking claim for storage buyers.",2,Office,long-tail
+Stackable Visitor Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing or stack height spec.,3,Office,long-tail
+Straight Executive Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean neutral-finish hero on white.,1,Office,standard
+Straight Executive Desk,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for desk footprint.,2,Office,standard
+Straight Executive Desk,slot:full_room_scene,full_room_scene,MISSING,No realistic office room scene.,3,Office,standard
+Straight Executive Desk,Straight Executive Desk Tela 1.jpg,three_quarter_angle,REDO,"Off-brand teal finish, no hotel buyer wants this color.",4,Office,standard
+Straight Executive Desk,Straight Executive Desk Tela.jpg,three_quarter_angle,REDO,"Off-brand teal, floating detached drawer pedestals, warped geometry.",4,Office,standard
+Straight Executive Desk,slot:texture_macro,texture_macro,MISSING,No close-up of laminate grain or edge.,5,Office,standard
+U-Shaped Executive Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on clean hero on white.,1,Office,considered
+U-Shaped Executive Desk,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned U-footprint drawing for planning.,2,Office,considered
+U-Shaped Executive Desk,slot:material_swatch_row,material_swatch_row,MISSING,No finish or laminate swatch options shown.,3,Office,considered
+U-Shaped Executive Desk,U-Shaped Executive Desk.jpg,full_room_scene,REDO,"Off-brand teal finish, hotel buyer rejects this color palette.",4,Office,considered
+U-Shaped Executive Desk,slot:full_room_scene,full_room_scene,MISSING,No on-brand neutral room scene.,4,Office,considered
+U-Shaped Executive Desk,U-Shaped Desk.jpg,three_quarter_angle,KEEP,"Clean grey reception U-desk on white, sharp and spec-able.",5,Office,considered
+U-Shaped Executive Desk,U-Shaped Workstation.jpg,three_quarter_angle,REDO,"Floating detached pedestals, broken geometry undermines the desk.",5,Office,considered
+U-Shaped Executive Desk,slot:hardware_detail,hardware_detail,MISSING,No close-up of drawer pulls or locks.,6,Office,considered
+U-Shaped Executive Desk,slot:functional_transformation,functional_transformation,MISSING,No cable-management or storage feature shot.,7,Office,considered
+Writing Desk - MDF Leg,DMD Vault Writing Desk.jpg,color_finish_grid,KEEP,"Walnut finish variant, sharp; serves finish-range reference.",1,Office,standard
+Writing Desk - MDF Leg,DMD Core Writing Desk.jpg,white_seamless_hero,KEEP,"Clean light-grey finish, sharp 3/4 hero on white seamless.",1,Office,standard
+Writing Desk - MDF Leg,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for desk sizing.,2,Office,standard
+Writing Desk - MDF Leg,slot:full_room_scene,full_room_scene,MISSING,No office room context for the desk.,3,Office,standard
+Writing Desk - MDF Leg,DMD Grid Writing Desk.jpg,three_quarter_angle,KEEP,"Crisp grey panel-leg desk on white, shows charging and cable hook.",4,Office,standard
+Writing Desk - MDF Leg,DMD Axis Writing Desk.jpg,three_quarter_angle,KEEP,"Natural oak finish variant, photoreal and sharp.",4,Office,standard
+Writing Desk - MDF Leg,DMD Forma Writing Desk.jpg,three_quarter_angle,KEEP,"Pale oak variant with deskpad, sharp finish-range option.",4,Office,standard
+Writing Desk - MDF Leg,slot:texture_macro,texture_macro,MISSING,No close-up of laminate grain or edge band.,5,Office,standard
+Writing Desk - Metal Leg,DMD Luma Writing Desk.jpg,white_seamless_hero,KEEP,"Clean oak top, black O-frame, sharp hero on white seamless.",1,Office,standard
+Writing Desk - Metal Leg,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for desk sizing.,2,Office,standard
+Writing Desk - Metal Leg,slot:full_room_scene,full_room_scene,MISSING,No office room scene for the desk.,3,Office,standard
+Writing Desk - Metal Leg,Writing Desk Cross Leg One side.jpg,three_quarter_angle,KEEP,"Sharp oak top with black X-leg, clean light-grey ground.",4,Office,standard
+Writing Desk - Metal Leg,Writing Desk Cross Leg One side.jpg,three_quarter_angle,REDO,"Exact duplicate of the X-leg shot, redundant in set.",4,Office,standard
+Writing Desk - Metal Leg,DMD Strata Writing Desk.jpg,three_quarter_angle,KEEP,"Square-leg desk with charging, plant, headphones; styled context.",4,Office,standard
+Writing Desk - Metal Leg,slot:texture_macro,texture_macro,MISSING,No close-up of metal frame joint or top edge.,5,Office,standard
+Buffet Cabinet,buffet cabinet 2.png,white_seamless_hero,KEEP,"Clean front hero, oak finish, sharp, sells spec to buyer",1,Residential,considered
+Buffet Cabinet,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need width/depth/height to spec,2,Residential,considered
+Buffet Cabinet,buffet cabinet 4.png,color_finish_grid,KEEP,"Teal-grey finish variant, sharp, shows color option for spec",3,Residential,considered
+Buffet Cabinet,slot:full_room_scene,full_room_scene,MISSING,No styled dining-room context to show scale and use,4,Residential,considered
+Buffet Cabinet,buffet cabinet 5.png,three_quarter_angle,REDO,"Flat front, near-duplicate; not a true three-quarter angle view",5,Residential,considered
+Buffet Cabinet,slot:hardware_detail,hardware_detail,MISSING,"No close-up of pull, hinge, or shelf adjuster",6,Residential,considered
+Buffet Cabinet,buffet cabinet 3.png,functional_transformation,KEEP,"Doors open showing lit interior shelves, demonstrates storage capacity",7,Residential,considered
+Buffet Cabinet,buffet cabinet 6.png,functional_transformation,REDO,AI sparkle watermark top-right; near-duplicate open-door shot,7,Residential,considered
+Classic Sofa,classic sofa 2.png,white_seamless_hero,KEEP,"Sharp front hero, navy, even lighting, true spec view",1,Residential,considered
+Classic Sofa,classic sofa 4.png,white_seamless_hero,KEEP,"Sage front view, photoreal, alternate color, sells finish",1,Residential,considered
+Classic Sofa,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need seat depth and overall size,2,Residential,considered
+Classic Sofa,classic sofa 3.png,color_finish_grid,KEEP,"Yellow variant, sharp angle, shows loose-cushion option",3,Residential,considered
+Classic Sofa,slot:material_swatch_row,material_swatch_row,MISSING,Color variants exist but no true upholstery swatch row,3,Residential,considered
+Classic Sofa,slot:full_room_scene,full_room_scene,MISSING,No styled lounge context to show scale and pairing,4,Residential,considered
+Classic Sofa,classic sofa 1.png,three_quarter_angle,KEEP,"Clean green three-quarter, shows depth, arm and leg",5,Residential,considered
+Classic Sofa,classic sofa 5.png,three_quarter_angle,KEEP,"Brown variant, sled-base detail visible, sharp realism",5,Residential,considered
+Classic Sofa,classic sofa 6.png,three_quarter_angle,REDO,"Wrong product: curved tub sofa, off-model, breaks set consistency",5,Residential,considered
+Classic Sofa,slot:hardware_detail,hardware_detail,MISSING,"No close-up of leg, seam, or frame join for durability",6,Residential,considered
+Classic Sofa,slot:functional_transformation,functional_transformation,MISSING,No cushion-removal or reversibility shot for maintenance,7,Residential,considered
+Counter Height Stool,counter height stool 2.png,white_seamless_hero,REDO,"Low-res, soft, undersized; not a sharp spec-able hero",1,Residential,standard
+Counter Height Stool,counter height stool 3.png,white_seamless_hero,REDO,AI sparkle watermark bottom-right; otherwise sharp front view,1,Residential,standard
+Counter Height Stool,counter height stool 4.png,white_seamless_hero,REDO,"AI sparkle watermark bottom-right; small, soft resolution",1,Residential,standard
+Counter Height Stool,counter height stool 5.png,white_seamless_hero,REDO,Low-res soft thumbnail; not sharp enough to spec finish,1,Residential,standard
+Counter Height Stool,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need seat height to match counter,2,Residential,standard
+Counter Height Stool,slot:full_room_scene,full_room_scene,MISSING,No counter/bar context to confirm height and fit,3,Residential,standard
+Counter Height Stool,counter height stool 1.png,three_quarter_angle,REDO,AI sparkle watermark bottom-right; low-res soft thumbnail,4,Residential,standard
+Counter Height Stool,slot:texture_macro,texture_macro,MISSING,No upholstery close-up to show weave and durability,5,Residential,standard
+Cubbies Storage,cubbies storage.png,white_seamless_hero,KEEP,"Clean white hero, photoreal modular cubby unit, shows finishes",1,Residential,considered
+Cubbies Storage,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; buyers need module sizing to plan space,2,Residential,considered
+Cubbies Storage,slot:material_swatch_row,material_swatch_row,MISSING,No finish options shown; white/oak/sage colors unconfirmed,3,Residential,considered
+Cubbies Storage,cubbies storage 1.png,full_room_scene,KEEP,"Photoreal nursery scene, shows scale and styling in context",4,Residential,considered
+Cubbies Storage,cubbies storage 3.png,full_room_scene,REDO,"Redundant room scene, softer than image 1, slot duplicate",4,Residential,considered
+Cubbies Storage,cubbies storage 2.png,three_quarter_angle,REDO,"Soft low-res front view, muddy detail, not spec-sharp",5,Residential,considered
+Cubbies Storage,cubbies storage 4.png,three_quarter_angle,REDO,"Low-res soft vignette, muddy, geometry indistinct",5,Residential,considered
+Cubbies Storage,slot:hardware_detail,hardware_detail,MISSING,No joinery/edge detail to judge build quality,6,Residential,considered
+Cubbies Storage,slot:functional_transformation,functional_transformation,MISSING,No modular reconfiguration shown despite stackable design,7,Residential,considered
+Dining Table,extendable dining table.png,white_seamless_hero,REDO,"Flat cartoon placeholder icon with in-image text, not real",1,Residential,standard
+Dining Table,2-Seater Table SS1.jpg,white_seamless_hero,KEEP,"Photoreal walnut top on chrome legs, clean bright hero",1,Residential,standard
+Dining Table,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; buyers need length/width for cover counts,2,Residential,standard
+Dining Table,2-Seater Table Tapper Center.jpg,full_room_scene,KEEP,"Photoreal styled dining scene, shows scale and pedestal base",3,Residential,standard
+Dining Table,6-Seater Table SS1.jpg,full_room_scene,REDO,"Dreamy golden-hour ad look, not sharp operator realism",3,Residential,standard
+Dining Table,6-Seater Table Wood.jpg,full_room_scene,REDO,"Luxury dreamy suite styling, different trestle base, off-spec",3,Residential,standard
+Dining Table,4-Seater Table SS1.jpg,three_quarter_angle,KEEP,"Sharp photoreal room set, shows seating capacity clearly",4,Residential,standard
+Dining Table,slot:texture_macro,texture_macro,MISSING,No close-up of wood grain or edge for durability check,5,Residential,standard
+Ergonomic Office Chair,ergonomic office chair.png,white_seamless_hero,KEEP,"Photoreal grey mesh chair, clean hero, shows lumbar and arms",1,Residential,standard
+Ergonomic Office Chair,Fabric Ergonomic Chair.png,white_seamless_hero,REDO,"Duplicate of grey hero, no fabric distinction, redundant",1,Residential,standard
+Ergonomic Office Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; buyers need seat height and footprint specs,2,Residential,standard
+Ergonomic Office Chair,slot:full_room_scene,full_room_scene,MISSING,No office context; can't judge fit at a workstation,3,Residential,standard
+Ergonomic Office Chair,adjustable ergonomic chair.png,three_quarter_angle,KEEP,"Sharp black mesh chair three-quarter, headrest and base clear",4,Residential,standard
+Ergonomic Office Chair,mesh ergonomic chair.png,front_view,KEEP,"Photoreal front view black mesh, shows symmetry and casters",4,Residential,standard
+Ergonomic Office Chair,slot:texture_macro,texture_macro,MISSING,No mesh/upholstery close-up to assess weave and wear,5,Residential,standard
+Glass Coffee Table,glass coffee table.png,white_seamless_hero,REDO,"Flat cartoon placeholder icon with in-image text, not real",1,Residential,long-tail
+Glass Coffee Table,slot:three_quarter_angle,three_quarter_angle,MISSING,No real angled shot showing glass top and wood base,2,Residential,long-tail
+Glass Coffee Table,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; buyers need footprint for lounge layout,3,Residential,long-tail
+Headboard,king headboard 1.png,white_seamless_hero,KEEP,"Clean front hero, sharp grid-tufting, sells upholstery quality",1,Residential,considered
+Headboard,king headboard 3.png,dimension_diagram,REDO,"Crude floating '76-78' text, not a real spec diagram",2,Residential,considered
+Headboard,slot:dimension_diagram,dimension_diagram,MISSING,No clean width/height/depth diagram for procurement specs,2,Residential,considered
+Headboard,king headboard 9.png,material_swatch_row,REDO,"Single greige variant, not an actual finish swatch row",3,Residential,considered
+Headboard,slot:material_swatch_row,material_swatch_row,MISSING,No fabric/finish swatch row showing upholstery options,3,Residential,considered
+Headboard,king headboard 5.png,full_room_scene,REDO,"Flat dreamy window light, soft, no real bed context",4,Residential,considered
+Headboard,slot:full_room_scene,full_room_scene,MISSING,No sharp realistic guestroom scene above a real bed,4,Residential,considered
+Headboard,king headboard 4.png,three_quarter_angle,KEEP,"Sharp angled studio, shows panel depth and frame",5,Residential,considered
+Headboard,king headboard 2.png,three_quarter_angle,REDO,"Front bolster variant, redundant angle, no spec value",5,Residential,considered
+Headboard,king headboard 6.png,three_quarter_angle,KEEP,"Clean grey grid-tuft angle, shows winged side panels",5,Residential,considered
+Headboard,king headboard 7.png,three_quarter_angle,REDO,"Redundant grey fluted angle, duplicates other keeps",5,Residential,considered
+Headboard,king headboard 8.png,three_quarter_angle,KEEP,"Sharp angle, block-panel variant, shows stitching crisply",5,Residential,considered
+Headboard,slot:hardware_detail,hardware_detail,MISSING,No close-up of seam stitching or wall-mount hardware,6,Residential,considered
+Headboard,slot:functional_transformation,functional_transformation,MISSING,No mounting/strut detail showing install for FF&E teams,7,Residential,considered
+Kids Study Desk,kids study desk 5.png,white_seamless_hero,KEEP,"Sharp clean white studio, shows hutch, drawers, keyboard tray",1,Residential,standard
+Kids Study Desk,kids study desk 1.png,white_seamless_hero,REDO,"Tiny, low-res, soft; unspecable thumbnail quality",1,Residential,standard
+Kids Study Desk,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing for kids-room procurement sizing,2,Residential,standard
+Kids Study Desk,kids study desk 2.png,full_room_scene,REDO,"Soft low-detail room, desk too small to spec",3,Residential,standard
+Kids Study Desk,slot:full_room_scene,full_room_scene,MISSING,No sharp realistic kids-room scene showing scale in use,3,Residential,standard
+Kids Study Desk,kids study desk 4.png,three_quarter_angle,KEEP,"Sharp angled studio, full storage and shelving visible",4,Residential,standard
+Kids Study Desk,kids study desk 6.png,three_quarter_angle,KEEP,"Clean angle, shows cubby and drawer config clearly",4,Residential,standard
+Kids Study Desk,kids study desk.png,three_quarter_angle,REDO,"Over-propped clutter hides desk spec, lifestyle not product",4,Residential,standard
+Kids Study Desk,kids study desk 7.png,three_quarter_angle,REDO,"Over-styled with backpack and books, buries the product",4,Residential,standard
+Kids Study Desk,kids study desk 3.png,three_quarter_angle,REDO,"Low-res, soft, toy-like; no procurement detail",4,Residential,standard
+Kids Study Desk,slot:texture_macro,texture_macro,MISSING,No close-up of laminate finish or edge banding durability,5,Residential,standard
+Kids Twin Bunk Bed,/Images/Residential/Kids Room/Bunk Bed/Twin Bunk Bed/twin bunk bed.png,three_quarter_angle,KEEP,"Sharp photoreal black steel bunk, clean white seamless, no people.",1,Residential,considered
+Kids Twin Bunk Bed,/Images/University/Dormitory/Bunk Beds/Twin XL Bunk Bed/Twin XL Bunk Bed.png,three_quarter_angle,REDO,"Duplicate of residential metal hero; redundant, no new spec value.",1,Residential,considered
+Kids Twin Bunk Bed,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on seamless hero for spec sheet.,1,Residential,considered
+Kids Twin Bunk Bed,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need bunk height and footprint dimensions.,2,Residential,considered
+Kids Twin Bunk Bed,/Images/University/Dormitory/Bunk Beds/Twin Bunk Bed/twin bunk bed.png,three_quarter_angle,KEEP,"Light pine finish alt angle, photoreal, shows frame construction.",3,Residential,considered
+Kids Twin Bunk Bed,/Images/University/Dormitory/Bunk Beds/Full Bunk Bed/full bunk bed.png,side_profile,KEEP,"Clean wood finish variant, photoreal, good front profile.",5,Residential,considered
+Kids Twin Bunk Bed,slot:hardware_detail,hardware_detail,MISSING,No ladder/guardrail bracket close-up for durability check.,6,Residential,considered
+Kids Twin Bunk Bed,slot:functional_transformation,functional_transformation,MISSING,No detachable/separable-beds shot to show flexibility.,7,Residential,considered
+King Bed Frame,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean seamless hero; all are room scenes.,1,Residential,considered
+King Bed Frame,slot:dimension_diagram,dimension_diagram,MISSING,King footprint and height dimensions missing for buyers.,2,Residential,considered
+King Bed Frame,slot:material_swatch_row,material_swatch_row,MISSING,No wood finish options row for spec selection.,3,Residential,considered
+King Bed Frame,/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 2.png,full_room_scene,REDO,"Low-res blurry thumbnail; soft and unsharp, not spec-able.",4,Residential,considered
+King Bed Frame,/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 1.png,full_room_scene,KEEP,"Sharp photoreal walnut frame in styled room, no people.",4,Residential,considered
+King Bed Frame,/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 5.png,full_room_scene,KEEP,"Sharp symmetric room scene, dark walnut, LED base feature visible.",4,Residential,considered
+King Bed Frame,/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 6.png,second_environment,REDO,Upholstered headboard differs from wood hero; off-brand inconsistent product.,4,Residential,considered
+King Bed Frame,/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 3.png,full_room_scene,REDO,"Low-res blurry thumbnail, gray finish, soft and unsharp.",5,Residential,considered
+King Bed Frame,/Images/Residential/Bedroom/Bed Frame/King Bed Frame/king bed frame 4.png,three_quarter_angle,KEEP,"Sharp walnut frame three-quarter angle, shows joinery and base.",5,Residential,considered
+King Bed Frame,slot:hardware_detail,hardware_detail,MISSING,No slat/leg/joint close-up to prove build quality.,6,Residential,considered
+King Bed Frame,slot:functional_transformation,functional_transformation,MISSING,Storage option mentioned but no drawer/under-bed shot.,7,Residential,considered
+Media Console,/Images/Residential/Living Room/TV Unit/Media Console/media console 1.png,white_seamless_hero,REDO,Visible VOIDWORK.CO watermark bottom-right; in-image text disqualifies.,1,Residential,standard
+Media Console,/Images/Residential/Living Room/TV Unit/Media Console/media console 2.png,white_seamless_hero,KEEP,"Clean black-ash console front-on, sharp grain, sells finish option.",1,Residential,standard
+Media Console,/Images/Residential/Living Room/TV Unit/Media Console/media console 3.png,color_finish_grid,KEEP,"Navy finish variant, clean seamless, shows color-finish range.",1,Residential,standard
+Media Console,slot:dimension_diagram,dimension_diagram,MISSING,Console length and cable-port dims missing for AV fit.,2,Residential,standard
+Media Console,slot:full_room_scene,full_room_scene,MISSING,No in-room context showing scale under a TV.,3,Residential,standard
+Media Console,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and door reveal.,4,Residential,standard
+Media Console,slot:texture_macro,texture_macro,MISSING,No grain/cable-management close-up for finish detail.,5,Residential,standard
+Outdoor Dining Set,/Images/Residential/Outdoor/Dining Set/Outdoor Dining Set/outdoor dining set.png,white_seamless_hero,REDO,Flat gray placeholder vector with in-image text; not a real product.,1,Residential,standard
+Outdoor Dining Set,slot:white_seamless_hero,white_seamless_hero,MISSING,No real seamless hero; only a placeholder icon exists.,1,Residential,standard
+Outdoor Dining Set,slot:dimension_diagram,dimension_diagram,MISSING,Table and seat dimensions absent for procurement.,2,Residential,standard
+Outdoor Dining Set,slot:full_room_scene,full_room_scene,MISSING,No patio/terrace context to sell hotel outdoor use.,3,Residential,standard
+Outdoor Dining Set,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled set view showing table-plus-chairs arrangement.,4,Residential,standard
+Outdoor Dining Set,slot:texture_macro,texture_macro,MISSING,No weather-resistant material close-up for spec proof.,5,Residential,standard
+Outdoor Lounge Chair,/Images/Residential/Outdoor/Outdoor Lounge Chair/Outdoor Lounge Chair/outdoor lounge chair.png,white_seamless_hero,REDO,Flat gray placeholder vector with in-image text; not a real product.,1,Residential,standard
+Outdoor Lounge Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No real seamless hero; only a placeholder icon exists.,1,Residential,standard
+Outdoor Lounge Chair,slot:dimension_diagram,dimension_diagram,MISSING,Seat height and width dimensions missing for buyers.,2,Residential,standard
+Outdoor Lounge Chair,slot:full_room_scene,full_room_scene,MISSING,No poolside/terrace context to sell hotel setting.,3,Residential,standard
+Outdoor Lounge Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing recline profile and frame.,4,Residential,standard
+Outdoor Lounge Chair,slot:texture_macro,texture_macro,MISSING,No quick-dry foam/fabric close-up for durability proof.,5,Residential,standard
+Outdoor Side Table,/Images/Residential/Outdoor/Side Table/Outdoor Side Table/outdoor side table.png,white_seamless_hero,REDO,Flat gray placeholder vector with in-image text; not a real product.,1,Residential,long-tail
+Outdoor Side Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No real seamless hero; only a placeholder icon exists.,1,Residential,long-tail
+Outdoor Side Table,slot:three_quarter_angle,three_quarter_angle,MISSING,"No angled view showing top, legs, and material.",2,Residential,long-tail
+Outdoor Side Table,slot:dimension_diagram,dimension_diagram,MISSING,Height and top diameter dimensions missing for buyers.,3,Residential,long-tail
+Patio Sofa,/Images/Residential/Outdoor/Outdoor Sofa/Patio Sofa/patio sofa.png,white_seamless_hero,REDO,Flat gray placeholder vector with in-image text; not a real product.,1,Residential,considered
+Patio Sofa,slot:white_seamless_hero,white_seamless_hero,MISSING,No real seamless hero; only a placeholder icon exists.,1,Residential,considered
+Patio Sofa,slot:dimension_diagram,dimension_diagram,MISSING,"Sofa width, depth, seat height missing for procurement.",2,Residential,considered
+Patio Sofa,slot:material_swatch_row,material_swatch_row,MISSING,No outdoor fabric color options for spec selection.,3,Residential,considered
+Patio Sofa,slot:full_room_scene,full_room_scene,MISSING,No terrace/lounge context to sell hotel outdoor use.,4,Residential,considered
+Patio Sofa,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and cushion profile.,5,Residential,considered
+Patio Sofa,slot:hardware_detail,hardware_detail,MISSING,No frame/leg/weld close-up to prove weather durability.,6,Residential,considered
+Patio Sofa,slot:functional_transformation,functional_transformation,MISSING,No modular/cushion-removal shot for maintenance flexibility.,7,Residential,considered
+Queen Bed Frame,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean seamless hero; only a room scene.,1,Residential,considered
+Queen Bed Frame,slot:dimension_diagram,dimension_diagram,MISSING,Queen footprint and height dimensions missing for buyers.,2,Residential,considered
+Queen Bed Frame,slot:material_swatch_row,material_swatch_row,MISSING,No wood finish options row for spec selection.,3,Residential,considered
+Queen Bed Frame,/Images/Residential/Bedroom/Bed Frame/Queen Bed Frame/queen bed frame.png,full_room_scene,KEEP,"Sharp photoreal walnut frame, symmetric room, LED base, no people.",4,Residential,considered
+Queen Bed Frame,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing frame depth and base.,5,Residential,considered
+Queen Bed Frame,slot:hardware_detail,hardware_detail,MISSING,No slat/leg/headboard joint close-up for build quality.,6,Residential,considered
+Queen Bed Frame,slot:functional_transformation,functional_transformation,MISSING,Headboard option mentioned but no detachable/storage shot.,7,Residential,considered
+Recliner,recliner.png,white_seamless_hero,REDO,"Flat CSS placeholder shapes with text label, not a real product.",1,Residential,flagship
+Recliner,slot:white_seamless_hero,white_seamless_hero,MISSING,No photoreal hero; only a placeholder graphic exists.,1,Residential,flagship
+Recliner,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need seat depth and reclined footprint to spec.,2,Residential,flagship
+Recliner,slot:material_swatch_row,material_swatch_row,MISSING,Wipe-clean upholstery options must be shown for procurement.,3,Residential,flagship
+Recliner,slot:wide_establishing,wide_establishing,MISSING,No lounge context establishing the recliner in use.,4,Residential,flagship
+Recliner,slot:full_room_scene,full_room_scene,MISSING,No in-room scene to show scale and fit.,5,Residential,flagship
+Recliner,slot:three_quarter_angle,three_quarter_angle,MISSING,No real three-quarter beauty angle of the chair.,6,Residential,flagship
+Recliner,slot:side_profile,side_profile,MISSING,Recline angle and arm shape need a side profile.,7,Residential,flagship
+Recliner,slot:hardware_detail,hardware_detail,MISSING,Recline lever and frame joints not shown to buyers.,8,Residential,flagship
+Recliner,slot:functional_transformation,functional_transformation,MISSING,Upright-to-reclined transformation is the key selling mechanism.,9,Residential,flagship
+Recliner,slot:footprint_plan,footprint_plan,MISSING,Reclined clearance footprint needed for room planning.,10,Residential,flagship
+Residential Armchair,armchair.png,white_seamless_hero,REDO,"Flat CSS placeholder shapes with text label, not a real product.",1,Residential,considered
+Residential Armchair,armchair 1.png,three_quarter_angle,KEEP,"Photoreal taupe armchair, sharp, clean white seamless, sells well.",1,Residential,considered
+Residential Armchair,armchair.jpg,white_seamless_hero,REDO,"Flat CSS placeholder shapes with text label, not a real product.",1,Residential,considered
+Residential Armchair,slot:dimension_diagram,dimension_diagram,MISSING,"No spec diagram with seat height, width, depth for buyers.",2,Residential,considered
+Residential Armchair,slot:material_swatch_row,material_swatch_row,MISSING,Upholstery and wood-base finish options not shown.,3,Residential,considered
+Residential Armchair,slot:full_room_scene,full_room_scene,MISSING,No amenity-room context showing scale and fit.,4,Residential,considered
+Residential Armchair,armchair 2.png,three_quarter_angle,KEEP,"Photoreal navy armchair, sharp three-quarter, shows wood base.",5,Residential,considered
+Residential Armchair,slot:hardware_detail,hardware_detail,MISSING,Hardwood frame and leg joinery not shown close up.,6,Residential,considered
+Residential Armchair,slot:functional_transformation,functional_transformation,MISSING,No detail proving cushion or frame durability claims.,7,Residential,considered
+Residential Executive Desk,executive desk.jpg,three_quarter_angle,KEEP,"Photoreal light-oak hero, LED hutch and power visible, sharp.",1,Residential,considered
+Residential Executive Desk,slot:dimension_diagram,dimension_diagram,MISSING,"No spec diagram with width, depth, height and clearance.",2,Residential,considered
+Residential Executive Desk,slot:material_swatch_row,material_swatch_row,MISSING,Many wood finishes exist but no swatch row to compare.,3,Residential,considered
+Residential Executive Desk,slot:full_room_scene,full_room_scene,MISSING,No home-office room context showing scale in place.,4,Residential,considered
+Residential Executive Desk,DMD Luma Executive Desk.jpg,front_view,KEEP,"Clean front view, dual-pedestal storage and power clearly readable.",5,Residential,considered
+Residential Executive Desk,DMD Grid Executive Desk.jpg,three_quarter_angle,KEEP,"Clean three-quarter, keyboard tray, USB power and cable grommet.",5,Residential,considered
+Residential Executive Desk,DMD Modulo Executive Desk.jpg,three_quarter_angle,KEEP,"Photoreal hero-quality angle, LED hutch and lockable pedestal.",5,Residential,considered
+Residential Executive Desk,DMD Nexus Executive Desk.jpg,three_quarter_angle,KEEP,"Double-pedestal config, task lamp and power, clean and sharp.",5,Residential,considered
+Residential Executive Desk,DMD Strata Executive Desk.jpg,three_quarter_angle,KEEP,"Clean angle showing cable grommets, power and pedestal storage.",5,Residential,considered
+Residential Executive Desk,DMD Terra Executive Desk.jpg,front_view,KEEP,"Front view, dual pedestals and back-panel power clearly visible.",5,Residential,considered
+Residential Executive Desk,DMD Axis Executive Desk.jpg,three_quarter_angle,KEEP,"Sharp three-quarter, locking pedestal and power module visible.",6,Residential,considered
+Residential Executive Desk,DMD Core Executive Desk.jpg,hardware_detail,KEEP,"Sharp angle exposing cable ports and integrated power, spec-able.",6,Residential,considered
+Residential Executive Desk,DMD Vault Executive Desk.jpg,three_quarter_angle,KEEP,"Clean angle, LED hutch, power module and cable ring, sharp.",6,Residential,considered
+Residential Executive Desk,DMD Bracket Executive Desk.jpg,single_prop_styling,KEEP,"Photoreal styled with tech, shows wireless charge and headphone hook.",7,Residential,considered
+Residential Executive Desk,DMD Echo Executive Desk.jpg,single_prop_styling,KEEP,"Photoreal styled scene, shows charging dock and cable management.",7,Residential,considered
+Residential Executive Desk,DMD Forma Executive Desk.jpg,single_prop_styling,KEEP,"Photoreal styled, shows hutch storage, power and headphone hook.",7,Residential,considered
+Residential Executive Desk,slot:functional_transformation,functional_transformation,MISSING,Return or hutch configuration options not shown swapping.,7,Residential,considered
+Residential Sectional Sofa,sectional sofa.png,white_seamless_hero,REDO,Visible watermark/text artifact across center of sofa.,1,Residential,considered
+Residential Sectional Sofa,sectional sofa 2.png,white_seamless_hero,REDO,"Sparkle artifact bottom-right, soft CGI look, not crisp.",1,Residential,considered
+Residential Sectional Sofa,sectional sofa 3.png,white_seamless_hero,KEEP,"Clean photoreal hero, sharp, true chaise config readable.",1,Residential,considered
+Residential Sectional Sofa,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need fit and footprint.,2,Residential,considered
+Residential Sectional Sofa,sectional sofa 5.png,three_quarter_angle,KEEP,"Photoreal terracotta variant, clean angle, supports color story.",3,Residential,considered
+Residential Sectional Sofa,sectional sofa 6.png,three_quarter_angle,KEEP,"Sharp velvet variant, clean seamless, adds finish option.",3,Residential,considered
+Residential Sectional Sofa,slot:material_swatch_row,material_swatch_row,MISSING,No performance-fabric swatch row for spec selection.,3,Residential,considered
+Residential Sectional Sofa,slot:full_room_scene,full_room_scene,MISSING,No lounge/clubhouse context to show scale and use.,4,Residential,considered
+Residential Sectional Sofa,sectional sofa 1.png,three_quarter_angle,KEEP,"Sharp photoreal three-quarter, clean seamless, spec-able chaise.",5,Residential,considered
+Residential Sectional Sofa,sectional sofa 4.png,three_quarter_angle,REDO,"U-shape config mismatches chaise spec, flat frontal lighting.",5,Residential,considered
+Residential Sectional Sofa,sectional sofa 7.png,three_quarter_angle,REDO,Adjustable-headrest model differs from spec; confuses buyer.,5,Residential,considered
+Residential Sectional Sofa,sectional sofa 8.png,side_profile,KEEP,"Clean side profile shows chaise depth, photoreal velvet.",5,Residential,considered
+Residential Sectional Sofa,slot:hardware_detail,hardware_detail,MISSING,No leg/seam/connector detail for durability assessment.,6,Residential,considered
+Residential Sectional Sofa,slot:functional_transformation,functional_transformation,MISSING,No modular reconfiguration shown; key sectional selling point.,7,Residential,considered
+Residential Sliding Door Wardrobe,sliding door wardrobe 1.png,white_seamless_hero,REDO,Yellow smudge on door plus faint logo corner artifact.,1,Residential,considered
+Residential Sliding Door Wardrobe,sliding door wardrobe 3.png,white_seamless_hero,REDO,"Low-resolution, soft and tiny; not spec-able.",1,Residential,considered
+Residential Sliding Door Wardrobe,sliding door wardrobe 4.png,white_seamless_hero,KEEP,"Sharp photoreal hero, clean seamless, interior clearly readable.",1,Residential,considered
+Residential Sliding Door Wardrobe,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need width/height/depth.,2,Residential,considered
+Residential Sliding Door Wardrobe,slot:material_swatch_row,material_swatch_row,MISSING,No finish swatch row for grey/white/oak selection.,3,Residential,considered
+Residential Sliding Door Wardrobe,slot:full_room_scene,full_room_scene,MISSING,No bedroom context to show scale and placement.,4,Residential,considered
+Residential Sliding Door Wardrobe,slot:three_quarter_angle,three_quarter_angle,MISSING,All shots frontal; no angle showing depth and edges.,5,Residential,considered
+Residential Sliding Door Wardrobe,slot:hardware_detail,hardware_detail,MISSING,No close-up of top-track glide system or handle.,6,Residential,considered
+Residential Sliding Door Wardrobe,sliding door wardrobe 2.png,functional_transformation,KEEP,Clean photoreal open-door reveal of rail and shelving.,7,Residential,considered
+Residential Upholstered Dining Chair,upholstered dining chair 2.png,white_seamless_hero,REDO,"Different tub-chair design, soft low-res, off-brand inconsistent silhouette",1,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 3.png,white_seamless_hero,REDO,"Yet another armchair model, low-res soft, breaks product consistency",1,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 4.png,white_seamless_hero,REDO,"Olive tub chair, low-res soft, inconsistent with other shots",1,Residential,standard
+Residential Upholstered Dining Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No crisp clean-white hero of one consistent chair model,1,Residential,standard
+Residential Upholstered Dining Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned spec drawing for procurement sizing,2,Residential,standard
+Residential Upholstered Dining Chair,slot:full_room_scene,full_room_scene,MISSING,No in-context dining or clubhouse room scene,3,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 1.png,three_quarter_angle,REDO,"Muddy grey background, soft low-res render, not clean spec hero",4,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 5.png,side_profile,KEEP,"Sharp photoreal slipper chair, clean white, crisp fabric texture",4,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 6.png,three_quarter_angle,KEEP,"Sharp photoreal three-quarter, clean white, spec-able wood legs",4,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 7.png,three_quarter_angle,KEEP,"Crisp photoreal angle, clean white, clear frame and fabric",4,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 8.png,side_profile,REDO,"Dreamy grey backdrop, soft shadow, not crisp operator realism",4,Residential,standard
+Residential Upholstered Dining Chair,upholstered dining chair 9.png,three_quarter_angle,REDO,"Soft grey backdrop, dreamy lighting, off-brand metal-leg model",4,Residential,standard
+Residential Upholstered Dining Chair,slot:texture_macro,texture_macro,MISSING,No close-up of seat fabric weave for spec,5,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 1.png,white_seamless_hero,KEEP,"Sharp photoreal front hero, clean white, clear metal-leg wood chair",1,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 5.png,white_seamless_hero,KEEP,"Crisp photoreal front, clean white, contoured-seat solid-wood spec",1,Residential,standard
+Residential Wooden Dining Chair,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned spec drawing for procurement sizing,2,Residential,standard
+Residential Wooden Dining Chair,slot:full_room_scene,full_room_scene,MISSING,No in-context dining or clubhouse room scene,3,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 2.png,three_quarter_angle,REDO,"Low-res soft, chunky off-brand boxy frame, inconsistent design",4,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 3.png,three_quarter_angle,REDO,"Low-res soft render, different plywood-shell model, breaks consistency",4,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 4.png,three_quarter_angle,REDO,"Low-res soft, walnut wishbone model, inconsistent with hero",4,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 6.png,three_quarter_angle,KEEP,"Sharp photoreal angle, clean white, clear plywood shell and legs",4,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 7.png,three_quarter_angle,KEEP,"Crisp photoreal angle, clean white, clear oak frame joinery",4,Residential,standard
+Residential Wooden Dining Chair,wooden dining chair 8.png,three_quarter_angle,KEEP,"Sharp photoreal armchair angle, clean white, visible joinery and grain",4,Residential,standard
+Residential Wooden Dining Chair,slot:texture_macro,texture_macro,MISSING,No wood-grain close-up for finish spec,5,Residential,standard
+Residential Writing Desk,writing desk 4.png,white_seamless_hero,KEEP,"Sharp gray desk front-on white seamless, spec-able clean hero",1,Residential,standard
+Residential Writing Desk,writing desk 5.png,white_seamless_hero,REDO,"Low-res, soft, tiny framing; not spec-able",1,Residential,standard
+Residential Writing Desk,writing desk 6.png,white_seamless_hero,REDO,"Soft, muddy, small framing; weak resolution",1,Residential,standard
+Residential Writing Desk,writing desk 7.png,white_seamless_hero,KEEP,"Sharp white desk front-on, clean seamless, strong alternate hero",1,Residential,standard
+Residential Writing Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; hotel buyers need width/depth/height,2,Residential,standard
+Residential Writing Desk,writing desk 1.png,full_room_scene,KEEP,"Warm styled home-office scene, photoreal, sells the desk in context",3,Residential,standard
+Residential Writing Desk,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and drawer side,4,Residential,standard
+Residential Writing Desk,slot:texture_macro,texture_macro,MISSING,No close-up of surface finish or edge,5,Residential,standard
+Single Drawer Nightstand,single drawer nightstand 1.png,white_seamless_hero,KEEP,"Sharp gray nightstand front-on, clean spec-able hero",1,Residential,long-tail
+Single Drawer Nightstand,single drawer nightstand 2.png,white_seamless_hero,KEEP,"Sharp sage nightstand front-on, clean alternate finish hero",1,Residential,long-tail
+Single Drawer Nightstand,single drawer nightstand 3.png,white_seamless_hero,REDO,"Very low-res, soft, tiny framing; not usable",1,Residential,long-tail
+Single Drawer Nightstand,single drawer nightstand 4.png,white_seamless_hero,KEEP,"Sharp cream nightstand front-on, clean seamless hero",1,Residential,long-tail
+Single Drawer Nightstand,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and open shelf side,2,Residential,long-tail
+Single Drawer Nightstand,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for procurement specs,3,Residential,long-tail
+Six Drawer Dresser,six drawer dresser 1.png,white_seamless_hero,REDO,"Soft, low-res, tiny framing; not spec-able",1,Residential,standard
+Six Drawer Dresser,six drawer dresser 2.png,white_seamless_hero,REDO,"Soft, low-res, small framing; weak resolution",1,Residential,standard
+Six Drawer Dresser,six drawer dresser 3.png,white_seamless_hero,KEEP,"Sharp cream dresser front-on, clean spec-able hero",1,Residential,standard
+Six Drawer Dresser,six drawer dresser 4.png,white_seamless_hero,REDO,"Soft, low-res, small framing; not usable hero",1,Residential,standard
+Six Drawer Dresser,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need footprint dimensions,2,Residential,standard
+Six Drawer Dresser,slot:full_room_scene,full_room_scene,MISSING,No styled bedroom scene showing scale in context,3,Residential,standard
+Six Drawer Dresser,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and case sides,4,Residential,standard
+Six Drawer Dresser,slot:texture_macro,texture_macro,MISSING,No close-up of finish or drawer-pull hardware,5,Residential,standard
+Tall Bookcase,tall bookcase.png,white_seamless_hero,KEEP,"Sharp photoreal walnut hero on white, sells the actual tall bookcase",1,Residential,considered
+Tall Bookcase,DMD narrow Natural Oak MDF.png,white_seamless_hero,REDO,"Exact duplicate of hero; wastes a slot, no new buyer info",1,Residential,considered
+Tall Bookcase,slot:dimension_diagram,dimension_diagram,MISSING,No height/width/depth diagram; buyers can't spec fit,2,Residential,considered
+Tall Bookcase,DMD ConceptStack Library Wall - Honey Ash MDF.png,color_finish_grid,KEEP,"Front oak finish variant, useful as material/finish reference",3,Residential,considered
+Tall Bookcase,DMD Indigo Vault Shelf - Matte Blue MDF.png,color_finish_grid,KEEP,Blue finish option widens material story for designers,3,Residential,considered
+Tall Bookcase,slot:full_room_scene,full_room_scene,MISSING,No in-context office or lobby scene for scale,4,Residential,considered
+Tall Bookcase,DMD Alto Cabinet Shelf - Espresso MDF.png,three_quarter_angle,KEEP,"Clean angled espresso unit, shows depth and door hardware",5,Residential,considered
+Tall Bookcase,DMD Elemental Archive Shelf - Warm Oak MDF.png,three_quarter_angle,REDO,Redundant angled oak variant; near-identical to other 3/4 shots,5,Residential,considered
+Tall Bookcase,DMD GridForm Organizer - Natural Oak MDF.png,three_quarter_angle,REDO,"Another duplicate-feel oak 3/4 angle, adds no spec value",5,Residential,considered
+Tall Bookcase,DMD StudioCore Display Shelf - Deep Blue MDF.png,three_quarter_angle,REDO,Second blue 3/4 angle is redundant with Indigo variant,5,Residential,considered
+Tall Bookcase,DMD TerraGrid Storage Wall - Light Walnut MDF.png,three_quarter_angle,REDO,Yet another oak/walnut 3/4 angle; collection is over-padded,5,Residential,considered
+Tall Bookcase,DMD TwinVault Display Cabinet - Golden Maple MDF.png,three_quarter_angle,REDO,Duplicate angled maple unit; no new buyer-useful information,5,Residential,considered
+Tall Bookcase,slot:hardware_detail,hardware_detail,MISSING,"No close-up of pull, hinge, or shelf adjusters",6,Residential,considered
+Tall Bookcase,slot:functional_transformation,functional_transformation,MISSING,No shot of adjustable shelves or door open,7,Residential,considered
+Wood Coffee Table,wood coffee table.jpg,three_quarter_angle,KEEP,"Sharp photoreal espresso table on white, reads spec-able",1,Residential,long-tail
+Wood Coffee Table,wood coffee table.png,white_seamless_hero,REDO,"Flat SVG placeholder icon with in-image text, not real product",1,Residential,long-tail
+Wood Coffee Table,slot:three_quarter_angle,three_quarter_angle,MISSING,Hero covers angle; need a distinct second angle or detail,2,Residential,long-tail
+Wood Coffee Table,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; buyer can't confirm size for lounges,3,Residential,long-tail
+Corner Booth,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight catalog hero of the booth alone,1,Restaurant,considered
+Corner Booth,slot:dimension_diagram,dimension_diagram,MISSING,No corner footprint/seat-height diagram for floor planning,2,Restaurant,considered
+Corner Booth,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery/vinyl options for contract spec,3,Restaurant,considered
+Corner Booth,slot:full_room_scene,full_room_scene,MISSING,No installed dining-room context shot,4,Restaurant,considered
+Corner Booth,corner booth.png,three_quarter_angle,KEEP,"Clean photoreal L-booth with table, shows seating format clearly",5,Restaurant,considered
+Corner Booth,slot:hardware_detail,hardware_detail,MISSING,"No close-up of seam, leg, or frame construction",6,Restaurant,considered
+Corner Booth,slot:functional_transformation,functional_transformation,MISSING,No modular corner reconfiguration shown,7,Restaurant,considered
+Double Booth,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front catalog hero of the booth,1,Restaurant,considered
+Double Booth,slot:dimension_diagram,dimension_diagram,MISSING,No back-height/depth diagram for aisle clearance planning,2,Restaurant,considered
+Double Booth,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery and wood-end finish options shown,3,Restaurant,considered
+Double Booth,slot:full_room_scene,full_room_scene,MISSING,No installed dining-row context for scale,4,Restaurant,considered
+Double Booth,double booth.png,three_quarter_angle,KEEP,"Photoreal double-sided booth, shared back format reads clearly",5,Restaurant,considered
+Double Booth,slot:hardware_detail,hardware_detail,MISSING,"No close-up of frame, base, or stitch detail",6,Restaurant,considered
+Double Booth,slot:functional_transformation,functional_transformation,MISSING,No view of dual-side seating in use,7,Restaurant,considered
+Glass Patio Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No pure-white catalog hero of the table,1,Restaurant,standard
+Glass Patio Table,slot:dimension_diagram,dimension_diagram,MISSING,No diameter/height diagram for patio layout,2,Restaurant,standard
+Glass Patio Table,slot:full_room_scene,full_room_scene,MISSING,No outdoor patio context shot,3,Restaurant,standard
+Glass Patio Table,glass patio table.png,three_quarter_angle,KEEP,"Clean photoreal glass-top metal table, geometry reads true",4,Restaurant,standard
+Glass Patio Table,slot:texture_macro,texture_macro,MISSING,No close-up of frame finish or weather coating,5,Restaurant,standard
+High Bar Stool,slot:white_seamless_hero,white_seamless_hero,MISSING,No pure-white catalog hero shot,1,Restaurant,standard
+High Bar Stool,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height diagram to match bar elevation,2,Restaurant,standard
+High Bar Stool,slot:full_room_scene,full_room_scene,MISSING,No bar-counter context for fit and scale,3,Restaurant,standard
+High Bar Stool,high bar stool.png,three_quarter_angle,KEEP,"Photoreal wood-top steel stool, footrest detail visible",4,Restaurant,standard
+High Bar Stool,slot:texture_macro,texture_macro,MISSING,No close-up of wear-plated footrest contact point,5,Restaurant,standard
+Medium Bar Stool,slot:white_seamless_hero,white_seamless_hero,MISSING,No pure-white catalog hero shot,1,Restaurant,standard
+Medium Bar Stool,slot:dimension_diagram,dimension_diagram,MISSING,No counter-height seat dimension diagram,2,Restaurant,standard
+Medium Bar Stool,slot:full_room_scene,full_room_scene,MISSING,No counter context for buyer scale check,3,Restaurant,standard
+Medium Bar Stool,Medium Bar Stool.png,three_quarter_angle,KEEP,"Sharp photoreal wood-top black-frame stool, sells cleanly",4,Restaurant,standard
+Medium Bar Stool,slot:texture_macro,texture_macro,MISSING,No close-up of seat grain or weld joints,5,Restaurant,standard
+Metal Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No pure-white catalog hero shot,1,Restaurant,standard
+Metal Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height/width diagram for outdoor layout,2,Restaurant,standard
+Metal Chair,slot:full_room_scene,full_room_scene,MISSING,No outdoor patio context shot,3,Restaurant,standard
+Metal Chair,Metal Chair.jpg,three_quarter_angle,KEEP,"Photoreal galvanized stacking chair, geometry and finish clear",4,Restaurant,standard
+Metal Chair,slot:texture_macro,texture_macro,MISSING,No close-up of galvanized finish or stacking detail,5,Restaurant,standard
+Outdoor Plastic Chair,plastic chair3.jpg,white_seamless_hero,KEEP,Clean front-on hero on white seamless; reads spec-able.,1,Restaurant,long-tail
+Outdoor Plastic Chair,plastic chair2.jpg,three_quarter_angle,KEEP,Sharp photoreal 3/4 yellow chair on white; legs and shell clear.,2,Restaurant,long-tail
+Outdoor Plastic Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need seat height and footprint.,3,Restaurant,long-tail
+Plastic Chair,plastic waiting chair.png,white_seamless_hero,REDO,"Low-res soft stock cutout; small, no crisp detail to spec.",1,Restaurant,long-tail
+Plastic Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing shell depth and chrome leg geometry.,2,Restaurant,long-tail
+Plastic Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need stacking and footprint specs.,3,Restaurant,long-tail
+Restaurant 2-Seater Dining Table,2-Seater Table SS1.jpg,white_seamless_hero,KEEP,"Clean walnut-top steel-base table, sharp, neutral; reads as hero.",1,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table - T Leg - HPL-MDF.png,side_profile,REDO,"Flat navy CGI render, off-brand color, no realism or scale.",1,Restaurant,standard
+Restaurant 2-Seater Dining Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need top size and clearances.,2,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table.jpg,full_room_scene,KEEP,Photoreal two-top styled in dining room; sells the setting.,3,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table - M1.jpg,second_environment,REDO,Wood-slat chairs off-brand; mismatched set distracts from table.,3,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table M2.jpg,full_room_scene,REDO,"Wrong product: shows a four-top rectangular table, not two-seater.",3,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table 1.jpg,three_quarter_angle,KEEP,"Angled walnut top, X-base visible, crisp daylight realism.",4,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table Tapper Center.jpg,second_environment,KEEP,Photoreal tapered-base variant styled; shows base option clearly.,4,Restaurant,standard
+Restaurant 2-Seater Dining Table,2-Seater Table - HPL - MDF.png,three_quarter_angle,REDO,"Flat navy CGI block, off-brand, cartoonish; not spec-able.",4,Restaurant,standard
+Restaurant 2-Seater Dining Table,slot:texture_macro,texture_macro,MISSING,No close-up of HPL or wood top grain and edge.,5,Restaurant,standard
+Restaurant 4-Seater Dining Table,4-Seater Table - T Leg - HPL-MDF.png,side_profile,REDO,"Flat navy CGI render, off-brand color, no realism or scale.",1,Restaurant,standard
+Restaurant 4-Seater Dining Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean studio hero of the table alone on white.,1,Restaurant,standard
+Restaurant 4-Seater Dining Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; buyers need top size and seat clearance.,2,Restaurant,standard
+Restaurant 4-Seater Dining Table,4-Seater Table M1.jpg,full_room_scene,REDO,Human coat/bag in foreground; auto-redo per person rule.,3,Restaurant,standard
+Restaurant 4-Seater Dining Table,4-Seater Table SS1.jpg,full_room_scene,KEEP,"Clean styled set, chrome U-base visible; sells full table.",3,Restaurant,standard
+Restaurant 4-Seater Dining Table,4-Seater Table M2.jpg,three_quarter_angle,KEEP,"Photoreal angled walnut top with loop base, well lit; spec-able.",4,Restaurant,standard
+Restaurant 4-Seater Dining Table,4-Seater Table - HPL - MDF.png,three_quarter_angle,REDO,"Flat navy CGI block, off-brand, cartoonish; not spec-able.",4,Restaurant,standard
+Restaurant 4-Seater Dining Table,slot:texture_macro,texture_macro,MISSING,No close-up of top finish grain and edge detail.,5,Restaurant,standard
+Restaurant 6-Seater Dining Table,6-seater table.png,white_seamless_hero,KEEP,"Clean sharp seamless hero, full set, sells the spec.",1,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table - T Leg - HPL-MDF.png,white_seamless_hero,REDO,"Very low-res, soft, tiny; not spec-able by buyer.",1,Restaurant,considered
+Restaurant 6-Seater Dining Table,slot:dimension_diagram,dimension_diagram,MISSING,No dimensioned drawing; buyers need width/seat clearance.,2,Restaurant,considered
+Restaurant 6-Seater Dining Table,slot:material_swatch_row,material_swatch_row,MISSING,No top material grid (wood/HPL/stone) for spec choice.,3,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table - M3S.jpg,full_room_scene,KEEP,"Photoreal styled dining room, X-base reads, on-brand context.",4,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table SS1.jpg,full_room_scene,REDO,"Redundant styled scene, dreamy resort feel over operator realism.",4,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table Wood.jpg,full_room_scene,REDO,"Redundant bright room, soft dreamy lighting, no new info.",4,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table Wood2.jpg,full_room_scene,REDO,"Redundant dramatic room, moody bokeh, off operator realism.",4,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table M1.jpg,three_quarter_angle,REDO,"Muddy dim lighting, dreamy look, table reads dark.",5,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table M2.jpg,three_quarter_angle,KEEP,"Sharp three-quarter, top grain visible, buyer can spec finish.",5,Restaurant,considered
+Restaurant 6-Seater Dining Table,6-Seater Table - HPL - MDF.png,three_quarter_angle,KEEP,"Sharp seamless HPL T-leg variant, clean spec view.",5,Restaurant,considered
+Restaurant 6-Seater Dining Table,slot:hardware_detail,hardware_detail,MISSING,No close-up of base joinery or leveler hardware.,6,Restaurant,considered
+Restaurant 6-Seater Dining Table,slot:functional_transformation,functional_transformation,MISSING,No extension-leaf shot showing the seam-to-extended change.,7,Restaurant,considered
+Restaurant Upholstered Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No single clean front hero; only multi-panel collages.,1,Restaurant,standard
+Restaurant Upholstered Chair,Warm terracott Upholstered Accent Chair 360 return 1.jpg,dimension_diagram,REDO,"Garbled gibberish dimension labels, unreadable, not spec-able.",2,Restaurant,standard
+Restaurant Upholstered Chair,slot:dimension_diagram,dimension_diagram,MISSING,Only garbled-label collage; need readable seat-height drawing.,2,Restaurant,standard
+Restaurant Upholstered Chair,slot:full_room_scene,full_room_scene,MISSING,No restaurant/cafe context showing chair in service.,3,Restaurant,standard
+Restaurant Upholstered Chair,Soft blush_peac Upholstered Accent Chair 360 return.jpg,three_quarter_angle,REDO,"Multi-panel 360 composite, not single clean spec hero.",4,Restaurant,standard
+Restaurant Upholstered Chair,Soft Yellow Upholstered Accent Chair 4.jpg,three_quarter_angle,REDO,"Four-panel grid on gray, not a single seamless hero.",4,Restaurant,standard
+Restaurant Upholstered Chair,Warm Gray and taupes Upholstered Accent Chair 360 return 6.jpg,three_quarter_angle,REDO,"Multi-panel 360 collage, no clean single buyer view.",4,Restaurant,standard
+Restaurant Upholstered Chair,slot:texture_macro,texture_macro,MISSING,No close-up of contract upholstery weave or stitching.,5,Restaurant,standard
+Round Patio Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on hero; only the angled view exists.,1,Restaurant,long-tail
+Round Patio Table,Round Patio Table.png,three_quarter_angle,KEEP,"Sharp seamless wicker table, glass top, clean spec view.",2,Restaurant,long-tail
+Round Patio Table,slot:dimension_diagram,dimension_diagram,MISSING,No diameter/height drawing for patio layout planning.,3,Restaurant,long-tail
+Single Booth,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on hero of the single booth unit.,1,Restaurant,standard
+Single Booth,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height/depth drawing for covers-per-foot planning.,2,Restaurant,standard
+Single Booth,slot:full_room_scene,full_room_scene,MISSING,No restaurant wall-run context showing booth in service.,3,Restaurant,standard
+Single Booth,single booth.png,three_quarter_angle,KEEP,"Clean seamless three-quarter, frame and upholstery read clearly.",4,Restaurant,standard
+Single Booth,slot:texture_macro,texture_macro,MISSING,No close-up of cleanable vinyl/seam for sanitizing buyers.,5,Restaurant,standard
+Square Patio Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on hero; only the angled view exists.,1,Restaurant,long-tail
+Square Patio Table,square patio table.png,three_quarter_angle,KEEP,"Sharp seamless metal slat table, umbrella hole, clean spec.",2,Restaurant,long-tail
+Square Patio Table,slot:dimension_diagram,dimension_diagram,MISSING,No top/height drawing for outdoor seating layout.,3,Restaurant,long-tail
+Swivel Bar Stool,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on front hero of the stool.,1,Restaurant,standard
+Swivel Bar Stool,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height range drawing for bar counter spec.,2,Restaurant,standard
+Swivel Bar Stool,slot:full_room_scene,full_room_scene,MISSING,No bar/counter context showing stool in use.,3,Restaurant,standard
+Swivel Bar Stool,swivel bar stool.png,three_quarter_angle,KEEP,"Sharp seamless stool, gas-lift and base read, spec-able.",4,Restaurant,standard
+Swivel Bar Stool,slot:texture_macro,texture_macro,MISSING,No close-up of seat upholstery or chrome base finish.,5,Restaurant,standard
+Wicker Chair,wicker chair.png,white_seamless_hero,KEEP,"Clean seamless front hero, weave and cushion read clearly.",1,Restaurant,standard
+Wicker Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height/width drawing for patio layout planning.,2,Restaurant,standard
+Wicker Chair,slot:full_room_scene,full_room_scene,MISSING,No outdoor/terrace context showing chair in service.,3,Restaurant,standard
+Wicker Chair,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing arm and back depth.,4,Restaurant,standard
+Wicker Chair,slot:texture_macro,texture_macro,MISSING,No close-up of weave to judge outdoor durability.,5,Restaurant,standard
+Wooden Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean single seamless hero of the wooden chair.,1,Restaurant,standard
+Wooden Chair,slot:dimension_diagram,dimension_diagram,MISSING,No seat-height/width drawing for dining-room spec.,2,Restaurant,standard
+Wooden Chair,slot:full_room_scene,full_room_scene,MISSING,No full-service dining-room context showing chair in use.,3,Restaurant,standard
+Wooden Chair,DMD-DinningChair - DC-BL001.png,three_quarter_angle,REDO,"Low-res soft CGI on muddy beige, not sharp spec view.",4,Restaurant,standard
+Wooden Chair,DMD-DinningChair - DC-WOOD1.jpg,three_quarter_angle,REDO,"Three-chair collage, no single hero; wrong upholstered model shown.",4,Restaurant,standard
+Wooden Chair,slot:texture_macro,texture_macro,MISSING,No close-up of joinery/stain to judge commercial build.,5,Restaurant,standard
+Adjustable Height Desk,Adjustable Height Desk.png,side_profile,KEEP,"Sharp photoreal desk on clean white, sells sit-stand spec clearly.",1,School,standard
+Adjustable Height Desk,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need height-range and footprint to spec.,2,School,standard
+Adjustable Height Desk,slot:full_room_scene,full_room_scene,MISSING,No classroom context to show scale and fit.,3,School,standard
+Adjustable Height Desk,slot:three_quarter_angle,three_quarter_angle,MISSING,Need angled view showing leg and crank detail.,4,School,standard
+Adjustable Height Desk,slot:texture_macro,texture_macro,MISSING,No laminate-top finish closeup for durability check.,5,School,standard
+Bean Bag,bean bag.png,white_seamless_hero,KEEP,"Crisp photoreal bean bag on white, fabric weave reads well.",1,School,long-tail
+Bean Bag,slot:three_quarter_angle,three_quarter_angle,MISSING,Need angled view to show depth and form.,2,School,long-tail
+Bean Bag,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need diameter and height to plan space.,3,School,long-tail
+Carrel Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero for catalog lead image.,1,School,standard
+Carrel Desk,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need width and depth to plan library rows.,2,School,standard
+Carrel Desk,slot:full_room_scene,full_room_scene,MISSING,No library context showing carrels in a bank.,3,School,standard
+Carrel Desk,Carrel Desk.png,three_quarter_angle,KEEP,"Clean photoreal carrel on white, privacy panels and shelf clear.",4,School,standard
+Carrel Desk,slot:texture_macro,texture_macro,MISSING,No laminate edge/finish closeup for wear check.,5,School,standard
+Classroom Plastic Chair,Plastic Chair 2.png,three_quarter_angle,KEEP,"Crisp blue colorway, clean white, shows mobile caster base.",1,School,standard
+Classroom Plastic Chair,Plastic Chair 3.png,three_quarter_angle,REDO,"Tiny low-res thumbnail, soft and unspecable for a buyer.",1,School,standard
+Classroom Plastic Chair,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need seat height and stack count to order.,2,School,standard
+Classroom Plastic Chair,slot:full_room_scene,full_room_scene,MISSING,No classroom row context to show fit.,3,School,standard
+Classroom Plastic Chair,Plastic Chair 1.png,three_quarter_angle,KEEP,"Sharp grey shell on casters, photoreal, sells stackable spec.",4,School,standard
+Classroom Plastic Chair,Plastic Chair 4.png,three_quarter_angle,REDO,"Different chair design than set, off-brand inconsistency confuses buyer.",4,School,standard
+Classroom Plastic Chair,slot:texture_macro,texture_macro,MISSING,No polypropylene shell closeup for durability proof.,5,School,standard
+Desk-Chair,Desk-Chair 1.png,three_quarter_angle,REDO,"Tiny low-res thumbnail, soft and unspecable for a buyer.",1,School,standard
+Desk-Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero on clean white for catalog.,1,School,standard
+Desk-Chair,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need seat height and tablet size to spec.,2,School,standard
+Desk-Chair,slot:full_room_scene,full_room_scene,MISSING,No classroom context showing chairs in use.,3,School,standard
+Desk-Chair,Desk-Chair 2.png,three_quarter_angle,KEEP,"Sharp photoreal wood tablet-arm chair, sells integrated writing surface.",4,School,standard
+Desk-Chair,Desk-Chair 3.png,three_quarter_angle,REDO,"Different cantilever design than set, breaks product consistency.",4,School,standard
+Desk-Chair,Desk-Chair 4.png,three_quarter_angle,REDO,"Duplicate of Desk-Chair 2, adds no new buyer information.",4,School,standard
+Desk-Chair,slot:texture_macro,texture_macro,MISSING,No wood-grain or finish closeup for wear check.,5,School,standard
+Double Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean white hero of the two-seat desk alone.,1,School,standard
+Double Desk,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need shared-frame width and per-seat space.,2,School,standard
+Double Desk,double desk.png,full_room_scene,REDO,Apple logo on laptop prop is in-image third-party branding.,3,School,standard
+Double Desk,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean angled view of frame and storage cubbies.,4,School,standard
+Double Desk,slot:texture_macro,texture_macro,MISSING,No laminate-top finish closeup for durability check.,5,School,standard
+Ergonomic Student Chair,ergonomic student chair.png,three_quarter_angle,REDO,In-image text 'ErgoStudy' on backrest reads as watermark logo.,1,School,standard
+Ergonomic Student Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,Need clean unbranded hero of the contoured-shell chair.,1,School,standard
+Ergonomic Student Chair,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need seat-height range to match student sizes.,2,School,standard
+Ergonomic Student Chair,slot:full_room_scene,full_room_scene,MISSING,No classroom context showing chairs in use.,3,School,standard
+Ergonomic Student Chair,ergonomic student chair 1.png,three_quarter_angle,REDO,"Different task-chair design, no contoured shell, off-set inconsistency.",4,School,standard
+Ergonomic Student Chair,ergonomic student chair 2.png,three_quarter_angle,REDO,"Tablet-arm chair, wrong product type for this ergonomic seat.",4,School,standard
+Ergonomic Student Chair,ergonomic student chair 3.png,three_quarter_angle,REDO,"Mesh executive chair, off-brand and inconsistent with the set.",4,School,standard
+Ergonomic Student Chair,slot:texture_macro,texture_macro,MISSING,No shell/frame finish closeup for durability proof.,5,School,standard
+Group Study Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean white hero of the table alone for catalog.,1,School,standard
+Group Study Table,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need length and seating capacity to plan rooms.,2,School,standard
+Group Study Table,group study table.png,full_room_scene,KEEP,"Photoreal six-seat library scene, shows scale and group use.",3,School,standard
+Group Study Table,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean angled view of steel base and worktop.,4,School,standard
+Group Study Table,slot:texture_macro,texture_macro,MISSING,No laminate worktop finish closeup for wear check.,5,School,standard
+Library Reading Armchair,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero for spec listing,1,School,considered
+Library Reading Armchair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for procurement sizing,2,School,considered
+Library Reading Armchair,slot:material_swatch_row,material_swatch_row,MISSING,No fabric/finish options for buyer,3,School,considered
+Library Reading Armchair,slot:full_room_scene,full_room_scene,MISSING,No library context shot,4,School,considered
+Library Reading Armchair,armchair.png,three_quarter_angle,KEEP,"Photoreal three-quarter on white, sharp upholstery, sells to buyer",5,School,considered
+Library Reading Armchair,slot:hardware_detail,hardware_detail,MISSING,No leg/base joinery close-up,6,School,considered
+Library Reading Armchair,slot:functional_transformation,functional_transformation,MISSING,No durability/seam detail proof,7,School,considered
+Library Upholstered Reading Chair,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero shot,1,School,considered
+Library Upholstered Reading Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing,2,School,considered
+Library Upholstered Reading Chair,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery options shown,3,School,considered
+Library Upholstered Reading Chair,slot:full_room_scene,full_room_scene,MISSING,No library setting context,4,School,considered
+Library Upholstered Reading Chair,upholstered chair.png,three_quarter_angle,KEEP,"Photoreal three-quarter, clean stitching visible, sells well",5,School,considered
+Library Upholstered Reading Chair,upholstered chair (2).png,three_quarter_angle,REDO,Visible AI sparkle watermark bottom-right; in-image artifact,5,School,considered
+Library Upholstered Reading Chair,slot:hardware_detail,hardware_detail,MISSING,No wood-leg joint close-up,6,School,considered
+Library Upholstered Reading Chair,slot:functional_transformation,functional_transformation,MISSING,No high-traffic durability proof,7,School,considered
+Medium Bookshelf,Medium Bookshelf.png,white_seamless_hero,KEEP,"Photoreal front hero, clean wood grain, styled clearly",1,School,standard
+Medium Bookshelf,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for shelf spacing,2,School,standard
+Medium Bookshelf,slot:full_room_scene,full_room_scene,MISSING,No library context shot,3,School,standard
+Medium Bookshelf,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth,4,School,standard
+Medium Bookshelf,slot:texture_macro,texture_macro,MISSING,No laminate/edge-banding close-up,5,School,standard
+Metal Teacher Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero shot,1,School,standard
+Metal Teacher Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing,2,School,standard
+Metal Teacher Desk,slot:full_room_scene,full_room_scene,MISSING,No classroom context shot,3,School,standard
+Metal Teacher Desk,metal teacher desk.png,three_quarter_angle,KEEP,"Photoreal angle, shows drawer pedestal and steel frame clearly",4,School,standard
+Metal Teacher Desk,slot:texture_macro,texture_macro,MISSING,No worktop/drawer-lock close-up,5,School,standard
+Portable Teacher Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero shot,1,School,considered
+Portable Teacher Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing,2,School,considered
+Portable Teacher Desk,slot:material_swatch_row,material_swatch_row,MISSING,No finish options shown,3,School,considered
+Portable Teacher Desk,slot:full_room_scene,full_room_scene,MISSING,No classroom context shot,4,School,considered
+Portable Teacher Desk,Portable Teacher Desk.png,three_quarter_angle,KEEP,"Photoreal angle showing casters, drawer, cup holder clearly",5,School,considered
+Portable Teacher Desk,slot:hardware_detail,hardware_detail,MISSING,No locking-caster close-up,6,School,considered
+Portable Teacher Desk,slot:functional_transformation,functional_transformation,MISSING,No mobility/fold demonstration,7,School,considered
+Short Bookshelf,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero shot,1,School,long-tail
+Short Bookshelf,short bookshelf.png,three_quarter_angle,KEEP,"Photoreal angle, clean wood, shows open low shelving clearly",2,School,long-tail
+Short Bookshelf,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for low-reader height,3,School,long-tail
+Single Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero shot,1,School,standard
+Single Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing,2,School,standard
+Single Desk,slot:full_room_scene,full_room_scene,MISSING,No classroom context shot,3,School,standard
+Single Desk,Single Desk.png,three_quarter_angle,KEEP,"Photoreal angle, clean oak top and drawer; reads as spec-able",4,School,standard
+Single Desk,slot:texture_macro,texture_macro,MISSING,No laminate/edge close-up,5,School,standard
+Single Study Table,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight front hero shot,1,School,standard
+Single Study Table,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for sizing,2,School,standard
+Single Study Table,slot:full_room_scene,full_room_scene,MISSING,No library context shot,3,School,standard
+Single Study Table,single study table.png,three_quarter_angle,REDO,Visible AI sparkle watermark bottom-right; in-image artifact,4,School,standard
+Single Study Table,slot:texture_macro,texture_macro,MISSING,No wood-grain/edge close-up,5,School,standard
+Tall Bookshelf,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on hero on seamless white for catalog.,1,School,standard
+Tall Bookshelf,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions; buyers need height and footprint to spec.,2,School,standard
+Tall Bookshelf,slot:full_room_scene,full_room_scene,MISSING,No library-context scene showing scale in use.,3,School,standard
+Tall Bookshelf,Tall Bookshelf.jpg,three_quarter_angle,KEEP,"Sharp photoreal three-quarter, adjustable shelves clear, sells storage capacity.",4,School,standard
+Tall Bookshelf,slot:texture_macro,texture_macro,MISSING,No veneer close-up to prove finish durability.,5,School,standard
+Wooden Teacher Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No frontal seamless hero for primary listing image.,1,School,standard
+Wooden Teacher Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing; classroom buyers need worksurface size.,2,School,standard
+Wooden Teacher Desk,slot:full_room_scene,full_room_scene,MISSING,No classroom context showing desk in use.,3,School,standard
+Wooden Teacher Desk,Wooden Teacher Desk.png,three_quarter_angle,KEEP,"Photoreal, drawers and open shelf visible, clean white, on-brand.",4,School,standard
+Wooden Teacher Desk,slot:texture_macro,texture_macro,MISSING,No close-up of veneer/laminate finish and edge.,5,School,standard
+2-Door Wardrobe,2-Door Wardrobe.png,white_seamless_hero,REDO,Diamond watermark bottom-right; doors shut so storage unseen.,1,University,standard
+2-Door Wardrobe,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions for dorm-room fit planning.,2,University,standard
+2-Door Wardrobe,slot:full_room_scene,full_room_scene,MISSING,No dorm context showing scale and placement.,3,University,standard
+2-Door Wardrobe,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and doors open.,4,University,standard
+2-Door Wardrobe,slot:texture_macro,texture_macro,MISSING,No finish close-up proving veneer quality.,5,University,standard
+3-Door Wardrobe,3-door wardrobe.png,white_seamless_hero,KEEP,"Clean photoreal frontal, no watermark, doors and handles crisp.",1,University,standard
+3-Door Wardrobe,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for residence-hall fit-out.,2,University,standard
+3-Door Wardrobe,slot:full_room_scene,full_room_scene,MISSING,No dorm context showing full-length storage in use.,3,University,standard
+3-Door Wardrobe,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and interior.,4,University,standard
+3-Door Wardrobe,slot:texture_macro,texture_macro,MISSING,No finish macro proving veneer durability.,5,University,standard
+Attached Desk-Chair,attached desk-chair 2.png,white_seamless_hero,REDO,Tiny low-res thumbnail plus watermark; too soft to spec.,1,University,considered
+Attached Desk-Chair,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for lecture-row spacing.,2,University,considered
+Attached Desk-Chair,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery and laminate color options shown.,3,University,considered
+Attached Desk-Chair,slot:full_room_scene,full_room_scene,MISSING,No lecture-hall context showing rows in use.,4,University,considered
+Attached Desk-Chair,attached desk-chair.png,three_quarter_angle,REDO,Diamond watermark bottom-right disqualifies otherwise photoreal angle.,5,University,considered
+Attached Desk-Chair,slot:hardware_detail,hardware_detail,MISSING,No close-up of caster base and swing mechanism.,6,University,considered
+Attached Desk-Chair,slot:functional_transformation,functional_transformation,MISSING,No tablet swivel or stow motion demonstrated.,7,University,considered
+Cushioned Seating,slot:white_seamless_hero,white_seamless_hero,MISSING,No correct fixed-row seating hero on white.,1,University,considered
+Cushioned Seating,slot:dimension_diagram,dimension_diagram,MISSING,No row dimensions for tiered-hall layout planning.,2,University,considered
+Cushioned Seating,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery fabric and color options shown.,3,University,considered
+Cushioned Seating,slot:full_room_scene,full_room_scene,MISSING,No tiered lecture-hall context with seats installed.,4,University,considered
+Cushioned Seating,cushioned seating.png,three_quarter_angle,REDO,"Wrong product (loose sofa, not fixed tiered row) plus watermark.",5,University,considered
+Cushioned Seating,slot:hardware_detail,hardware_detail,MISSING,No armrest and seat-mount fixing close-up.,6,University,considered
+Cushioned Seating,slot:functional_transformation,functional_transformation,MISSING,No tip-up seat action demonstrated.,7,University,considered
+Dormitory Sliding Door Wardrobe,slot:white_seamless_hero,white_seamless_hero,MISSING,No closed-door frontal hero for primary listing.,1,University,considered
+Dormitory Sliding Door Wardrobe,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions for tight dorm-floor-plan fit.,2,University,considered
+Dormitory Sliding Door Wardrobe,slot:material_swatch_row,material_swatch_row,MISSING,No finish color options shown.,3,University,considered
+Dormitory Sliding Door Wardrobe,slot:full_room_scene,full_room_scene,MISSING,No dorm context showing space-saving slide in use.,4,University,considered
+Dormitory Sliding Door Wardrobe,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing cabinet depth.,5,University,considered
+Dormitory Sliding Door Wardrobe,slot:hardware_detail,hardware_detail,MISSING,No close-up of top-track glide system.,6,University,considered
+Dormitory Sliding Door Wardrobe,Sliding Door Wardrobe.png,functional_transformation,KEEP,"Photoreal, sliding door open showing rail, shelves, drawers; no watermark.",7,University,considered
+Dormitory Twin Bunk Bed,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on hero on seamless white.,1,University,considered
+Dormitory Twin Bunk Bed,slot:dimension_diagram,dimension_diagram,MISSING,No dimensions for dorm-room and ceiling clearance.,2,University,considered
+Dormitory Twin Bunk Bed,slot:material_swatch_row,material_swatch_row,MISSING,No frame finish options shown.,3,University,considered
+Dormitory Twin Bunk Bed,slot:full_room_scene,full_room_scene,MISSING,No dorm context showing two students' setup.,4,University,considered
+Dormitory Twin Bunk Bed,twin bunk bed.png,three_quarter_angle,KEEP,"Photoreal angle, safety rails and ladder clear, clean white, no watermark.",5,University,considered
+Dormitory Twin Bunk Bed,slot:hardware_detail,hardware_detail,MISSING,No welded-joint close-up proving heavy-duty build.,6,University,considered
+Dormitory Twin Bunk Bed,slot:functional_transformation,functional_transformation,MISSING,No detachable-to-two-singles demonstration.,7,University,considered
+Double Study Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean isolated hero of the desk pair,1,University,standard
+Double Study Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for procurement spec,2,University,standard
+Double Study Desk,double study desk.png,full_room_scene,KEEP,Photoreal styled two-person desk in context; sells dorm fit-out,3,University,standard
+Double Study Desk,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean angled product-only view,4,University,standard
+Double Study Desk,slot:texture_macro,texture_macro,MISSING,No laminate worktop closeup for durability,5,University,standard
+Fixed Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero on seamless white,1,University,standard
+Fixed Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for lecture-row spec,2,University,standard
+Fixed Desk,slot:full_room_scene,full_room_scene,MISSING,No lecture-hall context for buyer,3,University,standard
+Fixed Desk,Fixed Desk.png,three_quarter_angle,REDO,Sharp angle but AI sparkle watermark bottom-right; not spec-clean,4,University,standard
+Fixed Desk,slot:texture_macro,texture_macro,MISSING,No laminate-top closeup for wear assessment,5,University,standard
+Fixed Seating,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight-on hero of the seating unit,1,University,considered
+Fixed Seating,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for row planning,2,University,considered
+Fixed Seating,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery/frame finish options shown,3,University,considered
+Fixed Seating,slot:full_room_scene,full_room_scene,MISSING,No tiered-seating context for buyer,4,University,considered
+Fixed Seating,fixed seating unit.png,three_quarter_angle,KEEP,"Clean photoreal three-seat bench; reads spec-able, no defects",5,University,considered
+Fixed Seating,slot:hardware_detail,hardware_detail,MISSING,No frame-to-shell joint or mount detail,6,University,considered
+Fixed Seating,slot:functional_transformation,functional_transformation,MISSING,No ganging/connector demonstration,7,University,considered
+Full Bunk Bed,full bunk bed.png,white_seamless_hero,KEEP,Sharp photoreal front hero with bedding; sells dorm safety frame,1,University,considered
+Full Bunk Bed,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for ceiling/clearance planning,2,University,considered
+Full Bunk Bed,slot:material_swatch_row,material_swatch_row,MISSING,No wood-finish options shown,3,University,considered
+Full Bunk Bed,slot:full_room_scene,full_room_scene,MISSING,No dorm-room context for buyer,4,University,considered
+Full Bunk Bed,slot:three_quarter_angle,three_quarter_angle,MISSING,No angled view showing depth and ladder,5,University,considered
+Full Bunk Bed,slot:hardware_detail,hardware_detail,MISSING,No guard-rail or bolt joinery closeup for safety,6,University,considered
+Full Bunk Bed,slot:functional_transformation,functional_transformation,MISSING,No de-bunk/separation demonstration,7,University,considered
+Metal Podium,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero on seamless white,1,University,standard
+Metal Podium,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing with reading-surface height,2,University,standard
+Metal Podium,slot:full_room_scene,full_room_scene,MISSING,No lecture-hall stage context,3,University,standard
+Metal Podium,Metal Podium.png,three_quarter_angle,REDO,Photoreal but AI sparkle watermark bottom-right; not clean spec asset,4,University,standard
+Metal Podium,slot:texture_macro,texture_macro,MISSING,No brushed-metal finish closeup,5,University,standard
+Movable Seating,slot:white_seamless_hero,white_seamless_hero,MISSING,No single-unit hero on seamless white,1,University,considered
+Movable Seating,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing per modular unit,2,University,considered
+Movable Seating,slot:material_swatch_row,material_swatch_row,MISSING,No upholstery color/finish options shown,3,University,considered
+Movable Seating,slot:full_room_scene,full_room_scene,MISSING,No flexible-layout room context,4,University,considered
+Movable Seating,slot:three_quarter_angle,three_quarter_angle,MISSING,No clean angled single-unit view,5,University,considered
+Movable Seating,slot:hardware_detail,hardware_detail,MISSING,No ganging-connector closeup,6,University,considered
+Movable Seating,movable seating unit.png,modular_reconfig,REDO,Modular sectional but flat soft lighting; reads dreamy not operator-sharp,7,University,considered
+Single Study Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero on seamless white,1,University,standard
+Single Study Desk,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing for dorm footprint,2,University,standard
+Single Study Desk,slot:full_room_scene,full_room_scene,MISSING,No dorm-room context for buyer,3,University,standard
+Single Study Desk,single study desk.png,three_quarter_angle,REDO,Sharp desk but AI sparkle plus faint foliage artifacts; not clean spec asset,4,University,standard
+Single Study Desk,slot:texture_macro,texture_macro,MISSING,No laminate-top closeup for durability,5,University,standard
+Smart Podium,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean front hero on seamless white,1,University,considered
+Smart Podium,slot:dimension_diagram,dimension_diagram,MISSING,No measured drawing with AV/screen dimensions,2,University,considered
+Smart Podium,slot:material_swatch_row,material_swatch_row,MISSING,No finish options shown,3,University,considered
+Smart Podium,slot:full_room_scene,full_room_scene,MISSING,No lecture-hall stage context,4,University,considered
+Smart Podium,Smart Podium.png,three_quarter_angle,REDO,In-image screen UI text/logo plus AI sparkle watermark; not clean asset,5,University,considered
+Smart Podium,slot:hardware_detail,hardware_detail,MISSING,No cable-management or AV-mount closeup,6,University,considered
+Smart Podium,slot:functional_transformation,functional_transformation,MISSING,No AV/cable-routing demonstration,7,University,considered
+Twin XL Bunk Bed,Twin XL Bunk Bed.png,three_quarter_angle,KEEP,"Photoreal steel-frame bunk, sharp, clean seamless; reads spec-able for dorms",1,University,standard
+Twin XL Bunk Bed,slot:dimension_diagram,dimension_diagram,MISSING,Buyers need bunk height and footprint for room planning,2,University,standard
+Twin XL Bunk Bed,slot:full_room_scene,full_room_scene,MISSING,No dorm-room context shown for scale and fit,3,University,standard
+Twin XL Bunk Bed,slot:texture_macro,texture_macro,MISSING,No close-up of steel frame finish and welds,5,University,standard
+Wall-Mounted Study Desk,slot:white_seamless_hero,white_seamless_hero,MISSING,No straight catalog hero on pure seamless background,1,University,long-tail
+Wall-Mounted Study Desk,wall-mounted study desk.png,three_quarter_angle,KEEP,"Photoreal laminate desk with drawer, sharp, clean; spec-able wall-mount unit",2,University,long-tail
+Wall-Mounted Study Desk,slot:dimension_diagram,dimension_diagram,MISSING,"Wall-mount needs width, depth, and bracket spacing specs",3,University,long-tail
+Wooden Podium,slot:white_seamless_hero,white_seamless_hero,MISSING,No clean hero; existing shot carries a watermark artifact,1,University,long-tail
+Wooden Podium,wooden podium.png,three_quarter_angle,REDO,Visible sparkle watermark artifact bottom-right; in-image mark fails spec bar,2,University,long-tail
+Wooden Podium,slot:dimension_diagram,dimension_diagram,MISSING,Lecture-hall buyers need podium height and base footprint,3,University,long-tail
