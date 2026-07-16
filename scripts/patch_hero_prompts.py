@@ -38,7 +38,8 @@ v2 fixes all four by making the patch block-aware:
      are only added when the block's own text actually mentions that
      material family (fabric|upholstery|vinyl|leather|textile|woven|COM|
      cushion for fabric; wood|veneer|laminate|HPL|oak|walnut|maple|birch|
-     grain|teak|sheesham for wood; steel|metal|chrome|aluminum|brass|
+     teak|sheesham for wood ("grain" alone is NOT wood -- it also matches
+     "film grain" and "leather grain"); steel|metal|chrome|aluminum|brass|
      nickel|powder-coat|stainless for metal). A block with none of these
      gets a neutral fallback sentence instead of inventing a material.
   4. NEGATIVE-WINS: if the block's own PROMPT or NEGATIVE text already
@@ -84,10 +85,13 @@ CAMERA_F_RE = re.compile(r"(?i)f/?\s?5\.6")
 WALL_MOUNT_RE = re.compile(r"(?i)wall-mounted|wall bracket mount|concealed cleat")
 
 FABRIC_RE = re.compile(r"(?i)\bfabric\b|\bupholster\w*\b|\bvinyl\b|\bleather\b|\btextile\b|\bwoven\b|\bCOM\b|\bcushion\w*\b")
-WOOD_RE = re.compile(r"(?i)\bwood\w*\b|\bveneer\b|\blaminate\b|\bHPL\b|\boak\b|\bwalnut\b|\bmaple\b|\bbirch\b|\bgrain\b|\bteak\b|\bsheesham\b")
+WOOD_RE = re.compile(r"(?i)\bwood\w*\b|\bveneer\b|\blaminate\b|\bHPL\b|\boak\b|\bwalnut\b|\bmaple\b|\bbirch\b|\bteak\b|\bsheesham\b")
 METAL_RE = re.compile(r"(?i)\bsteel\b|\bmetal\w*\b|\bchrome\b|\baluminu?m\b|\bbrass\b|\bnickel\b|\bpowder-coat\w*\b|\bstainless\b")
 
 NO_REFLECT_RE = re.compile(r"(?i)\bno reflections?\b|\bno mirror reflections?\b|\bno reflection halos?\b")
+# A bare "reflections" entry inside NEGATIVE: is already a ban even without
+# a leading "no" (NEGATIVE is a ban list by definition).
+REFLECT_MENTION_RE = re.compile(r"(?i)\breflections?\b")
 VIGNETTE_MENTION_RE = re.compile(r"(?i)vignette")
 
 BLOCK_SPLIT_RE = re.compile(r"(?=^## )", re.MULTILINE)
@@ -180,7 +184,11 @@ def patch_block(block):
     )
 
     is_wall = bool(WALL_MOUNT_RE.search(spec_scope))
-    reflections_banned = bool(NO_REFLECT_RE.search(prompt_text) or NO_REFLECT_RE.search(negative_text))
+    reflections_banned = bool(
+        NO_REFLECT_RE.search(prompt_text)
+        or NO_REFLECT_RE.search(negative_text)
+        or REFLECT_MENTION_RE.search(negative_text)
+    )
     vignette_banned = bool(VIGNETTE_MENTION_RE.search(prompt_text) or VIGNETTE_MENTION_RE.search(negative_text))
 
     # 1. Camera clause: detect + replace in place, never append a duplicate.
@@ -195,10 +203,16 @@ def patch_block(block):
         prompt_text = CAMERA_F_RE.sub("f/8", prompt_text)
     # Every patched hero ends up specifying 80mm/f8 somewhere in its PROMPT
     # (inline replacement above, or the CAMERA_FALLBACK_CLAUSE appended
-    # below) -- so always reconcile this block's own metadata copy too,
-    # or the block would carry a stale "50mm"/"f5.6" next to the new spec.
-    header = CAMERA_MM_RE.sub("medium-format 80mm", header)
-    header = CAMERA_F_RE.sub("f/8", header)
+    # below) -- so reconcile the block's own metadata copy too, or it would
+    # carry a stale "50mm"/"f5.6" next to the new spec. Only the
+    # `- consistency_profile:` line is rewritten; a "50mm" in product_ref
+    # or dimension metadata is a product spec, not a lens spec.
+    def _patch_consistency(cm):
+        value = CAMERA_MM_RE.sub("medium-format 80mm", cm.group(1))
+        value = CAMERA_F_RE.sub("f/8", value)
+        return f"- consistency_profile: {value}"
+
+    header = CONSISTENCY_RE.sub(_patch_consistency, header, count=1)
 
     material_clause = build_material_clause(prompt_text + " " + spec_scope, reflections_banned)
     backdrop_clause = build_backdrop_clause(is_wall, vignette_banned)
