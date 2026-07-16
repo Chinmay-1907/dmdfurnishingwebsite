@@ -76,7 +76,7 @@ function Footer() {
             </p>
             <div className="social-links">
               <a
-                href="https://www.linkedin.com/company/dmd-usaa/"
+                href="https://www.linkedin.com/company/105797618/"
                 className="social-icon"
                 aria-label="DMD Furnishing on LinkedIn"
                 target="_blank"

@@ -61,7 +61,7 @@ const editorialTeamSchema = {
     'contract-grade furniture specifications',
     'commercial fire safety standards',
   ],
-  sameAs: ['https://www.linkedin.com/company/dmd-usaa/'],
+  sameAs: ['https://www.linkedin.com/company/105797618/'],
   parentOrganization: { '@id': `${siteUrl}/#organization` },
 };
 
@@ -172,7 +172,7 @@ export default function EditorialTeamPage() {
                 <br />
                 56 Leonard St Unit 5, Foxboro MA 02035
                 <br />
-                <a href="https://www.linkedin.com/company/dmd-usaa/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/105797618/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </p>
