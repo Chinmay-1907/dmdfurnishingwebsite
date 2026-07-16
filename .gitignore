@@ -68,3 +68,10 @@ public/DMD_Website.xml.bak*
 
 # scratch / scratch html
 cat.html
+
+# Tool/index artifacts (machine-local, never shipped)
+.claude-flow/
+.codegraph/
+scripts/__pycache__/
+.claude/proven-config.json
+.claude/.proven-config-version
