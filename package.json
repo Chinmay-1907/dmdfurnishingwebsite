@@ -21,6 +21,7 @@
     "prebuild": "node scripts/check-content-leaks.js",
     "build": "next build",
     "lint": "next lint",
+    "test": "vitest run",
     "generate:residential": "node scripts/generate-residential-images.js",
     "generate:residential:ai": "node scripts/generate-photorealistic-residential.js",
     "optimize:living-room": "node scripts/optimize-living-room-images.js"
@@ -39,7 +40,8 @@
   },
   "devDependencies": {
     "eslint": "^9.0.0",
-    "eslint-config-next": "15.3.0"
+    "eslint-config-next": "15.3.0",
+    "vitest": "^4.1.10"
   },
   "overrides": {
     "postcss": "^8.5.10"
