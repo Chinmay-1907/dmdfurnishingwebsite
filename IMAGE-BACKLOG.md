@@ -6,22 +6,49 @@
 
 ---
 
-## TOP PRIORITY — RE-RENDER: closet heroes first (2026-07-16)
+## TOP PRIORITY — RE-RENDER: closet heroes first (2026-07-16, v2 2026-07-16)
 
 **CEO verdict on the 30 rendered walk-in-closet images:** the white-seamless-background
 hero shots read as CGI / 3D renders — too-perfect lighting, flawless styling, no
-photographic character. **The 5 environmental room scenes per product PASS and stay as
-they are — do not touch them.**
+photographic character. **Each of the 5 closet products has TWO `full_room_scene`
+blocks (10 environmental room scenes total across the 30) and those PASS and stay as
+they are — do not touch them.** Only the 5 `white_seamless_hero` blocks (one per
+product) needed the fix.
 
-**Fix applied:** the hero prompt style was rewritten in `closet_image_prompts.md` (5
-blocks) and, for consistency, in every `white_seamless_hero` block across
-`codex_image_prompts.md` (143 blocks, via `scripts/patch_hero_prompts.py`) to read as
-real studio product photography — named camera/lens/aperture, softbox key + fill with
-visible falloff, true white cyclorama with natural floor shadow + slight vignette,
-real-world material imperfection, film-like color response and micro-grain. Product
-specifics (materials, dimensions, consistency_profile, output_path) are untouched.
-`NEGATIVE:` now also bans: 3D render look, CGI, videogame lighting, overly perfect
-symmetry (plastic sheen was already banned everywhere).
+**Fix applied (v2, block-aware — not a single fixed paragraph):** the hero prompt style
+was rewritten in `closet_image_prompts.md` (5 blocks, by hand) and, for consistency, in
+every `white_seamless_hero` block across `codex_image_prompts.md` (143 blocks, via
+`scripts/patch_hero_prompts.py`) to read as real studio product photography. v1
+(2026-07-16 first pass) appended one fixed paragraph to every hero block and CodeRabbit
+caught real contradictions that produced (duplicate camera specs, floor-shadow language
+on wall-mounted products, fabric-drape language on all-metal/laminate products,
+specular-reflection language on blocks that explicitly ban reflections). v2 fixes all
+four by making the patch conditional per block:
+
+- **Camera:** detects an existing `50mm`/`f5.6` clause and replaces it in place with
+  `medium-format 80mm`/`f/8` — never appends a second camera spec alongside the old one.
+- **Wall vs floor:** products whose own `consistency_profile` says `wall-mounted`, `wall
+  bracket mount`, or `concealed cleat` (headboards, the wall-mounted study desk) get a
+  wall-backdrop + contact-shadow sentence with no floor sweep / floor shadow. Everything
+  else (including vanities that merely have a `wall-mount faucet` fixture but stand on
+  their own frame/legs) gets the floor-cyclorama variant.
+- **Material imperfection:** fabric-drape language only appears when the block actually
+  mentions fabric/upholstery/vinyl/leather/COM/cushion; wood-grain language only when
+  wood/veneer/laminate/HPL/oak/walnut/etc. is present; metal-specular language only when
+  metal is present.
+- **NEGATIVE wins:** if a block's own PROMPT or NEGATIVE text already bans reflections
+  ("no reflections", "no mirror reflections") the specular-reflection sentence is
+  dropped for that block; if it already mentions "vignette" (always a ban in this file)
+  the vignette clause is dropped too.
+
+`NEGATIVE:` also gains: 3D render look, CGI, videogame lighting, overly perfect symmetry
+(plastic sheen was already banned everywhere, so the script never double-adds it).
+Product specifics (materials, dimensions, consistency_profile, output_path) are
+untouched. Two authoring bugs in the closet hero prompts were also fixed in the same
+pass (verified against the product's own consistency_profile, not guessed): the boutique
+island's solid-surface top was wrongly called a "folding surface" (fixed to "counter
+surface"), and the floor-to-ceiling double-sided closet had a light-from-directly-above
+clause that contradicted the new camera-left key light (removed).
 
 **The runner skips any `output_path` that already exists on disk — so the 5 old CGI-looking
 hero PNGs must be deleted before the next render pass, or they will never get
@@ -42,8 +69,32 @@ already done. Then run the renderer against `closet_image_prompts.md` — it wil
 only these 5 (everything else in that file is untouched and already on disk).
 
 **Going forward:** every future `white_seamless_hero` render — in `closet_image_prompts.md`,
-`codex_image_prompts.md`, and any new prompt file — now uses the photographic template
-above. No hero prompt should go back to the old flawless-CGI style language.
+`codex_image_prompts.md`, and any new prompt file — now uses the block-aware photographic
+template above (see `scripts/patch_hero_prompts.py` for the exact logic). No hero prompt
+should go back to the old flawless-CGI style language, and no future patch pass should go
+back to a single fixed paragraph appended blindly across a heterogeneous catalog.
+
+---
+
+## PROMPT QC BACKLOG — pre-existing authoring bugs (found 2026-07-16, not fixed yet)
+
+CodeRabbit's review of the hero-prompt patch also surfaced pre-existing bugs in
+`codex_image_prompts.md` that are unrelated to the photographic-style fix above. Do NOT
+fix these inline as part of the hero-style work — sweep them individually before the
+specific product renders:
+
+- **`4-seater-table_white_seamless_hero`** — base described as "T-leg or sled
+  construction," an or-alternative a renderer can't resolve to one geometry. Pick one.
+- **`residential-sliding-door-wardrobe_white_seamless_hero`** — says "Both sliding doors
+  are closed," then later "The left door is pulled slightly open, about 30
+  centimeters." Self-contradicting; pick one door state.
+- **`double-desk_white_seamless_hero`** — "If under-desk book storage or shelf is part
+  of the design, it is visible and in focus" — conditional geometry a renderer can't
+  evaluate. State definitively whether the shelf exists.
+- **`wooden-teacher-desk_white_seamless_hero`** — "Crisp focus edge-to-edge from back
+  rail to front apron to floor stretcher," but the piece is only described with "Four
+  solid turned legs," no stretcher. Either add a stretcher to the spec or drop the
+  reference.
 
 ---
 
