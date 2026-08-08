@@ -136,7 +136,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 3. How We're Different ── */}
+      {/* ── 3. Leadership ── */}
+      <section className={styles.diffSection}>
+        <div className={styles.diffHeader}>
+          <p className={styles.eyebrow}>Leadership</p>
+          <h2>Who runs DMD Furnishing?</h2>
+          <p>DMD Furnishing is a founder-led company.</p>
+        </div>
+        <div className={styles.diffGrid} />
+      </section>
+
+      {/* ── 4. How We're Different ── */}
       <section className={styles.diffSection}>
         <div className={styles.diffHeader}>
           <p className={styles.eyebrow}>How We&apos;re Different</p>

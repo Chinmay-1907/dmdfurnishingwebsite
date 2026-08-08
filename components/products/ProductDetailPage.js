@@ -124,6 +124,12 @@ export default function ProductDetailPage({ product, relatedProducts = [] }) {
                 Request a quote
               </Link>
             </div>
+            <p className={styles.description} style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
+              Typical production lead time: 9&ndash;10 weeks &mdash; see{' '}
+              <Link href="/lead-times" className={styles.inlineLink}>
+                Lead Times
+              </Link>
+            </p>
           </div>
 
           <aside className={styles.summaryCard}>

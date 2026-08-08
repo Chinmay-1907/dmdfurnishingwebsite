@@ -422,7 +422,10 @@ def render_one(block: ImageBlock, repo_root: Path) -> RenderResult:
 
     try:
         proc = subprocess.run(
-            [*CODEX_BASE, "exec", "--skip-git-repo-check", "--sandbox", "workspace-write", full_prompt],
+            # -m gpt-5.6-luna: CEO-locked 2026-08-07 — cheapest driver model,
+            # image quality identical (image_gen does the rendering, not the driver).
+            [*CODEX_BASE, "exec", "--skip-git-repo-check", "--sandbox", "workspace-write",
+             "-m", "gpt-5.6-luna", full_prompt],
             stdin=subprocess.DEVNULL,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,

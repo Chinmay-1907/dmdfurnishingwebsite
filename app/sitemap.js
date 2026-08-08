@@ -78,6 +78,7 @@ export default function sitemap() {
     images: [abs('/Images/Our Services.jpg')],
   });
   entries.push({ url: `${baseUrl}/contact`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.5 });
+  entries.push({ url: `${baseUrl}/lead-times`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.5 });
   entries.push({ url: `${baseUrl}/inspirations`, lastModified: LAST_BUILD, changeFrequency: 'monthly', priority: 0.6 });
   entries.push({ url: `${baseUrl}/website-policies`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.3 });
   entries.push({ url: `${baseUrl}/author/dmd-furnishing-editorial`, lastModified: LAST_BUILD, changeFrequency: 'yearly', priority: 0.5 });
