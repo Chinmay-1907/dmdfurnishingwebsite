@@ -1,6 +1,18 @@
 # DMD Furnishing — Website Progress
 
-Plain-English changelog of what's built, what works, what's still ahead. Last updated 2026-04-14.
+Plain-English changelog of what's built, what works, what's still ahead. Last updated 2026-08-07.
+
+---
+
+## 2026-08-07 — SEO round 2: bug fixes, Lead Times page, About leadership, Luna image pipeline
+
+Branch `seo-round-2-2026-08-07` (stacked on copy-split-2026-07-16), commits c79ff55 + 4f58b16, local only.
+
+- **Fixed:** catalog XML parser resurrected commented-out products (Medical Recliner was live; catalog 760 -> 759) — comments now stripped pre-parse. Contact-form OTP expiry failed open on malformed input — now fails closed. 322/322 tests, CodeRabbit clean.
+- **New:** /lead-times page (FAQ schema, reuses only already-published lead-time claims) + one-line lead-time link on every product page; About gains a "Leadership" placeholder (founder-led, no invented bios — CEO bio still pending; company has NO certifications, none claimed).
+- **Decided:** image renders locked to Luna driver model (A/B vs Terra showed identical quality, Luna cheaper); 5 CGI-look closet heroes deleted for photographic re-render — the only broken images on the site until the CEO runs `python scripts/render_images.py`.
+- **Verified:** dev sweep — 20 key routes 200, sitemap 823 URLs, removed product 404s correctly.
+- **Next:** CEO runs the render command daily until 930 images done; founder bio; Netlify account + GoDaddy domain move off dad's accounts; then merge DMD_SEO -> copy-split -> seo-round-2 -> master and deploy.
 
 ---
 
