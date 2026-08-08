@@ -304,7 +304,9 @@ def find_new_png(candidate_dirs: Iterable[str], start_time: float) -> Optional[P
         d = CODEX_GENERATED_DIR / name
         if not d.is_dir():
             continue
-        for f in d.glob("ig_*.png"):
+        # Codex has used both ig_*.png (≤ Jul 2026) and exec-*.png (Aug 2026+)
+        # naming — match any PNG in the session dir.
+        for f in d.glob("*.png"):
             try:
                 mtime = f.stat().st_mtime
             except OSError:
