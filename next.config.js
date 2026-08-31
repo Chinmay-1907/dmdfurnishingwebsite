@@ -5,6 +5,13 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
   outputFileTracingRoot: path.resolve(__dirname),
+  // All routes are SSG (generateStaticParams + dynamicParams=false), so the
+  // server never reads public/Images at runtime. Without this exclude, file
+  // tracing drags all ~413MB of images into the serverless bundle, which
+  // exceeds Netlify's upload limit and fails the deploy.
+  outputFileTracingExcludes: {
+    '*': ['./public/Images/**'],
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
