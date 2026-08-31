@@ -194,3 +194,10 @@ These have to happen for the on-site work to actually reach Google:
 7. Wikidata / Wikipedia entity establishment
 8. YouTube channel + project videos
 9. Reddit participation on hospitality/FF&E threads
+
+## 2026-08-31 — Netlify migration + catalog image order + dedupe (LIVE)
+- Migrated dmdfurnishing.com to CEO's own Netlify (`dmdredesign`, GitHub master auto-deploy); shipped the 51-commit backlog. Fixed 412MB serverless bundle (outputFileTracingExcludes, 56025c7). GSC: homepage re-index + sitemap resubmitted (Google favicon still shows old React logo until re-crawl).
+- Vision-classified all 3,236 catalog images (12 Haiku passes, spot-verified); reordered 319 products env-first/white-second, 202 covers fixed (8e07c1b). Decision: white-first OK where no env shot exists — flagged, not blocked.
+- Removed 124 duplicate FOA variant products (91 collection groups, 759→635; quarantined reversibly in .staging-foa/quarantine_dedupe.xml; 124 redirects wired via redirects-dedupe.json) (6ded77c). Verified live: redirects 308, sitemap 823→699.
+- CodeRabbit (1 run sample): 3 minor — 2 skipped (one-shot scripts, already executed), 1 open: stale variant suffixes in 17 renamed products' alt text.
+- Pending: 930-render Codex batch (CEO hold); FOA gaps 41 env / 310 white (pending_generation.json); About-page founder block (awaiting title wording + photo file); 88 dependabot alerts (likely stale CRA ghosts, re-check).
