@@ -1,4 +1,5 @@
 const path = require('path');
+const dedupeRedirects = require('./redirects-dedupe.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -31,6 +32,11 @@ const nextConfig = {
         destination: '/contact#schedule',
         permanent: true,
       },
+      ...dedupeRedirects.map((r) => ({
+        source: r.source,
+        destination: r.destination,
+        permanent: true,
+      })),
     ];
   },
   async headers() {
