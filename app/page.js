@@ -205,7 +205,7 @@ export default function HomePage() {
           <div className={styles.heroRow}>
             <p className={styles.lede} data-speakable="lede">
               Every piece built to your finish samples, hardware selections, and dimension drawings.<br />
-              From 20 guestrooms to a full property installation, we handle the entire project.
+              From a single custom closet to a full hotel installation, we handle the entire project.
             </p>
             <div className={styles.ctaRow}>
               <Link href="/contact#schedule" className={styles.primaryCta}>

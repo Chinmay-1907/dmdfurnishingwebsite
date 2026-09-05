@@ -189,6 +189,7 @@
 
 .heroRow .lede {
   max-width: 52ch;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .heroRow .ctaRow {
