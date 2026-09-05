@@ -11,10 +11,10 @@ import styles from './page.module.css';
 
 const heroImages = [
   { src: '/Images/hero/hero-01.jpg', alt: 'Hotel king guestroom with custom walnut casegoods, channel-tufted upholstered headboard wall and brass reading sconces by DMD Furnishing' },
-  { src: '/Images/hero/hero-02.jpg', alt: 'Boutique hotel restaurant with custom oak and leather banquettes, bentwood dining chairs and marble-top tables by DMD Furnishing' },
+  { src: '/Images/hero/hero-02.jpg', alt: 'Sunlit boutique hotel breakfast room with custom light-oak banquettes, boucle dining chairs and marble-top tables by DMD Furnishing' },
   { src: '/Images/hero/hero-03.jpg', alt: 'Hotel lobby social lounge with custom boucle and cognac leather lounge chairs around a solid walnut cocktail table by DMD Furnishing' },
-  { src: '/Images/hero/hero-04.jpg', alt: 'Hotel bar with a long walnut bar top, brass foot rail and leather-upholstered bar stools by DMD Furnishing' },
-  { src: '/Images/hero/hero-05.jpg', alt: 'Hotel rooftop terrace at dusk with custom powder-coated aluminium lounge seating, teak side tables and a fire table by DMD Furnishing' },
+  { src: '/Images/hero/hero-04.jpg', alt: 'Bright hotel lobby lounge with a custom linen sofa, camel leather armchairs, oak coffee table and brass shelving by DMD Furnishing' },
+  { src: '/Images/hero/hero-05.jpg', alt: 'Hotel rooftop terrace at midday with custom white powder-coated aluminium lounge seating, teak tables and olive-tree planters by DMD Furnishing' },
   { src: '/Images/hero/hero-06.jpg', alt: 'Extended-stay hotel suite living area with a custom walnut slat media wall, linen sectional and round oak dining table by DMD Furnishing' },
 ];
 
@@ -248,7 +248,7 @@ export default function HomePage() {
       {/* ── 2. Brand marquee ── */}
       <div className={styles.marquee} aria-hidden="true">
         <div className={styles.marqueeTrack}>
-          {[0, 1, 2].map((copy) => (
+          {[0, 1].map((copy) => (
             marqueeItems.map(({ brand, town }, i) => (
               <span key={`${copy}-${i}`} className={styles.marqueeItem}>
                 <b>{brand}</b> {town && <span>— {town}</span>}

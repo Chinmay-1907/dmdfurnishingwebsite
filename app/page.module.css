@@ -64,19 +64,13 @@
   background: #09090b;
 }
 
-.heroOverlay {
-  background:
-    linear-gradient(180deg, rgba(9, 9, 11, 0.45) 0%, rgba(9, 9, 11, 0.1) 35%, rgba(9, 9, 11, 0.4) 65%, rgba(9, 9, 11, 0.94) 100%),
-    linear-gradient(90deg, rgba(9, 9, 11, 0.7) 0%, rgba(9, 9, 11, 0.3) 50%, rgba(9, 9, 11, 0.05) 100%);
-}
-
+/* Option A (CEO 2026-09-05): lighter hero. Daylight photos show through;
+   shade only where the off-white type sits (top-left band + stats row). */
+.heroOverlay,
 :global([data-theme='light']) .heroOverlay {
-  background: linear-gradient(
-    90deg,
-    rgba(9, 9, 11, 0.78) 0%,
-    rgba(9, 9, 11, 0.45) 55%,
-    rgba(20, 18, 14, 0.18) 100%
-  );
+  background:
+    linear-gradient(180deg, rgba(20, 18, 14, 0.34) 0%, rgba(20, 18, 14, 0.12) 35%, rgba(20, 18, 14, 0.24) 65%, rgba(20, 18, 14, 0.68) 100%),
+    linear-gradient(90deg, rgba(20, 18, 14, 0.6) 0%, rgba(20, 18, 14, 0.34) 50%, rgba(20, 18, 14, 0.04) 100%);
 }
 
 .heroImage {
@@ -516,15 +510,19 @@
 
 /* ─── Brand marquee ─────────────────────────────────────────────────────── */
 
+/* Ported 1:1 from redesign-v3 (.marquee in v3 globals.css + page.module.css).
+   v3 tokens inlined: --ink-2 #171c24, --text-on-ink-2/3, --gold-bright.
+   Font-size in px: v3 is 0.72rem at a 16px root; this site's root is 90%. */
 .marquee {
   overflow: hidden;
   white-space: nowrap;
   padding: 14px 0;
-  background: #121317;
+  background: #171c24;
   color: rgba(243, 239, 230, 0.7);
   border-top: 1px solid rgba(201, 162, 95, 0.25);
   border-bottom: 1px solid rgba(201, 162, 95, 0.25);
-  font-size: 0.74rem;
+  font-family: var(--font-mono), 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  font-size: 11.52px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -534,7 +532,7 @@
   display: inline-flex;
   gap: 48px;
   padding-right: 48px;
-  animation: marquee 45s linear infinite;
+  animation: marquee 60s linear infinite;
   will-change: transform;
 }
 
@@ -543,20 +541,20 @@
 }
 
 .marqueeItem b {
-  font-weight: 600;
-  color: var(--color-gold);
+  font-weight: 500;
+  color: #d7b676;
 }
 
 .marqueeItem::after {
   content: '·';
   margin-left: 48px;
-  color: rgba(243, 239, 230, 0.4);
+  color: rgba(243, 239, 230, 0.48);
 }
 
-/* Track holds 3 copies of the list; one copy = one third. */
+/* Track holds 2 copies of the list; one copy = one half (v3). */
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-33.333%); }
+  to { transform: translateX(-50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1463,9 +1461,9 @@
   :global([data-theme='light']) .heroOverlay {
     background: linear-gradient(
       180deg,
-      rgba(9, 9, 11, 0.82) 0%,
-      rgba(9, 9, 11, 0.68) 55%,
-      rgba(9, 9, 11, 0.52) 100%
+      rgba(20, 18, 14, 0.55) 0%,
+      rgba(20, 18, 14, 0.42) 55%,
+      rgba(20, 18, 14, 0.5) 100%
     );
   }
 

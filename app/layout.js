@@ -1,6 +1,6 @@
 import './globals.css';
 import Script from 'next/script';
-import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
+import { JetBrains_Mono, Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import JsonLd from '../components/JsonLd';
@@ -35,6 +35,14 @@ const sourceSans = Source_Sans_3({
   weight: ['400', '500', '600', '700'],
   display: 'optional',
   variable: '--font-sans',
+});
+
+// v3 spec voice: home hero brand marquee (ported from redesign-v3).
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'optional',
+  variable: '--font-mono',
 });
 
 export const metadata = {
@@ -84,7 +92,7 @@ export default function RootLayout({ children }) {
   const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
   return (
-    <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${sourceSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${sourceSans.variable} ${mono.variable}`}>
       <head>
         {/* Anti-FOUC: resolve and apply the theme attribute synchronously,
             BEFORE first paint. Without this, every visit would briefly show
