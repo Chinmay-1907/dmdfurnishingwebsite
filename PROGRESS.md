@@ -201,3 +201,10 @@ These have to happen for the on-site work to actually reach Google:
 - Removed 124 duplicate FOA variant products (91 collection groups, 759→635; quarantined reversibly in .staging-foa/quarantine_dedupe.xml; 124 redirects wired via redirects-dedupe.json) (6ded77c). Verified live: redirects 308, sitemap 823→699.
 - CodeRabbit (1 run sample): 3 minor — 2 skipped (one-shot scripts, already executed), 1 open: stale variant suffixes in 17 renamed products' alt text.
 - Pending: 930-render Codex batch (CEO hold); FOA gaps 41 env / 310 white (pending_generation.json); About-page founder block (awaiting title wording + photo file); 88 dependabot alerts (likely stale CRA ghosts, re-check).
+
+## 2026-09-05 — Home hero refresh (branch `hero-refresh-2026-09-05`, worktree dmdfurnishingwebsite-live, LOCAL ONLY)
+- Ported the v3 redesign hero onto the production homepage without touching the header/mega menu: stacked headline in the v3 font/size (Playfair 500, flat gold D/M/D initials), tagline kept in the site sans, lede + two buttons in a bottom row, corner marks, darker bottom scrim, stats row moved inside the hero, brand marquee under it. Header 90/75px -> 84/68px. Commit e172938.
+- Six new Codex-rendered hero photos (`public/Images/hero/hero-01..06.jpg`, 1920px, all under 350 KB) replace the four old slides; crossfade re-timed to 42 s for six slides. Old images untouched (still used by metadata/schema).
+- Decision: "4 States" stat replaced by a data-driven `projects.length` ("Properties furnished, Florida to Maine") — only 5 in projects.xml, so it reads small; CEO to supply a real lifetime count to hardcode. No other numbers invented.
+- Review: three localhost tabs for the CEO (live, :3100 redesign reference, :3000 working copy). CodeRabbit run in progress at close.
+- Next: CEO said hero should be taller so the stats sit below the fold (12vh top pad + bigger stats gap) — waiting on "go"; then CEO decides push (master auto-deploys Netlify). v3 redesign branch remains parked, untouched.
