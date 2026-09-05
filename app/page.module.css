@@ -17,12 +17,39 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
+  isolation: isolate;
   display: flex;
-  align-items: center;
-  padding: 96px 24px 72px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(var(--header-height) + 6vh) 24px 0;
   margin-top: calc(-1 * var(--header-height));
+}
+
+/* Corner registration marks (from the v3 hero) */
+.markTL,
+.markBR {
+  position: absolute;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  border: 0 solid rgba(243, 239, 230, 0.6);
+  pointer-events: none;
+}
+
+.markTL {
+  top: calc(var(--header-height) + 18px);
+  left: 24px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.markBR {
+  bottom: 18px;
+  right: 24px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
 }
 
 .heroMedia,
@@ -38,12 +65,9 @@
 }
 
 .heroOverlay {
-  background: linear-gradient(
-    90deg,
-    rgba(9, 9, 11, 0.88) 0%,
-    rgba(9, 9, 11, 0.55) 50%,
-    rgba(9, 9, 11, 0.3) 100%
-  );
+  background:
+    linear-gradient(180deg, rgba(9, 9, 11, 0.45) 0%, rgba(9, 9, 11, 0.1) 35%, rgba(9, 9, 11, 0.4) 65%, rgba(9, 9, 11, 0.94) 100%),
+    linear-gradient(90deg, rgba(9, 9, 11, 0.7) 0%, rgba(9, 9, 11, 0.3) 50%, rgba(9, 9, 11, 0.05) 100%);
 }
 
 :global([data-theme='light']) .heroOverlay {
@@ -62,7 +86,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: heroFade 28s infinite;
+  animation: heroFade 42s infinite; /* 6 slides x 7s (HeroCarousel sets delay = index * 7s) */
 }
 
 /* First slide is the static base layer: visible from first paint (it is the
@@ -85,21 +109,26 @@
 
 .heroContent h1 {
   margin: 0;
-  max-width: 11ch;
+  display: flex;
+  flex-direction: column;
+  max-width: 12ch;
   font-size: var(--hero-h1-home);
-  line-height: 0.95;
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
   color: #F3EFE6;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* globals.css paints every <span> with the body colour; the stacked lines are spans */
+.heroContent h1 > span {
+  color: inherit;
 }
 
 /* Gradient on text reads editorial in dark mode. In light mode (where the
    hero overlay is lighter at the right), we keep it visible by using a
    warmer gradient that still sits on the dark left portion. */
 .goldLetter {
-  background: linear-gradient(135deg, #f5d98a, #c9a25f, #a67c2e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #d7b676;
 }
 
 /* ─── Eyebrow ───────────────────────────────────────────────────────────── */
@@ -148,6 +177,23 @@
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+}
+
+/* Hero: lede left, buttons right, both bottom-aligned (v3 layout) */
+.heroRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px clamp(32px, 6vw, 96px);
+  align-items: end;
+}
+
+.heroRow .lede {
+  max-width: 52ch;
+}
+
+.heroRow .ctaRow {
+  margin-top: 0;
+  justify-content: flex-end;
 }
 
 .center {
@@ -406,12 +452,13 @@
 /* ─── Trust Bar ────────────────────────────────────────────────────────── */
 
 .trustBar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 24px;
-  border-top: 1px solid rgba(201, 169, 110, 0.1);
-  border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: min(1120px, calc(100% - 48px));
+  margin: clamp(40px, 6vw, 72px) auto 0;
+  padding: 0 24px;
+  border-top: 1px solid rgba(243, 239, 230, 0.18);
   animation: trustReveal 1s ease 0.3s both;
 }
 
@@ -427,37 +474,94 @@
 }
 
 .trustStats {
-  display: flex;
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .trustStat {
-  text-align: center;
-  padding: 0 36px;
+  text-align: left;
+  padding: 22px 20px 34px 0;
+  border-right: 1px solid rgba(243, 239, 230, 0.12);
 }
 
 .trustStat + .trustStat {
-  border-left: 1px solid rgba(201, 169, 110, 0.15);
+  padding-left: 22px;
 }
 
+.trustStat:last-child {
+  border-right: 0;
+}
+
+/* Stats sit on the dark hero in both themes, so colours are fixed off-white. */
 .trustStatNumber {
   display: block;
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  font-weight: 700;
-  /* Bound to the first-class theme token (dark: #fff, light: near-black) so the
-     counters always flip with the theme — never dark-on-dark / light-on-light. */
-  color: var(--heading-color);
-  line-height: 1.1;
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-weight: 500;
+  color: #F3EFE6;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .trustStatLabel {
   display: block;
-  margin-top: 6px;
-  font-size: 0.8rem;
-  color: var(--page-dark-muted);
-  letter-spacing: 0.05em;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  color: rgba(243, 239, 230, 0.55);
+  letter-spacing: 0.12em;
+  line-height: 1.5;
   text-transform: uppercase;
+}
+
+/* ─── Brand marquee ─────────────────────────────────────────────────────── */
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 14px 0;
+  background: #121317;
+  color: rgba(243, 239, 230, 0.7);
+  border-top: 1px solid rgba(201, 162, 95, 0.25);
+  border-bottom: 1px solid rgba(201, 162, 95, 0.25);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  gap: 48px;
+  padding-right: 48px;
+  animation: marquee 45s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+.marqueeItem b {
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.marqueeItem::after {
+  content: '·';
+  margin-left: 48px;
+  color: rgba(243, 239, 230, 0.4);
+}
+
+/* Track holds 3 copies of the list; one copy = one third. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
 }
 
 /* ─── Product Preview Grid ─────────────────────────────────────────────── */
@@ -1262,20 +1366,21 @@
 
 /* ─── Animations ────────────────────────────────────────────────────────── */
 
+/* One slide window = 1/6 of the loop (16.67%); ~1.4s fade in, ~1.4s fade out. */
 @keyframes heroFade {
   0% {
     opacity: 0;
   }
 
-  5% {
+  3.3% {
     opacity: 1;
   }
 
-  20% {
+  16.67% {
     opacity: 1;
   }
 
-  25%,
+  20%,
   100% {
     opacity: 0;
   }
@@ -1298,9 +1403,28 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .heroRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heroRow .ctaRow {
+    justify-content: flex-start;
+  }
+
   .trustStats {
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trustStat:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .trustStat:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .trustStat:nth-child(n + 3) {
+    border-top: 1px solid rgba(243, 239, 230, 0.12);
   }
 
   .productGrid {
@@ -1324,7 +1448,11 @@
 
 @media (max-width: 800px) {
   .hero {
-    padding-top: 84px;
+    padding-top: calc(var(--header-height-compact) + 4vh);
+  }
+
+  .markTL {
+    top: calc(var(--header-height-compact) + 14px);
   }
 
   /* Mobile: hero text spans the full width, so the desktop left-to-right
@@ -1360,22 +1488,12 @@
   }
 
   .trustBar {
-    padding: 28px 16px;
-  }
-
-  .trustStats {
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
+    max-width: 100%;
+    padding: 0;
   }
 
   .trustStat {
-    flex: 0 0 calc(50% - 8px);
-    padding: 8px 0;
-  }
-
-  .trustStat + .trustStat {
-    border-left: none;
+    padding: 16px 12px 22px 0;
   }
 
   .ctaContact {

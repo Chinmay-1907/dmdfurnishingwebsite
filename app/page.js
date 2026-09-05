@@ -10,10 +10,12 @@ import { getAllProjects } from '../lib/projects';
 import styles from './page.module.css';
 
 const heroImages = [
-  { src: '/Images/Tailored_Guestroom_Collections.jpg', alt: 'DMD Furnishing custom hotel guestroom casegoods with HPL desks and upholstered headboards in a Foxboro Massachusetts project' },
-  { src: '/Images/Elevated_Restaurant_Seating.jpg', alt: 'Custom commercial restaurant seating with wood dining chairs and upholstered banquettes by DMD Furnishing' },
-  { src: '/Images/Modern_Social_Lounges.jpg', alt: 'Modern hotel lobby social lounge with custom lounge chairs and occasional tables manufactured by DMD Furnishing' },
-  { src: '/Images/Outdoor.jpg', alt: 'Commercial outdoor patio furniture with powder-coated frames for hotel and restaurant terraces by DMD Furnishing' },
+  { src: '/Images/hero/hero-01.jpg', alt: 'Hotel king guestroom with custom walnut casegoods, channel-tufted upholstered headboard wall and brass reading sconces by DMD Furnishing' },
+  { src: '/Images/hero/hero-02.jpg', alt: 'Boutique hotel restaurant with custom oak and leather banquettes, bentwood dining chairs and marble-top tables by DMD Furnishing' },
+  { src: '/Images/hero/hero-03.jpg', alt: 'Hotel lobby social lounge with custom boucle and cognac leather lounge chairs around a solid walnut cocktail table by DMD Furnishing' },
+  { src: '/Images/hero/hero-04.jpg', alt: 'Hotel bar with a long walnut bar top, brass foot rail and leather-upholstered bar stools by DMD Furnishing' },
+  { src: '/Images/hero/hero-05.jpg', alt: 'Hotel rooftop terrace at dusk with custom powder-coated aluminium lounge seating, teak side tables and a fire table by DMD Furnishing' },
+  { src: '/Images/hero/hero-06.jpg', alt: 'Extended-stay hotel suite living area with a custom walnut slat media wall, linen sectional and round oak dining table by DMD Furnishing' },
 ];
 
 const whyDmd = [
@@ -53,9 +55,16 @@ export function generateMetadata() {
   };
 }
 
+function projectTown(name) {
+  // "Quality Inn - Gainesville, FL" → ["Quality Inn", "Gainesville, FL"]
+  const [brand, town] = name.split(' - ');
+  return { brand: brand?.trim() || name, town: town?.trim() || '' };
+}
+
 export default function HomePage() {
   const projects = getAllProjects();
   const places = getAllPlaces();
+  const marqueeItems = projects.map((p) => projectTown(p.name));
   const totalProducts = places.reduce(
     (sum, place) =>
       sum +
@@ -183,45 +192,69 @@ export default function HomePage() {
           />
         </div>
         <div className={styles.heroOverlay} />
+        <span className={styles.markTL} aria-hidden="true" />
+        <span className={styles.markBR} aria-hidden="true" />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Custom Hospitality FF&amp;E · Built to Spec · Installed Nationwide</p>
-          <h1><span className={styles.goldLetter}>D</span>esigned. <span className={styles.goldLetter}>M</span>anufactured. <span className={styles.goldLetter}>D</span>elivered.</h1>
+          <h1>
+            <span><span className={styles.goldLetter}>D</span>esigned.</span>
+            <span><span className={styles.goldLetter}>M</span>anufactured.</span>
+            <span><span className={styles.goldLetter}>D</span>elivered.</span>
+          </h1>
           <p className={styles.heroTagline}>Custom FF&amp;E for Hotels, Restaurants &amp; Commercial Spaces</p>
-          <p className={styles.lede} data-speakable="lede">
-            Every piece built to your finish samples, hardware selections, and dimension drawings.<br />
-            From 20 guestrooms to a full property installation, we handle the entire project.
-          </p>
-          <div className={styles.ctaRow}>
-            <Link href="/contact#schedule" className={styles.primaryCta}>
-              Request a Project Consultation
-            </Link>
+          <div className={styles.heroRow}>
+            <p className={styles.lede} data-speakable="lede">
+              Every piece built to your finish samples, hardware selections, and dimension drawings.<br />
+              From 20 guestrooms to a full property installation, we handle the entire project.
+            </p>
+            <div className={styles.ctaRow}>
+              <Link href="/contact#schedule" className={styles.primaryCta}>
+                Request a Project Consultation
+              </Link>
+              <Link href="/projects" className={styles.secondaryCta}>
+                See Installed Work
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Stats row (bottom of hero) ── */}
+        <div className={styles.trustBar}>
+          <div className={styles.trustStats}>
+            {/* No hardcoded fallback: show the counter only when the number is
+                actually derived from project data ("we do not invent statistics"). */}
+            {totalRooms > 0 && (
+              <div className={styles.trustStat}>
+                <CountUp end={totalRooms} suffix="+" className={styles.trustStatNumber} />
+                <span className={styles.trustStatLabel}>Guestrooms delivered &amp; installed</span>
+              </div>
+            )}
+            <div className={styles.trustStat}>
+              <CountUp end={projects.length} className={styles.trustStatNumber} />
+              <span className={styles.trustStatLabel}>Properties furnished, Florida to Maine</span>
+            </div>
+            <div className={styles.trustStat}>
+              <CountUp end={places.length} className={styles.trustStatNumber} />
+              <span className={styles.trustStatLabel}>Sectors, hotels to healthcare</span>
+            </div>
+            <div className={styles.trustStat}>
+              <CountUp end={totalProducts} suffix="+" className={styles.trustStatNumber} />
+              <span className={styles.trustStatLabel}>Catalog products, every one built to spec</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── 2. Trust Bar — Animated Stats ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustStats}>
-          {/* No hardcoded fallback: show the counter only when the number is
-              actually derived from project data ("we do not invent statistics"). */}
-          {totalRooms > 0 && (
-            <div className={styles.trustStat}>
-              <CountUp end={totalRooms} suffix="+" className={styles.trustStatNumber} />
-              <span className={styles.trustStatLabel}>Rooms Delivered and Installed</span>
-            </div>
-          )}
-          <div className={styles.trustStat}>
-            <span className={styles.trustStatNumber}>4 States</span>
-            <span className={styles.trustStatLabel}>Full-Property Installs in FL &middot; ME &middot; MD &middot; MA</span>
-          </div>
-          <div className={styles.trustStat}>
-            <CountUp end={places.length} suffix=" Sectors" className={styles.trustStatNumber} />
-            <span className={styles.trustStatLabel}>Hotels to Healthcare</span>
-          </div>
-          <div className={styles.trustStat}>
-            <span className={styles.trustStatNumber}>Nationwide</span>
-            <span className={styles.trustStatLabel}>Delivery &amp; Installation</span>
-          </div>
+      {/* ── 2. Brand marquee ── */}
+      <div className={styles.marquee} aria-hidden="true">
+        <div className={styles.marqueeTrack}>
+          {[0, 1, 2].map((copy) => (
+            marqueeItems.map(({ brand, town }, i) => (
+              <span key={`${copy}-${i}`} className={styles.marqueeItem}>
+                <b>{brand}</b> {town && <span>— {town}</span>}
+              </span>
+            ))
+          ))}
         </div>
       </div>
 
