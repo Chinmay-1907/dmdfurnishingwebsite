@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: calc(var(--header-height) + 6vh) 24px 0;
+  padding: calc(var(--header-height) + 12vh) 24px 0;
   margin-top: calc(-1 * var(--header-height));
 }
 
@@ -456,7 +456,7 @@
   z-index: 1;
   width: 100%;
   max-width: min(1120px, calc(100% - 48px));
-  margin: clamp(40px, 6vw, 72px) auto 0;
+  margin: clamp(56px, 8vw, 104px) auto 0;
   padding: 0 24px;
   border-top: 1px solid rgba(243, 239, 230, 0.18);
   animation: trustReveal 1s ease 0.3s both;

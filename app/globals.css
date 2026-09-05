@@ -23,7 +23,9 @@
      --hero-h1-home is a touch larger since the home hero is the
      brand moment; everywhere else uses --hero-h1. */
   --hero-h1: clamp(2.4rem, 5.2vw, 4rem);
-  --hero-h1-home: clamp(2.9rem, 7.4vw, 6.4rem);
+  /* v3 display size (2.9rem..6.4rem at a 16px root). Written in px because this
+     site sets html { font-size: 90% }, which would shrink the rem bounds. */
+  --hero-h1-home: clamp(46.4px, 7.4vw, 102.4px);
   --hero-lede: clamp(1rem, 1.6vw, 1.18rem);
   --hero-tagline: clamp(1.05rem, 1.9vw, 1.35rem);
   --section-h2: clamp(1.8rem, 3.6vw, 2.8rem);
