@@ -55,16 +55,9 @@ export function generateMetadata() {
   };
 }
 
-function projectTown(name) {
-  // "Quality Inn - Gainesville, FL" → ["Quality Inn", "Gainesville, FL"]
-  const [brand, town] = name.split(' - ');
-  return { brand: brand?.trim() || name, town: town?.trim() || '' };
-}
-
 export default function HomePage() {
   const projects = getAllProjects();
   const places = getAllPlaces();
-  const marqueeItems = projects.map((p) => projectTown(p.name));
   const totalProducts = places.reduce(
     (sum, place) =>
       sum +
@@ -245,18 +238,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. Brand marquee ── */}
-      <div className={styles.marquee} aria-hidden="true">
-        <div className={styles.marqueeTrack}>
-          {[0, 1].map((copy) => (
-            marqueeItems.map(({ brand, town }, i) => (
-              <span key={`${copy}-${i}`} className={styles.marqueeItem}>
-                <b>{brand}</b> {town && <span>— {town}</span>}
-              </span>
-            ))
-          ))}
-        </div>
-      </div>
 
       {/* ── 3. Who We Serve — Merged Visual Grid ── */}
       <section className={styles.sectionWide}>
