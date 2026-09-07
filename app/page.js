@@ -197,9 +197,9 @@ export default function HomePage() {
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Custom Hospitality FF&amp;E · Built to Spec · Installed Nationwide</p>
           <h1>
-            <span><span className={styles.goldLetter}>D</span>esigned.</span>
-            <span><span className={styles.goldLetter}>M</span>anufactured.</span>
-            <span><span className={styles.goldLetter}>D</span>elivered.</span>
+            <span><span className={styles.goldLetter}>D</span>esign.</span>
+            <span><span className={styles.goldLetter}>M</span>anufacture.</span>
+            <span><span className={styles.goldLetter}>D</span>eliver.</span>
           </h1>
           <p className={styles.heroTagline}>Custom FF&amp;E for Hotels, Restaurants &amp; Commercial Spaces</p>
           <div className={styles.heroRow}>

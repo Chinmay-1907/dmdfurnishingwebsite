@@ -182,8 +182,9 @@
 }
 
 .heroRow .lede {
-  max-width: 52ch;
-  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  max-width: none;
+  font-size: clamp(0.82rem, 1.05vw, 0.9rem);
+  white-space: nowrap; /* each sentence on its own single line (the <br />) */
 }
 
 .heroRow .ctaRow {
@@ -543,6 +544,17 @@
 .marqueeItem b {
   font-weight: 500;
   color: #d7b676;
+}
+
+/* globals.css paints every <div> and <span> --text-primary (near-black), so the
+   track div, the item span and the town span ("— Ogunquit, ME") all went dark
+   on the dark bar. Set the bar colour explicitly on the item; the town inherits. */
+.marqueeItem {
+  color: rgba(243, 239, 230, 0.7);
+}
+
+.marqueeItem span {
+  color: inherit;
 }
 
 .marqueeItem::after {
@@ -1408,6 +1420,10 @@
 
   .heroRow .ctaRow {
     justify-content: flex-start;
+  }
+
+  .heroRow .lede {
+    white-space: normal; /* narrow screens: let the sentences wrap again */
   }
 
   .trustStats {
