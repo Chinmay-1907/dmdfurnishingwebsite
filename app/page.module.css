@@ -15,15 +15,18 @@
 
 /* ─── Hero ─────────────────────────────────────────────────────────────── */
 
+/* CEO 2026-09-07: the stats row must sit just below the first screen, so it
+   is not visible (and its counters do not run) until the visitor scrolls.
+   The hero text keeps its old position: the first screen = header offset +
+   text block + the same reserve the stats used to occupy. The stats then
+   start exactly at the fold. */
 .hero {
+  --hero-stats-reserve: clamp(200px, 30vh, 260px);
+  --hero-top-offset: calc(var(--header-height) + 12vh);
   position: relative;
-  min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: calc(var(--header-height) + 12vh) 24px 0;
+  padding: var(--hero-top-offset) 24px 0;
   margin-top: calc(-1 * var(--header-height));
 }
 
@@ -97,6 +100,10 @@
   z-index: 1;
   width: 100%;
   max-width: min(1120px, calc(100% - 48px));
+  min-height: calc(100svh - var(--hero-top-offset) - var(--hero-stats-reserve));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 0 24px;
   margin: 0 auto;
 }
@@ -447,27 +454,18 @@
 
 /* ─── Trust Bar ────────────────────────────────────────────────────────── */
 
+/* Top edge lands on the fold (see .hero). CountUp's IntersectionObserver
+   starts the counters only once 30% of a number is scrolled into view. */
 .trustBar {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: min(1120px, calc(100% - 48px));
-  margin: clamp(56px, 8vw, 104px) auto 0;
+  margin: var(--hero-stats-reserve) auto 0;
   padding: 0 24px;
   border-top: 1px solid rgba(243, 239, 230, 0.18);
-  animation: trustReveal 1s ease 0.3s both;
 }
 
-@keyframes trustReveal {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .trustStats {
   display: grid;
@@ -1463,7 +1461,8 @@
 
 @media (max-width: 800px) {
   .hero {
-    padding-top: calc(var(--header-height-compact) + 4vh);
+    --hero-top-offset: calc(var(--header-height-compact) + 4vh);
+    --hero-stats-reserve: clamp(120px, 20vh, 180px);
   }
 
   .markTL {
