@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+  Netlify Forms definition for the contact page. Netlify's build-time form
+  detection reads this static file; the React form in components/contact/
+  ContactPage.js POSTs url-encoded data to /__forms.html with form-name=contact.
+  Field names here must match what the client sends, or Netlify drops them.
+  Not a user-facing page.
+-->
+<html lang="en">
+  <head><meta charset="utf-8" /><title>DMD Furnishing contact form</title></head>
+  <body>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="tel" name="phone" />
+      <input type="text" name="projectCategory" />
+      <textarea name="message"></textarea>
+      <input type="text" name="roomCount" />
+      <input type="text" name="roomTypes" />
+      <input type="text" name="projectScope" />
+      <input type="text" name="seatingCapacity" />
+      <input type="text" name="furnitureNeeded" />
+      <input type="text" name="restaurantType" />
+      <input type="text" name="spaceType" />
+      <input type="text" name="teamSize" />
+      <input type="text" name="areaType" />
+      <input type="text" name="website" />
+    </form>
+  </body>
+</html>
