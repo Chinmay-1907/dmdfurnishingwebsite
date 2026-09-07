@@ -141,7 +141,7 @@ export default function AboutPage() {
         <div className={styles.diffHeader}>
           <p className={styles.eyebrow}>Leadership</p>
           <h2>Who runs DMD Furnishing?</h2>
-          <p>Family owned business led and managed by Darshan Brahmbhatt.</p>
+          <p>DMD Furnishing is a family-owned business, led by founder and CEO Darshan Brahmbhatt.</p>
         </div>
         <div className={styles.founderCard}>
           <div className={styles.founderPhoto}>
