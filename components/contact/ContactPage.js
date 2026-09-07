@@ -33,10 +33,7 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
   const [step, setStep] = useState('form');
   const [submitStatus, setSubmitStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const [infoMessage, setInfoMessage] = useState('');
   const [email, setEmail] = useState('');
-  const [otpCode, setOtpCode] = useState('');
-  const [verificationToken, setVerificationToken] = useState('');
   const [honeypot, setHoneypot] = useState('');
   const [mapLoaded, setMapLoaded] = useState(false);
   const [formData, setFormData] = useState({
@@ -152,102 +149,44 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
     });
   }
 
-  // Requests the 6-digit email code. Called on form submit AND by "Resend Code".
-  // The full lead details ride along so the backend's content checks run up front.
-  async function requestOtp() {
-    if (submitStatus === 'sending') return false;
-    setSubmitStatus('sending');
-    setErrorMessage('');
-    setInfoMessage('');
-    try {
-      if (!email || !EMAIL_PATTERN.test(email)) throw new Error('Please enter a valid email address.');
-      const phoneDigits = formData.phone.replace(/[^0-9]/g, '');
-      if (phoneDigits.length < 7 || phoneDigits.length > 15) throw new Error('Please enter a valid phone number.');
-      const recaptchaToken = await getRecaptchaToken('request_otp');
-      const response = await fetch('/api/request-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          name: formData.name,
-          company: formData.company,
-          phone: formData.phone,
-          project: formData.projectCategory,
-          message: formData.message,
-          honeypot,
-          subject: 'Consultation Verification',
-          recaptchaToken,
-        }),
-      });
-      const json = await response.json().catch(() => ({}));
-      if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Failed to send verification code.');
-      setVerificationToken(json.token || '');
-      setOtpCode('');
-      setStep('otp');
-      setSubmitStatus('idle');
-      return true;
-    } catch (error) {
-      setErrorMessage(error.message);
-      setSubmitStatus('error');
-      return false;
-    }
-  }
-
+  // Submissions are stored by Netlify Forms (see public/__forms.html), so a
+  // lead is never lost to a mail-server hiccup. The SMTP email to sales@ is a
+  // best-effort extra on top: Netlify's own notification is the reliable one.
   async function handleFormSubmit(event) {
-    event.preventDefault();
-    await requestOtp();
-  }
-
-  async function handleResendCode() {
-    const sent = await requestOtp();
-    if (sent) setInfoMessage('A new code is on its way to your inbox.');
-  }
-
-  function handleEditDetails() {
-    setStep('form');
-    setOtpCode('');
-    setErrorMessage('');
-    setInfoMessage('');
-    setSubmitStatus('idle');
-  }
-
-  // Single click completes the submission: verify the code, then send the message.
-  async function handleVerifyAndSend(event) {
     event.preventDefault();
     if (submitStatus === 'sending') return;
     setSubmitStatus('sending');
     setErrorMessage('');
-    setInfoMessage('');
     try {
-      const verifyToken = await getRecaptchaToken('verify_otp');
-      const verifyResponse = await fetch('/api/verify-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, code: otpCode, token: verificationToken, recaptchaToken: verifyToken }),
-      });
-      const verifyJson = await verifyResponse.json().catch(() => ({}));
-      if (!verifyResponse.ok || (verifyJson?.success !== true && verifyJson?.success !== 'true')) throw new Error(verifyJson?.error || 'Invalid verification code.');
+      if (!email || !EMAIL_PATTERN.test(email)) throw new Error('Please enter a valid email address.');
+      const phoneDigits = formData.phone.replace(/[^0-9]/g, '');
+      if (phoneDigits.length < 7 || phoneDigits.length > 15) throw new Error('Please enter a valid phone number.');
 
-      const recaptchaToken = await getRecaptchaToken('submit_consultation');
-      const payload = {
-        name: formData.name, company: formData.company, email, phone: formData.phone,
-        project: formData.projectCategory, message: formData.message,
-        roomCount: formData.roomCount, roomTypes: formData.roomTypes,
-        projectScope: formData.projectScope, seatingCapacity: formData.seatingCapacity,
-        furnitureNeeded: formData.furnitureNeeded, restaurantType: formData.restaurantType,
-        spaceType: formData.spaceType, teamSize: formData.teamSize, areaType: formData.areaType,
-        subject: `Consultation Request: ${formData.company || formData.name}`,
-        recaptchaToken,
-      };
-      const response = await fetch('/api/send-consultation', {
+      const fields = { 'form-name': 'contact', email, website: honeypot };
+      for (const [key, value] of Object.entries(formData)) {
+        fields[key] = Array.isArray(value) ? value.join(', ') : value;
+      }
+      const response = await fetch('/__forms.html', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(fields).toString(),
       });
-      const json = await response.json().catch(() => ({}));
-      if (!response.ok || (json?.success !== true && json?.success !== 'true')) throw new Error(json?.error || 'Submission failed. Please try again.');
+      if (!response.ok) throw new Error('Submission failed. Please try again or email sales@dmdfurnishing.com.');
       setStep('success');
       setSubmitStatus('success');
+
+      const recaptchaToken = await getRecaptchaToken('submit_consultation');
+      fetch('/api/send-consultation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          email,
+          project: formData.projectCategory,
+          subject: `Consultation Request: ${formData.company || formData.name}`,
+          recaptchaToken,
+        }),
+      }).catch(() => {});
     } catch (error) {
       setErrorMessage(error.message);
       setSubmitStatus('error');
@@ -549,45 +488,8 @@ export default function ContactPage({ initialCategory = '', recaptchaSiteKey = '
                           </button>
                         </div>
                         <p className="cp-helper">
-                          We will email you a quick 6-digit code to confirm your address before your message is sent.
+                          Your message goes straight to the DMD project team at sales@dmdfurnishing.com.
                         </p>
-                        {errorMessage && <div className="cp-error">{errorMessage}</div>}
-                      </form>
-                    )}
-
-                    {step === 'otp' && (
-                      <form onSubmit={handleVerifyAndSend} className="cp-otp-panel fade-in-up" method="POST">
-                        <p className="cp-otp-text">
-                          <FaEnvelope /> We emailed a 6-digit code to <strong>{email}</strong> — enter it to send your message.
-                        </p>
-                        <div className="cp-field">
-                          <label htmlFor="otp">Verification Code <span className="cp-req">*</span></label>
-                          <input
-                            type="text"
-                            id="otp"
-                            name="otp"
-                            className="cp-otp-input"
-                            value={otpCode}
-                            onChange={(e) => setOtpCode(e.target.value)}
-                            placeholder="000000"
-                            maxLength={6}
-                            inputMode="numeric"
-                            autoComplete="one-time-code"
-                            required
-                          />
-                        </div>
-                        <div className="cp-form-actions">
-                          <button type="submit" className="cp-btn cp-btn-gold" disabled={submitStatus === 'sending'}>
-                            {submitStatus === 'sending' ? 'Verifying & Sending...' : 'Verify & Send Message'}
-                          </button>
-                          <button type="button" className="cp-btn-text" onClick={handleResendCode} disabled={submitStatus === 'sending'}>
-                            Resend Code
-                          </button>
-                          <button type="button" className="cp-btn-text" onClick={handleEditDetails} disabled={submitStatus === 'sending'}>
-                            Edit Details
-                          </button>
-                        </div>
-                        {infoMessage && <div className="cp-info-note">{infoMessage}</div>}
                         {errorMessage && <div className="cp-error">{errorMessage}</div>}
                       </form>
                     )}
