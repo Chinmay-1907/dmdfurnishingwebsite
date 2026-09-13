@@ -218,3 +218,8 @@ These have to happen for the on-site work to actually reach Google:
 - Decision: "4 States" stat replaced by a data-driven `projects.length` ("Properties furnished, Florida to Maine") — only 5 in projects.xml, so it reads small; CEO to supply a real lifetime count to hardcode. No other numbers invented.
 - Review: three localhost tabs for the CEO (live, :3100 redesign reference, :3000 working copy). CodeRabbit run in progress at close.
 - Next: CEO said hero should be taller so the stats sit below the fold (12vh top pad + bigger stats gap) — waiting on "go"; then CEO decides push (master auto-deploys Netlify). v3 redesign branch remains parked, untouched.
+
+## 2026-09-13 (later) — open-house brochures LIVE
+- /open-house merged to master via PRs #4, #5, #6 and deployed (Netlify dmdredesign). 8 brochures, 6 pages each (before/after page and manufacturing brochure dropped), lotus never sits on photos, "factory" wording replaced by shop wording, header/footer link back to the main site.
+- Static page only + 7-line next.config.js change; local `npm run build` passed before the first push.
+
