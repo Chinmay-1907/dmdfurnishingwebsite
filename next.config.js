@@ -11,7 +11,7 @@ const nextConfig = {
   // tracing drags all ~413MB of images into the serverless bundle, which
   // exceeds Netlify's upload limit and fails the deploy.
   outputFileTracingExcludes: {
-    '*': ['./public/Images/**'],
+    '*': ['./public/Images/**', './public/open-house/**'],
   },
   images: {
     remotePatterns: [
@@ -24,6 +24,11 @@ const nextConfig = {
     // card size). Any quality value passed to next/image MUST be listed
     // here or Next.js rejects it.
     qualities: [62, 75],
+  },
+  // /open-house is a static page in public/; Next does not resolve directory
+  // index files on its own, so point the bare path at the file.
+  async rewrites() {
+    return [{ source: '/open-house', destination: '/open-house/index.html' }];
   },
   async redirects() {
     return [
