@@ -1,6 +1,16 @@
 # DMD Furnishing — Website Progress
 
-Plain-English changelog of what's built, what works, what's still ahead. Last updated 2026-08-07.
+Plain-English changelog of what's built, what works, what's still ahead. Last updated 2026-09-13.
+
+---
+
+## 2026-09-13 — Open house brochure library at /open-house
+
+Branch `feat/open-house-brochures` (off master ef0061a), 5 commits, local only until the CEO pushes.
+
+- **New:** `public/open-house/index.html`, a static page with nine brochures as swipeable JPEG pages (cover grid, `?b=<slug>` deep links for per-brochure QR codes, quote button to /contact). Pages come from `~/dmd-open-house/out/*-final` via an inline JPEG export, 13 MB total.
+- **Decided:** static HTML in `public/`, not a Next route, because the pages are finished artwork and the CEO cancelled printing two days before the event. `public/open-house/**` joins the file-tracing exclude so Netlify's function bundle stays small; a `rewrites()` entry maps `/open-house` to the index file since Next does not resolve directory indexes.
+- **Next:** CEO pushes to master, then verify `/open-house`, `/open-house/?b=closets` and the quote link on a phone. QR codes in the TV loops and the printed scan card already point at this URL.
 
 ---
 
