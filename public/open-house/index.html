@@ -17,7 +17,8 @@
 
   /* library */
   #library { max-width:1100px; margin:0 auto; padding:28px 20px 60px; }
-  #library header { padding:8px 0 22px; border-bottom:1px solid var(--line); margin-bottom:26px; }
+  #library header { padding:8px 0 22px; border-bottom:1px solid var(--line); margin-bottom:26px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; }
+  .site { font-size:12px; letter-spacing:.2em; text-transform:uppercase; padding:10px 16px; border:1px solid var(--ink); white-space:nowrap; margin-top:6px; }
   #library h1 { font-size:34px; font-weight:400; margin:6px 0 4px; letter-spacing:.01em; }
   #library h1 span { display:block; font-size:15px; color:var(--grey); letter-spacing:.2em; text-transform:uppercase; margin-top:6px; }
   .rule { width:56px; height:1px; background:var(--coral); margin:14px 0 0; }
@@ -55,9 +56,12 @@
 
 <section id="library">
   <header>
-    <div class="label">Open House</div>
-    <h1 class="serif">DMD Furnishing<span>Brochures</span></h1>
-    <div class="rule"></div>
+    <div>
+      <div class="label">Open House</div>
+      <h1 class="serif">DMD Furnishing<span>Brochures</span></h1>
+      <div class="rule"></div>
+    </div>
+    <a class="site" href="https://dmdfurnishing.com/">Go to the website &#8594;</a>
   </header>
   <div class="grid" id="grid"></div>
   <footer>
@@ -65,6 +69,7 @@
     +1 (617) 223-7781 · <a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a><br>
     56 Leonard St Unit 5, Foxboro, MA 02035<br>
     <a class="cta" href="/contact?ref=open-house">Get a quote</a>
+    <a class="cta" href="https://dmdfurnishing.com/" style="margin-left:10px">Go to the website</a>
   </footer>
 </section>
 
