@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DMD Furnishing Brochures</title>
+<meta name="description" content="DMD Furnishing open house brochures: company overview, hospitality, residential, kitchens, closets, office, tables and seating, design and 3D, manufacturing.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/icon.png">
+<style>
+  :root { --paper:#f5f3ef; --ink:#3a3836; --coral:#e2a096; --grey:#8a8682; --line:#e2dfd9; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI", system-ui, -apple-system, sans-serif; -webkit-text-size-adjust:100%; }
+  a { color:inherit; text-decoration:none; }
+  .serif { font-family:Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; }
+  .label { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--grey); }
+
+  /* library */
+  #library { max-width:1100px; margin:0 auto; padding:28px 20px 60px; }
+  #library header { padding:8px 0 22px; border-bottom:1px solid var(--line); margin-bottom:26px; }
+  #library h1 { font-size:34px; font-weight:400; margin:6px 0 4px; letter-spacing:.01em; }
+  #library h1 span { display:block; font-size:15px; color:var(--grey); letter-spacing:.2em; text-transform:uppercase; margin-top:6px; }
+  .rule { width:56px; height:1px; background:var(--coral); margin:14px 0 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:22px 16px; }
+  .tile { display:block; }
+  .tile img { width:100%; aspect-ratio:2/3; object-fit:cover; display:block; background:#e9e6e0; box-shadow:0 8px 24px rgba(58,56,54,.14); transition:transform .18s ease; }
+  .tile:active img, .tile:hover img { transform:translateY(-3px); }
+  .tile .t { margin-top:10px; font-size:14px; }
+  .tile .p { font-size:11px; color:var(--grey); letter-spacing:.08em; text-transform:uppercase; margin-top:2px; }
+  #library footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--grey); line-height:1.7; }
+  #library footer a { color:var(--ink); }
+  .cta { display:inline-block; margin-top:14px; padding:12px 22px; border:1px solid var(--ink); font-size:12px; letter-spacing:.2em; text-transform:uppercase; }
+
+  /* viewer */
+  #viewer { position:fixed; inset:0; background:var(--paper); display:none; flex-direction:column; }
+  #viewer.open { display:flex; }
+  .bar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:max(10px, env(safe-area-inset-top)) 14px 10px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; }
+  .bar button, .bar a { background:none; border:0; padding:8px 6px; color:var(--ink); font:inherit; cursor:pointer; letter-spacing:inherit; text-transform:inherit; }
+  .bar .title { flex:1; text-align:center; color:var(--grey); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .pages { flex:1; display:flex; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .pages::-webkit-scrollbar { display:none; }
+  .page { flex:0 0 100%; scroll-snap-align:center; display:flex; align-items:center; justify-content:center; padding:4px 10px; }
+  .page img { max-width:100%; max-height:100%; aspect-ratio:2/3; object-fit:contain; box-shadow:0 10px 30px rgba(58,56,54,.18); background:#e9e6e0; }
+  .foot { display:flex; align-items:center; justify-content:space-between; padding:10px 14px max(12px, env(safe-area-inset-bottom)); font-size:12px; letter-spacing:.14em; text-transform:uppercase; }
+  .foot .count { color:var(--grey); }
+  .foot .nav button { background:none; border:1px solid var(--line); width:40px; height:40px; margin-left:8px; font-size:16px; color:var(--ink); cursor:pointer; }
+  .foot .nav button:disabled { opacity:.3; }
+  .foot .quote { padding:10px 16px; border:1px solid var(--ink); }
+  .hint { position:absolute; left:50%; bottom:74px; transform:translateX(-50%); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey); background:rgba(245,243,239,.9); padding:6px 12px; pointer-events:none; transition:opacity .4s; }
+  .hint.hide { opacity:0; }
+  @media (min-width:700px) { .page { padding:12px 40px; } .hint { display:none; } }
+</style>
+</head>
+<body>
+
+<section id="library">
+  <header>
+    <div class="label">Open House</div>
+    <h1 class="serif">DMD Furnishing<span>Brochures</span></h1>
+    <div class="rule"></div>
+  </header>
+  <div class="grid" id="grid"></div>
+  <footer>
+    Tap a brochure to open it. Swipe to turn pages.<br>
+    +1 (617) 223-7781 · <a href="mailto:sales@dmdfurnishing.com">sales@dmdfurnishing.com</a><br>
+    56 Leonard St Unit 5, Foxboro, MA 02035<br>
+    <a class="cta" href="/contact?ref=open-house">Get a quote</a>
+  </footer>
+</section>
+
+<section id="viewer" aria-modal="true">
+  <div class="bar">
+    <button id="back" type="button">&#8592; All brochures</button>
+    <div class="title" id="vtitle"></div>
+    <a href="/contact?ref=open-house">Quote</a>
+  </div>
+  <div class="pages" id="pages"></div>
+  <div class="hint" id="hint">Swipe to turn the page</div>
+  <div class="foot">
+    <span class="count" id="count"></span>
+    <span class="nav"><button id="prev" type="button" aria-label="Previous page">&#8249;</button><button id="next" type="button" aria-label="Next page">&#8250;</button></span>
+  </div>
+</section>
+
+<script>
+// Each brochure: slug, title, page count. Pages live at img/<slug>/NN.jpg, cover at img/<slug>/cover.jpg.
+const BOOKS = [
+  ["overview", "Company Overview", 6],
+  ["hospitality", "Hospitality", 7],
+  ["residential", "Residential", 7],
+  ["kitchens", "Kitchens & Cabinetry", 7],
+  ["closets", "Custom Closets", 7],
+  ["office", "Office", 7],
+  ["tables-seating", "Tables & Seating", 7],
+  ["design-3d", "Design & 3D", 7],
+  ["manufacturing", "Manufacturing", 7],
+];
+const grid = document.getElementById("grid");
+for (const [slug, title, n] of BOOKS) {
+  const a = document.createElement("a");
+  a.className = "tile"; a.href = "?b=" + slug;
+  a.innerHTML = `<img src="img/${slug}/cover.jpg" alt="${title} brochure cover" loading="lazy"><div class="t serif">${title}</div><div class="p">${n} pages</div>`;
+  a.addEventListener("click", e => { e.preventDefault(); open(slug, true); });
+  grid.appendChild(a);
+}
+
+const viewer = document.getElementById("viewer"), pages = document.getElementById("pages"),
+      count = document.getElementById("count"), vtitle = document.getElementById("vtitle"), hint = document.getElementById("hint");
+let cur = null, total = 0;
+
+function open(slug, push) {
+  const book = BOOKS.find(b => b[0] === slug);
+  if (!book) return;
+  cur = slug; total = book[2];
+  vtitle.textContent = book[1];
+  pages.innerHTML = "";
+  for (let i = 1; i <= total; i++) {
+    const d = document.createElement("div"); d.className = "page";
+    d.innerHTML = `<img src="img/${slug}/${String(i).padStart(2, "0")}.jpg" alt="${book[1]}, page ${i}" ${i > 2 ? 'loading="lazy"' : ""}>`;
+    pages.appendChild(d);
+  }
+  pages.scrollLeft = 0;
+  viewer.classList.add("open"); document.body.style.overflow = "hidden";
+  hint.classList.remove("hide"); setTimeout(() => hint.classList.add("hide"), 2600);
+  if (push) history.pushState({ b: slug }, "", "?b=" + slug);
+  update();
+}
+function close(push) {
+  cur = null; viewer.classList.remove("open"); document.body.style.overflow = "";
+  if (push) history.pushState({}, "", location.pathname);
+}
+function index() { return Math.round(pages.scrollLeft / pages.clientWidth); }
+function goto(i) { pages.scrollTo({ left: i * pages.clientWidth, behavior: "smooth" }); }
+function update() {
+  const i = index();
+  count.textContent = `Page ${i + 1} of ${total}`;
+  document.getElementById("prev").disabled = i === 0;
+  document.getElementById("next").disabled = i >= total - 1;
+}
+pages.addEventListener("scroll", () => { requestAnimationFrame(update); }, { passive: true });
+document.getElementById("prev").onclick = () => goto(index() - 1);
+document.getElementById("next").onclick = () => goto(index() + 1);
+document.getElementById("back").onclick = () => close(true);
+document.addEventListener("keydown", e => {
+  if (!cur) return;
+  if (e.key === "ArrowRight") goto(index() + 1);
+  if (e.key === "ArrowLeft") goto(index() - 1);
+  if (e.key === "Escape") close(true);
+});
+window.addEventListener("popstate", e => { const b = new URLSearchParams(location.search).get("b"); b ? open(b, false) : close(false); });
+const first = new URLSearchParams(location.search).get("b");
+if (first) open(first, false);
+</script>
+</body>
+</html>

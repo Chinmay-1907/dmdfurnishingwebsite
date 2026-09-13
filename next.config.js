@@ -11,7 +11,7 @@ const nextConfig = {
   // tracing drags all ~413MB of images into the serverless bundle, which
   // exceeds Netlify's upload limit and fails the deploy.
   outputFileTracingExcludes: {
-    '*': ['./public/Images/**'],
+    '*': ['./public/Images/**', './public/open-house/**'],
   },
   images: {
     remotePatterns: [
